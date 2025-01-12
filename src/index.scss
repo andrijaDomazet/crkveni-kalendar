@@ -1,3 +1,7 @@
+$small: 300px;
+$medium: 768px;
+$large: 1024px;
+$extraLarge: 1368px;
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -27,12 +31,6 @@ code {
 .banner-wrapper.calendar {
   margin: 0.3rem auto;
 }
-$green1: #34c118;
-// $green1: #14a346;
-$green2: #0d6d2f;
-$green3: #0b5b27;
-$green4: #09491f;
-$green5: #0c3d1d;
 
 $barGreen1: #67cbb4;
 $barGreen2: #39a78e;
@@ -40,43 +38,23 @@ $barGreen3: #215f51;
 $barGreen4: #1a4c40;
 $barGreen5: #153d33;
 
-$orange0: #f1e5d6;
-$orange1: #d09850;
-$orange2: #965315;
-$orange3: #7c4512;
-$orange4: #693d0b;
+$dark1: #d8a68d;
+$dark2: #c57b57;
+$dark3: #ab603b;
+$dark4: #724027;
+$dark5: #392014;
 
-$dark0: #cc6a28;
-$dark1: #944b1a; //srediti
-$dark1: #d12b0d; //srediti
-$dark2: #793f18;
-$dark2: #a33c13;
-$dark3: #552c11;
-$dark3: #722a0d;
-// $dark3: red;
-$dark4: #331a0a;
-$dark4: #5e250e;
+$eggShell: #e7e4ce;
+$eggShell2: #bcb476;
+$eggShell3: #898143;
+$eggShell4: #55502a;
 
-$dark0: #fe662e;
-$dark1: #dc391c;
-$dark2: #a33c13;
-$dark3: #832f0e;
-$dark4: #682910;
-$dark5: #4d0800;
-$dark6: #64180c;
-
+$silver0: #609aa2;
 $silver1: #2c7983;
 $silver2: #235d64;
 $silver3: #1c4d53;
-// $silver4: #0a1d1f;
 $silver4: #1d4d55;
 $silver5: #153a3f;
-// $silver5: #132f33;
-
-// $grey1: #ececec;
-// $grey2: #b3b3b3;
-// $grey3: #8d8d8d;
-// $grey4: #707070;
 
 $grey0: #f3f3f3;
 $grey1: #d6d6d6;

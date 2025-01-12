@@ -4,7 +4,7 @@
   display: none;
 }
 
-@media screen and(min-width:768px) {
+@media screen and (min-width: $medium) {
   .navBar {
     flex: 3;
     display: flex;
@@ -16,12 +16,13 @@
       padding-left: 15rem;
 
       .nav-link {
-        padding: 0.1rem 0.5rem;
+        // padding: 0.1rem 0.5rem;
         font-size: 1.4rem;
         text-decoration: none;
         color: black;
+        // border: 1px solid red;
         &.active {
-          color: $dark1;
+          color: $dark4;
           border-radius: 5px;
           font-weight: bold;
         }
@@ -47,6 +48,57 @@
             flex: 1 0 34%;
             margin: 5px;
           }
+        }
+        .drop_down_menu.close {
+          display: none;
+        }
+      }
+      .botDiv {
+        height: 0;
+        position: relative;
+        display: inline;
+        z-index: +99999;
+        .drop_down_menu {
+          width: 400px;
+          position: absolute;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 0.3rem;
+          top: 40px;
+          // left: 0;
+          background: white;
+          box-shadow: 1px 2px 3px rgb(0, 0, 0);
+          padding: 0.2rem 0.2rem;
+          border-bottom-left-radius: 0.3rem;
+          border-bottom-right-radius: 0.3rem;
+          list-style-type: none;
+          li {
+            width: 100%;
+            // border: 1px solid green;
+            padding: 0 0.2rem;
+            a {
+              display: inline-block;
+              min-width: 100%;
+              border-radius: 5px;
+              color: black;
+              line-height: 2.5rem;
+              align-items: center;
+              vertical-align: middle;
+              font-size: 1.1rem;
+              flex: 0 0 50%;
+              margin: 0.1rem;
+              padding: 0.3rem 1rem;
+              box-shadow: 0 0 5px $grey2;
+              // border: 1px solid red;
+              &:hover {
+                background: $grey1;
+              }
+            }
+          }
+        }
+        .drop_down_menu.small {
+          width: 250px;
+          grid-template-columns: 1fr;
         }
         .drop_down_menu.close {
           display: none;

@@ -1,0 +1,32 @@
+@import "../../index.scss";
+
+.kalendar {
+  .kalendar-wrapper {
+    padding: 0 0.4rem;
+  }
+}
+
+@media screen and (min-width: $medium) {
+  .kalendar {
+    padding: 2rem 0;
+    // width: 100%;
+    width: 1200px;
+    margin: 0 auto;
+    .kalendar-wrapper {
+      display: flex;
+      .kalendar-left {
+        display: flex;
+        flex-direction: column;
+        width: calc(100% - 320px);
+        margin-right: 20px;
+        .zadusnice {
+          height: 600px;
+        }
+      }
+      .kalendar-right {
+        text-align: center;
+        width: 300px;
+      }
+    }
+  }
+}

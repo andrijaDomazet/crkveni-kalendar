@@ -1,0 +1,40 @@
+@import "../../index.scss";
+
+.calendar-allMonths {
+  border-radius: 0.5rem;
+  margin: 2rem 0;
+  width: 100%;
+  thead {
+    tr {
+      th {
+        background: $eggShell;
+
+        padding: 0.3rem;
+        text-align: left;
+        h2 {
+          color: $grey4;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+  tbody {
+    tr {
+      td {
+        background: $grey0;
+        border-radius: 0.3rem;
+        color: $grey4;
+        margin: 0.3rem;
+        padding: 0.8rem 0;
+        text-align: center;
+        a {
+          color: $grey4;
+          text-decoration: underline;
+          h3{
+            font-weight: normal;
+          }
+        }
+      }
+    }
+  }
+}

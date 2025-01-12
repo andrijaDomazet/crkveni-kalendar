@@ -26,11 +26,11 @@
   .toggle-button-line {
     width: 2rem;
     height: 0.2rem;
-    background: white;
+    // background: white;
     background: black;
     transition: all 0.1s linear;
     &:active {
-      background: $green1;
+      background: $dark2;
     }
   }
 }

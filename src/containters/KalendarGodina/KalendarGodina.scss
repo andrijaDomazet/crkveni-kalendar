@@ -1,0 +1,19 @@
+@import "../../index.scss";
+
+@media screen and (min-width: $medium) {
+  .kalendarGodina {
+    // border: 2px solid red;
+    width: 1200px;
+    margin: 0 auto;
+    .kalendarGodina-wrapper {
+      display: flex;
+      .kalendarGodina-left {
+        width: calc(100% - 340px);
+        margin-right: 20px;
+      }
+      .kalendarGodina-right {
+        width: 320px;
+      }
+    }
+  }
+}

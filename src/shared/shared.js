@@ -29,13 +29,13 @@ export const monthSerb = ["januar", "februar", "mart", "april", "maj", "jun", "j
 export const calendarYears = [
   {
     item_list: [
-      { title: 2022, route: "/crkveni-kalendar/2022" },
-      { title: 2023, route: "/crkveni-kalendar/2023" },
-      { title: 2024, route: "/crkveni-kalendar/2024" },
-      { title: 2025, route: "/crkveni-kalendar/2025" },
-      { title: 2026, route: "/crkveni-kalendar/2026" },
-      { title: 2027, route: "/crkveni-kalendar/2027" },
-      { title: 2028, route: "/crkveni-kalendar/2028" },
+      { title: 2022, route: "/2022" },
+      { title: 2023, route: "/2023" },
+      { title: 2024, route: "/2024" },
+      { title: 2025, route: "/2025" },
+      { title: 2026, route: "/2026" },
+      { title: 2027, route: "/2027" },
+      { title: 2028, route: "/2028" },
     ],
   },
 ];
@@ -56,10 +56,10 @@ export const options = [
   //0
   {
     route: "/",
-    title: "Crkveni-kalendar.net",
+    title: "Crkveni kalendar 2025 | Црквени календар 2025",
     social: {
-      title: "Crkveni-kalendar.net",
-      lead: "Crkveni-kalendar.net - Crkveni kalendar...",
+      title: "Crkveni kalendar 2025 | Црквени календар 2025",
+      lead: "Crkveni pravoslavni kalendar 2025 | Svi praznici, slave i posti u godini na jednom mestu",
       pics: "/img/test3.jpg",
     },
   },
@@ -76,14 +76,124 @@ export const options = [
     title: "Crkveni kalendar",
     social: {
       title: "Crkveni kalendar",
-      lead: "Crkveni pravoslavni kalendar | Svi praznici, slave i posti u godini na jednom mestu. Srpske crkve i manastiri, posni recepti, molitve | Crkveni kalendar",
+      lead: "Crkveni pravoslavni kalendar | Svi praznici, slave i posti u godini na jednom mestu",
       pics: "/img/test3.jpg",
     },
     social2: {
       title: "Crkveni kalendar",
-      lead: " | Svi praznici, slave i posti u godini na jednom mestu. Srpske crkve i manastiri, posni recepti, molitve | Crkveni kalendar ",
+      lead: " | Svi praznici, slave i posti u godini na jednom mestu",
       pics: "/img/test3.jpg",
     },
+    item_list: [
+      {
+        title: "Januar 2025",
+        route: "/2025/januar/",
+        social: {
+          title: "Običaji i tradicija",
+          lead: "Najnovije vesti - Običaji i tradicija",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1678366923/ads/agroweb_green_l2ql6w.jpg",
+        },
+      },
+      {
+        title: "Februar 2025",
+        route: "/2025/februar/",
+        social: {
+          title: "Običaji i tradicija",
+          lead: "Najnovije vesti - Običaji i tradicija",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1678366923/ads/agroweb_green_l2ql6w.jpg",
+        },
+      },
+      {
+        title: "Mart 2025",
+        route: "/2025/mart/",
+        social: {
+          title: "Običaji i tradicija",
+          lead: "Najnovije vesti - Običaji i tradicija",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1678366923/ads/agroweb_green_l2ql6w.jpg",
+        },
+      },
+      {
+        title: "April 2025",
+        route: "/2025/april/",
+        social: {
+          title: "Običaji i tradicija",
+          lead: "Najnovije vesti - Običaji i tradicija",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1678366923/ads/agroweb_green_l2ql6w.jpg",
+        },
+      },
+      {
+        title: "Maj 2025",
+        route: "/2025/maj/",
+        social: {
+          title: "Običaji i tradicija",
+          lead: "Najnovije vesti - Običaji i tradicija",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1678366923/ads/agroweb_green_l2ql6w.jpg",
+        },
+      },
+      {
+        title: "Jun 2025",
+        route: "/2025/jun/",
+        social: {
+          title: "Običaji i tradicija",
+          lead: "Najnovije vesti - Običaji i tradicija",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1678366923/ads/agroweb_green_l2ql6w.jpg",
+        },
+      },
+      {
+        title: "Jul 2025",
+        route: "/2025/jul/",
+        social: {
+          title: "Običaji i tradicija",
+          lead: "Najnovije vesti - Običaji i tradicija",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1678366923/ads/agroweb_green_l2ql6w.jpg",
+        },
+      },
+      {
+        title: "Avgust 2025",
+        route: "/2025/avgust/",
+        social: {
+          title: "Običaji i tradicija",
+          lead: "Najnovije vesti - Običaji i tradicija",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1678366923/ads/agroweb_green_l2ql6w.jpg",
+        },
+      },
+      {
+        title: "Septembar 2025",
+        route: "/2025/septembar/",
+        social: {
+          title: "Običaji i tradicija",
+          lead: "Najnovije vesti - Običaji i tradicija",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1678366923/ads/agroweb_green_l2ql6w.jpg",
+        },
+      },
+      {
+        title: "Oktobar 2025",
+        route: "/2025/oktobar/",
+        social: {
+          title: "Običaji i tradicija",
+          lead: "Najnovije vesti - Običaji i tradicija",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1678366923/ads/agroweb_green_l2ql6w.jpg",
+        },
+      },
+      {
+        title: "Novembar 2025",
+        route: "/2025/novembar/",
+        social: {
+          title: "Običaji i tradicija",
+          lead: "Najnovije vesti - Običaji i tradicija",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1678366923/ads/agroweb_green_l2ql6w.jpg",
+        },
+      },
+      {
+        title: "Decembar 2025",
+        route: "/2025/decembar/",
+        social: {
+          title: "Običaji i tradicija",
+          lead: "Najnovije vesti - Običaji i tradicija",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1678366923/ads/agroweb_green_l2ql6w.jpg",
+        },
+      },
+    ],
   },
   //4
   {

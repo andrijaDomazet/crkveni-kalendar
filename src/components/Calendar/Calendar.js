@@ -1,73 +1,66 @@
 import React, { useEffect, useState } from "react";
-import { NavLink, useNavigate, useParams } from "react-router-dom";
-import news2 from "../../all__news4.json";
-import { useGlobalLocation } from "../../shared/LocationContext";
-import { idsMonths, daysIsPost, daysIsNotPost, monthSerb, calendarYears } from "../../shared/shared";
-import SimpleButton from "../../UI/Buttons/SimpleButton";
-// import AdManagerSlot from "../AdvModule/AdManagerSlot";
-import TimeFormat from "../TimeFormat/TimeFormat";
 import "./Calendar.scss";
+import { NavLink, useNavigate } from "react-router-dom";
+import news2 from "./calendar-data/all__news4";
+import { idsMonths, daysIsPost, daysIsNotPost, monthSerb, calendarYears, manualDateEaster, redDaysId, inCalendarArr, easterDays } from "./calendar-data/calendar-data";
+import SimpleButton from "../../UI/Buttons/SimpleButton";
+import TimeFormat from "../TimeFormat/TimeFormat";
+import { useGlobalLocation } from "../../shared/LocationContext";
+import { useIdContext } from "../../shared/IdProvider";
+
+// import AdManagerSlot from "../AdvModule/AdManagerSlot";
 
 export default function Calendar(props) {
-  const manualDateEaster = ["4-19", "5-2", "4-24", "4-16", "5-5", "4-20", "4-12", "5-2", "4-16", "4-8", "4-28", "4-13", "5-2"];
-  const currentDate = new Date();
-  let { id } = useParams();
+  const { id, slug, currentDate, currentYear } = useIdContext();
   const location = useGlobalLocation();
-  const [isYear, setIsYear] = useState(test());
-  const easter = isYear - 2020;
-  const [isMonth, setIsMonth] = useState(() => {
-    if (id === undefined) {
-      return currentDate.getMonth();
-    } else {
-      return monthSerb.indexOf(id);
-    }
+  const [isYear, setIsYear] = useState(() => {
+    return slug || currentDate.getFullYear();
   });
+  const [isMonth, setIsMonth] = useState(() => (id === undefined ? currentDate.getMonth() : monthSerb.indexOf(id)));
+  useEffect(() => {
+    if (slug && id) {
+      setIsYear(slug);
+      setIsMonth(monthSerb.indexOf(id));
+    }
+    setHolidays(filterHolidays);
+  }, [isYear, isMonth, slug, id]);
+
   const [holidays, setHolidays] = useState(filterHolidays);
-
-  function test() {
-    let test11 = currentDate.getFullYear();
-    return test11;
-  }
-
   const [dropDownYear, setDropDownYear] = useState(false);
   function filterHolidays() {
-    // console.log("Item before", news2);
-    const easterDays = ["Veliki četvrtak (Veliko bdenije)", "Veliki petak", "Velika subota", "V a s k r s – Vaskrsenje Gospoda Isusa Hrista"];
-    let setHol = news2.slice(idsMonths[isMonth][0], idsMonths[isMonth][1]);
+    let easter = isYear - 2020;
+    let monthData = JSON.parse(JSON.stringify(news2));
+    let setHol = monthData.slice(idsMonths[isMonth][0], idsMonths[isMonth][1]);
     let setHolTest = setHol.map((item, index) => {
       let date1 = new Date(isYear, isMonth, index + 1);
       item.date = date1;
       let date2 = new Date(`${isYear}-${manualDateEaster[easter]}`);
-      if (date2.toDateString() === date1.toDateString()) {
-        item.title = easterDays[easterDays.length - 1];
+      let diffInDays = (date2 - date1) / (1000 * 60 * 60 * 24); // Razlika u danima
+      if (diffInDays >= 0 && diffInDays <= 3) {
+        item.title = easterDays[easterDays.length - 1 - diffInDays];
       }
       return item;
     });
-    // console.log("Set hol", setHolTest);
     return setHolTest;
   }
 
-  useEffect(() => {
-    setHolidays(filterHolidays);
-  }, [isYear, isMonth]);
-
   const navigate = useNavigate();
   const changeMonth = (val) => {
-    if (id === undefined) {
-      navigate(`/crkveni-kalendar/${isYear}/${tableTitle(val)}`);
-    } else {
-      navigate(`../crkveni-kalendar/${isYear}/${tableTitle(val)}`);
-    }
+    // const path = id === undefined ? `/${isYear}/${tableTitle(val)}` : `../${isYear}/${tableTitle(val)}/`;
+    // navigate(path);
+
     if (isMonth === 11 && val === 1) {
       setIsMonth(0);
-      setIsYear(isYear + 1);
-      navigate(`../crkveni-kalendar/${isYear + 1}/januar`);
+      setIsYear((prevYear) => +prevYear + 1);
+      navigate(`../${+isYear + 1}/januar/`);
     } else if (isMonth === 0 && val === -1) {
       setIsMonth(11);
-      setIsYear(isYear - 1);
-      navigate(`../crkveni-kalendar/${isYear - 1}/decembar`);
+      setIsYear((prevYear) => +prevYear - 1);
+      navigate(`../${+isYear - 1}/decembar/`);
     } else {
-      setIsMonth(isMonth + val);
+      setIsMonth((prevMonth) => prevMonth + val);
+      const path = id === undefined ? `/${isYear}/${tableTitle(val)}` : `../${isYear}/${tableTitle(val)}/`;
+      navigate(path);
     }
   };
 
@@ -89,56 +82,45 @@ export default function Calendar(props) {
   const tableTitle = (x) => {
     if (id === undefined) {
       if (isMonth + x === 12) {
-        return `JANUAR (${isYear + 1})`;
+        return `JANUAR (${+isYear + 1})`;
       } else if (isMonth + x === -1) {
-        return `${monthSerb[11]} (${isYear + x})`;
+        return `${monthSerb[11]} (${+isYear + x})`;
       } else {
         return monthSerb[isMonth + x];
       }
     } else {
       if (isMonth + x === 12) {
-        return `${monthSerb[0]} (${isYear + x})`;
+        return `${monthSerb[0]} (${+isYear + x})`;
       } else if (isMonth + x === -1) {
-        return `${monthSerb[11]} (${isYear + x})`;
+        return `${monthSerb[11]} (${+isYear + x})`;
       } else {
         return monthSerb[monthSerb.indexOf(id) + x];
       }
     }
   };
 
-  const rowClasses = (index) => {
-    const redDaysId = [7, 8, 9, 14, 19, 20, 27, 46, 153, 154, 163, 164, 165, 188, 193, 214, 231, 240, 254, 264, 270, 300, 304, 312, 325, 338, 353];
-    return redDaysId.includes(index) ? "normalRow" : "";
+  const rowClasses = (item, zz) => {
+    return redDaysId.includes(item.id) || (easterDays.includes(item.title) && zz !== 4 && zz !== 6) ? "normalRow" : "";
   };
 
-  const todayClass = (x) => {
-    if (x.getDate() === currentDate.getDate() && x.getMonth() === currentDate.getMonth()) {
-      return " today";
-    } else {
-      return "";
-    }
-  };
+  const todayClass = (x) => (x.getDate() === currentDate.getDate() && x.getMonth() === currentDate.getMonth() && x.getFullYear() === currentDate.getFullYear() ? " today" : "");
+
   const setPostDays = (dateInfo) => {
     let setDateFromDateInfo = new Date(dateInfo);
 
     //start - Bozic i Bozicni post
     let bozicniPostStart = new Date(isYear, 10, 28);
     let bozicniPostEnd = new Date(isYear, 0, 6);
+    let vikendPosleBozica = new Date(isYear, 0, 17);
 
-    let test3 = new Date(2023, 0, 17);
-    // let vaskrs=new Date(2022,3,24)
-    let notPost = daysIsNotPost.map((item) => {
-      return new Date(isYear, item[0], item[1]).setHours(0, 0, 0, 0);
-    });
-    let isPost = daysIsPost.map((item) => {
-      return new Date(isYear, item[0], item[1]).setHours(0, 0, 0, 0);
-    });
+    let notPost = daysIsNotPost.map((item) => new Date(isYear, item[0], item[1]).setHours(0, 0, 0, 0));
+    let isPost = daysIsPost.map((item) => new Date(isYear, item[0], item[1]).setHours(0, 0, 0, 0));
     let setDateDay = setDateFromDateInfo.getDay();
     if (setDateFromDateInfo >= bozicniPostStart) {
       return "post";
     } else if (setDateFromDateInfo <= bozicniPostEnd) {
       return "post";
-    } else if (setDateFromDateInfo <= test3) {
+    } else if (setDateFromDateInfo <= vikendPosleBozica) {
       return "";
     } else if (setDateDay === 3 || setDateDay === 5) {
       if (!notPost.includes(setDateFromDateInfo.setHours(0, 0, 0, 0))) {
@@ -151,19 +133,12 @@ export default function Calendar(props) {
     }
   };
 
-  const setButttonClass = (x) => {
-    if (x === "right" && isMonth > 10) {
-      // return "closeButton";
-    } else if (x === "left" && isMonth < 1) {
-      // return "closeButton";
-    }
-  };
   const setCloseClass = () => {
-    // if (location.pathname === "/") {
-    //   return " close";
-    // } else {
-    //   return "";
-    // }
+    if (location.pathname === "/") {
+      return " close";
+    } else {
+      return "";
+    }
   };
 
   //change the calendar year
@@ -172,14 +147,7 @@ export default function Calendar(props) {
       <ul className={getDropDownMenu()}>
         {items.map((item, index) => {
           return (
-            <NavLink
-              to={`/crkveni-kalendar/${item.title}/${monthSerb[isMonth]}`}
-              key={index}
-              onClick={() => {
-                setIsYear(item.title);
-                setDropDownYear(false);
-              }}
-            >
+            <NavLink to={`/${item.title}/${monthSerb[isMonth]}/`} key={index} onClick={() => setDropDownYear(false)}>
               {item.title}
             </NavLink>
           );
@@ -193,12 +161,11 @@ export default function Calendar(props) {
   };
   let inTextNumber = 0;
   const nedelje = [];
-  const screenWidth = window.scrollX;
   return (
     <div className="calendar">
       {/* ---- Gornje ranfle kalendara ---- */}
       <div className="first">
-        <h1>Crkveni pravoslavni kalendar</h1>
+        <h1>Crkveni pravoslavni kalendar {isYear}</h1>
         <div
           className={`yearBox${setCloseClass()}`}
           onClick={() => {
@@ -209,26 +176,20 @@ export default function Calendar(props) {
           }}
         >
           <b>{isYear}</b>
-          <i class="fa-solid fa-square-caret-down"></i>
+          <i className="fa-solid fa-square-caret-down"></i>
           <div className="botDiv">{items_list(calendarYears[0].item_list)}</div>
         </div>
       </div>
       <div className={`calendar-month${setCloseClass()}`}>
         <div>
-          <SimpleButton
-            // classes={setButttonClass("left")}
-            clicked={() => changeMonth(-1)}
-          >
+          <SimpleButton clicked={() => changeMonth(-1)}>
             <i className="fa-solid fa-backward"></i>
             {tableTitle(-1)}
           </SimpleButton>
         </div>
         <div className="month-center"></div>
         <div>
-          <SimpleButton
-            // classes={setButttonClass("right")}
-            clicked={() => changeMonth(1)}
-          >
+          <SimpleButton clicked={() => changeMonth(1)}>
             {tableTitle(1)}
             <i className="fa-solid fa-forward"></i>
           </SimpleButton>
@@ -237,7 +198,7 @@ export default function Calendar(props) {
       {/* ---- END Gornje ranfle kalendara ---- */}
 
       {/* ---- Kalendar ---- */}
-      <table className="calendar-table" cellspacing="0" cellpadding="0">
+      <table className="calendar-table" cellSpacing="0" cellPadding="0">
         <thead>
           <tr>
             {["Dani", "Novi", "Stari"].map((item, index) => {
@@ -249,7 +210,8 @@ export default function Calendar(props) {
             })}
             <th>
               <h2>
-                {tableTitle(0)} {isYear}
+                {tableTitle(0)}
+                {/* {isYear} */}
               </h2>
             </th>
             <th></th>
@@ -257,44 +219,27 @@ export default function Calendar(props) {
         </thead>
         <tbody>
           {setMonth(props.shortCal).map((item, index) => {
-            // console.log("Index calendar", index);
             let z = new Date(item.date);
             let zz = z.getDay();
             const tdClasses = ["onlyDay", "noDay", "before"];
+            nedelje.push(inTextNumber);
             if (zz === 1) {
-              nedelje.push(inTextNumber);
               inTextNumber++;
-              console.log("Nedelje", nedelje);
-              let inCalendarArr = ["div-gpt-ad-1724672473185-0", "div-gpt-ad-1724680335213-0", "div-gpt-ad-1724680376368-0", "div-gpt-ad-1724680398271-0", "div-gpt-ad-1724680417311-0"];
-              return (
-                <>
+            }
+            return (
+              <React.Fragment key={index}>
+                {zz === 1 && (
                   <tr className="opisNedelje">
                     <td colSpan={5}>
-                      {/* {inTextNumber} */}
-                      {[1, 2, 3, 4, 5].includes(inTextNumber) && <div className="banner-wrapper calendar">{/* <AdManagerSlot adUnitPath={location.pathname} slotNumber={inCalendarArr[inTextNumber - 1]} /> */}</div>}
+                      {/* {[1, 2, 3, 4, 5].includes(inTextNumber) && (
+                        <div className="banner-wrapper calendar">
+                          <AdManagerSlot adUnitPath={location.pathname} slotNumber={inCalendarArr[inTextNumber - 1]} />
+                        </div>
+                      )} */}
                     </td>
                   </tr>
-                  <tr key={index} className={rowClasses(item.id) + todayClass(new Date(item.date))}>
-                    {tdClasses.map((x, index) => {
-                      return (
-                        <td key={index}>
-                          <TimeFormat timePost={item.date} classes={x} />
-                        </td>
-                      );
-                    })}
-                    <td>
-                      <div className="test">
-                        <h3>{item.title}</h3>
-                      </div>
-                    </td>
-                    <td>{setPostDays(item.date)}</td>
-                    {/* <td>{setVaskrsTest(item.date)}</td> */}
-                  </tr>
-                </>
-              );
-            } else {
-              return (
-                <tr key={index} className={rowClasses(item.id) + todayClass(new Date(item.date))}>
+                )}
+                <tr key={index} className={rowClasses(item, zz) + todayClass(new Date(item.date))}>
                   {tdClasses.map((x, index) => {
                     return (
                       <td key={index}>
@@ -308,10 +253,9 @@ export default function Calendar(props) {
                     </div>
                   </td>
                   <td>{setPostDays(item.date)}</td>
-                  {/* <td>{setVaskrsTest(item.date)}</td> */}
                 </tr>
-              );
-            }
+              </React.Fragment>
+            );
           })}
         </tbody>
       </table>
@@ -319,21 +263,15 @@ export default function Calendar(props) {
 
       {/* ---- Donja ranfla kalendara ---- */}
       <div className="calendar-month">
-        <div>
-          <SimpleButton classes={setButttonClass("left")} clicked={() => changeMonth(-1)}>
-            <i className="fa-solid fa-backward"></i>
-            {tableTitle(-1)}
-          </SimpleButton>
-        </div>
-        <div className="month-center">
-          <SimpleButton clicked={() => changeMonth(0)}>{tableTitle(0)}</SimpleButton>
-        </div>
-        <div>
-          <SimpleButton classes={setButttonClass("right")} clicked={() => changeMonth(1)}>
-            {tableTitle(1)}
-            <i className="fa-solid fa-forward"></i>
-          </SimpleButton>
-        </div>
+        {[-1, 0, 1].map((offset) => (
+          <div key={offset} className={offset === 0 ? "month-center" : ""}>
+            <SimpleButton clicked={() => changeMonth(offset)}>
+              {offset === -1 && <i className="fa-solid fa-backward"></i>}
+              {tableTitle(offset)}
+              {offset === 1 && <i className="fa-solid fa-forward"></i>}
+            </SimpleButton>
+          </div>
+        ))}
       </div>
       {/* ---- END Donja ranfla kalendara ---- */}
     </div>

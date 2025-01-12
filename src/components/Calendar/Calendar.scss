@@ -15,12 +15,14 @@
     .yearBox {
       z-index: +999;
       padding: 0 0.3rem;
-      background: $grey0;
+      // background: $grey0;
+      background: $eggShell3;
       border: 1px solid $grey2;
       border-radius: 3px;
       cursor: pointer;
       display: flex;
       height: 2rem;
+      color: white;
       b {
         padding: 0;
         margin: 0;
@@ -77,8 +79,10 @@
   .calendar-table {
     thead {
       tr {
-        background: #bbac8a;
+        background: $silver1;
+        background: $eggShell;
         color: white;
+        color: $grey4;
 
         th {
           position: relative;
@@ -87,10 +91,6 @@
           height: 60px;
         }
       }
-      // .first {
-      //   background: grey;
-      //   border: 1px solid red;
-      // }
       th:nth-child(1) {
         position: relative;
         min-width: 30px;
@@ -134,14 +134,11 @@
     }
     tbody {
       .opisNedelje {
-        // height: 1rem;
         td {
           height: 0.8rem;
-          // text-transform: initial !important;
           font-weight: 700;
           color: rgb(203, 0, 0);
           background: white;
-          // border: 2px solid red;
           border-left: none;
           border-right: none;
         }
@@ -161,8 +158,6 @@
         font-weight: 600;
         td {
           background: #f9f1c8;
-          // background: #000000;
-
           h3 {
             font-weight: 600;
           }
@@ -211,8 +206,8 @@
   .calendar-month {
     display: flex;
     justify-content: space-between;
-    // background: $dark4;
-    background: #8a6629;
+    background: $eggShell3;
+
     border-bottom: 1px solid white;
     padding: 0.5rem 0;
     .month-center {

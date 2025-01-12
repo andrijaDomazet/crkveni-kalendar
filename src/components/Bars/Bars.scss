@@ -18,14 +18,14 @@
     }
   }
 }
-@media screen and(min-width:768px) {
+@media screen and(min-width:$medium) {
   .bars {
     display: flex;
     width: 100%;
     height: 5rem;
     margin: 0 auto;
     padding: 0 1rem;
-    border-bottom: 4px double black;
+    border-bottom: 1px solid $silver1;
     .bars__logo {
       font-size: 3.5rem;
       b {
@@ -34,7 +34,7 @@
     }
   }
 }
-@media screen and(min-width:1280px) {
+@media screen and(min-width:$large) {
   .bars {
     .bars__links {
       margin: 0 auto;
