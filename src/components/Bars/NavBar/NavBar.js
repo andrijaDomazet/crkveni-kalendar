@@ -76,5 +76,12 @@ export default function NavBar() {
     const sizeClass = items.length > 6 ? "" : " small";
     return isOpen + sizeClass;
   };
-  return <div className="navBar">{navBarOptions()}</div>;
+  return (
+    <div className="navBar">
+      {/* <NavLink to="/" className="bars__logo">
+        <img src="/img/logo.png" />
+      </NavLink> */}
+      {navBarOptions()}
+    </div>
+  );
 }

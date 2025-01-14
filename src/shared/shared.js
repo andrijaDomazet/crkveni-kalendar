@@ -64,16 +64,9 @@ export const options = [
     },
   },
   //1
-  //   { route: "/manastiri", title: "Manastiri" },
-  //2
-  //   {
-  //     route: "/ikone",
-  //     title: "Ikone",
-  //   },
-  //3
   {
-    route: "/crkveni-kalendar",
-    title: "Crkveni kalendar",
+    route: "/2025/",
+    title: "Crkveni kalendar 2025",
     social: {
       title: "Crkveni kalendar",
       lead: "Crkveni pravoslavni kalendar | Svi praznici, slave i posti u godini na jednom mestu",
@@ -195,6 +188,13 @@ export const options = [
       },
     ],
   },
+  //2
+  //   { route: "/manastiri", title: "Manastiri" },
+  // 3
+    {
+      route: "/zadusnice",
+      title: "Zadušnice",
+    },
   //4
   {
     route: "/ostalo/meseceve-mene",

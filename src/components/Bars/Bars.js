@@ -15,7 +15,7 @@ export default function Bars() {
   return (
     <div className="bars">
       <NavLink to="/" className="bars__logo">
-        CRKVENI<b>KALENDAR</b>
+        <img src="/img/logo.png" alt="logo" />
       </NavLink>
       <div className="bars__links">
         <TopBar />

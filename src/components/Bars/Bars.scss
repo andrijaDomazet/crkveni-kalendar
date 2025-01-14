@@ -6,15 +6,17 @@
   min-height: 35px;
   z-index: +999;
   .bars__logo {
-    font-size: 2.2rem;
+    padding: .3rem;
+    height: 3.5rem;
     color: black;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
-    b {
-      font-weight: 700;
-      color: $dark1;
-      font-size: 2.2rem;
+    img {
+      height: 100%;
+      width: auto;
+      // color: $dark1;
+      // font-size: 2.2rem;
     }
   }
 }
@@ -27,15 +29,17 @@
     padding: 0 1rem;
     border-bottom: 1px solid $silver1;
     .bars__logo {
-      font-size: 3.5rem;
-      b {
-        font-size: 3.5rem;
+      height: 5rem;
+      img {
+        padding: 0 2rem;
+        // font-size: 3.5rem;
       }
     }
   }
 }
 @media screen and(min-width:$large) {
   .bars {
+    width: 1400px;
     .bars__links {
       margin: 0 auto;
       width: 100%;

@@ -9,13 +9,13 @@
     h1 {
       margin: 0;
       padding: 0;
-      font-size: 1.8rem;
-      line-height: 2rem;
+      font-size: 1.2rem;
+      line-height: 1.4rem;
+      color: $eggShell4;
     }
     .yearBox {
       z-index: +999;
       padding: 0 0.3rem;
-      // background: $grey0;
       background: $eggShell3;
       border: 1px solid $grey2;
       border-radius: 3px;
@@ -243,6 +243,13 @@
 }
 @media screen and(min-width:768px) {
   .calendar {
+    // padding-top: 2rem;
+    .first {
+      h1 {
+        font-size: 1.6rem;
+      }
+    }
+
     .calendar-table {
       border-collapse: collapse;
       thead {
