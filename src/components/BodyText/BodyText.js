@@ -6,6 +6,8 @@ const setSubTitle = (item) => {
   // if (e.length > 0) {
   //   return <h2 className="mainContent-subtitle">{e}</h2>;
   // }
+
+  
   if (item.subtitle) {
     return <h2 className="mainContent-subtitle">{item.subtitle}</h2>;
   } else if (item.subtitle3) {
