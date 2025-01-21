@@ -1,0 +1,117 @@
+@import "../../index.scss";
+
+.bodyText {
+  // .bodyText-content {
+  h2 {
+    margin-top: 0.5rem;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    padding-bottom: 0.3rem;
+    // border: none !important;
+    // border: 1px solid red;
+    line-height: 1.4rem;
+  }
+  h3 {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+  }
+  p {
+    // border: 1px solid green;
+    font-size: 1.15rem;
+    position: relative;
+    blockquote {
+      margin: 1.3rem 0;
+      // border-radius: 10px;
+      padding: 1rem 1.2rem 2rem 1.2rem;
+      background: rgb(244, 244, 244);
+      background: #f4f2f0;
+      background: $orange0;
+      font-size: 1.3rem;
+      // font-weight: 500;
+      h3 {
+        text-align: center;
+        // border: 1px solid red;
+        width: 100%;
+        padding: 0.5rem 0 1.5rem 0;
+        // padding-top: 0 !important;
+        // margin-top: 0 !important;
+        color: $dark5;
+        font-size: 1.4rem;
+        line-height: 2rem;
+      }
+    }
+    blockquote::before {
+      position: absolute;
+      content: "";
+      left: 0.5rem;
+      right: 0.5rem;
+      top: 0.5rem;
+      bottom: 0.5rem;
+      // border-radius: 10px;
+      border: 1px solid white;
+      a {
+        cursor: pointer;
+      }
+    }
+
+    span {
+      font-size: 1rem;
+      font-weight: 900;
+    }
+    a {
+      font-weight: 900;
+      font-size: 1rem;
+      // font-weight: 900;
+      color: $green2;
+      text-decoration: none;
+    }
+    ul,
+    ol {
+      padding: 0.2rem 0 0.2rem 1.6em;
+      // border: 1px solid red;
+      li {
+        padding-bottom: 0.12rem;
+      }
+    }
+    b {
+      font-size: 1rem;
+      color: $dark3;
+    }
+  }
+  // }
+}
+
+@media screen and (min-width: $medium) {
+  .bodyText {
+    // .bodyText-content {
+    h2 {
+      margin-top: 1.2rem;
+      line-height: 1.8rem;
+      font-size: 1.6rem;
+      // padding-bottom: 0.3rem;
+    }
+    p {
+      font-size: 1.25rem;
+      span {
+        font-size: 1.12rem;
+      }
+      a {
+        font-size: 1.28rem;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      ul,
+      ol {
+        li {
+          font-size: 18px;
+        }
+      }
+      b {
+        font-size: 1.15rem;
+      }
+    }
+  }
+  // }
+}

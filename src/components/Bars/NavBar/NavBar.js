@@ -42,7 +42,7 @@ export default function NavBar() {
                 setDropDown(null);
               }}
             >
-              <NavLink to={"/2025/"} exact="true" className={`nav-link ${option.title}`}>
+              <NavLink to={option.route} exact="true" className={`nav-link ${option.title}`}>
                 {option.title}
               </NavLink>
               <div className="botDiv">{items_list(option.route, option.item_list)}</div>

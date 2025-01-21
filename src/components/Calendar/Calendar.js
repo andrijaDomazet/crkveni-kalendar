@@ -22,12 +22,14 @@ export default function Calendar(props) {
       setIsYear(slug);
       setIsMonth(monthSerb.indexOf(id));
     }
+
     setHolidays(filterHolidays);
   }, [isYear, isMonth, slug, id]);
 
   const [holidays, setHolidays] = useState(filterHolidays);
   const [dropDownYear, setDropDownYear] = useState(false);
   function filterHolidays() {
+    console.log("Filter holidays", id, slug);
     let easter = isYear - 2020;
     let monthData = JSON.parse(JSON.stringify(news2));
     let setHol = monthData.slice(idsMonths[isMonth][0], idsMonths[isMonth][1]);
@@ -45,6 +47,7 @@ export default function Calendar(props) {
   }
 
   const navigate = useNavigate();
+
   const changeMonth = (val) => {
     // const path = id === undefined ? `/${isYear}/${tableTitle(val)}` : `../${isYear}/${tableTitle(val)}/`;
     // navigate(path);

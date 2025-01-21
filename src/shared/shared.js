@@ -191,13 +191,18 @@ export const options = [
   //2
   //   { route: "/manastiri", title: "Manastiri" },
   // 3
-    {
-      route: "/zadusnice",
+  {
+    route: "/zadusnice/",
+    title: "Zadušnice",
+    social: {
       title: "Zadušnice",
+      lead: "Zadušnice",
+      pics: ["/img/article_img/moon.jpg", "Pexels"],
     },
+  },
   //4
   {
-    route: "/ostalo/meseceve-mene",
+    route: "/meseceve-mene/",
     title: "Mesečeve mene",
     social: {
       title: "Mesečeve mene",

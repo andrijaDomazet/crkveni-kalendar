@@ -10,6 +10,7 @@ import withIdProvider from "./shared/HOC";
 import ScrollToTop from "./UI/ScrollToTop/ScrollToTop";
 import HeadHelmet from "./components/HeadHelmet/HeadHelmet";
 import KalendarGodina from "./containters/KalendarGodina/KalendarGodina";
+import SinglePost from "./containters/SinglPost/SinglePost";
 
 export default function App() {
   // const [data, setData] = useState(null);
@@ -29,6 +30,8 @@ export default function App() {
           <Route path="/" element={React.createElement(withIdProvider(Home))} />
           <Route path="/:slug/" exact="true" element={React.createElement(withIdProvider(KalendarGodina))} />
           <Route path="/:slug/:id/" exact="true" element={React.createElement(withIdProvider(Kalendar))} />
+          <Route path="/meseceve-mene/" exact="true" element={React.createElement(withIdProvider(SinglePost))} />
+          <Route path="/zadusnice/" exact="true" element={React.createElement(withIdProvider(SinglePost))} />
         </Routes>
       </LocationProvider>
     </Router>

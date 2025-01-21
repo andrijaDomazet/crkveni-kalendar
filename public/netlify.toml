@@ -1,0 +1,10 @@
+  [[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+  [[redirects]]
+  from = "http://www.crkveni-kalendar.net/*"
+  to = "https://crkveni-kalendar.net/:splat"
+  status = 301
+  force = true

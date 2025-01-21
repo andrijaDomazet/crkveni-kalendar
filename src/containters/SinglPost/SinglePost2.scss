@@ -1,0 +1,253 @@
+@import "../../index.scss";
+
+.singlePost2 {
+  .content {
+    padding: 0.5rem 0.5rem 2rem 0.5rem;
+    .mainContent {
+      .social {
+        display: flex;
+        padding: 1.2rem 0 0.2rem 1rem;
+        line-height: 2.2rem;
+        color: black;
+        border-top: 1px solid $grey1;
+        border-bottom: 1px solid $grey1;
+        span {
+          color: black;
+          font-size: 1.2rem;
+        }
+        button {
+          margin-left: 0.5rem;
+        }
+        .chain {
+          position: relative;
+          img {
+            margin-left: 0.5rem;
+            height: 32px;
+          }
+          .copiedLink {
+            padding: 0.3rem 0;
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.4rem;
+            text-align: center;
+            width: 130px;
+            top: -2rem;
+            left: -40px;
+            position: absolute;
+            background: $dark1;
+            color: white;
+            z-index: +999;
+            border-radius: 3px;
+          }
+          .copiedLink.close {
+            display: none;
+          }
+          .copiedLink.cov {
+            background: grey;
+          }
+        }
+      }
+      .mainContent-wrapper {
+        .mainContent-img {
+          position: relative;
+          height: 280px;
+          width: 100%;
+          margin-bottom: 0.3rem;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+          .mainContent-img_source {
+            color: rgba(255, 255, 255, 0.85);
+            position: absolute;
+            font-size: 0.9rem;
+            bottom: 0.3rem;
+            left: 0.3rem;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 0.1rem 0.5rem;
+            border-radius: 0.3rem;
+          }
+        }
+        .mainContent-title {
+          color: $dark1;
+          margin: 1rem 0;
+          font-size: 1.8rem;
+          line-height: 2rem;
+        }
+        .mainContent-cat {
+          background: $dark5;
+          font-size: 1.2rem;
+          color: white;
+          padding: 0.1rem 1rem;
+          border-radius: 10px;
+        }
+        .mainContent-lead {
+          display: inline-block;
+          font-size: 1.25rem;
+          line-height: 1.45rem;
+          margin-bottom: 0.6rem;
+        }
+        h4 {
+          margin-top: 1rem;
+          font-size: 1.2rem;
+          border-bottom: 3px solid $grey5;
+          margin-bottom: 0.5rem;
+        }
+        .tags {
+          margin: 1.5rem 0;
+          .tags-title {
+            margin-bottom: 0.3rem;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            font-weight: 700;
+          }
+          .tags__arr {
+            display: flex;
+            flex-wrap: wrap;
+            span {
+              font-size: 0.9rem;
+              text-transform: uppercase;
+              padding: 0.25rem 1.2rem;
+              margin-right: 0.4rem;
+              border-radius: 10px;
+              color: white;
+              background: $dark3;
+              margin-bottom: 0.4rem;
+            }
+          }
+        }
+        .time {
+          margin-top: 0.3rem;
+          font-size: 0.8rem;
+          color: $grey3;
+          font-weight: 400;
+          text-transform: uppercase;
+          font-family: "Times New Roman", Times, serif;
+          padding-bottom: 0.2rem;
+        }
+      }
+    }
+  }
+  .newsAside {
+    width: 100%;
+    padding: 0 0.4rem;
+    h4 {
+      font-size: 1.2rem;
+      border-bottom: 3px solid $grey5;
+    }
+  }
+  .home__box__11 {
+    max-width: 600px;
+  }
+  .home__box__13 {
+    display: none;
+  }
+}
+@media screen and (min-width: $medium) {
+  .singlePost2 {
+    .content {
+      margin-bottom: 2rem;
+      padding-top: 1rem;
+      display: flex;
+      margin: 0 auto;
+      .mainContent {
+        border: 1px solid $grey1;
+        padding: 0;
+        margin: 0;
+        width: calc(100% - 340px);
+        margin-right: 20px;
+        .social {
+          color: black;
+          padding: 1.2rem 0 0.2rem 1rem;
+          span {
+            color: black;
+          }
+          button {
+            margin-left: 0.6rem;
+          }
+          img {
+            cursor: pointer;
+          }
+        }
+        .mainContent-wrapper {
+          padding: 0 1rem;
+          .mainContent-title {
+            font-size: 2.6rem;
+            line-height: 3rem;
+          }
+          .mainContent-lead {
+            display: inline-block;
+            font-size: 1.3rem;
+            line-height: 1.6rem;
+            padding: 0.3rem 0;
+          }
+          .time {
+            text-align: right;
+            padding: 0.4rem 0;
+            font-size: 0.85rem;
+          }
+
+          .mainContent-img {
+            min-height: 402px;
+            img {
+              height: 402px;
+            }
+          }
+          //predefinisati !!!!!!!!!!!!!!!!
+          h4 {
+            margin-top: 1rem;
+            font-size: 1.6rem;
+            border-bottom: 3px solid $grey5;
+          }
+          .tags {
+            .tags__arr {
+              span {
+                font-size: 1rem;
+                margin-right: 0.5rem;
+              }
+            }
+          }
+          .home__box__11 {
+            position: relative;
+            align-items: start;
+            margin-top: 1.5rem;
+            h4 {
+              padding-right: 1rem;
+              display: inline;
+              border-bottom: 4px solid $grey5;
+            }
+            .home__rightBox {
+              display: grid;
+              grid-template-rows: 1fr 1fr 1fr;
+            }
+          }
+          .home__box__13 {
+            margin-top: 2rem;
+            h4 {
+              padding-right: 1rem;
+              display: inline;
+              border-bottom: 4px solid $grey5;
+              line-height: 2.2rem;
+            }
+            .home__rightBox {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 0.8rem;
+              padding-top: 1.2rem;
+            }
+          }
+        }
+      }
+      .newsAside {
+        width: 380px;
+        padding: 0;
+        margin: 0;
+        // border: 1px solid blue;
+        .newsAside-box {
+          margin: 1rem 0;
+        }
+      }
+    }
+  }
+}

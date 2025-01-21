@@ -4,10 +4,7 @@
     "news_id": 1,
     "time2": "2022-06-11T13:30:03.969Z",
     "category": "Voćarstvo",
-    "pics": [
-      "https://res.cloudinary.com/dvi29tcsc/image/upload/v1723622887/agroweb/pijaca_si7z80.jpg",
-      "Pexels"
-    ],
+    "pics": ["https://res.cloudinary.com/dvi29tcsc/image/upload/v1723622887/agroweb/pijaca_si7z80.jpg", "Pexels"],
     "title": "Aktuelno: Zašto sve više kupaca bira uvozno voće umesto domaćeg?",
     "title_2": "",
     "lead": "Pokrajinski sekretarijat za poljoprivredu, vodoprivredu i šumarstvo raspisao je konkurs za održavanje tradicionalnih manifestacija.",
@@ -39,10 +36,7 @@
     "news_id": 2,
     "time2": "2022-05-28T13:30:03.969Z",
     "category": "Produktna berza",
-    "pics": [
-      "https://res.cloudinary.com/dvi29tcsc/image/upload/v1678829686/agroweb/produktna_berza_o77kzi.png",
-      "Ilustracija"
-    ],
+    "pics": ["https://res.cloudinary.com/dvi29tcsc/image/upload/v1678829686/agroweb/produktna_berza_o77kzi.png", "Ilustracija"],
     "title": "Prvi SPOT ugovori za kukuruz i soju: Pad cena na tržištu poljoprivrednih proizvoda (19.08-23.08.2024)",
     "title_2": "",
     "lead": "Ovih dana u vojvođanskom selu Mokrin započet je projekat digitalizacije poljoprivrede pod nazivom „Digitalno selo“. Osnovni cilj ovog projekta je da se kroz povećanje primene digitalnih alata unapredi proizvodnja i kvalitet zivota na selu, a tme i da se uveća zarada koju ostvaruju seoska domaćinstva.",
@@ -70,10 +64,7 @@
     "news_id": 3,
     "time2": "2022-05-23T13:30:03.969Z",
     "category": "Povrtarstvo",
-    "pics": [
-      "https://res.cloudinary.com/dvi29tcsc/image/upload/v1723715897/agroweb/paradajz_bftx5m.jpg",
-      "Pexels"
-    ],
+    "pics": ["https://res.cloudinary.com/dvi29tcsc/image/upload/v1723715897/agroweb/paradajz_bftx5m.jpg", "Pexels"],
     "title": "Osigurajte visok prinos paradajza: Ključne agrotehničke mere plasteničke proizvodnje",
     "title_2": "",
     "lead": "Pojava smole na voćkama javlja se usled poremećaja ravnoteže unutar same biljke i to je signal da je stablo izloženo stresu. Na voćkama se tokom godine javlja niz promena, a smola koja se javlja je znak da se nešto dešava u granama i stablu ili da je došlo do povrede biljke.",
@@ -562,13 +553,46 @@
     "source": "B92"
   },
   {
+    "news_id": 13,
+    "time2": "2025-02-20T09:30:03.969Z",
+    "category": "Ostalo",
+    "pics": ["/img/article_img/arhangel-gavrilo.jpg", "pravoslavlje"],
+    "title": "Zadušnice",
+    "title_2": "",
+    "lead": "Zadušnice su hrišćanski pravoslavni praznik koji je posvećen sećanju na preminule. Praznuje se ne samo ukazivanjem poštovanja našim precima već i kroz velikodušnost i milostinju prema sirotinji i onima kojima je to potrebno",
+    "body": [
+      {
+        "subtitle": "",
+        "text": "Zadušnice su crkveni praznik kada hrišćani posećuju grobove svojih bližnjih i uznose molitve Bogu za njih. Uvek padaju u subotu. Izuzetak su vaskršnje zadušnice."
+      },
+      {
+        "subtitle": "",
+        "text": "Najvažniji pomen za preminule je Proskomidija koja se služi na svakoj Svetoj Liturgiji. Pored ovih pominjanja i molitvi za preminule, Crkva je ustanovila posebne dane kad se sećamo naših dragih pokojnika i obilazimo njihove grobove."
+      },
+      {
+        "subtitle": "",
+        "text": "Srpska pravoslavna crkva propisala je posebne dane koji su posvećeni molitvi za umrle."
+      },
+      {
+        "subtitle": "Način obeležavanja",
+        "text": "Zadušnice obeležavaju sećanje dana odvajanja duha od tela, člana Crkve. Uvek padaju u subotu, jer je to i inače, u toku čitave godine, dan kad se sećamo preminulih. Na zadušnice se obavezno izlazi na groblje. Tada se obavlja parastos ili pomen. Osvećuje se žito, prekađuje grob i pale sveće za pokoj duša umrlih. Obavezno se uređuje grob."
+      },
+      {
+        "subtitle": "",
+        "text": "Koljivo ili kuvano žito se nosi u parohijski ili manastirski hram, kao i na groblje. Na dan zadušnica se služi Sveta Liturgija, i tada sveštenik vinom preliva žito, a posle službe se ide do grobova pokojnika. Pored grobova se pale sveće, a sveštenik obavi obred i okadi grobove. Ako su pokojnici sahranjeni daleko i nije moguće otići na njihove grobove, čitav obred se služi u hramu."
+      }
+    ],
+    "tags": ["Zadušnice"],
+    "source": "B92"
+  },
+  {
     "published": true,
     "news_id": 12,
-    "time2": "2023-02-20T09:30:03.969Z",
+    "time2": "2025-02-20T09:30:03.969Z",
     "category": "Ostalo",
-    "pics": ["/img/article_img/moon.jpg", "Pexels"],
+    "pics": ["https://res.cloudinary.com/dvi29tcsc/image/upload/v1737498379/crkveniKalendar/moon_h8tu4n.jpg", "Pexels"],
     "title": "Meseceve mene",
-    "title_2": "Magični noćni spektakl: Mesečeve mene 2023. godine",
+    "title_2": "Mesečeve mene 2025. godine",
     "lead": "Godišnje promene u ponašanju i navikama životinja, uključujući i ljude, a koje su povezane sa ciklusom Meseca nazivaju se mesečne mene.",
     "body": [
       {
@@ -616,106 +640,60 @@
         "text": "Mesečeve mene su dugotrajni ciklusi koji traju nekoliko godina, pa čak i vekova. Oni su važni za razumevanje promena u klimi i okolišu na Zemlji, kao i za praćenje ciklusa razvoja biljaka i životinja."
       },
       {
-        "subtitle": "MESEČEVE MENE ZA 2023. GODINU:",
-        "text": "Ovako izgleda satnica sa Beograd, koja važi za Srbiju i ceo naš region u 2023 godini. Tako da ukoliko živite u Srbiji, Bosni, Hrvatskoj, Makedoniji važi upravo ova tabela."
+        "subtitle": "MESEČEVE MENE ZA 2025. GODINU:",
+        "text": "Ovako izgleda satnica sa Beograd, koja važi za Srbiju i ceo naš region u 2025 godini. Tako da ukoliko živite u Srbiji, Bosni, Hrvatskoj, Makedoniji važi upravo ova tabela."
       },
       {
-        "subtitle3": "Januar 2023.",
-        "text": "<ul><li>Pun mesec - 07. 01. 2023. u 00:07</li><li>Poslednja četvrt 15. - 01. 2023. u 03:10</li><li>Mlad mesec - 21. 01. 2023. u 21:53</li><li>Prva četvrt - 28. 01. 2023. u 16:18</ul></li>"
+        "subtitle3": "Januar 2025.",
+        "text": "<ul><li>Pun mesec - 07. 01. 2025. u 00:07</li><li>Poslednja četvrt 15. - 01. 2025. u 03:10</li><li>Mlad mesec - 21. 01. 2025. u 21:53</li><li>Prva četvrt - 28. 01. 2025. u 16:18</ul></li>"
       },
       {
-        "subtitle3": "Februar 2023.",
-        "text": "<ul><li>Pun mesec - 05. 02. 2023. u 19:28</li><li>Poslednja četvrt - 13. 02. 2023. u 17:00</li><li>Mlad mesec - 20. 02. 2023. u 08:05</li><li>Prva četvrt - 27. 02. 2023. u 09:05</ul></li>"
+        "subtitle3": "Februar 2025.",
+        "text": "<ul><li>Pun mesec - 05. 02. 2025. u 19:28</li><li>Poslednja četvrt - 13. 02. 2025. u 17:00</li><li>Mlad mesec - 20. 02. 2025. u 08:05</li><li>Prva četvrt - 27. 02. 2025. u 09:05</ul></li>"
       },
       {
-        "subtitle3": "Mart 2023.",
-        "text": "<ul><li>Pun mesec - 07. 03. 2023. u 13:40</li><li>Poslednja četvrt - 15. 03. 2023. u 03:08</li><li>Mlad mesec - 21. 03. 2023. u 18:23</li><li>Prva četvrt - 29. 03. 2023. u 04:32</ul></li>"
+        "subtitle3": "Mart 2025.",
+        "text": "<ul><li>Pun mesec - 07. 03. 2025. u 13:40</li><li>Poslednja četvrt - 15. 03. 2025. u 03:08</li><li>Mlad mesec - 21. 03. 2025. u 18:23</li><li>Prva četvrt - 29. 03. 2025. u 04:32</ul></li>"
       },
       {
-        "subtitle3": "April 2023.",
-        "text": "<ul><li>Pun mesec - 06. 04. 2023. u 06:34</li><li>Poslednja četvrt - 13. 04. 2023. u 11:11</li><li>Mlad mesec - 20. 04. 2023. u 06:12</li><li>Prva četvrt - 27. 04. 2023. u 23:19</ul></li>"
+        "subtitle3": "April 2025.",
+        "text": "<ul><li>Pun mesec - 06. 04. 2025. u 06:34</li><li>Poslednja četvrt - 13. 04. 2025. u 11:11</li><li>Mlad mesec - 20. 04. 2025. u 06:12</li><li>Prva četvrt - 27. 04. 2025. u 23:19</ul></li>"
       },
       {
-        "subtitle3": "Maj 2023.",
-        "text": "<ul><li>Pun mesec - 05. 05. 2023. u 19:34</li><li>Poslednja četvrt - 12. 05. 2023. u 16:28</li><li>Mlad mesec - 19. 05. 2023. u 17:53</li><li>Prva četvrt - 27. 05. 2023. u 17:22</ul></li>"
+        "subtitle3": "Maj 2025.",
+        "text": "<ul><li>Pun mesec - 05. 05. 2025. u 19:34</li><li>Poslednja četvrt - 12. 05. 2025. u 16:28</li><li>Mlad mesec - 19. 05. 2025. u 17:53</li><li>Prva četvrt - 27. 05. 2025. u 17:22</ul></li>"
       },
       {
-        "subtitle3": "Jun 2023.",
-        "text": "<ul><li>Pun mesec - 04. 06. 2023. u 05:41</li><li>Poslednja četvrt - 10. 06. 2023. u 21:31</li><li>Mlad mesec - 18. 06. 2023. u 06:37</li><li>Prva četvrt - 26. 06. 2023. u 09:49</ul></li>"
+        "subtitle3": "Jun 2025.",
+        "text": "<ul><li>Pun mesec - 04. 06. 2025. u 05:41</li><li>Poslednja četvrt - 10. 06. 2025. u 21:31</li><li>Mlad mesec - 18. 06. 2025. u 06:37</li><li>Prva četvrt - 26. 06. 2025. u 09:49</ul></li>"
       },
       {
-        "subtitle3": "Jul 2023.",
-        "text": "<ul><li>Pun mesec - 03. 07. 2023. u 13:38</li><li>Poslednja četvrt - 10. 07. 2023. u 03:47</li><li>Mlad mesec - 17. 07. 2023. u 20:31</li><li>Prva četvrt - 26. 07. 2023. u 00:06</ul></li>"
+        "subtitle3": "Jul 2025.",
+        "text": "<ul><li>Pun mesec - 03. 07. 2025. u 13:38</li><li>Poslednja četvrt - 10. 07. 2025. u 03:47</li><li>Mlad mesec - 17. 07. 2025. u 20:31</li><li>Prva četvrt - 26. 07. 2025. u 00:06</ul></li>"
       },
       {
-        "subtitle3": "Avgust 2023.",
-        "text": "<ul><li>Pun mesec - 01. 08. 2023. u 20:31</li><li>Poslednja četvrt - 08. 08. 2023. u 12:28</li><li>Mlad mesec - 16. 08. 2023. u 11:38</li><li>Prva četvrt - 24. 08. 2023. u 11:57</li><li>Pun mesec - 31. 08. 2023. u 03:35</ul></li>"
+        "subtitle3": "Avgust 2025.",
+        "text": "<ul><li>Pun mesec - 01. 08. 2025. u 20:31</li><li>Poslednja četvrt - 08. 08. 2025. u 12:28</li><li>Mlad mesec - 16. 08. 2025. u 11:38</li><li>Prva četvrt - 24. 08. 2025. u 11:57</li><li>Pun mesec - 31. 08. 2025. u 03:35</ul></li>"
       },
       {
-        "subtitle3": "Septembar 2023.",
-        "text": "<ul><li>Poslednja četvrt - 07. 09. 2023. u 00:21</li><li>Mlad mesec - 15. 09. 2023. u 03:39</li><li>Prva četvrt - 22. 09. 2023. u 21:31</li><li>Pun mesec - 29. 09. 2023. u 11:57</ul></li>"
+        "subtitle3": "Septembar 2025.",
+        "text": "<ul><li>Poslednja četvrt - 07. 09. 2025. u 00:21</li><li>Mlad mesec - 15. 09. 2025. u 03:39</li><li>Prva četvrt - 22. 09. 2025. u 21:31</li><li>Pun mesec - 29. 09. 2025. u 11:57</ul></li>"
       },
       {
-        "subtitle3": "Oktobar 2023.",
-        "text": "<ul><li>Poslednja četvrt - 06. 10. 2023. u 15:47</li><li>Mlad mesec - 14. 10. 2023. u 19:55</li><li>Prva četvrt - 22. 10. 2023. u 05:29</li><li>Pun mesec - 28. 10. 2023. u 22:24</ul></li>"
+        "subtitle3": "Oktobar 2025.",
+        "text": "<ul><li>Poslednja četvrt - 06. 10. 2025. u 15:47</li><li>Mlad mesec - 14. 10. 2025. u 19:55</li><li>Prva četvrt - 22. 10. 2025. u 05:29</li><li>Pun mesec - 28. 10. 2025. u 22:24</ul></li>"
       },
       {
-        "subtitle3": "Novembar 2023.",
-        "text": "<ul><li>Poslednja četvrt - 05. 11. 2023. u 09:36</li><li>Mlad mesec - 13. 11. 2023. u 10:27</li><li>Prva četvrt - 20. 11. 2023. u 11:49</li><li>Pun mesec - 27. 11. 2023. u 10:16</ul></li>"
+        "subtitle3": "Novembar 2025.",
+        "text": "<ul><li>Poslednja četvrt - 05. 11. 2025. u 09:36</li><li>Mlad mesec - 13. 11. 2025. u 10:27</li><li>Prva četvrt - 20. 11. 2025. u 11:49</li><li>Pun mesec - 27. 11. 2025. u 10:16</ul></li>"
       },
       {
-        "subtitle3": "Decembar 2023.",
-        "text": "<ul><li>Poslednja četvrt - 05. 12. 2023. u 06:49</li><li>Mlad mesec - 13. 12. 2023. u 00:32</li><li>Prva četvrt - 19. 12. 2023. u 19:39</li><li>Pun mesec - 27. 12. 2023. u 01:33</ul></li>"
+        "subtitle3": "Decembar 2025.",
+        "text": "<ul><li>Poslednja četvrt - 05. 12. 2025. u 06:49</li><li>Mlad mesec - 13. 12. 2025. u 00:32</li><li>Prva četvrt - 19. 12. 2025. u 19:39</li><li>Pun mesec - 27. 12. 2025. u 01:33</ul></li>"
       }
     ],
     "tags": ["mesečeve mene", "astrologija", "zemlja", "sunce"],
     "source": "agroweb.rs",
-    "page_view": 50,
-    "redUrl": "https://agroweb.rs/vesti/subvencije/bespovratna-sredstva-za-odrzavanje-tradicionalnih-manifestacija"
-  },
-  {
-    "news_id": 13,
-    "time2": "2023-02-22T07:30:03.969Z",
-    "category": "Ostalo",
-    "pics": ["/img/article_img/arhangel-gavrilo.jpg", "pravoslavlje"],
-    "title": "test1",
-    "title_2": "Sabor Svetog Arhangela Gavrila: Otkrivanje tajni ljudskog spasenja",
-    "lead": "Srpska pravoslavna crkva i vernici 26. jula obeležavaju praznik Sabor Svetog Arhangela Gavrila, i njegovo javljanje kroz svu istoriju ljudskog spasenja. Smatra se zaštitnikom ljudi i životinja.",
-    "body": [
-      {
-        "subtitle": "",
-        "text": "Arhangel Gavrilo, blagovesnik radosti, jedan je od sedam velikih angela serafima koji su učestvovali u stvaranju sveta, najbližih prestolu Gospoda. Smatra se vesnikom tajni Božjih. Odavnina, slavi se prvi dan posle Blagovesti, čime se odaje poštovanje onome koji je poslužio tajni ljudskog spasenja."
-      },
-      {
-        "subtitle": "",
-        "text": "Arhagel Gavrilo je svedočanstvo o početku nastajanja Božje tvorevine preneo proroku Mojsiju javivši mu se u pustinji i poučivši ga kako da napiše knjigu Postanja. Slavi se kao anđeo Blagovesnik zadužen za radosne ili blage vesti, i onaj koji je najavio Zahariji rođenje Jovana Preteče Hristovog - Svetog Jovana Krstitelja. Arhangel Gavrilo javio se Joakimu i Ani i najavio rođenje Presvete Bogorodice Marije, a potom i Presvetoj Bogorodici Mariji sa vešću da će roditi sina, spasitelja ljudskog roda, Gospoda Isusa Hrista."
-      },
-      {
-        "subtitle": "",
-        "text": "Lik anđela Gavrila sa presvetom Bogorodicom Marijom, koja prima Blagovest, slika se na carskim dverima pravoslavnih oltara koja se simbolično otvaraju u toku liturgije jer je ovaj događaj otvorio put u Carstvo nebesko."
-      },
-      {
-        "subtitle": "",
-        "text": "Često je slavljen svetac i narod ga smatra zaštitnikom ljudi i stoke od vremenskih nepogoda. Česta je zavetna slava, a na taj dan se izbegava bilo kakav rad osim sitnijih popravki."
-      },
-      {
-        "subtitle": "",
-        "text": "Sabor Svetog arhangela Gavrila slavi se dva puta godišnje - 8. aprika kada SPC slavi njegova javljanja kroz svu istoriju ljudskog spasenja i 26. jula po novom kalendaru, kao letnji Aranđelovdan."
-      },
-      {
-        "subtitle": "",
-        "text": "Letnji sabor ustanovljen je na Svetoj Gori u 9. veku povodom javljanja arhangela Gavrila u keliji kod Koreje, gde je prstom na kamenu ispisao pesmu Bogorodici."
-      },
-      {
-        "subtitle": "",
-        "text": "Letnji sabor ustanovljen je na Svetoj Gori u 9. veku povodom javljanja arhangela Gavrila u keliji kod Koreje, gde je prstom na kamenu ispisao pesmu Bogorodici. Po predanju, arhangel Gavrilo je neko vreme bio na Mesecu. Jednom je sleteo na Zemlju i napio se vode s đavoljeg izvora. Đavo ga potera, stigne na Mesec, potegne ga grebenom i zakači mu taban. Od tada ljudi imaju ugnute tabane."
-      },
-      {
-        "subtitle": "",
-        "text": "<blockquote><h3>Molitva Svetom Arhangelu Gavrilu</h3>Sveti Arhangele Gavrilo, koji donese neizrečenu radost sa neba Prečistoj Djevi, ispuni radošću i veseljem srce moje gordošću ispunjeno. O veliki Arhangele Božiji Gavrilo, ti si blagovestio Prečistoj Djevi Mariji začeće Sina Božijeg. Objavi i meni grešnom strašni dan moje smrti i umoli Gospoda Boga za moju grešnu dušu, da bi mi oprostio moje grehe; da me ne zarobi lukavi demon i ovlada mnome. O veliki Arhangele Gavrile! Sačuvaj me od svih nevolja i svih bolesti, sada i uvek i u vekove vekova. Amin.</blockquote>"
-      }
-    ],
-    "tags": ["Arhangel Gavrilo"],
-    "source": "B92"
+    "page_view": 50
   }
 ]
