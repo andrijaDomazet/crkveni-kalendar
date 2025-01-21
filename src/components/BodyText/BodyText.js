@@ -1,5 +1,5 @@
 import React from "react";
-import { Tweet } from "react-twitter-widgets";
+// import { Tweet } from "react-twitter-widgets";
 import "./BodyText.scss";
 
 const setSubTitle = (item) => {
@@ -14,7 +14,7 @@ const setSubTitle = (item) => {
 };
 const setTweet = (e) => {
   if (e > 0) {
-    return <Tweet tweetId={e} />;
+    // return <Tweet tweetId={e} />;
   }
 };
 export default function BodyText(props) {
