@@ -556,7 +556,7 @@
     "news_id": 13,
     "time2": "2025-02-20T09:30:03.969Z",
     "category": "Ostalo",
-    "pics": ["/img/article_img/arhangel-gavrilo.jpg", "pravoslavlje"],
+    "pics": ["https://res.cloudinary.com/dvi29tcsc/image/upload/v1737583754/crkveniKalendar/zadusnice-sveca_dfuuqg.jpg", "Pexels"],
     "title": "Zadušnice",
     "title_2": "",
     "lead": "Zadušnice su hrišćanski pravoslavni praznik koji je posvećen sećanju na preminule. Praznuje se ne samo ukazivanjem poštovanja našim precima već i kroz velikodušnost i milostinju prema sirotinji i onima kojima je to potrebno",
@@ -583,7 +583,7 @@
       }
     ],
     "tags": ["Zadušnice"],
-    "source": "B92"
+    "source": "ikone.rs"
   },
   {
     "published": true,
@@ -693,7 +693,7 @@
       }
     ],
     "tags": ["mesečeve mene", "astrologija", "zemlja", "sunce"],
-    "source": "agroweb.rs",
+    "source": "ikone.rs",
     "page_view": 50
   }
 ]
