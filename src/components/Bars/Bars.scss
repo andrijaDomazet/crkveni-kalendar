@@ -20,7 +20,7 @@
     }
   }
 }
-@media screen and(min-width:$medium) {
+@media screen and (min-width:$medium) {
   .bars {
     display: flex;
     width: 100%;
@@ -37,7 +37,7 @@
     }
   }
 }
-@media screen and(min-width:$large) {
+@media screen and (min-width:$large) {
   .bars {
     width: 1400px;
     .bars__links {

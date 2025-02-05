@@ -2,7 +2,17 @@ import React, { useEffect, useState } from "react";
 import "./Calendar.scss";
 import { NavLink, useNavigate } from "react-router-dom";
 import news2 from "./calendar-data/all__news4";
-import { idsMonths, daysIsPost, daysIsNotPost, monthSerb, calendarYears, manualDateEaster, redDaysId, inCalendarArr, easterDays } from "./calendar-data/calendar-data";
+import {
+  idsMonths,
+  daysIsPost,
+  daysIsNotPost,
+  monthSerb,
+  calendarYears,
+  manualDateEaster,
+  redDaysId,
+  inCalendarArr,
+  easterDays,
+} from "./calendar-data/calendar-data";
 import SimpleButton from "../../UI/Buttons/SimpleButton";
 import TimeFormat from "../TimeFormat/TimeFormat";
 import { useGlobalLocation } from "../../shared/LocationContext";
@@ -16,7 +26,9 @@ export default function Calendar(props) {
   const [isYear, setIsYear] = useState(() => {
     return slug || currentDate.getFullYear();
   });
-  const [isMonth, setIsMonth] = useState(() => (id === undefined ? currentDate.getMonth() : monthSerb.indexOf(id)));
+  const [isMonth, setIsMonth] = useState(() =>
+    id === undefined ? currentDate.getMonth() : monthSerb.indexOf(id)
+  );
   useEffect(() => {
     if (slug && id) {
       setIsYear(slug);
@@ -48,25 +60,40 @@ export default function Calendar(props) {
 
   const navigate = useNavigate();
 
-  const changeMonth = (val) => {
-    // const path = id === undefined ? `/${isYear}/${tableTitle(val)}` : `../${isYear}/${tableTitle(val)}/`;
-    // navigate(path);
+  // const changeMonth = (val) => {
+  //   // const path = id === undefined ? `/${isYear}/${tableTitle(val)}` : `../${isYear}/${tableTitle(val)}/`;
+  //   // navigate(path);
 
-    if (isMonth === 11 && val === 1) {
-      setIsMonth(0);
+  //   if (isMonth === 11 && val === 1) {
+  //     setIsMonth(0);
+  //     setIsYear((prevYear) => +prevYear + 1);
+  //     navigate(`../${+isYear + 1}/januar/`);
+  //   } else if (isMonth === 0 && val === -1) {
+  //     setIsMonth(11);
+  //     setIsYear((prevYear) => +prevYear - 1);
+  //     navigate(`../${+isYear - 1}/decembar/`);
+  //   } else {
+  //     setIsMonth((prevMonth) => prevMonth + val);
+  //     const path = id === undefined ? `/${isYear}/${tableTitle(val)}` : `../${isYear}/${tableTitle(val)}/`;
+  //     navigate(path);
+  //   }
+  // };
+  const changeMonth = (val) => {
+    if (id === undefined) {
+      navigate(`/${isYear}/${tableTitle(val)}`);
+    } else if (isMonth === 11 && val === 1) {
+      // setIsMonth(0);
       setIsYear((prevYear) => +prevYear + 1);
-      navigate(`../${+isYear + 1}/januar/`);
+      navigate(`../${+isYear + 1}/januar`);
     } else if (isMonth === 0 && val === -1) {
-      setIsMonth(11);
-      setIsYear((prevYear) => +prevYear - 1);
-      navigate(`../${+isYear - 1}/decembar/`);
+      // setIsMonth(11);
+      // setIsYear((prevYear) => +prevYear - 1);
+      navigate(`../${+isYear - 1}/decembar`);
     } else {
-      setIsMonth((prevMonth) => prevMonth + val);
-      const path = id === undefined ? `/${isYear}/${tableTitle(val)}` : `../${isYear}/${tableTitle(val)}/`;
-      navigate(path);
+      // setIsMonth((prevMonth) => prevMonth + val);
+      navigate(`../${isYear}/${tableTitle(val)}`);
     }
   };
-
   function setMonth(short) {
     if (short) {
       //short month on home page
@@ -74,7 +101,10 @@ export default function Calendar(props) {
         if (currentDate.getDate() < 7) {
           return holidays.slice(0, currentDate.getDate() + short);
         } else {
-          return holidays.slice(currentDate.getDate() - short, currentDate.getDate() + short);
+          return holidays.slice(
+            currentDate.getDate() - short,
+            currentDate.getDate() + short
+          );
         }
       };
       return setShortCal();
@@ -103,10 +133,18 @@ export default function Calendar(props) {
   };
 
   const rowClasses = (item, zz) => {
-    return redDaysId.includes(item.id) || (easterDays.includes(item.title) && zz !== 4 && zz !== 6) ? "normalRow" : "";
+    return redDaysId.includes(item.id) ||
+      (easterDays.includes(item.title) && zz !== 4 && zz !== 6)
+      ? "normalRow"
+      : "";
   };
 
-  const todayClass = (x) => (x.getDate() === currentDate.getDate() && x.getMonth() === currentDate.getMonth() && x.getFullYear() === currentDate.getFullYear() ? " today" : "");
+  const todayClass = (x) =>
+    x.getDate() === currentDate.getDate() &&
+    x.getMonth() === currentDate.getMonth() &&
+    x.getFullYear() === currentDate.getFullYear()
+      ? " today"
+      : "";
 
   const setPostDays = (dateInfo) => {
     let setDateFromDateInfo = new Date(dateInfo);
@@ -116,8 +154,12 @@ export default function Calendar(props) {
     let bozicniPostEnd = new Date(isYear, 0, 6);
     let vikendPosleBozica = new Date(isYear, 0, 17);
 
-    let notPost = daysIsNotPost.map((item) => new Date(isYear, item[0], item[1]).setHours(0, 0, 0, 0));
-    let isPost = daysIsPost.map((item) => new Date(isYear, item[0], item[1]).setHours(0, 0, 0, 0));
+    let notPost = daysIsNotPost.map((item) =>
+      new Date(isYear, item[0], item[1]).setHours(0, 0, 0, 0)
+    );
+    let isPost = daysIsPost.map((item) =>
+      new Date(isYear, item[0], item[1]).setHours(0, 0, 0, 0)
+    );
     let setDateDay = setDateFromDateInfo.getDay();
     if (setDateFromDateInfo >= bozicniPostStart) {
       return "post";
@@ -150,7 +192,11 @@ export default function Calendar(props) {
       <ul className={getDropDownMenu()}>
         {items.map((item, index) => {
           return (
-            <NavLink to={`/${item.title}/${monthSerb[isMonth]}/`} key={index} onClick={() => setDropDownYear(false)}>
+            <NavLink
+              to={`/${item.title}/${monthSerb[isMonth]}/`}
+              key={index}
+              onClick={() => setDropDownYear(false)}
+            >
               {item.title}
             </NavLink>
           );
@@ -242,7 +288,12 @@ export default function Calendar(props) {
                     </td>
                   </tr>
                 )}
-                <tr key={index} className={rowClasses(item, zz) + todayClass(new Date(item.date))}>
+                <tr
+                  key={index}
+                  className={
+                    rowClasses(item, zz) + todayClass(new Date(item.date))
+                  }
+                >
                   {tdClasses.map((x, index) => {
                     return (
                       <td key={index}>
