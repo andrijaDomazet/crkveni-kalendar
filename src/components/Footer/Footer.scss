@@ -1,0 +1,88 @@
+@import "../../index.scss";
+
+.footer {
+  position: relative;
+  z-index: +100;
+  background: linear-gradient(to bottom, $eggShell3 40%, $eggShell4 100%);
+  .home__section5-top {
+    padding: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    span {
+      line-height: 2.4rem;
+      text-align: left;
+      padding: 0.2rem 0;
+      color: white;
+    }
+  }
+  .home__section5-middle {
+    margin: 0 auto;
+    padding: 0.3rem 0.2rem;
+    border: 1px 0 1px 0 solid $grey2;
+    border-top: 0.5px solid $grey2;
+    border-bottom: 0.5px solid $grey2;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+  }
+  .home__section5-middle > div {
+    padding: 0.3rem 0.4rem;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    a {
+      display: flex;
+      color: white;
+      line-height: 2.4rem;
+      align-items: center;
+      img {
+        cursor: pointer;
+        color: $dark1;
+        -webkit-filter: brightness(0) invert(1);
+        filter: brightness(0) invert(1);
+        margin-left: 1rem;
+        width: auto;
+        height: 1.6rem;
+      }
+    }
+  }
+  .home__section5-middle > div:last-child {
+    justify-content: flex-end;
+  }
+  .home__section5-bottom {
+    text-align: center;
+    margin: 0 auto;
+    color: white;
+    padding: 2rem 0;
+  }
+}
+@media screen and (min-width: $medium) {
+  .footer {
+    position: relative;
+    z-index: 2;
+    .home__section5-top {
+      padding: 2.5rem 15%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      a {
+        text-align: center;
+        span {
+          text-align: center;
+        }
+      }
+    }
+    .home__section5-middle {
+      width: 80%;
+    }
+    .home__section5-middle > div {
+      padding: 0.5rem 0.2rem;
+      a {
+        color: white;
+        img {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+}
