@@ -10,15 +10,12 @@ import {
   calendarYears,
   manualDateEaster,
   redDaysId,
-  inCalendarArr,
   easterDays,
 } from "./calendar-data/calendar-data";
 import SimpleButton from "../../UI/Buttons/SimpleButton";
 import TimeFormat from "../TimeFormat/TimeFormat";
 import { useGlobalLocation } from "../../shared/LocationContext";
 import { useIdContext } from "../../shared/IdProvider";
-
-// import AdManagerSlot from "../AdvModule/AdManagerSlot";
 
 export default function Calendar(props) {
   const { id, slug, currentDate, currentYear } = useIdContext();
@@ -40,16 +37,18 @@ export default function Calendar(props) {
 
   const [holidays, setHolidays] = useState(filterHolidays);
   const [dropDownYear, setDropDownYear] = useState(false);
+
+  var easterDay;
   function filterHolidays() {
-    console.log("Filter holidays", id, slug);
+    // console.log("Filter holidays", id, slug);
     let easter = isYear - 2020;
     let monthData = JSON.parse(JSON.stringify(news2));
     let setHol = monthData.slice(idsMonths[isMonth][0], idsMonths[isMonth][1]);
     let setHolTest = setHol.map((item, index) => {
       let date1 = new Date(isYear, isMonth, index + 1);
       item.date = date1;
-      let date2 = new Date(`${isYear}-${manualDateEaster[easter]}`);
-      let diffInDays = (date2 - date1) / (1000 * 60 * 60 * 24); // Razlika u danima
+      easterDay = new Date(`${isYear}-${manualDateEaster[easter]}`);
+      let diffInDays = (easterDay - date1) / (1000 * 60 * 60 * 24); // Razlika u danima
       if (diffInDays >= 0 && diffInDays <= 3) {
         item.title = easterDays[easterDays.length - 1 - diffInDays];
       }
@@ -60,37 +59,15 @@ export default function Calendar(props) {
 
   const navigate = useNavigate();
 
-  // const changeMonth = (val) => {
-  //   // const path = id === undefined ? `/${isYear}/${tableTitle(val)}` : `../${isYear}/${tableTitle(val)}/`;
-  //   // navigate(path);
-
-  //   if (isMonth === 11 && val === 1) {
-  //     setIsMonth(0);
-  //     setIsYear((prevYear) => +prevYear + 1);
-  //     navigate(`../${+isYear + 1}/januar/`);
-  //   } else if (isMonth === 0 && val === -1) {
-  //     setIsMonth(11);
-  //     setIsYear((prevYear) => +prevYear - 1);
-  //     navigate(`../${+isYear - 1}/decembar/`);
-  //   } else {
-  //     setIsMonth((prevMonth) => prevMonth + val);
-  //     const path = id === undefined ? `/${isYear}/${tableTitle(val)}` : `../${isYear}/${tableTitle(val)}/`;
-  //     navigate(path);
-  //   }
-  // };
   const changeMonth = (val) => {
     if (id === undefined) {
       navigate(`/${isYear}/${tableTitle(val)}`);
     } else if (isMonth === 11 && val === 1) {
-      // setIsMonth(0);
       setIsYear((prevYear) => +prevYear + 1);
       navigate(`../${+isYear + 1}/januar`);
     } else if (isMonth === 0 && val === -1) {
-      // setIsMonth(11);
-      // setIsYear((prevYear) => +prevYear - 1);
       navigate(`../${+isYear - 1}/decembar`);
     } else {
-      // setIsMonth((prevMonth) => prevMonth + val);
       navigate(`../${isYear}/${tableTitle(val)}`);
     }
   };
@@ -153,7 +130,7 @@ export default function Calendar(props) {
     let bozicniPostStart = new Date(isYear, 10, 28);
     let bozicniPostEnd = new Date(isYear, 0, 6);
     let vikendPosleBozica = new Date(isYear, 0, 17);
-
+    // let easterPost = easterDay.setHours(0, 0, 0, 0);
     let notPost = daysIsNotPost.map((item) =>
       new Date(isYear, item[0], item[1]).setHours(0, 0, 0, 0)
     );
@@ -258,10 +235,7 @@ export default function Calendar(props) {
               );
             })}
             <th>
-              <h2>
-                {tableTitle(0)}
-                {/* {isYear} */}
-              </h2>
+              <h2>{tableTitle(0)}</h2>
             </th>
             <th></th>
           </tr>

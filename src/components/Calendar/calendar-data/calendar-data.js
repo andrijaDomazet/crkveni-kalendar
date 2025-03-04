@@ -1,8 +1,21 @@
-export const monthSerb = ["januar", "februar", "mart", "april", "maj", "jun", "jul", "avgust", "septembar", "oktobar", "novembar", "decembar"];
+export const monthSerb = [
+  "januar",
+  "februar",
+  "mart",
+  "april",
+  "maj",
+  "jun",
+  "jul",
+  "avgust",
+  "septembar",
+  "oktobar",
+  "novembar",
+  "decembar",
+];
 export const idsMonths = [
   [0, 31],
   [31, 59],
-  [60, 90], //mart
+  [59, 90], //mart
   [90, 120],
   [120, 151],
   [151, 181],
@@ -42,12 +55,26 @@ export const calendarYears = [
     ],
   },
 ];
-export const inCalendarArr = ["div-gpt-ad-1724672473185-0", "div-gpt-ad-1724680335213-0", "div-gpt-ad-1724680376368-0", "div-gpt-ad-1724680398271-0", "div-gpt-ad-1724680417311-0"];
-export const redDaysId = [7, 8, 9, 14, 19, 20, 27, 46, 153, 154, 163, 164, 165, 188, 193, 214, 231, 240, 254, 264, 270, 300, 304, 312, 325, 338, 353];
+export const inCalendarArr = [
+  "div-gpt-ad-1724672473185-0",
+  "div-gpt-ad-1724680335213-0",
+  "div-gpt-ad-1724680376368-0",
+  "div-gpt-ad-1724680398271-0",
+  "div-gpt-ad-1724680417311-0",
+];
+export const redDaysId = [
+  7, 8, 9, 14, 19, 20, 27, 46, 153, 154, 163, 164, 165, 188, 193, 214, 231, 240,
+  254, 264, 270, 300, 304, 312, 325, 338, 353,
+];
 export const daysIsNotPost = [
   [0, 7],
   [0, 19],
   [1, 16],
   [1, 18],
 ];
-export const easterDays = ["Veliki četvrtak (Veliko bdenije)", "Veliki petak", "Velika subota", "V a s k r s – Vaskrsenje Gospoda Isusa Hrista"];
+export const easterDays = [
+  "Veliki četvrtak (Veliko bdenije)",
+  "Veliki petak",
+  "Velika subota",
+  "V a s k r s – Vaskrsenje Gospoda Isusa Hrista",
+];
