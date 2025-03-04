@@ -26,6 +26,7 @@ export default function Calendar(props) {
   const [isMonth, setIsMonth] = useState(() =>
     id === undefined ? currentDate.getMonth() : monthSerb.indexOf(id)
   );
+  const [isEasterDay, setIsEasterDay] = useState("");
   useEffect(() => {
     if (slug && id) {
       setIsYear(slug);
@@ -38,7 +39,7 @@ export default function Calendar(props) {
   const [holidays, setHolidays] = useState(filterHolidays);
   const [dropDownYear, setDropDownYear] = useState(false);
 
-  var easterDay;
+  // var easterDay;
   function filterHolidays() {
     // console.log("Filter holidays", id, slug);
     let easter = isYear - 2020;
@@ -47,7 +48,8 @@ export default function Calendar(props) {
     let setHolTest = setHol.map((item, index) => {
       let date1 = new Date(isYear, isMonth, index + 1);
       item.date = date1;
-      easterDay = new Date(`${isYear}-${manualDateEaster[easter]}`);
+      let easterDay = new Date(`${isYear}-${manualDateEaster[easter]}`);
+      setIsEasterDay(easterDay);
       let diffInDays = (easterDay - date1) / (1000 * 60 * 60 * 24); // Razlika u danima
       if (diffInDays >= 0 && diffInDays <= 3) {
         item.title = easterDays[easterDays.length - 1 - diffInDays];
@@ -71,6 +73,16 @@ export default function Calendar(props) {
       navigate(`../${isYear}/${tableTitle(val)}`);
     }
   };
+  // console.log("EasterDay", isEasterDay);
+  const easterDate = new Date(isEasterDay);
+  const endEasterDate = new Date(easterDate.setDate(easterDate.getDate() - 2));
+  console.log("End", endEasterDate);
+  const startEasterDate = new Date(
+    easterDate.setDate(easterDate.getDate() - 48)
+  );
+  // easterDate.setDate(easterDate.getDate() - 48);
+  // const startEasterDate = easterDate.toDateString();
+  console.log("Start", startEasterDate); // Rezultat: Datum 48 dana pre Uskrsa
   function setMonth(short) {
     if (short) {
       //short month on home page
@@ -137,10 +149,20 @@ export default function Calendar(props) {
     let isPost = daysIsPost.map((item) =>
       new Date(isYear, item[0], item[1]).setHours(0, 0, 0, 0)
     );
+    let startEasterPost2 = new Date(startEasterDate).setHours(0, 0, 0, 0);
+    let endEasterDate2 = new Date(endEasterDate).setHours(0, 0, 0, 0);
+    // console.log("Days", startEasterPost);
+    // console.log("Easter post", startEasterDate <= setDateFromDateInfo);
+
     let setDateDay = setDateFromDateInfo.getDay();
     if (setDateFromDateInfo >= bozicniPostStart) {
       return "post";
     } else if (setDateFromDateInfo <= bozicniPostEnd) {
+      return "post";
+    } else if (
+      setDateFromDateInfo <= endEasterDate2 &&
+      startEasterPost2 <= setDateFromDateInfo
+    ) {
       return "post";
     } else if (setDateFromDateInfo <= vikendPosleBozica) {
       return "";
