@@ -10,7 +10,7 @@ export default function KalendarGodina() {
       <CalendarMonthsLinks />
       <div className="kalendarGodina-wrapper">
         <div className="kalendarGodina-left">
-          <Calendar shortCal={10} soc={false} />
+          <Calendar soc={false} />
         </div>
         <div className="kalendarGodina-right">
           <Zadusnice />

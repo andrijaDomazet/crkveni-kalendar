@@ -39,9 +39,7 @@ export default function Calendar(props) {
   const [holidays, setHolidays] = useState(filterHolidays);
   const [dropDownYear, setDropDownYear] = useState(false);
 
-  // var easterDay;
   function filterHolidays() {
-    // console.log("Filter holidays", id, slug);
     let easter = isYear - 2020;
     let monthData = JSON.parse(JSON.stringify(news2));
     let setHol = monthData.slice(idsMonths[isMonth][0], idsMonths[isMonth][1]);
@@ -73,16 +71,17 @@ export default function Calendar(props) {
       navigate(`../${isYear}/${tableTitle(val)}`);
     }
   };
-  // console.log("EasterDay", isEasterDay);
   const easterDate = new Date(isEasterDay);
-  const endEasterDate = new Date(easterDate.setDate(easterDate.getDate() - 2));
-  console.log("End", endEasterDate);
-  const startEasterDate = new Date(
-    easterDate.setDate(easterDate.getDate() - 48)
-  );
+  let test11 = easterDate.setDate(easterDate.getDate() - 1);
+  const endEasterDate = new Date(test11);
+  // console.log("End", endEasterDate);
+  let test22 = easterDate.setDate(easterDate.getDate() - 49);
+  const startEasterDate = new Date(test22);
+  let test33 = easterDate.setDate(easterDate.getDate() + 7);
+  const endBelaNedelja = new Date(test33);
   // easterDate.setDate(easterDate.getDate() - 48);
   // const startEasterDate = easterDate.toDateString();
-  console.log("Start", startEasterDate); // Rezultat: Datum 48 dana pre Uskrsa
+  // console.log("endBelaNedelja", easterDate, isEasterDay, endBelaNedelja); // Rezultat: Datum 48 dana pre Uskrsa
   function setMonth(short) {
     if (short) {
       //short month on home page
@@ -149,10 +148,6 @@ export default function Calendar(props) {
     let isPost = daysIsPost.map((item) =>
       new Date(isYear, item[0], item[1]).setHours(0, 0, 0, 0)
     );
-    let startEasterPost2 = new Date(startEasterDate).setHours(0, 0, 0, 0);
-    let endEasterDate2 = new Date(endEasterDate).setHours(0, 0, 0, 0);
-    // console.log("Days", startEasterPost);
-    // console.log("Easter post", startEasterDate <= setDateFromDateInfo);
 
     let setDateDay = setDateFromDateInfo.getDay();
     if (setDateFromDateInfo >= bozicniPostStart) {
@@ -160,14 +155,18 @@ export default function Calendar(props) {
     } else if (setDateFromDateInfo <= bozicniPostEnd) {
       return "post";
     } else if (
-      setDateFromDateInfo <= endEasterDate2 &&
-      startEasterPost2 <= setDateFromDateInfo
+      setDateFromDateInfo <= endEasterDate &&
+      startEasterDate <= setDateFromDateInfo
     ) {
       return "post";
     } else if (setDateFromDateInfo <= vikendPosleBozica) {
       return "";
     } else if (setDateDay === 3 || setDateDay === 5) {
-      if (!notPost.includes(setDateFromDateInfo.setHours(0, 0, 0, 0))) {
+      if (
+        !notPost.includes(setDateFromDateInfo.setHours(0, 0, 0, 0))
+        // &&
+        // !setDateFromDateInfo <= endBelaNedelja
+      ) {
         return "post";
       }
     } else if (isPost.includes(setDateFromDateInfo.setHours(0, 0, 0, 0))) {
