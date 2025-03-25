@@ -12,6 +12,12 @@ export const monthSerb = [
   "novembar",
   "decembar",
 ];
+export const zadusniceName = [
+  "Zimske",
+  "Letnje",
+  "Miholjske",
+  "Mitrovske (jesenje)",
+];
 export const idsMonths = [
   [0, 31],
   [31, 59],
@@ -45,13 +51,76 @@ export const manualDateEaster = [
 export const calendarYears = [
   {
     item_list: [
-      { title: 2022, route: "/2022" },
-      { title: 2023, route: "/2023" },
-      { title: 2024, route: "/2024" },
-      { title: 2025, route: "/2025" },
-      { title: 2026, route: "/2026" },
-      { title: 2027, route: "/2027" },
-      { title: 2028, route: "/2028" },
+      {
+        title: 2022,
+        route: "/2022",
+        zadusnice: [
+          [1, 26],
+          [5, 11],
+          [9, 8],
+          [10, 5],
+        ],
+      },
+      {
+        title: 2023,
+        route: "/2023",
+        zadusnice: [
+          [1, 18],
+          [5, 3],
+          [9, 7],
+          [10, 4],
+        ],
+      },
+      {
+        title: 2024,
+        route: "/2024",
+        zadusnice: [
+          [2, 9],
+          [5, 22],
+          [9, 5],
+          [10, 2],
+        ],
+      },
+      {
+        title: 2025,
+        route: "/2025",
+        zadusnice: [
+          [1, 22],
+          [5, 7],
+          [9, 11],
+          [10, 1],
+        ],
+      },
+      {
+        title: 2026,
+        route: "/2026",
+        zadusnice: [
+          [1, 14],
+          [4, 30],
+          [9, 10],
+          [10, 7],
+        ],
+      },
+      {
+        title: 2027,
+        route: "/2027",
+        zadusnice: [
+          [2, 6],
+          [5, 19],
+          [9, 9],
+          [10, 6],
+        ],
+      },
+      {
+        title: 2028,
+        route: "/2028",
+        zadusnice: [
+          [1, 19],
+          [5, 3],
+          [9, 7],
+          [10, 4],
+        ],
+      },
     ],
   },
 ];

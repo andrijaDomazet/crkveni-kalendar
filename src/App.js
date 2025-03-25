@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./App.scss";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./containters/Home/Home";
@@ -14,13 +14,6 @@ import SinglePost from "./containters/SinglPost/SinglePost";
 import Footer from "./components/Footer/Footer";
 
 export default function App() {
-  // const [data, setData] = useState(null);
-  // useEffect(() => {
-  //   fetch("http://localhost:3000/data.json")
-  //     .then((response) => response.json())
-  //     .then((data) => setData(data))
-  //     .catch((error) => console.log("Error fetching data:", error));
-  // }, []);
   return (
     <Router>
       <LocationProvider>
