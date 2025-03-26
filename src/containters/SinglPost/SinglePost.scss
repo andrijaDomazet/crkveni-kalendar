@@ -97,35 +97,31 @@
   .home__box__11 {
     max-width: 600px;
   }
-  .home__box__13 {
-    // padding: 0 0.5rem;
-    // display: none;
-  }
 }
 @media screen and (min-width: $medium) {
   .singlePost {
-    margin-top: 10rem;
-    // border: 1px solid red;
+    margin: 0 auto;
+    width: 1200px;
     .content {
-      // border: 2px solid blue;
       margin-bottom: 2rem;
       padding: 0;
       display: flex;
       flex-direction: row;
       .mainContent {
         width: 100%;
-        margin-top: 1rem;
-        padding: 0 1rem;
-        // border: 2px solid green;
+        margin: 1rem 0;
         .mainContent-img {
+          margin: 1rem 0;
           position: relative;
           max-height: 550px;
-          // overflow: hidden;
           img {
             overflow: hidden;
             object-fit: cover;
             height: 550px;
             width: 100%;
+          }
+          .mainContent-img_source {
+            text-align: right;
           }
           .mainContent-title {
             position: absolute;
@@ -135,7 +131,12 @@
             margin: 0;
             text-transform: uppercase;
             padding: 2.2rem 0.6rem 0.5rem 0.6rem;
-            background: linear-gradient(to bottom, rgba(143, 143, 143, 0) 0%, rgba(24, 24, 24, 0.3) 20%, rgba(24, 24, 24, 0.75) 60%);
+            background: linear-gradient(
+              to bottom,
+              rgba(143, 143, 143, 0) 0%,
+              rgba(24, 24, 24, 0.3) 20%,
+              rgba(24, 24, 24, 0.75) 60%
+            );
             h1 {
               margin: 0 0 0.2rem 0.5rem;
               color: white;
@@ -156,7 +157,6 @@
         .mainContent-nav {
           display: flex;
           background: rgb(236, 236, 236);
-          // color: black;
           a {
             text-decoration: none;
             color: black;
@@ -170,25 +170,18 @@
           display: flex;
           .mainContent-text {
             width: calc(100% - 340px);
-            padding: 0 4rem 0 1.2rem;
+            .mainContent-lead {
+              font-size: 1.4rem;
+              line-height: 1.6rem;
+            }
           }
         }
         .mainContent-subtitle {
           font-size: 1.6rem;
         }
-        .mainContent-lead {
-          font-size: 1.6rem;
-          line-height: 2rem;
-          // margin-bottom: 1rem;
-        }
-        //predefinisati !!!!!!!!!!!!!!!!
-        h4 {
-          margin-top: 1rem;
-          font-size: 1.6rem;
-          border-bottom: 3px solid $green4;
-        }
         p {
           font-size: 1.25rem;
+          padding: 0.25rem 0;
         }
         .tags {
           .tags__arr {
@@ -196,22 +189,6 @@
               font-size: 1.2rem;
               margin-right: 0.5rem;
             }
-          }
-        }
-        .home__box__11 {
-          position: relative;
-          align-items: start;
-          .home__rightBox {
-            display: grid;
-            grid-template-rows: 1fr 1fr 1fr;
-          }
-        }
-        .home__box__13 {
-          .home__rightBox {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.8rem;
-            padding-top: 0.4rem;
           }
         }
       }
@@ -222,19 +199,6 @@
       margin: 0;
       .newsAside-box {
         margin: 1rem 0;
-      }
-    }
-    .sp-2 {
-      // background: ;
-      .sp-2-title {
-        font-size: 1.8rem;
-        margin: 1rem;
-      }
-      box-shadow: 1px 2px 10px grey;
-      .sp-2-box {
-        display: flex;
-        justify-content: space-between;
-        padding: 0 1rem 2rem 1rem;
       }
     }
   }

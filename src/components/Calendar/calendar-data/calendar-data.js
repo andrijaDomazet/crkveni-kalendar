@@ -32,10 +32,22 @@ export const idsMonths = [
   [304, 334],
   [334, 365],
 ];
+
+export const redDaysId = [
+  7, 8, 9, 14, 19, 20, 27, 46, 153, 154, 163, 164, 165, 188, 193, 214, 231, 240,
+  254, 264, 270, 300, 304, 312, 325, 338, 353,
+];
 export const daysIsPost = [
   [0, 18],
   [8, 11],
   [8, 27],
+];
+
+export const daysIsNotPost = [
+  [0, 7],
+  [0, 19],
+  [1, 16],
+  [1, 18],
 ];
 export const manualDateEaster = [
   "4-19",
@@ -124,23 +136,14 @@ export const calendarYears = [
     ],
   },
 ];
-export const inCalendarArr = [
-  "div-gpt-ad-1724672473185-0",
-  "div-gpt-ad-1724680335213-0",
-  "div-gpt-ad-1724680376368-0",
-  "div-gpt-ad-1724680398271-0",
-  "div-gpt-ad-1724680417311-0",
-];
-export const redDaysId = [
-  7, 8, 9, 14, 19, 20, 27, 46, 153, 154, 163, 164, 165, 188, 193, 214, 231, 240,
-  254, 264, 270, 300, 304, 312, 325, 338, 353,
-];
-export const daysIsNotPost = [
-  [0, 7],
-  [0, 19],
-  [1, 16],
-  [1, 18],
-];
+// export const inCalendarArr = [
+//   "div-gpt-ad-1724672473185-0",
+//   "div-gpt-ad-1724680335213-0",
+//   "div-gpt-ad-1724680376368-0",
+//   "div-gpt-ad-1724680398271-0",
+//   "div-gpt-ad-1724680417311-0",
+// ];
+
 export const easterDays = [
   "Veliki četvrtak (Veliko bdenije)",
   "Veliki petak",

@@ -6,6 +6,7 @@ import {
 } from "../Calendar/calendar-data/calendar-data.js";
 import { monthSerb } from "../../shared/shared.js";
 import { useIdContext } from "../../shared/IdProvider";
+import { Link } from "react-router-dom";
 
 export default function Zadusnice() {
   const { slug, currentDate } = useIdContext();
@@ -27,7 +28,11 @@ export default function Zadusnice() {
             (item, index) => {
               return (
                 <tr key={index}>
-                  <td>{item[1] + ". " + monthSerb[item[0]]}</td>
+                  <td>
+                    <Link to={`/${currentYear}/${monthSerb[item[0]]}`}>
+                      {item[1] + ". " + monthSerb[item[0]]}
+                    </Link>
+                  </td>
                   <td>{zadusniceName[index]}</td>
                 </tr>
               );
