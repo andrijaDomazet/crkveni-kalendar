@@ -1,24 +1,13 @@
 import React from "react";
-// import { Tweet } from "react-twitter-widgets";
 import "./BodyText.scss";
 
-const setSubTitle = (item) => {
-  // if (e.length > 0) {
-  //   return <h2 className="mainContent-subtitle">{e}</h2>;
-  // }
+const setSubTitle = (item) =>
+  item.subtitle ? (
+    <h2 className="mainContent-subtitle">{item.subtitle}</h2>
+  ) : item.subtitle3 ? (
+    <h3 className="mainContent-subtitle3">{item.subtitle3}</h3>
+  ) : null;
 
-  
-  if (item.subtitle) {
-    return <h2 className="mainContent-subtitle">{item.subtitle}</h2>;
-  } else if (item.subtitle3) {
-    return <h3 className="mainContent-subtitle3">{item.subtitle3}</h3>;
-  }
-};
-const setTweet = (e) => {
-  if (e > 0) {
-    // return <Tweet tweetId={e} />;
-  }
-};
 export default function BodyText(props) {
   return (
     <div className="bodyText">
@@ -28,8 +17,6 @@ export default function BodyText(props) {
             <div key={index}>
               {setSubTitle(item)}
               <p dangerouslySetInnerHTML={{ __html: item["text"] }}></p>
-              {setTweet(item.tweetId)}
-              {/* <AdvModule classes="adClass__S" size={"s"} /> */}
             </div>
           );
         } else {
@@ -37,7 +24,6 @@ export default function BodyText(props) {
             <div key={index}>
               {setSubTitle(item)}
               <p dangerouslySetInnerHTML={{ __html: item["text"] }}></p>
-              {setTweet(item.tweetId)}
             </div>
           );
         }

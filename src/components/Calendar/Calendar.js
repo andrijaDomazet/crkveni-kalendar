@@ -40,15 +40,25 @@ export default function Calendar(props) {
   const [dropDownYear, setDropDownYear] = useState(false);
 
   function filterHolidays() {
+    let yearIndex = calendarYears[0].item_list.findIndex(
+      (item) => item.title == isYear
+    );
+    let zadusniceDate = calendarYears[0].item_list[yearIndex].zadusnice.find(
+      (item) => item[0] === isMonth
+    );
     let easter = isYear - 2020;
     let monthData = JSON.parse(JSON.stringify(news2));
     let setHol = monthData.slice(idsMonths[isMonth][0], idsMonths[isMonth][1]);
     let setHolTest = setHol.map((item, index) => {
+      if (zadusniceDate && zadusniceDate[1] === index + 1) {
+        item.title += " - Zadušnice";
+      }
       let date1 = new Date(isYear, isMonth, index + 1);
       item.date = date1;
       let easterDay = new Date(`${isYear}-${manualDateEaster[easter]}`);
       setIsEasterDay(easterDay);
       let diffInDays = (easterDay - date1) / (1000 * 60 * 60 * 24); // Razlika u danima
+
       if (diffInDays >= 0 && diffInDays <= 3) {
         item.title = easterDays[easterDays.length - 1 - diffInDays];
       }
@@ -161,7 +171,6 @@ export default function Calendar(props) {
       setDateFromDateInfo > easterDate &&
       setDateFromDateInfo <= endBelaNedelja
     ) {
-      // console.log("Else if", setDateFromDateInfo, endBelaNedelja);
       return "";
     } else if (setDateDay === 3 || setDateDay === 5) {
       if (!notPost.includes(setDateFromDateInfo.setHours(0, 0, 0, 0))) {

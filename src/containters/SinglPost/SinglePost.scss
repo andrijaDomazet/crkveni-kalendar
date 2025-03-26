@@ -7,8 +7,19 @@
     padding: 0.5rem 0.5rem 2rem 0.5rem;
     .mainContent {
       .mainContent-img {
-        width: 100%;
         height: auto;
+        .mainContent-title {
+          h1 {
+            font-size: 1.8rem;
+            line-height: 2rem;
+          }
+        }
+        img {
+          width: 100%;
+        }
+        .mainContent-img_source {
+          text-align: right;
+        }
       }
       .mainContent-title {
         color: $silver4;
@@ -119,9 +130,6 @@
             object-fit: cover;
             height: 550px;
             width: 100%;
-          }
-          .mainContent-img_source {
-            text-align: right;
           }
           .mainContent-title {
             position: absolute;
