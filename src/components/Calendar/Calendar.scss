@@ -195,7 +195,10 @@
       .normalRow {
         td {
           color: rgb(224, 0, 0);
-          font-weight: 600;
+          h3 {
+            font-weight: 700;
+            letter-spacing: 0.015rem;
+          }
         }
       }
     }

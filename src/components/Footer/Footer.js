@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.scss";
-import { footer } from "../../shared/shared.js";
-import { NavLink } from "react-router-dom";
+// import { footer } from "../../shared/shared.js";
+// import { NavLink } from "react-router-dom";
 
 export default function Footer() {
   return (

@@ -134,6 +134,7 @@ export const calendarYears = [
         ],
       },
     ],
+    zadusnice: ["zimske", "letnje", "miholjske", "jesenje (mitrovske)"],
   },
 ];
 // export const inCalendarArr = [

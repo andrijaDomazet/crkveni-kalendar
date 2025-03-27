@@ -43,16 +43,37 @@ export default function Calendar(props) {
     let yearIndex = calendarYears[0].item_list.findIndex(
       (item) => item.title == isYear
     );
+    let zadusniceIndex = calendarYears[0].item_list[
+      yearIndex
+    ].zadusnice.findIndex((item) => item[0] == isMonth);
+
     let zadusniceDate = calendarYears[0].item_list[yearIndex].zadusnice.find(
       (item) => item[0] === isMonth
     );
+
     let easter = isYear - 2020;
     let monthData = JSON.parse(JSON.stringify(news2));
     let setHol = monthData.slice(idsMonths[isMonth][0], idsMonths[isMonth][1]);
     let setHolTest = setHol.map((item, index) => {
       if (zadusniceDate && zadusniceDate[1] === index + 1) {
-        item.title += " - Zadušnice";
+        item.title = (
+          <>
+            {item.title} -
+            <strong
+              style={{
+                border: "2px solid black",
+                padding: "0.1rem",
+                margin: "0 0.3rem",
+              }}
+            >
+              {" "}
+              Zadušnice{" "}
+            </strong>
+            {calendarYears[0].zadusnice[zadusniceIndex]}
+          </>
+        );
       }
+
       let date1 = new Date(isYear, isMonth, index + 1);
       item.date = date1;
       let easterDay = new Date(`${isYear}-${manualDateEaster[easter]}`);
