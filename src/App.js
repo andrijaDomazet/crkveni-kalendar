@@ -42,6 +42,11 @@ export default function App() {
             exact="true"
             element={React.createElement(withIdProvider(SinglePost))}
           />
+          <Route
+            path="/slave/"
+            exact="true"
+            element={React.createElement(withIdProvider(SinglePost))}
+          />
         </Routes>
         <Footer />
       </LocationProvider>

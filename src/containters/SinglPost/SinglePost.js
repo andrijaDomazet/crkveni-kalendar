@@ -5,6 +5,7 @@ import { useIdContext } from "../../shared/IdProvider";
 import { useGlobalLocation } from "../../shared/LocationContext";
 import { urlTitle2 } from "../../shared/utility";
 import Zadusnice from "../../components/Zadusnice/Zadusnice";
+import CrossingData from "../../components/CrossingData/CrossingData";
 export default function SinglePost() {
   const { id, slug, data } = useIdContext();
   const { pathPart } = useGlobalLocation();
@@ -34,6 +35,7 @@ export default function SinglePost() {
               <strong className="mainContent-lead">{isNews.lead}</strong>
               <BodyText bodyText={isNews.body} />
               <div>{pathPart[1] === "zadusnice" && <Zadusnice />}</div>
+              <div>{pathPart[1] === "slave" && <CrossingData />}</div>
             </div>
           </div>
         </main>

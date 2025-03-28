@@ -2,7 +2,7 @@
 
 .zadusnice {
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   table {
     width: 100%;
     border-bottom: 1px solid grey;
@@ -15,8 +15,13 @@
     tbody {
       tr {
         td {
+          min-width: 120px;
           padding: 0.4rem;
           border-bottom: 1px solid rgb(197, 197, 197);
+          a {
+            text-decoration: underline;
+            color: blue;
+          }
         }
       }
     }

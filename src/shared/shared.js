@@ -25,7 +25,20 @@ export const daysIsPost = [
   [8, 11],
   [8, 27],
 ];
-export const monthSerb = ["januar", "februar", "mart", "april", "maj", "jun", "jul", "avgust", "septembar", "oktobar", "novembar", "decembar"];
+export const monthSerb = [
+  "januar",
+  "februar",
+  "mart",
+  "april",
+  "maj",
+  "jun",
+  "jul",
+  "avgust",
+  "septembar",
+  "oktobar",
+  "novembar",
+  "decembar",
+];
 export const calendarYears = [
   {
     item_list: [
@@ -39,7 +52,16 @@ export const calendarYears = [
     ],
   },
 ];
-export const spisakNedelja = ["Седмица прва – Светла", "Седмица друга – Мироносица", "Седмица трећа – Раслабљеног", "Седмица четврта – Самарјанке", "Седмица пета – Слепога", "Седмица шеста – Светих Отаца Првог васељенског сабора", "Седмица шеста – Светих Отаца Првог васељенског сабора", "Седмица Педесетнице"];
+export const spisakNedelja = [
+  "Седмица прва – Светла",
+  "Седмица друга – Мироносица",
+  "Седмица трећа – Раслабљеног",
+  "Седмица четврта – Самарјанке",
+  "Седмица пета – Слепога",
+  "Седмица шеста – Светих Отаца Првог васељенског сабора",
+  "Седмица шеста – Светих Отаца Првог васељенског сабора",
+  "Седмица Педесетнице",
+];
 export const details = [
   { title: "Ime i prezime", name: "name" },
   { title: "Kontakt telefon", name: "tel" },
@@ -210,9 +232,24 @@ export const options = [
       pics: ["/img/article_img/moon.jpg", "Pexels"],
     },
   },
+  //5
+  {
+    route: "/slave/",
+    title: "Slave",
+    social: {
+      title: "Mesečeve mene",
+      lead: "Mesečeve mene i lunarne faze u 2023. godini. MESEČEV KALENDAR. Precizan kalendar faza meseca za kompletnu godinu. Prikaz mesečevih mena za svaki mesec...",
+      pics: ["/img/article_img/moon.jpg", "Pexels"],
+    },
+  },
   // { route: "/molitve", title: "Molitve" },
   //   { route: "/slave", title: "Slave" },
   // { route: "/ostalo", title: "Ostalo" },
 ];
 
-export const footer = ["O nama", "Marketing", "Pravila korišćenja", "Politika privatnosti"];
+export const footer = [
+  "O nama",
+  "Marketing",
+  "Pravila korišćenja",
+  "Politika privatnosti",
+];
