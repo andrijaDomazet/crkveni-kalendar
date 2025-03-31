@@ -11,7 +11,7 @@ export default function CalendarMonthsLinks() {
       <thead>
         <tr>
           <th colSpan="4">
-            <h2>Crkveni kalendar 2025. godinu po mesecima:</h2>
+            <h2>Crkveni kalendar za 2025. godinu po mesecima:</h2>
           </th>
         </tr>
       </thead>
@@ -20,7 +20,11 @@ export default function CalendarMonthsLinks() {
           {monthSerb.slice(0, 4).map((item, index) => {
             return (
               <td key={index}>
-                <NavLink to={`/${slug || currentYear}/${item}`}><h3>{item.substring(0, 1).toUpperCase() + item.substring(1)}</h3></NavLink>
+                <NavLink to={`/${slug || currentYear}/${item}`}>
+                  <h3>
+                    {item.substring(0, 1).toUpperCase() + item.substring(1)}
+                  </h3>
+                </NavLink>
               </td>
             );
           })}
@@ -29,7 +33,11 @@ export default function CalendarMonthsLinks() {
           {monthSerb.slice(4, 8).map((item, index) => {
             return (
               <td key={index}>
-                <NavLink to={`/${slug || currentYear}/${item}`}><h3>{item.substring(0, 1).toUpperCase() + item.substring(1)}</h3></NavLink>
+                <NavLink to={`/${slug || currentYear}/${item}`}>
+                  <h3>
+                    {item.substring(0, 1).toUpperCase() + item.substring(1)}
+                  </h3>
+                </NavLink>
               </td>
             );
           })}
@@ -38,7 +46,11 @@ export default function CalendarMonthsLinks() {
           {monthSerb.slice(8, 12).map((item, index) => {
             return (
               <td key={index}>
-                <NavLink to={`/${slug || currentYear}/${item}`}><h3>{item.substring(0, 1).toUpperCase() + item.substring(1)}</h3></NavLink>
+                <NavLink to={`/${slug || currentYear}/${item}`}>
+                  <h3>
+                    {item.substring(0, 1).toUpperCase() + item.substring(1)}
+                  </h3>
+                </NavLink>
               </td>
             );
           })}

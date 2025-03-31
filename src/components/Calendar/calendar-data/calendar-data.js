@@ -150,4 +150,6 @@ export const easterDays = [
   "Veliki petak",
   "Velika subota",
   "V a s k r s – Vaskrsenje Gospoda Isusa Hrista",
+  "Vaskrsni  ponedeljak",
+  "Vaskrsni utorak"
 ];

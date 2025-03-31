@@ -39,6 +39,9 @@ export default function Calendar(props) {
   const [holidays, setHolidays] = useState(filterHolidays);
   const [dropDownYear, setDropDownYear] = useState(false);
 
+  function setDay(dateInfo) {
+    return new Date(dateInfo);
+  }
   function filterHolidays() {
     let yearIndex = calendarYears[0].item_list.findIndex(
       (item) => item.title == isYear
@@ -55,20 +58,17 @@ export default function Calendar(props) {
     let monthData = JSON.parse(JSON.stringify(news2));
     let setHol = monthData.slice(idsMonths[isMonth][0], idsMonths[isMonth][1]);
     let setHolTest = setHol.map((item, index) => {
+      console.log("Item cal", isYear, isMonth, index);
+      let setDate = new Date(isYear, isMonth, index);
+      let currentDay2 = setDate.getDay();
+      console.log("SetDate", setDate);
+
+      console.log(currentDay2);
+
       if (zadusniceDate && zadusniceDate[1] === index + 1) {
         item.title = (
           <>
-            {item.title} -
-            <strong
-              style={{
-                border: "2px solid black",
-                padding: "0.1rem",
-                margin: "0 0.3rem",
-              }}
-            >
-              {" "}
-              Zadušnice{" "}
-            </strong>
+            {item.title} - <strong>Zadušnice</strong>{" "}
             {calendarYears[0].zadusnice[zadusniceIndex]}
           </>
         );
@@ -80,8 +80,12 @@ export default function Calendar(props) {
       setIsEasterDay(easterDay);
       let diffInDays = (easterDay - date1) / (1000 * 60 * 60 * 24); // Razlika u danima
 
-      if (diffInDays >= 0 && diffInDays <= 3) {
-        item.title = easterDays[easterDays.length - 1 - diffInDays];
+      if (diffInDays >= -2 && diffInDays <= 3) {
+        item.title = easterDays[easterDays.length - 3 - diffInDays];
+      } else if (currentDay2 == 5 && diffInDays > 5 && diffInDays < 10) {
+        item.title = <>{item.title} - Lazareva subota (Vrbica)</>;
+      } else if (currentDay2 == 6 && diffInDays > 5 && diffInDays < 10) {
+        item.title = <>{item.title} - Cveti</>;
       }
       return item;
     });
@@ -163,8 +167,8 @@ export default function Calendar(props) {
       : "";
 
   const setPostDays = (dateInfo) => {
-    let setDateFromDateInfo = new Date(dateInfo);
-
+    // let setDateFromDateInfo = new Date(dateInfo);
+    let setDateFromDateInfo = setDay();
     //start - Bozic i Bozicni post
     let bozicniPostStart = new Date(isYear, 10, 28);
     let bozicniPostEnd = new Date(isYear, 0, 6);
@@ -255,7 +259,7 @@ export default function Calendar(props) {
           <div className="botDiv">{items_list(calendarYears[0].item_list)}</div>
         </div>
       </div>
-      <div className={`calendar-month${setCloseClass()}`}>
+      {/* <div className={`calendar-month${setCloseClass()}`}>
         <div>
           <SimpleButton clicked={() => changeMonth(-1)}>
             <i className="fa-solid fa-backward"></i>
@@ -269,7 +273,7 @@ export default function Calendar(props) {
             <i className="fa-solid fa-forward"></i>
           </SimpleButton>
         </div>
-      </div>
+      </div> */}
       {/* ---- END Gornje ranfle kalendara ---- */}
 
       {/* ---- Kalendar ---- */}
@@ -284,7 +288,7 @@ export default function Calendar(props) {
               );
             })}
             <th>
-              <h2>{tableTitle(0)}</h2>
+              <span>{tableTitle(0)}</span>
             </th>
             <th></th>
           </tr>
@@ -326,7 +330,7 @@ export default function Calendar(props) {
                   })}
                   <td>
                     <div className="test">
-                      <h3>{item.title}</h3>
+                      <h2>{item.title}</h2>
                     </div>
                   </td>
                   <td>{setPostDays(item.date)}</td>
