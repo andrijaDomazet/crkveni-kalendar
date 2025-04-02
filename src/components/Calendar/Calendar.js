@@ -68,7 +68,8 @@ export default function Calendar(props) {
       if (zadusniceDate && zadusniceDate[1] === index + 1) {
         item.title = (
           <>
-            {item.title} - <strong>Zadušnice</strong>{" "}
+            {item.title} -{" "}
+            <strong className="zadusniceStrong">Zadušnice</strong>{" "}
             {calendarYears[0].zadusnice[zadusniceIndex]}
           </>
         );
@@ -82,10 +83,32 @@ export default function Calendar(props) {
 
       if (diffInDays >= -2 && diffInDays <= 3) {
         item.title = easterDays[easterDays.length - 3 - diffInDays];
-      } else if (currentDay2 == 5 && diffInDays > 5 && diffInDays < 10) {
-        item.title = <>{item.title} - Lazareva subota (Vrbica)</>;
+      } else if (currentDay2 === 5 && diffInDays > 5 && diffInDays < 10) {
+        item.title = (
+          <>
+            {item.title} - <strong>Lazareva subota (Vrbica)</strong>
+          </>
+        );
       } else if (currentDay2 == 6 && diffInDays > 5 && diffInDays < 10) {
-        item.title = <>{item.title} - Cveti</>;
+        item.title = "Ulazak Gospoda Isusa Hrista u Jerusalim – Cveti";
+      } else if (currentDay2 === 2 && diffInDays > 15 && diffInDays < 20) {
+        item.title = (
+          <>
+            {item.title} - <strong>(Prvo bdenije)</strong>
+          </>
+        );
+      } else if (currentDay2 === 4 && diffInDays > 15 && diffInDays < 20) {
+        item.title = (
+          <>
+            {item.title} - <strong>(Drugo bdenije)</strong>
+          </>
+        );
+      } else if (currentDay2 === 0 && diffInDays > -10 && diffInDays < 0) {
+        item.title = (
+          <>
+            {item.title} - <strong>Pobusani ponedeljak</strong>
+          </>
+        );
       }
       return item;
     });
@@ -167,8 +190,8 @@ export default function Calendar(props) {
       : "";
 
   const setPostDays = (dateInfo) => {
-    // let setDateFromDateInfo = new Date(dateInfo);
-    let setDateFromDateInfo = setDay();
+    let setDateFromDateInfo = new Date(dateInfo);
+    // let setDateFromDateInfo = setDay();
     //start - Bozic i Bozicni post
     let bozicniPostStart = new Date(isYear, 10, 28);
     let bozicniPostEnd = new Date(isYear, 0, 6);
