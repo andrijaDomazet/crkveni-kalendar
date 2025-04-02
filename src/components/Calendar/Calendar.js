@@ -86,11 +86,17 @@ export default function Calendar(props) {
       } else if (currentDay2 === 5 && diffInDays > 5 && diffInDays < 10) {
         item.title = (
           <>
-            {item.title} - <strong>Lazareva subota (Vrbica)</strong>
+            <strong className="slavaStrong">SLAVA</strong> {item.title} -{" "}
+            <strong>Lazareva subota (Vrbica)</strong>
           </>
         );
       } else if (currentDay2 == 6 && diffInDays > 5 && diffInDays < 10) {
-        item.title = "Ulazak Gospoda Isusa Hrista u Jerusalim – Cveti";
+        item.title = (
+          <>
+            <strong className="slavaStrong">SLAVA</strong> {item.title} - Ulazak
+            Gospoda Isusa Hrista u Jerusalim – Cveti;
+          </>
+        );
       } else if (currentDay2 === 2 && diffInDays > 15 && diffInDays < 20) {
         item.title = (
           <>
@@ -191,7 +197,6 @@ export default function Calendar(props) {
 
   const setPostDays = (dateInfo) => {
     let setDateFromDateInfo = new Date(dateInfo);
-    // let setDateFromDateInfo = setDay();
     //start - Bozic i Bozicni post
     let bozicniPostStart = new Date(isYear, 10, 28);
     let bozicniPostEnd = new Date(isYear, 0, 6);
@@ -202,7 +207,6 @@ export default function Calendar(props) {
     let isPost = daysIsPost.map((item) =>
       new Date(isYear, item[0], item[1]).setHours(0, 0, 0, 0)
     );
-
     let setDateDay = setDateFromDateInfo.getDay();
     if (setDateFromDateInfo >= bozicniPostStart) {
       return "post";

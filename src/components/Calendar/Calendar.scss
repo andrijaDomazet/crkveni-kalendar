@@ -197,6 +197,20 @@
               padding: 0 0.2rem;
               margin: 0px 0.3rem 0 0;
             }
+            .slavaStrong {
+              border-radius: 3px;
+              display: inline-block;
+              height: 1.4rem;
+              font-size: 1.1rem;
+              line-height: 1.25em;
+              white-space: nowrap;
+              background: $eggShell3;
+              color: white;
+              letter-spacing: 0.1rem;
+              // border: 1px $eggShell4;
+              padding: 0 0.3rem;
+              margin: 0px 0.3rem 0 0;
+            }
             // strong {
             //   font-size: 1.1rem;
             // }
