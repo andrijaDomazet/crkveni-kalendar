@@ -1,6 +1,10 @@
+// {
+//   "date": [1, 27],
+//   "title": "Prepodobni Avksentije i Sveti Kiril slovenski – Ćirilovdan (ako pada u Veliki post, pomera se na nedelju siropusnu)"
+// },
 import React, { useEffect, useState } from "react";
 import "./Calendar.scss";
-import { NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import news2 from "./calendar-data/all__news4";
 import {
   idsMonths,
@@ -16,6 +20,7 @@ import SimpleButton from "../../UI/Buttons/SimpleButton";
 import TimeFormat from "../TimeFormat/TimeFormat";
 import { useGlobalLocation } from "../../shared/LocationContext";
 import { useIdContext } from "../../shared/IdProvider";
+import slave from "./calendar-data/slave.json";
 
 export default function Calendar(props) {
   const { id, slug, currentDate, currentYear } = useIdContext();
@@ -39,13 +44,11 @@ export default function Calendar(props) {
   const [holidays, setHolidays] = useState(filterHolidays);
   const [dropDownYear, setDropDownYear] = useState(false);
 
-  function setDay(dateInfo) {
-    return new Date(dateInfo);
-  }
   function filterHolidays() {
     let yearIndex = calendarYears[0].item_list.findIndex(
       (item) => item.title == isYear
     );
+    //zadusnice-------------------------------------------------------------
     let zadusniceIndex = calendarYears[0].item_list[
       yearIndex
     ].zadusnice.findIndex((item) => item[0] == isMonth);
@@ -53,24 +56,39 @@ export default function Calendar(props) {
     let zadusniceDate = calendarYears[0].item_list[yearIndex].zadusnice.find(
       (item) => item[0] === isMonth
     );
-
+    //end---------------------------------------------------------------------
+    //uskrs-------------------------------------------------------------------
     let easter = isYear - 2020;
     let monthData = JSON.parse(JSON.stringify(news2));
     let setHol = monthData.slice(idsMonths[isMonth][0], idsMonths[isMonth][1]);
+    //end---------------------------------------------------------------------
     let setHolTest = setHol.map((item, index) => {
-      console.log("Item cal", isYear, isMonth, index);
       let setDate = new Date(isYear, isMonth, index);
       let currentDay2 = setDate.getDay();
-      console.log("SetDate", setDate);
-
-      console.log(currentDay2);
 
       if (zadusniceDate && zadusniceDate[1] === index + 1) {
         item.title = (
           <>
             {item.title} -{" "}
-            <strong className="zadusniceStrong">Zadušnice</strong>{" "}
+            <Link to="/zadusnice/" className="zadusniceStrong">
+              Zadušnice
+            </Link>{" "}
             {calendarYears[0].zadusnice[zadusniceIndex]}
+          </>
+        );
+      }
+
+      const slavaItem = slave.find(
+        (item2) => item2.date[0] === isMonth && item2.date[1] === index + 1
+      );
+
+      if (slavaItem) {
+        item.title = (
+          <>
+            <Link to="/slave/" className="slavaStrong">
+              SLAVA
+            </Link>{" "}
+            {item.title}
           </>
         );
       }
@@ -86,15 +104,21 @@ export default function Calendar(props) {
       } else if (currentDay2 === 5 && diffInDays > 5 && diffInDays < 10) {
         item.title = (
           <>
-            <strong className="slavaStrong">SLAVA</strong> {item.title} -{" "}
-            <strong>Lazareva subota (Vrbica)</strong>
+            <Link to={"/slave/"} className="slavaStrong">
+              SLAVA
+            </Link>{" "}
+            {item.title} - <strong>Lazareva subota (Vrbica)</strong>
           </>
         );
       } else if (currentDay2 == 6 && diffInDays > 5 && diffInDays < 10) {
         item.title = (
           <>
-            <strong className="slavaStrong">SLAVA</strong> {item.title} - Ulazak
-            Gospoda Isusa Hrista u Jerusalim – Cveti;
+            <Link to={"/slave/"} className="slavaStrong">
+              SLAVA
+            </Link>{" "}
+            <strong className="redStrong">
+              Ulazak Gospoda Isusa Hrista u Jerusalim – Cveti{" "}
+            </strong>
           </>
         );
       } else if (currentDay2 === 2 && diffInDays > 15 && diffInDays < 20) {
@@ -113,6 +137,12 @@ export default function Calendar(props) {
         item.title = (
           <>
             {item.title} - <strong>Pobusani ponedeljak</strong>
+          </>
+        );
+      } else if (currentDay2 === 4 && diffInDays > -8 && diffInDays < 2) {
+        item.title = (
+          <>
+            {item.title}; <strong>Istočni petak</strong>
           </>
         );
       }
@@ -286,21 +316,6 @@ export default function Calendar(props) {
           <div className="botDiv">{items_list(calendarYears[0].item_list)}</div>
         </div>
       </div>
-      {/* <div className={`calendar-month${setCloseClass()}`}>
-        <div>
-          <SimpleButton clicked={() => changeMonth(-1)}>
-            <i className="fa-solid fa-backward"></i>
-            {tableTitle(-1)}
-          </SimpleButton>
-        </div>
-        <div className="month-center"></div>
-        <div>
-          <SimpleButton clicked={() => changeMonth(1)}>
-            {tableTitle(1)}
-            <i className="fa-solid fa-forward"></i>
-          </SimpleButton>
-        </div>
-      </div> */}
       {/* ---- END Gornje ranfle kalendara ---- */}
 
       {/* ---- Kalendar ---- */}

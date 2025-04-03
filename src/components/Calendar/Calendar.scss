@@ -188,6 +188,8 @@
           height: 50px;
           h2 {
             .zadusniceStrong {
+              color: black;
+              font-weight: 600;
               border-radius: 3px;
               display: inline-block;
               height: 1.5rem;
@@ -198,22 +200,22 @@
               margin: 0px 0.3rem 0 0;
             }
             .slavaStrong {
+              font-weight: 600;
               border-radius: 3px;
               display: inline-block;
               height: 1.4rem;
-              font-size: 1.1rem;
-              line-height: 1.25em;
+              font-size: 1rem;
+              line-height: 1.4em;
               white-space: nowrap;
               background: $eggShell3;
               color: white;
-              letter-spacing: 0.1rem;
-              // border: 1px $eggShell4;
+              letter-spacing: 0.05rem;
               padding: 0 0.3rem;
               margin: 0px 0.3rem 0 0;
             }
-            // strong {
-            //   font-size: 1.1rem;
-            // }
+            .redStrong {
+              color: rgb(223, 67, 46);
+            }
           }
         }
       }
