@@ -17,6 +17,7 @@
       z-index: +999;
       padding: 0 0.3rem;
       background: $eggShell3;
+      background: $grey3;
       border: 1px solid $grey2;
       border-radius: 3px;
       cursor: pointer;
@@ -79,8 +80,9 @@
   .calendar-table {
     thead {
       tr {
-        background: $silver1;
-        background: $eggShell;
+        // background: $silver1;
+        // background: $eggShell;
+        background: $grey1;
         color: white;
         color: $grey4;
 
@@ -137,7 +139,8 @@
         td {
           height: 0.8rem;
           font-weight: 700;
-          background: #ededde;
+          // background: #ededde;
+          background: $grey0;
           border-left: none;
           border-right: none;
         }
@@ -154,7 +157,8 @@
       .today {
         font-weight: 600;
         td {
-          background: #f9f1c8;
+          // background: #f9f1c8;
+          background: $eggShell;
           h3 {
             font-weight: 600;
           }
@@ -183,12 +187,30 @@
         width: 100%;
         .test {
           display: table-cell;
+          // display: table-row-group;
           vertical-align: middle;
           align-items: center;
           height: 50px;
+          .slavaStrong {
+            font-weight: 600;
+            border-radius: 3px;
+            display: inline-block;
+            height: 1.4rem;
+            font-size: 1rem;
+            line-height: 1.4em;
+            white-space: nowrap;
+            background: $eggShell3;
+            color: white;
+            letter-spacing: 0.05rem;
+            padding: 0 0.3rem;
+            margin: 0px 0.3rem 0 0;
+            margin-right: 0.3rem;
+          }
           h2 {
+            display: inline;
             .zadusniceStrong {
               color: black;
+              // color: red;
               font-weight: 600;
               border-radius: 3px;
               display: inline-block;
@@ -199,22 +221,25 @@
               padding: 0 0.2rem;
               margin: 0px 0.3rem 0 0;
             }
-            .slavaStrong {
-              font-weight: 600;
-              border-radius: 3px;
-              display: inline-block;
-              height: 1.4rem;
-              font-size: 1rem;
-              line-height: 1.4em;
-              white-space: nowrap;
-              background: $eggShell3;
-              color: white;
-              letter-spacing: 0.05rem;
-              padding: 0 0.3rem;
-              margin: 0px 0.3rem 0 0;
-            }
+            // .slavaStrong {
+            //   font-weight: 600;
+            //   border-radius: 3px;
+            //   display: inline-block;
+            //   height: 1.4rem;
+            //   font-size: 1rem;
+            //   line-height: 1.4em;
+            //   white-space: nowrap;
+            //   background: $eggShell3;
+            //   color: white;
+            //   letter-spacing: 0.05rem;
+            //   padding: 0 0.3rem;
+            //   margin: 0px 0.3rem 0 0;
+            // }
             .redStrong {
               color: rgb(223, 67, 46);
+            }
+            .blackStrong {
+              color: rgb(31, 31, 31);
             }
           }
         }
@@ -237,8 +262,7 @@
   .calendar-month {
     display: flex;
     justify-content: space-between;
-    background: $eggShell3;
-
+    background: $grey3;
     border-bottom: 1px solid white;
     padding: 0.5rem 0;
     .month-center {

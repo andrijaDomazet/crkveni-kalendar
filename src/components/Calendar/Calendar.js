@@ -63,6 +63,11 @@ export default function Calendar(props) {
     let setHol = monthData.slice(idsMonths[isMonth][0], idsMonths[isMonth][1]);
     //end---------------------------------------------------------------------
     let setHolTest = setHol.map((item, index) => {
+      item.title = Array.isArray(item.title)
+        ? item.title.map((item) => item)
+        : [item.title];
+      console.log("Item", item.title);
+
       let setDate = new Date(isYear, isMonth, index);
       let currentDay2 = setDate.getDay();
 
@@ -82,17 +87,6 @@ export default function Calendar(props) {
         (item2) => item2.date[0] === isMonth && item2.date[1] === index + 1
       );
 
-      if (slavaItem) {
-        item.title = (
-          <>
-            <Link to="/slave/" className="slavaStrong">
-              SLAVA
-            </Link>{" "}
-            {item.title}
-          </>
-        );
-      }
-
       let date1 = new Date(isYear, isMonth, index + 1);
       item.date = date1;
       let easterDay = new Date(`${isYear}-${manualDateEaster[easter]}`);
@@ -100,14 +94,31 @@ export default function Calendar(props) {
       let diffInDays = (easterDay - date1) / (1000 * 60 * 60 * 24); // Razlika u danima
 
       if (diffInDays >= -2 && diffInDays <= 3) {
-        item.title = easterDays[easterDays.length - 3 - diffInDays];
+        item.title = (
+          <>
+            <h2>
+              <strong
+                className={
+                  currentDay2 === 3 || currentDay2 === 5
+                    ? "blackStrong"
+                    : "redStrong"
+                }
+              >
+                {easterDays[easterDays.length - 3 - diffInDays]}
+              </strong>
+            </h2>
+          </>
+        );
       } else if (currentDay2 === 5 && diffInDays > 5 && diffInDays < 10) {
         item.title = (
           <>
             <Link to={"/slave/"} className="slavaStrong">
               SLAVA
             </Link>{" "}
-            {item.title} - <strong>Lazareva subota (Vrbica)</strong>
+            <h2>{item.title}</h2> -{" "}
+            <h2>
+              <strong>Lazareva subota (Vrbica)</strong>
+            </h2>
           </>
         );
       } else if (currentDay2 == 6 && diffInDays > 5 && diffInDays < 10) {
@@ -116,33 +127,35 @@ export default function Calendar(props) {
             <Link to={"/slave/"} className="slavaStrong">
               SLAVA
             </Link>{" "}
-            <strong className="redStrong">
-              Ulazak Gospoda Isusa Hrista u Jerusalim – Cveti{" "}
-            </strong>
+            <h2>
+              <strong className="redStrong">
+                Ulazak Gospoda Isusa Hrista u Jerusalim – Cveti{" "}
+              </strong>
+            </h2>
           </>
         );
       } else if (currentDay2 === 2 && diffInDays > 15 && diffInDays < 20) {
         item.title = (
           <>
-            {item.title} - <strong>(Prvo bdenije)</strong>
+            <h2>{item.title}</h2> - <strong>(Prvo bdenije)</strong>
           </>
         );
       } else if (currentDay2 === 4 && diffInDays > 15 && diffInDays < 20) {
         item.title = (
           <>
-            {item.title} - <strong>(Drugo bdenije)</strong>
+            <h2>{item.title}</h2> - <strong>(Drugo bdenije)</strong>
           </>
         );
       } else if (currentDay2 === 0 && diffInDays > -10 && diffInDays < 0) {
         item.title = (
           <>
-            {item.title} - <strong>Pobusani ponedeljak</strong>
+            <h2>{item.title}</h2> - <strong>Pobusani ponedeljak</strong>
           </>
         );
       } else if (currentDay2 === 4 && diffInDays > -8 && diffInDays < 2) {
         item.title = (
           <>
-            {item.title}; <strong>Istočni petak</strong>
+            <h2>{item.title}</h2>; <strong>Istočni petak</strong>
           </>
         );
       }
@@ -152,12 +165,10 @@ export default function Calendar(props) {
   }
 
   const navigate = useNavigate();
-
   const changeMonth = (val) => {
     if (id === undefined) {
       navigate(`/${isYear}/${tableTitle(val)}`);
     } else if (isMonth === 11 && val === 1) {
-      setIsYear((prevYear) => +prevYear + 1);
       navigate(`../${+isYear + 1}/januar`);
     } else if (isMonth === 0 && val === -1) {
       navigate(`../${+isYear - 1}/decembar`);
@@ -165,6 +176,7 @@ export default function Calendar(props) {
       navigate(`../${isYear}/${tableTitle(val)}`);
     }
   };
+
   const easterDate = new Date(isEasterDay);
   let test11 = easterDate.setDate(easterDate.getDate() - 1);
   const endEasterDate = new Date(test11);
@@ -219,11 +231,7 @@ export default function Calendar(props) {
   };
 
   const todayClass = (x) =>
-    x.getDate() === currentDate.getDate() &&
-    x.getMonth() === currentDate.getMonth() &&
-    x.getFullYear() === currentDate.getFullYear()
-      ? " today"
-      : "";
+    x.toDateString() === currentDate.toDateString() ? " today" : "";
 
   const setPostDays = (dateInfo) => {
     let setDateFromDateInfo = new Date(dateInfo);
@@ -372,7 +380,14 @@ export default function Calendar(props) {
                   })}
                   <td>
                     <div className="test">
-                      <h2>{item.title}</h2>
+                      {item.slava ? (
+                        <Link to={"/slave/"} className="slavaStrong">
+                          SLAVA
+                        </Link>
+                      ) : null}
+                      {Array.isArray(item.title)
+                        ? item.title.map((el) => <h2>{el}</h2>)
+                        : item.title}
                     </div>
                   </td>
                   <td>{setPostDays(item.date)}</td>

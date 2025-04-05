@@ -26,8 +26,10 @@
       }
     }
     thead tr th {
-      background: $eggShell;
-      border-bottom: 3px solid $eggShell3;
+      // background: $eggShell;
+      background: $grey1;
+      // border-bottom: 3px solid $eggShell3;
+      // border-bottom: 2px solid $grey3;
       font-size: 1.2rem;
       height: 2rem;
       line-height: 2rem;

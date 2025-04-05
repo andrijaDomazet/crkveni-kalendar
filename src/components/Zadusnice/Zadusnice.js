@@ -20,7 +20,7 @@ export default function Zadusnice() {
       <table>
         <thead>
           <tr>
-            <th colSpan="2">{`Zadušnice u ${currentYear} godini`}</th>
+            <th colSpan="2">{`Zadušnice u ${currentYear}. godini`}</th>
           </tr>
         </thead>
         <tbody>

@@ -1,1827 +1,1529 @@
 [
   {
     "id": 1,
-    "title": "Sveti mučenik Bonifatije",
-    "status": "post"
+    "title": "Sveti mučenik Bonifatije"
   },
   {
     "id": 2,
-    "title": "Sveti Ignjatije Bogonosac; Sveti Danilo Drugi, arhipiskop srpski (Pretprazništvo Roždestva) – Oci (Paterice)",
-    "status": "post"
+    "title": [
+      "Sveti Ignjatije Bogonosac",
+      "Sveti Danilo Drugi, arhipiskop srpski (Pretprazništvo Roždestva) – Oci (Paterice)"
+    ],
+    "slava": true
   },
   {
     "id": 3,
-    "title": "Sveta mučenica Julijana; Sveti Petar, Mitropolit Kijevski",
-    "status": "post"
+    "title": "Sveta mučenica Julijana; Sveti Petar, Mitropolit Kijevski"
   },
   {
     "id": 4,
-    "title": "Sveta velikomučenica Anastasija; Sveti Nikifor Leprozni",
-    "status": "post"
+    "title": ["Sveta velikomučenica Anastasija", "Sveti Nikifor Leprozni"]
   },
   {
     "id": 5,
-    "title": "Svetih 10 mučenika Kritskih; Prepodobni Naum Ohridski – Tucindan",
-    "status": "post"
+    "title": [
+      "Svetih 10 mučenika Kritskih",
+      "Prepodobni Naum Ohridski – Tucindan"
+    ]
   },
   {
     "id": 6,
-    "title": "Sveta prepodobnomučenica Evgenija – Badnjidan",
-    "status": "post"
+    "title": "Sveta prepodobnomučenica Evgenija – Badnjidan"
   },
   {
     "id": 7,
-    "title": "Roždestvo Hristovo – Božić",
-    "status": ""
+    "title": "Roždestvo Hristovo – Božić"
   },
   {
     "id": 8,
-    "title": "Sabor Presvete Bogorodice",
-    "status": ""
+    "title": "Sabor Presvete Bogorodice"
   },
   {
     "id": 9,
     "title": "Sveti prvomučenik i arhiđakon Stefan",
-    "status": ""
+    "slava": true
   },
   {
     "id": 10,
-    "title": "Svetih 20.000 mučenika Nikomidijskih",
-    "status": ""
+    "title": "Svetih 20.000 mučenika Nikomidijskih"
   },
   {
     "id": 11,
-    "title": "Svetih 14.000 mladenaca Vitlejemskih",
-    "status": ""
+    "title": "Svetih 14.000 mladenaca Vitlejemskih"
   },
   {
     "id": 12,
-    "title": "Sveta mučenica Anisija; Prepodobna Teodora",
-    "status": ""
+    "title": ["Sveta mučenica Anisija", "Prepodobna Teodora"]
   },
   {
     "id": 13,
-    "title": "Prepodobna Melanija; Sveti Dositej Zagrebački Ispovednik (Odanije Roždestva)",
-    "status": ""
+    "title": [
+      "Prepodobna Melanija",
+      "Sveti Dositej Zagrebački Ispovednik (Odanije Roždestva)"
+    ]
   },
   {
     "id": 14,
-    "title": "Obrezanje Gospodnje; Sveti Vasilije Veliki (Nova godina)",
-    "status": ""
+    "title": ["Obrezanje Gospodnje", "Sveti Vasilije Veliki (Nova godina)"],
+    "slava": true
   },
   {
     "id": 15,
-    "title": "Prepodobni Serafim Sarovski; Sveti Silvestar (Pretprazništvo Bogojavljenja)",
-    "status": ""
+    "title": [
+      "Prepodobni Serafim Sarovski",
+      "Sveti Silvestar (Pretprazništvo Bogojavljenja)"
+    ]
   },
   {
     "id": 16,
-    "title": "Sveti prorok Malahija; Sveti mučenik Gordije",
-    "status": ""
+    "title": ["Sveti prorok Malahija", "Sveti mučenik Gordije"]
   },
   {
     "id": 17,
-    "title": "Sabor 70 svetih apostola; Sveti Jevstatije Srpski",
-    "status": ""
+    "title": ["Sabor 70 svetih apostola", "Sveti Jevstatije Srpski"]
   },
   {
     "id": 18,
-    "title": "Sveti Teopemt i Teona – Krstovdan",
-    "status": "post"
+    "title": "Sveti Teopemt i Teona – Krstovdan"
   },
   {
     "id": 19,
-    "title": "Bogojavljenje",
-    "status": "post"
+    "title": "Bogojavljenje"
   },
   {
     "id": 20,
     "title": "Sabor svetog Jovana Krstitelja – Jovanjdan",
-    "status": ""
+    "slava": true
   },
   {
     "id": 21,
-    "title": "Sveti mučenik Julijan i Vasilisa; Prepodobni Georgije Hozevit; Sveti Grigorije Ohridski",
-    "status": ""
+    "title": [
+      "Sveti mučenik Julijan i Vasilisa",
+      "Prepodobni Georgije Hozevit; Sveti Grigorije Ohridski"
+    ]
   },
   {
     "id": 22,
-    "title": "Sveti mučenik Polievkt; Sveti Filip, Mitropolit Moskovski",
-    "status": ""
+    "title": ["Sveti mučenik Polievkt", "Sveti Filip, Mitropolit Moskovski"]
   },
   {
     "id": 23,
-    "title": "Sveti Grigorije Niski; Prepodobni Dometijan Mitilinski",
-    "status": "post"
+    "title": ["Sveti Grigorije Niski", "Prepodobni Dometijan Mitilinski"]
   },
   {
     "id": 24,
-    "title": "Prepodobni Teodosije Veliki; Prepodobni Mihailo Klopski",
-    "status": ""
+    "title": ["Prepodobni Teodosije Veliki", "Prepodobni Mihailo Klopski"]
   },
   {
     "id": 25,
-    "title": "Sveta mučenica Tatijana; Ikona Mlekopitateljica",
-    "status": ""
+    "title": ["Sveta mučenica Tatijana", "Ikona Mlekopitateljica"]
   },
   {
     "id": 26,
-    "title": "Sveti mučenici Ermil i Stratonik (Odanije Bogojavljenja)",
-    "status": ""
+    "title": "Sveti mučenici Ermil i Stratonik (Odanije Bogojavljenja)"
   },
   {
     "id": 27,
     "title": "Sveti Sava, prvi Arhiepiskop srpski – Savindan",
-    "status": "post"
+    "slava": true
   },
   {
     "id": 28,
-    "title": "Prepodobni Pavle Tivejski; prepodobni Gavrilo Lesnovski",
-    "status": ""
+    "title": ["Prepodobni Pavle Tivejski", "Prepodobni Gavrilo Lesnovski"]
   },
   {
     "id": 29,
-    "title": "Časne verige Svetog apostola Petra; Prepodobni Romilo Ravanički",
-    "status": ""
+    "title": [
+      "Časne verige Svetog apostola Petra",
+      "Prepodobni Romilo Ravanički"
+    ],
+    "slava": true
   },
   {
     "id": 30,
-    "title": "Prepodobni Antonije Veliki",
-    "status": ""
+    "title": "Prepodobni Antonije Veliki"
   },
   {
     "id": 31,
-    "title": "Sveti Atanasije Veliki; Sveti Maksim, Arhiepiskop srpski",
-    "status": ""
+    "title": ["Sveti Atanasije Veliki", "Sveti Maksim, Arhiepiskop srpski"]
   },
   {
     "id": 32,
-    "title": "Prepodobni Makarije Egipatski; Sveti Marko Efeski",
-    "status": "post"
+    "title": ["Prepodobni Makarije Egipatski", "Sveti Marko Efeski"]
   },
   {
     "id": 33,
-    "title": "Prepodobni Jevtimije Veliki",
-    "status": "post"
+    "title": "Prepodobni Jevtimije Veliki"
   },
   {
     "id": 34,
-    "title": "Prepodobni Maksim Ispovednik; Sveti mučenik Neofit",
-    "status": "post"
+    "title": "Prepodobni Maksim Ispovednik; Sveti mučenik Neofit"
   },
   {
     "id": 35,
-    "title": "Sveti apostol Timotej; Prepodobni mučenik Anastasije",
-    "status": "post"
+    "title": "Sveti apostol Timotej; Prepodobni mučenik Anastasije"
   },
   {
     "id": 36,
-    "title": "Sveti sveštenomučenik Kliment Ankirski",
-    "status": "post"
+    "title": "Sveti sveštenomučenik Kliment Ankirski"
   },
   {
     "id": 37,
-    "title": "Prepodobna Ksenija Rimljanka; Blažena Ksenija Petrogradska; Sveti mučenik Vavila",
-    "status": "post"
+    "title": "Prepodobna Ksenija Rimljanka; Blažena Ksenija Petrogradska; Sveti mučenik Vavila"
   },
   {
     "id": 38,
-    "title": "Sveti Grigorije Bogoslov; Prepodobni Publije; Sv. prepodobnomučenik Grigorije Pećki",
-    "status": ""
+    "title": "Sveti Grigorije Bogoslov; Prepodobni Publije; Sv. prepodobnomučenik Grigorije Pećki"
   },
   {
     "id": 39,
-    "title": "Prepodobni Ksenofont, Marija i sinovi njihovi",
-    "status": ""
+    "title": "Prepodobni Ksenofont, Marija i sinovi njihovi"
   },
   {
     "id": 40,
-    "title": "Prenos moštiju svetog Jovana Zlatousta",
-    "status": ""
+    "title": "Prenos moštiju svetog Jovana Zlatousta"
   },
   {
     "id": 41,
-    "title": "Prepodobni Jefrem Sirin; Prepodobni Isak Sirin",
-    "status": ""
+    "title": "Prepodobni Jefrem Sirin; Prepodobni Isak Sirin"
   },
   {
     "id": 42,
-    "title": "Prenos moštiju Svetog Ignjatija Bogonosca",
-    "status": ""
+    "title": "Prenos moštiju Svetog Ignjatija Bogonosca"
   },
   {
     "id": 43,
-    "title": "Sveta Tri Jerarha",
-    "status": ""
+    "title": "Sveta Tri Jerarha"
   },
   {
     "id": 44,
-    "title": "Sveti besrebrenici Kir i Jovan",
-    "status": ""
+    "title": "Sveti besrebrenici Kir i Jovan"
   },
   {
     "id": 45,
     "title": "Sveti mučenik Trifun (Pretprazništvo Sretenja)",
-    "status": ""
+    "slava": true
   },
   {
     "id": 46,
     "title": "Sretenje Gospodnje",
-    "status": ""
+    "slava": true
   },
   {
     "id": 47,
     "title": "Sveti Simeon i Ana; Sveti Jakov, Arhiepiskop srpski",
-    "status": ""
+    "slava": true
   },
   {
     "id": 48,
-    "title": "Prepodobni Isidor Pelusiot; Prepodobni Nikolaj Studit",
-    "status": ""
+    "title": "Prepodobni Isidor Pelusiot; Prepodobni Nikolaj Studit"
   },
   {
     "id": 49,
-    "title": "Sveta mučenica Agatija; Sveti Polievkt, Patrijarh Carigradski",
-    "status": ""
+    "title": "Sveta mučenica Agatija; Sveti Polievkt, Patrijarh Carigradski"
   },
   {
     "id": 50,
-    "title": "Sveti Fotije Carigradski; Sveti Vukol, Episkop Smirnski",
-    "status": ""
+    "title": "Sveti Fotije Carigradski; Sveti Vukol, Episkop Smirnski"
   },
   {
     "id": 51,
-    "title": "Sveti Partenije, Episkop Lampsakijski",
-    "status": ""
+    "title": "Sveti Partenije, Episkop Lampsakijski"
   },
   {
     "id": 52,
-    "title": "Sveti velikomučenik Teodor Stratilat; Sveti Sava Drugi, Arhiepiskop srpski",
-    "status": ""
+    "title": "Sveti velikomučenik Teodor Stratilat; Sveti Sava Drugi, Arhiepiskop srpski"
   },
   {
     "id": 53,
-    "title": "Sveti mučenik Nikifor (Odanije Sretenja)",
-    "status": ""
+    "title": "Sveti mučenik Nikifor (Odanije Sretenja)"
   },
   {
     "id": 54,
-    "title": "Sveti sveštenomučenik Haralampije",
-    "status": "post"
+    "title": "Sveti sveštenomučenik Haralampije"
   },
   {
     "id": 55,
-    "title": "Sveti sveštenomučenik Vlasije; Sveti velikomučenik Đorđe Kratovac",
-    "status": ""
+    "title": "Sveti sveštenomučenik Vlasije; Sveti velikomučenik Đorđe Kratovac"
   },
   {
     "id": 56,
-    "title": "Sveti Meletije, Arhiepiskop Antiohijski",
-    "status": ""
+    "title": "Sveti Meletije, Arhiepiskop Antiohijski"
   },
   {
     "id": 57,
-    "title": "Prepodobni Simeon Mirotočivi",
-    "status": ""
+    "title": "Prepodobni Simeon Mirotočivi"
   },
   {
     "id": 58,
-    "title": "Prepodobni Avksentije; Sveti Kirilo Slovenski (Mesne poklade)",
-    "status": ""
+    "title": "Prepodobni Avksentije; Sveti Kirilo Slovenski (Mesne poklade)"
   },
   {
     "id": 59,
-    "title": "Sveti apostol Onisim; Prepodobni Jevsevije Pustinjak",
-    "status": ""
+    "title": "Sveti apostol Onisim; Prepodobni Jevsevije Pustinjak"
   },
   {
     "id": 60,
-    "title": "Sveti mučenici Pamfil, Porfirije i ostalih deset mučenika",
-    "status": "post"
+    "title": "Sveti mučenici Pamfil, Porfirije i ostalih deset mučenika"
   },
   {
     "id": 61,
-    "title": "Sveti velikomučenik Teodor Tiron",
-    "status": "post"
+    "title": "Sveti velikomučenik Teodor Tiron"
   },
   {
     "id": 62,
-    "title": "Sveti Lav, Episkop Rimski; Sveti Flavijan, Patrijarh Carigradski",
-    "status": "post"
+    "title": "Sveti Lav, Episkop Rimski; Sveti Flavijan, Patrijarh Carigradski"
   },
   {
     "id": 63,
-    "title": "Sveti apostoli Arhip, Filimon i Apfijam",
-    "status": "post"
+    "title": "Sveti apostoli Arhip, Filimon i Apfijam"
   },
   {
     "id": 64,
-    "title": "Sveti Lav, Episkop Katanski",
-    "status": "post"
+    "title": "Sveti Lav, Episkop Katanski"
   },
   {
     "id": 65,
-    "title": "Prepodobni Timotej; Sveti Evstatije (Bele poklade, Bela nedelja, Velike poklade, Pročka)",
-    "status": "post"
+    "title": "Prepodobni Timotej; Sveti Evstatije (Bele poklade, Bela nedelja, Velike poklade, Pročka)"
   },
   {
     "id": 66,
-    "title": "Sveti mučenici u Evgeniji",
-    "status": ""
+    "title": "Sveti mučenici u Evgeniji"
   },
   {
     "id": 67,
-    "title": "Sveti sveštenomučenik Polikarp, Episkop Smirnski",
-    "status": ""
+    "title": "Sveti sveštenomučenik Polikarp, Episkop Smirnski"
   },
   {
     "id": 68,
-    "title": "Prvo i drugo obretenje glave Svetog Jovana Krstitelja",
-    "status": ""
+    "title": "Prvo i drugo obretenje glave Svetog Jovana Krstitelja"
   },
   {
     "id": 69,
-    "title": "Sveti Tarasije, Patrijarh Carigradski",
-    "status": ""
+    "title": "Sveti Tarasije, Patrijarh Carigradski"
   },
   {
     "id": 70,
-    "title": "Sveti Porfirije, Episkop Gaski",
-    "status": ""
+    "title": "Sveti Porfirije, Episkop Gaski"
   },
   {
     "id": 71,
-    "title": "Prepodobni Prokopije Dekapolit; Prepodobni Talalej; Sv. Teodor Komogovinski – Teodorova subota",
-    "status": ""
+    "title": "Prepodobni Prokopije Dekapolit; Prepodobni Talalej; Sv. Teodor Komogovinski – Teodorova subota"
   },
   {
     "id": 72,
-    "title": "Prepodobni Vasilije Ispovednik; Prep. Jovan Kasijan",
-    "status": ""
+    "title": "Prepodobni Vasilije Ispovednik; Prep. Jovan Kasijan"
   },
   {
     "id": 73,
-    "title": "Sveta prepodobnomučenica Evdokija",
-    "status": ""
+    "title": "Sveta prepodobnomučenica Evdokija"
   },
   {
     "id": 74,
-    "title": "Sveti sveštenomučenik Teodot, Episkop Kirinejski",
-    "status": ""
+    "title": "Sveti sveštenomučenik Teodot, Episkop Kirinejski"
   },
   {
     "id": 75,
-    "title": "Sveti mučenici Evtropije, Kleonik i Vasilisk",
-    "status": ""
+    "title": "Sveti mučenici Evtropije, Kleonik i Vasilisk"
   },
   {
     "id": 76,
-    "title": "Prepodobni Gerasim Jordanski",
-    "status": ""
+    "title": "Prepodobni Gerasim Jordanski"
   },
   {
     "id": 77,
-    "title": "Sveti mučenik Konon Isavrijski; Prepodobni Marko Podvižnik",
-    "status": ""
+    "title": "Sveti mučenik Konon Isavrijski; Prepodobni Marko Podvižnik"
   },
   {
     "id": 78,
-    "title": "Sveta 42 mučenika Amorejska",
-    "status": ""
+    "title": "Sveta 42 mučenika Amorejska"
   },
   {
     "id": 79,
-    "title": "Svetih sedam sveštenomučenika Hersonskih",
-    "status": ""
+    "title": "Svetih sedam sveštenomučenika Hersonskih"
   },
   {
     "id": 80,
-    "title": "Sveti Teofilakt Ispovednik, Episkop Nikomidijski",
-    "status": ""
+    "title": "Sveti Teofilakt Ispovednik, Episkop Nikomidijski"
   },
   {
     "id": 81,
     "title": "Svetih 40 mučenika Sevastijskih – Mladenci; Sv. 42 mučenika Momišićka",
-    "status": ""
+    "slava": true
   },
   {
     "id": 82,
-    "title": "Sveti mučenik Kodrat Korintski i ostali",
-    "status": "post"
+    "title": "Sveti mučenik Kodrat Korintski i ostali"
   },
   {
     "id": 83,
-    "title": "Sveti Sofronije, Patrijarh Jerusalimski",
-    "status": ""
+    "title": "Sveti Sofronije, Patrijarh Jerusalimski"
   },
   {
     "id": 84,
-    "title": "Prepodobni Simeon Novi Bogoslov; Prep. Teofan Ispovednik; Sveti Grigorije Dvojeslov",
-    "status": ""
+    "title": "Prepodobni Simeon Novi Bogoslov; Prep. Teofan Ispovednik; Sveti Grigorije Dvojeslov"
   },
   {
     "id": 85,
-    "title": "Prenos moštiju Svetog Nikifora, Patrijarha Carigradskog",
-    "status": ""
+    "title": "Prenos moštiju Svetog Nikifora, Patrijarha Carigradskog"
   },
   {
     "id": 86,
-    "title": "Prepodobni Benedikt Nursijski",
-    "status": ""
+    "title": "Prepodobni Benedikt Nursijski"
   },
   {
     "id": 87,
-    "title": "Sveti mučenik Agapije i drugi s njim",
-    "status": ""
+    "title": "Sveti mučenik Agapije i drugi s njim"
   },
   {
     "id": 88,
-    "title": "Sveti apostol Aristovul; Sveti mučenik Savin Egipćanin",
-    "status": ""
+    "title": "Sveti apostol Aristovul; Sveti mučenik Savin Egipćanin"
   },
   {
     "id": 89,
-    "title": "Sveti Aleksije Čovek Božji",
-    "status": ""
+    "title": "Sveti Aleksije Čovek Božji"
   },
   {
     "id": 90,
-    "title": "Sveti Kirilo, Episkop Jerusalimski",
-    "status": ""
+    "title": "Sveti Kirilo, Episkop Jerusalimski"
   },
   {
     "id": 91,
-    "title": "Sveti mučenici Hrizant, Darija i drugi; Prepodobni Simeon Dajbapski",
-    "status": "post"
+    "title": "Sveti mučenici Hrizant, Darija i drugi; Prepodobni Simeon Dajbapski"
   },
   {
     "id": 92,
-    "title": "Prepodobni Oci ubijeni u manastiru Svetog Save Osvećenog",
-    "status": "post"
+    "title": "Prepodobni Oci ubijeni u manastiru Svetog Save Osvećenog"
   },
   {
     "id": 93,
-    "title": "Prepodobni Jakov Ispovednik, Episkop Katanski",
-    "status": "post"
+    "title": "Prepodobni Jakov Ispovednik, Episkop Katanski"
   },
   {
     "id": 94,
-    "title": "Sveti sveštenomučenik Vasilije Ankirski",
-    "status": "post"
+    "title": "Sveti sveštenomučenik Vasilije Ankirski"
   },
   {
     "id": 95,
-    "title": "Sveti sveštenomučenik Nikon i drugi",
-    "status": "post"
+    "title": "Sveti sveštenomučenik Nikon i drugi"
   },
   {
     "id": 96,
-    "title": "Prepodobni Zaharije (Pretprazništvo Blagovesti)",
-    "status": "post"
+    "title": "Prepodobni Zaharije (Pretprazništvo Blagovesti)"
   },
   {
     "id": 97,
-    "title": "Blagovesti",
-    "status": ""
+    "title": "Blagovesti"
   },
   {
     "id": 98,
-    "title": "Sabor Svetog Arhangela Gavrila (Odanije Blagovesti)",
-    "status": ""
+    "title": "Sabor Svetog Arhangela Gavrila (Odanije Blagovesti)"
   },
   {
     "id": 99,
-    "title": "Sveta mučenica Matrona Solunska",
-    "status": ""
+    "title": "Sveta mučenica Matrona Solunska"
   },
   {
     "id": 100,
-    "title": "Prepodobni Ilarion Ispovednik",
-    "status": ""
+    "title": "Prepodobni Ilarion Ispovednik"
   },
   {
     "id": 101,
-    "title": "Prepodobni Marko, Episkop Aretuski",
-    "status": ""
+    "title": "Prepodobni Marko, Episkop Aretuski"
   },
   {
     "id": 102,
-    "title": "Prepodobni Jovan Lestvičnik",
-    "status": ""
+    "title": "Prepodobni Jovan Lestvičnik"
   },
   {
     "id": 103,
-    "title": "Sveti sveštenomučenik Ipatije, Episkop Gangriski",
-    "status": ""
+    "title": "Sveti sveštenomučenik Ipatije, Episkop Gangriski"
   },
   {
     "id": 104,
-    "title": "Prepodobna Marija Egipćanka",
-    "status": ""
+    "title": "Prepodobna Marija Egipćanka"
   },
   {
     "id": 105,
-    "title": "Prepodobni Tit Čudotvorac",
-    "status": ""
+    "title": "Prepodobni Tit Čudotvorac"
   },
   {
     "id": 106,
-    "title": "Prepodobni Nikita Ispovednik",
-    "status": ""
+    "title": "Prepodobni Nikita Ispovednik"
   },
   {
     "id": 107,
-    "title": "Ulazak Gospoda Isusa Hrista u Jerusalim",
-    "status": ""
+    "title": "Ulazak Gospoda Isusa Hrista u Jerusalim"
   },
   {
     "id": 108,
-    "title": "Sveti mučenici Agatopod i Teodul",
-    "status": ""
+    "title": "Sveti mučenici Agatopod i Teodul"
   },
   {
     "id": 109,
-    "title": "Sveti Evtihije, Patrijarh Carigradski",
-    "status": ""
+    "title": "Sveti Evtihije, Patrijarh Carigradski"
   },
   {
     "id": 110,
-    "title": "Prepodobni Georgije, Mitropolit Mitilenski; Prep. Nil Sorski",
-    "status": ""
+    "title": "Prepodobni Georgije, Mitropolit Mitilenski; Prep. Nil Sorski"
   },
   {
     "id": 111,
-    "title": "Sveti apostoli Irodion, Agav, Ruf i drugi",
-    "status": ""
+    "title": "Sveti apostoli Irodion, Agav, Ruf i drugi"
   },
   {
     "id": 112,
-    "title": "Sveti mučenik Evpsihije",
-    "status": ""
+    "title": "Sveti mučenik Evpsihije"
   },
   {
     "id": 113,
-    "title": "Sveti mučenik Terentije",
-    "status": "post"
+    "title": "Sveti mučenik Terentije"
   },
   {
     "id": 114,
-    "title": "Sveti sveštenomučenik Antipa",
-    "status": ""
+    "title": "Sveti sveštenomučenik Antipa"
   },
   {
     "id": 115,
-    "title": "Prepodobni Vasilije Ispovednik",
-    "status": ""
+    "title": "Prepodobni Vasilije Ispovednik"
   },
   {
     "id": 116,
-    "title": "Sveti sveštenomučenik Artemon Laodikijski",
-    "status": ""
+    "title": "Sveti sveštenomučenik Artemon Laodikijski"
   },
   {
     "id": 117,
-    "title": "Sveti Martin Ispovednik, Episkop Rimski",
-    "status": ""
+    "title": "Sveti Martin Ispovednik, Episkop Rimski"
   },
   {
     "id": 118,
-    "title": "Sveti apostoli Aristarh, Pud i Trofim; Sv. mučenik Sava Gotski",
-    "status": ""
+    "title": "Sveti apostoli Aristarh, Pud i Trofim; Sv. mučenik Sava Gotski"
   },
   {
     "id": 119,
-    "title": "Svete mučenice Agapija, Hionija i Irina",
-    "status": ""
+    "title": "Svete mučenice Agapija, Hionija i Irina"
   },
   {
     "id": 120,
-    "title": "Prepodobni Simeon, Episkop Persijski i ostali",
-    "status": ""
+    "title": "Prepodobni Simeon, Episkop Persijski i ostali"
   },
   {
     "id": 121,
-    "title": "Prepodobni Jovan, učenik Svetog Grigorija Dekapolita",
-    "status": "post"
+    "title": "Prepodobni Jovan, učenik Svetog Grigorija Dekapolita"
   },
   {
     "id": 122,
-    "title": "Prepodobni Jovan Vethopešternik; Blažena Matrona Moskovska",
-    "status": "post"
+    "title": "Prepodobni Jovan Vethopešternik; Blažena Matrona Moskovska"
   },
   {
     "id": 123,
-    "title": "Prepodobni Teodor Trihina, Prepodobni Joasaf Srpski, Sveti Nikolaj Žički",
-    "status": "post"
+    "title": "Prepodobni Teodor Trihina, Prepodobni Joasaf Srpski, Sveti Nikolaj Žički"
   },
   {
     "id": 124,
-    "title": "Sveti sveštenomučenik Januarije, Episkop kampanijski",
-    "status": "post"
+    "title": "Sveti sveštenomučenik Januarije, Episkop kampanijski"
   },
   {
     "id": 125,
-    "title": "Prepodobni Teodor Sikeot; Sveti sveštenomučenik Platon Banjalučki",
-    "status": "post"
+    "title": "Prepodobni Teodor Sikeot; Sveti sveštenomučenik Platon Banjalučki"
   },
   {
     "id": 126,
     "title": "Sveti velikomučenik Georgije – Đurđevdan",
-    "status": "post"
+    "slava": true
   },
   {
     "id": 127,
-    "title": "Sveti Sava Stratilat; Sveti Sava Erdeljski; Sveti sveštenomučenik Branko",
-    "status": ""
+    "title": "Sveti Sava Stratilat; Sveti Sava Erdeljski; Sveti sveštenomučenik Branko"
   },
   {
     "id": 128,
     "title": "Sveti apostol i jevanđelist Marko – Markovdan",
-    "status": ""
+    "slava": true
   },
   {
     "id": 129,
-    "title": "Sveti sveštenomučenik Vasilije Amasijski",
-    "status": ""
+    "title": "Sveti sveštenomučenik Vasilije Amasijski"
   },
   {
     "id": 130,
-    "title": "Spaljivanje moštiju Svetog Save na Vračaru",
-    "status": ""
+    "title": "Spaljivanje moštiju Svetog Save na Vračaru"
   },
   {
     "id": 131,
-    "title": "Sveti apostoli Jason i Sosipatr i ostali",
-    "status": ""
+    "title": "Sveti apostoli Jason i Sosipatr i ostali"
   },
   {
     "id": 132,
     "title": "Sveti Vasilije Ostroški Čudotvorac",
-    "status": ""
+    "slava": true
   },
   {
     "id": 133,
-    "title": "Sveti apostol Jakov Zevedejev",
-    "status": ""
+    "title": "Sveti apostol Jakov Zevedejev"
   },
   {
     "id": 134,
     "title": "Sveti prorok Jeremija",
-    "status": ""
+    "slava": true
   },
   {
     "id": 135,
-    "title": "Sveti Atanasije Veliki; Sveti Mihail",
-    "status": ""
+    "title": "Sveti Atanasije Veliki; Sveti Mihail"
   },
   {
     "id": 136,
-    "title": "Sveti mučenici Timotej i Mavra",
-    "status": ""
+    "title": "Sveti mučenici Timotej i Mavra"
   },
   {
     "id": 137,
-    "title": "Sveta mučenica Pelagija Tarsijska",
-    "status": ""
+    "title": "Sveta mučenica Pelagija Tarsijska"
   },
   {
     "id": 138,
-    "title": "Sveta velikomučenica Irina (Prepolovljenje)",
-    "status": ""
+    "title": "Sveta velikomučenica Irina (Prepolovljenje)"
   },
   {
     "id": 139,
-    "title": "Sveti pravedni Jov; Prenos moštiju Svetog Save Srpskog",
-    "status": ""
+    "title": "Sveti pravedni Jov; Prenos moštiju Svetog Save Srpskog"
   },
   {
     "id": 140,
-    "title": "Pojava Časnog Krsta u Jerusalimu",
-    "status": ""
+    "title": "Pojava Časnog Krsta u Jerusalimu"
   },
   {
     "id": 141,
     "title": "Sveti apostol i jevanđelist Jovan Bogoslov",
-    "status": ""
+    "slava": true
   },
   {
     "id": 142,
     "title": "Prenos moštiju Svetog oca Nikolaja; Sveti prorok Isaija; Sveti mučenik Hristofor",
-    "status": ""
+    "slava": true
   },
   {
     "id": 143,
-    "title": "Sveti apostol Simon Zilot; Prepodobna Isidora",
-    "status": "post"
+    "title": "Sveti apostol Simon Zilot; Prepodobna Isidora"
   },
   {
     "id": 144,
     "title": "Sveti Kirilo i Metodije",
-    "status": ""
+    "slava": true
   },
   {
     "id": 145,
-    "title": "Sveti Epifanije; Sveti German Carigradski; Sveti Nikodim Srpski (Odanije Prepolovljenja)",
-    "status": ""
+    "title": "Sveti Epifanije; Sveti German Carigradski; Sveti Nikodim Srpski (Odanije Prepolovljenja)"
   },
   {
     "id": 146,
-    "title": "Sveta mučenica Glikerija",
-    "status": ""
+    "title": "Sveta mučenica Glikerija"
   },
   {
     "id": 147,
-    "title": "Sveti mučenik Isidor Hioski; Sveti mučenik Maksim",
-    "status": ""
+    "title": "Sveti mučenik Isidor Hioski; Sveti mučenik Maksim"
   },
   {
     "id": 148,
-    "title": "Prepodobni Pahomije Veliki; Sveti Ahilije Lariski",
-    "status": ""
+    "title": "Prepodobni Pahomije Veliki; Sveti Ahilije Lariski"
   },
   {
     "id": 149,
-    "title": "Prep. Teodor; Sveštenomučenik Teodor Vršački; Sv. muč. Vukašin; Sv. Vikentije i Sv. muč. Surdulički",
-    "status": ""
+    "title": "Prep. Teodor; Sveštenomučenik Teodor Vršački; Sv. muč. Vukašin; Sv. Vikentije i Sv. muč. Surdulički"
   },
   {
     "id": 150,
-    "title": "Sveti apostol Andronik i Sveta Junija",
-    "status": ""
+    "title": "Sveti apostol Andronik i Sveta Junija"
   },
   {
     "id": 151,
-    "title": "Sveti mučenik Teodot Ankirski i sedam mučenica",
-    "status": ""
+    "title": "Sveti mučenik Teodot Ankirski i sedam mučenica"
   },
   {
     "id": 152,
-    "title": "Sveti sveštenomučenik Patrikije (Odanije Vaskrsa)",
-    "status": "post"
+    "title": "Sveti sveštenomučenik Patrikije (Odanije Vaskrsa)"
   },
   {
     "id": 153,
-    "title": "Vaznesenje Gospodnje – Spasovdan",
-    "status": ""
+    "title": "Vaznesenje Gospodnje – Spasovdan"
   },
   {
     "id": 154,
     "title": "Sveti car Konstantin i carica Jelena; Prepodobna Jelena Dečanska; Pećka ikona Presvete Bogorodice",
-    "status": "post"
+    "slava": true
   },
   {
     "id": 155,
-    "title": "Sveti mučenik Jovan Vladidmir, Knez srpski",
-    "status": ""
+    "title": "Sveti mučenik Jovan Vladidmir, Knez srpski"
   },
   {
     "id": 156,
-    "title": "Prepodobni Mihailo Ispovednik, Episkop sinadski",
-    "status": ""
+    "title": "Prepodobni Mihailo Ispovednik, Episkop sinadski"
   },
   {
     "id": 157,
-    "title": "Prepodobni Simeon Divnogorac",
-    "status": ""
+    "title": "Prepodobni Simeon Divnogorac"
   },
   {
     "id": 158,
-    "title": "Treće obretenje glave Svetog Jovana Krstitelja",
-    "status": ""
+    "title": "Treće obretenje glave Svetog Jovana Krstitelja"
   },
   {
     "id": 159,
-    "title": "Sveti apostoli Karp i Alfej",
-    "status": "post"
+    "title": "Sveti apostoli Karp i Alfej"
   },
   {
     "id": 160,
-    "title": "Sveti sveštenomučenik Terapont; Prepodobni Jovan Ruski",
-    "status": ""
+    "title": "Sveti sveštenomučenik Terapont; Prepodobni Jovan Ruski"
   },
   {
     "id": 161,
-    "title": "Prepodobni Nikita Ispovednik (Odanije Vaznesenja)",
-    "status": "post"
+    "title": "Prepodobni Nikita Ispovednik (Odanije Vaznesenja)"
   },
   {
     "id": 162,
-    "title": "Sveta prepodobnomučenica Teodosija Tirska",
-    "status": ""
+    "title": "Sveta prepodobnomučenica Teodosija Tirska"
   },
   {
     "id": 163,
-    "title": "Silazak Svetog Duha na apostole – Pedesetnica – Trojice",
-    "status": ""
+    "title": "Silazak Svetog Duha na apostole – Pedesetnica – Trojice"
   },
   {
     "id": 164,
-    "title": "Duhovski ponedeljak",
-    "status": ""
+    "title": "Duhovski ponedeljak"
   },
   {
     "id": 165,
-    "title": "Duhovski utorak; Prepodobni Justin Ćelijski",
-    "status": ""
+    "title": "Duhovski utorak; Prepodobni Justin Ćelijski"
   },
   {
     "id": 166,
-    "title": "Sveti Nikifor; Sveštenomučenik Erazmo Ohridski",
-    "status": ""
+    "title": "Sveti Nikifor; Sveštenomučenik Erazmo Ohridski"
   },
   {
     "id": 167,
-    "title": "Sveti mučenik Lukilijan i drugi s njim",
-    "status": "post"
+    "title": "Sveti mučenik Lukilijan i drugi s njim"
   },
   {
     "id": 168,
-    "title": "Sveti Mitrofan; Svete mironosice Marta i Marija; Sveti Joanikije Crnogorski; Sveti sveštenomčenik Đorđe (Bogić)",
-    "status": "post"
+    "title": "Sveti Mitrofan; Svete mironosice Marta i Marija; Sveti Joanikije Crnogorski; Sveti sveštenomčenik Đorđe (Bogić)"
   },
   {
     "id": 169,
-    "title": "Sveti sveštenomučenik Dorotej; Prepodobni Petar Koriški (Odanije Pedesetnice)",
-    "status": "post"
+    "title": "Sveti sveštenomučenik Dorotej; Prepodobni Petar Koriški (Odanije Pedesetnice)"
   },
   {
     "id": 170,
-    "title": "Prepodobni Visarion; Prepodobni Ilarion Novi (Petrovske poklade)",
-    "status": ""
+    "title": "Prepodobni Visarion; Prepodobni Ilarion Novi (Petrovske poklade)"
   },
   {
     "id": 171,
-    "title": "Sveti sveštenomučenik Teodot Ankirski (Početak Petrovskog posta)",
-    "status": "post"
+    "title": "Sveti sveštenomučenik Teodot Ankirski (Početak Petrovskog posta)"
   },
   {
     "id": 172,
-    "title": "Sveti velikomučenik Teodor Stratilat",
-    "status": "post"
+    "title": "Sveti velikomučenik Teodor Stratilat"
   },
   {
     "id": 173,
-    "title": "Sveti Kirilo Aleksandrijski",
-    "status": "post"
+    "title": "Sveti Kirilo Aleksandrijski"
   },
   {
     "id": 174,
-    "title": "Sveti sveštenomučenik Timotej Bruski",
-    "status": "post"
+    "title": "Sveti sveštenomučenik Timotej Bruski"
   },
   {
     "id": 175,
-    "title": "Sveti apostoli Vartolomej i Varnava",
-    "status": "post"
+    "title": "Sveti apostoli Vartolomej i Varnava"
   },
   {
     "id": 176,
-    "title": "Prepodobni Onufrije Veliki; Prepodobni Petar Atonski",
-    "status": "post"
+    "title": "Prepodobni Onufrije Veliki; Prepodobni Petar Atonski"
   },
   {
     "id": 177,
-    "title": "Sveta mučenica Akilina; Sveti Trifilije Kiparski",
-    "status": "post"
+    "title": "Sveta mučenica Akilina; Sveti Trifilije Kiparski"
   },
   {
     "id": 178,
-    "title": "Sveti prorok Jelisej; Sveti Metodije Carigradski",
-    "status": "post"
+    "title": "Sveti prorok Jelisej; Sveti Metodije Carigradski"
   },
   {
     "id": 179,
     "title": "Sveti mučenik Knez Lazar i svi Sv. muč. srpski – Vidovdan; Sveti prorok Amos",
-    "status": "post"
+    "slava": true
   },
   {
     "id": 180,
-    "title": "Sveti Tihon Čudotvorac, Episkop Amatunski",
-    "status": "post"
+    "title": "Sveti Tihon Čudotvorac, Episkop Amatunski"
   },
   {
     "id": 181,
-    "title": "Sveti mučenici Manuil, Savel i Ismail",
-    "status": "post"
+    "title": "Sveti mučenici Manuil, Savel i Ismail"
   },
   {
     "id": 182,
-    "title": "Sveti mučenici Leontije, Ipatije i Teodul",
-    "status": "post"
+    "title": "Sveti mučenici Leontije, Ipatije i Teodul"
   },
   {
     "id": 183,
-    "title": "Sveti apostol Juda; Prepodobni Pajsije Veliki; Sveti Jovan Šangajski",
-    "status": "post"
+    "title": "Sveti apostol Juda; Prepodobni Pajsije Veliki; Sveti Jovan Šangajski"
   },
   {
     "id": 184,
-    "title": "Sveti svštenomučenik Metodije; Prepodobni Naum Ohridski",
-    "status": "post"
+    "title": "Sveti svštenomučenik Metodije; Prepodobni Naum Ohridski"
   },
   {
     "id": 185,
-    "title": "Sveti mučenik Julijan Tarsijski; Prepodobna Anastasija Srpska",
-    "status": "post"
+    "title": "Sveti mučenik Julijan Tarsijski; Prepodobna Anastasija Srpska"
   },
   {
     "id": 186,
-    "title": "Sveti svštenomučenik Jevsevije, Episkop Samosatski",
-    "status": "post"
+    "title": "Sveti svštenomučenik Jevsevije, Episkop Samosatski"
   },
   {
     "id": 187,
-    "title": "Sveta mučenica Agripina; Vladimirska ikona Majke Božje",
-    "status": "post"
+    "title": "Sveta mučenica Agripina; Vladimirska ikona Majke Božje"
   },
   {
     "id": 188,
     "title": "Rođenje Svetog Jovana Preteče – Ivanjdan; Sveti Nikita, Episkop Remezijanski",
-    "status": "post"
+    "slava": true
   },
   {
     "id": 189,
-    "title": "Sveta prepodobnomučenica Fevronija",
-    "status": "post"
+    "title": "Sveta prepodobnomučenica Fevronija"
   },
   {
     "id": 190,
-    "title": "Prepodobni David Solunski",
-    "status": "post"
+    "title": "Prepodobni David Solunski"
   },
   {
     "id": 191,
-    "title": "Prepodobni Sampson Stranoprimac",
-    "status": "post"
+    "title": "Prepodobni Sampson Stranoprimac"
   },
   {
     "id": 192,
-    "title": "Prenos moštiju svetih besrebrenika Kira i Jovana; Sveti mučenici Dabrobosanski i Mileševski",
-    "status": "post"
+    "title": "Prenos moštiju svetih besrebrenika Kira i Jovana; Sveti mučenici Dabrobosanski i Mileševski"
   },
   {
     "id": 193,
     "title": "Sveti apostoli Petar i Pavle – Petrovdan",
-    "status": ""
+    "slava": true
   },
   {
     "id": 194,
-    "title": "Sabor Svetih dvanaest apostola – Pavlovdan",
-    "status": "post"
+    "title": "Sabor Svetih dvanaest apostola – Pavlovdan"
   },
   {
     "id": 195,
-    "title": "Sveti mučenici i besrebrenici Kozma i Damjan",
-    "status": ""
+    "title": "Sveti mučenici i besrebrenici Kozma i Damjan"
   },
   {
     "id": 196,
-    "title": "Polaganje rize Presvete Bogorodice",
-    "status": "post"
+    "title": "Polaganje rize Presvete Bogorodice"
   },
   {
     "id": 197,
-    "title": "Sveti mučenik Jakint; Sveti Anatolije Carigradski",
-    "status": ""
+    "title": "Sveti mučenik Jakint; Sveti Anatolije Carigradski"
   },
   {
     "id": 198,
-    "title": "Sveti Andrej Kritski; Sveti sveštenomučenik Sava Gornjokarlovački; Sveti carski novomučenici Romanovi",
-    "status": ""
+    "title": "Sveti Andrej Kritski; Sveti sveštenomučenik Sava Gornjokarlovački; Sveti carski novomučenici Romanovi"
   },
   {
     "id": 199,
-    "title": "Prepodobni Atanasije Atonski; Sveti Sergije Radonješki",
-    "status": ""
+    "title": "Prepodobni Atanasije Atonski; Sveti Sergije Radonješki"
   },
   {
     "id": 200,
-    "title": "Prepodobni Sisoje Veliki",
-    "status": ""
+    "title": "Prepodobni Sisoje Veliki"
   },
   {
     "id": 201,
-    "title": "Prepodobni Toma Malein; Sveta mučenica Nedelja",
-    "status": "post"
+    "title": "Prepodobni Toma Malein; Sveta mučenica Nedelja"
   },
   {
     "id": 202,
     "title": "Sveti velikomučenik Prokopije",
-    "status": ""
+    "slava": true
   },
   {
     "id": 203,
-    "title": "Sveti sveštenomučenik Pankratije; Sveti Teodor; Sveti mučenici Glamočki i Kulenvakufski",
-    "status": "post"
+    "title": "Sveti sveštenomučenik Pankratije; Sveti Teodor; Sveti mučenici Glamočki i Kulenvakufski"
   },
   {
     "id": 204,
-    "title": "Svetih 45 mučenika iz Nikopolja; Prepodobni Antonije Pečerski",
-    "status": ""
+    "title": "Svetih 45 mučenika iz Nikopolja; Prepodobni Antonije Pečerski"
   },
   {
     "id": 205,
-    "title": "Sveta velikomučenica Efimija; Sveti ravnoapostolna Olga Ruska",
-    "status": ""
+    "title": "Sveta velikomučenica Efimija; Sveti ravnoapostolna Olga Ruska"
   },
   {
     "id": 206,
-    "title": "Sveti mučenik Proklo i Ilarije; Ikona Presvete Bogorodice Trojeručice",
-    "status": ""
+    "title": "Sveti mučenik Proklo i Ilarije; Ikona Presvete Bogorodice Trojeručice"
   },
   {
     "id": 207,
     "title": "Sabor Svetog Arhangela Gavrila",
-    "status": ""
+    "slava": true
   },
   {
     "id": 208,
-    "title": "Sveti apostol Akila; Prepodobni Nikodim Svetogorac",
-    "status": "post"
+    "title": "Sveti apostol Akila; Prepodobni Nikodim Svetogorac"
   },
   {
     "id": 209,
-    "title": "Sveti mučenici Kirik i Julita; Sveti Vladimir Kijevski; Sveti mučenik Veličko-gornjepolimski",
-    "status": ""
+    "title": "Sveti mučenici Kirik i Julita; Sveti Vladimir Kijevski; Sveti mučenik Veličko-gornjepolimski"
   },
   {
     "id": 210,
-    "title": "Sveti sveštenomučenik Antinogen; Sveta mučenica Julija",
-    "status": "post"
+    "title": "Sveti sveštenomučenik Antinogen; Sveta mučenica Julija"
   },
   {
     "id": 211,
     "title": "Sveta velikomučenica Marina – Ognjena Marija",
-    "status": ""
+    "slava": true
   },
   {
     "id": 212,
-    "title": "Sveti mučenik Emilijan; Sveti mučenik Jakint",
-    "status": ""
+    "title": "Sveti mučenik Emilijan; Sveti mučenik Jakint"
   },
   {
     "id": 213,
-    "title": "Prepodobna Makrina; Sveti Stefan, Despot srpski; Prepodobna Evgenija (Lazarević)",
-    "status": ""
+    "title": "Prepodobna Makrina; Sveti Stefan, Despot srpski; Prepodobna Evgenija (Lazarević)"
   },
   {
     "id": 214,
     "title": "Sveti prorok Ilija – Ilindan; Sveti Ilija Gruzijski",
-    "status": ""
+    "slava": true
   },
   {
     "id": 215,
-    "title": "Sveti prorok Jezekilj",
-    "status": "post"
+    "title": "Sveti prorok Jezekilj"
   },
   {
     "id": 216,
     "title": "Sveta Marija Magdalina – Blaga Marija",
-    "status": ""
+    "slava": true
   },
   {
     "id": 217,
-    "title": "Sveti mučenici Trofim, Teofil i drugi s njima",
-    "status": "post"
+    "title": "Sveti mučenici Trofim, Teofil i drugi s njima"
   },
   {
     "id": 218,
-    "title": "Sveta velikomučenica Hristina; Prepodobni Polikarp Pečerski; Sveti mučenici Prebilovački i Donjohercegovački",
-    "status": ""
+    "title": "Sveta velikomučenica Hristina; Prepodobni Polikarp Pečerski; Sveti mučenici Prebilovački i Donjohercegovački"
   },
   {
     "id": 219,
-    "title": "Uspenije svete Ane, majke Presvete Bogorodice",
-    "status": ""
+    "title": "Uspenije svete Ane, majke Presvete Bogorodice"
   },
   {
     "id": 220,
-    "title": "Sveta prepodobnomučenica Paraskeva (Sveta Petka); Sveti Sava Treći Srpski",
-    "status": ""
+    "title": "Sveta prepodobnomučenica Paraskeva (Sveta Petka); Sveti Sava Treći Srpski"
   },
   {
     "id": 221,
     "title": "Sveti velikomučenik Pantelejmon; Sveti Kliment Ohridski",
-    "status": ""
+    "slava": true
   },
   {
     "id": 222,
-    "title": "Sveti apostoli i đakoni Prohor, Nikanor, Timon i Parmen",
-    "status": "post"
+    "title": "Sveti apostoli i đakoni Prohor, Nikanor, Timon i Parmen"
   },
   {
     "id": 223,
-    "title": "Sveti mučenik Kalinik; Sveta mučenica Serafima",
-    "status": ""
+    "title": "Sveti mučenik Kalinik; Sveta mučenica Serafima"
   },
   {
     "id": 224,
-    "title": "Prepodobna mati Angelina Srpska",
-    "status": "post"
+    "title": "Prepodobna mati Angelina Srpska"
   },
   {
     "id": 225,
-    "title": "Sveti mučenik Evdokim; Sveta mučenica Julita (Gospojinske poklade)",
-    "status": "post"
+    "title": "Sveti mučenik Evdokim; Sveta mučenica Julita (Gospojinske poklade)"
   },
   {
     "id": 226,
-    "title": "AVGUST – Iznošenje Časnog Krsta; Sv. muč. Makaveji (Početak posta)",
-    "status": "post"
+    "title": "AVGUST – Iznošenje Časnog Krsta; Sv. muč. Makaveji (Početak posta)"
   },
   {
     "id": 227,
-    "title": "Prenos moštiju Svetog prvomučenika i arhiđakona Stefana",
-    "status": "post"
+    "title": "Prenos moštiju Svetog prvomučenika i arhiđakona Stefana"
   },
   {
     "id": 228,
-    "title": "Prepodobni Isakije, Dalmat i Faust",
-    "status": "post"
+    "title": "Prepodobni Isakije, Dalmat i Faust"
   },
   {
     "id": 229,
-    "title": "Svetih sedam mučenika u Efesu; Sveti sveštenomučenik Kozma Etolski",
-    "status": "post"
+    "title": "Svetih sedam mučenika u Efesu; Sveti sveštenomučenik Kozma Etolski"
   },
   {
     "id": 230,
-    "title": "Sveti mučenik Evsignije (Pretprazništvo Preobraženja)",
-    "status": "post"
+    "title": "Sveti mučenik Evsignije (Pretprazništvo Preobraženja)"
   },
   {
     "id": 231,
-    "title": "Preobraženje Gospodnje",
-    "status": "post"
+    "title": "Preobraženje Gospodnje"
   },
   {
     "id": 232,
-    "title": "Sveti prepodobnomučenik Dometije; Prepodobni Or",
-    "status": "post"
+    "title": "Sveti prepodobnomučenik Dometije; Prepodobni Or"
   },
   {
     "id": 233,
-    "title": "Sveti Emilijan Ispovednik; Prepodobni Zosim i Jakov Tumanski",
-    "status": "post"
+    "title": "Sveti Emilijan Ispovednik; Prepodobni Zosim i Jakov Tumanski"
   },
   {
     "id": 234,
-    "title": "Sveti apostol Matija; Sveti mučenik Antonije",
-    "status": "post"
+    "title": "Sveti apostol Matija; Sveti mučenik Antonije"
   },
   {
     "id": 235,
-    "title": "Sveti mučenik i arhiđakon Lavrentije",
-    "status": "post"
+    "title": "Sveti mučenik i arhiđakon Lavrentije"
   },
   {
     "id": 236,
-    "title": "Sveti mučenik i arhiđakon Evplo; Prep. Nifont, Patrijarh Carigradski",
-    "status": "post"
+    "title": "Sveti mučenik i arhiđakon Evplo; Prep. Nifont, Patrijarh Carigradski"
   },
   {
     "id": 237,
-    "title": "Sveti mučenici Fotije, Anikita i drugi s njima",
-    "status": "post"
+    "title": "Sveti mučenici Fotije, Anikita i drugi s njima"
   },
   {
     "id": 238,
-    "title": "Sveti mučenik Ipolit; Sveti Tihon Zadonski (Odanije Preobraženja)",
-    "status": "post"
+    "title": "Sveti mučenik Ipolit; Sveti Tihon Zadonski (Odanije Preobraženja)"
   },
   {
     "id": 239,
-    "title": "Sveti prorok Mihej Drugi (Pretprazništvo Uspenija)",
-    "status": "post"
+    "title": "Sveti prorok Mihej Drugi (Pretprazništvo Uspenija)"
   },
   {
     "id": 240,
-    "title": "Uspenije Presvete Bogorodice – Velika Gospojina",
-    "status": ""
+    "title": "Uspenije Presvete Bogorodice – Velika Gospojina"
   },
   {
     "id": 241,
-    "title": "Nerukotvorena ikona Gospoda Isusa Hrista; Sveti Jevstatije, Drugi Arhiepiskop srpski; Prepodobni Roman; Prepodobni Rafailo banatski",
-    "status": ""
+    "title": "Nerukotvorena ikona Gospoda Isusa Hrista; Sveti Jevstatije, Drugi Arhiepiskop srpski; Prepodobni Roman; Prepodobni Rafailo banatski"
   },
   {
     "id": 242,
-    "title": "Sveti mučenik Patroklo; Sveti mučenik Miron",
-    "status": ""
+    "title": "Sveti mučenik Patroklo; Sveti mučenik Miron"
   },
   {
     "id": 243,
-    "title": "Sveti mučenici Flor i Lavr; Prepodobni Jovan Rilski",
-    "status": "post"
+    "title": "Sveti mučenici Flor i Lavr; Prepodobni Jovan Rilski"
   },
   {
     "id": 244,
-    "title": "Sveti mučenik Andrej Stratilat i ostali",
-    "status": ""
+    "title": "Sveti mučenik Andrej Stratilat i ostali"
   },
   {
     "id": 245,
-    "title": "Sveti prorok Samuilo; Sveti sveštenomučenik Filip Iraklijski",
-    "status": "post"
+    "title": "Sveti prorok Samuilo; Sveti sveštenomučenik Filip Iraklijski"
   },
   {
     "id": 246,
-    "title": "Sveti apostol Tadej; Sveta mučenica Vasa i njena deca Teognije, Agapije i Pist; Sveštenomučenik Rafailo Šišatovački",
-    "status": ""
+    "title": "Sveti apostol Tadej; Sveta mučenica Vasa i njena deca Teognije, Agapije i Pist; Sveštenomučenik Rafailo Šišatovački"
   },
   {
     "id": 247,
-    "title": "Sveti mučenik Agatonik; Sveti sveštenomučenik Gorazd Češki",
-    "status": ""
+    "title": "Sveti mučenik Agatonik; Sveti sveštenomučenik Gorazd Češki"
   },
   {
     "id": 248,
-    "title": "Sveti sveštenomučenik Irinej; Sveti mučenik Lup (Odanije Uspenija)",
-    "status": ""
+    "title": "Sveti sveštenomučenik Irinej; Sveti mučenik Lup (Odanije Uspenija)"
   },
   {
     "id": 249,
-    "title": "Sveti sveštenomučenik Evtihije; Sveta mučenica Sira",
-    "status": ""
+    "title": "Sveti sveštenomučenik Evtihije; Sveta mučenica Sira"
   },
   {
     "id": 250,
-    "title": "Prenos moštiju Svetog apostola Vartolomeja; Sveti apostol Tit",
-    "status": "post"
+    "title": "Prenos moštiju Svetog apostola Vartolomeja; Sveti apostol Tit"
   },
   {
     "id": 251,
-    "title": "Sveti mučenici Adrijan i Natalija",
-    "status": ""
+    "title": "Sveti mučenici Adrijan i Natalija"
   },
   {
     "id": 252,
-    "title": "Prepodobni Pimen Veliki",
-    "status": "post"
+    "title": "Prepodobni Pimen Veliki"
   },
   {
     "id": 253,
-    "title": "Prepodobni Mojsej Murin; Prepodobni Sava Pskovski ⵔ",
-    "status": ""
+    "title": "Prepodobni Mojsej Murin; Prepodobni Sava Pskovski ⵔ"
   },
   {
     "id": 254,
     "title": "Usekovanje glave Svetog Jovana Krstitelja; Sabor Srpskih Svetitelja",
-    "status": ""
+    "slava": true
   },
   {
     "id": 255,
-    "title": "Prenos moštiju svetog Aleksandra Nevskog; Sveti Kirilo, Nikon i Makarije",
-    "status": ""
+    "title": "Prenos moštiju svetog Aleksandra Nevskog; Sveti Kirilo, Nikon i Makarije"
   },
   {
     "id": 256,
-    "title": "Polaganje pojasa Presvete Bogorodice; Sveti mučenici Jasenovački",
-    "status": ""
+    "title": "Polaganje pojasa Presvete Bogorodice; Sveti mučenici Jasenovački"
   },
   {
     "id": 257,
-    "title": "Crkvena Nova godina; Prepodobni Simeon Stolpnik",
-    "status": "post"
+    "title": "Crkvena Nova godina; Prepodobni Simeon Stolpnik"
   },
   {
     "id": 258,
-    "title": "Sveti mučenik Mamant; Sveti Jovan Posnik",
-    "status": ""
+    "title": "Sveti mučenik Mamant; Sveti Jovan Posnik"
   },
   {
     "id": 259,
-    "title": "Sv. sveštenomučenik Antim; Sveti Joanikije, prvi Patrijarh srpski",
-    "status": "post"
+    "title": "Sv. sveštenomučenik Antim; Sveti Joanikije, prvi Patrijarh srpski"
   },
   {
     "id": 260,
-    "title": "Sv. sveštenomuč. Vavila; Sv. prorok Mojsej Bogovidac; Sveti Petar Dabrobosanski; Prep. Stefan Tronoški",
-    "status": ""
+    "title": "Sv. sveštenomuč. Vavila; Sv. prorok Mojsej Bogovidac; Sveti Petar Dabrobosanski; Prep. Stefan Tronoški"
   },
   {
     "id": 261,
-    "title": "Sveti prorok Zaharija i Sveta pravedna Jelisaveta",
-    "status": ""
+    "title": "Sveti prorok Zaharija i Sveta pravedna Jelisaveta"
   },
   {
     "id": 262,
-    "title": "Čudo Svetog Arhangela Mihaila; Sveti mučenik Evdoksije",
-    "status": ""
+    "title": "Čudo Svetog Arhangela Mihaila; Sveti mučenik Evdoksije"
   },
   {
     "id": 263,
-    "title": "Sveti mučenik Sozont (Pretprazništvo Rođenja Presvete Bogorodice)",
-    "status": ""
+    "title": "Sveti mučenik Sozont (Pretprazništvo Rođenja Presvete Bogorodice)"
   },
   {
     "id": 264,
-    "title": "Rođenje Presvete Bogorodice – Mala Gospojina",
-    "status": "post"
+    "title": "Rođenje Presvete Bogorodice – Mala Gospojina"
   },
   {
     "id": 265,
     "title": "Sveti pravedni bogoroditelji Joakim i Ana",
-    "status": ""
+    "slava": true
   },
   {
     "id": 266,
-    "title": "Svete mučenice Minodora, Mitrodora i Nimfodora",
-    "status": "post"
+    "title": "Svete mučenice Minodora, Mitrodora i Nimfodora"
   },
   {
     "id": 267,
-    "title": "Prepodobna Teodora Aleksandrijska; Prepodobni Sergije i German Valaamski",
-    "status": ""
+    "title": "Prepodobna Teodora Aleksandrijska; Prepodobni Sergije i German Valaamski"
   },
   {
     "id": 268,
-    "title": "Sveti sveštenomučenik Avtonom (Odanije Rođenja Presvete Bogorodice)",
-    "status": ""
+    "title": "Sveti sveštenomučenik Avtonom (Odanije Rođenja Presvete Bogorodice)"
   },
   {
     "id": 269,
-    "title": "Sveti sveštenomučenik Kornilije (Pretprazništvo Vozdviženja)",
-    "status": ""
+    "title": "Sveti sveštenomučenik Kornilije (Pretprazništvo Vozdviženja)"
   },
   {
     "id": 270,
-    "title": "Vozdviženje časnog Krsta – Krstovdan",
-    "status": ""
+    "title": "Vozdviženje časnog Krsta – Krstovdan"
   },
   {
     "id": 271,
-    "title": "Sveti velikomučenik Nikita; Sveti Josif Temišvarski",
-    "status": "post"
+    "title": "Sveti velikomučenik Nikita; Sveti Josif Temišvarski"
   },
   {
     "id": 272,
-    "title": "Prepodobni Dorotej; Sveti Kiprijan; Sveta velikomučenica Jefimija",
-    "status": ""
+    "title": "Prepodobni Dorotej; Sveti Kiprijan; Sveta velikomučenica Jefimija"
   },
   {
     "id": 273,
-    "title": "Svete mučenice Vera, Nada i Ljubav i majka im Sofija",
-    "status": "post"
+    "title": "Svete mučenice Vera, Nada i Ljubav i majka im Sofija"
   },
   {
     "id": 274,
-    "title": "Sveti Evmenije Gortinski; Sveta mučenica Ariadna",
-    "status": ""
+    "title": "Sveti Evmenije Gortinski; Sveta mučenica Ariadna"
   },
   {
     "id": 275,
-    "title": "Sveti mučenici Trofim, Savatije i Dorimedont",
-    "status": ""
+    "title": "Sveti mučenici Trofim, Savatije i Dorimedont"
   },
   {
     "id": 276,
-    "title": "Sveti velikomučenik Jevstatije",
-    "status": ""
+    "title": "Sveti velikomučenik Jevstatije"
   },
   {
     "id": 277,
-    "title": "Sveti apostol Kodrat (Odanije Vozdviženja)",
-    "status": ""
+    "title": "Sveti apostol Kodrat (Odanije Vozdviženja)"
   },
   {
     "id": 278,
-    "title": "Sveti sveštenomučenik Foka; Sveti prorok Jona",
-    "status": "post"
+    "title": "Sveti sveštenomučenik Foka; Sveti prorok Jona"
   },
   {
     "id": 279,
-    "title": "Začeće Svetog Jovana Preteče i Krstitelja",
-    "status": ""
+    "title": "Začeće Svetog Jovana Preteče i Krstitelja"
   },
   {
     "id": 280,
-    "title": "Sveta prvomučenica Tekla; Prepodobni Simon, Sveti kralj Vladislav i Prepodobni David Srpski",
-    "status": "post"
+    "title": "Sveta prvomučenica Tekla; Prepodobni Simon, Sveti kralj Vladislav i Prepodobni David Srpski"
   },
   {
     "id": 281,
-    "title": "Prepodobna Efrosinija; Sveti Sergije Radonješki",
-    "status": ""
+    "title": "Prepodobna Efrosinija; Sveti Sergije Radonješki"
   },
   {
     "id": 282,
-    "title": "Sveti apostol i jevanđelist Jovan Bogoslov",
-    "status": ""
+    "title": "Sveti apostol i jevanđelist Jovan Bogoslov"
   },
   {
     "id": 283,
-    "title": "Sveti mučenik Kalistrat i ostali",
-    "status": ""
+    "title": "Sveti mučenik Kalistrat i ostali"
   },
   {
     "id": 284,
-    "title": "Prepodobni Hariton Ispovednik",
-    "status": ""
+    "title": "Prepodobni Hariton Ispovednik"
   },
   {
     "id": 285,
     "title": "Prepodobni Kirijak Otšelnik – Miholjdan",
-    "status": "post"
+    "slava": true
   },
   {
     "id": 286,
-    "title": "Sveti sveštenomučenik Grigorije; Sveti Mihail Kijevski",
-    "status": ""
+    "title": "Sveti sveštenomučenik Grigorije; Sveti Mihail Kijevski"
   },
   {
     "id": 287,
     "title": "Pokrov Presvete Bogorodice",
-    "status": "post"
+    "slava": true
   },
   {
     "id": 288,
-    "title": "Sv. sveštenomuč. Kiprijan i Sv. muč. Justina devica; Prepodobni Andrej",
-    "status": ""
+    "title": "Sv. sveštenomuč. Kiprijan i Sv. muč. Justina devica; Prepodobni Andrej"
   },
   {
     "id": 289,
-    "title": "Sveti sveštenomučenik Dionisije Areopagit; Sveti Pajsije (Janevac), Patrijarh srpski",
-    "status": ""
+    "title": "Sveti sveštenomučenik Dionisije Areopagit; Sveti Pajsije (Janevac), Patrijarh srpski"
   },
   {
     "id": 290,
-    "title": "Sveti Stefan i Jelena (Štiljanović)",
-    "status": ""
+    "title": "Sveti Stefan i Jelena (Štiljanović)"
   },
   {
     "id": 291,
-    "title": "Sveta mučenica Haritina; Sveti sveštenomučenik Dionisije",
-    "status": ""
+    "title": "Sveta mučenica Haritina; Sveti sveštenomučenik Dionisije"
   },
   {
     "id": 292,
     "title": "Sveti apostol Toma – Tomindan",
-    "status": "post"
+    "slava": true
   },
   {
     "id": 293,
     "title": "Sveti mučenici Sergije i Vakho – Srđevdan",
-    "status": ""
+    "slava": true
   },
   {
     "id": 294,
-    "title": "Prepodobna Pelagija Palestinska; Prepodobna Taisa",
-    "status": "post"
+    "title": "Prepodobna Pelagija Palestinska; Prepodobna Taisa"
   },
   {
     "id": 295,
-    "title": "Sveti apostol Jakov; Sveti despot Stefan Srpski (Slepi)",
-    "status": ""
+    "title": "Sveti apostol Jakov; Sveti despot Stefan Srpski (Slepi)"
   },
   {
     "id": 296,
-    "title": "Sveti mučenici Evlampije i Evlampija",
-    "status": ""
+    "title": "Sveti mučenici Evlampije i Evlampija"
   },
   {
     "id": 297,
-    "title": "Sveti apostol Filip; Prepodobni Teofan Načertani",
-    "status": ""
+    "title": "Sveti apostol Filip; Prepodobni Teofan Načertani"
   },
   {
     "id": 298,
-    "title": "Sveti mučenici Tarah, Prov i Andronik",
-    "status": ""
+    "title": "Sveti mučenici Tarah, Prov i Andronik"
   },
   {
     "id": 299,
-    "title": "Sveti mučenik Karp; Sveta mučenica Zlata Meglenska; Sveta mučenica Bosiljka Pasjanska",
-    "status": "post"
+    "title": "Sveti mučenik Karp; Sveta mučenica Zlata Meglenska; Sveta mučenica Bosiljka Pasjanska"
   },
   {
     "id": 300,
     "title": "Prepodobna mati Paraskeva (Sveta Petka)",
-    "status": "post"
+    "slava": true
   },
   {
     "id": 301,
-    "title": "Sveti sveštenomučenik Lukijan; Prepodobni Jevtimije",
-    "status": "post"
+    "title": "Sveti sveštenomučenik Lukijan; Prepodobni Jevtimije"
   },
   {
     "id": 302,
-    "title": "Sveti mučenik Longin Sotnik",
-    "status": ""
+    "title": "Sveti mučenik Longin Sotnik"
   },
   {
     "id": 303,
-    "title": "Sveti prorok Osija; Sveti prepodobnomučenik Andrej Kritski",
-    "status": ""
+    "title": "Sveti prorok Osija; Sveti prepodobnomučenik Andrej Kritski"
   },
   {
     "id": 304,
     "title": "Sveti apostol i jevanđelist Luka – Lučindan; Sveti Petar Cetinjski",
-    "status": "post"
+    "slava": true
   },
   {
     "id": 305,
     "title": "Prepodobni Prohor Pčinjski; Sveti prorok Joil; Prepodobni Jovan Rilski",
-    "status": ""
+    "slava": true
   },
   {
     "id": 306,
-    "title": "Sveti velikomučenik Artemije; Prep. Gerasim Kefalonijski",
-    "status": "post"
+    "title": "Sveti velikomučenik Artemije; Prep. Gerasim Kefalonijski"
   },
   {
     "id": 307,
-    "title": "Prepodobni Ilarion; Sveti Ilarion Meglenski; Sveti Visarion Ispovednik",
-    "status": ""
+    "title": "Prepodobni Ilarion; Sveti Ilarion Meglenski; Sveti Visarion Ispovednik"
   },
   {
     "id": 308,
-    "title": "Sveti ravnoapostolni Averkije Jerapoljski",
-    "status": "post"
+    "title": "Sveti ravnoapostolni Averkije Jerapoljski"
   },
   {
     "id": 309,
-    "title": "Sveti apostol Jakov, prvi Episkop Jerusalimski – Zadušnice jesenje (mitrovske)",
-    "status": ""
+    "title": "Sveti apostol Jakov, prvi Episkop Jerusalimski – Zadušnice jesenje (mitrovske)"
   },
   {
     "id": 310,
-    "title": "Sveti velikomučenik Areta i ostali",
-    "status": ""
+    "title": "Sveti velikomučenik Areta i ostali"
   },
   {
     "id": 311,
-    "title": "Sveti mučenici Markijan i Martirije; Sveta Tavita",
-    "status": ""
+    "title": "Sveti mučenici Markijan i Martirije; Sveta Tavita"
   },
   {
     "id": 312,
     "title": "Sveti velikomučenik Dimitrije – Mitrovdan",
-    "status": ""
+    "slava": true
   },
   {
     "id": 313,
-    "title": "Sveti mučenik Nestor",
-    "status": "post"
+    "title": "Sveti mučenik Nestor"
   },
   {
     "id": 314,
-    "title": "Sveti mučenik Terentije; Sveti Arsenije Sremac, Arhiepiskop srpski",
-    "status": ""
+    "title": "Sveti mučenik Terentije; Sveti Arsenije Sremac, Arhiepiskop srpski"
   },
   {
     "id": 315,
     "title": "Prep. Avramije Zatvornik; Sv. prepmuč. Anastasija Rimljanka",
-    "status": "post"
+    "slava": true
   },
   {
     "id": 316,
-    "title": "Sveti kralj Milutin; Prepodobni Teoktist i Jelena; Sveti Varnava Hvostanski Ispovednik",
-    "status": ""
+    "title": "Sveti kralj Milutin; Prepodobni Teoktist i Jelena; Sveti Varnava Hvostanski Ispovednik"
   },
   {
     "id": 317,
-    "title": "Sveti apostoli Stahije, Amplije, Urvan i drugi s njima",
-    "status": ""
+    "title": "Sveti apostoli Stahije, Amplije, Urvan i drugi s njima"
   },
   {
     "id": 318,
     "title": "Sveti Kozma i Damjan – Vračevi",
-    "status": ""
+    "slava": true
   },
   {
     "id": 319,
-    "title": "Sveti mučenici Akindin, Pigasije i drugi s njima",
-    "status": ""
+    "title": "Sveti mučenici Akindin, Pigasije i drugi s njima"
   },
   {
     "id": 320,
     "title": "Obnovljenje hrama Svetog velikomučenika Georgija – Đurđic",
-    "status": "post"
+    "slava": true
   },
   {
     "id": 321,
-    "title": "Prepodobni Joanikije Veliki; Sveti sveštenomučenik Nikandar",
-    "status": ""
+    "title": "Prepodobni Joanikije Veliki; Sveti sveštenomučenik Nikandar"
   },
   {
     "id": 322,
-    "title": "Sveti prepodobnomučenici Galaktion i Epistima",
-    "status": "post"
+    "title": "Sveti prepodobnomučenici Galaktion i Epistima"
   },
   {
     "id": 323,
-    "title": "Sveti Pavle Ispovednik; Prepodobni Varlaam Hutinski",
-    "status": ""
+    "title": "Sveti Pavle Ispovednik; Prepodobni Varlaam Hutinski"
   },
   {
     "id": 324,
-    "title": "Sveta 33 mučenika u Melitini; Prepodobni Lazar Galisijski",
-    "status": ""
+    "title": "Sveta 33 mučenika u Melitini; Prepodobni Lazar Galisijski"
   },
   {
     "id": 325,
     "title": "Sabor Svetog Arhangela Mihaila i ostalih Nebeskih Sila Bestelesnih – Aranđelovdan",
-    "status": ""
+    "slava": true
   },
   {
     "id": 326,
-    "title": "Sveti mučenici Onisifor i Porfirije; Sveti Nektarije Eginski",
-    "status": ""
+    "title": "Sveti mučenici Onisifor i Porfirije; Sveti Nektarije Eginski"
   },
   {
     "id": 327,
-    "title": "Sveti apostoli Olimp, Erast, Rodion i drugi s njima",
-    "status": "post"
+    "title": "Sveti apostoli Olimp, Erast, Rodion i drugi s njima"
   },
   {
     "id": 328,
     "title": "Sveti velikomučenik Mina; Sveti kralj Stefan Dečanski",
-    "status": ""
+    "slava": true
   },
   {
     "id": 329,
     "title": "Sveti Jovan Milostivi; Prepodobni Nil Sinajski",
-    "status": "post"
+    "slava": true
   },
   {
     "id": 330,
     "title": "Sveti Jovan Zlatousti, Patrijarh carigradski",
-    "status": ""
+    "slava": true
   },
   {
     "id": 331,
-    "title": "Sveti apostol Filip; Sveti Grigorije Palama (Božićne poklade)",
-    "status": ""
+    "title": "Sveti apostol Filip; Sveti Grigorije Palama (Božićne poklade)"
   },
   {
     "id": 332,
-    "title": "Sveti mučenici Gurije, Samon i Aviv (Početak posta)",
-    "status": "post"
+    "title": "Sveti mučenici Gurije, Samon i Aviv (Početak posta)"
   },
   {
     "id": 333,
     "title": "Sveti apostol i jevanđelist Matej",
-    "status": "post"
+    "slava": true
   },
   {
     "id": 334,
-    "title": "Sveti Grigorije Čudotvorac; Sveti Nikon Radonješki; Sveti Maksim, Patrijarh carigradski; Prep. Sevastijan Džeksonski",
-    "status": "post"
+    "title": "Sveti Grigorije Čudotvorac; Sveti Nikon Radonješki; Sveti Maksim, Patrijarh carigradski; Prep. Sevastijan Džeksonski"
   },
   {
     "id": 335,
-    "title": "Sveti mučenik Platon; Sveti mučenici Roman i Varul Otrok",
-    "status": "post"
+    "title": "Sveti mučenik Platon; Sveti mučenici Roman i Varul Otrok"
   },
   {
     "id": 336,
-    "title": "Sveti prorok Avdija; Sv. muč. Varlaam; Prep. Joasaf; Prepodobni Porfirije Kavsokalivit",
-    "status": "post"
+    "title": "Sveti prorok Avdija; Sv. muč. Varlaam; Prep. Joasaf; Prepodobni Porfirije Kavsokalivit"
   },
   {
     "id": 337,
-    "title": "Prepodobni Grigorije Dekapolit (Pretprazništvo Vavedenja)",
-    "status": "post"
+    "title": "Prepodobni Grigorije Dekapolit (Pretprazništvo Vavedenja)"
   },
   {
     "id": 338,
     "title": "Vavedenje Presvete Bogorodice",
-    "status": "post"
+    "slava": true
   },
   {
     "id": 339,
-    "title": "Sveti apostoli Filimon, Apfija i Arhip; Sveta mučenica Kikilija",
-    "status": "post"
+    "title": "Sveti apostoli Filimon, Apfija i Arhip; Sveta mučenica Kikilija"
   },
   {
     "id": 340,
-    "title": "Sveti Amfilohije Ikonijski; Sveti Grigorije; Sveti Aleksandar Nevski",
-    "status": "post"
+    "title": "Sveti Amfilohije Ikonijski; Sveti Grigorije; Sveti Aleksandar Nevski"
   },
   {
     "id": 341,
-    "title": "Sveta velikomučenica Ekaterina",
-    "status": "post"
+    "title": "Sveta velikomučenica Ekaterina"
   },
   {
     "id": 342,
-    "title": "Sveti sveštenomučenik Kliment (Odanije Vavedenja)",
-    "status": "post"
+    "title": "Sveti sveštenomučenik Kliment (Odanije Vavedenja)"
   },
   {
     "id": 343,
     "title": "Prepodobni Alimpije Stolpnik",
-    "status": "post"
+    "slava": true
   },
   {
     "id": 344,
-    "title": "Sveti mučenik Jakov Persijanac; Sveti Jakov Rostovski",
-    "status": "post"
+    "title": "Sveti mučenik Jakov Persijanac; Sveti Jakov Rostovski"
   },
   {
     "id": 345,
-    "title": "Sveti prepodobnomučenik Stefan; Sveti mučenik Hristo",
-    "status": "post"
+    "title": "Sveti prepodobnomučenik Stefan; Sveti mučenik Hristo"
   },
   {
     "id": 346,
-    "title": "Sveti mučenici Paramon i Filumen; Sveti Mardarije",
-    "status": "post"
+    "title": "Sveti mučenici Paramon i Filumen; Sveti Mardarije"
   },
   {
     "id": 347,
     "title": "Sveti apostol Andrej Prvozvani",
-    "status": "post"
+    "slava": true
   },
   {
     "id": 348,
-    "title": "Sveti prorok Naum; Sveti Filaret Milostivi",
-    "status": "post"
+    "title": "Sveti prorok Naum; Sveti Filaret Milostivi"
   },
   {
     "id": 349,
-    "title": "Sveti prorok Avakum; Sveti car Uroš; Prepodobni Joanikije Devički",
-    "status": "post"
+    "title": "Sveti prorok Avakum; Sveti car Uroš; Prepodobni Joanikije Devički"
   },
   {
     "id": 350,
-    "title": "Sveti prorok Sofonije; Prepodobni Jovan Ćutljivi",
-    "status": "post"
+    "title": "Sveti prorok Sofonije; Prepodobni Jovan Ćutljivi"
   },
   {
     "id": 351,
-    "title": "Sveta velikomučenica Varvara; Prepodobni Jovan Damaskin",
-    "status": "post"
+    "title": "Sveta velikomučenica Varvara; Prepodobni Jovan Damaskin"
   },
   {
     "id": 352,
-    "title": "Prepodobni Sava Osvećeni; Prep. Nektarije Bitoljski – Detinjci",
-    "status": "post"
+    "title": "Prepodobni Sava Osvećeni; Prep. Nektarije Bitoljski – Detinjci"
   },
   {
     "id": 353,
     "title": "Sveti Nikolaj, Arhiepiskop mirlikijski Čudotvorac – Nikoljdan",
-    "status": "post"
+    "slava": true
   },
   {
     "id": 354,
-    "title": "Sveti Amvrosije; Prepodobni Grigorije Gornjački",
-    "status": "post"
+    "title": "Sveti Amvrosije; Prepodobni Grigorije Gornjački"
   },
   {
     "id": 355,
-    "title": "Prepodobni Patapije; Sveti apostoli Sosten, Apolo i drugi s njima",
-    "status": "post"
+    "title": "Prepodobni Patapije; Sveti apostoli Sosten, Apolo i drugi s njima"
   },
   {
     "id": 356,
-    "title": "Začeće Svete Ane; Sveta proročica Ana",
-    "status": "post"
+    "title": "Začeće Svete Ane; Sveta proročica Ana"
   },
   {
     "id": 357,
-    "title": "Sveti mučenik Mina i drugi s njim; Sveti Jovan, Despot Srpski",
-    "status": "post"
+    "title": "Sveti mučenik Mina i drugi s njim; Sveti Jovan, Despot Srpski"
   },
   {
     "id": 358,
-    "title": "Prepodobni Danilo Stolpnik",
-    "status": "post"
+    "title": "Prepodobni Danilo Stolpnik"
   },
   {
     "id": 359,
-    "title": "Sveti Spiridon Čudotvorac, Episkop trimitunski – Materice",
-    "status": "post"
+    "title": "Sveti Spiridon Čudotvorac, Episkop trimitunski – Materice"
   },
   {
     "id": 360,
-    "title": "Sveti mučenik Evstratije; Sveti sveštenomučenik Gavrilo, Patrijarh srpski",
-    "status": "post"
+    "title": "Sveti mučenik Evstratije; Sveti sveštenomučenik Gavrilo, Patrijarh srpski"
   },
   {
     "id": 361,
-    "title": "Sveti mučenici Tirs, Levkije, Filimon, Apolonije i drugi s njima",
-    "status": "post"
+    "title": "Sveti mučenici Tirs, Levkije, Filimon, Apolonije i drugi s njima"
   },
   {
     "id": 362,
-    "title": "Sveti sveštenomučenik Elevterije; Prepodobni Pavle",
-    "status": "post"
+    "title": "Sveti sveštenomučenik Elevterije; Prepodobni Pavle"
   },
   {
     "id": 363,
-    "title": "Sveti prorok Agej; Sveta blažena carica Teofanija",
-    "status": "post"
+    "title": "Sveti prorok Agej; Sveta blažena carica Teofanija"
   },
   {
     "id": 364,
-    "title": "Sveti prorok Danilo; Sveti prepodobnomučenik đakon Avakum i iguman Pajsije",
-    "status": "post"
+    "title": "Sveti prorok Danilo; Sveti prepodobnomučenik đakon Avakum i iguman Pajsije"
   },
   {
     "id": 365,
-    "title": "Sveti mučenik Sevastijan; Sveti Modest i drugi s njim",
-    "status": "post"
+    "title": "Sveti mučenik Sevastijan; Sveti Modest i drugi s njim"
   }
 ]
