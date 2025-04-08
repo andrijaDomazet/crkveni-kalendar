@@ -1058,32 +1058,49 @@
   },
   {
     "id": 254,
-    "title": "Usekovanje glave Svetog Jovana Krstitelja; Sabor Srpskih Svetitelja",
+    "title": [
+      "Usekovanje glave Svetog Jovana Krstitelja",
+      "Sabor Srpskih Svetitelja"
+    ],
     "slava": true
   },
   {
     "id": 255,
-    "title": "Prenos moštiju svetog Aleksandra Nevskog; Sveti Kirilo, Nikon i Makarije"
+    "title": [
+      "Prenos moštiju svetog Aleksandra Nevskog",
+      "Sveti Kirilo, Nikon i Makarije"
+    ]
   },
   {
     "id": 256,
-    "title": "Polaganje pojasa Presvete Bogorodice; Sveti mučenici Jasenovački"
+    "title": [
+      "Polaganje pojasa Presvete Bogorodice",
+      "Sveti mučenici Jasenovački"
+    ]
   },
   {
     "id": 257,
-    "title": "Crkvena Nova godina; Prepodobni Simeon Stolpnik"
+    "title": ["Crkvena Nova godina", "Prepodobni Simeon Stolpnik"]
   },
   {
     "id": 258,
-    "title": "Sveti mučenik Mamant; Sveti Jovan Posnik"
+    "title": ["Sveti mučenik Mamant", "Sveti Jovan Posnik"]
   },
   {
     "id": 259,
-    "title": "Sv. sveštenomučenik Antim; Sveti Joanikije, prvi Patrijarh srpski"
+    "title": [
+      "Sv. sveštenomučenik Antim",
+      "Sveti Joanikije, prvi Patrijarh srpski"
+    ]
   },
   {
     "id": 260,
-    "title": "Sv. sveštenomuč. Vavila; Sv. prorok Mojsej Bogovidac; Sveti Petar Dabrobosanski; Prep. Stefan Tronoški"
+    "title": [
+      "Sv. sveštenomuč. Vavila",
+      "Sv. prorok Mojsej Bogovidac",
+      "Sveti Petar Dabrobosanski",
+      "Prep. Stefan Tronoški"
+    ]
   },
   {
     "id": 261,
@@ -1091,7 +1108,7 @@
   },
   {
     "id": 262,
-    "title": "Čudo Svetog Arhangela Mihaila; Sveti mučenik Evdoksije"
+    "title": ["Čudo Svetog Arhangela Mihaila", "Sveti mučenik Evdoksije"]
   },
   {
     "id": 263,
@@ -1112,7 +1129,10 @@
   },
   {
     "id": 267,
-    "title": "Prepodobna Teodora Aleksandrijska; Prepodobni Sergije i German Valaamski"
+    "title": [
+      "Prepodobna Teodora Aleksandrijska",
+      "Prepodobni Sergije i German Valaamski"
+    ]
   },
   {
     "id": 268,
@@ -1128,11 +1148,15 @@
   },
   {
     "id": 271,
-    "title": "Sveti velikomučenik Nikita; Sveti Josif Temišvarski"
+    "title": ["Sveti velikomučenik Nikita", "Sveti Josif Temišvarski"]
   },
   {
     "id": 272,
-    "title": "Prepodobni Dorotej; Sveti Kiprijan; Sveta velikomučenica Jefimija"
+    "title": [
+      "Prepodobni Dorotej",
+      "Sveti Kiprijan",
+      "Sveta velikomučenica Jefimija"
+    ]
   },
   {
     "id": 273,
@@ -1140,7 +1164,7 @@
   },
   {
     "id": 274,
-    "title": "Sveti Evmenije Gortinski; Sveta mučenica Ariadna"
+    "title": ["Sveti Evmenije Gortinski", "Sveta mučenica Ariadna"]
   },
   {
     "id": 275,
@@ -1156,7 +1180,7 @@
   },
   {
     "id": 278,
-    "title": "Sveti sveštenomučenik Foka; Sveti prorok Jona"
+    "title": ["Sveti sveštenomučenik Foka", "Sveti prorok Jona"]
   },
   {
     "id": 279,
@@ -1164,11 +1188,14 @@
   },
   {
     "id": 280,
-    "title": "Sveta prvomučenica Tekla; Prepodobni Simon, Sveti kralj Vladislav i Prepodobni David Srpski"
+    "title": [
+      "Sveta prvomučenica Tekla",
+      "Prepodobni Simon, Sveti kralj Vladislav i Prepodobni David Srpski"
+    ]
   },
   {
     "id": 281,
-    "title": "Prepodobna Efrosinija; Sveti Sergije Radonješki"
+    "title": ["Prepodobna Efrosinija", "Sveti Sergije Radonješki"]
   },
   {
     "id": 282,
@@ -1189,7 +1216,7 @@
   },
   {
     "id": 286,
-    "title": "Sveti sveštenomučenik Grigorije; Sveti Mihail Kijevski"
+    "title": ["Sveti sveštenomučenik Grigorije", "Sveti Mihail Kijevski"]
   },
   {
     "id": 287,
@@ -1198,11 +1225,17 @@
   },
   {
     "id": 288,
-    "title": "Sv. sveštenomuč. Kiprijan i Sv. muč. Justina devica; Prepodobni Andrej"
+    "title": [
+      "Sv. sveštenomuč. Kiprijan i Sv. muč. Justina devica",
+      "Prepodobni Andrej"
+    ]
   },
   {
     "id": 289,
-    "title": "Sveti sveštenomučenik Dionisije Areopagit; Sveti Pajsije (Janevac), Patrijarh srpski"
+    "title": [
+      "Sveti sveštenomučenik Dionisije Areopagit",
+      "Sveti Pajsije (Janevac), Patrijarh srpski"
+    ]
   },
   {
     "id": 290,
@@ -1210,7 +1243,7 @@
   },
   {
     "id": 291,
-    "title": "Sveta mučenica Haritina; Sveti sveštenomučenik Dionisije"
+    "title": ["Sveta mučenica Haritina", "Sveti sveštenomučenik Dionisije"]
   },
   {
     "id": 292,
@@ -1224,11 +1257,11 @@
   },
   {
     "id": 294,
-    "title": "Prepodobna Pelagija Palestinska; Prepodobna Taisa"
+    "title": ["Prepodobna Pelagija Palestinska", "Prepodobna Taisa"]
   },
   {
     "id": 295,
-    "title": "Sveti apostol Jakov; Sveti despot Stefan Srpski (Slepi)"
+    "title": ["Sveti apostol Jakov", "Sveti despot Stefan Srpski (Slepi)"]
   },
   {
     "id": 296,
@@ -1236,7 +1269,7 @@
   },
   {
     "id": 297,
-    "title": "Sveti apostol Filip; Prepodobni Teofan Načertani"
+    "title": ["Sveti apostol Filip", "Prepodobni Teofan Načertani"]
   },
   {
     "id": 298,
@@ -1244,7 +1277,11 @@
   },
   {
     "id": 299,
-    "title": "Sveti mučenik Karp; Sveta mučenica Zlata Meglenska; Sveta mučenica Bosiljka Pasjanska"
+    "title": [
+      "Sveti mučenik Karp",
+      "Sveta mučenica Zlata Meglenska",
+      "Sveta mučenica Bosiljka Pasjanska"
+    ]
   },
   {
     "id": 300,
@@ -1253,7 +1290,7 @@
   },
   {
     "id": 301,
-    "title": "Sveti sveštenomučenik Lukijan; Prepodobni Jevtimije"
+    "title": ["Sveti sveštenomučenik Lukijan", "Prepodobni Jevtimije"]
   },
   {
     "id": 302,
@@ -1261,21 +1298,28 @@
   },
   {
     "id": 303,
-    "title": "Sveti prorok Osija; Sveti prepodobnomučenik Andrej Kritski"
+    "title": ["Sveti prorok Osija", "Sveti prepodobnomučenik Andrej Kritski"]
   },
   {
     "id": 304,
-    "title": "Sveti apostol i jevanđelist Luka – Lučindan; Sveti Petar Cetinjski",
+    "title": [
+      "Sveti apostol i jevanđelist Luka – Lučindan",
+      "Sveti Petar Cetinjski"
+    ],
     "slava": true
   },
   {
     "id": 305,
-    "title": "Prepodobni Prohor Pčinjski; Sveti prorok Joil; Prepodobni Jovan Rilski",
+    "title": [
+      "Prepodobni Prohor Pčinjski",
+      "Sveti prorok Joil",
+      "Prepodobni Jovan Rilski"
+    ],
     "slava": true
   },
   {
     "id": 306,
-    "title": "Sveti velikomučenik Artemije; Prep. Gerasim Kefalonijski"
+    "title": ["Sveti velikomučenik Artemije", "Prep. Gerasim Kefalonijski"]
   },
   {
     "id": 307,
@@ -1339,7 +1383,7 @@
   },
   {
     "id": 321,
-    "title": "Prepodobni Joanikije Veliki; Sveti sveštenomučenik Nikandar"
+    "title": ["Prepodobni Joanikije Veliki", "Sveti sveštenomučenik Nikandar"]
   },
   {
     "id": 322,
@@ -1347,11 +1391,11 @@
   },
   {
     "id": 323,
-    "title": "Sveti Pavle Ispovednik; Prepodobni Varlaam Hutinski"
+    "title": ["Sveti Pavle Ispovednik", "Prepodobni Varlaam Hutinski"]
   },
   {
     "id": 324,
-    "title": "Sveta 33 mučenika u Melitini; Prepodobni Lazar Galisijski"
+    "title": ["Sveta 33 mučenika u Melitini", "Prepodobni Lazar Galisijski"]
   },
   {
     "id": 325,
@@ -1360,7 +1404,7 @@
   },
   {
     "id": 326,
-    "title": "Sveti mučenici Onisifor i Porfirije; Sveti Nektarije Eginski"
+    "title": ["Sveti mučenici Onisifor i Porfirije", "Sveti Nektarije Eginski"]
   },
   {
     "id": 327,
@@ -1368,12 +1412,12 @@
   },
   {
     "id": 328,
-    "title": "Sveti velikomučenik Mina; Sveti kralj Stefan Dečanski",
+    "title": ["Sveti velikomučenik Mina", "Sveti kralj Stefan Dečanski"],
     "slava": true
   },
   {
     "id": 329,
-    "title": "Sveti Jovan Milostivi; Prepodobni Nil Sinajski",
+    "title": ["Sveti Jovan Milostivi", "Prepodobni Nil Sinajski"],
     "slava": true
   },
   {
@@ -1383,7 +1427,7 @@
   },
   {
     "id": 331,
-    "title": "Sveti apostol Filip; Sveti Grigorije Palama (Božićne poklade)"
+    "title": ["Sveti apostol Filip", "Sveti Grigorije Palama (Božićne poklade)"]
   },
   {
     "id": 332,
@@ -1396,15 +1440,25 @@
   },
   {
     "id": 334,
-    "title": "Sveti Grigorije Čudotvorac; Sveti Nikon Radonješki; Sveti Maksim, Patrijarh carigradski; Prep. Sevastijan Džeksonski"
+    "title": [
+      "Sveti Grigorije Čudotvorac",
+      "Sveti Nikon Radonješki",
+      "Sveti Maksim, Patrijarh carigradski",
+      "Prep. Sevastijan Džeksonski"
+    ]
   },
   {
     "id": 335,
-    "title": "Sveti mučenik Platon; Sveti mučenici Roman i Varul Otrok"
+    "title": ["Sveti mučenik Platon", "Sveti mučenici Roman i Varul Otrok"]
   },
   {
     "id": 336,
-    "title": "Sveti prorok Avdija; Sv. muč. Varlaam; Prep. Joasaf; Prepodobni Porfirije Kavsokalivit"
+    "title": [
+      "Sveti prorok Avdija",
+      "Sv. muč. Varlaam",
+      "Prep. Joasaf",
+      "Prepodobni Porfirije Kavsokalivit"
+    ]
   },
   {
     "id": 337,
@@ -1417,11 +1471,18 @@
   },
   {
     "id": 339,
-    "title": "Sveti apostoli Filimon, Apfija i Arhip; Sveta mučenica Kikilija"
+    "title": [
+      "Sveti apostoli Filimon, Apfija i Arhip",
+      "Sveta mučenica Kikilija"
+    ]
   },
   {
     "id": 340,
-    "title": "Sveti Amfilohije Ikonijski; Sveti Grigorije; Sveti Aleksandar Nevski"
+    "title": [
+      "Sveti Amfilohije Ikonijski",
+      "Sveti Grigorije",
+      "Sveti Aleksandar Nevski"
+    ]
   },
   {
     "id": 341,
@@ -1438,15 +1499,15 @@
   },
   {
     "id": 344,
-    "title": "Sveti mučenik Jakov Persijanac; Sveti Jakov Rostovski"
+    "title": ["Sveti mučenik Jakov Persijanac", "Sveti Jakov Rostovski"]
   },
   {
     "id": 345,
-    "title": "Sveti prepodobnomučenik Stefan; Sveti mučenik Hristo"
+    "title": ["Sveti prepodobnomučenik Stefan", "Sveti mučenik Hristo"]
   },
   {
     "id": 346,
-    "title": "Sveti mučenici Paramon i Filumen; Sveti Mardarije"
+    "title": ["Sveti mučenici Paramon i Filumen", "Sveti Mardarije"]
   },
   {
     "id": 347,
@@ -1455,19 +1516,23 @@
   },
   {
     "id": 348,
-    "title": "Sveti prorok Naum; Sveti Filaret Milostivi"
+    "title": ["Sveti prorok Naum", "Sveti Filaret Milostivi"]
   },
   {
     "id": 349,
-    "title": "Sveti prorok Avakum; Sveti car Uroš; Prepodobni Joanikije Devički"
+    "title": [
+      "Sveti prorok Avakum",
+      "Sveti car Uroš",
+      "Prepodobni Joanikije Devički"
+    ]
   },
   {
     "id": 350,
-    "title": "Sveti prorok Sofonije; Prepodobni Jovan Ćutljivi"
+    "title": ["Sveti prorok Sofonije", "Prepodobni Jovan Ćutljivi"]
   },
   {
     "id": 351,
-    "title": "Sveta velikomučenica Varvara; Prepodobni Jovan Damaskin"
+    "title": ["Sveta velikomučenica Varvara", "Prepodobni Jovan Damaskin"]
   },
   {
     "id": 352,

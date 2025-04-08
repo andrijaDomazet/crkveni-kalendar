@@ -20,7 +20,6 @@ import SimpleButton from "../../UI/Buttons/SimpleButton";
 import TimeFormat from "../TimeFormat/TimeFormat";
 import { useGlobalLocation } from "../../shared/LocationContext";
 import { useIdContext } from "../../shared/IdProvider";
-import slave from "./calendar-data/slave.json";
 
 export default function Calendar(props) {
   const { id, slug, currentDate, currentYear } = useIdContext();
@@ -66,7 +65,6 @@ export default function Calendar(props) {
       item.title = Array.isArray(item.title)
         ? item.title.map((item) => item)
         : [item.title];
-      console.log("Item", item.title);
 
       let setDate = new Date(isYear, isMonth, index);
       let currentDay2 = setDate.getDay();
@@ -82,10 +80,6 @@ export default function Calendar(props) {
           </>
         );
       }
-
-      const slavaItem = slave.find(
-        (item2) => item2.date[0] === isMonth && item2.date[1] === index + 1
-      );
 
       let date1 = new Date(isYear, isMonth, index + 1);
       item.date = date1;
@@ -137,25 +131,37 @@ export default function Calendar(props) {
       } else if (currentDay2 === 2 && diffInDays > 15 && diffInDays < 20) {
         item.title = (
           <>
-            <h2>{item.title}</h2> - <strong>(Prvo bdenije)</strong>
+            <h2>{item.title}</h2> -{" "}
+            <h2>
+              <strong>(Prvo bdenije)</strong>
+            </h2>
           </>
         );
       } else if (currentDay2 === 4 && diffInDays > 15 && diffInDays < 20) {
         item.title = (
           <>
-            <h2>{item.title}</h2> - <strong>(Drugo bdenije)</strong>
+            <h2>{item.title}</h2> -{" "}
+            <h2>
+              <strong>(Drugo bdenije)</strong>
+            </h2>
           </>
         );
       } else if (currentDay2 === 0 && diffInDays > -10 && diffInDays < 0) {
         item.title = (
           <>
-            <h2>{item.title}</h2> - <strong>Pobusani ponedeljak</strong>
+            <h2>{item.title}</h2> -{" "}
+            <h2>
+              <strong>Pobusani ponedeljak</strong>
+            </h2>
           </>
         );
       } else if (currentDay2 === 4 && diffInDays > -8 && diffInDays < 2) {
         item.title = (
           <>
-            <h2>{item.title}</h2>; <strong>Istočni petak</strong>
+            <h2>{item.title}</h2>;{" "}
+            <h2>
+              <strong>Istočni petak</strong>
+            </h2>
           </>
         );
       }
