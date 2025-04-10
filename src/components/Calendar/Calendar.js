@@ -392,10 +392,11 @@ export default function Calendar(props) {
                         </Link>
                       ) : null}
                       {Array.isArray(item.title)
-                        ? item.title.map((el) => (
+                        ? item.title.map((el, index) => (
                             <>
                               <h2>{el}</h2>
-                              <>; </>
+                              {/* {item.title.length !== index ? <>; </> : ""} */}
+                              {index !== item.title.length - 1 ? "; " : ""}
                             </>
                           ))
                         : item.title}
