@@ -392,7 +392,12 @@ export default function Calendar(props) {
                         </Link>
                       ) : null}
                       {Array.isArray(item.title)
-                        ? item.title.map((el) => <h2>{el}</h2>)
+                        ? item.title.map((el) => (
+                            <>
+                              <h2>{el}</h2>
+                              <>; </>
+                            </>
+                          ))
                         : item.title}
                     </div>
                   </td>
