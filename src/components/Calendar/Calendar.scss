@@ -205,26 +205,26 @@
             margin: 0px 0.3rem 0 0;
             margin-right: 0.3rem;
           }
+          .zadusniceStrong {
+            color: black;
+            font-weight: 600;
+            border-radius: 3px;
+            display: inline-block;
+            height: 1.5rem;
+            line-height: 1.2rem;
+            white-space: nowrap;
+            border: 2px solid black;
+            padding: 0 0.2rem;
+            margin: 0px 0.3rem 0 0;
+          }
           h2 {
             display: inline;
-            .zadusniceStrong {
-              color: black;
-              // color: red;
-              font-weight: 600;
-              border-radius: 3px;
-              display: inline-block;
-              height: 1.5rem;
-              line-height: 1.2rem;
-              white-space: nowrap;
-              border: 2px solid black;
-              padding: 0 0.2rem;
-              margin: 0px 0.3rem 0 0;
-            }
+
             .redStrong {
-              color: rgb(223, 67, 46);
+              color: rgb(218, 57, 36);
             }
             .blackStrong {
-              color: rgb(31, 31, 31);
+              color: rgb(36, 36, 36);
             }
           }
         }

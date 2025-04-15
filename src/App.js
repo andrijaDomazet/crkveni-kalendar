@@ -43,7 +43,7 @@ export default function App() {
             element={React.createElement(withIdProvider(SinglePost))}
           />
           <Route
-            path="/slave/"
+            path="/slave/:id"
             exact="true"
             element={React.createElement(withIdProvider(SinglePost))}
           />

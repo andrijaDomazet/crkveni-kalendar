@@ -31,6 +31,7 @@ export default function Calendar(props) {
     id === undefined ? currentDate.getMonth() : monthSerb.indexOf(id)
   );
   const [isEasterDay, setIsEasterDay] = useState("");
+  const [isRealDay, setIsRealDay] = useState("");
   useEffect(() => {
     if (slug && id) {
       setIsYear(slug);
@@ -167,8 +168,11 @@ export default function Calendar(props) {
       }
       return item;
     });
+    setIsRealDay(setHolTest);
+
     return setHolTest;
   }
+  console.log("RealDays", isRealDay);
 
   const navigate = useNavigate();
   const changeMonth = (val) => {
@@ -386,16 +390,18 @@ export default function Calendar(props) {
                   })}
                   <td>
                     <div className="test">
+                      {/* <h2>{isRealDay[index].id}</h2> */}
                       {item.slava ? (
-                        <Link to={"/slave/"} className="slavaStrong">
-                          SLAVA
-                        </Link>
+                        <>
+                          <Link to={"/slave/"} className="slavaStrong">
+                            SLAVA
+                          </Link>{" "}
+                        </>
                       ) : null}
                       {Array.isArray(item.title)
                         ? item.title.map((el, index) => (
                             <>
                               <h2>{el}</h2>
-                              {/* {item.title.length !== index ? <>; </> : ""} */}
                               {index !== item.title.length - 1 ? "; " : ""}
                             </>
                           ))
