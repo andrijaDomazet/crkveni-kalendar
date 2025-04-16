@@ -26,7 +26,7 @@ export default function CalendarMonthsLinks() {
               <td key={index}>
                 <NavLink
                   to={`/${slug || currentYear}/${item}`}
-                  title={`Prikaži kalendar za mesec ${item} ${
+                  title={`Prikaži kalendar za ${item} ${
                     slug || currentYear
                   }. godine`}
                 >
