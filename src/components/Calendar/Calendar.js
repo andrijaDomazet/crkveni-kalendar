@@ -27,6 +27,7 @@ export default function Calendar(props) {
   const [isYear, setIsYear] = useState(() => {
     return slug || currentDate.getFullYear();
   });
+  console.log("isYear", isYear);
   const [isMonth, setIsMonth] = useState(() =>
     id === undefined ? currentDate.getMonth() : monthSerb.indexOf(id)
   );
@@ -48,6 +49,8 @@ export default function Calendar(props) {
     let yearIndex = calendarYears[0].item_list.findIndex(
       (item) => item.title == isYear
     );
+    console.log("YearIndex", isYear, yearIndex);
+
     //zadusnice-------------------------------------------------------------
     let zadusniceIndex = calendarYears[0].item_list[
       yearIndex
