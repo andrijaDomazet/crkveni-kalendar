@@ -19,11 +19,15 @@ export default function CrossingData() {
             return (
               <tr key={index}>
                 <td>
+                  {/* <Link to={`/${currentYear}/${monthSerb[item.date[0]]}`}> */}
+                  {item.date[1] + ". " + monthSerb[item.date[0]]}
+                  {/* </Link> */}
+                </td>
+                <td>
                   <Link to={`/${currentYear}/${monthSerb[item.date[0]]}`}>
-                    {item.date[1] + ". " + monthSerb[item.date[0]]}
+                    {item.title}
                   </Link>
                 </td>
-                <td>{item.title}</td>
               </tr>
             );
           })}

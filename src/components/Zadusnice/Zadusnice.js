@@ -29,11 +29,15 @@ export default function Zadusnice() {
               return (
                 <tr key={index}>
                   <td>
+                    {/* <Link to={`/${currentYear}/${monthSerb[item[0]]}`}> */}
+                    {item[1] + ". " + monthSerb[item[0]]}
+                    {/* </Link> */}
+                  </td>
+                  <td>
                     <Link to={`/${currentYear}/${monthSerb[item[0]]}`}>
-                      {item[1] + ". " + monthSerb[item[0]]}
+                      {zadusniceName[index]}
                     </Link>
                   </td>
-                  <td>{zadusniceName[index]}</td>
                 </tr>
               );
             }
