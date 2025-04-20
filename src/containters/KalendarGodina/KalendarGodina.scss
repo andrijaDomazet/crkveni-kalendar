@@ -1,12 +1,18 @@
 @import "../../index.scss";
 
+.kalendarGodina {
+  width: 1200px;
+  margin-top: 1rem;
+
+}
+
 @media screen and (min-width: $medium) {
   .kalendarGodina {
-    // border: 2px solid red;
     width: 1200px;
     margin: 0 auto;
     .kalendarGodina-wrapper {
       display: flex;
+      margin-top:3rem;
       .kalendarGodina-left {
         width: calc(100% - 340px);
         margin-right: 20px;

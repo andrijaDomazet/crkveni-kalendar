@@ -7,7 +7,6 @@ import Zadusnice from "../../components/Zadusnice/Zadusnice";
 export default function KalendarGodina() {
   return (
     <div className="kalendarGodina">
-      <CalendarMonthsLinks />
       <div className="kalendarGodina-wrapper">
         <div className="kalendarGodina-left">
           <Calendar soc={false} />
@@ -16,6 +15,7 @@ export default function KalendarGodina() {
           <Zadusnice />
         </div>
       </div>
+      <CalendarMonthsLinks />
     </div>
   );
 }
