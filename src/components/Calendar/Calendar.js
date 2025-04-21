@@ -76,7 +76,15 @@ export default function Calendar(props) {
       if (zadusniceDate && zadusniceDate[1] === index + 1) {
         item.title = (
           <>
-            {item.title} -{" "}
+            {Array.isArray(item.title)
+              ? item.title.map((el, index) => (
+                  <>
+                    <h2>{el}</h2>
+                    {index !== item.title.length - 1 ? "; " : ""}
+                  </>
+                ))
+              : item.title}{" "}
+            -{" "}
             <Link to="/zadusnice/" className="zadusniceStrong">
               Zadušnice
             </Link>{" "}

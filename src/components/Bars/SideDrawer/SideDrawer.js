@@ -43,7 +43,9 @@ export default function SideDrawer(props) {
             );
           })}
         </ul>
+         <div className="nameTitle">crkveni-kalendar.net</div>
       </nav>
+     
     </div>
   );
 }

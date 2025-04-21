@@ -1,22 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Calendar from "../../components/Calendar/Calendar";
 // import ContenExBox from "../../components/ContentEx/ContenExBox";
 import "./Kalendar.scss";
-import { useGlobalLocation } from "../../shared/LocationContext";
+// import { useGlobalLocation } from "../../shared/LocationContext";
 // import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
-import { useIdContext } from "../../shared/IdProvider";
+// import { useIdContext } from "../../shared/IdProvider";
 import CalendarMonthsLinks from "../../components/CalendarMonthsLinks/CalendarMonthsLinks";
 import Zadusnice from "../../components/Zadusnice/Zadusnice";
 
 export default function Kalendar() {
-  // const location = useGlobalLocation();
-  const { slug, id } = useIdContext();
-
-  // useEffect(() => {
-  //   setCalendarYear(slug);
-  // }, [slug, id]);
-
-  // const [calendarYear, setCalendarYear] = useState(2022);
   return (
     <div className="kalendar">
       {/* <div className="banner-wrapper">
@@ -27,9 +19,7 @@ export default function Kalendar() {
       </div> */}
       <div className="kalendar-wrapper">
         <div className="kalendar-left">
-          <Calendar 
-          // calendarYear={calendarYear} 
-          />
+          <Calendar />
           <CalendarMonthsLinks />
         </div>
         <div className="kalendar-right">

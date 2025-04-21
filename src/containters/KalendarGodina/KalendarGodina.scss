@@ -1,22 +1,22 @@
 @import "../../index.scss";
 
 .kalendarGodina {
-  width: 1200px;
   margin-top: 1rem;
-
+  .kalendarGodina-wrapper {
+    padding: 0 0.4rem;
+  }
 }
 
 @media screen and (min-width: $medium) {
   .kalendarGodina {
+    padding: 2rem 0;
     width: 1200px;
     margin: 0 auto;
     .kalendarGodina-wrapper {
       display: flex;
-      margin-top:3rem;
       .kalendarGodina-left {
         width: calc(100% - 340px);
         margin-right: 20px;
-        padding-bottom: 2rem;
       }
       .kalendarGodina-right {
         width: 320px;

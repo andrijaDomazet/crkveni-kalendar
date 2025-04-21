@@ -1,7 +1,8 @@
 @import "../../index.scss";
 
 .kalendar {
-  padding-top: 1rem;
+  margin-top: 1rem;
+  // padding-top: 1rem;
   .kalendar-wrapper {
     padding: 0 0.4rem;
   }
@@ -10,7 +11,6 @@
 @media screen and (min-width: $medium) {
   .kalendar {
     padding: 2rem 0;
-    // width: 100%;
     width: 1200px;
     margin: 0 auto;
     .kalendar-wrapper {
@@ -18,15 +18,11 @@
       .kalendar-left {
         display: flex;
         flex-direction: column;
-        width: calc(100% - 320px);
+        width: calc(100% - 340px);
         margin-right: 20px;
-        .zadusnice {
-          height: 600px;
-        }
       }
       .kalendar-right {
-        text-align: center;
-        width: 300px;
+        width: 320px;
       }
     }
   }

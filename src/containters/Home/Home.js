@@ -6,13 +6,13 @@ import CalendarMonthsLinks from "../../components/CalendarMonthsLinks/CalendarMo
 
 export default function Home() {
   return (
-    <div className="home__1">
-      <section className="home__box__4">
-        <div className="home__box__4-left">
+    <div className="home">
+      <section className="home__wrapper">
+        <div className="home__wrapper-left">
           <Calendar shortCal={6} soc={false} />
           <CalendarMonthsLinks />
         </div>
-        <div className="home__box__4-right">
+        <div className="home__wrapper-right">
           <Zadusnice />
         </div>
       </section>

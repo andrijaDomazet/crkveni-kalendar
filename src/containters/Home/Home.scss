@@ -1,11 +1,11 @@
 @import "../../index.scss";
-.home__1 {
+.home {
   padding: 0 0.3rem;
-  .home__box__4 {
+  .home__wrapper {
     display: flex;
     flex-direction: column;
     margin: 0.8rem auto;
-    .home__box__4-right {
+    .home__wrapper-right {
       width: 340px;
       padding: 0 20px;
       .zadusnice {
@@ -14,34 +14,18 @@
     }
   }
 }
-@media screen and (min-width:$medium) {
-  .home__1 {
+@media screen and (min-width: $medium) {
+  .home {
     padding: 0;
     padding-top: 2rem;
     width: 1200px;
     margin: 0 auto;
-    .home__box__4 {
+    .home__wrapper {
       display: flex;
       flex-direction: row;
-      .home__box__4-left {
+      .home__wrapper-left {
         width: calc(100% - 340px);
       }
-      .home__box__4-right {
-        width: 320px;
-      }
-      .home__box__4-layout {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 1rem;
-        overflow-x: initial;
-      }
-    }
-    .home__box__4.sec {
-      display: flex;
-      flex-direction: column;
-    }
-    .home__box__4.contEx {
-      padding: 1.5rem 0;
     }
   }
 }

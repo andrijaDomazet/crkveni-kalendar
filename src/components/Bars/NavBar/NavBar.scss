@@ -16,11 +16,9 @@
       padding-left: 15rem;
 
       .nav-link {
-        // padding: 0.1rem 0.5rem;
         font-size: 1.4rem;
         text-decoration: none;
         color: black;
-        // border: 1px solid red;
         &.active {
           color: $dark4;
           border-radius: 5px;
@@ -64,8 +62,7 @@
           display: grid;
           grid-template-columns: 1fr 1fr;
           gap: 0.3rem;
-          top: 40px;
-          // left: 0;
+          top: 30px;
           background: white;
           box-shadow: 1px 2px 3px rgb(0, 0, 0);
           padding: 0.2rem 0.2rem;
@@ -74,7 +71,6 @@
           list-style-type: none;
           li {
             width: 100%;
-            // border: 1px solid green;
             padding: 0 0.2rem;
             a {
               display: inline-block;
@@ -89,7 +85,6 @@
               margin: 0.1rem;
               padding: 0.3rem 1rem;
               box-shadow: 0 0 5px $grey2;
-              // border: 1px solid red;
               &:hover {
                 background: $grey1;
               }

@@ -18,11 +18,7 @@ export default function CrossingData() {
           {slave.map((item, index) => {
             return (
               <tr key={index}>
-                <td>
-                  {/* <Link to={`/${currentYear}/${monthSerb[item.date[0]]}`}> */}
-                  {item.date[1] + ". " + monthSerb[item.date[0]]}
-                  {/* </Link> */}
-                </td>
+                <td>{item.date[1] + ". " + monthSerb[item.date[0]]}</td>
                 <td>
                   <Link to={`/${currentYear}/${monthSerb[item.date[0]]}`}>
                     {item.title}
