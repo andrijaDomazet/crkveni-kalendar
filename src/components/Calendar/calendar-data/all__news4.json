@@ -57,10 +57,7 @@
   },
   {
     "id": 13,
-    "title": [
-      "Prepodobna Melanija",
-      "Sveti Dositej Zagrebački Ispovednik (Odanije Roždestva)"
-    ]
+    "title": ["Prepodobna Melanija", "Sveti Dositej Zagrebački Ispovednik"]
   },
   {
     "id": 14,
@@ -121,7 +118,7 @@
   },
   {
     "id": 26,
-    "title": "Sveti mučenici Ermil i Stratonik (Odanije Bogojavljenja)"
+    "title": "Sveti mučenici Ermil i Stratonik"
   },
   {
     "id": 27,
@@ -626,7 +623,7 @@
   },
   {
     "id": 138,
-    "title": "Sveta velikomučenica Irina (Prepolovljenje)"
+    "title": "Sveta velikomučenica Irina"
   },
   {
     "id": 139,
@@ -664,7 +661,7 @@
     "title": [
       "Sveti Epifanije",
       "Sveti German Carigradski",
-      "Sveti Nikodim Srpski (Odanije Prepolovljenja)"
+      "Sveti Nikodim Srpski"
     ]
   },
   {
@@ -702,7 +699,7 @@
   },
   {
     "id": 153,
-    "title": "Vaznesenje Gospodnje – Spasovdan"
+    "title": ["Sveti mučenik Talalej", "Prepodobni Stefan Piperski"]
   },
   {
     "id": 154,
@@ -747,15 +744,15 @@
   },
   {
     "id": 163,
-    "title": "Silazak Svetog Duha na apostole – Pedesetnica – Trojice"
+    "title": "Prepodobni Isakije Dalmatinski"
   },
   {
     "id": 164,
-    "title": "Duhovski ponedeljak"
+    "title": ["Sveti apostol Jerma", "Sveti mučenik Ermije"]
   },
   {
     "id": 165,
-    "title": ["Duhovski utorak", "Prepodobni Justin Ćelijski"]
+    "title": ["Sveti mučenik Justin Filosof", "Prepodobni Justin Ćelijski"]
   },
   {
     "id": 166,
@@ -1637,7 +1634,7 @@
   },
   {
     "id": 342,
-    "title": "Sveti sveštenomučenik Kliment (Odanije Vavedenja)"
+    "title": "Sveti sveštenomučenik Kliment"
   },
   {
     "id": 343,

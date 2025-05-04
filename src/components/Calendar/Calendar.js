@@ -20,6 +20,7 @@ import SimpleButton from "../../UI/Buttons/SimpleButton";
 import TimeFormat from "../TimeFormat/TimeFormat";
 import { useGlobalLocation } from "../../shared/LocationContext";
 import { useIdContext } from "../../shared/IdProvider";
+import { renderTitleSection } from "../../shared/utility";
 
 export default function Calendar(props) {
   const { id, slug, currentDate, currentYear } = useIdContext();
@@ -27,7 +28,7 @@ export default function Calendar(props) {
   const [isYear, setIsYear] = useState(() => {
     return slug || currentDate.getFullYear();
   });
-  console.log("isYear", isYear);
+  // console.log("isYear", isYear);
   const [isMonth, setIsMonth] = useState(() =>
     id === undefined ? currentDate.getMonth() : monthSerb.indexOf(id)
   );
@@ -49,7 +50,7 @@ export default function Calendar(props) {
     let yearIndex = calendarYears[0].item_list.findIndex(
       (item) => item.title == isYear
     );
-    console.log("YearIndex", isYear, yearIndex);
+    // console.log("YearIndex", isYear, yearIndex);
 
     //zadusnice-------------------------------------------------------------
     let zadusniceIndex = calendarYears[0].item_list[
@@ -98,7 +99,7 @@ export default function Calendar(props) {
       let easterDay = new Date(`${isYear}-${manualDateEaster[easter]}`);
       setIsEasterDay(easterDay);
       let diffInDays = (easterDay - date1) / (1000 * 60 * 60 * 24); // Razlika u danima
-
+      // console.log("item", diffInDays);
       if (diffInDays >= -2 && diffInDays <= 3) {
         item.title = (
           <>
@@ -115,67 +116,63 @@ export default function Calendar(props) {
             </h2>
           </>
         );
+      } else if (diffInDays == -24) {
+        item.title = renderTitleSection({
+          mainTitle: item.title,
+          extraLabel: "(Prepolovljenje)",
+        });
+      } else if (diffInDays == -31) {
+        item.title = renderTitleSection({
+          mainTitle: item.title,
+          extraLabel: "(Odanije Prepolovljenja)",
+        });
+      } else if (diffInDays == -38) {
+        item.title = renderTitleSection({
+          mainTitle: item.title,
+          extraLabel: "(Odanije Vaskrsa)",
+        });
+      } else if (diffInDays == -39) {
+        item.title = renderTitleSection({
+          mainTitle: false,
+          strongClass: "redStrong",
+          extraLabel: "Vaznesenje Gospodnje – Spasovdan",
+        });
       } else if (currentDay2 === 5 && diffInDays > 5 && diffInDays < 10) {
-        item.title = (
-          <>
-            <Link to={"/slave/"} className="slavaStrong">
-              SLAVA
-            </Link>{" "}
-            <h2>{item.title}</h2> -{" "}
-            <h2>
-              <strong>Lazareva subota (Vrbica)</strong>
-            </h2>
-          </>
-        );
+        item.title = renderTitleSection({
+          mainTitle: item.title,
+          extraLabel: "Lazareva subota (Vrbica)",
+          separatorSymbol: "- ",
+          slavaSymbol: true,
+        });
       } else if (currentDay2 == 6 && diffInDays > 5 && diffInDays < 10) {
-        item.title = (
-          <>
-            <Link to={"/slave/"} className="slavaStrong">
-              SLAVA
-            </Link>{" "}
-            <h2>
-              <strong className="redStrong">
-                Ulazak Gospoda Isusa Hrista u Jerusalim – Cveti{" "}
-              </strong>
-            </h2>
-          </>
-        );
+        item.title = renderTitleSection({
+          mainTitle: false,
+          extraLabel: "Ulazak Gospoda Isusa Hrista u Jerusalim – Cveti",
+          slavaSymbol: true,
+          strongClass: "redStrong",
+        });
       } else if (currentDay2 === 2 && diffInDays > 15 && diffInDays < 20) {
-        item.title = (
-          <>
-            <h2>{item.title}</h2> -{" "}
-            <h2>
-              <strong>(Prvo bdenije)</strong>
-            </h2>
-          </>
-        );
+        item.title = renderTitleSection({
+          mainTitle: item.title,
+          extraLabel: "(Prvo bdenije)",
+        });
       } else if (currentDay2 === 4 && diffInDays > 15 && diffInDays < 20) {
-        item.title = (
-          <>
-            <h2>{item.title}</h2> -{" "}
-            <h2>
-              <strong>(Drugo bdenije)</strong>
-            </h2>
-          </>
-        );
+        item.title = renderTitleSection({
+          mainTitle: item.title,
+          extraLabel: "(Drugo bdenije)",
+        });
       } else if (currentDay2 === 0 && diffInDays > -10 && diffInDays < 0) {
-        item.title = (
-          <>
-            <h2>{item.title}</h2> -{" "}
-            <h2>
-              <strong>Pobusani ponedeljak</strong>
-            </h2>
-          </>
-        );
+        item.title = renderTitleSection({
+          mainTitle: item.title,
+          extraLabel: "Pobusani ponedeljak",
+          separatorSymbol: "- ",
+        });
       } else if (currentDay2 === 4 && diffInDays > -8 && diffInDays < 2) {
-        item.title = (
-          <>
-            <h2>{item.title}</h2>;{" "}
-            <h2>
-              <strong>Istočni petak</strong>
-            </h2>
-          </>
-        );
+        item.title = renderTitleSection({
+          mainTitle: item.title,
+          extraLabel: "Istočni petak",
+          separatorSymbol: "; ",
+        });
       }
       return item;
     });
@@ -183,7 +180,6 @@ export default function Calendar(props) {
 
     return setHolTest;
   }
-  console.log("RealDays", isRealDay);
 
   const navigate = useNavigate();
   const changeMonth = (val) => {

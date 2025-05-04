@@ -34,8 +34,8 @@ export const idsMonths = [
 ];
 
 export const redDaysId = [
-  7, 8, 9, 14, 19, 20, 27, 43, 46, 97, 153, 154, 163, 164, 165, 188, 193, 214,
-  231, 240, 254, 264, 270, 300, 304, 312, 325, 338, 353,
+  7, 8, 9, 14, 19, 20, 27, 43, 46, 97, 126, 132,144, 154, 188, 193,
+  214, 231, 240, 254, 264, 270, 300, 304, 312, 325, 338, 353,
 ];
 export const daysIsPost = [
   [0, 18],
@@ -152,4 +152,18 @@ export const easterDays = [
   "V a s k r s – Vaskrsenje Gospoda Isusa Hrista",
   "Vaskrsni  ponedeljak",
   "Vaskrsni utorak",
+];
+
+export const odanije = [
+  // Odanije Sretenja
+  "Prepolovljenje",
+  "Odanije Prepolovljenja",
+  "Odanije Vaskrsa",
+  "Odanije Vaznesenja",
+  "Odanije Pedesetnice",
+  "Odanije Preobraženja",
+  "Odanije Uspenija",
+  "danije Rođenja Presvete Bogorodice",
+  "Odanije Vozdviženja",
+  "Odanije Vavedenja",
 ];
