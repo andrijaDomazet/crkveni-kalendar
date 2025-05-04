@@ -34,7 +34,15 @@ export function renderTitleSection({
           </Link>{" "}
         </>
       )}
-      <h2>{mainTitle}</h2>
+      {/* <h2>{mainTitle}</h2> */}
+      {Array.isArray(mainTitle)
+        ? mainTitle.map((el, index) => (
+            <>
+              <h2>{el}</h2>
+              {index !== mainTitle.length - 1 ? "; " : ""}
+            </>
+          ))
+        : mainTitle}
       {separatorSymbol}
       <h2>
         {/* PREDEFINISATIIII-------------------------- */}

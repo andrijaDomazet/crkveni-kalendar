@@ -137,6 +137,18 @@ export default function Calendar(props) {
           strongClass: "redStrong",
           extraLabel: "Vaznesenje Gospodnje – Spasovdan",
         });
+      } else if (diffInDays == -47) {
+        item.title = renderTitleSection({
+          mainTitle: item.title,
+          // strongClass: "redStrong",
+          extraLabel: "(Odanije Vaznesenja)",
+        });
+      } else if (diffInDays == -55) {
+        item.title = renderTitleSection({
+          mainTitle: item.title,
+          // strongClass: "redStrong",
+          extraLabel: "(Odanije Pedesetnice)",
+        });
       } else if (currentDay2 === 5 && diffInDays > 5 && diffInDays < 10) {
         item.title = renderTitleSection({
           mainTitle: item.title,
