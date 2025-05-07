@@ -34,7 +34,6 @@ export function renderTitleSection({
           </Link>{" "}
         </>
       )}
-      {/* <h2>{mainTitle}</h2> */}
       {Array.isArray(mainTitle)
         ? mainTitle.map((el, index) => (
             <>
@@ -44,10 +43,12 @@ export function renderTitleSection({
           ))
         : mainTitle}
       {separatorSymbol}
-      <h2>
-        {/* PREDEFINISATIIII-------------------------- */}
-        <strong className={strongClass}>{extraLabel}</strong>
-      </h2>
+      {extraLabel && (
+        <h2>
+          {/* PREDEFINISATIIII-------------------------- */}
+          <strong className={strongClass}>{extraLabel}</strong>
+        </h2>
+      )}
     </>
   );
 }

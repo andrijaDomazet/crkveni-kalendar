@@ -1,18 +1,11 @@
-// {
-//   "date": [1, 27],
-//   "title": "Prepodobni Avksentije i Sveti Kiril slovenski – Ćirilovdan (ako pada u Veliki post, pomera se na nedelju siropusnu)"
-// },
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Calendar.scss";
-import { Link, NavLink, useNavigate } from "react-router-dom";
-import news2 from "./calendar-data/all__news4";
+import { NavLink, useNavigate } from "react-router-dom";
 import {
-  idsMonths,
   daysIsPost,
   daysIsNotPost,
   monthSerb,
   calendarYears,
-  manualDateEaster,
   redDaysId,
   easterDays,
 } from "./calendar-data/calendar-data";
@@ -23,177 +16,12 @@ import { useIdContext } from "../../shared/IdProvider";
 import { renderTitleSection } from "../../shared/utility";
 
 export default function Calendar(props) {
-  const { id, slug, currentDate, currentYear } = useIdContext();
+  const { id, currentDate, isYear, isMonth, holidays, isEasterDay } =
+    useIdContext();
   const location = useGlobalLocation();
-  const [isYear, setIsYear] = useState(() => {
-    return slug || currentDate.getFullYear();
-  });
-  // console.log("isYear", isYear);
-  const [isMonth, setIsMonth] = useState(() =>
-    id === undefined ? currentDate.getMonth() : monthSerb.indexOf(id)
-  );
-  const [isEasterDay, setIsEasterDay] = useState("");
-  const [isRealDay, setIsRealDay] = useState("");
-  useEffect(() => {
-    if (slug && id) {
-      setIsYear(slug);
-      setIsMonth(monthSerb.indexOf(id));
-    }
-
-    setHolidays(filterHolidays);
-  }, [isYear, isMonth, slug, id]);
-
-  const [holidays, setHolidays] = useState(filterHolidays);
   const [dropDownYear, setDropDownYear] = useState(false);
-
-  function filterHolidays() {
-    let yearIndex = calendarYears[0].item_list.findIndex(
-      (item) => item.title == isYear
-    );
-    // console.log("YearIndex", isYear, yearIndex);
-
-    //zadusnice-------------------------------------------------------------
-    let zadusniceIndex = calendarYears[0].item_list[
-      yearIndex
-    ].zadusnice.findIndex((item) => item[0] == isMonth);
-
-    let zadusniceDate = calendarYears[0].item_list[yearIndex].zadusnice.find(
-      (item) => item[0] === isMonth
-    );
-    //end---------------------------------------------------------------------
-    //uskrs-------------------------------------------------------------------
-    let easter = isYear - 2020;
-    let monthData = JSON.parse(JSON.stringify(news2));
-    let setHol = monthData.slice(idsMonths[isMonth][0], idsMonths[isMonth][1]);
-    //end---------------------------------------------------------------------
-    let setHolTest = setHol.map((item, index) => {
-      item.title = Array.isArray(item.title)
-        ? item.title.map((item) => item)
-        : [item.title];
-
-      let setDate = new Date(isYear, isMonth, index);
-      let currentDay2 = setDate.getDay();
-
-      if (zadusniceDate && zadusniceDate[1] === index + 1) {
-        item.title = (
-          <>
-            {Array.isArray(item.title)
-              ? item.title.map((el, index) => (
-                  <>
-                    <h2>{el}</h2>
-                    {index !== item.title.length - 1 ? "; " : ""}
-                  </>
-                ))
-              : item.title}{" "}
-            -{" "}
-            <Link to="/zadusnice/" className="zadusniceStrong">
-              Zadušnice
-            </Link>{" "}
-            {calendarYears[0].zadusnice[zadusniceIndex]}
-          </>
-        );
-      }
-
-      let date1 = new Date(isYear, isMonth, index + 1);
-      item.date = date1;
-      let easterDay = new Date(`${isYear}-${manualDateEaster[easter]}`);
-      setIsEasterDay(easterDay);
-      let diffInDays = (easterDay - date1) / (1000 * 60 * 60 * 24); // Razlika u danima
-      // console.log("item", diffInDays);
-      if (diffInDays >= -2 && diffInDays <= 3) {
-        item.title = (
-          <>
-            <h2>
-              <strong
-                className={
-                  currentDay2 === 3 || currentDay2 === 5
-                    ? "blackStrong"
-                    : "redStrong"
-                }
-              >
-                {easterDays[easterDays.length - 3 - diffInDays]}
-              </strong>
-            </h2>
-          </>
-        );
-      } else if (diffInDays == -24) {
-        item.title = renderTitleSection({
-          mainTitle: item.title,
-          extraLabel: "(Prepolovljenje)",
-        });
-      } else if (diffInDays == -31) {
-        item.title = renderTitleSection({
-          mainTitle: item.title,
-          extraLabel: "(Odanije Prepolovljenja)",
-        });
-      } else if (diffInDays == -38) {
-        item.title = renderTitleSection({
-          mainTitle: item.title,
-          extraLabel: "(Odanije Vaskrsa)",
-        });
-      } else if (diffInDays == -39) {
-        item.title = renderTitleSection({
-          mainTitle: false,
-          strongClass: "redStrong",
-          extraLabel: "Vaznesenje Gospodnje – Spasovdan",
-        });
-      } else if (diffInDays == -47) {
-        item.title = renderTitleSection({
-          mainTitle: item.title,
-          // strongClass: "redStrong",
-          extraLabel: "(Odanije Vaznesenja)",
-        });
-      } else if (diffInDays == -55) {
-        item.title = renderTitleSection({
-          mainTitle: item.title,
-          // strongClass: "redStrong",
-          extraLabel: "(Odanije Pedesetnice)",
-        });
-      } else if (currentDay2 === 5 && diffInDays > 5 && diffInDays < 10) {
-        item.title = renderTitleSection({
-          mainTitle: item.title,
-          extraLabel: "Lazareva subota (Vrbica)",
-          separatorSymbol: "- ",
-          slavaSymbol: true,
-        });
-      } else if (currentDay2 == 6 && diffInDays > 5 && diffInDays < 10) {
-        item.title = renderTitleSection({
-          mainTitle: false,
-          extraLabel: "Ulazak Gospoda Isusa Hrista u Jerusalim – Cveti",
-          slavaSymbol: true,
-          strongClass: "redStrong",
-        });
-      } else if (currentDay2 === 2 && diffInDays > 15 && diffInDays < 20) {
-        item.title = renderTitleSection({
-          mainTitle: item.title,
-          extraLabel: "(Prvo bdenije)",
-        });
-      } else if (currentDay2 === 4 && diffInDays > 15 && diffInDays < 20) {
-        item.title = renderTitleSection({
-          mainTitle: item.title,
-          extraLabel: "(Drugo bdenije)",
-        });
-      } else if (currentDay2 === 0 && diffInDays > -10 && diffInDays < 0) {
-        item.title = renderTitleSection({
-          mainTitle: item.title,
-          extraLabel: "Pobusani ponedeljak",
-          separatorSymbol: "- ",
-        });
-      } else if (currentDay2 === 4 && diffInDays > -8 && diffInDays < 2) {
-        item.title = renderTitleSection({
-          mainTitle: item.title,
-          extraLabel: "Istočni petak",
-          separatorSymbol: "; ",
-        });
-      }
-      return item;
-    });
-    setIsRealDay(setHolTest);
-
-    return setHolTest;
-  }
-
   const navigate = useNavigate();
+
   const changeMonth = (val) => {
     if (id === undefined) {
       navigate(`/${isYear}/${tableTitle(val)}`);
@@ -214,6 +42,14 @@ export default function Calendar(props) {
   const easterDate2 = new Date(isEasterDay);
   let test33 = easterDate2.setDate(easterDate2.getDate() + 7);
   const endBelaNedelja = new Date(test33);
+  const easterDate3 = new Date(isEasterDay);
+  let test44 = easterDate3.setDate(easterDate.getDate() + 76);
+  const startPetrovskiPost = new Date(test44);
+  const easterDate4 = new Date(isYear, 6, 12);
+  let test55 = easterDate4.setDate(easterDate.getDate() + 10);
+  const endPetrovskiPost = new Date(test55);
+  // console.log("Petrovski post", startPetrovskiPost, endPetrovskiPost);
+
   function setMonth(short) {
     if (short) {
       //short month on home page
@@ -282,6 +118,11 @@ export default function Calendar(props) {
     } else if (
       setDateFromDateInfo <= endEasterDate &&
       startEasterDate <= setDateFromDateInfo
+    ) {
+      return "post";
+    } else if (
+      setDateFromDateInfo <= endPetrovskiPost &&
+      startPetrovskiPost <= setDateFromDateInfo
     ) {
       return "post";
     } else if (setDateFromDateInfo <= vikendPosleBozica) {
@@ -410,21 +251,10 @@ export default function Calendar(props) {
                   <td>
                     <div className="test">
                       {/* <h2>{isRealDay[index].id}</h2> */}
-                      {item.slava ? (
-                        <>
-                          <Link to={"/slave/"} className="slavaStrong">
-                            SLAVA
-                          </Link>{" "}
-                        </>
-                      ) : null}
-                      {Array.isArray(item.title)
-                        ? item.title.map((el, index) => (
-                            <>
-                              <h2>{el}</h2>
-                              {index !== item.title.length - 1 ? "; " : ""}
-                            </>
-                          ))
-                        : item.title}
+                      {renderTitleSection({
+                        mainTitle: item.title,
+                        slavaSymbol: item.slava,
+                      })}
                     </div>
                   </td>
                   <td>{setPostDays(item.date)}</td>
