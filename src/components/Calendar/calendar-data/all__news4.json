@@ -773,17 +773,11 @@
   },
   {
     "id": 169,
-    "title": [
-      "Sveti sveštenomučenik Dorotej",
-      "Prepodobni Petar Koriški"
-    ]
+    "title": ["Sveti sveštenomučenik Dorotej", "Prepodobni Petar Koriški"]
   },
   {
     "id": 170,
-    "title": [
-      "Prepodobni Visarion",
-      "Prepodobni Ilarion Novi"
-    ]
+    "title": ["Prepodobni Visarion", "Prepodobni Ilarion Novi"]
   },
   {
     "id": 171,
@@ -1058,7 +1052,7 @@
   },
   {
     "id": 226,
-    "title": ["Iznošenje Časnog Krsta", "Sv. muč. Makaveji"]
+    "title": ["Iznošenje Časnog Krsta", "Sv. muč. Makaveji (Početak posta)"]
   },
   {
     "id": 227,
@@ -1112,10 +1106,7 @@
   },
   {
     "id": 238,
-    "title": [
-      "Sveti mučenik Ipolit",
-      "Sveti Tihon Zadonski"
-    ]
+    "title": ["Sveti mučenik Ipolit", "Sveti Tihon Zadonski"]
   },
   {
     "id": 239,
@@ -1166,7 +1157,7 @@
     "id": 248,
     "title": [
       "Sveti sveštenomučenik Irinej",
-      "Sveti mučenik Lup"
+      "Sveti mučenik Lup (Odanije Vozdviženja)"
     ]
   },
   {
@@ -1269,7 +1260,7 @@
   },
   {
     "id": 268,
-    "title": "Sveti sveštenomučenik Avtonom"
+    "title": "Sveti sveštenomučenik Avtonom (Odanije Rođenja Presvete Bogorodice)"
   },
   {
     "id": 269,
@@ -1309,7 +1300,7 @@
   },
   {
     "id": 277,
-    "title": "Sveti apostol Kodrat"
+    "title": "Sveti apostol Kodrat (Odanije Vozdviženja)"
   },
   {
     "id": 278,

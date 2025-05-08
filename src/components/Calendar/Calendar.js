@@ -48,8 +48,12 @@ export default function Calendar(props) {
   const easterDate4 = new Date(isYear, 6, 12);
   let test55 = easterDate4.setDate(easterDate.getDate() + 10);
   const endPetrovskiPost = new Date(test55);
-  // console.log("Petrovski post", startPetrovskiPost, endPetrovskiPost);
-
+  const easterDate5 = new Date(isYear, 6, 19);
+  // let test66 = easterDate5.setDate(easterDate.getDate() + 10);
+  // const weekAfterPetrovskiPost = new Date(test66);
+  console.log("weekAfterPetrovskiPost", easterDate5);
+  const startGospojinskiPost = new Date(isYear, 7, 14);
+  const endGospojinskiPost = new Date(isYear, 7, 27);
   function setMonth(short) {
     if (short) {
       //short month on home page
@@ -125,6 +129,13 @@ export default function Calendar(props) {
       startPetrovskiPost <= setDateFromDateInfo
     ) {
       return "post";
+    } else if (
+      setDateFromDateInfo <= endGospojinskiPost &&
+      startGospojinskiPost <= setDateFromDateInfo
+    ) {
+      return "post";
+    } else if (setDateFromDateInfo <= easterDate5) {
+      return "";
     } else if (setDateFromDateInfo <= vikendPosleBozica) {
       return "";
     } else if (
