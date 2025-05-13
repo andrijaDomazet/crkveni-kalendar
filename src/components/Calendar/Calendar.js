@@ -120,23 +120,30 @@ export default function Calendar(props) {
     } else if (setDateFromDateInfo <= bozicniPostEnd) {
       return "post";
     } else if (
+      //Uskrsnji post
       setDateFromDateInfo <= endEasterDate &&
       startEasterDate <= setDateFromDateInfo
     ) {
       return "post";
     } else if (
+      //Petrovski post
       setDateFromDateInfo <= endPetrovskiPost &&
       startPetrovskiPost <= setDateFromDateInfo
     ) {
       return "post";
     } else if (
+      //Gospojinski post
       setDateFromDateInfo <= endGospojinskiPost &&
       startGospojinskiPost <= setDateFromDateInfo
     ) {
       return "post";
-    } else if (setDateFromDateInfo <= easterDate5) {
-      return "";
+    } else if (
+      setDateFromDateInfo <= easterDate5 &&
+      startGospojinskiPost <= setDateFromDateInfo
+    ) {
+      return "XXX";
     } else if (setDateFromDateInfo <= vikendPosleBozica) {
+      //Bela nedelja
       return "";
     } else if (
       setDateFromDateInfo > easterDate &&
