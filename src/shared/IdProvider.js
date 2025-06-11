@@ -2,7 +2,7 @@
 //   "date": [1, 27],
 //   "title": "Prepodobni Avksentije i Sveti Kiril slovenski – Ćirilovdan (ako pada u Veliki post, pomera se na nedelju siropusnu)"
 // },
-import React, { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import data from "../all__news";
 import {

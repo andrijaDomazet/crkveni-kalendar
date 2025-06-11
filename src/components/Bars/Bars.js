@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Bars.scss";
 import TopBar from "./TopBar/TopBar";
@@ -14,9 +14,9 @@ export default function Bars() {
   };
   return (
     <div className="bars">
-      <NavLink to="/" className="bars__logo">
+      {/* <NavLink to="/" className="bars__logo">
         <img src="/img/logo.png" alt="logo" />
-      </NavLink>
+      </NavLink> */}
       <div className="bars__links">
         <TopBar />
         <NavBar />

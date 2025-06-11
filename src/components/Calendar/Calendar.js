@@ -49,8 +49,9 @@ export default function Calendar(props) {
   let test55 = easterDate4.setDate(easterDate.getDate() + 10);
   const endPetrovskiPost = new Date(test55);
   const easterDate5 = new Date(isYear, 6, 19);
-  // let test66 = easterDate5.setDate(easterDate.getDate() + 10);
-  // const weekAfterPetrovskiPost = new Date(test66);
+  // const easterDate6 = new Date(isYear, 6, 19);
+  let test66 = easterDate5.setDate(easterDate.getDate() + 69);
+  const weekBeforePetrovskiPost = new Date(test66);
   console.log("weekAfterPetrovskiPost", easterDate5);
   const startGospojinskiPost = new Date(isYear, 7, 14);
   const endGospojinskiPost = new Date(isYear, 7, 27);
@@ -132,16 +133,17 @@ export default function Calendar(props) {
     ) {
       return "post";
     } else if (
+      //Petrovski post
+      setDateFromDateInfo <= startPetrovskiPost &&
+      weekBeforePetrovskiPost <= setDateFromDateInfo
+    ) {
+      return "XXX";
+    } else if (
       //Gospojinski post
       setDateFromDateInfo <= endGospojinskiPost &&
       startGospojinskiPost <= setDateFromDateInfo
     ) {
       return "post";
-    } else if (
-      setDateFromDateInfo <= easterDate5 &&
-      startGospojinskiPost <= setDateFromDateInfo
-    ) {
-      return "XXX";
     } else if (setDateFromDateInfo <= vikendPosleBozica) {
       //Bela nedelja
       return "";

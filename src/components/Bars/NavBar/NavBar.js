@@ -12,7 +12,7 @@ export default function NavBar() {
       navRef.current.scrollLeft = 0;
     }
   };
-  const navBarOptions = () => {
+  const navBarOptions = (x, y) => {
     // const navOptArr = () => {
     //   const arr = options.slice(0, -1); // Uzimamo sve osim poslednjeg elementa
 
@@ -25,7 +25,7 @@ export default function NavBar() {
     // let lastIndex = options.length - 1;
     return (
       <nav className="links" ref={navRef}>
-        {options.slice(1).map((option, index) => {
+        {options.slice(x, y).map((option, index) => {
           // console.log("option", option);
           return (
             <div
@@ -42,10 +42,16 @@ export default function NavBar() {
                 setDropDown(null);
               }}
             >
-              <NavLink to={option.route} exact="true" className={`nav-link ${option.title}`}>
+              <NavLink
+                to={option.route}
+                exact="true"
+                className={`nav-link ${option.title}`}
+              >
                 {option.title}
               </NavLink>
-              <div className="botDiv">{items_list(option.route, option.item_list)}</div>
+              <div className="botDiv">
+                {items_list(option.route, option.item_list)}
+              </div>
             </div>
           );
         })}
@@ -72,16 +78,20 @@ export default function NavBar() {
   };
   const getDropDownMenu = (setClass, items) => {
     // return dropDown ? "drop_down_menu" : "drop_down_menu close";
-    const isOpen = dropDown === setClass ? "drop_down_menu" : "drop_down_menu close";
+    const isOpen =
+      dropDown === setClass ? "drop_down_menu" : "drop_down_menu close";
     const sizeClass = items.length > 6 ? "" : " small";
     return isOpen + sizeClass;
   };
   return (
     <div className="navBar">
-      {/* <NavLink to="/" className="bars__logo">
-        <img src="/img/logo.png" />
-      </NavLink> */}
-      {navBarOptions()}
+      <div className="navBar-wrapper">
+        {navBarOptions(1, 3)}
+        <NavLink to="/" className="navBar__logo">
+          <img src="/img/logo.png" />
+        </NavLink>
+        {navBarOptions(3, 5)}
+      </div>
     </div>
   );
 }

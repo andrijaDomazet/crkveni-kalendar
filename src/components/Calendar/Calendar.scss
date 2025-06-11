@@ -100,7 +100,7 @@
           width: 100%;
         }
       }
-  
+
       th:nth-child(4) {
         width: 90%;
         text-transform: capitalize;
@@ -131,7 +131,7 @@
       .today {
         font-weight: 600;
         td {
-          background: #fffbbf;
+          background: #eae1a7;
           h3 {
             font-weight: 600;
           }
@@ -143,7 +143,7 @@
         text-align: center;
         text-transform: lowercase;
       }
-    
+
       td:nth-child(3) {
         font-size: 0.9rem;
         color: $grey4;
@@ -245,6 +245,7 @@
 }
 @media screen and (min-width: 768px) {
   .calendar {
+    // margin: 2rem 0;
     .first {
       h1 {
         font-size: 1.6rem;
