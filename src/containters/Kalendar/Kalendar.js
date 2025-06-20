@@ -1,4 +1,3 @@
-import React from "react";
 import Calendar from "../../components/Calendar/Calendar";
 // import ContenExBox from "../../components/ContentEx/ContenExBox";
 import "./Kalendar.scss";
@@ -7,23 +6,27 @@ import "./Kalendar.scss";
 // import { useIdContext } from "../../shared/IdProvider";
 import CalendarMonthsLinks from "../../components/CalendarMonthsLinks/CalendarMonthsLinks";
 import Zadusnice from "../../components/Zadusnice/Zadusnice";
+import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
 
 export default function Kalendar() {
   return (
     <div className="kalendar">
-      {/* <div className="banner-wrapper">
-        <AdManagerSlot
-          adUnitPath={location.pathname}
-          slotNumber={"div-gpt-ad-1723658374440-0"}
-        />
-      </div> */}
       <div className="kalendar-wrapper">
         <div className="kalendar-left">
           <Calendar />
+          <div className="banner-wrapper">
+            <AdManagerSlot slotNumber={"div-gpt-ad-1750409157804-0"} />
+          </div>
           <CalendarMonthsLinks />
+          <div className="banner-wrapper">
+            <AdManagerSlot slotNumber={"div-gpt-ad-1750409277034-0"} />
+          </div>
         </div>
         <div className="kalendar-right">
           <Zadusnice />
+          <div className="banner-wrapper xl_sticky">
+            <AdManagerSlot slotNumber={"div-gpt-ad-1750411708088-0"} />
+          </div>
           {/* <div className="posni_kalendar">
             <h2>Kalendar posta</h2>
             <div

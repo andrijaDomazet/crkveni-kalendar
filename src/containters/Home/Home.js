@@ -21,6 +21,9 @@ export default function Home() {
         </div>
         <div className="home__wrapper-right">
           <Zadusnice />
+          <div className="banner-wrapper xl_sticky">
+            <AdManagerSlot slotNumber={"div-gpt-ad-1750411708088-0"} />
+          </div>
         </div>
       </section>
     </div>

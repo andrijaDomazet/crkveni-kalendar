@@ -59,6 +59,19 @@
           )
           .build();
 
+        var mappingSideBar = googletag
+          .sizeMapping()
+          .addSize([21, 21], [[300, 250]])
+          .addSize(
+            [860, 21],
+            [
+              [300, 250],
+              [300, 600],
+            ]
+          )
+          .addSize([1030, 21], [[300, 600]])
+          .build();
+
         adUnits[0] = googletag
           .defineSlot(
             "/23098387262/crkveni-kalendar/crkveni-kalendar-afterText-1",
@@ -81,6 +94,18 @@
               [728, 90],
             ],
             "div-gpt-ad-1750409277034-0"
+          )
+          .addService(googletag.pubads())
+          .defineSizeMapping(mappingAfterText);
+
+        adUnits[2] = googletag
+          .defineSlot(
+            "/23098387262/crkveni-kalendar/crkveni-kalendar-sb-sticky",
+            [
+              [300, 250],
+              [300, 600],
+            ],
+            "div-gpt-ad-1750411708088-0"
           )
           .addService(googletag.pubads())
           .defineSizeMapping(mappingAfterText);
