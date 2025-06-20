@@ -3,6 +3,7 @@ import "./Home.scss";
 import Calendar from "../../components/Calendar/Calendar";
 import Zadusnice from "../../components/Zadusnice/Zadusnice";
 import CalendarMonthsLinks from "../../components/CalendarMonthsLinks/CalendarMonthsLinks";
+import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
 
 export default function Home() {
   return (
@@ -10,7 +11,13 @@ export default function Home() {
       <section className="home__wrapper">
         <div className="home__wrapper-left">
           <Calendar shortCal={6} soc={false} />
+          <div className="banner-wrapper">
+            <AdManagerSlot slotNumber={"div-gpt-ad-1750409157804-0"} />
+          </div>
           <CalendarMonthsLinks />
+          <div className="banner-wrapper">
+            <AdManagerSlot slotNumber={"div-gpt-ad-1750409277034-0"} />
+          </div>
         </div>
         <div className="home__wrapper-right">
           <Zadusnice />

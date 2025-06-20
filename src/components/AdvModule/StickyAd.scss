@@ -1,0 +1,54 @@
+@import "../../index.scss";
+
+.sticky-banner {
+  position: sticky;
+  left: 0;
+  bottom: 0;
+  z-index: 999;
+  margin: 1rem 0 3rem 0;
+  .sticky-banner-box {
+    position: relative;
+    height: 100%;
+    .sticky-banner-wrapper {
+      margin: 0 auto;
+      height: 100%;
+      text-align: center;
+      img {
+        width: auto;
+        height: 100%;
+      }
+    }
+    .closeButton {
+      position: absolute;
+      top: -25px;
+      right: 0;
+    }
+  }
+}
+@media screen and (min-width: $medium) {
+  .sticky-banner {
+    width: 728px;
+    left: 50%;
+    margin-left: 1px;
+    // transform: translateX(-50%);
+    // border: 1px solid red;
+    // height: 90px;
+    .sticky-banner-box {
+      .closeButton {
+        cursor: pointer;
+        // top: -37px;
+        // right: 0;
+      }
+    }
+  }
+}
+@media screen and (min-width: $large) {
+  .sticky-banner {
+    // transform: translateX(-512px);
+  }
+}
+@media screen and (min-width: $extraLarge) {
+  .sticky-banner {
+    // transform: translateX(-584px);
+  }
+}

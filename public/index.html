@@ -5,13 +5,11 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="google-site-verification" content="B0KDDVUOGlx-VYWnVEmissm4bwysllkE_eyBTwEC27w" />
-    <!-- <meta name="description" content="Web site created using create-react-app" /> -->
+    <meta
+      name="google-site-verification"
+      content="B0KDDVUOGlx-VYWnVEmissm4bwysllkE_eyBTwEC27w"
+    />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
@@ -22,8 +20,86 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- <title>React App</title> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Start AdManager -->
+    <script
+      async
+      src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
+    ></script>
+    <script>
+      var googletag = googletag || {};
+      googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+      var adUnits = [];
+      googletag.cmd.push(function () {
+        var mappingAfterText = googletag
+          .sizeMapping()
+          .addSize(
+            [21, 21],
+            [
+              [1, 1],
+              [320, 100],
+              [300, 250],
+            ]
+          )
+          .addSize(
+            [860, 21],
+            [
+              [1, 1],
+              [728, 90],
+            ]
+          )
+          .build();
+
+        adUnits[0] = googletag
+          .defineSlot(
+            "/23098387262/crkveni-kalendar/crkveni-kalendar-afterText-1",
+            [
+              [320, 100],
+              [300, 250],
+              [728, 90],
+            ],
+            "div-gpt-ad-1750409157804-0"
+          )
+          .addService(googletag.pubads())
+          .defineSizeMapping(mappingAfterText);
+
+        adUnits[1] = googletag
+          .defineSlot(
+            "/23098387262/crkveni-kalendar/crkveni-kalendar-afterText-2",
+            [
+              [320, 100],
+              [300, 250],
+              [728, 90],
+            ],
+            "div-gpt-ad-1750409277034-0"
+          )
+          .addService(googletag.pubads())
+          .defineSizeMapping(mappingAfterText);
+
+        googletag.pubads().setCentering(true);
+        googletag.pubads().collapseEmptyDivs(true, true);
+        googletag.pubads().enableAsyncRendering();
+        googletag.pubads().setSafeFrameConfig({ allowOverlayExpansion: true });
+
+        googletag.pubads().enableLazyLoad({
+          fetchMarginPercent: 200,
+          renderMarginPercent: 100,
+          mobileScaling: 0.5,
+        });
+        googletag.enableServices();
+      });
+    </script>
+    <!-- End AdManager -->
+
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
       (function (m, e, t, r, i, k, a) {
@@ -38,8 +114,18 @@
             return;
           }
         }
-        (k = e.createElement(t)), (a = e.getElementsByTagName(t)[0]), (k.async = 1), (k.src = r), a.parentNode.insertBefore(k, a);
-      })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        (k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a);
+      })(
+        window,
+        document,
+        "script",
+        "https://mc.yandex.ru/metrika/tag.js",
+        "ym"
+      );
 
       ym(99513608, "init", {
         clickmap: true,
@@ -49,22 +135,17 @@
       });
     </script>
     <noscript
-      ><div><img src="https://mc.yandex.ru/watch/99513608" style="position: absolute; left: -9999px" alt="" /></div
+      ><div>
+        <img
+          src="https://mc.yandex.ru/watch/99513608"
+          style="position: absolute; left: -9999px"
+          alt=""
+        /></div
     ></noscript>
     <!-- /Yandex.Metrika counter -->
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>

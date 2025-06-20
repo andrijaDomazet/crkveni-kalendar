@@ -26,14 +26,16 @@ code {
 
 .banner-wrapper {
   display: flex;
-  margin: 1rem auto;
+  margin: 1.2rem auto;
   justify-content: center;
   align-items: center;
   // border: 1px solid red;
+  // width: 300px;
+  // height: 100px;
 }
-.banner-wrapper.calendar {
-  margin: 0.3rem auto;
-}
+// .banner-wrapper.calendar {
+//   margin: 0.3rem auto;
+// }
 $green1: #34c118;
 $green2: #0d6d2f;
 $green3: #0b5b27;
