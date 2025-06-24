@@ -1,0 +1,35 @@
+@import "../../index.scss";
+.zadusnice {
+  //   border: 2px solid red;
+  table {
+    // border: 2px solid blue;
+    thead {
+      //   border: 2px solid blue;
+      tr {
+        // border: 2px solid blue;
+        th {
+          //   border: 2px solid blue !important;
+        }
+      }
+    }
+  }
+  .mainTitle {
+    background: red;
+    th {
+      background: $dark4;
+      color: white;
+    }
+  }
+  .monthTitle {
+    // background: red;
+    background: $eggShell;
+    max-height: 10px;
+    line-height: 20px;
+    text-transform: capitalize;
+    td {
+      font-weight: bold;
+      color: $grey5;
+      //   background: red;
+    }
+  }
+}

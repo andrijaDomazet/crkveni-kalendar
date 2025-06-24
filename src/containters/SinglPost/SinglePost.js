@@ -38,6 +38,14 @@ export default function SinglePost() {
               <div>{pathPart[1] === "slave" && <CrossingData />}</div>
             </div>
           </div>
+          <div className="tags">
+            <span className="tags-title">Tagovi</span>
+            <div className="tags__arr">
+              {isNews.tags.map((x, index) => {
+                return <span key={index}>{x}</span>;
+              })}
+            </div>
+          </div>
         </main>
       </div>
     </div>

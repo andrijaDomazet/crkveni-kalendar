@@ -8,7 +8,7 @@
       "mediasfera.rs"
     ],
     "title": "Slave",
-    "title_2": "kalendar srpskih slava",
+    "title_2": "Kalendar srpskih slava",
     "lead": "Krsna slava predstavlja jedinstven običaj srpskog naroda, duboko ukorenjen u tradiciji i veri. Ona nije samo verski praznik, već i simbol porodičnog jedinstva i duhovne povezanosti sa precima",
     "body": [
       {
@@ -28,8 +28,24 @@
         "text": "Danas se krsna slava obeležava tri dana: navečerje, svečarski dan i pojutarje (drugi dan slave). Ovaj običaj je jedinstven za srpski narod i zbog svog značaja stavljen je pod zaštitu UNESCO-a 2014. godine, kao deo svetske nematerijalne baštine."
       }
     ],
-    "tags": ["djubrenje"],
-    "source": "B92"
+    "tags": [
+      "Krsna slava",
+      "Pravoslavne slave",
+      "Poreklo krsne slave",
+      "Slava običaji",
+      "Srpski običaji",
+      "Slava u Srbiji",
+      "Hrišćanski svetitelji",
+      "Tradicija slavljenja slave",
+      "Slava i vera",
+      "Sveti Sava",
+      "UNESCO nematerijalna baština",
+      "Slava srpski narod",
+      "Verski praznici Srbija",
+      "Porodična slava",
+      "Kalendar srpskih slava"
+    ],
+    "source": "crkveni-kalendar"
   },
   {
     "news_id": 2,
