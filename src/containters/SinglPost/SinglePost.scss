@@ -124,6 +124,7 @@
       .mainContent {
         width: 100%;
         margin: 1rem 0;
+        border: 1px solid red;
         .mainContent-img {
           margin: 1rem 0;
           position: relative;
@@ -197,7 +198,7 @@
         .tags {
           .tags__arr {
             span {
-              font-size: 1.2rem;
+              font-size: 1rem;
               margin-right: 0.5rem;
             }
           }

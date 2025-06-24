@@ -60,19 +60,19 @@
     "lead": "Zadušnice su hrišćanski pravoslavni praznik koji je posvećen sećanju na preminule. Praznuje se ne samo ukazivanjem poštovanja našim precima već i kroz velikodušnost i milostinju prema sirotinji i onima kojima je to potrebno",
     "body": [
       {
-        "subtitle": "",
-        "text": "Zadušnice su crkveni praznik kada hrišćani posećuju grobove svojih bližnjih i uznose molitve Bogu za njih. Uvek padaju u subotu. Izuzetak su vaskršnje zadušnice."
+        "subtitle": "Šta su Zadušnice i kada se obeležavaju?",
+        "text": "Zadušnice su hrišćanski praznik Srpske pravoslavne crkve koji je posvećen sećanju na preminule. Obeležavaju se ne samo kroz poštovanje prema precima, već i delima milosrđa – davanjem milostinje siromašnima i pomoći onima kojima je potrebna."
       },
       {
         "subtitle": "",
         "text": "Najvažniji pomen za preminule je Proskomidija koja se služi na svakoj Svetoj Liturgiji. Pored ovih pominjanja i molitvi za preminule, Crkva je ustanovila posebne dane kad se sećamo naših dragih pokojnika i obilazimo njihove grobove."
       },
       {
-        "subtitle": "",
-        "text": "Srpska pravoslavna crkva propisala je posebne dane koji su posvećeni molitvi za umrle."
+        "subtitle3": "Dani kada se obeležavaju Zadušnice",
+        "text": "Srpska pravoslavna crkva propisala je četiri glavne Zadušnice:<ul><li>Zimske zadušnice (pred Mesne poklade),</li><li>Prolećne zadušnice (pred Duhove),</li><li>Letnje zadušnice (u junu),</li><li>Mitrovske zadušnice (početkom novembra).</li></ul>"
       },
       {
-        "subtitle": "Način obeležavanja",
+        "subtitle": "Kako se pravilno obeležavaju Zadušnice?",
         "text": "Zadušnice obeležavaju sećanje dana odvajanja duha od tela, člana Crkve. Uvek padaju u subotu, jer je to i inače, u toku čitave godine, dan kad se sećamo preminulih. Na zadušnice se obavezno izlazi na groblje. Tada se obavlja parastos ili pomen. Osvećuje se žito, prekađuje grob i pale sveće za pokoj duša umrlih. Obavezno se uređuje grob."
       },
       {
@@ -80,8 +80,16 @@
         "text": "Koljivo ili kuvano žito se nosi u parohijski ili manastirski hram, kao i na groblje. Na dan zadušnica se služi Sveta Liturgija, i tada sveštenik vinom preliva žito, a posle službe se ide do grobova pokojnika. Pored grobova se pale sveće, a sveštenik obavi obred i okadi grobove. Ako su pokojnici sahranjeni daleko i nije moguće otići na njihove grobove, čitav obred se služi u hramu."
       }
     ],
-    "tags": ["Zadušnice"],
-    "source": "ikone.rs"
+    "tags": [
+      "Zadušnice",
+      "Pravoslavni praznici",
+      "Pomen preminulima",
+      "Poseta groblju",
+      "Paljenje sveća",
+      "Pravoslavni običaji",
+      "Praznik mrtvih"
+    ],
+    "source": "crkveni-kalendar"
   },
   {
     "published": true,
