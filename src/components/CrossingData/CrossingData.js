@@ -29,11 +29,10 @@ export default function CrossingData() {
               <React.Fragment key={index}>
                 {isNewMonth && (
                   <tr className="monthTitle">
-                    <td
-                      colSpan="2"
-                      style={{ fontWeight: "bold" }}
-                    >
-                      {monthName}
+                    <td colSpan="2" style={{ fontWeight: "bold" }}>
+                      <Link to={`/${currentYear}/${monthName}`}>
+                        {monthName}
+                      </Link>
                     </td>
                   </tr>
                 )}

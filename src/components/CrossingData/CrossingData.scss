@@ -27,9 +27,12 @@
     line-height: 20px;
     text-transform: capitalize;
     td {
-      font-weight: bold;
-      color: $grey5;
-      //   background: red;
+      a {
+        text-decoration: none;
+        font-weight: bold;
+        color: $grey5;
+        //   background: red;
+      }
     }
   }
 }

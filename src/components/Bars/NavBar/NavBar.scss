@@ -8,21 +8,19 @@
   .navBar {
     flex: 3;
     display: flex;
-    // border: 1px solid red;
     background: $grey0;
     .navBar-wrapper {
       display: flex;
       width: 1200px;
       margin: 0 auto;
       .links {
-        // border: 1px solid green;
         width: 100%;
         display: flex;
         justify-content: space-around;
         align-items: center;
-        // padding-left: 15rem;
-
+        // border: 1px solid red;
         .nav-link {
+          // min-height: 100%;
           // border: 1px solid blue;
           font-size: 1.4rem;
           text-decoration: none;
@@ -39,7 +37,7 @@
             position: absolute;
             display: flex;
             flex-wrap: wrap;
-            top: 4.5rem;
+            top: 4rem;
             background: white;
             box-shadow: 1px 2px 2px grey;
             padding: 0.3rem 0.4rem;
