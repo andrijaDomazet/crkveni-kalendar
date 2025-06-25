@@ -11,16 +11,17 @@
   .kalendarGodina {
     padding: 2rem 0;
     width: 1200px;
-    margin: 0 auto;
+    margin: 2rem auto;
     .kalendarGodina-wrapper {
       display: flex;
       margin: 2rem auto;
       .kalendarGodina-left {
-        width: calc(100% - 340px);
+        width: calc(100% - 320px);
         margin-right: 20px;
       }
       .kalendarGodina-right {
-        width: 320px;
+        width: 340px;
+        padding: 0 20px;
       }
     }
   }
