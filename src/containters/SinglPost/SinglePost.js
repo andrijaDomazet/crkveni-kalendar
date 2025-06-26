@@ -6,6 +6,7 @@ import { useGlobalLocation } from "../../shared/LocationContext";
 import { urlTitle2 } from "../../shared/utility";
 import Zadusnice from "../../components/Zadusnice/Zadusnice";
 import CrossingData from "../../components/CrossingData/CrossingData";
+import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
 export default function SinglePost() {
   const { id, slug, data } = useIdContext();
   const { pathPart } = useGlobalLocation();
@@ -36,14 +37,21 @@ export default function SinglePost() {
               <BodyText bodyText={isNews.body} />
               <div>{pathPart[1] === "zadusnice" && <Zadusnice />}</div>
               <div>{pathPart[1] === "slave" && <CrossingData />}</div>
+              <div className="tags">
+                <span className="tags-title">Tagovi</span>
+                <div className="tags__arr">
+                  {isNews.tags.map((x, index) => {
+                    return <span key={index}>{x}</span>;
+                  })}
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="tags">
-            <span className="tags-title">Tagovi</span>
-            <div className="tags__arr">
-              {isNews.tags.map((x, index) => {
-                return <span key={index}>{x}</span>;
-              })}
+
+            <div className="home__wrapper-right">
+              <Zadusnice />
+              <div className="banner-wrapper xl_sticky">
+                <AdManagerSlot slotNumber={"div-gpt-ad-1750411708088-0"} />
+              </div>
             </div>
           </div>
         </main>
