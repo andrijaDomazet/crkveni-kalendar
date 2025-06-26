@@ -30,7 +30,7 @@ export default function CrossingData() {
                 {isNewMonth && (
                   <tr className="monthTitle">
                     <td colSpan="2" style={{ fontWeight: "bold" }}>
-                      <Link to={`/${currentYear}/${monthName}`}>
+                      <Link to={`/${currentYear}/${monthName}/`}>
                         {monthName}
                       </Link>
                     </td>
@@ -39,7 +39,7 @@ export default function CrossingData() {
                 <tr>
                   <td>{`${day}. ${monthName}`}</td>
                   <td>
-                    <Link to={`/${currentYear}/${monthName}`}>
+                    <Link to={`/${currentYear}/${monthName}/`}>
                       {item.title}
                     </Link>
                   </td>

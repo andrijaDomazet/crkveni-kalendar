@@ -72,6 +72,31 @@
           .addSize([1030, 21], [[300, 600]])
           .build();
 
+        var mappingInText = googletag
+          .sizeMapping()
+          .addSize(
+            [21, 21],
+            [
+              [320, 100],
+              [300, 250],
+            ]
+          )
+          .addSize(
+            [860, 21],
+            [
+              [300, 250],
+              [728, 90],
+            ]
+          )
+          .addSize(
+            [1030, 21],
+            [
+              [300, 250],
+              [728, 90],
+            ]
+          )
+          .build();
+
         adUnits[0] = googletag
           .defineSlot(
             "/23098387262/crkveni-kalendar/crkveni-kalendar-afterText-1",
@@ -109,6 +134,18 @@
           )
           .addService(googletag.pubads())
           .defineSizeMapping(mappingSideBar);
+
+        adUnits[3] = googletag
+          .defineSlot(
+            "/23098387262/crkveni-kalendar/crkveni-kalendar-inText-1",
+            [
+              [300, 250],
+              [300, 600],
+            ],
+            "div-gpt-ad-1750930023966-0"
+          )
+          .addService(googletag.pubads())
+          .defineSizeMapping(mappingInText);
 
         googletag.pubads().setCentering(true);
         googletag.pubads().collapseEmptyDivs(true, true);

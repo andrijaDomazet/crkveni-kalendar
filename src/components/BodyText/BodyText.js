@@ -1,5 +1,6 @@
 import React from "react";
 import "./BodyText.scss";
+import AdManagerSlot from "../AdvModule/AdManagerSlot";
 
 const setSubTitle = (item) =>
   item.subtitle ? (
@@ -17,6 +18,9 @@ export default function BodyText(props) {
             <div key={index}>
               {setSubTitle(item)}
               <p dangerouslySetInnerHTML={{ __html: item["text"] }}></p>
+              <div className="banner-wrapper">
+                <AdManagerSlot slotNumber={"div-gpt-ad-1750930023966-0"} />
+              </div>
             </div>
           );
         } else {

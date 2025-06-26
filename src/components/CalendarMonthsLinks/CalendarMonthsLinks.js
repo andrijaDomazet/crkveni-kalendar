@@ -25,7 +25,7 @@ export default function CalendarMonthsLinks() {
             {monthSerb.slice(startIndex, startIndex + 4).map((item, index) => (
               <td key={index}>
                 <NavLink
-                  to={`/${slug || currentYear}/${item}`}
+                  to={`/${slug || currentYear}/${item}/`}
                   title={`Prikaži kalendar za ${item} ${
                     slug || currentYear
                   }. godine`}
