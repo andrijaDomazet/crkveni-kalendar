@@ -1,0 +1,65 @@
+@import "../../index.scss";
+
+.widget__box {
+  margin: 1rem 0.2rem;
+  padding: 0 0.6rem;
+  background: rgb(246, 246, 246);
+  border: 3px solid rgb(239, 239, 239);
+  border-radius: 10px;
+  .widget__title {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    a {
+      text-decoration: none;
+      h2 {
+        font-size: 1.4rem;
+        color: $barGreen3;
+      }
+    }
+
+    span {
+      font-size: 1.4rem;
+    }
+  }
+  .widget__container {
+    display: grid;
+    // grid-template-rows: 1fr 1fr 1fr;
+    gap: 0.8rem;
+    padding: 0.5rem 0 0.8rem 0;
+  }
+}
+
+@media screen and (min-width: $medium) {
+  .widget__box {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    height: 435px;
+    // margin: 0.8 auto;
+    padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+    border: 2px solid rgb(219, 219, 219);
+    .widget__title {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 0.5rem 0.5rem 0.5rem;
+      a {
+        text-decoration: none;
+        h2 {
+          font-size: 2rem;
+          line-height: 2.4rem;
+        }
+      }
+      span {
+        font-size: 2rem;
+      }
+    }
+    .widget__container {padding: 0;
+      // .box3__left {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.5rem;
+      // }
+    }
+  }
+}

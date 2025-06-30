@@ -7,6 +7,7 @@ import "./Kalendar.scss";
 import CalendarMonthsLinks from "../../components/CalendarMonthsLinks/CalendarMonthsLinks";
 import Zadusnice from "../../components/Zadusnice/Zadusnice";
 import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
+import Widget from "../../UI/Widget/Widget";
 
 export default function Kalendar() {
   return (
@@ -60,6 +61,7 @@ export default function Kalendar() {
           slotNumber={"div-gpt-ad-1735207510691-0"}
         />
       </div> */}
+      <Widget />
     </div>
   );
 }

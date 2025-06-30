@@ -1,9 +1,9 @@
-import React from "react";
 import "./Home.scss";
 import Calendar from "../../components/Calendar/Calendar";
 import Zadusnice from "../../components/Zadusnice/Zadusnice";
 import CalendarMonthsLinks from "../../components/CalendarMonthsLinks/CalendarMonthsLinks";
 import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
+import Widget from "../../UI/Widget/Widget";
 
 export default function Home() {
   return (
@@ -26,6 +26,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <Widget />
     </div>
   );
 }

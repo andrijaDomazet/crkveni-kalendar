@@ -7,6 +7,7 @@ import { urlTitle2 } from "../../shared/utility";
 import Zadusnice from "../../components/Zadusnice/Zadusnice";
 import CrossingData from "../../components/CrossingData/CrossingData";
 import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
+import Widget from "../../UI/Widget/Widget";
 export default function SinglePost() {
   const { id, slug, data } = useIdContext();
   const { pathPart } = useGlobalLocation();
@@ -56,6 +57,7 @@ export default function SinglePost() {
           </div>
         </main>
       </div>
+      <Widget />
     </div>
   );
 }
