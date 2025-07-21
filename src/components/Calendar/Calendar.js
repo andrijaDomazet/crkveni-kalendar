@@ -24,13 +24,13 @@ export default function Calendar(props) {
 
   const changeMonth = (val) => {
     if (id === undefined) {
-      navigate(`/${isYear}/${tableTitle(val)}`);
+      navigate(`/${isYear}/${tableTitle(val)}/`);
     } else if (isMonth === 11 && val === 1) {
-      navigate(`../${+isYear + 1}/januar`);
+      navigate(`../${+isYear + 1}/januar/`);
     } else if (isMonth === 0 && val === -1) {
-      navigate(`../${+isYear - 1}/decembar`);
+      navigate(`../${+isYear - 1}/decembar/`);
     } else {
-      navigate(`../${isYear}/${tableTitle(val)}`);
+      navigate(`../${isYear}/${tableTitle(val)}/`);
     }
   };
 
@@ -258,7 +258,9 @@ export default function Calendar(props) {
                 <tr
                   key={index}
                   className={
-                    rowClasses(item, zz) + todayClass(new Date(item.date))
+                    rowClasses(item, zz) +
+                    todayClass(new Date(item.date)) +
+                    " dayClass"
                   }
                 >
                   {tdClasses.map((x, index) => {
