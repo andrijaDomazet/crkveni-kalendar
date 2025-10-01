@@ -14,9 +14,10 @@
     margin: 2rem auto;
     .kalendarGodina-wrapper {
       display: flex;
-      margin: 2rem auto;
+      // padding: 0;
+      // margin: 2rem auto;
       .kalendarGodina-left {
-        width: calc(100% - 320px);
+        width: calc(100% - 340px);
         margin-right: 20px;
       }
       .kalendarGodina-right {

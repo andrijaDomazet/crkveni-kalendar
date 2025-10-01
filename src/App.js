@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./containters/Home/Home";
 // import Kalendar from "./containers/Kalendar/Kalendar";
 import Kalendar from "./containters/Kalendar/Kalendar";
+import Calendar from "./components/Calendar/Calendar";
 import Bars from "./components/Bars/Bars";
 import { LocationProvider } from "./shared/LocationContext";
 import withIdProvider from "./shared/HOC";
@@ -14,6 +15,7 @@ import SinglePost from "./containters/SinglPost/SinglePost";
 import Footer from "./components/Footer/Footer";
 
 export default function App() {
+  
   return (
     <Router>
       <LocationProvider>
@@ -46,6 +48,11 @@ export default function App() {
             path="/slave/"
             exact="true"
             element={React.createElement(withIdProvider(SinglePost))}
+          />
+          <Route
+            path="/widget/"
+            exact="true"
+            element={React.createElement(withIdProvider(Calendar))}
           />
         </Routes>
         <Footer />

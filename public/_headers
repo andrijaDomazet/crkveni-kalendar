@@ -1,0 +1,2 @@
+/widget.html
+  Content-Security-Policy: frame-ancestors *

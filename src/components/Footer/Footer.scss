@@ -3,7 +3,8 @@
 .footer {
   position: relative;
   z-index: +100;
-  background: linear-gradient(to bottom, $dark4 10%, $dark5 80%);
+  // background: linear-gradient(to bottom, $dark4 10%, $dark5 80%);
+  background: $eggShell4;
   .home__section5-bottom {
     text-align: center;
     margin: 0 auto;

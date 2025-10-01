@@ -13,20 +13,9 @@ export default function NavBar() {
     }
   };
   const navBarOptions = (x, y) => {
-    // const navOptArr = () => {
-    //   const arr = options.slice(0, -1); // Uzimamo sve osim poslednjeg elementa
-
-    //   if (window.innerWidth <= 768) {
-    //     arr.splice(2, 1); // Uklanjamo element na indeksu 2 samo za manje ekrane
-    //   }
-
-    //   return arr;
-    // };
-    // let lastIndex = options.length - 1;
     return (
       <nav className="links" ref={navRef}>
         {options.slice(x, y).map((option, index) => {
-          // console.log("option", option);
           return (
             <div
               className="nav-link-wrapper"

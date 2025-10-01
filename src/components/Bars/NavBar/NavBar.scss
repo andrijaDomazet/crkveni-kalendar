@@ -18,13 +18,19 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        // border: 1px solid red;
+        .nav-link-wrapper {
+          // flex: 1;
+          // display: flex;
+          // border: 1px solid red;
+          // height: 100%;
+        }
         .nav-link {
           // min-height: 100%;
           // border: 1px solid blue;
           font-size: 1.4rem;
           text-decoration: none;
           color: black;
+
           &.active {
             color: $dark4;
             border-radius: 5px;
