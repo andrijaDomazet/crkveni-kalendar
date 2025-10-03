@@ -7,7 +7,7 @@
     "id": 2,
     "title": [
       "Sveti Ignjatije Bogonosac",
-      "Sveti Danilo Drugi, arhipiskop srpski (Pretprazništvo Roždestva) – Oci (Paterice)"
+      "Sveti Danilo Drugi, arhipiskop srpski (Pretprazništvo Roždestva) - Oci (Paterice)"
     ],
     "slava": true
   },
@@ -23,16 +23,16 @@
     "id": 5,
     "title": [
       "Svetih 10 mučenika Kritskih",
-      "Prepodobni Naum Ohridski – Tucindan"
+      "Prepodobni Naum Ohridski - Tucindan"
     ]
   },
   {
     "id": 6,
-    "title": "Sveta prepodobnomučenica Evgenija – Badnjidan"
+    "title": "Sveta prepodobnomučenica Evgenija - Badnjidan"
   },
   {
     "id": 7,
-    "title": "Roždestvo Hristovo – Božić"
+    "title": "Roždestvo Hristovo - Božić"
   },
   {
     "id": 8,
@@ -81,7 +81,7 @@
   },
   {
     "id": 18,
-    "title": "Sveti Teopemt i Teona – Krstovdan"
+    "title": "Sveti Teopemt i Teona - Krstovdan"
   },
   {
     "id": 19,
@@ -89,7 +89,7 @@
   },
   {
     "id": 20,
-    "title": "Sabor svetog Jovana Krstitelja – Jovanjdan",
+    "title": "Sabor svetog Jovana Krstitelja - Jovanjdan",
     "slava": true
   },
   {
@@ -122,7 +122,7 @@
   },
   {
     "id": 27,
-    "title": "Sveti Sava, prvi Arhiepiskop srpski – Savindan",
+    "title": "Sveti Sava, prvi Arhiepiskop srpski - Savindan",
     "slava": true
   },
   {
@@ -329,7 +329,7 @@
     "title": [
       "Prepodobni Prokopije Dekapolit",
       "Prepodobni Talalej",
-      "Sv. Teodor Komogovinski – Teodorova subota"
+      "Sv. Teodor Komogovinski - Teodorova subota"
     ]
   },
   {
@@ -371,7 +371,7 @@
   {
     "id": 81,
     "title": [
-      "Svetih 40 mučenika Sevastijskih – Mladenci",
+      "Svetih 40 mučenika Sevastijskih - Mladenci",
       "Sv. 42 mučenika Momišićka"
     ],
     "slava": true
@@ -567,7 +567,7 @@
   },
   {
     "id": 126,
-    "title": "Sveti velikomučenik Georgije – Đurđevdan",
+    "title": "Sveti velikomučenik Georgije - Đurđevdan",
     "slava": true
   },
   {
@@ -580,7 +580,7 @@
   },
   {
     "id": 128,
-    "title": "Sveti apostol i jevanđelist Marko – Markovdan",
+    "title": "Sveti apostol i jevanđelist Marko - Markovdan",
     "slava": true
   },
   {
@@ -814,7 +814,7 @@
   {
     "id": 179,
     "title": [
-      "Sveti mučenik Knez Lazar i svi Sv. muč. srpski – Vidovdan",
+      "Sveti mučenik Knez Lazar i svi Sv. muč. srpski - Vidovdan",
       "Sveti prorok Amos"
     ],
     "slava": true
@@ -858,7 +858,7 @@
   {
     "id": 188,
     "title": [
-      "Rođenje Svetog Jovana Preteče – Ivanjdan",
+      "Rođenje Svetog Jovana Preteče - Ivanjdan",
       "Sveti Nikita, Episkop Remezijanski"
     ],
     "slava": true
@@ -884,12 +884,12 @@
   },
   {
     "id": 193,
-    "title": "Sveti apostoli Petar i Pavle – Petrovdan",
+    "title": "Sveti apostoli Petar i Pavle - Petrovdan",
     "slava": true
   },
   {
     "id": 194,
-    "title": "Sabor Svetih dvanaest apostola – Pavlovdan"
+    "title": "Sabor Svetih dvanaest apostola - Pavlovdan"
   },
   {
     "id": 195,
@@ -974,7 +974,7 @@
   },
   {
     "id": 211,
-    "title": "Sveta velikomučenica Marina – Ognjena Marija",
+    "title": "Sveta velikomučenica Marina - Ognjena Marija",
     "slava": true
   },
   {
@@ -991,7 +991,7 @@
   },
   {
     "id": 214,
-    "title": ["Sveti prorok Ilija – Ilindan", "Sveti Ilija Gruzijski"],
+    "title": ["Sveti prorok Ilija - Ilindan", "Sveti Ilija Gruzijski"],
     "slava": true
   },
   {
@@ -1000,7 +1000,7 @@
   },
   {
     "id": 216,
-    "title": "Sveta Marija Magdalina – Blaga Marija",
+    "title": "Sveta Marija Magdalina - Blaga Marija",
     "slava": true
   },
   {
@@ -1052,7 +1052,7 @@
   },
   {
     "id": 226,
-    "title": ["Iznošenje Časnog Krsta", "Sv. muč. Makaveji (Početak posta)"]
+    "title": ["Iznošenje Časnog Krsta", "Sv. muč. Makaveji"]
   },
   {
     "id": 227,
@@ -1114,7 +1114,7 @@
   },
   {
     "id": 240,
-    "title": "Uspenije Presvete Bogorodice – Velika Gospojina"
+    "title": "Uspenije Presvete Bogorodice - Velika Gospojina"
   },
   {
     "id": 241,
@@ -1240,7 +1240,7 @@
   },
   {
     "id": 264,
-    "title": "Rođenje Presvete Bogorodice – Mala Gospojina"
+    "title": "Rođenje Presvete Bogorodice - Mala Gospojina"
   },
   {
     "id": 265,
@@ -1268,7 +1268,7 @@
   },
   {
     "id": 270,
-    "title": "Vozdviženje časnog Krsta – Krstovdan"
+    "title": "Vozdviženje časnog Krsta - Krstovdan"
   },
   {
     "id": 271,
@@ -1308,7 +1308,8 @@
   },
   {
     "id": 279,
-    "title": "Začeće Svetog Jovana Preteče i Krstitelja"
+    "title": "Začeće Svetog Jovana Preteče i Krstitelja",
+    "slava": true
   },
   {
     "id": 280,
@@ -1335,7 +1336,7 @@
   },
   {
     "id": 285,
-    "title": "Prepodobni Kirijak Otšelnik – Miholjdan",
+    "title": "Prepodobni Kirijak Otšelnik - Miholjdan",
     "slava": true
   },
   {
@@ -1371,12 +1372,12 @@
   },
   {
     "id": 292,
-    "title": "Sveti apostol Toma – Tomindan",
+    "title": "Sveti apostol Toma - Tomindan",
     "slava": true
   },
   {
     "id": 293,
-    "title": "Sveti mučenici Sergije i Vakho – Srđevdan",
+    "title": "Sveti mučenici Sergije i Vakho - Srđevdan",
     "slava": true
   },
   {
@@ -1427,7 +1428,7 @@
   {
     "id": 304,
     "title": [
-      "Sveti apostol i jevanđelist Luka – Lučindan",
+      "Sveti apostol i jevanđelist Luka - Lučindan",
       "Sveti Petar Cetinjski"
     ],
     "slava": true
@@ -1459,7 +1460,7 @@
   },
   {
     "id": 309,
-    "title": "Sveti apostol Jakov, prvi Episkop Jerusalimski – Zadušnice jesenje (mitrovske)"
+    "title": "Sveti apostol Jakov, prvi Episkop Jerusalimski"
   },
   {
     "id": 310,
@@ -1471,7 +1472,7 @@
   },
   {
     "id": 312,
-    "title": "Sveti velikomučenik Dimitrije – Mitrovdan",
+    "title": "Sveti velikomučenik Dimitrije - Mitrovdan",
     "slava": true
   },
   {
@@ -1504,7 +1505,7 @@
   },
   {
     "id": 318,
-    "title": "Sveti Kozma i Damjan – Vračevi",
+    "title": "Sveti Kozma i Damjan - Vračevi",
     "slava": true
   },
   {
@@ -1513,7 +1514,7 @@
   },
   {
     "id": 320,
-    "title": "Obnovljenje hrama Svetog velikomučenika Georgija – Đurđic",
+    "title": "Obnovljenje hrama Svetog velikomučenika Georgija - Đurđic",
     "slava": true
   },
   {
@@ -1534,7 +1535,7 @@
   },
   {
     "id": 325,
-    "title": "Sabor Svetog Arhangela Mihaila i ostalih Nebeskih Sila Bestelesnih – Aranđelovdan",
+    "title": "Sabor Svetog Arhangela Mihaila i ostalih Nebeskih Sila Bestelesnih - Aranđelovdan",
     "slava": true
   },
   {
@@ -1557,7 +1558,7 @@
   },
   {
     "id": 330,
-    "title": "Sveti Jovan Zlatousti, Patrijarh carigradski",
+    "title": ["Sveti Jovan Zlatousti", "Patrijarh carigradski"],
     "slava": true
   },
   {
@@ -1673,12 +1674,12 @@
     "id": 352,
     "title": [
       "Prepodobni Sava Osvećeni",
-      "Prep. Nektarije Bitoljski – Detinjci"
+      "Prep. Nektarije Bitoljski - Detinjci"
     ]
   },
   {
     "id": 353,
-    "title": "Sveti Nikolaj, Arhiepiskop mirlikijski Čudotvorac – Nikoljdan",
+    "title": "Sveti Nikolaj, Arhiepiskop mirlikijski Čudotvorac - Nikoljdan",
     "slava": true
   },
   {
@@ -1706,7 +1707,7 @@
   },
   {
     "id": 359,
-    "title": "Sveti Spiridon Čudotvorac, Episkop trimitunski – Materice"
+    "title": "Sveti Spiridon Čudotvorac, Episkop trimitunski - Materice"
   },
   {
     "id": 360,

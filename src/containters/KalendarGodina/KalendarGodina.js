@@ -1,4 +1,3 @@
-import React from "react";
 import "./KalendarGodina.scss";
 import Calendar from "../../components/Calendar/Calendar";
 import CalendarMonthsLinks from "../../components/CalendarMonthsLinks/CalendarMonthsLinks";

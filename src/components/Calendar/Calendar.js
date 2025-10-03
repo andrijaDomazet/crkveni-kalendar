@@ -52,9 +52,9 @@ export default function Calendar(props) {
   // const easterDate6 = new Date(isYear, 6, 19);
   let test66 = easterDate5.setDate(easterDate.getDate() + 69);
   const weekBeforePetrovskiPost = new Date(test66);
-  console.log("weekAfterPetrovskiPost", easterDate5);
   const startGospojinskiPost = new Date(isYear, 7, 14);
   const endGospojinskiPost = new Date(isYear, 7, 27);
+
   function setMonth(short) {
     if (short) {
       //short month on home page
@@ -132,13 +132,15 @@ export default function Calendar(props) {
       startPetrovskiPost <= setDateFromDateInfo
     ) {
       return "post";
-    } else if (
-      //Petrovski post
-      setDateFromDateInfo <= startPetrovskiPost &&
-      weekBeforePetrovskiPost <= setDateFromDateInfo
-    ) {
-      return "XXX";
-    } else if (
+    } 
+    // else if (
+    //   //Petrovski post
+    //   setDateFromDateInfo <= startPetrovskiPost &&
+    //   weekBeforePetrovskiPost <= setDateFromDateInfo
+    // ) {
+    //   return "XXX";
+    // } 
+    else if (
       //Gospojinski post
       setDateFromDateInfo <= endGospojinskiPost &&
       startGospojinskiPost <= setDateFromDateInfo
@@ -272,7 +274,6 @@ export default function Calendar(props) {
                   })}
                   <td>
                     <div className="test">
-                      {/* <h2>{isRealDay[index].id}</h2> */}
                       {renderTitleSection({
                         mainTitle: item.title,
                         slavaSymbol: item.slava,

@@ -192,6 +192,11 @@
               color: $grey5;
             }
           }
+          .blackDay {
+            // border: 2px solid red;
+            font-weight: 700;
+            color: $grey5;
+          }
         }
       }
       td:nth-child(5) {
@@ -246,7 +251,6 @@
 }
 @media screen and (min-width: 768px) {
   .calendar {
-    // margin: 2rem 0;
     .first {
       h1 {
         font-size: 1.6rem;

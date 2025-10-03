@@ -1,4 +1,6 @@
+import React from "react";
 import { Link } from "react-router-dom";
+import { blackDays } from "../components/Calendar/calendar-data/calendar-data";
 
 export function urlTitle2(title) {
   const cyrilic = ["č", "ć", "ž", "š", "đ", ",", ":", "-", "?", "!", "."];
@@ -25,6 +27,7 @@ export function renderTitleSection({
   linkClass = "slavaStrong",
   strongClass = "",
 }) {
+  const normalize = (str) => str.replace(/\s+/g, " ").trim();
   return (
     <>
       {slavaSymbol && (
@@ -34,14 +37,34 @@ export function renderTitleSection({
           </Link>{" "}
         </>
       )}
-      {Array.isArray(mainTitle)
+      {/* {Array.isArray(mainTitle)
         ? mainTitle.map((el, index) => (
-            <>
-              <h2>{el}</h2>
+            <React.Fragment key={index}>
+              <h2 className={blackDays.includes(el) ? "blackDay" : ""}>{el}</h2>
               {index !== mainTitle.length - 1 ? "; " : ""}
-            </>
+            </React.Fragment>
           ))
-        : mainTitle}
+        : mainTitle} */}
+
+      {Array.isArray(mainTitle) ? (
+        mainTitle.map((el, index) => {
+          const isBlackDay = blackDays.some(
+            (day) => normalize(day) === normalize(el)
+          );
+          // console.log("Func", blackDays.includes(el));
+
+          return (
+            <React.Fragment key={index}>
+              <h2 className={isBlackDay ? "blackDay" : ""}>{el}</h2>
+              {index !== mainTitle.length - 1 && <span>; </span>}
+            </React.Fragment>
+          );
+        })
+      ) : (
+        <h2 className={blackDays.includes(mainTitle) ? "blackDay" : ""}>
+          {mainTitle}
+        </h2>
+      )}
       {separatorSymbol}
       {extraLabel && (
         <h2>
