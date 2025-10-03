@@ -14,24 +14,29 @@
     }
   }
   .mainTitle {
-    background: red;
     th {
       background: $dark4;
       color: white;
     }
   }
   .monthTitle {
-    // background: red;
     background: $eggShell;
     max-height: 10px;
     line-height: 20px;
     text-transform: capitalize;
+    a{
+      color: $eggShell4;
+    }
+    
+  }
+  tr {
     td {
-      a {
-        text-decoration: none;
-        font-weight: bold;
-        color: $grey5;
-        //   background: red;
+      h3 {
+        a {
+          text-decoration: none;
+          font-weight: 500;
+          color: $grey5;
+        }
       }
     }
   }

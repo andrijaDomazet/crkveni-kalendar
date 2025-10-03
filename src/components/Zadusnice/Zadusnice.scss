@@ -20,12 +20,12 @@
           border-bottom: 1px solid rgb(197, 197, 197);
           a {
             text-decoration: underline;
-            color: blue;
+            color: rgb(27, 27, 201);
           }
         }
       }
     }
-    thead tr th {
+    thead tr th h2{
       background: $grey1;
       font-size: 1.2rem;
       height: 2rem;

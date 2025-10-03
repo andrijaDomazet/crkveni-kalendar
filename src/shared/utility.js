@@ -37,22 +37,11 @@ export function renderTitleSection({
           </Link>{" "}
         </>
       )}
-      {/* {Array.isArray(mainTitle)
-        ? mainTitle.map((el, index) => (
-            <React.Fragment key={index}>
-              <h2 className={blackDays.includes(el) ? "blackDay" : ""}>{el}</h2>
-              {index !== mainTitle.length - 1 ? "; " : ""}
-            </React.Fragment>
-          ))
-        : mainTitle} */}
-
       {Array.isArray(mainTitle) ? (
         mainTitle.map((el, index) => {
           const isBlackDay = blackDays.some(
             (day) => normalize(day) === normalize(el)
           );
-          // console.log("Func", blackDays.includes(el));
-
           return (
             <React.Fragment key={index}>
               <h2 className={isBlackDay ? "blackDay" : ""}>{el}</h2>

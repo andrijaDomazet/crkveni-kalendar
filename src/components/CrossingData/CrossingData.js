@@ -30,18 +30,22 @@ export default function CrossingData() {
                 {isNewMonth && (
                   <tr className="monthTitle">
                     <td colSpan="2" style={{ fontWeight: "bold" }}>
-                      <Link to={`/${currentYear}/${monthName}/`}>
-                        {monthName}
-                      </Link>
+                      <h2>
+                        <Link to={`/${currentYear}/${monthName}/`}>
+                          {monthName}
+                        </Link>
+                      </h2>
                     </td>
                   </tr>
                 )}
                 <tr>
                   <td>{`${day}. ${monthName}`}</td>
                   <td>
-                    <Link to={`/${currentYear}/${monthName}/`}>
-                      {item.title}
-                    </Link>
+                    <h3>
+                      <Link to={`/${currentYear}/${monthName}/`}>
+                        {item.title}
+                      </Link>
+                    </h3>
                   </td>
                 </tr>
               </React.Fragment>

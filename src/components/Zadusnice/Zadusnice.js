@@ -20,7 +20,9 @@ export default function Zadusnice() {
       <table>
         <thead>
           <tr>
-            <th colSpan="2">{`Zadušnice u ${currentYear}. godini`}</th>
+            <th colSpan="2">
+              <h2>{`Zadušnice u ${currentYear}. godini`}</h2>
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -34,9 +36,11 @@ export default function Zadusnice() {
                     {/* </Link> */}
                   </td>
                   <td>
-                    <Link to={`/${currentYear}/${monthSerb[item[0]]}/`}>
-                      {zadusniceName[index]}
-                    </Link>
+                    <h3>
+                      <Link to={`/${currentYear}/${monthSerb[item[0]]}/`}>
+                        {zadusniceName[index]}
+                      </Link>
+                    </h3>
                   </td>
                 </tr>
               );
