@@ -28,7 +28,7 @@
   },
   {
     "id": 6,
-    "title": "Sveta prepodobnomučenica Evgenija - Badnjidan"
+    "title": ["Sveta prepodobnomučenica Evgenija", "Badnjidan"]
   },
   {
     "id": 7,
@@ -81,7 +81,7 @@
   },
   {
     "id": 18,
-    "title": "Sveti Teopemt i Teona - Krstovdan"
+    "title": ["Sveti Teopemt i Teona", "Krstovdan"]
   },
   {
     "id": 19,
@@ -207,7 +207,7 @@
   },
   {
     "id": 45,
-    "title": "Sveti mučenik Trifun (Pretprazništvo Sretenja)",
+    "title": ["Sveti mučenik Trifun", "(Pretprazništvo Sretenja)"],
     "slava": true
   },
   {
@@ -268,7 +268,11 @@
   },
   {
     "id": 58,
-    "title": ["Prepodobni Avksentije", "Sveti Kirilo Slovenski (Mesne poklade)"]
+    "title": [
+      "Prepodobni Avksentije",
+      "Sveti Kirilo Slovenski (Mesne poklade)"
+    ],
+    "slava": true
   },
   {
     "id": 59,
@@ -329,7 +333,7 @@
     "title": [
       "Prepodobni Prokopije Dekapolit",
       "Prepodobni Talalej",
-      "Sv. Teodor Komogovinski - Teodorova subota"
+      "Sv. Teodor Komogovinski"
     ]
   },
   {
