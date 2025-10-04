@@ -28,9 +28,7 @@ export default function SinglePost() {
               <h1>{isNews.title_2 || isNews.title}</h1>
             </div>
             <img src={`${isNews.pics[0]}`} alt="" />
-            <div className="mainContent-img_source">
-              Foto: {isNews.pics && isNews.pics[1]}
-            </div>
+            <div className="mainContent-img_source">Foto: {isNews.pics && isNews.pics[1]}</div>
           </div>
           <div className="mainContent-body">
             <div className="mainContent-text">
@@ -49,7 +47,8 @@ export default function SinglePost() {
             </div>
 
             <div className="home__wrapper-right">
-              <Zadusnice />
+              {/* <Zadusnice /> */}
+              {pathPart[1] !== "zadusnice" && <Zadusnice />}
               <div className="banner-wrapper xl_sticky">
                 <AdManagerSlot slotNumber={"div-gpt-ad-1750411708088-0"} />
               </div>
