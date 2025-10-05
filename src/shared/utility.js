@@ -19,14 +19,7 @@ export function urlTitle2(title) {
   return url_title;
 }
 
-export function renderTitleSection({
-  mainTitle,
-  extraLabel,
-  separatorSymbol = " ",
-  slavaSymbol = false,
-  linkClass = "slavaStrong",
-  strongClass = "",
-}) {
+export function renderTitleSection({ mainTitle, extraLabel, separatorSymbol = " ", slavaSymbol = false, linkClass = "slavaStrong", strongClass = "" }) {
   const normalize = (str) => str.replace(/\s+/g, " ").trim();
   return (
     <>
@@ -39,9 +32,7 @@ export function renderTitleSection({
       )}
       {Array.isArray(mainTitle) ? (
         mainTitle.map((el, index) => {
-          const isBlackDay = blackDays.some(
-            (day) => normalize(day) === normalize(el)
-          );
+          const isBlackDay = blackDays.some((day) => normalize(day) === normalize(el));
           return (
             <React.Fragment key={index}>
               <h2 className={isBlackDay ? "blackDay" : ""}>{el}</h2>
@@ -50,14 +41,11 @@ export function renderTitleSection({
           );
         })
       ) : (
-        <h2 className={blackDays.includes(mainTitle) ? "blackDay" : ""}>
-          {mainTitle}
-        </h2>
+        <h2 className={blackDays.includes(mainTitle) ? "blackDay" : ""}>{mainTitle}</h2>
       )}
       {separatorSymbol}
       {extraLabel && (
         <h2>
-          {/* PREDEFINISATIIII-------------------------- */}
           <strong className={strongClass}>{extraLabel}</strong>
         </h2>
       )}

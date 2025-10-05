@@ -22,8 +22,6 @@
         }
       }
       .mainContent-body {
-        // border: 1px solid red;
-
         display: flex;
         flex-direction: column;
         .mainContent-text {
@@ -47,9 +45,7 @@
           }
           .tags {
             margin: 1rem 0;
-            // margin-bottom: 1.5rem;
             .tags-title {
-              // margin-bottom: 0.5rem;
               margin: 1rem 0;
               font-size: 1.6rem;
               line-height: 2rem;
@@ -65,7 +61,7 @@
                 margin-right: 0.3rem;
                 border-radius: 0.3rem;
                 color: white;
-                background: $eggShell3;
+                background: $eggShell4;
                 margin-bottom: 0.3rem;
               }
             }

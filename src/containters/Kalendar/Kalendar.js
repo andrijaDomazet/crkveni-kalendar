@@ -1,5 +1,4 @@
 import Calendar from "../../components/Calendar/Calendar";
-// import ContenExBox from "../../components/ContentEx/ContenExBox";
 import "./Kalendar.scss";
 // import { useGlobalLocation } from "../../shared/LocationContext";
 // import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";

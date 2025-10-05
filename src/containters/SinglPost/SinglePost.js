@@ -33,6 +33,7 @@ export default function SinglePost() {
           <div className="mainContent-body">
             <div className="mainContent-text">
               <strong className="mainContent-lead">{isNews.lead}</strong>
+              
               <BodyText bodyText={isNews.body} />
               <div>{pathPart[1] === "zadusnice" && <Zadusnice />}</div>
               <div>{pathPart[1] === "slave" && <CrossingData />}</div>

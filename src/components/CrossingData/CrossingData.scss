@@ -1,22 +1,11 @@
 @import "../../index.scss";
 .zadusnice {
-  //   border: 2px solid red;
-  table {
-    // border: 2px solid blue;
-    thead {
-      //   border: 2px solid blue;
-      tr {
-        // border: 2px solid blue;
-        th {
-          //   border: 2px solid blue !important;
-        }
-      }
-    }
-  }
   .mainTitle {
     th {
       background: $dark4;
       color: white;
+      font-size: 1.4rem;
+      padding: 0.2rem 0;
     }
   }
   .monthTitle {
@@ -24,10 +13,9 @@
     max-height: 10px;
     line-height: 20px;
     text-transform: capitalize;
-    a{
+    a {
       color: $eggShell4;
     }
-    
   }
   tr {
     td {
