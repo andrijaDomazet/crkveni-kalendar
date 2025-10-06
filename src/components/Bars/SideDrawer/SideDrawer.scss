@@ -15,7 +15,7 @@
   box-shadow: 0 1px 15px $grey5;
   .logo {
     display: flex;
-    margin: 2.5rem 0 1.5rem 0;
+    margin: 2rem 0 1.5rem 0;
     align-items: center;
     text-align: center;
     img {
@@ -30,9 +30,8 @@
     display: flex;
     flex-direction: column;
     font-size: 1.25rem;
-    line-height: 1.6rem;
+    line-height: 1.4rem;
     text-align: left;
-
     a {
       font-weight: 600;
       color: $grey5;
@@ -50,7 +49,7 @@
       display: inline-block;
       width: 100%;
       border-bottom: 1px solid $dark5;
-      font-size: 1.4rem;
+      font-size: 1.25rem;
       line-height: 2.8rem;
       font-weight: 500;
       text-decoration: none;
@@ -63,11 +62,11 @@
     }
     .subUl {
       margin: 0;
-      padding: 0 1rem;
+      padding: 0.3rem 1rem;
       text-align: left;
       padding-bottom: 0.5rem;
       li {
-        padding: 0.3rem 0;
+        padding: 0.25rem 0;
         a {
           font-size: 1.2rem;
         }

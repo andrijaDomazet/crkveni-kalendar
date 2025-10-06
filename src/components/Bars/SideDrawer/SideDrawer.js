@@ -1,4 +1,3 @@
-import React from "react";
 import "./SideDrawer.scss";
 import { NavLink } from "react-router-dom";
 import { options } from "../../../shared/shared";

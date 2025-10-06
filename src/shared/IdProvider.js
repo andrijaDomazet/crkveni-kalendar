@@ -6,7 +6,13 @@ import React from "react";
 import { createContext, useContext, useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import data from "../all__news";
-import { calendarYears, easterDays, idsMonths, manualDateEaster, monthSerb } from "../components/Calendar/calendar-data/calendar-data";
+import {
+  calendarYears,
+  easterDays,
+  idsMonths,
+  manualDateEaster,
+  monthSerb,
+} from "../components/Calendar/calendar-data/calendar-data";
 import { renderTitleSection } from "./utility";
 import news2 from "../components/Calendar/calendar-data/all__news4.json";
 const IdContext = createContext();
@@ -22,7 +28,9 @@ export const IdProvider = ({ children }) => {
     return slug || currentDate.getFullYear();
   });
 
-  const [isMonth, setIsMonth] = useState(() => (id === undefined ? currentDate.getMonth() : monthSerb.indexOf(id)));
+  const [isMonth, setIsMonth] = useState(() =>
+    id === undefined ? currentDate.getMonth() : monthSerb.indexOf(id)
+  );
   const [isEasterDay, setIsEasterDay] = useState("");
   const [isRealDay, setIsRealDay] = useState("");
   useEffect(() => {
@@ -40,11 +48,17 @@ export const IdProvider = ({ children }) => {
   const [holidays, setHolidays] = useState(filterHolidays);
 
   function filterHolidays() {
-    let yearIndex = calendarYears[0].item_list.findIndex((item) => item.title == isYear);
+    let yearIndex = calendarYears[0].item_list.findIndex(
+      (item) => item.title == isYear
+    );
     //zadusnice-------------------------------------------------------------
-    let zadusniceIndex = calendarYears[0].item_list[yearIndex].zadusnice.findIndex((item) => item[0] == isMonth);
+    let zadusniceIndex = calendarYears[0].item_list[
+      yearIndex
+    ].zadusnice.findIndex((item) => item[0] == isMonth);
 
-    let zadusniceDate = calendarYears[0].item_list[yearIndex].zadusnice.find((item) => item[0] === isMonth);
+    let zadusniceDate = calendarYears[0].item_list[yearIndex].zadusnice.find(
+      (item) => item[0] === isMonth
+    );
     //end---------------------------------------------------------------------
     //uskrs-------------------------------------------------------------------
     let easter = isYear - 2020;
@@ -52,7 +66,9 @@ export const IdProvider = ({ children }) => {
     let setHol = monthData.slice(idsMonths[isMonth][0], idsMonths[isMonth][1]);
     //end---------------------------------------------------------------------
     let setHolTest = setHol.map((item, index) => {
-      item.title = Array.isArray(item.title) ? item.title.map((item) => item) : [item.title];
+      item.title = Array.isArray(item.title)
+        ? item.title.map((item) => item)
+        : [item.title];
 
       let setDate = new Date(isYear, isMonth, index);
       let currentDay2 = setDate.getDay();
@@ -72,7 +88,9 @@ export const IdProvider = ({ children }) => {
             <Link to="/zadusnice/" className="zadusniceStrong">
               Zadušnice
             </Link>{" "}
-            <strong style={{ color: "black", fontWeight: 600 }}>{calendarYears[0].zadusnice[zadusniceIndex]}</strong>
+            <strong style={{ color: "black", fontWeight: 600 }}>
+              {calendarYears[0].zadusnice[zadusniceIndex]}
+            </strong>
           </>
         );
       }
@@ -85,7 +103,10 @@ export const IdProvider = ({ children }) => {
       if (diffInDays >= -2 && diffInDays <= 3) {
         item.title = renderTitleSection({
           extraLabel: easterDays[easterDays.length - 3 - diffInDays],
-          strongClass: currentDay2 === 3 || currentDay2 === 5 ? "blackStrong" : "redStrong",
+          strongClass:
+            currentDay2 === 3 || currentDay2 === 5
+              ? "blackStrong"
+              : "redStrong",
         });
       } else if (diffInDays == -24) {
         item.title = renderTitleSection({

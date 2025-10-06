@@ -95,10 +95,10 @@ export const blackDays = [
   "Sveti apostol i jevanđelist Matej",
   "Sveta velikomučenica Ekaterina",
   "Sveti sveštenomučenik Kliment",
+  "Prepodobni Alimpije Stolpnik",
   "Sveti apostol Andrej Prvozvani",
-"Sveta velikomučenica Varvara",
-"Prepodobni Sava Osvećeni"
-
+  "Sveta velikomučenica Varvara",
+  "Prepodobni Sava Osvećeni",
 ];
 
 export const daysIsPost = [

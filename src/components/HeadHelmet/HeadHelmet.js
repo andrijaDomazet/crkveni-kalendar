@@ -6,11 +6,8 @@ import data from "../../all__news";
 
 export default function HeadHelmet() {
   const loc = useLocation();
-  // console.log("Pathname", loc.pathname);
   let pathPart = loc.pathname.split("/");
-  // console.log("PathPart", pathPart, pathPart.length);
   let lastPathPart = pathPart[pathPart.length - 2];
-  // console.log("LastPath", lastPathPart);
   const tagNews = data.filter((item) => {
     // return urlTitle2(item.tags[0]) === lastPathPart;
   });
