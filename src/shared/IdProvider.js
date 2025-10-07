@@ -100,13 +100,15 @@ export const IdProvider = ({ children }) => {
       let easterDay = new Date(`${isYear}-${manualDateEaster[easter]}`);
       setIsEasterDay(easterDay);
       let diffInDays = (easterDay - date1) / (1000 * 60 * 60 * 24); // Razlika u danima
-      if (diffInDays >= -2 && diffInDays <= 3) {
+      if (diffInDays >= -2 && diffInDays <= 6) {
         item.title = renderTitleSection({
           extraLabel: easterDays[easterDays.length - 3 - diffInDays],
           strongClass:
             currentDay2 === 3 || currentDay2 === 5
               ? "blackStrong"
-              : "redStrong",
+              : diffInDays < 4
+              ? "redStrong"
+              : "blackStrong",
         });
       } else if (diffInDays == -24) {
         item.title = renderTitleSection({

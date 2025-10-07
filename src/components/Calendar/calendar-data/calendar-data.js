@@ -210,6 +210,9 @@ export const calendarYears = [
 // ];
 
 export const easterDays = [
+  "Veliki ponedeljak",
+  "Veliki utorak",
+  "Velika sreda",
   "Veliki četvrtak (Veliko bdenije)",
   "Veliki petak",
   "Velika subota",
