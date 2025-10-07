@@ -8,7 +8,16 @@ const setSubTitle = (item) =>
   ) : item.subtitle3 ? (
     <h3 className="mainContent-subtitle3">{item.subtitle3}</h3>
   ) : null;
-
+const setQuote = (item) => {
+  if (item.textQuote) {
+    return (
+      <blockquote
+        className="textQuote"
+        dangerouslySetInnerHTML={{ __html: item["textQuote"] }}
+      ></blockquote>
+    );
+  }
+};
 export default function BodyText(props) {
   return (
     <div className="bodyText">
@@ -18,6 +27,7 @@ export default function BodyText(props) {
             <div key={index}>
               {setSubTitle(item)}
               <p dangerouslySetInnerHTML={{ __html: item["text"] }}></p>
+              {setQuote(item)}
               <div className="banner-wrapper">
                 <AdManagerSlot slotNumber={"div-gpt-ad-1750930023966-0"} />
               </div>
@@ -28,6 +38,7 @@ export default function BodyText(props) {
             <div key={index}>
               {setSubTitle(item)}
               <p dangerouslySetInnerHTML={{ __html: item["text"] }}></p>
+              {setQuote(item)}
             </div>
           );
         }
