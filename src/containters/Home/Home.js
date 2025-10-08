@@ -11,7 +11,7 @@ export default function Home() {
       <section className="home__wrapper">
         <div className="home__wrapper-left">
           <Calendar shortCal={6} soc={false} />
-          <div className="banner-wrapper">
+          <div className="banner-wrapper fix-size-horizontal">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750409157804-0"} />
           </div>
           <CalendarMonthsLinks />

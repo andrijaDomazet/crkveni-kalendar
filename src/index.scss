@@ -24,20 +24,6 @@ code {
   transition: 2s all east-out;
   text-decoration: none;
 }
-
-.banner-wrapper {
-  display: flex;
-  margin: 1.6rem auto;
-  // padding: 1.6rem auto;
-  justify-content: center;
-  align-items: center;
-  // border: 1px solid red;
-  // width: 300px;
-  // height: 600px;
-}
-// .banner-wrapper.calendar {
-//   margin: 0.3rem auto;
-// }
 $green1: #34c118;
 $green2: #0d6d2f;
 $green3: #0b5b27;
@@ -85,6 +71,44 @@ $grey6: #252525;
 $redDay0: #df2525;
 $redDay1: #b80b0b;
 
+.banner-wrapper {
+  display: flex;
+  margin: 1.6rem auto;
+  // padding: 1.6rem auto;
+  justify-content: center;
+  align-items: center;
+  // border: 1px solid red;
+  // width: 300px;
+  // height: 600px;
+}
+// .banner-wrapper.calendar {
+//   margin: 0.3rem auto;
+// }
+
+.banner-wrapper.fix-size-horizontal {
+  // margin: 1.2rem auto;
+  height: 100px;
+  width: 320px;
+}
+.banner-wrapper.fix-size-horizontal > :first-child {
+  position: relative;
+  z-index: 0;
+}
+.banner-wrapper.fix-size-horizontal {
+  position: relative;
+  background: $grey0;
+  &::before {
+    content: "OGLAS";
+    letter-spacing: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    color: $grey5;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .banner-wrapper.xl_sticky {
     left: 20px;
@@ -96,5 +120,13 @@ $redDay1: #b80b0b;
     // height: 100%;
     // border: 1px solid red;
     // justify-content:;
+  }
+  .banner-wrapper.fix-size-horizontal {
+    width: 728px;
+    height: 90px;
+    &::before {
+      letter-spacing: 3px;
+      font-size: 1.2rem;
+    }
   }
 }
