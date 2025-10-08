@@ -28,15 +28,20 @@ export default function SinglePost() {
               <h1>{isNews.title_2 || isNews.title}</h1>
             </div>
             <img src={`${isNews.pics[0]}`} alt="" />
-            <div className="mainContent-img_source">Foto: {isNews.pics && isNews.pics[1]}</div>
+            <div className="mainContent-img_source">
+              Foto: {isNews.pics && isNews.pics[1]}
+            </div>
           </div>
           <div className="mainContent-body">
             <div className="mainContent-text">
               <strong className="mainContent-lead">{isNews.lead}</strong>
-              
+
               <BodyText bodyText={isNews.body} />
               <div>{pathPart[1] === "zadusnice" && <Zadusnice />}</div>
               <div>{pathPart[1] === "slave" && <CrossingData />}</div>
+              <div className="banner-wrapper">
+                <AdManagerSlot slotNumber={"div-gpt-ad-1750409157804-0"} />
+              </div>
               <div className="tags">
                 <span className="tags-title">Tagovi</span>
                 <div className="tags__arr">
@@ -44,6 +49,9 @@ export default function SinglePost() {
                     return <span key={index}>{x}</span>;
                   })}
                 </div>
+              </div>
+              <div className="banner-wrapper">
+                <AdManagerSlot slotNumber={"div-gpt-ad-1750409277034-0"} />
               </div>
             </div>
 
