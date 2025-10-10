@@ -33,8 +33,8 @@
 
           &.active {
             color: $dark4;
-            border-radius: 5px;
             font-weight: bold;
+            // border-bottom: 4px solid $dark4;
           }
 
           //to check again when navbar is finished
@@ -109,6 +109,69 @@
           }
           .drop_down_menu.close {
             display: none;
+          }
+        }
+      }
+      .links.last {
+        // margin-right: 0.5rem;
+        width: 40px;
+        height: auto;
+        cursor: pointer;
+        .nav-link-wrapper {
+          width: auto;
+          height: 100%;
+          vertical-align: middle;
+          align-items: center;
+          display: flex;
+          img {
+            // padding: 0.3rem 0;
+            width: 40px;
+            height: auto;
+          }
+          .botDiv {
+            display: inline;
+            position: relative;
+            .drop_down_menu {
+              z-index: +100;
+              width: 250px;
+              position: absolute;
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              grid-template-columns: 1fr;
+              top: 20px;
+              left: -200px;
+              background: white;
+              box-shadow: 1px 2px 3px rgb(0, 0, 0);
+              padding: 0.3rem 0.4rem;
+              border-bottom-left-radius: 0.3rem;
+              border-bottom-right-radius: 0.3rem;
+              list-style-type: none;
+              a {
+                border-radius: 5px;
+                color: black;
+                line-height: 35px;
+                align-items: center;
+                vertical-align: middle;
+                font-size: 1.1rem;
+                flex: 0 0 50%;
+                margin: 3px 0;
+                z-index: +999;
+                img {
+                  position: relative;
+                  width: 30px;
+                  height: 30px;
+                  margin: 0 0.3rem;
+                  top: 50%;
+                  transform: translateY(-50%);
+                }
+                &:hover {
+                  background: rgb(220, 220, 220);
+                }
+              }
+            }
+            .drop_down_menu.close {
+              display: none;
+            }
           }
         }
       }

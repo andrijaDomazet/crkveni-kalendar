@@ -13,9 +13,9 @@ import HeadHelmet from "./components/HeadHelmet/HeadHelmet";
 import KalendarGodina from "./containters/KalendarGodina/KalendarGodina";
 import SinglePost from "./containters/SinglPost/SinglePost";
 import Footer from "./components/Footer/Footer";
+import NoMatch from "./containters/NoMatch/NoMatch";
 
 export default function App() {
-  
   return (
     <Router>
       <LocationProvider>
@@ -50,9 +50,18 @@ export default function App() {
             element={React.createElement(withIdProvider(SinglePost))}
           />
           <Route
+            path="/molitvenik/"
+            exact="true"
+            element={React.createElement(withIdProvider(SinglePost))}
+          />
+          <Route
             path="/widget/"
             exact="true"
             element={React.createElement(withIdProvider(Calendar))}
+          />
+          <Route
+            path="*"
+            element={React.createElement(withIdProvider(NoMatch))}
           />
         </Routes>
         <Footer />

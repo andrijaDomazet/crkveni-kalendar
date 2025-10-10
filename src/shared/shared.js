@@ -67,13 +67,7 @@ export const details = [
   { title: "Kontakt telefon", name: "tel" },
   { title: "Vaša poruka", name: "text" },
 ];
-export const tretmanColors = [
-  { tretman: "manastir", color: "#940922" },
-  { tretman: "crkva", color: "#b29411" },
-  // { tretman: "nega lica", color: "#F7A072" },
-  // { tretman: "nega tela", color: "#55C1FF" },
-  { tretman: "ostalo", color: "#5F1A37" },
-];
+
 export const options = [
   //0
   {
@@ -82,7 +76,7 @@ export const options = [
     social: {
       title: "Crkveni kalendar 2025 | Црквени календар 2025",
       lead: "Crkveni pravoslavni kalendar 2025 | Svi praznici, slave i posti u godini na jednom mestu",
-      pics: "/img/test3.jpg",
+      pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
     },
   },
   //1
@@ -92,12 +86,12 @@ export const options = [
     social: {
       title: "Crkveni kalendar",
       lead: "Crkveni pravoslavni kalendar | Svi praznici, slave i posti u godini na jednom mestu",
-      pics: "/img/test3.jpg",
+      pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
     },
     social2: {
       title: "Crkveni kalendar",
       lead: " | Svi praznici, slave i posti u godini na jednom mestu",
-      pics: "/img/test3.jpg",
+      pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
     },
     item_list: [
       {
@@ -106,7 +100,7 @@ export const options = [
         social: {
           title: "Običaji i tradicija",
           lead: "Najnovije vesti - Običaji i tradicija",
-          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1678366923/ads/agroweb_green_l2ql6w.jpg",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
         },
       },
       {
@@ -115,7 +109,7 @@ export const options = [
         social: {
           title: "Običaji i tradicija",
           lead: "Najnovije vesti - Običaji i tradicija",
-          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1678366923/ads/agroweb_green_l2ql6w.jpg",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
         },
       },
       {
@@ -124,7 +118,7 @@ export const options = [
         social: {
           title: "Običaji i tradicija",
           lead: "Najnovije vesti - Običaji i tradicija",
-          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1678366923/ads/agroweb_green_l2ql6w.jpg",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
         },
       },
       {
@@ -133,7 +127,7 @@ export const options = [
         social: {
           title: "Običaji i tradicija",
           lead: "Najnovije vesti - Običaji i tradicija",
-          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1678366923/ads/agroweb_green_l2ql6w.jpg",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
         },
       },
       {
@@ -142,7 +136,7 @@ export const options = [
         social: {
           title: "Običaji i tradicija",
           lead: "Najnovije vesti - Običaji i tradicija",
-          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1678366923/ads/agroweb_green_l2ql6w.jpg",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
         },
       },
       {
@@ -151,7 +145,7 @@ export const options = [
         social: {
           title: "Običaji i tradicija",
           lead: "Najnovije vesti - Običaji i tradicija",
-          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1678366923/ads/agroweb_green_l2ql6w.jpg",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
         },
       },
       {
@@ -160,7 +154,7 @@ export const options = [
         social: {
           title: "Običaji i tradicija",
           lead: "Najnovije vesti - Običaji i tradicija",
-          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1678366923/ads/agroweb_green_l2ql6w.jpg",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
         },
       },
       {
@@ -169,7 +163,7 @@ export const options = [
         social: {
           title: "Običaji i tradicija",
           lead: "Najnovije vesti - Običaji i tradicija",
-          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1678366923/ads/agroweb_green_l2ql6w.jpg",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
         },
       },
       {
@@ -178,7 +172,7 @@ export const options = [
         social: {
           title: "Običaji i tradicija",
           lead: "Najnovije vesti - Običaji i tradicija",
-          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1678366923/ads/agroweb_green_l2ql6w.jpg",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
         },
       },
       {
@@ -187,7 +181,7 @@ export const options = [
         social: {
           title: "Običaji i tradicija",
           lead: "Najnovije vesti - Običaji i tradicija",
-          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1678366923/ads/agroweb_green_l2ql6w.jpg",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
         },
       },
       {
@@ -196,7 +190,7 @@ export const options = [
         social: {
           title: "Običaji i tradicija",
           lead: "Najnovije vesti - Običaji i tradicija",
-          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1678366923/ads/agroweb_green_l2ql6w.jpg",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
         },
       },
       {
@@ -205,7 +199,7 @@ export const options = [
         social: {
           title: "Običaji i tradicija",
           lead: "Najnovije vesti - Običaji i tradicija",
-          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1678366923/ads/agroweb_green_l2ql6w.jpg",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
         },
       },
     ],
@@ -240,6 +234,60 @@ export const options = [
       title: "Mesečeve mene",
       lead: "Mesečeve mene i lunarne faze u 2023. godini. MESEČEV KALENDAR. Precizan kalendar faza meseca za kompletnu godinu. Prikaz mesečevih mena za svaki mesec...",
       pics: ["/img/article_img/moon.jpg", "Pexels"],
+    },
+  },
+  //6
+  {
+    title: "Ostalo",
+    route: "/vesti/ostalo/",
+    icon: "/img/krst__logo.png",
+    item_list: [
+      // {
+      //   title: "Seoski turizam",
+      //   route: "/seoski-turizam",
+      //   icon: "/img/icons/other.png",
+      // },
+      // {
+      //   title: "Kalkulatori",
+      //   route: "/kalkulatori",
+      //   icon: "/img/icons/other.png",
+      // },
+      {
+        title: "Molitvenik",
+        route: "/molitvenik/",
+        icon: "/img/krst__logo.png",
+        social: {
+          title: "Molitvenik | crkveni-kalendar.net",
+          lead: "Svi praznici, slave i posti u godini na jednom mestu",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
+        },
+      },
+      // 5
+      {
+        title: "Imenoslov",
+        route: "/imenoslov/",
+        icon: "/img/krst__logo.png",
+        social: {
+          title: "Imenoslov | crkveni-kalendar.net",
+          lead: "Svi praznici, slave i posti u godini na jednom mestu",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
+        },
+      },
+      // {
+      //   title: "Ostalo",
+      //   route: "/vesti/ostalo/",
+      //   icon: "/img/icons/other.png",
+      //   social: {
+      //     title: "Ostalo | crkveni-kalendar.net",
+      //     lead: "Ostale vesti | crkveni-kalendar.net",
+      //     pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
+      //   },
+      // },
+    ],
+    social: {
+      title: "Ostalo - Crkveni-kalendar.net",
+      lead: "Ostale vesti - Crkveni-kalendar.net",
+      pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
     },
   },
   // { route: "/molitve", title: "Molitve" },

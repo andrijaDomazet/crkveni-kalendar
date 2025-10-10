@@ -30,9 +30,7 @@ export default function Zadusnice() {
                   </h3>
                 </td>
                 <td>
-                  {/* <Link to={`/${currentYear}/${monthSerb[item[0]]}`}> */}
                   {item[1] + ". " + monthSerb[item[0]]}
-                  {/* </Link> */}
                 </td>
               </tr>
             );

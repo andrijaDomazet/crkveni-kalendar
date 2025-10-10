@@ -6,13 +6,71 @@ import { options } from "../../../shared/shared";
 export default function NavBar() {
   let navRef = useRef(null);
   const [dropDown, setDropDown] = useState(false);
-
+  let lastIndex = options.length - 1;
   const handleClick = () => {
     if (navRef.current) {
       navRef.current.scrollLeft = 0;
     }
   };
+  const test = (options, lastIndex) => {
+    if (window.innerWidth < 768) {
+      return (
+        <>
+          <div className="nav-link-wrapper">
+            <NavLink
+              to={options[6].item_list[0].route + "/"}
+              exact="true"
+              className="nav-link"
+              onClick={() => {
+                handleClick();
+              }}
+            >
+              {options[6].item_list[0].title}
+            </NavLink>
+          </div>
+          <div className="nav-link-wrapper">
+            <NavLink
+              to={options[6].item_list[1].route + "/"}
+              exact="true"
+              className="nav-link"
+              onClick={() => {
+                handleClick();
+              }}
+            >
+              {options[6].item_list[1].title}
+            </NavLink>
+          </div>
+        </>
+      );
+    } else {
+      return (
+        <div className="links last">
+          <div
+            className="nav-link-wrapper"
+            onMouseOver={() => {
+              setDropDown(options[lastIndex].route);
+            }}
+            onMouseLeave={() => {
+              setDropDown(false);
+            }}
+            onClick={() => {
+              setDropDown(null);
+            }}
+          >
+            <img src="/img/threeDots.png" alt="" />
+            <div className="botDiv">
+              {items_list(
+                options[lastIndex].route,
+                options[lastIndex].item_list
+              )}
+            </div>
+          </div>
+        </div>
+      );
+    }
+  };
   const navBarOptions = (x, y) => {
+    let lastIndex = options.length - 1;
     return (
       <nav className="links" ref={navRef}>
         {options.slice(x, y).map((option, index) => {
@@ -49,8 +107,6 @@ export default function NavBar() {
     );
   };
   const items_list = (items, itemlList) => {
-    // console.log("Items",Array.isArray(itemlList));
-
     if (Array.isArray(itemlList)) {
       return (
         <ul className={getDropDownMenu(items, itemlList)}>
@@ -66,7 +122,6 @@ export default function NavBar() {
     }
   };
   const getDropDownMenu = (setClass, items) => {
-    // return dropDown ? "drop_down_menu" : "drop_down_menu close";
     const isOpen =
       dropDown === setClass ? "drop_down_menu" : "drop_down_menu close";
     const sizeClass = items.length > 6 ? "" : " small";
@@ -80,6 +135,7 @@ export default function NavBar() {
           <img src="/img/logo.png" />
         </NavLink>
         {navBarOptions(3, 5)}
+        {/* {test(options, lastIndex)} */}
       </div>
     </div>
   );
