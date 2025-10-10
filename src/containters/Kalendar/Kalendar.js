@@ -14,7 +14,7 @@ export default function Kalendar() {
       <div className="kalendar-wrapper">
         <div className="kalendar-left">
           <Calendar />
-          <div className="banner-wrapper">
+          <div className="banner-wrapper fix-size-horizontal">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750409157804-0"} />
           </div>
           <CalendarMonthsLinks />

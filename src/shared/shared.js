@@ -242,16 +242,6 @@ export const options = [
     route: "/vesti/ostalo/",
     icon: "/img/krst__logo.png",
     item_list: [
-      // {
-      //   title: "Seoski turizam",
-      //   route: "/seoski-turizam",
-      //   icon: "/img/icons/other.png",
-      // },
-      // {
-      //   title: "Kalkulatori",
-      //   route: "/kalkulatori",
-      //   icon: "/img/icons/other.png",
-      // },
       {
         title: "Molitvenik",
         route: "/molitvenik/",

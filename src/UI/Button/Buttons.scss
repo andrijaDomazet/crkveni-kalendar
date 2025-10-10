@@ -10,10 +10,10 @@ button {
   text-align: left;
   transition: color 0.3s ease-in-out;
   &:hover {
-    color: $barGreen1;
+    color: $grey0;
   }
   &:focus {
-    outline: 2px solid $barGreen3;
+    outline: 2px solid $grey1;
     outline-offset: 2px;
   }
 }

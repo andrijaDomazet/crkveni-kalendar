@@ -218,7 +218,7 @@
       button {
         text-transform: uppercase;
         font-weight: bold;
-        font-size: 1.2rem;
+        font-size: 1rem;
       }
     }
 
@@ -227,12 +227,12 @@
       text-transform: capitalize;
       flex: 1;
       border: none;
-      line-height: 1.4rem;
-      font-size: 1.2rem;
-      cursor: pointer;
+      line-height: 1.1rem;
+      font-size: 1.1rem;
+    
       i {
         margin: 0 0.5rem;
-        font-size: 1.2rem;
+        font-size: 1rem;
       }
     }
     .closeButton {
@@ -360,6 +360,10 @@
         width: 100%;
         font-size: 1.4rem;
         line-height: 1.6rem;
+          cursor: pointer;
+        i{
+      font-size: 1.2rem;
+        }
       }
     }
   }

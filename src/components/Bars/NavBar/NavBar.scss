@@ -25,16 +25,23 @@
           // height: 100%;
         }
         .nav-link {
+          // height: 100%;
           // min-height: 100%;
           // border: 1px solid blue;
           font-size: 1.4rem;
           text-decoration: none;
-          color: black;
-
+          // color: black;
+          // color: red;
+          color: $grey7;
+          font-weight: 700;
           &.active {
+            // display: block;
+            // height: 100%;
             color: $dark4;
+            color: $eggShell3;
             font-weight: bold;
-            // border-bottom: 4px solid $dark4;
+            // background: white;
+            // border-bottom: 4px solid $eggShell3;
           }
 
           //to check again when navbar is finished
