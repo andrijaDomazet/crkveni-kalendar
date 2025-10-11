@@ -4,7 +4,9 @@
   width: 100%;
   max-width: 500px;
   background: white;
+  // border-radius: 0.5rem;
   table {
+    // border-radius: 0.3rem;
     width: 100%;
     border-bottom: 1px solid grey;
     border-collapse: collapse;
@@ -21,18 +23,22 @@
           border-bottom: 1px solid rgb(197, 197, 197);
           a {
             text-decoration: underline;
-            color: rgb(27, 27, 201);
+            color: $blue1;
           }
         }
       }
     }
     thead tr th h2{
+      border-top-left-radius: 0.3rem;
+      border-top-right-radius: 0.3rem;
       background: $grey1;
+      background: $blue1;
       font-size: 1.2rem;
       height: 2rem;
       line-height: 2rem;
       padding-left: 0.3rem;
       color: $grey4;
+      color: white;
     }
   }
 }

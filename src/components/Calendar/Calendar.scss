@@ -1,7 +1,9 @@
 @import "../../index.scss";
 .calendar {
+  // box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
   .first {
     color: $grey5;
+    // color: red;
     display: flex;
     justify-content: space-between;
     margin-bottom: 0.5rem;
@@ -11,18 +13,21 @@
       padding: 0;
       font-size: 1.2rem;
       line-height: 1.4rem;
-      color: $eggShell4;
+      // color: $eggShell4;
+      color: $grey7;
     }
     .yearBox {
       z-index: +999;
       padding: 0 0.3rem;
-      background: $grey3;
-      border: 1px solid $grey2;
+      background: $grey7;
+      background: white;
+      border: 1px solid $grey7;
       border-radius: 0.3rem;
       cursor: pointer;
       display: flex;
       height: 2rem;
       color: white;
+      color: $grey7;
       b {
         padding: 0;
         margin: 0;
@@ -76,7 +81,9 @@
     thead {
       tr {
         background: $grey1;
-        color: $grey5;
+        background: $orange2;
+        color: white;
+        // border-top-left-radius: 0.3rem;
         th {
           position: relative;
           padding: 0.3rem 0.5rem;
@@ -128,7 +135,7 @@
       .today {
         font-weight: 600;
         td {
-          background: #eae1a7;
+          background: #f8ea95d0;
           h3 {
             font-weight: 600;
           }
@@ -209,19 +216,11 @@
     }
   }
   .calendar-month {
+    border-bottom: 1px solid $grey1;
     display: flex;
     justify-content: space-between;
-    background: $grey3;
+    background: white;
     padding: 0.5rem 0;
-    .month-center {
-      text-align: center;
-      button {
-        text-transform: uppercase;
-        font-weight: bold;
-        font-size: 1rem;
-      }
-    }
-
     button {
       text-align: center;
       text-transform: capitalize;
@@ -229,12 +228,24 @@
       border: none;
       line-height: 1.1rem;
       font-size: 1.1rem;
-    
+      color: $blue1;
+      text-decoration: underline;
       i {
         margin: 0 0.5rem;
         font-size: 1rem;
       }
     }
+    .month-center {
+      text-align: center;
+      button {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1rem;
+        color: $grey7;
+      }
+    }
+
     .closeButton {
       display: none;
     }
@@ -360,10 +371,13 @@
         width: 100%;
         font-size: 1.4rem;
         line-height: 1.6rem;
-          cursor: pointer;
-        i{
-      font-size: 1.2rem;
+        cursor: pointer;
+        i {
+          font-size: 1.2rem;
         }
+        // &:focus{
+        //   border: none;
+        // }
       }
     }
   }

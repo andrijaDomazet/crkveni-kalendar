@@ -2,19 +2,22 @@
 .zadusnice {
   .mainTitle {
     th {
-      background: $dark4;
+      background: $blue1;
       color: white;
+      // color: red;
       font-size: 1.4rem;
       padding: 0.2rem 0;
     }
   }
   .monthTitle {
-    background: $eggShell;
+    // background: $eggShell;
+    background: $grey1;
     max-height: 10px;
     line-height: 20px;
     text-transform: capitalize;
     a {
-      color: $eggShell4;
+      // color: $eggShell4;
+      color: $blue1;
     }
   }
   tr {
