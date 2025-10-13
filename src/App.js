@@ -11,7 +11,7 @@ import withIdProvider from "./shared/HOC";
 import ScrollToTop from "./UI/ScrollToTop/ScrollToTop";
 import HeadHelmet from "./components/HeadHelmet/HeadHelmet";
 import KalendarGodina from "./containters/KalendarGodina/KalendarGodina";
-import SinglePost from "./containters/SinglPost/SinglePost";
+import SinglePost from "./containters/SinglePost/SinglePost";
 import Footer from "./components/Footer/Footer";
 import NoMatch from "./containters/NoMatch/NoMatch";
 

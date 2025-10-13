@@ -67,6 +67,16 @@
       color: $dark3;
     }
   }
+    div {
+    position: relative;
+    img {
+      margin: 0.3rem 0;
+      width: 100%;
+      // border: 1px solid red;
+      max-height: 500px;
+      object-fit: cover;
+    }
+  }
   .textQuote {
     margin: 0.8rem;
     padding: 0.5rem;

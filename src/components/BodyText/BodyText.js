@@ -1,6 +1,7 @@
-import React from "react";
+import React, {lazy, Suspense } from "react";
 import "./BodyText.scss";
 import AdManagerSlot from "../AdvModule/AdManagerSlot";
+const PostImage = lazy(() => import("../../containters/SinglePost/img/PostImage.js"));
 
 const setSubTitle = (item) =>
   item.subtitle ? (
@@ -18,6 +19,21 @@ const setQuote = (item) => {
     );
   }
 };
+const setImg = (item) => {
+  if (item.imgSrc) {
+    return (
+      <div className="bodyImg">
+        <Suspense fallback={<div></div>}>
+          <PostImage src={item.imgSrc[0]} alt={item.imgSrc[1]} />
+        </Suspense>
+        <figcaption className="mainContent-img_source">
+          <span>Foto: </span>
+          <span dangerouslySetInnerHTML={{ __html: item.imgSrc[1] }}></span>
+        </figcaption>
+      </div>
+    );
+  }
+};
 export default function BodyText(props) {
   return (
     <div className="bodyText">
@@ -28,6 +44,7 @@ export default function BodyText(props) {
               {setSubTitle(item)}
               <p dangerouslySetInnerHTML={{ __html: item["text"] }}></p>
               {setQuote(item)}
+              {setImg(item)}
               <div className="banner-wrapper">
                 <AdManagerSlot slotNumber={"div-gpt-ad-1750930023966-0"} />
               </div>
@@ -38,6 +55,7 @@ export default function BodyText(props) {
             <div key={index}>
               {setSubTitle(item)}
               <p dangerouslySetInnerHTML={{ __html: item["text"] }}></p>
+              {setImg(item)}
               {setQuote(item)}
             </div>
           );
