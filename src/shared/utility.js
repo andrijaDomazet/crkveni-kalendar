@@ -19,7 +19,14 @@ export function urlTitle2(title) {
   return url_title;
 }
 
-export function renderTitleSection({ mainTitle, extraLabel, separatorSymbol = " ", slavaSymbol = false, linkClass = "slavaStrong", strongClass = "" }) {
+export function renderTitleSection({
+  mainTitle,
+  extraLabel,
+  separatorSymbol = " ",
+  slavaSymbol = false,
+  linkClass = "slavaStrong",
+  strongClass = "",
+}) {
   const normalize = (str) => str.replace(/\s+/g, " ").trim();
   return (
     <>
@@ -32,7 +39,9 @@ export function renderTitleSection({ mainTitle, extraLabel, separatorSymbol = " 
       )}
       {Array.isArray(mainTitle) ? (
         mainTitle.map((el, index) => {
-          const isBlackDay = blackDays.some((day) => normalize(day) === normalize(el));
+          const isBlackDay = blackDays.some(
+            (day) => normalize(day) === normalize(el)
+          );
           return (
             <React.Fragment key={index}>
               <h2 className={isBlackDay ? "blackDay" : ""}>{el}</h2>
@@ -41,7 +50,9 @@ export function renderTitleSection({ mainTitle, extraLabel, separatorSymbol = " 
           );
         })
       ) : (
-        <h2 className={blackDays.includes(mainTitle) ? "blackDay" : ""}>{mainTitle}</h2>
+        <h2 className={blackDays.includes(mainTitle) ? "blackDay" : ""}>
+          {mainTitle}
+        </h2>
       )}
       {separatorSymbol}
       {extraLabel && (
@@ -52,3 +63,18 @@ export function renderTitleSection({ mainTitle, extraLabel, separatorSymbol = " 
     </>
   );
 }
+
+export const getPreUrlTitle = (item) => {
+  // console.log("TEST", allC);
+
+  // if (!item || !Array.isArray(allC)) return "";
+
+  // const found = allC.find(
+  //   (e) => urlTitle2(e.title) === urlTitle2(item.category)
+  // );
+  // console.log("Found", found);
+
+  // const route = found?.route;
+  // return route ? `${route}${cat ? "" : urlTitle2(item.title) + "/"}` : "";
+  return `/${item.category}/${urlTitle2(item.title)}/`;
+};

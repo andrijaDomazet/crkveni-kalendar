@@ -14,6 +14,7 @@ import KalendarGodina from "./containters/KalendarGodina/KalendarGodina";
 import SinglePost from "./containters/SinglePost/SinglePost";
 import Footer from "./components/Footer/Footer";
 import NoMatch from "./containters/NoMatch/NoMatch";
+import SinglePost2 from "./containters/SinglePost/SinglePost2";
 
 export default function App() {
   return (
@@ -50,9 +51,19 @@ export default function App() {
             element={React.createElement(withIdProvider(SinglePost))}
           />
           <Route
+            path="/imenoslov/"
+            exact="true"
+            element={React.createElement(withIdProvider(SinglePost))}
+          />
+          <Route
             path="/molitvenik/"
             exact="true"
             element={React.createElement(withIdProvider(SinglePost))}
+          />
+          <Route
+            path="/molitvenik/:test"
+            exact="true"
+            element={React.createElement(withIdProvider(SinglePost2))}
           />
           <Route
             path="/widget/"

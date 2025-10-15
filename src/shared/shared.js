@@ -206,7 +206,7 @@ export const options = [
   },
   //2
   //   { route: "/manastiri", title: "Manastiri" },
-  // 3
+  // 2
   {
     route: "/zadusnice/",
     title: "Zadušnice",
@@ -216,7 +216,7 @@ export const options = [
       pics: ["/img/article_img/moon.jpg", "Pexels"],
     },
   },
-  //4
+  //3
   {
     route: "/meseceve-mene/",
     title: "Mesečeve mene",
@@ -226,7 +226,7 @@ export const options = [
       pics: ["/img/article_img/moon.jpg", "Pexels"],
     },
   },
-  //5
+  //4
   {
     route: "/slave/",
     title: "Slave",
@@ -236,7 +236,7 @@ export const options = [
       pics: ["/img/article_img/moon.jpg", "Pexels"],
     },
   },
-  //6
+  //5
   {
     title: "Ostalo",
     route: "/vesti/ostalo/",
@@ -252,7 +252,6 @@ export const options = [
           pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
         },
       },
-      // 5
       {
         title: "Imenoslov",
         route: "/imenoslov/",

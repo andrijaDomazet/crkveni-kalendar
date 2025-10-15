@@ -26,12 +26,13 @@
         flex-direction: column;
         .mainContent-text {
           .mainContent-lead {
-            font-size: 1.1rem;
-            line-height: 1.4rem;
+            font-size: 1.25rem;
+            line-height: 1.45rem;
             margin-bottom: 0.8rem;
           }
           p {
-            font-size: 16px; //?????????????????
+            padding: 0.2rem 0;
+            font-size: 20px; //?????????????????
             span {
               font-size: 1.15rem;
               font-weight: 900;
@@ -43,6 +44,12 @@
               // color: red;
               text-decoration: none;
             }
+          }
+          .molitveBoxes {
+            // border: 1px solid red;
+            display: grid;
+            gap: 0.5rem;
+            grid-template-columns: repeat(1, 1fr);
           }
           .tags {
             margin: 1rem 0;
@@ -200,6 +207,9 @@
             p {
               font-size: 1.25rem;
               padding: 0.25rem 0;
+            }
+            .molitveBoxes {
+              grid-template-columns: repeat(3, 1fr);
             }
           }
           .home__wrapper-right {

@@ -1,0 +1,156 @@
+@import "../../index.scss";
+
+.boxWrapper {
+  .artBox-wrapper {
+    height: 100%;
+    display: flex;
+    .artBox-img {
+      min-width: 140px;
+      img {
+        width: 140px;
+        height: 100%;
+        object-fit: cover;
+        overflow: hidden;
+      }
+    }
+    .artBox-desc {
+      display: flex;
+      flex-direction: column;
+      h3 {
+        color: $grey7;
+        font-weight: 500;
+        font-size: 1.1rem;
+        line-height: 1.2rem;
+      }
+      // .artBox-desc-other {
+      //   margin-top: auto;
+      //   padding: 0.4rem 0 0 0;
+      //   line-height: 0.9rem;
+      //   a {
+      //     font-size: 1rem;
+      //     font-weight: 600;
+      //     color: $dark2;
+
+      //     margin-right: 0.2rem;
+      //   }
+      //   span {
+      //     display: none;
+      //     font-size: 0.75rem;
+      //     color: $grey2;
+      //     font-weight: 600;
+      //     text-transform: lowercase;
+      //   }
+      // }
+      // .artBox-lead,
+      // button {
+      //   display: none;
+      // }
+    }
+  }
+}
+
+.boxWrapper.topNews {
+  background: $grey1;
+  .artBox-wrapper {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 0.6rem;
+    align-items: center;
+    .artBox-img {
+      flex: 1;
+      aspect-ratio: 3 / 2;
+      width: 100%;
+      height: auto;
+      img {
+        width: 100%;
+        border-radius: 0;
+      }
+    }
+    .artBox-desc {
+      width: 100%;
+      border: 3px solid white;
+      padding: 0.3rem;
+      margin: 0.6rem;
+      height: 80px;
+      a {
+        display: flex;
+        height: 80px;
+        align-items: center;
+        justify-content: center;
+        order: 2;
+        text-align: center;
+        h3 {
+          display: inline-block;
+          font-weight: bold;
+          font-size: 1.4rem;
+          line-height: 1.6rem;
+          text-align: center;
+        }
+      }
+      // .artBox-desc-other {
+      //   order: 1;
+      //   text-align: center;
+      //   padding: inherit;
+      //   margin-top: 1.5rem;
+      //   padding-bottom: 1rem;
+      //   a {
+      //     color: black;
+      //     text-transform: uppercase;
+      //   }
+      // }
+      // .artBox-lead {
+      //   display: inline;
+      //   order: 3;
+      //   color: $grey4;
+      //   text-align: center;
+      //   padding: 0.5rem 0;
+      //   margin-bottom: 1rem;
+      //   font-style: italic;
+      // }
+      // button {
+      //   display: inline;
+      //   font-size: 1.1rem;
+      //   order: 4;
+      //   padding: 0.3rem;
+      //   width: 180px;
+      //   border-radius: 0;
+      //   background: $barGreen4;
+      //   color: white;
+      //   text-align: center;
+      //   margin: 1rem auto;
+      //   margin-top: auto;
+      //   z-index: 0;
+      //   &:hover {
+      //     background: $barGreen3;
+      //   }
+      // }
+    }
+  }
+}
+
+@media screen and (min-width: $medium) {
+  .boxWrapper {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    .artBox-wrapper {
+      padding: 0;
+      .artBox-desc {
+        h3 {
+          font-size: 1.2rem;
+          line-height: 1.4rem;
+          margin: 0;
+        }
+        // .artBox-desc-other {
+        //   a {
+        //     color: $dark2;
+        //     margin-right: 0.2rem;
+        //   }
+        //   span {
+        //     font-size: 0.8rem;
+        //   }
+        // }
+      }
+    }
+  }
+}

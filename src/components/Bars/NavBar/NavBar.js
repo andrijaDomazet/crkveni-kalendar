@@ -18,26 +18,26 @@ export default function NavBar() {
         <>
           <div className="nav-link-wrapper">
             <NavLink
-              to={options[6].item_list[0].route + "/"}
+              to={options[5].item_list[0].route + "/"}
               exact="true"
               className="nav-link"
               onClick={() => {
                 handleClick();
               }}
             >
-              {options[6].item_list[0].title}
+              {options[5].item_list[0].title}
             </NavLink>
           </div>
           <div className="nav-link-wrapper">
             <NavLink
-              to={options[6].item_list[1].route + "/"}
+              to={options[5].item_list[1].route + "/"}
               exact="true"
               className="nav-link"
               onClick={() => {
                 handleClick();
               }}
             >
-              {options[6].item_list[1].title}
+              {options[5].item_list[1].title}
             </NavLink>
           </div>
         </>
@@ -135,7 +135,7 @@ export default function NavBar() {
           <img src="/img/logo.png" />
         </NavLink>
         {navBarOptions(3, 5)}
-        {/* {test(options, lastIndex)} */}
+        {test(options, lastIndex)}
       </div>
     </div>
   );

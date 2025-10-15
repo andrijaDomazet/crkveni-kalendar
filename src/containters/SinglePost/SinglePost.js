@@ -7,17 +7,33 @@ import { urlTitle2 } from "../../shared/utility";
 import Zadusnice from "../../components/Zadusnice/Zadusnice";
 import CrossingData from "../../components/CrossingData/CrossingData";
 import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
+import ArticleBox from "../../components/ArticleBox/ArticleBox";
 import Widget from "../../UI/Widget/Widget";
+import Molitva from "../../components/Molitva/Molitva";
+import molitve from "../../molitve.json";
 export default function SinglePost() {
   const { id, slug, data } = useIdContext();
   const { pathPart } = useGlobalLocation();
   const [isNews, setIsNews] = useState(() => setArticleState());
+  console.log("molitve", molitve);
+
   console.log("pathPart", pathPart[1] === "zadusnice");
 
   function setArticleState() {
     return data.find((post) => {
       return urlTitle2(post.title) === pathPart[1];
     });
+  }
+  function molitveBoxes() {
+    return (
+      <div className="molitveBoxes">
+        {molitve.map((item, index) => {
+          return (
+            <ArticleBox key={index} n={item} classes="boxWrapper topNews" />
+          );
+        })}
+      </div>
+    );
   }
   return (
     <div className="singlePost">
@@ -32,11 +48,15 @@ export default function SinglePost() {
               Foto: {isNews.pics && isNews.pics[1]}
             </div>
           </div>
+
           <div className="mainContent-body">
             <div className="mainContent-text">
               <strong className="mainContent-lead">{isNews.lead}</strong>
 
               <BodyText bodyText={isNews.body} />
+              {/* <Molitva /> */}
+              {pathPart[1] === "molitvenik" && molitveBoxes()}
+              {/* <ArticleBox n={molitve[0]} classes="boxWrapper topNews" /> */}
               <div>{pathPart[1] === "zadusnice" && <Zadusnice />}</div>
               <div>{pathPart[1] === "slave" && <CrossingData />}</div>
               <div className="banner-wrapper">
@@ -57,7 +77,9 @@ export default function SinglePost() {
 
             <div className="home__wrapper-right">
               {/* <Zadusnice /> */}
-              {pathPart[1] !== "zadusnice" && <Zadusnice />}
+              {["slave", "meseceve-mene"].includes(pathPart[1]) && (
+                <Zadusnice />
+              )}
               <div className="banner-wrapper xl_sticky">
                 <AdManagerSlot slotNumber={"div-gpt-ad-1750411708088-0"} />
               </div>

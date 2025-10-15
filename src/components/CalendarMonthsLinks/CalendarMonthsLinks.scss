@@ -1,21 +1,17 @@
 @import "../../index.scss";
 
 .calendar-allMonths {
-  // border-radius: 0.5rem;
   margin: 1rem 0;
   width: 100%;
   // box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
-// background: $blue1;
   thead {
     tr {
       th {
-        // background: $grey1;
         background: $blue1;
         padding: 0.3rem;
         text-align: left;
         h2 {
           padding: 0 0.3rem;
-          color: $grey4;
           color: white;
           font-size: 1.2rem;
         }
@@ -38,6 +34,22 @@
           text-decoration: underline;
           h3 {
             font-weight: normal;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .calendar-allMonths {
+    tbody {
+      tr {
+        td {
+          a {
+            h3 {
+              font-size: 1.25rem;
+            }
           }
         }
       }
