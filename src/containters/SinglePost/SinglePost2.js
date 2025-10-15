@@ -48,7 +48,7 @@ export default function SinglePost2() {
         <main className="mainContent">
           <article className="mainContent-wrapper">
             <h1 className="mainContent-title">{setTitle(newsPost)}</h1>
-            <strong className="mainContent-lead">{newsPost.lead}</strong>
+            {/* <strong className="mainContent-lead">{newsPost.lead}</strong> */}
             <div className="mainContent-img">
               <img src={`${newsPost.pics[0]}`} alt="" />
               <div className="mainContent-img_source">

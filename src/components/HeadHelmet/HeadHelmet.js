@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from "react";
 import Helmet from "react-helmet";
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import { options } from "../../shared/shared";
 import data from "../../all__news";
+import molitve from "../../molitve.json";
+import { urlTitle2 } from "../../shared/utility";
 
 export default function HeadHelmet() {
   const loc = useLocation();
+  const { id, test } = useParams();
   let pathPart = loc.pathname.split("/");
   let lastPathPart = pathPart[pathPart.length - 2];
-  const tagNews = data.filter((item) => {
-    // return urlTitle2(item.tags[0]) === lastPathPart;
-  });
+  // const tagNews = data.filter((item) => {
+  //   // return urlTitle2(item.tags[0]) === lastPathPart;
+  // });
   // console.log("PAth part", pathPart[1] === "crkveni-kalendar", pathPart);
   const [post, setPost] = useState(() => setArticleState());
 
@@ -21,24 +24,57 @@ export default function HeadHelmet() {
   }, [loc.pathname]);
 
   function setArticleState() {
+    let lastPathPart = pathPart[pathPart.length - 2];
+    console.log("Pathparts helmet", pathPart);
+    console.log("Last Pathparts helmet", lastPathPart);
+
     if (lastPathPart === "") {
       console.log("IF 1");
+
       let post = options[0].social;
       return post;
+
       // } else if (pathPart[1] === "crkveni-kalendar" && pathPart.length > 2) {
     } else if (pathPart.length === 4) {
       //po mesecima
       console.log("Else 1");
-      let post = options[1].social2;
-      let testSocTag = {
-        pics: post.pics,
-        source: "crkveni-kalendar.net",
-        title: `Crkveni pravoslavni kalendar - ${lastPathPart.toUpperCase()} ${pathPart[1]} `,
-        // time2: tagNews[tagNews.length - 1].time2,
-        // modified: tagNews[0].time2,
-        lead: `Crkveni pravoslavni kalendar - ${lastPathPart.toUpperCase()} ${pathPart[1]} ${post.lead} za ${pathPart[2]} ${pathPart[1]}. godine`,
-      };
-      return testSocTag;
+      if (pathPart[1] === "molitvenik") {
+        console.log("Else 1 - MOLITVENIK");
+        // const post2 = () => {
+        //   let dd = molitve.filter((item) => {
+        //     return urlTitle2(item.title) === test;
+        //   });
+
+        //   return dd[0];
+        // };
+        // console.log("POST", post2);
+        // return post2;
+
+        let post = molitve.filter((item) => {
+          // console.log("ITEM", urlTitle2(item.title), pathPart[2]);
+          return urlTitle2(item.title) === pathPart[2];
+        });
+        let postTitle = post[0].title;
+        post[0].lead = `${post[0].title}, tekst molitve: ${post[0].lead}`;
+        let post2 = post[0];
+        console.log("POST", post2);
+        return post2;
+      } else {
+        let post = options[1].social2;
+        let testSocTag = {
+          pics: post.pics,
+          source: "crkveni-kalendar.net",
+          title: `Crkveni pravoslavni kalendar - ${lastPathPart.toUpperCase()} ${
+            pathPart[1]
+          } `,
+          // time2: tagNews[tagNews.length - 1].time2,
+          // modified: tagNews[0].time2,
+          lead: `Crkveni pravoslavni kalendar - ${lastPathPart.toUpperCase()} ${
+            pathPart[1]
+          } ${post.lead} za ${pathPart[2]} ${pathPart[1]}. godine`,
+        };
+        return testSocTag;
+      }
     } else if (pathPart[1] === "crkveni-kalendar" && pathPart.length === 2) {
       console.log("Else 2");
       let post = options[3].social;
@@ -60,7 +96,10 @@ export default function HeadHelmet() {
     <Helmet>
       <meta charSet="utf-8" />
       <title>{setTitle(post)}</title>
-      <link rel="canonical" href={"https://crkveni-kalendar.net" + loc.pathname} />
+      <link
+        rel="canonical"
+        href={"https://crkveni-kalendar.net" + loc.pathname}
+      />
       <meta name="description" content={post.lead} />
       {/* Opengraph - Facebook */}
       <meta property="og:locale" content="sr-RS" />
@@ -75,7 +114,10 @@ export default function HeadHelmet() {
       <meta property="og:image:height" content="480" />
       <meta property="og:image:alt" content={setTitle(post)} />
       <meta property="og:image:type" content="image/jpeg" />
-      <meta property="og:url" content={"https://crkveni-kalendar.net" + loc.pathname} />
+      <meta
+        property="og:url"
+        content={"https://crkveni-kalendar.net" + loc.pathname}
+      />
       {/* <meta property="article:published_time" content={post.time2} /> */}
       {/* {setModifiedTime(post.modified)} */}
       <meta property="og:description" content={post.lead} />

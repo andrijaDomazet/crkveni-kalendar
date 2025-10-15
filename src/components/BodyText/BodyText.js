@@ -1,7 +1,9 @@
-import React, {lazy, Suspense } from "react";
+import React, { lazy, Suspense } from "react";
 import "./BodyText.scss";
 import AdManagerSlot from "../AdvModule/AdManagerSlot";
-const PostImage = lazy(() => import("../../containters/SinglePost/img/PostImage.js"));
+const PostImage = lazy(() =>
+  import("../../containters/SinglePost/img/PostImage.js")
+);
 
 const setSubTitle = (item) =>
   item.subtitle ? (
