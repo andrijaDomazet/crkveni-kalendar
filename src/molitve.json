@@ -1,6 +1,7 @@
 [
   {
-    "news_id": 10001,
+    "published": true,
+    "news_id": 10006,
     "time": "1. jun",
     "category": "molitvenik",
     "pics": [
@@ -43,7 +44,8 @@
     "source": "crkveni-kalendar"
   },
   {
-    "news_id": 10001,
+    "published": true,
+    "news_id": 10005,
     "time": "1. jun",
     "category": "molitvenik",
     "pics": [
@@ -70,7 +72,8 @@
     "source": "crkveni-kalendar"
   },
   {
-    "news_id": 10001,
+    "published": true,
+    "news_id": 10004,
     "time": "1. jun",
     "category": "molitvenik",
     "pics": [
@@ -97,7 +100,8 @@
     "source": "crkveni-kalendar"
   },
   {
-    "news_id": 10001,
+    "published": true,
+    "news_id": 10003,
     "time": "1. jun",
     "category": "molitvenik",
     "pics": [
@@ -136,7 +140,8 @@
     "source": "crkveni-kalendar"
   },
   {
-    "news_id": 10001,
+    "published": true,
+    "news_id": 10002,
     "time": "1. jun",
     "category": "molitvenik",
     "pics": [
@@ -171,6 +176,7 @@
     "source": "crkveni-kalendar"
   },
   {
+    "published": true,
     "news_id": 10001,
     "time": "1. jun",
     "category": "molitvenik",

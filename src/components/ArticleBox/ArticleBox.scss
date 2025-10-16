@@ -17,7 +17,7 @@
       display: flex;
       flex-direction: column;
       h3 {
-        color: $grey7;
+        color: white;
         font-weight: 500;
         font-size: 1.1rem;
         line-height: 1.2rem;
@@ -27,7 +27,8 @@
 }
 
 .boxWrapper.topNews {
-  background: $grey1;
+  background: $blue1;
+  border-radius: 0.3rem;
   .artBox-wrapper {
     flex-direction: column;
     width: 100%;
@@ -45,7 +46,8 @@
     }
     .artBox-desc {
       width: 100%;
-      border: 3px solid white;
+      border-radius: 0.3rem;
+      border: 1px solid white;
       padding: 0.3rem;
       margin: 0.6rem;
       height: 80px;

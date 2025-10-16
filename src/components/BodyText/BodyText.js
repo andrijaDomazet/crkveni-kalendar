@@ -37,6 +37,7 @@ const setImg = (item) => {
     );
   }
 };
+
 export default function BodyText(props) {
   const { pathPart } = useGlobalLocation();
   console.log("PAth parts");

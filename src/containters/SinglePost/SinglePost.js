@@ -29,7 +29,9 @@ export default function SinglePost() {
       <div className="molitveBoxes">
         {molitve.map((item, index) => {
           return (
-            <ArticleBox key={index} n={item} classes="boxWrapper topNews" />
+            item.published && (
+              <ArticleBox key={index} n={item} classes="boxWrapper topNews" />
+            )
           );
         })}
       </div>
