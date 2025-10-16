@@ -3,6 +3,7 @@
   // box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
   .first {
     color: $grey5;
+    // color: red;
     display: flex;
     justify-content: space-between;
     margin-bottom: 0.5rem;
@@ -15,13 +16,12 @@
       color: $grey7;
     }
     .yearBox {
-      z-index: +999;
+      display: flex;
+      z-index: 100;
       padding: 0 0.3rem;
       background: white;
       border: 1px solid $grey7;
       border-radius: 0.3rem;
-      cursor: pointer;
-      display: flex;
       height: 2rem;
       color: $grey7;
       b {
@@ -44,28 +44,29 @@
       height: 2rem;
       width: 100%;
       position: relative;
+      // border: 1px solid red;
       .drop_down_menu {
-        z-index: +100;
-        padding: 0.2rem;
-        width: 80px;
-        position: absolute;
         display: flex;
         flex-direction: column;
-        top: 28px;
+        padding: 0.2rem;
+        width: 90px;
+        position: absolute;
+        top: 30px;
         right: -4px;
         background: white;
-        box-shadow: 0 0 7px $grey4;
+        box-shadow: 0 0 13px $grey2;
         border-bottom-left-radius: 0.3rem;
         border-bottom-right-radius: 0.3rem;
         list-style-type: none;
+        z-index: 100;
         a {
           text-align: center;
           width: 100%;
           border-radius: 5px;
-          color: black;
+          color: $grey7;
           line-height: 35px;
           font-size: 1.1rem;
-          margin: 5px 0;
+          margin: 3px 0;
         }
       }
       .drop_down_menu.close {
@@ -254,11 +255,15 @@
       h1 {
         font-size: 1.6rem;
       }
+      .yearBox {
+        cursor: pointer;
+      }
       .botDiv {
         .drop_down_menu {
           a {
             &:hover {
               background: $grey1;
+              font-weight: 700;
             }
           }
         }
