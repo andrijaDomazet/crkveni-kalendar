@@ -31,7 +31,6 @@
   .wBox {
     width: 100%;
     .box-wrapper {
-      // border: 2px solid red;
       flex-direction: column;
       width: 100%;
       height: 350px;
@@ -44,7 +43,6 @@
       .box-content {
         display: flex;
         flex-direction: column;
-        //   border: 1px solid green;
         height: 130px;
         h2 {
           color: black;
@@ -60,8 +58,6 @@
           margin: 0;
           margin-top: auto;
           padding: 0 0.4rem;
-          // margin: 0;
-          // border: 1px solid red;
         }
       }
     }

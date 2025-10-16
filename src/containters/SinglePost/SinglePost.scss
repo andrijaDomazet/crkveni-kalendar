@@ -40,8 +40,7 @@
             a {
               font-weight: 900;
               font-size: 1.15rem;
-              color: $green2;
-              // color: red;
+              color: $blue1;
               text-decoration: none;
             }
           }
@@ -58,6 +57,7 @@
               font-size: 1.6rem;
               line-height: 2rem;
               border: none;
+              // padding-bottom: 1rem;
             }
             .tags__arr {
               display: flex;
@@ -68,8 +68,8 @@
                 padding: 0.2rem 0.8rem;
                 margin-right: 0.3rem;
                 border-radius: 0.3rem;
-                color: $eggShell4;
-                background: $eggShell;
+                color: white;
+                background: $orange2;
                 font-weight: 600;
                 margin-bottom: 0.3rem;
               }
@@ -95,12 +95,12 @@
       h4 {
         margin-top: 1rem;
         font-size: 1.6rem;
-        border-bottom: 3px solid $green4;
+        border-bottom: 3px solid $blue1;
         margin-bottom: 0.5rem;
       }
 
       .mainContent-subtitle {
-        color: $green4;
+        color: $blue1;
         padding-top: 0.8rem;
         font-size: 1.4rem;
         line-height: 2.2rem;
@@ -121,7 +121,7 @@
     padding: 0 0.4rem;
     h4 {
       font-size: 1.4rem;
-      border-bottom: 3px solid $green4;
+      border-bottom: 3px solid $blue1;
     }
   }
   .home__box__11 {
