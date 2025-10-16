@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from "react";
 import "./BodyText.scss";
 import AdManagerSlot from "../AdvModule/AdManagerSlot";
+import { useGlobalLocation } from "../../shared/LocationContext.js";
 const PostImage = lazy(() =>
   import("../../containters/SinglePost/img/PostImage.js")
 );
@@ -37,6 +38,9 @@ const setImg = (item) => {
   }
 };
 export default function BodyText(props) {
+  const { pathPart } = useGlobalLocation();
+  console.log("PAth parts");
+
   return (
     <div className="bodyText">
       {props.bodyText?.map((item, index) => {
@@ -47,9 +51,11 @@ export default function BodyText(props) {
               <p dangerouslySetInnerHTML={{ __html: item["text"] }}></p>
               {setQuote(item)}
               {setImg(item)}
-              <div className="banner-wrapper">
-                <AdManagerSlot slotNumber={"div-gpt-ad-1750930023966-0"} />
-              </div>
+              {pathPart[1] !== "molitvenik" && (
+                <div className="banner-wrapper">
+                  <AdManagerSlot slotNumber={"div-gpt-ad-1750930023966-0"} />
+                </div>
+              )}
             </div>
           );
         } else {

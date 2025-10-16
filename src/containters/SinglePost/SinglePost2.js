@@ -55,7 +55,7 @@ export default function SinglePost2() {
                 Foto: {newsPost.pics[1]}
               </div>
             </div>
-            <div>
+            <div className="mainContent-text">
               <Molitva molitva={newsPost} />
             </div>
           </article>

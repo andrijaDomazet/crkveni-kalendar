@@ -39,25 +39,11 @@ export default function HeadHelmet() {
       //po mesecima
       console.log("Else 1");
       if (pathPart[1] === "molitvenik") {
-        console.log("Else 1 - MOLITVENIK");
-        // const post2 = () => {
-        //   let dd = molitve.filter((item) => {
-        //     return urlTitle2(item.title) === test;
-        //   });
-
-        //   return dd[0];
-        // };
-        // console.log("POST", post2);
-        // return post2;
-
         let post = molitve.filter((item) => {
-          // console.log("ITEM", urlTitle2(item.title), pathPart[2]);
           return urlTitle2(item.title) === pathPart[2];
         });
-        let postTitle = post[0].title;
         post[0].lead = `${post[0].title}, tekst molitve: ${post[0].lead}`;
         let post2 = post[0];
-        console.log("POST", post2);
         return post2;
       } else {
         let post = options[1].social2;

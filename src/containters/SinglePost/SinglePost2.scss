@@ -75,6 +75,12 @@
           font-size: 1.8rem;
           line-height: 2rem;
         }
+              .mainContent-text {
+            padding: 1rem;
+            p {
+              padding: 0.3rem 0;
+            }
+          }
         .mainContent-cat {
           background: $dark5;
           font-size: 1.2rem;
@@ -148,6 +154,7 @@
   .singlePost2 {
     width: 1200px;
     margin: 0 auto;
+    // border: 1px solid red;
     .content {
       margin-bottom: 2rem;
       padding-top: 1rem;
@@ -177,6 +184,12 @@
           .mainContent-title {
             font-size: 2.6rem;
             line-height: 3rem;
+          }
+          .mainContent-text {
+            padding: 2rem;
+            p {
+              padding: 0.5rem 0;
+            }
           }
           .mainContent-lead {
             display: inline-block;
