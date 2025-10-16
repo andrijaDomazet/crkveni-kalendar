@@ -9,7 +9,7 @@
     ],
     "title": "Molitva za upokojene",
     "title_2": "",
-    "lead": "",
+    "lead": "Pomeni, Gospode, oce i braću našu usnule u nadi na vaskrsenje u život večni, i sve upokojene u pobožnosti i veri, i oprosti im svako sagrešenje, hotimično i nehotimično, što sagrešiše rečju, ili delom, ili mišlju.",
     "body": [
       {
         "subtitle": "",
@@ -118,7 +118,11 @@
       },
       {
         "subtitle": "",
-        "text": "U Tebe se uzdam, Bože moj, da Ti svetlošću znanja Svoga prosvetiš um moj i razum,<br>da bih ne samo čitao napisano nego ga i vršio.<br>Molim Ti se, i sa suzama pripadajući vapijem Ti:<br>Gospode, prosveti me, nauči me, urazumi me,<br>da svetu reč Tvoju i žitija Svetaca Tvojih čitam ne na greh,<br>nego na obnovljenje i prosvećenje,<br>na osvećenje i spasenje duše moje,<br>i na nasleđe večnoga života.<br/><strong>Amin.</strong>"
+        "text": "U Tebe se uzdam, Bože moj, da Ti svetlošću znanja Svoga prosvetiš um moj i razum,<br>da bih ne samo čitao napisano nego ga i vršio.<br>Molim Ti se, i sa suzama pripadajući vapijem Ti:<br>Gospode, prosveti me, nauči me, urazumi me,<br>da svetu reč Tvoju i žitija Svetaca Tvojih čitam ne na greh,<br>nego na obnovljenje i prosvećenje,<br>na osvećenje i spasenje duše moje,<br>i na nasleđe večnoga života."
+      },
+      {
+        "subtitle": "",
+        "text": "<strong>Amin.</strong>"
       }
     ],
     "tags": [
@@ -149,7 +153,11 @@
       },
       {
         "subtitle": "",
-        "text": " I sada prosveti moje duhovne oči,<br>otvori moja usta da se poučavam rečima Tvojim<br>i razumem zapovesti Tvoje i tvorim volju Tvoju<br>i pevam Tebi u srdačnom ispovedanju<br>i slavim presveto ime Tvoje,<br>Oca i Sina i Svetoga Duha,<br>sada i uvek i u vekove vekova.<br/><strong>Amin.</strong>"
+        "text": " I sada prosveti moje duhovne oči,<br>otvori moja usta da se poučavam rečima Tvojim<br>i razumem zapovesti Tvoje i tvorim volju Tvoju<br>i pevam Tebi u srdačnom ispovedanju<br>i slavim presveto ime Tvoje,<br>Oca i Sina i Svetoga Duha,<br>sada i uvek i u vekove vekova."
+      },
+      {
+        "subtitle": "",
+        "text": "<strong>Amin.</strong>"
       }
     ],
     "tags": [
@@ -180,11 +188,15 @@
       },
       {
         "subtitle": "",
-        "text": "<p>Hleb naš nasušni daj nam danas,<br>i oprosti nam dugove naše,<br>kao što i mi opraštamo dužnicima svojim;<br>i ne uvedi nas u iskušenje,<br>no izbavi nas od zloga.</p>"
+        "text": "Hleb naš nasušni daj nam danas,<br>i oprosti nam dugove naše,<br>kao što i mi opraštamo dužnicima svojim;<br>i ne uvedi nas u iskušenje,<br>no izbavi nas od zloga."
       },
       {
         "subtitle": "",
-        "text": "<p>Jer je Tvoje Carstvo,<br>i sila, i slava<br>u vekove vekova.<br><strong>Amin.</strong></p>"
+        "text": "Jer je Tvoje Carstvo,<br>i sila, i slava<br>u vekove vekova."
+      },
+      {
+        "subtitle": "",
+        "text": "<strong>Amin.</strong>"
       }
     ],
     "tags": [
