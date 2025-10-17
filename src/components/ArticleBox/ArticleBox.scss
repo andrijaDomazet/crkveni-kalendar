@@ -46,14 +46,14 @@
     }
     .artBox-desc {
       width: 100%;
-      border-radius: 0.3rem;
+      // border-radius: 0.3rem;
       border: 1px solid white;
       padding: 0.3rem;
       margin: 0.6rem;
-      height: 80px;
+      height: 60px;
       a {
         display: flex;
-        height: 80px;
+        height: 60px;
         align-items: center;
         justify-content: center;
         order: 2;
@@ -78,10 +78,14 @@
     .artBox-wrapper {
       padding: 0;
       .artBox-desc {
-        h3 {
-          font-size: 1.2rem;
-          line-height: 1.4rem;
-          margin: 0;
+        height: 80px;
+        a {
+          height: 80px;
+          h3 {
+            font-size: 1.2rem;
+            line-height: 1.4rem;
+            margin: 0;
+          }
         }
       }
     }

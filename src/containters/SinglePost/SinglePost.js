@@ -9,15 +9,13 @@ import CrossingData from "../../components/CrossingData/CrossingData";
 import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
 import ArticleBox from "../../components/ArticleBox/ArticleBox";
 import Widget from "../../UI/Widget/Widget";
-import Molitva from "../../components/Molitva/Molitva";
 import molitve from "../../molitve.json";
+import PostImage from "./img/PostImage";
+
 export default function SinglePost() {
   const { id, slug, data } = useIdContext();
   const { pathPart } = useGlobalLocation();
   const [isNews, setIsNews] = useState(() => setArticleState());
-  console.log("molitve", molitve);
-
-  console.log("pathPart", pathPart[1] === "zadusnice");
 
   function setArticleState() {
     return data.find((post) => {
@@ -37,28 +35,37 @@ export default function SinglePost() {
       </div>
     );
   }
+
+  const displayTitle = isNews.title_2 || isNews.title;
+
   return (
     <div className="singlePost">
       <div className="content">
         <main className="mainContent">
-          <div className="mainContent-img">
+          <figure
+            className="mainContent-img"
+            itemProp="image"
+            itemScope
+            itemType="https://schema.org/ImageObject"
+          >
             <div className="mainContent-title">
               <h1>{isNews.title_2 || isNews.title}</h1>
             </div>
-            <img src={`${isNews.pics[0]}`} alt="" />
+            <PostImage
+              src={isNews.pics[0]}
+              alt={displayTitle}
+              loading="eager"
+            />
             <div className="mainContent-img_source">
               Foto: {isNews.pics && isNews.pics[1]}
             </div>
-          </div>
+          </figure>
 
           <div className="mainContent-body">
             <div className="mainContent-text">
               <strong className="mainContent-lead">{isNews.lead}</strong>
-
               <BodyText bodyText={isNews.body} />
-              {/* <Molitva /> */}
               {pathPart[1] === "molitvenik" && molitveBoxes()}
-              {/* <ArticleBox n={molitve[0]} classes="boxWrapper topNews" /> */}
               <div>{pathPart[1] === "zadusnice" && <Zadusnice />}</div>
               <div>{pathPart[1] === "slave" && <CrossingData />}</div>
               <div className="banner-wrapper">
@@ -78,7 +85,6 @@ export default function SinglePost() {
             </div>
 
             <div className="home__wrapper-right">
-              {/* <Zadusnice /> */}
               {["slave", "meseceve-mene"].includes(pathPart[1]) && (
                 <Zadusnice />
               )}
