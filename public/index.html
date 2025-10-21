@@ -5,10 +5,7 @@
     <link rel="icon" href="/img/krst__logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#d6d6d6" />
-    <meta
-      name="google-site-verification"
-      content="B0KDDVUOGlx-VYWnVEmissm4bwysllkE_eyBTwEC27w"
-    />
+    <meta name="google-site-verification" content="B0KDDVUOGlx-VYWnVEmissm4bwysllkE_eyBTwEC27w" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <!--
@@ -20,19 +17,21 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1EQZLGPRPD"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
+      gtag("config", "G-1EQZLGPRPD");
+    </script>
+    
     <!-- Start AdManager -->
-    <script
-      async
-      src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"
-    ></script>
+    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
     <script>
       var googletag = googletag || {};
       googletag.cmd = googletag.cmd || [];
@@ -158,12 +157,7 @@
           .addService(googletag.pubads())
           .defineSizeMapping(mappingInText);
 
-        interstitialSlot = googletag
-          .defineOutOfPageSlot(
-            "/23098387262/crkveni-kalendar/crkveni-kalendar-interstitial",
-            googletag.enums.OutOfPageFormat.INTERSTITIAL
-          )
-          .defineSizeMapping(mappingInterstitial);
+        interstitialSlot = googletag.defineOutOfPageSlot("/23098387262/crkveni-kalendar/crkveni-kalendar-interstitial", googletag.enums.OutOfPageFormat.INTERSTITIAL).defineSizeMapping(mappingInterstitial);
         if (interstitialSlot) interstitialSlot.addService(googletag.pubads());
         // googletag.pubads().enableSingleRequest();
         interstitialSlot.setConfig({
@@ -206,18 +200,8 @@
             return;
           }
         }
-        (k = e.createElement(t)),
-          (a = e.getElementsByTagName(t)[0]),
-          (k.async = 1),
-          (k.src = r),
-          a.parentNode.insertBefore(k, a);
-      })(
-        window,
-        document,
-        "script",
-        "https://mc.yandex.ru/metrika/tag.js",
-        "ym"
-      );
+        (k = e.createElement(t)), (a = e.getElementsByTagName(t)[0]), (k.async = 1), (k.src = r), a.parentNode.insertBefore(k, a);
+      })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
       ym(99513608, "init", {
         clickmap: true,
@@ -228,11 +212,7 @@
     </script>
     <noscript
       ><div>
-        <img
-          src="https://mc.yandex.ru/watch/99513608"
-          style="position: absolute; left: -9999px"
-          alt=""
-        /></div
+        <img src="https://mc.yandex.ru/watch/99513608" style="position: absolute; left: -9999px" alt="" /></div
     ></noscript>
     <!-- /Yandex.Metrika counter -->
   </head>
