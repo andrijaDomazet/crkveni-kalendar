@@ -6,13 +6,7 @@ import React from "react";
 import { createContext, useContext, useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import data from "../all__news";
-import {
-  calendarYears,
-  easterDays,
-  idsMonths,
-  manualDateEaster,
-  monthSerb,
-} from "../components/Calendar/calendar-data/calendar-data";
+import { calendarYears, daysIsNotPost, daysIsPost, easterDays, idsMonths, manualDateEaster, monthSerb } from "../components/Calendar/calendar-data/calendar-data";
 import { renderTitleSection } from "./utility";
 import news2 from "../components/Calendar/calendar-data/all__news4.json";
 const IdContext = createContext();
@@ -23,42 +17,93 @@ export const IdProvider = ({ children }) => {
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
   const { slug, id } = useParams();
+  // console.log("SLUG, id:", slug, id);
+  const isYear = Number(slug) || currentDate.getFullYear();
+  const isMonth = id ? monthSerb.indexOf(id) : currentDate.getMonth();
 
-  const [isYear, setIsYear] = useState(() => {
-    return slug || currentDate.getFullYear();
-  });
-
-  const [isMonth, setIsMonth] = useState(() =>
-    id === undefined ? currentDate.getMonth() : monthSerb.indexOf(id)
-  );
   const [isEasterDay, setIsEasterDay] = useState("");
-  const [isRealDay, setIsRealDay] = useState("");
-  useEffect(() => {
-    if (slug && id) {
-      setIsYear(slug);
-      setIsMonth(monthSerb.indexOf(id));
-    }
+  // const [isRealDay, setIsRealDay] = useState("");
 
+  useEffect(() => {
     setHolidays(filterHolidays);
   }, [isYear, isMonth, slug, id]);
 
   let easter = isYear - 2020;
   let easterDay = new Date(`${isYear}-${manualDateEaster[easter]}`);
+  const easterDate = new Date(easterDay);
+  const endEasterDate = new Date(easterDate);
+  endEasterDate.setDate(easterDate.getDate() - 1);
+
+  const startEasterDate = new Date(easterDate);
+  startEasterDate.setDate(easterDate.getDate() - 49);
+
+  const endBelaNedelja = new Date(easterDate);
+  endBelaNedelja.setDate(easterDate.getDate() + 7);
+
+  const startPetrovskiPost = new Date(easterDate);
+  startPetrovskiPost.setDate(easterDate.getDate() + 57);
+
+  const endPetrovskiPost = new Date(isYear, 6, 12);
+
+  const startGospojinskiPost = new Date(isYear, 7, 14);
+  const endGospojinskiPost = new Date(isYear, 7, 27);
+
+  const setPostDays = (dateInfo, diffInDays) => {
+    // console.log("ITEM calendar", dateInfo.date);
+    let setDateFromDateInfo = new Date(dateInfo);
+    //start - Bozic i Bozicni post
+    let bozicniPostStart = new Date(isYear, 10, 28);
+    let bozicniPostEnd = new Date(isYear, 0, 6);
+    let vikendPosleBozica = new Date(isYear, 0, 17);
+    let notPost = daysIsNotPost.map((item) => new Date(isYear, item[0], item[1]).setHours(0, 0, 0, 0));
+    let isPost = daysIsPost.map((item) => new Date(isYear, item[0], item[1]).setHours(0, 0, 0, 0));
+    let setDateDay = setDateFromDateInfo.getDay();
+    if (setDateFromDateInfo >= bozicniPostStart) {
+      return "post";
+    } else if (setDateFromDateInfo <= bozicniPostEnd) {
+      return "post";
+    } else if (
+      //Uskrsnji post
+      setDateFromDateInfo <= endEasterDate &&
+      startEasterDate <= setDateFromDateInfo
+    ) {
+      return "post";
+    } else if (
+      //Petrovski post
+      setDateFromDateInfo < endPetrovskiPost &&
+      startPetrovskiPost <= setDateFromDateInfo
+    ) {
+      return "post";
+    } else if (
+      //Gospojinski post
+      setDateFromDateInfo <= endGospojinskiPost &&
+      startGospojinskiPost <= setDateFromDateInfo
+    ) {
+      return "post";
+    } else if (setDateFromDateInfo <= vikendPosleBozica) {
+      //Bela nedelja
+      return "";
+    } else if (setDateFromDateInfo > easterDate && setDateFromDateInfo <= endBelaNedelja) {
+      return "";
+    } else if (setDateDay === 3 || setDateDay === 5) {
+      if (!notPost.includes(setDateFromDateInfo.setHours(0, 0, 0, 0))) {
+        return "post";
+      }
+    } else if (isPost.includes(setDateFromDateInfo.setHours(0, 0, 0, 0))) {
+      return "post";
+    } else {
+      return "";
+    }
+  };
 
   const [holidays, setHolidays] = useState(filterHolidays);
 
   function filterHolidays() {
-    let yearIndex = calendarYears[0].item_list.findIndex(
-      (item) => item.title == isYear
-    );
+    let yearIndex = calendarYears[0].item_list.findIndex((item) => item.title == isYear);
     //zadusnice-------------------------------------------------------------
-    let zadusniceIndex = calendarYears[0].item_list[
-      yearIndex
-    ].zadusnice.findIndex((item) => item[0] == isMonth);
+    let zadusniceIndex = calendarYears[0].item_list[yearIndex].zadusnice.findIndex((item) => item[0] == isMonth);
 
-    let zadusniceDate = calendarYears[0].item_list[yearIndex].zadusnice.find(
-      (item) => item[0] === isMonth
-    );
+    let zadusniceDate = calendarYears[0].item_list[yearIndex].zadusnice.find((item) => item[0] === isMonth);
     //end---------------------------------------------------------------------
     //uskrs-------------------------------------------------------------------
     let easter = isYear - 2020;
@@ -66,10 +111,7 @@ export const IdProvider = ({ children }) => {
     let setHol = monthData.slice(idsMonths[isMonth][0], idsMonths[isMonth][1]);
     //end---------------------------------------------------------------------
     let setHolTest = setHol.map((item, index) => {
-      item.title = Array.isArray(item.title)
-        ? item.title.map((item) => item)
-        : [item.title];
-
+      item.title = Array.isArray(item.title) ? item.title.map((item) => item) : [item.title];
       let setDate = new Date(isYear, isMonth, index);
       let currentDay2 = setDate.getDay();
 
@@ -88,9 +130,7 @@ export const IdProvider = ({ children }) => {
             <Link to="/zadusnice/" className="zadusniceStrong">
               Zadušnice
             </Link>{" "}
-            <strong style={{ color: "black", fontWeight: 600 }}>
-              {calendarYears[0].zadusnice[zadusniceIndex]}
-            </strong>
+            <strong style={{ color: "black", fontWeight: 600 }}>{calendarYears[0].zadusnice[zadusniceIndex]}</strong>
           </>
         );
       }
@@ -100,15 +140,11 @@ export const IdProvider = ({ children }) => {
       let easterDay = new Date(`${isYear}-${manualDateEaster[easter]}`);
       setIsEasterDay(easterDay);
       let diffInDays = (easterDay - date1) / (1000 * 60 * 60 * 24); // Razlika u danima
+
       if (diffInDays >= -2 && diffInDays <= 6) {
         item.title = renderTitleSection({
           extraLabel: easterDays[easterDays.length - 3 - diffInDays],
-          strongClass:
-            currentDay2 === 3 || currentDay2 === 5
-              ? "blackStrong"
-              : diffInDays < 4
-              ? "redStrong"
-              : "blackStrong",
+          strongClass: currentDay2 === 3 || currentDay2 === 5 ? "blackStrong" : diffInDays < 4 ? "redStrong" : "blackStrong",
         });
       } else if (diffInDays == -24) {
         item.title = renderTitleSection({
@@ -206,9 +242,11 @@ export const IdProvider = ({ children }) => {
           separatorSymbol: "; ",
         });
       }
+      item.post = setPostDays(item.date, diffInDays);
       return item;
     });
-    setIsRealDay(setHolTest);
+
+    // setIsRealDay(setHolTest);
 
     return setHolTest;
   }

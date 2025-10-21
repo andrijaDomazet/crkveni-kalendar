@@ -1,14 +1,7 @@
 import React, { useState } from "react";
 import "./Calendar.scss";
 import { NavLink, useNavigate } from "react-router-dom";
-import {
-  daysIsPost,
-  daysIsNotPost,
-  monthSerb,
-  calendarYears,
-  redDaysId,
-  easterDays,
-} from "./calendar-data/calendar-data";
+import { monthSerb, calendarYears, redDaysId, easterDays } from "./calendar-data/calendar-data";
 import SimpleButton from "../../UI/Buttons/SimpleButton";
 import TimeFormat from "../TimeFormat/TimeFormat";
 import { useGlobalLocation } from "../../shared/LocationContext";
@@ -16,8 +9,7 @@ import { useIdContext } from "../../shared/IdProvider";
 import { renderTitleSection } from "../../shared/utility";
 
 export default function Calendar(props) {
-  const { id, currentDate, isYear, isMonth, holidays, isEasterDay } =
-    useIdContext();
+  const { id, currentDate, isYear, isMonth, holidays, isEasterDay } = useIdContext();
   const location = useGlobalLocation();
   const [dropDownYear, setDropDownYear] = useState(false);
   const navigate = useNavigate();
@@ -34,27 +26,6 @@ export default function Calendar(props) {
     }
   };
 
-  const easterDate = new Date(isEasterDay);
-  let test11 = easterDate.setDate(easterDate.getDate() - 1);
-  const endEasterDate = new Date(test11);
-  let test22 = easterDate.setDate(easterDate.getDate() - 49);
-  const startEasterDate = new Date(test22);
-  const easterDate2 = new Date(isEasterDay);
-  let test33 = easterDate2.setDate(easterDate2.getDate() + 7);
-  const endBelaNedelja = new Date(test33);
-  const easterDate3 = new Date(isEasterDay);
-  let test44 = easterDate3.setDate(easterDate.getDate() + 76);
-  const startPetrovskiPost = new Date(test44);
-  const easterDate4 = new Date(isYear, 6, 12);
-  let test55 = easterDate4.setDate(easterDate.getDate() + 10);
-  const endPetrovskiPost = new Date(test55);
-  const easterDate5 = new Date(isYear, 6, 19);
-  // const easterDate6 = new Date(isYear, 6, 19);
-  let test66 = easterDate5.setDate(easterDate.getDate() + 69);
-  const weekBeforePetrovskiPost = new Date(test66);
-  const startGospojinskiPost = new Date(isYear, 7, 14);
-  const endGospojinskiPost = new Date(isYear, 7, 27);
-
   function setMonth(short) {
     if (short) {
       //short month on home page
@@ -62,10 +33,7 @@ export default function Calendar(props) {
         if (currentDate.getDate() < 7) {
           return holidays.slice(0, currentDate.getDate() + short);
         } else {
-          return holidays.slice(
-            currentDate.getDate() - short,
-            currentDate.getDate() + short
-          );
+          return holidays.slice(currentDate.getDate() - short, currentDate.getDate() + short);
         }
       };
       return setShortCal();
@@ -94,76 +62,10 @@ export default function Calendar(props) {
   };
 
   const rowClasses = (item, zz) => {
-    return redDaysId.includes(item.id) ||
-      (easterDays.includes(item.title) && zz !== 4 && zz !== 6)
-      ? "normalRow"
-      : "";
+    return redDaysId.includes(item.id) || (easterDays.includes(item.title) && zz !== 4 && zz !== 6) ? "normalRow" : "";
   };
 
-  const todayClass = (x) =>
-    x.toDateString() === currentDate.toDateString() ? " today" : "";
-
-  const setPostDays = (dateInfo) => {
-    let setDateFromDateInfo = new Date(dateInfo);
-    //start - Bozic i Bozicni post
-    let bozicniPostStart = new Date(isYear, 10, 28);
-    let bozicniPostEnd = new Date(isYear, 0, 6);
-    let vikendPosleBozica = new Date(isYear, 0, 17);
-    let notPost = daysIsNotPost.map((item) =>
-      new Date(isYear, item[0], item[1]).setHours(0, 0, 0, 0)
-    );
-    let isPost = daysIsPost.map((item) =>
-      new Date(isYear, item[0], item[1]).setHours(0, 0, 0, 0)
-    );
-    let setDateDay = setDateFromDateInfo.getDay();
-    if (setDateFromDateInfo >= bozicniPostStart) {
-      return "post";
-    } else if (setDateFromDateInfo <= bozicniPostEnd) {
-      return "post";
-    } else if (
-      //Uskrsnji post
-      setDateFromDateInfo <= endEasterDate &&
-      startEasterDate <= setDateFromDateInfo
-    ) {
-      return "post";
-    } else if (
-      //Petrovski post
-      setDateFromDateInfo <= endPetrovskiPost &&
-      startPetrovskiPost <= setDateFromDateInfo
-    ) {
-      return "post";
-    } 
-    // else if (
-    //   //Petrovski post
-    //   setDateFromDateInfo <= startPetrovskiPost &&
-    //   weekBeforePetrovskiPost <= setDateFromDateInfo
-    // ) {
-    //   return "XXX";
-    // } 
-    else if (
-      //Gospojinski post
-      setDateFromDateInfo <= endGospojinskiPost &&
-      startGospojinskiPost <= setDateFromDateInfo
-    ) {
-      return "post";
-    } else if (setDateFromDateInfo <= vikendPosleBozica) {
-      //Bela nedelja
-      return "";
-    } else if (
-      setDateFromDateInfo > easterDate &&
-      setDateFromDateInfo <= endBelaNedelja
-    ) {
-      return "";
-    } else if (setDateDay === 3 || setDateDay === 5) {
-      if (!notPost.includes(setDateFromDateInfo.setHours(0, 0, 0, 0))) {
-        return "post";
-      }
-    } else if (isPost.includes(setDateFromDateInfo.setHours(0, 0, 0, 0))) {
-      return "post";
-    } else {
-      return "";
-    }
-  };
+  const todayClass = (x) => (x.toDateString() === currentDate.toDateString() ? " today" : "");
 
   const setCloseClass = () => {
     if (location.pathname === "/") {
@@ -179,11 +81,7 @@ export default function Calendar(props) {
       <ul className={getDropDownMenu()}>
         {items.map((item, index) => {
           return (
-            <NavLink
-              to={`/${item.title}/${monthSerb[isMonth]}/`}
-              key={index}
-              onClick={() => setDropDownYear(false)}
-            >
+            <NavLink to={`/${item.title}/${monthSerb[isMonth]}/`} key={index} onClick={() => setDropDownYear(false)}>
               {item.title}
             </NavLink>
           );
@@ -257,14 +155,7 @@ export default function Calendar(props) {
                     </td>
                   </tr>
                 )}
-                <tr
-                  key={index}
-                  className={
-                    rowClasses(item, zz) +
-                    todayClass(new Date(item.date)) +
-                    " dayClass"
-                  }
-                >
+                <tr key={index} className={rowClasses(item, zz) + todayClass(new Date(item.date)) + " dayClass"}>
                   {tdClasses.map((x, index) => {
                     return (
                       <td key={index}>
@@ -280,7 +171,7 @@ export default function Calendar(props) {
                       })}
                     </div>
                   </td>
-                  <td>{setPostDays(item.date)}</td>
+                  <td>{item.post}</td>
                 </tr>
               </React.Fragment>
             );
