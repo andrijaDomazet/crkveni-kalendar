@@ -17,12 +17,10 @@ export const IdProvider = ({ children }) => {
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
   const { slug, id } = useParams();
-  // console.log("SLUG, id:", slug, id);
+
   const isYear = Number(slug) || currentDate.getFullYear();
   const isMonth = id ? monthSerb.indexOf(id) : currentDate.getMonth();
-
   const [isEasterDay, setIsEasterDay] = useState("");
-  // const [isRealDay, setIsRealDay] = useState("");
 
   useEffect(() => {
     setHolidays(filterHolidays);
@@ -245,8 +243,6 @@ export const IdProvider = ({ children }) => {
       item.post = setPostDays(item.date, diffInDays);
       return item;
     });
-
-    // setIsRealDay(setHolTest);
 
     return setHolTest;
   }

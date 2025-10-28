@@ -8,6 +8,9 @@ import Widget from "../../UI/Widget/Widget";
 export default function KalendarGodina() {
   return (
     <div className="kalendarGodina">
+      <div className="banner-wrapper bilbord">
+        <AdManagerSlot slotNumber={"div-gpt-ad-1761641124263-0"} />
+      </div>
       <div className="kalendarGodina-wrapper">
         <div className="kalendarGodina-left">
           <Calendar soc={false} />

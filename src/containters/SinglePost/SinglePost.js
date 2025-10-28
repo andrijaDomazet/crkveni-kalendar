@@ -40,6 +40,9 @@ export default function SinglePost() {
 
   return (
     <div className="singlePost">
+      <div className="banner-wrapper bilbord">
+        <AdManagerSlot slotNumber={"div-gpt-ad-1761641124263-0"} />
+      </div>
       <div className="content">
         <main className="mainContent">
           <figure
