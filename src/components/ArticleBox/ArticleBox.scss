@@ -4,8 +4,11 @@
   .artBox-wrapper {
     height: 100%;
     display: flex;
+    border-radius: 0.3rem;
+    box-shadow: 1px 3px 7px rgb(78, 78, 78);
     .artBox-img {
       min-width: 140px;
+
       img {
         width: 140px;
         height: 100%;
@@ -23,6 +26,9 @@
         line-height: 1.2rem;
       }
     }
+  }
+  &:hover {
+    box-shadow: 1px 3px 7px rgb(73, 73, 73);
   }
 }
 

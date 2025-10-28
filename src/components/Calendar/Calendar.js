@@ -61,8 +61,8 @@ export default function Calendar(props) {
     }
   };
 
-  const rowClasses = (item, zz) => {
-    return redDaysId.includes(item.id) || (easterDays.includes(item.title) && zz !== 4 && zz !== 6) ? "normalRow" : "";
+  const rowClasses = (item, eventDay) => {
+    return redDaysId.includes(item.id) || (easterDays.includes(item.title) && eventDay !== 4 && eventDay !== 6) ? "normalRow" : "";
   };
 
   const todayClass = (x) => (x.toDateString() === currentDate.toDateString() ? " today" : "");
@@ -135,16 +135,16 @@ export default function Calendar(props) {
         </thead>
         <tbody>
           {setMonth(props.shortCal).map((item, index) => {
-            let z = new Date(item.date);
-            let zz = z.getDay();
+            let eventDate = new Date(item.date);
+            let eventDay = eventDate.getDay();
             const tdClasses = ["onlyDay", "noDay", "before"];
             nedelje.push(inTextNumber);
-            if (zz === 1) {
+            if (eventDay === 1) {
               inTextNumber++;
             }
             return (
               <React.Fragment key={index}>
-                {zz === 1 && (
+                {eventDay === 1 && (
                   <tr className="opisNedelje">
                     <td colSpan={5}>
                       {/* {[1, 2, 3, 4, 5].includes(inTextNumber) && (
@@ -155,7 +155,7 @@ export default function Calendar(props) {
                     </td>
                   </tr>
                 )}
-                <tr key={index} className={rowClasses(item, zz) + todayClass(new Date(item.date)) + " dayClass"}>
+                <tr key={index} className={rowClasses(item, eventDay) + todayClass(new Date(item.date)) + " dayClass"}>
                   {tdClasses.map((x, index) => {
                     return (
                       <td key={index}>

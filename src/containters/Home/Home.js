@@ -4,11 +4,14 @@ import Zadusnice from "../../components/Zadusnice/Zadusnice";
 import CalendarMonthsLinks from "../../components/CalendarMonthsLinks/CalendarMonthsLinks";
 import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
 import Widget from "../../UI/Widget/Widget";
-import Molitva from "../../components/Molitva/Molitva";
-import molitve from "../../molitve.json";
+// import Molitva from "../../components/Molitva/Molitva";
+// import molitve from "../../molitve.json";
 export default function Home() {
   return (
     <div className="home">
+        <div className="banner-wrapper bilbord">
+            <AdManagerSlot slotNumber={"div-gpt-ad-1761641124263-0"} />
+          </div>
       <section className="home__wrapper">
         <div className="home__wrapper-left">
           <Calendar shortCal={6} soc={false} />
