@@ -1,7 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Calendar.scss";
 import { NavLink, useNavigate } from "react-router-dom";
-import { monthSerb, calendarYears, redDaysId, easterDays } from "./calendar-data/calendar-data";
+import {
+  monthSerb,
+  calendarYears,
+  redDaysId,
+  easterDays,
+} from "./calendar-data/calendar-data";
 import SimpleButton from "../../UI/Buttons/SimpleButton";
 import TimeFormat from "../TimeFormat/TimeFormat";
 import { useGlobalLocation } from "../../shared/LocationContext";
@@ -9,7 +14,8 @@ import { useIdContext } from "../../shared/IdProvider";
 import { renderTitleSection } from "../../shared/utility";
 
 export default function Calendar(props) {
-  const { id, currentDate, isYear, isMonth, holidays, isEasterDay } = useIdContext();
+  const { id, currentDate, isYear, isMonth, holidays, isEasterDay } =
+    useIdContext();
   const location = useGlobalLocation();
   const [dropDownYear, setDropDownYear] = useState(false);
   const navigate = useNavigate();
@@ -33,7 +39,10 @@ export default function Calendar(props) {
         if (currentDate.getDate() < 7) {
           return holidays.slice(0, currentDate.getDate() + short);
         } else {
-          return holidays.slice(currentDate.getDate() - short, currentDate.getDate() + short);
+          return holidays.slice(
+            currentDate.getDate() - short,
+            currentDate.getDate() + short
+          );
         }
       };
       return setShortCal();
@@ -62,10 +71,14 @@ export default function Calendar(props) {
   };
 
   const rowClasses = (item, eventDay) => {
-    return redDaysId.includes(item.id) || (easterDays.includes(item.title) && eventDay !== 4 && eventDay !== 6) ? "normalRow" : "";
+    return redDaysId.includes(item.id) ||
+      (easterDays.includes(item.title) && eventDay !== 4 && eventDay !== 6)
+      ? "normalRow"
+      : "";
   };
 
-  const todayClass = (x) => (x.toDateString() === currentDate.toDateString() ? " today" : "");
+  const todayClass = (x) =>
+    x.toDateString() === currentDate.toDateString() ? " today" : "";
 
   const setCloseClass = () => {
     if (location.pathname === "/") {
@@ -81,7 +94,13 @@ export default function Calendar(props) {
       <ul className={getDropDownMenu()}>
         {items.map((item, index) => {
           return (
-            <NavLink to={`/${item.title}/${monthSerb[isMonth]}/`} key={index} onClick={() => setDropDownYear(false)}>
+            <NavLink
+              to={`/${item.title}/${monthSerb[isMonth]}/`}
+              key={index}
+              onClick={() => {
+                setTimeout(() => setDropDownYear(false), 100);
+              }}
+            >
               {item.title}
             </NavLink>
           );
@@ -102,12 +121,7 @@ export default function Calendar(props) {
         <h1>Crkveni pravoslavni kalendar {isYear}</h1>
         <div
           className={`yearBox${setCloseClass()}`}
-          onClick={() => {
-            setDropDownYear(true);
-          }}
-          onMouseLeave={() => {
-            setDropDownYear(false);
-          }}
+          onClick={() => setDropDownYear((prev) => !prev)}
         >
           <b>{isYear}</b>
           <i className="fa-solid fa-square-caret-down"></i>
@@ -155,7 +169,14 @@ export default function Calendar(props) {
                     </td>
                   </tr>
                 )}
-                <tr key={index} className={rowClasses(item, eventDay) + todayClass(new Date(item.date)) + " dayClass"}>
+                <tr
+                  key={index}
+                  className={
+                    rowClasses(item, eventDay) +
+                    todayClass(new Date(item.date)) +
+                    " dayClass"
+                  }
+                >
                   {tdClasses.map((x, index) => {
                     return (
                       <td key={index}>

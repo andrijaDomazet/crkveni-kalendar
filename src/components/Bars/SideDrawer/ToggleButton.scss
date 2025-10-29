@@ -5,7 +5,6 @@
   top: 0;
   right: 0;
   height: 50px;
-  // min-height: 45px;
   width: 3.4rem;
   justify-content: center;
   align-items: center;
@@ -18,23 +17,27 @@
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 2px 3px;
+  padding: 1px 3px;
   z-index: +100;
   &:focus {
     outline: none;
   }
   .toggle-button-line {
     width: 2rem;
-    height: 0.2rem;
-    // background: white;
-    background: black;
+    height: 0.35rem;
+    border-radius: 2px;
+    background: $grey7;
     transition: all 0.1s linear;
     &:active {
       background: $dark2;
     }
   }
 }
-@media screen and (min-width:768px) {
+.toggle > :nth-child(2) {
+  background: $orange2;
+  margin-left: -3px;
+}
+@media screen and (min-width: 768px) {
   .toggle {
     display: none;
   }
