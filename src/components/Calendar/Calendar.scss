@@ -210,17 +210,16 @@
     }
   }
   .calendar-month {
-    border-bottom: 1px solid $grey1;
     display: flex;
     justify-content: space-between;
-    background: white;
+    background: $grey0;
     padding: 0.5rem 0;
     button {
       text-align: center;
       text-transform: capitalize;
       flex: 1;
       border: none;
-      line-height: 1.1rem;
+      line-height: 1.4rem;
       font-size: 1.1rem;
       color: $blue1;
       text-decoration: underline;

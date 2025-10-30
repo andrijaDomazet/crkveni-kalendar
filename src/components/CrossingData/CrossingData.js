@@ -21,7 +21,6 @@ export default function CrossingData() {
           {slave.map((item, index) => {
             const [monthIndex, day] = item.date;
             const monthName = monthSerb[monthIndex];
-
             const isNewMonth = monthIndex !== currentMonth;
             currentMonth = monthIndex;
 

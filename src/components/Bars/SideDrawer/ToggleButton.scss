@@ -18,14 +18,14 @@
   border: none;
   cursor: pointer;
   padding: 1px 3px;
-  z-index: +100;
+  z-index: 100;
   &:focus {
     outline: none;
   }
   .toggle-button-line {
     width: 2rem;
     height: 0.35rem;
-    border-radius: 2px;
+    border-radius: 5px;
     background: $grey7;
     transition: all 0.1s linear;
     &:active {

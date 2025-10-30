@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { blackDays } from "../components/Calendar/calendar-data/calendar-data";
 
 export function urlTitle2(title) {
-    console.log("TITLE", title);
+  // console.log("TITLE", title);
   const cyrilic = ["č", "ć", "ž", "š", "đ", ",", ":", "-", "?", "!", "."];
   const replArray = ["c", "c", "z", "s", "dj", "", "", "", "", "", ""];
   let regex = /--/gi;

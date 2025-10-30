@@ -25,11 +25,11 @@ export default function HeadHelmet() {
 
   function setArticleState() {
     let lastPathPart = pathPart[pathPart.length - 2];
-    console.log("Pathparts helmet", pathPart);
-    console.log("Last Pathparts helmet", lastPathPart);
+    // console.log("Pathparts helmet", pathPart);
+    // console.log("Last Pathparts helmet", lastPathPart);
 
     if (lastPathPart === "") {
-      console.log("IF 1");
+      // console.log("IF 1");
 
       let post = options[0].social;
       return post;
@@ -37,7 +37,7 @@ export default function HeadHelmet() {
       // } else if (pathPart[1] === "crkveni-kalendar" && pathPart.length > 2) {
     } else if (pathPart.length === 4) {
       //po mesecima
-      console.log("Else 1");
+      // console.log("Else 1");
       if (pathPart[1] === "molitvenik") {
         let post = molitve.filter((item) => {
           return urlTitle2(item.title) === pathPart[2];
@@ -62,15 +62,15 @@ export default function HeadHelmet() {
         return testSocTag;
       }
     } else if (pathPart[1] === "crkveni-kalendar" && pathPart.length === 2) {
-      console.log("Else 2");
+      // console.log("Else 2");
       let post = options[3].social;
       return post;
     } else if (pathPart[2] === "meseceve-mene") {
-      console.log("Else 3");
+      // console.log("Else 3");
       let post = options[4].social;
       return post;
     } else {
-      console.log("Else 4");
+      // console.log("Else 4");
       let post = options[0].social;
       return post;
     }

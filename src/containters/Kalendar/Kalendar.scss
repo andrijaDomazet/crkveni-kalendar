@@ -2,7 +2,6 @@
 
 .kalendar {
   margin-top: 1rem;
-  // padding-top: 1rem;
   .kalendar-wrapper {
     padding: 0 0.4rem;
   }
@@ -10,7 +9,6 @@
 
 @media screen and (min-width: $medium) {
   .kalendar {
-    // padding: 2rem 0;
     width: 1200px;
     margin: 0 auto;
     .kalendar-wrapper {

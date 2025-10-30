@@ -1,6 +1,9 @@
 @import "../../../index.scss";
 
 .side-drawer {
+  overflow-y: auto;
+  will-change: transform;
+  pointer-events: none;
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -15,12 +18,12 @@
   box-shadow: 0 1px 15px $grey5;
   .logo {
     display: flex;
-    margin: 2rem 0 1.5rem 0;
+    margin: 1.5rem 0;
     align-items: center;
     text-align: center;
     img {
       margin: 0 auto;
-      width: 80%;
+      width: 60%;
       height: auto;
     }
   }
@@ -34,24 +37,24 @@
     text-align: left;
     a {
       font-weight: 600;
-      color: $grey5;
+      color: $grey7;
     }
   }
   .nameTitle {
     margin-top: auto;
-    color: $grey6;
+    color: $grey7;
+    font-weight: 600;
     text-align: center;
     font-size: 1.2rem;
-    padding: .8rem 0;
+    padding: 0.8rem 0;
   }
   li {
     .top-link2 {
       display: inline-block;
       width: 100%;
-      border-bottom: 1px solid $dark5;
+      border-bottom: 1px solid $grey7;
       font-size: 1.25rem;
-      line-height: 2.8rem;
-      font-weight: 500;
+      padding: 0.4rem 0;
       text-decoration: none;
       color: $dark5;
       font-weight: bold;
@@ -72,10 +75,9 @@
         }
       }
     }
-    &:last-child {
-      // border: none;
-      // background: grey;
-    }
+  }
+  &.open {
+    pointer-events: auto;
   }
 }
 

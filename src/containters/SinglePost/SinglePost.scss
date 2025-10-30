@@ -36,12 +36,11 @@
         .mainContent-text {
           .mainContent-lead {
             font-size: 1.25rem;
-            line-height: 1.45rem;
-            margin-bottom: 0.8rem;
+            line-height: 1.4rem;
           }
           p {
-            padding: 0.2rem 0;
-            font-size: 20px; //?????????????????
+            padding: 0.4rem 0;
+            font-size: 1.2rem; //?????????????????
             span {
               font-size: 1.15rem;
               font-weight: 900;
@@ -54,7 +53,6 @@
             }
           }
           .molitveBoxes {
-            // border: 1px solid red;
             display: grid;
             margin: 0 0.5rem;
             gap: 0.6rem;
@@ -67,7 +65,6 @@
               font-size: 1.6rem;
               line-height: 2rem;
               border: none;
-              // padding-bottom: 1rem;
             }
             .tags__arr {
               display: flex;
@@ -149,9 +146,7 @@
       flex-direction: row;
       .mainContent {
         width: 100%;
-        // margin: 1rem 0;
         .mainContent-img {
-          // margin: 1rem 0;
           position: relative;
           aspect-ratio: 16/9;
           img {
@@ -204,14 +199,12 @@
         }
         .mainContent-body {
           padding-top: 1.5rem;
-          // display: flex;
           flex-direction: row;
           .mainContent-text {
             padding-right: 40px;
-            // width: calc(100% - 340px);
             .mainContent-lead {
-              font-size: 1.4rem;
-              line-height: 1.6rem;
+              font-size: 1.35rem;
+              line-height: 1.5rem;
             }
             p {
               font-size: 1.25rem;
