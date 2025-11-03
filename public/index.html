@@ -215,24 +215,50 @@
           .addService(googletag.pubads())
           .defineSizeMapping(mappingBillboard);
 
+        // interstitialSlot = googletag
+        //   .defineOutOfPageSlot(
+        //     "/23098387262/crkveni-kalendar/crkveni-kalendar-interstitial",
+        //     googletag.enums.OutOfPageFormat.INTERSTITIAL
+        //   )
+        //   .defineSizeMapping(mappingInterstitial);
+        // if (interstitialSlot) interstitialSlot.addService(googletag.pubads());
+        // // googletag.pubads().enableSingleRequest();
+        // interstitialSlot.setConfig({
+        //   interstitial: {
+        //     triggers: {
+        //       navBar: true,
+        //       unhideWindow: true,
+        //     },
+        //   },
+        // });
+        // googletag.enableServices();
+        // googletag.display(interstitialSlot);
+
         interstitialSlot = googletag
           .defineOutOfPageSlot(
             "/23098387262/crkveni-kalendar/crkveni-kalendar-interstitial",
             googletag.enums.OutOfPageFormat.INTERSTITIAL
           )
           .defineSizeMapping(mappingInterstitial);
-        if (interstitialSlot) interstitialSlot.addService(googletag.pubads());
-        // googletag.pubads().enableSingleRequest();
-        interstitialSlot.setConfig({
-          interstitial: {
-            triggers: {
-              navBar: true,
-              unhideWindow: true,
+
+        if (interstitialSlot) {
+          interstitialSlot.addService(googletag.pubads());
+          interstitialSlot.setConfig({
+            interstitial: {
+              triggers: {
+                navBar: true,
+                unhideWindow: true,
+              },
             },
-          },
+          });
+        }
+
+        // Ukloni enableServices() iznad ako već postoji jedan dole
+        // googletag.enableServices();
+
+        window.addEventListener("load", function () {
+          if (interstitialSlot) googletag.display(interstitialSlot);
         });
-        googletag.enableServices();
-        googletag.display(interstitialSlot);
 
         googletag.pubads().setCentering(true);
         googletag.pubads().collapseEmptyDivs(true, true);
@@ -285,7 +311,7 @@
       );
 
       ym(99513608, "init", {
-        clickmap: true,
+        clickmap: false,
         trackLinks: true,
         accurateTrackBounce: true,
         webvisor: true,
