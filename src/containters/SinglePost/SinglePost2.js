@@ -1,16 +1,17 @@
-import React, { useState, useEffect } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import React, { useState, useEffect, lazy, Suspense } from "react";
+import { useParams } from "react-router-dom";
 import "./SinglePost2.scss";
 // import AdvModule from "../../components/AdvModule/AdvModule";
-import BodyText from "../../components/BodyText/BodyText";
+// import BodyText from "../../components/BodyText/BodyText";
 import { useGlobalLocation } from "../../shared/LocationContext";
 import { useIdContext } from "../../shared/IdProvider";
 import { urlTitle2 } from "../../shared/utility";
-import Molitva from "../../components/Molitva/Molitva";
+// import Molitva from "../../components/Molitva/Molitva";
 import NoMatch from "../NoMatch/NoMatch";
 import molitve from "../../molitve.json";
 import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
 
+const MolitvaLazy = lazy(() => import("../../components/Molitva/Molitva.js"));
 const setTitle = (postTitle) => {
   return postTitle.title_2 ? postTitle.title_2 : postTitle.title;
 };
@@ -31,12 +32,6 @@ export default function SinglePost2() {
   useEffect(() => {
     setNewsPost(newData);
   }, [location.pathname]);
-
-  console.log("Data", data);
-  console.log("Post", newsPost);
-  // if (loading) {
-  //   return ""; // samo loader dok traje fetch
-  // }
 
   if (!data) {
     return <NoMatch />; // pravi 404 tek kad znaš da fetch nije uspeo
@@ -59,7 +54,9 @@ export default function SinglePost2() {
               </div>
             </div>
             <div className="mainContent-text">
-              <Molitva molitva={newsPost} />
+              <Suspense fallback={<div></div>}>
+                <MolitvaLazy molitva={newsPost} />
+              </Suspense>
             </div>
           </article>
           <div className="banner-wrapper fix-size-horizontal">

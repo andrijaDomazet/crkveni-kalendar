@@ -1,17 +1,21 @@
-import React, { useState } from "react";
+import React, { lazy, Suspense, useState } from "react";
 import "./SinglePost.scss";
 import BodyText from "../../components/BodyText/BodyText";
 import { useIdContext } from "../../shared/IdProvider";
 import { useGlobalLocation } from "../../shared/LocationContext";
 import { urlTitle2 } from "../../shared/utility";
-import Zadusnice from "../../components/Zadusnice/Zadusnice";
-import CrossingData from "../../components/CrossingData/CrossingData";
 import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
 import ArticleBox from "../../components/ArticleBox/ArticleBox";
 import Widget from "../../UI/Widget/Widget";
 import molitve from "../../molitve.json";
 import PostImage from "./img/PostImage";
 
+const ZadusniceLazy = lazy(() =>
+  import("../../components/Zadusnice/Zadusnice.js")
+);
+const CrossingDataLazy = lazy(() =>
+  import("../../components/CrossingData/CrossingData.js")
+);
 export default function SinglePost() {
   const { id, slug, data } = useIdContext();
   const { pathPart } = useGlobalLocation();
@@ -69,8 +73,20 @@ export default function SinglePost() {
               <strong className="mainContent-lead">{isNews.lead}</strong>
               <BodyText bodyText={isNews.body} />
               {pathPart[1] === "molitvenik" && molitveBoxes()}
-              <div>{pathPart[1] === "zadusnice" && <Zadusnice />}</div>
-              <div>{pathPart[1] === "slave" && <CrossingData />}</div>
+              <div>
+                {pathPart[1] === "zadusnice" && (
+                  <Suspense fallback={<div></div>}>
+                    <ZadusniceLazy />
+                  </Suspense>
+                )}
+              </div>
+              <div>
+                {pathPart[1] === "slave" && (
+                  <Suspense fallback={<div></div>}>
+                    <CrossingDataLazy />
+                  </Suspense>
+                )}
+              </div>
               <div className="banner-wrapper">
                 <AdManagerSlot slotNumber={"div-gpt-ad-1750409157804-0"} />
               </div>
@@ -89,7 +105,9 @@ export default function SinglePost() {
 
             <div className="home__wrapper-right">
               {["slave", "meseceve-mene"].includes(pathPart[1]) && (
-                <Zadusnice />
+                <Suspense fallback={<div></div>}>
+                  <ZadusniceLazy />
+                </Suspense>
               )}
               <div className="banner-wrapper xl_sticky">
                 <AdManagerSlot slotNumber={"div-gpt-ad-1750411708088-0"} />

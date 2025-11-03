@@ -12,34 +12,26 @@
     .navBar-wrapper {
       display: flex;
       width: 1200px;
-      // width: 100%;
-      // max-width: 100%;
       margin: 0 auto;
       .links {
         flex: 1;
-        // width: 100%;
-        width: 420px;        display: flex;
+        width: 420px;
+        display: flex;
         justify-content: space-around;
         align-items: center;
-        // min-height: 100%;
-        // border: 1px solid blue;
         .nav-link-wrapper {
           display: flex;
           height: 100%;
-          // border: 1px solid green;
           width: 210px;
           text-align: center;
           align-items: center;
           .nav-link {
             text-align: center;
-            // align-items: center;
-            // display: inline-block;
             display: flex;
             font-size: 1.4rem;
             text-decoration: none;
             color: $grey7;
             font-weight: 700;
-            // border: 1px solid red;
             height: 100%;
             width: 100%;
             text-align: center;
@@ -196,14 +188,9 @@
       .navBar__logo {
         text-align: center;
         height: 100%;
-        // width: auto;
         width: 340px;
-        // margin: 0 3rem;
         padding: 0 1rem;
-        // border: 2px solid blue;
         img {
-          // width: 100%;
-          // height: auto;
           height: 80px;
           width: auto;
         }

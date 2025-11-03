@@ -4,10 +4,14 @@ import "./Kalendar.scss";
 // import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
 // import { useIdContext } from "../../shared/IdProvider";
 import CalendarMonthsLinks from "../../components/CalendarMonthsLinks/CalendarMonthsLinks";
-import Zadusnice from "../../components/Zadusnice/Zadusnice";
+// import Zadusnice from "../../components/Zadusnice/Zadusnice";
 import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
 import Widget from "../../UI/Widget/Widget";
+import { lazy, Suspense } from "react";
 
+const ZadusniceLazy = lazy(() =>
+  import("../../components/Zadusnice/Zadusnice.js")
+);
 export default function Kalendar() {
   return (
     <div className="kalendar">
@@ -26,7 +30,10 @@ export default function Kalendar() {
           </div>
         </div>
         <div className="kalendar-right">
-          <Zadusnice />
+          <Suspense fallback={<div></div>}>
+            <ZadusniceLazy />
+          </Suspense>
+
           <div className="banner-wrapper xl_sticky">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750411708088-0"} />
           </div>
