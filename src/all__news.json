@@ -61,7 +61,7 @@
   {
     "news_id": 3,
     "time": "1. jun",
-    "category": "povrtarstvo",
+    "category": "Ostalo",
     "pics": [
       "https://res.cloudinary.com/dvi29tcsc/image/upload/v1743170622/crkveniKalendar/srpske-krsne-slave_zijh57.jpg",
       "mediasfera.rs"
@@ -85,7 +85,7 @@
       },
       {
         "subtitle": "",
-        "text": "Danas se krsna slava obeležava tri dana: <strong>navečerje, svečarski dan i pojutarje</strong> (drugi dan slave). Ovaj običaj je jedinstven za srpski narod i zbog svog značaja stavljen je pod zaštitu UNESCO-a 2014. godine, kao deo svetske nematerijalne baštine."
+        "text": "Danas se krsna slava obeležava tri dana: <strong>navečerje, svečarski dan i pojutarje</strong> (drugi dan slave). Ovaj običaj je jedinstven za srpski narod i zbog svog značaja stavljen je pod zaštitu UNESCO-a 2014. godine, kao deo svetske nematerijalne baštine. (Izvor: <a target=\"_blank\" href=\"https://ich.unesco.org/en/RL/slava-celebration-of-family-saint-patron-s-day-01010\">UNESCO</a>)"
       }
     ],
     "tags": [

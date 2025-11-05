@@ -76,7 +76,7 @@ export default function SinglePost() {
               <div>
                 {pathPart[1] === "zadusnice" && (
                   <Suspense fallback={<div></div>}>
-                    <ZadusniceLazy />
+                    <ZadusniceLazy/>
                   </Suspense>
                 )}
               </div>
@@ -106,7 +106,7 @@ export default function SinglePost() {
             <div className="home__wrapper-right">
               {["slave", "meseceve-mene"].includes(pathPart[1]) && (
                 <Suspense fallback={<div></div>}>
-                  <ZadusniceLazy />
+                  <ZadusniceLazy/>
                 </Suspense>
               )}
               <div className="banner-wrapper xl_sticky">

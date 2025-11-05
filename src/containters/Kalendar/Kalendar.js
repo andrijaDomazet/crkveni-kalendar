@@ -1,13 +1,9 @@
+import { lazy, Suspense } from "react";
 import Calendar from "../../components/Calendar/Calendar";
 import "./Kalendar.scss";
-// import { useGlobalLocation } from "../../shared/LocationContext";
-// import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
-// import { useIdContext } from "../../shared/IdProvider";
 import CalendarMonthsLinks from "../../components/CalendarMonthsLinks/CalendarMonthsLinks";
-// import Zadusnice from "../../components/Zadusnice/Zadusnice";
 import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
 import Widget from "../../UI/Widget/Widget";
-import { lazy, Suspense } from "react";
 
 const ZadusniceLazy = lazy(() =>
   import("../../components/Zadusnice/Zadusnice.js")
