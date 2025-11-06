@@ -9,12 +9,26 @@ import Widget from "../../UI/Widget/Widget";
 export default function Home() {
   return (
     <div className="home">
-        <div className="banner-wrapper bilbord">
-            <AdManagerSlot slotNumber={"div-gpt-ad-1761641124263-0"} />
-          </div>
+      <div className="banner-wrapper bilbord">
+        <AdManagerSlot slotNumber={"div-gpt-ad-1761641124263-0"} />
+      </div>
       <section className="home__wrapper">
         <div className="home__wrapper-left">
           <Calendar shortCal={6} soc={false} />
+          <section class="calendar-2026">
+            <h2>📅 Crkveni kalendar 2026</h2>
+            <p>
+              Ovde je već dostupan i{" "}
+              <a
+                href="https://crkveni-kalendar.net/2026/"
+                title="Crkveni kalendar 2026"
+              >
+                crkveni kalendar za 2026. godinu
+              </a>{" "}
+              sa svim važnim praznicima.
+            </p>
+          </section>
+
           <div className="banner-wrapper fix-size-horizontal">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750409157804-0"} />
           </div>

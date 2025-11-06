@@ -44,7 +44,6 @@
       height: 2rem;
       width: 100%;
       position: relative;
-      // border: 1px solid red;
       .drop_down_menu {
         display: flex;
         flex-direction: column;
@@ -114,6 +113,7 @@
           height: 0.8rem;
           font-weight: 700;
           background: $grey0;
+          background: rgb(238, 234, 227);
           border-left: none;
           border-right: none;
         }
@@ -281,34 +281,17 @@
             }
           }
         }
-        th:nth-child(1) {
-          display: table-cell;
-          span {
-            line-height: 1.8rem;
-            font-size: 1rem;
-            bottom: inherit;
-            -webkit-transform: rotate(-90deg);
-            position: relative;
-          }
-        }
-        th:nth-child(2) {
-          display: table-cell;
-          span {
-            line-height: 1.8rem;
-            font-size: 1rem;
-            bottom: inherit;
-            -webkit-transform: rotate(-90deg);
-            position: relative;
-          }
-        }
+        th:nth-child(1),
+        th:nth-child(2),
         th:nth-child(3) {
           display: table-cell;
+
           span {
             line-height: 1.8rem;
             font-size: 1rem;
             bottom: inherit;
-            -webkit-transform: rotate(-90deg);
             position: relative;
+            -webkit-transform: rotate(-90deg);
           }
         }
         th:nth-child(4) {
@@ -372,9 +355,6 @@
         i {
           font-size: 1.2rem;
         }
-        // &:focus{
-        //   border: none;
-        // }
       }
     }
   }
