@@ -6,9 +6,11 @@ import { useGlobalLocation } from "../../shared/LocationContext";
 import { urlTitle2 } from "../../shared/utility";
 import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
 import ArticleBox from "../../components/ArticleBox/ArticleBox";
-import Widget from "../../UI/Widget/Widget";
+// import Widget from "../../UI/Widget/Widget";
 import molitve from "../../molitve.json";
 import PostImage from "./img/PostImage";
+
+const WidgetLazy = lazy(() => import("../../UI/Widget/Widget.js"));
 
 const ZadusniceLazy = lazy(() =>
   import("../../components/Zadusnice/Zadusnice.js")
@@ -116,7 +118,10 @@ export default function SinglePost() {
           </div>
         </main>
       </div>
-      <Widget />
+      {/* <Widget /> */}
+            <Suspense fallback={<div></div>}>
+              <WidgetLazy />
+            </Suspense>
     </div>
   );
 }

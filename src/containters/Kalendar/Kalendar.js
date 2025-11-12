@@ -3,8 +3,8 @@ import Calendar from "../../components/Calendar/Calendar";
 import "./Kalendar.scss";
 import CalendarMonthsLinks from "../../components/CalendarMonthsLinks/CalendarMonthsLinks";
 import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
-import Widget from "../../UI/Widget/Widget";
-
+// import Widget from "../../UI/Widget/Widget";
+const WidgetLazy = lazy(() => import("../../UI/Widget/Widget.js"));
 const ZadusniceLazy = lazy(() =>
   import("../../components/Zadusnice/Zadusnice.js")
 );
@@ -66,7 +66,10 @@ export default function Kalendar() {
           slotNumber={"div-gpt-ad-1735207510691-0"}
         />
       </div> */}
-      <Widget />
+      {/* <Widget /> */}
+      <Suspense fallback={<div></div>}>
+        <WidgetLazy />
+      </Suspense>
     </div>
   );
 }

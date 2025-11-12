@@ -3,9 +3,12 @@ import Calendar from "../../components/Calendar/Calendar";
 import Zadusnice from "../../components/Zadusnice/Zadusnice";
 import CalendarMonthsLinks from "../../components/CalendarMonthsLinks/CalendarMonthsLinks";
 import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
-import Widget from "../../UI/Widget/Widget";
+// import Widget from "../../UI/Widget/Widget";
+import { lazy, Suspense } from "react";
 // import Molitva from "../../components/Molitva/Molitva";
 // import molitve from "../../molitve.json";
+
+const WidgetLazy = lazy(() => import("../../UI/Widget/Widget.js"));
 export default function Home() {
   return (
     <div className="home">
@@ -48,7 +51,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <Widget />
+      <Suspense fallback={<div></div>}>
+        <WidgetLazy />
+      </Suspense>
     </div>
   );
 }
