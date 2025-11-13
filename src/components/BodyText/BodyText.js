@@ -51,7 +51,7 @@ export default function BodyText(props) {
               <p dangerouslySetInnerHTML={{ __html: item["text"] }}></p>
               {setQuote(item)}
               {setImg(item)}
-              {pathPart[1] !== "molitvenik" && (
+              {pathPart[1] !== "molitvenik" && pathPart[1] !== "" && (
                 <div className="banner-wrapper">
                   <AdManagerSlot slotNumber={"div-gpt-ad-1750930023966-0"} />
                 </div>
