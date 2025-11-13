@@ -11,13 +11,13 @@ import molitve from "../../molitve.json";
 import PostImage from "./img/PostImage";
 
 const WidgetLazy = lazy(() => import("../../UI/Widget/Widget.js"));
-
 const ZadusniceLazy = lazy(() =>
   import("../../components/Zadusnice/Zadusnice.js")
 );
 const CrossingDataLazy = lazy(() =>
   import("../../components/CrossingData/CrossingData.js")
 );
+
 export default function SinglePost() {
   const { id, slug, data } = useIdContext();
   const { pathPart } = useGlobalLocation();
@@ -78,7 +78,7 @@ export default function SinglePost() {
               <div>
                 {pathPart[1] === "zadusnice" && (
                   <Suspense fallback={<div></div>}>
-                    <ZadusniceLazy/>
+                    <ZadusniceLazy />
                   </Suspense>
                 )}
               </div>
@@ -108,7 +108,7 @@ export default function SinglePost() {
             <div className="home__wrapper-right">
               {["slave", "meseceve-mene"].includes(pathPart[1]) && (
                 <Suspense fallback={<div></div>}>
-                  <ZadusniceLazy/>
+                  <ZadusniceLazy />
                 </Suspense>
               )}
               <div className="banner-wrapper xl_sticky">
@@ -118,10 +118,9 @@ export default function SinglePost() {
           </div>
         </main>
       </div>
-      {/* <Widget /> */}
-            <Suspense fallback={<div></div>}>
-              <WidgetLazy />
-            </Suspense>
+      <Suspense fallback={<div></div>}>
+        <WidgetLazy />
+      </Suspense>
     </div>
   );
 }

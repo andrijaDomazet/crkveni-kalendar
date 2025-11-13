@@ -1,14 +1,14 @@
 import "./Home.scss";
 import Calendar from "../../components/Calendar/Calendar";
 import Zadusnice from "../../components/Zadusnice/Zadusnice";
-import CalendarMonthsLinks from "../../components/CalendarMonthsLinks/CalendarMonthsLinks";
 import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
-// import Widget from "../../UI/Widget/Widget";
 import { lazy, Suspense } from "react";
-// import Molitva from "../../components/Molitva/Molitva";
-// import molitve from "../../molitve.json";
 
 const WidgetLazy = lazy(() => import("../../UI/Widget/Widget.js"));
+const CalendarMonthsLinksLazy = lazy(() =>
+  import("../../components/CalendarMonthsLinks/CalendarMonthsLinks.js")
+);
+
 export default function Home() {
   return (
     <div className="home">
@@ -35,7 +35,10 @@ export default function Home() {
           <div className="banner-wrapper fix-size-horizontal">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750409157804-0"} />
           </div>
-          <CalendarMonthsLinks />
+          <Suspense fallback={<div></div>}>
+            <CalendarMonthsLinksLazy />
+          </Suspense>
+
           <div className="banner-wrapper">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750409277034-0"} />
           </div>
