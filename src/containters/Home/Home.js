@@ -3,6 +3,8 @@ import Calendar from "../../components/Calendar/Calendar";
 import Zadusnice from "../../components/Zadusnice/Zadusnice";
 import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
 import { lazy, Suspense } from "react";
+import Molitva from "../../components/Molitva/Molitva.js";
+import molitve from "../../molitve.json";
 
 const WidgetLazy = lazy(() => import("../../UI/Widget/Widget.js"));
 const CalendarMonthsLinksLazy = lazy(() =>
@@ -42,10 +44,13 @@ export default function Home() {
           <div className="banner-wrapper">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750409277034-0"} />
           </div>
-          {/* <div>
-            <h2>Oče naš</h2>
-            <Molitva molitva={molitve[molitve.length-1]} />
-          </div> */}
+          <div className="home__molitva">
+            <h2>Oče naš - Molitva Gospodnja</h2>
+            <div className="home__molitva-wrapper">
+                  <Molitva molitva={molitve[molitve.length - 1]} />
+            </div>
+        
+          </div>
         </div>
         <div className="home__wrapper-right">
           <Zadusnice />

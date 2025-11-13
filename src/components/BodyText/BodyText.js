@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import { lazy, Suspense } from "react";
 import "./BodyText.scss";
 import AdManagerSlot from "../AdvModule/AdManagerSlot";
 import { useGlobalLocation } from "../../shared/LocationContext.js";
@@ -40,7 +40,6 @@ const setImg = (item) => {
 
 export default function BodyText(props) {
   const { pathPart } = useGlobalLocation();
-  console.log("PAth parts");
 
   return (
     <div className="bodyText">

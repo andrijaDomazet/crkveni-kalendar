@@ -16,8 +16,6 @@ import { renderTitleSection } from "../../shared/utility";
 export default function Calendar(props) {
   const { id, currentDate, isYear, isMonth, holidays, isEasterDay } =
     useIdContext();
-  console.log("IsMonth", isMonth);
-
   const location = useGlobalLocation();
   const [dropDownYear, setDropDownYear] = useState(false);
   const navigate = useNavigate();
@@ -97,7 +95,6 @@ export default function Calendar(props) {
         {items.map((item, index) => {
           return (
             <NavLink
-              // to={`/${item.title}/${monthSerb[isMonth]}/`}
               to={`/${item.title}/${monthSerb[0]}/`}
               key={index}
               onClick={() => {
