@@ -47,6 +47,9 @@
       gtag("config", "G-1EQZLGPRPD");
     </script>
 
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <!-- Start AdManager -->
     <script
       async
@@ -115,6 +118,13 @@
             ]
           )
           .addSize([1030, 21], [[300, 600]])
+          .build();
+
+        var mappingSideBar2 = googletag
+          .sizeMapping()
+          .addSize([21, 21], [[300, 250]])
+          .addSize([860, 21], [[300, 250]])
+          .addSize([1030, 21], [[300, 250]])
           .build();
 
         var mappingInText = googletag
@@ -214,6 +224,19 @@
           )
           .addService(googletag.pubads())
           .defineSizeMapping(mappingBillboard);
+
+        adUnits[5] = googletag
+          .defineSlot(
+            "/23098387262/crkveni-kalendar/crkveni-kalendar-sb-2",
+            [
+              [728, 90],
+              [320, 100],
+              [970, 250],
+            ],
+            "div-gpt-ad-1763130338013-0"
+          )
+          .addService(googletag.pubads())
+          .defineSizeMapping(mappingSideBar2);
 
         // interstitialSlot = googletag
         //   .defineOutOfPageSlot(

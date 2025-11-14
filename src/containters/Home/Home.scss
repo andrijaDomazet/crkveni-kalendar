@@ -63,7 +63,8 @@
         margin-right: 20px;
         width: calc(100% - 340px);
         .calendar-2026 {
-          margin-top: 1rem;
+          margin-top: 2rem;
+          margin-bottom: 3rem;
           h2 {
             font-size: 1.4rem;
           }
@@ -76,8 +77,28 @@
             }
           }
         }
-        .home__molitva {
-          width: 500px;
+        .home-afterZone {
+          display: flex;
+          .home__molitva {
+            width: 450px;
+          }
+          .home__links-wrapper {
+            width: 400px;
+            .home__links {
+              margin: 1rem 2rem;
+
+              font-size: 1.15rem;
+              h2 {
+                font-size: 1.4rem;
+                color: $blue1;
+                // text-decoration: underline;
+              }
+              a {
+                font-size: 1.18rem;
+                text-decoration: underline;
+              }
+            }
+          }
         }
       }
     }
