@@ -127,8 +127,11 @@ export const IdProvider = ({ children }) => {
     //end---------------------------------------------------------------------
     //uskrs-------------------------------------------------------------------
     let easter = isYear - 2020;
-    let monthData = JSON.parse(JSON.stringify(news2));
-    let setHol = monthData.slice(idsMonths[isMonth][0], idsMonths[isMonth][1]);
+    // let monthData = JSON.parse(JSON.stringify(news2));
+    let setHol = news2.slice(idsMonths[isMonth][0], idsMonths[isMonth][1])
+                   .map(item => ({ ...item })); // shallow copy po itemu
+
+    // let setHol = monthData.slice(idsMonths[isMonth][0], idsMonths[isMonth][1]);
     //end---------------------------------------------------------------------
     let setHolTest = setHol.map((item, index) => {
       item.title = Array.isArray(item.title)
