@@ -54,16 +54,11 @@ export default function Home() {
             <div className="home__links-wrapper">
               <div className="home__links">
                 <h2>Krsne slave</h2>
-                {/* Sve što treba da znate o krsnim slavama - datumi, običaji i
-                značenje - dostupno je na izdvojenoj stranici{" "}
-                <a href="/slave/">ovde</a>. */}
                 Sve informacije o krsnim slavama – datumi, običaji i značenje -
                 dostupne su na stranici <a href="/slave/">Krsne slave</a>.
               </div>
-              <div className="home__links">
+              <div className="home__links second">
                 <h2>Molitvenik</h2>
-                {/* Molitve za razne prilike možete pronaći u okviru molitvenika na
-                posebnoj stranici — pogledajte <a href="/molitvenik/">ovde</a>. */}
                 Molitve za različite prilike možete pronaći na stranici{" "}
                 <a href="/molitvenik/">Molitvenik</a>.
               </div>

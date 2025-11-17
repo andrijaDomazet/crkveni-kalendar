@@ -46,15 +46,24 @@
         }
         .home__links-wrapper {
           .home__links {
+            // width: 100%;
             margin: 2rem 1rem;
             font-size: 1.15rem;
             h2 {
-              font-size: 1.4rem;
-              color: $blue1;
+              font-size: 1.25rem;
+              // color: $blue1;
+              color: white;
+              background: $blue1;
+              padding: 0.1rem 0.5rem;
             }
             a {
               font-size: 1.18rem;
               text-decoration: underline;
+            }
+          }
+          .home__links.second {
+            h2 {
+              background: $orange2;
             }
           }
         }
@@ -101,7 +110,7 @@
           .home__links-wrapper {
             width: 400px;
             .home__links {
-              margin: 1rem 2rem;        
+              // margin: 2rem 1rem;
             }
           }
         }
