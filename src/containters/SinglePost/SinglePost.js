@@ -78,7 +78,8 @@ export default function SinglePost() {
               <div>
                 {pathPart[1] === "zadusnice" && (
                   <Suspense fallback={<div></div>}>
-                    <ZadusniceLazy />
+                    {/* <ZadusniceLazy /> */}
+                    <ZadusniceLazy setYear={2026}/>
                   </Suspense>
                 )}
               </div>

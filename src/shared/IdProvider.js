@@ -2,8 +2,8 @@
 //   "date": [1, 27],
 //   "title": "Prepodobni Avksentije i Sveti Kiril slovenski – Ćirilovdan (ako pada u Veliki post, pomera se na nedelju siropusnu)"
 // },
-import React, { useMemo } from "react";
-import { createContext, useContext, useState, useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
+import { createContext, useContext, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import data from "../all__news";
 import {
@@ -30,12 +30,13 @@ export const IdProvider = ({ children }) => {
   const isMonth = id ? monthSerb.indexOf(id) : currentDate.getMonth();
   const [isEasterDay, setIsEasterDay] = useState("");
 
-  // useEffect(() => {
-  //   setHolidays(filterHolidays);
-  // }, [isYear, isMonth, slug, id]);
-
   let easter = isYear - 2020;
   let easterDay = new Date(`${isYear}-${manualDateEaster[easter]}`);
+
+  useEffect(() => {
+    setIsEasterDay(easterDay);
+  }, [isYear]);
+
   const easterDate = new Date(easterDay);
   const endEasterDate = new Date(easterDate);
   endEasterDate.setDate(easterDate.getDate() - 1);
@@ -55,7 +56,6 @@ export const IdProvider = ({ children }) => {
   const endGospojinskiPost = new Date(isYear, 7, 27);
 
   const setPostDays = (dateInfo, diffInDays) => {
-    // console.log("ITEM calendar", dateInfo.date);
     let setDateFromDateInfo = new Date(dateInfo);
     //start - Bozic i Bozicni post
     let bozicniPostStart = new Date(isYear, 10, 28);
@@ -109,7 +109,6 @@ export const IdProvider = ({ children }) => {
     }
   };
 
-  // const [holidays, setHolidays] = useState(filterHolidays);
   const holidays = useMemo(() => filterHolidays(), [isYear, isMonth]);
 
   function filterHolidays() {
@@ -125,14 +124,18 @@ export const IdProvider = ({ children }) => {
       (item) => item[0] === isMonth
     );
     //end---------------------------------------------------------------------
+
     //uskrs-------------------------------------------------------------------
     let easter = isYear - 2020;
-    // let monthData = JSON.parse(JSON.stringify(news2));
-    let setHol = news2.slice(idsMonths[isMonth][0], idsMonths[isMonth][1])
-                   .map(item => ({ ...item })); // shallow copy po itemu
-
-    // let setHol = monthData.slice(idsMonths[isMonth][0], idsMonths[isMonth][1]);
+    let setHol = news2
+      .slice(idsMonths[isMonth][0], idsMonths[isMonth][1])
+      .map((item) => ({ ...item })); // shallow copy po itemu
     //end---------------------------------------------------------------------
+
+    // let date1 = new Date(isYear, isMonth, index + 1);
+    // item.date = date1;
+    let easterDay = new Date(`${isYear}-${manualDateEaster[easter]}`);
+
     let setHolTest = setHol.map((item, index) => {
       item.title = Array.isArray(item.title)
         ? item.title.map((item) => item)
@@ -164,8 +167,10 @@ export const IdProvider = ({ children }) => {
 
       let date1 = new Date(isYear, isMonth, index + 1);
       item.date = date1;
-      let easterDay = new Date(`${isYear}-${manualDateEaster[easter]}`);
-      setIsEasterDay(easterDay);
+      // let easterDay = new Date(`${isYear}-${manualDateEaster[easter]}`);
+
+      // setIsEasterDay(easterDay);
+
       let diffInDays = (easterDay - date1) / (1000 * 60 * 60 * 24); // Razlika u danima
 
       if (diffInDays >= -2 && diffInDays <= 6) {

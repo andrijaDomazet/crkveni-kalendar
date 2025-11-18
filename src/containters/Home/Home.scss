@@ -5,21 +5,38 @@
     flex-direction: column;
     margin: 0.8rem auto;
     padding: 0 0.4rem;
-    .home__wrapper-left {
-      .calendar-2026 {
-        margin-top: 1rem;
-        h2 {
+    .calendar-2026 {
+      margin-top: 1rem;
+      h2 {
+        font-size: 1.1rem;
+      }
+      p {
+        font-size: 1.1rem;
+        strong {
           font-size: 1.1rem;
         }
-        p {
+        a {
           font-size: 1.1rem;
-          a {
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-decoration: underline;
-          }
+          font-weight: 600;
+          text-decoration: underline;
         }
       }
+    }
+    .home__wrapper-left {
+      // .calendar-2026 {
+      //   margin-top: 1rem;
+      //   h2 {
+      //     font-size: 1.1rem;
+      //   }
+      //   p {
+      //     font-size: 1.1rem;
+      //     a {
+      //       font-size: 1.1rem;
+      //       font-weight: 600;
+      //       text-decoration: underline;
+      //     }
+      //   }
+      // }
       .home-afterZone {
         .home__molitva {
           position: relative;
@@ -70,9 +87,14 @@
       }
     }
     .home__wrapper-right {
+      display: flex;
+      flex-direction: column;
+      // gap: 0.5rem;
       width: 340px;
       padding: 0 20px;
       margin: 0 auto;
+      // row-gap: 2rem;
+      // font-size: 1.2rem;
     }
   }
 }
@@ -84,24 +106,42 @@
     .home__wrapper {
       display: flex;
       flex-direction: row;
+      .calendar-2026 {
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+        h2 {
+          font-size: 1.4rem;
+        }
+        p {
+          font-size: 1.2rem;
+          strong {
+            font-size: 1.2rem;
+          }
+          a {
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: underline;
+          }
+        }
+      }
       .home__wrapper-left {
         margin-right: 20px;
         width: calc(100% - 340px);
-        .calendar-2026 {
-          margin-top: 2rem;
-          margin-bottom: 3rem;
-          h2 {
-            font-size: 1.4rem;
-          }
-          p {
-            font-size: 1.2rem;
-            a {
-              font-size: 1.2rem;
-              font-weight: 600;
-              text-decoration: underline;
-            }
-          }
-        }
+        // .calendar-2026 {
+        //   margin-top: 2rem;
+        //   margin-bottom: 3rem;
+        //   h2 {
+        //     font-size: 1.4rem;
+        //   }
+        //   p {
+        //     font-size: 1.2rem;
+        //     a {
+        //       font-size: 1.2rem;
+        //       font-weight: 600;
+        //       text-decoration: underline;
+        //     }
+        //   }
+        // }
         .home-afterZone {
           display: flex;
           .home__molitva {

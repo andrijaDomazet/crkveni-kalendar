@@ -51,7 +51,7 @@ export default function Home() {
                 <Molitva molitva={molitve[molitve.length - 1]} />
               </div>
             </div>
-            <div className="home__links-wrapper">
+            <section className="home__links-wrapper">
               <div className="home__links">
                 <h2>Krsne slave</h2>
                 Sve informacije o krsnim slavama – datumi, običaji i značenje -
@@ -65,11 +65,23 @@ export default function Home() {
               <div className="banner-wrapper">
                 <AdManagerSlot slotNumber={"div-gpt-ad-1763130338013-0"} />
               </div>
-            </div>
+            </section>
           </div>
         </div>
         <div className="home__wrapper-right">
           <Zadusnice />
+          <section class="calendar-2026">
+            <p>
+              Pregled <strong>Zadušnica za 2026. godinu</strong> dostupan je{" "}
+              <a
+                href="https://crkveni-kalendar.net/zadusnice/"
+                title="Zadušnice 2026"
+              >
+                ovde
+              </a>
+              .
+            </p>
+          </section>
           <div className="banner-wrapper xl_sticky">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750411708088-0"} />
           </div>

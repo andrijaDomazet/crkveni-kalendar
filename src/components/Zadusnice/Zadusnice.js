@@ -8,11 +8,14 @@ import { monthSerb } from "../../shared/shared.js";
 import { useIdContext } from "../../shared/IdProvider";
 import { Link } from "react-router-dom";
 
-export default function Zadusnice() {
-  // console.log("TEST1", test1);
+export default function Zadusnice({ setYear }) {
+  // console.log("TEST1", setYear);
 
   const { slug, currentDate } = useIdContext();
-  let currentYear = slug || currentDate.getFullYear();
+  // console.log("");
+
+  // let currentYear = slug || currentDate.getFullYear();
+  let currentYear = setYear || slug || currentDate.getFullYear();
   let yearIndex = calendarYears[0].item_list.findIndex(
     (item) => item.title == currentYear
   );
