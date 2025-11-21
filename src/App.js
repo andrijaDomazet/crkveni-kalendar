@@ -15,6 +15,7 @@ import SinglePost from "./containters/SinglePost/SinglePost";
 import Footer from "./components/Footer/Footer";
 import NoMatch from "./containters/NoMatch/NoMatch";
 import SinglePost2 from "./containters/SinglePost/SinglePost2";
+// import SimplePage from "./containters/SimplePage/SimplePage";
 
 export default function App() {
   return (
@@ -70,6 +71,10 @@ export default function App() {
             exact="true"
             element={React.createElement(withIdProvider(Calendar))}
           />
+          {/* <Route
+          path="/:slug"
+          element={React.createElement(withIdProvider(SimplePage))}
+          /> */}
           <Route
             path="*"
             element={React.createElement(withIdProvider(NoMatch))}

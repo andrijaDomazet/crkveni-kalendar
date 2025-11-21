@@ -23,14 +23,15 @@ export default function Home() {
           <section class="calendar-2026">
             <h2>📅 Crkveni kalendar 2026</h2>
             <p>
-              Ovde je već dostupan i{" "}
+              Sve važne datume i praznike za 2026. godinu pogledajte klikom na
+              sledeći link:{" "}
               <a
                 href="https://crkveni-kalendar.net/2026/"
                 title="Crkveni kalendar 2026"
               >
-                crkveni kalendar za 2026. godinu
-              </a>{" "}
-              sa svim važnim praznicima.
+                Crkveni kalendar za 2026. godinu
+              </a>
+              .
             </p>
           </section>
 
@@ -54,8 +55,8 @@ export default function Home() {
             <section className="home__links-wrapper">
               <div className="home__links">
                 <h2>Krsne slave</h2>
-                Sve informacije o krsnim slavama – datumi, običaji i značenje -
-                dostupne su na stranici <a href="/slave/">Krsne slave</a>.
+                Informacije o krsnim slavama (datumi, običaji i značenje) možete
+                pronaći na sledećoj stranici: <a href="/slave/">Krsne slave</a>.
               </div>
               <div className="home__links second">
                 <h2>Molitvenik</h2>

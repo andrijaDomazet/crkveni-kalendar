@@ -1,13 +1,116 @@
 @import "../../index.scss";
 
 .footer {
+  /* 1. Opšti stilovi za Footer */
   position: relative;
   z-index: +100;
-  background: $grey7;
+  // background: $grey1;
+  background-color: #f7f7f7; /* Svetla pozadina (ili tamna po želji) */
+  background: $grey1;
+  color: #333;
+  padding: 30px 20px;
+  font-family: Arial, sans-serif;
+
+  /* 2. Kratak Opis Sajta */
+  .footer-description p {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    // color: #666;
+    color: $grey5;
+  }
+
+  /* 3. Kolone (podrazumevani Mobile-First raspored) */
+  .footer-columns {
+    /* Na mobilnom, sekcije (kolone) se ređaju jedna ispod druge */
+    display: block;
+  }
+
+  /* Stilovi za svaku sekciju/kolonu */
+  .footer-columns section {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Stilovi za naslove sekcija */
+  .footer-columns h3 {
+    font-size: 1.2rem;
+    // color: #004d40; /* Tamna boja, npr. tamnozelena */
+    color: $grey7; /* Tamna boja, npr. tamnozelena */
+    border-bottom: 2px solid $grey2;
+    padding-bottom: 0.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Stilovi za liste */
+  .footer-columns ul {
+    list-style: none; /* Uklanjanje podrazumevanih markera */
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Stilovi za pojedinačne stavke liste */
+  .footer-columns li {
+    margin-bottom: 0.3rem;
+  }
+
+  /* Stilovi za linkove */
+  .footer-columns a {
+    text-decoration: none;
+    color: #333;
+    font-size: .9rem;
+    line-height: 1.3rem;
+    transition: color 0.3s;
+  }
+
+  .footer-columns a:hover {
+    color: $orange2; /* Svetlozelena, za hover efekat */
+    text-decoration: underline;
+  }
+
+  /* 4. Autorska Prava */
+  .footer-copyright {
+    text-align: center;
+    border-top: 1px solid #ddd;
+    padding-top: 1rem;
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+    color: $grey2;
+    // color: white;
+    // background: $orange2;
+  }
   .home__section5-bottom {
     text-align: center;
     margin: 0 auto;
     color: white;
     padding: 2rem 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /* Centriranje i ograničavanje širine na desktopu */
+  .footer {
+    margin-top: 3rem;
+    padding: 2rem 0;
+    // border: 2px solid red;
+    .footer-columns {
+      max-width: 1200px; /* Maksimalna širina sadržaja */
+      margin: 0 auto;
+      /* GLAVNI FLEBOX ZA KOLONE */
+      display: flex;
+      // flex-direction: column;
+      justify-content: space-between; /* Razmak između kolona */
+      gap: 3rem; /* Razmak između kolona */
+      text-align: left; /* Poravnanje unutar kolona */
+    }
+    /* Postavljanje približne širine kolona, ako je potrebno */
+    .footer-columns section {
+      flex: 1; /* Obezbeđuje da sve kolone imaju jednaku širinu */
+      min-width: 200px; /* Minimalna širina da se ne bi previše suzile */
+      margin-bottom: 0;
+    }
+    .footer-description p {
+      max-width: 800px;
+      margin: 0 auto 30px auto;
+    }
   }
 }
