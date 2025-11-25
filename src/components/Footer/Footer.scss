@@ -1,11 +1,8 @@
 @import "../../index.scss";
 
 .footer {
-  /* 1. Opšti stilovi za Footer */
   position: relative;
   z-index: +100;
-  // background: $grey1;
-  background-color: #f7f7f7; /* Svetla pozadina (ili tamna po želji) */
   background: $grey1;
   color: #333;
   padding: 30px 20px;
@@ -57,9 +54,12 @@
   .footer-columns a {
     text-decoration: none;
     color: #333;
-    font-size: .9rem;
+    font-size: 1rem;
     line-height: 1.3rem;
     transition: color 0.3s;
+    i {
+      margin-right: 0.2rem;
+    }
   }
 
   .footer-columns a:hover {
@@ -67,7 +67,6 @@
     text-decoration: underline;
   }
 
-  /* 4. Autorska Prava */
   .footer-copyright {
     text-align: center;
     border-top: 1px solid #ddd;
@@ -75,8 +74,6 @@
     margin-top: 1.5rem;
     font-size: 0.8rem;
     color: $grey2;
-    // color: white;
-    // background: $orange2;
   }
   .home__section5-bottom {
     text-align: center;
@@ -87,25 +84,20 @@
 }
 
 @media screen and (min-width: 768px) {
-  /* Centriranje i ograničavanje širine na desktopu */
   .footer {
     margin-top: 3rem;
     padding: 2rem 0;
-    // border: 2px solid red;
     .footer-columns {
-      max-width: 1200px; /* Maksimalna širina sadržaja */
+      max-width: 1200px;
       margin: 0 auto;
-      /* GLAVNI FLEBOX ZA KOLONE */
       display: flex;
-      // flex-direction: column;
-      justify-content: space-between; /* Razmak između kolona */
-      gap: 3rem; /* Razmak između kolona */
-      text-align: left; /* Poravnanje unutar kolona */
+      justify-content: space-between;
+      gap: 3rem;
+      text-align: left;
     }
-    /* Postavljanje približne širine kolona, ako je potrebno */
     .footer-columns section {
-      flex: 1; /* Obezbeđuje da sve kolone imaju jednaku širinu */
-      min-width: 200px; /* Minimalna širina da se ne bi previše suzile */
+      flex: 1; 
+      min-width: 200px; 
       margin-bottom: 0;
     }
     .footer-description p {

@@ -28,6 +28,34 @@
     "source": "crkveni-kalendar"
   },
   {
+    "news_id": 5,
+    "time": "1. jun",
+    "category": "Ostalo",
+    "pics": ["/img/noMatch/noMatch.png", "crkveni-kalendar.net"],
+    "title": "Sv. Nikola letnji",
+    "title_2": "",
+    "lead": "",
+    "body": [
+      {
+        "subtitle": "Stranica je u pripremi...",
+        "text": ""
+      },
+      {
+        "subtitle": "",
+        "text": ""
+      }
+    ],
+    "tags": [
+      "Pravoslavne molitve",
+      "Molitvenik",
+      "Jutarnje molitve",
+      "Večernje molitve",
+      "Molitve za svaki dan",
+      "Pravoslavna vera"
+    ],
+    "source": "crkveni-kalendar"
+  },
+  {
     "news_id": 4,
     "time": "1. jun",
     "category": "povrtarstvo",

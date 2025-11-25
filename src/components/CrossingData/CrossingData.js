@@ -4,6 +4,7 @@ import { useIdContext } from "../../shared/IdProvider";
 import { monthSerb } from "../../shared/shared";
 import { Link } from "react-router-dom";
 import React from "react";
+import { getPreUrlTitle } from "../../shared/utility";
 export default function CrossingData() {
   const { slug, currentDate } = useIdContext();
   let currentYear = slug || currentDate.getFullYear();
@@ -41,7 +42,9 @@ export default function CrossingData() {
                   <td>{`${day}. ${monthName}`}</td>
                   <td>
                     <h3>
-                      <Link to={`/${currentYear}/${monthName}/`}>
+                      {/* <Link to={`/${currentYear}/${monthName}/`}> */}
+                      {/* nedostaje dobar category !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/}
+                      <Link to={`${getPreUrlTitle(item)}`}>
                         {item.title}
                       </Link>
                     </h3>

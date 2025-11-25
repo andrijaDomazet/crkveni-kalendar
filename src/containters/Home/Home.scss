@@ -23,20 +23,6 @@
       }
     }
     .home__wrapper-left {
-      // .calendar-2026 {
-      //   margin-top: 1rem;
-      //   h2 {
-      //     font-size: 1.1rem;
-      //   }
-      //   p {
-      //     font-size: 1.1rem;
-      //     a {
-      //       font-size: 1.1rem;
-      //       font-weight: 600;
-      //       text-decoration: underline;
-      //     }
-      //   }
-      // }
       .home-afterZone {
         .home__molitva {
           position: relative;
@@ -63,12 +49,10 @@
         }
         .home__links-wrapper {
           .home__links {
-            // width: 100%;
             margin: 2rem 1rem;
             font-size: 1.15rem;
             h2 {
               font-size: 1.25rem;
-              // color: $blue1;
               color: white;
               background: $blue1;
               padding: 0.1rem 0.5rem;
@@ -89,12 +73,13 @@
     .home__wrapper-right {
       display: flex;
       flex-direction: column;
-      // gap: 0.5rem;
       width: 340px;
       padding: 0 20px;
       margin: 0 auto;
-      // row-gap: 2rem;
-      // font-size: 1.2rem;
+      .calendar-2026.zadusnice{
+        font-style: italic;
+        line-height: 1.4rem;
+      }
     }
   }
 }
@@ -127,21 +112,6 @@
       .home__wrapper-left {
         margin-right: 20px;
         width: calc(100% - 340px);
-        // .calendar-2026 {
-        //   margin-top: 2rem;
-        //   margin-bottom: 3rem;
-        //   h2 {
-        //     font-size: 1.4rem;
-        //   }
-        //   p {
-        //     font-size: 1.2rem;
-        //     a {
-        //       font-size: 1.2rem;
-        //       font-weight: 600;
-        //       text-decoration: underline;
-        //     }
-        //   }
-        // }
         .home-afterZone {
           display: flex;
           .home__molitva {

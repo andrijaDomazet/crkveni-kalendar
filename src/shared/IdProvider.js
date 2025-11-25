@@ -2,10 +2,10 @@
 //   "date": [1, 27],
 //   "title": "Prepodobni Avksentije i Sveti Kiril slovenski – Ćirilovdan (ako pada u Veliki post, pomera se na nedelju siropusnu)"
 // },
-import React, { useEffect, useMemo } from "react";
-import { createContext, useContext, useState } from "react";
+import React, { useMemo } from "react";
+import { createContext, useContext } from "react";
 import { Link, useParams } from "react-router-dom";
-import data from "../all__news";
+// import data from "../all__news";
 import {
   calendarYears,
   daysIsNotPost,
@@ -25,88 +25,132 @@ export const IdProvider = ({ children }) => {
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
   const { slug, id } = useParams();
-
+  // console.log("Slug2", slug);
   const isYear = Number(slug) || currentDate.getFullYear();
   const isMonth = id ? monthSerb.indexOf(id) : currentDate.getMonth();
-  const [isEasterDay, setIsEasterDay] = useState("");
 
-  let easter = isYear - 2020;
-  let easterDay = new Date(`${isYear}-${manualDateEaster[easter]}`);
-
-  useEffect(() => {
-    setIsEasterDay(easterDay);
-  }, [isYear]);
+  const easterDay = useMemo(
+    () => new Date(`${isYear}-${manualDateEaster[isYear - 2020]}`),
+    [isYear]
+  );
 
   const easterDate = new Date(easterDay);
   const endEasterDate = new Date(easterDate);
   endEasterDate.setDate(easterDate.getDate() - 1);
-
   const startEasterDate = new Date(easterDate);
   startEasterDate.setDate(easterDate.getDate() - 49);
 
-  const endBelaNedelja = new Date(easterDate);
-  endBelaNedelja.setDate(easterDate.getDate() + 7);
+  // helper koji vrati timestamp u ponoć
+  const toTs = (y, m, d) => new Date(y, m, d).setHours(0, 0, 0, 0);
 
-  const startPetrovskiPost = new Date(easterDate);
-  startPetrovskiPost.setDate(easterDate.getDate() + 57);
+  const postLookup = useMemo(() => {
+    // fiksne granice
+    const bozicniPostStartTs = toTs(isYear, 10, 28);
+    const bozicniPostEndTs = toTs(isYear, 0, 6);
+    const vikendPosleBozicaTs = toTs(isYear, 0, 17);
 
-  const endPetrovskiPost = new Date(isYear, 6, 12);
-
-  const startGospojinskiPost = new Date(isYear, 7, 14);
-  const endGospojinskiPost = new Date(isYear, 7, 27);
-
-  const setPostDays = (dateInfo, diffInDays) => {
-    let setDateFromDateInfo = new Date(dateInfo);
-    //start - Bozic i Bozicni post
-    let bozicniPostStart = new Date(isYear, 10, 28);
-    let bozicniPostEnd = new Date(isYear, 0, 6);
-    let vikendPosleBozica = new Date(isYear, 0, 17);
-    let notPost = daysIsNotPost.map((item) =>
-      new Date(isYear, item[0], item[1]).setHours(0, 0, 0, 0)
+    const easterTs = toTs(
+      easterDay.getFullYear(),
+      easterDay.getMonth(),
+      easterDay.getDate()
     );
-    let isPost = daysIsPost.map((item) =>
-      new Date(isYear, item[0], item[1]).setHours(0, 0, 0, 0)
+    const startEasterTs = toTs(
+      easterDay.getFullYear(),
+      easterDay.getMonth(),
+      easterDay.getDate() - 49
     );
-    let setDateDay = setDateFromDateInfo.getDay();
-    if (setDateFromDateInfo >= bozicniPostStart) {
+    const endEasterTs = toTs(
+      easterDay.getFullYear(),
+      easterDay.getMonth(),
+      easterDay.getDate() - 1
+    );
+
+    // set-ovi za eksplicitne datume iz daysIsNotPost i daysIsPost
+    const notPostSet = new Set(
+      daysIsNotPost.map(([m, d]) => toTs(isYear, m, d))
+    );
+    const isPostSet = new Set(daysIsPost.map(([m, d]) => toTs(isYear, m, d)));
+
+    // Petrovski post granice ts
+    const startPetrovskiPostTs = (() => {
+      const d = new Date(easterTs);
+      d.setDate(d.getDate() + 57);
+      d.setHours(0, 0, 0, 0);
+      return d.getTime();
+    })();
+    const endPetrovskiPostTs = toTs(isYear, 6, 12);
+
+    // Gospojinski post
+    const startGospojinskiPostTs = toTs(isYear, 7, 14);
+    const endGospojinskiPostTs = toTs(isYear, 7, 27);
+
+    // Bela nedelja (posle Uskrsa)
+    const endBelaNedeljaTs = (() => {
+      const d = new Date(easterTs);
+      d.setDate(d.getDate() + 7);
+      d.setHours(0, 0, 0, 0);
+      return d.getTime();
+    })();
+
+    return {
+      bozicniPostStartTs,
+      bozicniPostEndTs,
+      vikendPosleBozicaTs,
+      easterTs,
+      startEasterTs: startEasterTs,
+      endEasterTs: endEasterTs,
+      endBelaNedeljaTs,
+      startPetrovskiPostTs,
+      endPetrovskiPostTs,
+      startGospojinskiPostTs,
+      endGospojinskiPostTs,
+      notPostSet,
+      isPostSet,
+    };
+  }, [isYear, easterDay]);
+
+  const setPostDays = (dateInfo) => {
+    // Pretvori ulaz u timestamp ponoć
+    const ts =
+      typeof dateInfo === "number"
+        ? dateInfo
+        : new Date(dateInfo).setHours(0, 0, 0, 0);
+
+    const {
+      bozicniPostStartTs,
+      bozicniPostEndTs,
+      vikendPosleBozicaTs,
+      easterTs,
+      startEasterTs,
+      endEasterTs,
+      endBelaNedeljaTs,
+      startPetrovskiPostTs,
+      endPetrovskiPostTs,
+      startGospojinskiPostTs,
+      endGospojinskiPostTs,
+      notPostSet,
+      isPostSet,
+    } = postLookup;
+
+    // 1) Božićni post (zima)
+    if (ts >= bozicniPostStartTs || ts <= bozicniPostEndTs) return "post";
+    // 2) Uskršnji post
+    if (ts >= startEasterTs && ts <= endEasterTs) return "post";
+    // 3) Petrovski post
+    if (ts >= startPetrovskiPostTs && ts < endPetrovskiPostTs) return "post";
+    // 4) Gospojinski post
+    if (ts >= startGospojinskiPostTs && ts <= endGospojinskiPostTs)
       return "post";
-    } else if (setDateFromDateInfo <= bozicniPostEnd) {
-      return "post";
-    } else if (
-      //Uskrsnji post
-      setDateFromDateInfo <= endEasterDate &&
-      startEasterDate <= setDateFromDateInfo
-    ) {
-      return "post";
-    } else if (
-      //Petrovski post
-      setDateFromDateInfo < endPetrovskiPost &&
-      startPetrovskiPost <= setDateFromDateInfo
-    ) {
-      return "post";
-    } else if (
-      //Gospojinski post
-      setDateFromDateInfo <= endGospojinskiPost &&
-      startGospojinskiPost <= setDateFromDateInfo
-    ) {
-      return "post";
-    } else if (setDateFromDateInfo <= vikendPosleBozica) {
-      //Bela nedelja
-      return "";
-    } else if (
-      setDateFromDateInfo > easterDate &&
-      setDateFromDateInfo <= endBelaNedelja
-    ) {
-      return "";
-    } else if (setDateDay === 3 || setDateDay === 5) {
-      if (!notPost.includes(setDateFromDateInfo.setHours(0, 0, 0, 0))) {
-        return "post";
-      }
-    } else if (isPost.includes(setDateFromDateInfo.setHours(0, 0, 0, 0))) {
-      return "post";
-    } else {
-      return "";
-    }
+    // 5) Bela nedelja (posle Uskrsa) i vikend posle Božića -> ne-post
+    if (ts <= vikendPosleBozicaTs) return "";
+    if (ts > easterTs && ts <= endBelaNedeljaTs) return "";
+    // 6) Sreda ili petak (3 ili 5) osim ako je u notPostSet
+    const day = new Date(ts).getDay();
+    if ((day === 3 || day === 5) && !notPostSet.has(ts)) return "post";
+    // 7) Explicitne postovanjske datume iz isPostSet
+    if (isPostSet.has(ts)) return "post";
+    // 8) Default
+    return "";
   };
 
   const holidays = useMemo(() => filterHolidays(), [isYear, isMonth]);
@@ -126,22 +170,20 @@ export const IdProvider = ({ children }) => {
     //end---------------------------------------------------------------------
 
     //uskrs-------------------------------------------------------------------
-    let easter = isYear - 2020;
+    // console.log("isMonth idProvider", id, isMonth);
     let setHol = news2
       .slice(idsMonths[isMonth][0], idsMonths[isMonth][1])
       .map((item) => ({ ...item })); // shallow copy po itemu
     //end---------------------------------------------------------------------
 
-    // let date1 = new Date(isYear, isMonth, index + 1);
-    // item.date = date1;
-    let easterDay = new Date(`${isYear}-${manualDateEaster[easter]}`);
-
     let setHolTest = setHol.map((item, index) => {
       item.title = Array.isArray(item.title)
         ? item.title.map((item) => item)
         : [item.title];
-      let setDate = new Date(isYear, isMonth, index);
-      let currentDay2 = setDate.getDay();
+      let date1 = new Date(isYear, isMonth, index + 1);
+      item.date = date1;
+      let currentDay2 = date1.getDay();
+      let diffInDays = Math.round((easterDay - date1) / (1000 * 60 * 60 * 24)); // Razlika u danima
 
       if (zadusniceDate && zadusniceDate[1] === index + 1) {
         item.title = (
@@ -164,14 +206,6 @@ export const IdProvider = ({ children }) => {
           </>
         );
       }
-
-      let date1 = new Date(isYear, isMonth, index + 1);
-      item.date = date1;
-      // let easterDay = new Date(`${isYear}-${manualDateEaster[easter]}`);
-
-      // setIsEasterDay(easterDay);
-
-      let diffInDays = (easterDay - date1) / (1000 * 60 * 60 * 24); // Razlika u danima
 
       if (diffInDays >= -2 && diffInDays <= 6) {
         item.title = renderTitleSection({
@@ -279,7 +313,7 @@ export const IdProvider = ({ children }) => {
           separatorSymbol: "; ",
         });
       }
-      item.post = setPostDays(item.date, diffInDays);
+      item.post = setPostDays(item.date.getTime());
       return item;
     });
 
@@ -289,7 +323,7 @@ export const IdProvider = ({ children }) => {
   return (
     <IdContext.Provider
       value={{
-        data,
+        // data,
         id,
         slug,
         currentDate,
@@ -298,7 +332,6 @@ export const IdProvider = ({ children }) => {
         isYear,
         isMonth,
         holidays,
-        isEasterDay,
       }}
     >
       {children}

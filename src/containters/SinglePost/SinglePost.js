@@ -1,14 +1,14 @@
-import React, { lazy, Suspense, useState } from "react";
+import { lazy, Suspense, useState } from "react";
 import "./SinglePost.scss";
 import BodyText from "../../components/BodyText/BodyText";
-import { useIdContext } from "../../shared/IdProvider";
+// import { useIdContext } from "../../shared/IdProvider";
 import { useGlobalLocation } from "../../shared/LocationContext";
 import { urlTitle2 } from "../../shared/utility";
 import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
 import ArticleBox from "../../components/ArticleBox/ArticleBox";
-// import Widget from "../../UI/Widget/Widget";
 import molitve from "../../molitve.json";
 import PostImage from "./img/PostImage";
+import data from "../../all__news.json";
 
 const WidgetLazy = lazy(() => import("../../UI/Widget/Widget.js"));
 const ZadusniceLazy = lazy(() =>
@@ -19,7 +19,7 @@ const CrossingDataLazy = lazy(() =>
 );
 
 export default function SinglePost() {
-  const { id, slug, data } = useIdContext();
+  // const { data } = useIdContext();
   const { pathPart } = useGlobalLocation();
   const [isNews, setIsNews] = useState(() => setArticleState());
 
@@ -79,7 +79,7 @@ export default function SinglePost() {
                 {pathPart[1] === "zadusnice" && (
                   <Suspense fallback={<div></div>}>
                     {/* <ZadusniceLazy /> */}
-                    <ZadusniceLazy setYear={2026}/>
+                    <ZadusniceLazy setYear={2026} />
                   </Suspense>
                 )}
               </div>

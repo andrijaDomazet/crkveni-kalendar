@@ -71,7 +71,7 @@ export default function Home() {
         </div>
         <div className="home__wrapper-right">
           <Zadusnice />
-          <section class="calendar-2026">
+          <section class="calendar-2026 zadusnice">
             <p>
               Pregled <strong>Zadušnica za 2026. godinu</strong> dostupan je{" "}
               <a

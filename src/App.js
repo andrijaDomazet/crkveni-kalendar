@@ -15,7 +15,7 @@ import SinglePost from "./containters/SinglePost/SinglePost";
 import Footer from "./components/Footer/Footer";
 import NoMatch from "./containters/NoMatch/NoMatch";
 import SinglePost2 from "./containters/SinglePost/SinglePost2";
-// import SimplePage from "./containters/SimplePage/SimplePage";
+import SimplePage from "./containters/SimplePage/SimplePage";
 
 export default function App() {
   return (
@@ -26,6 +26,10 @@ export default function App() {
         <Bars />
         <Routes>
           <Route path="/" element={React.createElement(withIdProvider(Home))} />
+          {/* <Route
+            path="/o-nama/"
+            element={React.createElement(withIdProvider(SimplePage))}
+          /> */}
           <Route
             path="/:slug/"
             exact="true"
@@ -52,6 +56,11 @@ export default function App() {
             element={React.createElement(withIdProvider(SinglePost))}
           />
           <Route
+            path="/slave/:test"
+            exact="true"
+            element={React.createElement(withIdProvider(SinglePost))}
+          />
+          <Route
             path="/imenoslov/"
             exact="true"
             element={React.createElement(withIdProvider(SinglePost))}
@@ -71,6 +80,7 @@ export default function App() {
             exact="true"
             element={React.createElement(withIdProvider(Calendar))}
           />
+
           {/* <Route
           path="/:slug"
           element={React.createElement(withIdProvider(SimplePage))}
