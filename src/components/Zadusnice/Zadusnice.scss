@@ -3,11 +3,7 @@
 .zadusnice {
   width: 100%;
   max-width: 500px;
-  // background: $orange0;
-  // background: #f7f1e3;
-  // background: $grey0;
-  //  background: #f7f1e6;
-           background: rgb(247, 243, 228);
+  background: $orange0;
   padding: 0 1rem;
   box-shadow: 0 0px 3px $orange22;
   border-radius: 0.3rem;
@@ -20,8 +16,8 @@
       vertical-align: middle;
       unicode-bidi: isolate;
       tr {
-        // background: $redDay2;
-        background: #a71e06;
+        background: $redDay1;
+        // background: #a71e06;
         th {
           height: 50px;
           h2 {
@@ -41,9 +37,9 @@
           min-width: 120px;
           padding: 0.4rem 0;
           border-bottom: 3px solid $redDay2;
-          font-size: 1.2rem;
+          font-size: 1.15rem;
           a {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             color: $grey7;
           }
         }
@@ -55,7 +51,7 @@
       }
     }
     thead tr th h2 {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       height: 1.35rem;
       line-height: 1.3rem;
       padding-left: 0.3rem;

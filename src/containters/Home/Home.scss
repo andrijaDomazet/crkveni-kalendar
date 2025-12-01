@@ -8,7 +8,7 @@
     .calendar-2026 {
       margin-top: 1rem;
       h2 {
-        font-size: 1.4rem;
+        font-size: 1.35rem;
       }
       p {
         font-size: 1.2rem;
@@ -24,10 +24,10 @@
     }
     .home__wrapper-left {
       .home-afterZone {
-        background: #f6e7c4;
+        background: $dark0;
         padding: 0 1rem;
         border-radius: 0.3rem;
-        box-shadow: 0 0 3px #b5904f;
+        box-shadow: 0 0 3px $dark2;
         .home__molitva {
           position: relative;
           text-align: center;
@@ -67,32 +67,6 @@
             position: relative;
             z-index: 1;
           }
-          // .home__molitva-wrapper::before {
-          //   position: absolute;
-          //   content: "";
-          //   left: 1.3rem;
-          //   right: 1.3rem;
-          //   top: 1.3rem;
-          //   bottom: 1.3rem;
-          //   border: 2px solid #b5904f;
-          //   border-radius: 0.3rem;
-          //   a {
-          //     cursor: pointer;
-          //   }
-          // }
-          // .home__molitva-wrapper::after {
-          //   position: absolute;
-          //   content: "";
-          //   left: 0.3rem;
-          //   right: 0.3rem;
-          //   top: 0.3rem;
-          //   bottom: 0.3rem;
-          //   border: 5px solid #a57f3c;
-          //   border-radius: 0.5rem;
-          //   a {
-          //     cursor: pointer;
-          //   }
-          // }
         }
         .home__molitva::before {
           position: absolute;
@@ -147,17 +121,15 @@
         margin-top: 1rem;
         margin-bottom: 3rem;
         h2 {
-          font-size: 1.6rem;
+          font-size: 1.5rem;
         }
         p {
           font-size: 1.4rem;
           strong {
-            font-size: 1.4rem;
-            // color: $redDay2;
-            // font-weight: 900;
+            font-size: 1.35rem;
           }
           a {
-            font-size: 1.4rem;
+            font-size: 1.35rem;
             font-weight: 600;
             text-decoration: underline;
           }
