@@ -3,43 +3,63 @@
 .zadusnice {
   width: 100%;
   max-width: 500px;
-  background: white;
-  // border-radius: 0.5rem;
+  // background: $orange0;
+  // background: #f7f1e3;
+  // background: $grey0;
+  //  background: #f7f1e6;
+           background: rgb(247, 243, 228);
+  padding: 0 1rem;
+  box-shadow: 0 0px 3px $orange22;
+  border-radius: 0.3rem;
   table {
-    // border-radius: 0.3rem;
     width: 100%;
-    border-bottom: 1px solid grey;
+    // border-bottom: 1px solid $redDay2;
     border-collapse: collapse;
     thead {
       display: table-header-group;
       vertical-align: middle;
       unicode-bidi: isolate;
+      tr {
+        // background: $redDay2;
+        background: #a71e06;
+        th {
+          height: 50px;
+          h2 {
+            margin: 0 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            letter-spacing: 0.05rem;
+          }
+        }
+      }
     }
     tbody {
       tr {
         td {
           text-align: center;
           min-width: 120px;
-          padding: 0.4rem;
-          border-bottom: 1px solid rgb(197, 197, 197);
+          padding: 0.4rem 0;
+          border-bottom: 3px solid $redDay2;
+          font-size: 1.2rem;
           a {
-            text-decoration: underline;
-            color: $blue1;
+            font-size: 1.2rem;
+            color: $grey7;
+          }
+        }
+        &:last-child {
+          td {
+            border-bottom: none; // <<< uklanja border samo na poslednjem redu
           }
         }
       }
     }
     thead tr th h2 {
-      // border-top-left-radius: 0.3rem;
-      // border-top-right-radius: 0.3rem;
-      // background: $grey5;
-      background: $blue1;
-      font-size: 1.2rem;
-      height: 2rem;
-      line-height: 2rem;
+      font-size: 1.25rem;
+      height: 1.35rem;
+      line-height: 1.3rem;
       padding-left: 0.3rem;
-      color: $grey4;
-      color: white;
+      color: #f6e7c4;
     }
   }
 }

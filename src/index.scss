@@ -1,13 +1,19 @@
 $small: 300px;
 $medium: 768px;
-$large: 1024px;
+$large: 1280px;
 $extraLarge: 1368px;
+
 body {
-  background: #f8f8f880;
+  // background: #f8f8f880;
+  background: #f7f1e3;
+  // background: red;
+  // background-color: black;
+  // background-image: radial-gradient(rgba(236, 230, 195, 0.75), black 120%);
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  //   "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  //   sans-serif;
+  font-family: "EB Garamond", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -36,11 +42,12 @@ $barGreen3: #215f51;
 $barGreen4: #1a4c40;
 $barGreen5: #153d33;
 
-$orange0: #f1e5d6;
+$orange0: #f6e7c4;
 $orange1: #d09850;
+// $orange22: #b5904f;
 // $orange2: #965315;
 $orange2: #ff642d;
-
+$orange22: #b5904f;
 $orange3: #7c4512;
 $orange4: #693d0b;
 
@@ -73,6 +80,7 @@ $grey7: #332d28;
 
 $redDay0: #df2525;
 $redDay1: #b80b0b;
+$redDay2: #8b2e2e;
 
 $blue1: #1565c0;
 
@@ -90,7 +98,7 @@ $blue1: #1565c0;
 
 .banner-wrapper.bilbord,
 .banner-wrapper.fix-size-horizontal {
-  // margin: 1.2rem auto;
+  margin: 2rem auto;
   height: 100px;
   width: 320px;
 }
@@ -103,7 +111,9 @@ $blue1: #1565c0;
 .banner-wrapper.bilbord,
 .banner-wrapper.fix-size-horizontal {
   position: relative;
-  background: $grey0;
+  // background: $grey0;
+  background: #f0eade;
+  border: 1px solid $grey0;
   &::before {
     content: "OGLAS";
     letter-spacing: 2px;

@@ -17,17 +17,31 @@ export default function Footer() {
           <h3>Popularno</h3>
           <ul>
             <li>
-              <a href="/2026/"><i className="fa-solid fa-circle-arrow-right"></i> Crkveni kalendar 2026</a>
+              <a href="/2025/decembar/">
+                <i className="fa-solid fa-circle-arrow-right"></i> Crkveni
+                kalendar decembar 2025
+              </a>
+            </li>{" "}
+            <li>
+              <a href="/2026/">
+                <i className="fa-solid fa-circle-arrow-right"></i> Crkveni
+                kalendar 2026
+              </a>
             </li>
             <li>
-              <a href="/slave/"><i className="fa-solid fa-circle-arrow-right"></i> Krsne slave</a>
+              <a href="/slave/">
+                <i className="fa-solid fa-circle-arrow-right"></i> Krsne slave
+              </a>
             </li>
             <li>
-              <a href="/zadusnice/"><i className="fa-solid fa-circle-arrow-right"></i> Zadušnice</a>
+              <a href="/zadusnice/">
+                <i className="fa-solid fa-circle-arrow-right"></i> Zadušnice u
+                2026. godini
+              </a>
             </li>
-            <li>
+            {/* <li>
               <a href="/molitvenik/"><i className="fa-solid fa-circle-arrow-right"></i> Molitvenik</a>
-            </li>
+            </li> */}
           </ul>
         </section>
         <section>
@@ -43,7 +57,14 @@ export default function Footer() {
               <a href="/faq/"><i className="fa-solid fa-circle-arrow-right"></i> Najčešća pitanja (FAQ)</a>
             </li> */}
             <li>
-              <a href="/meseceve-mene/"><i className="fa-solid fa-circle-arrow-right"></i> Mesečeve mene</a>
+              <a href="/molitvenik/">
+                <i className="fa-solid fa-circle-arrow-right"></i> Molitvenik
+              </a>
+            </li>
+            <li>
+              <a href="/meseceve-mene/">
+                <i className="fa-solid fa-circle-arrow-right"></i> Mesečeve mene
+              </a>
             </li>
           </ul>
         </section>

@@ -1,54 +1,76 @@
 @import "../../index.scss";
 
 .calendar-allMonths {
-  margin: 1rem 0;
-  width: 100%;
-  // box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
-  thead {
-    tr {
-      th {
-        background: $blue1;
-        padding: 0.3rem;
-        text-align: left;
-        h2 {
-          padding: 0 0.3rem;
-          color: white;
-          font-size: 1.2rem;
+  .calendar-allMonths-wrapper {
+    // margin: 1rem 0;
+    width: 100%;
+    box-shadow: 0 0px 2px #b5904f;
+    thead {
+      tr {
+        th {
+          border-radius: 0.3rem;
+          padding: 0.5rem;
+          text-align: center;
+          background: #f6e7c4;
+          justify-content: space-between;
+          width: 100%;
+          h2 {
+            text-align: center;
+            display: flex;
+            padding: 0 0.3rem;
+            color: white;
+            font-size: 1.6rem;
+            color: $redDay2;
+            // font-weight: 900;
+            img {
+              height: auto;
+              width: 150px;
+            }
+          }
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          border-radius: 0.3rem;
+          color: $grey4;
+          margin: 0.3rem;
+          padding: 0.8rem 0;
+          text-align: center;
+          a {
+            color: $blue1;
+            text-decoration: underline;
+            h3 {
+              font-weight: normal;
+            }
+          }
         }
       }
     }
   }
-  tbody {
-    tr {
-      td {
-        // background: $grey0;
-        background: white;
-        border-radius: 0.3rem;
-        color: $grey4;
-        margin: 0.3rem;
-        padding: 0.8rem 0;
-        text-align: center;
-        a {
-          // color: $grey4;
-          color: $blue1;
-          text-decoration: underline;
-          h3 {
-            font-weight: normal;
-          }
-        }
-      }
+  .ornamet-line {
+    background-color: $orange0;
+    text-align: center;
+    padding: 0.3rem 0;
+    box-shadow: 0 0px 2px #b5904f;
+    img {
+      // text-align: center;
+      width: 40%;
     }
   }
 }
 
 @media screen and (min-width: 768px) {
   .calendar-allMonths {
-    tbody {
-      tr {
-        td {
-          a {
-            h3 {
-              font-size: 1.25rem;
+    .calendar-allMonths-wrapper {
+      tbody {
+        tr {
+          td {
+            a {
+              h3 {
+                font-size: 1.4rem;
+              }
             }
           }
         }

@@ -20,7 +20,7 @@ export default function SinglePost2() {
   const { data } = useIdContext();
   const { id, test } = useParams();
   const location = useGlobalLocation();
-  console.log("ID", test);
+  // console.log("ID", test);
 
   const newData = () => {
     let dd = molitve.filter((item) => {
@@ -33,7 +33,7 @@ export default function SinglePost2() {
     setNewsPost(newData);
   }, [location.pathname]);
 
-  if (!data) {
+  if (!newData) {
     return <NoMatch />; // pravi 404 tek kad znaš da fetch nije uspeo
   }
 

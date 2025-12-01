@@ -21,8 +21,15 @@ export default function Calendar(props) {
   const navigate = useNavigate();
 
   const changeMonth = (val) => {
+    console.log("ID", id, isYear, val);
+
     if (id === undefined) {
-      navigate(`/${isYear}/${tableTitle(val)}/`);
+      // navigate(`/${isYear}/${tableTitle(val)}/`);
+      if (val === 1) {
+        navigate(`../${isYear + 1}/januar/`);
+      } else {
+        navigate(`../${isYear - 1}/decembar/`);
+      }
     } else if (isMonth === 11 && val === 1) {
       navigate(`../${+isYear + 1}/januar/`);
     } else if (isMonth === 0 && val === -1) {

@@ -7,7 +7,7 @@
   }
 }
 
-@media screen and (min-width: $medium) {
+@media screen and (min-width: $large) {
   .kalendar {
     width: 1200px;
     margin: 0 auto;
@@ -17,11 +17,11 @@
       .kalendar-left {
         display: flex;
         flex-direction: column;
-        width: calc(100% - 340px);
+        width: calc(100% - 380px);
         margin-right: 20px;
       }
       .kalendar-right {
-        width: 340px;
+        width: 380px;
         padding: 0 20px;
       }
     }

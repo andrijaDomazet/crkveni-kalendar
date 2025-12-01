@@ -3,8 +3,10 @@
 .widget__box {
   margin: 1rem 0.2rem;
   padding: 0 0.6rem;
-  background: rgb(246, 246, 246);
-  border: 3px solid rgb(239, 239, 239);
+  // background: rgb(246, 246, 246);
+  background: #f6e7c4;
+  // border: 1px solid $orange22;
+  box-shadow: 0 0px 3px $orange22;
   border-radius: 10px;
   .widget__title {
     display: flex;
@@ -15,6 +17,7 @@
       h2 {
         font-size: 1.4rem;
         color: $barGreen3;
+        color: #8b2e2e;
       }
     }
 
@@ -36,9 +39,9 @@
     flex-direction: column;
     border-radius: 10px;
     height: 435px;
-    // margin: 0.8 auto;
+    // margin: 10.8 auto;
     padding: 0.5rem 1.5rem 1.5rem 1.5rem;
-    border: 2px solid rgb(219, 219, 219);
+    // border: 2px solid #b5904f;
     .widget__title {
       display: flex;
       justify-content: space-between;
@@ -54,7 +57,8 @@
         font-size: 2rem;
       }
     }
-    .widget__container {padding: 0;
+    .widget__container {
+      padding: 0;
       // .box3__left {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;

@@ -5,7 +5,7 @@ export default function Molitva(props) {
 //   console.log("Molitva", molitve[0].body);
   var test = props.molitva;
   return (
-    <div>
+    <div className="molitva-text">
       <BodyText bodyText={test.body} />
     </div>
   );

@@ -34,44 +34,49 @@ export default function Home() {
               .
             </p>
           </section>
-
           <div className="banner-wrapper fix-size-horizontal">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750409157804-0"} />
           </div>
           <Suspense fallback={<div></div>}>
             <CalendarMonthsLinksLazy />
           </Suspense>
-
-          <div className="banner-wrapper">
+          <div className="banner-wrapper fix-size-horizontal">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750409277034-0"} />
           </div>
           <div className="home-afterZone">
             <div className="home__molitva">
               <h2>Oče naš - Molitva Gospodnja</h2>
               <div className="home__molitva-wrapper">
-                <Molitva molitva={molitve[molitve.length - 1]} />
+              <Molitva molitva={molitve[molitve.length - 1]} />
               </div>
             </div>
-            <section className="home__links-wrapper">
-              <div className="home__links">
+            <section className="home__molitva">
+              <div className="home__links second">
                 <h2>Krsne slave</h2>
-                Informacije o krsnim slavama (datumi, običaji i značenje) možete
-                pronaći na sledećoj stranici: <a href="/slave/">Krsne slave</a>.
+                <p className="home__molitva-wrapper">
+                  Informacije o krsnim slavama (datumi, običaji i značenje)
+                  možete pronaći na sledećoj stranici:{" "}
+                  <a href="/slave/">Krsne slave</a>.
+                </p>
               </div>
+              <img src="/img/line.png" loading="lazy" />
               <div className="home__links second">
                 <h2>Molitvenik</h2>
-                Molitve za različite prilike možete pronaći na stranici{" "}
-                <a href="/molitvenik/">Molitvenik</a>.
+                <p className="home__molitva-wrapper">
+                  Molitve za različite prilike možete pronaći na stranici:{" "}
+                  <a href="/molitvenik/">Molitvenik</a>.
+                </p>
+                <img src="/img/line.png" loading="lazy" />
               </div>
-              <div className="banner-wrapper">
+              {/* <div className="banner-wrapper">
                 <AdManagerSlot slotNumber={"div-gpt-ad-1763130338013-0"} />
-              </div>
+              </div> */}
             </section>
           </div>
         </div>
         <div className="home__wrapper-right">
           <Zadusnice />
-          <section class="calendar-2026 zadusnice">
+          <section class="calendar-2026">
             <p>
               Pregled <strong>Zadušnica za 2026. godinu</strong> dostupan je{" "}
               <a
@@ -88,6 +93,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <div className="banner-wrapper bilbord">
+        <AdManagerSlot slotNumber={"div-gpt-ad-1764593675864-0"} />
+      </div>
       <Suspense fallback={<div></div>}>
         <WidgetLazy />
       </Suspense>

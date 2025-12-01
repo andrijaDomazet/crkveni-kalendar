@@ -26,7 +26,7 @@ export default function Zadusnice({ setYear }) {
         <thead>
           <tr>
             <th colSpan="2">
-              <h2>{`Zadušnice u ${currentYear}. godini`}</h2>
+              <h2>{`ZADUŠNICE u ${currentYear}. godini`}</h2>
             </th>
           </tr>
         </thead>

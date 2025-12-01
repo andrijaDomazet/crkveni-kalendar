@@ -15,32 +15,33 @@
   .navBar {
     flex: 3;
     display: flex;
-    background: $grey0;
+    background: #fff6e3;
     .navBar-wrapper {
       display: flex;
       width: 1200px;
       margin: 0 auto;
       .links {
         flex: 1;
-        width: 420px;
+        width: 430px;
         display: flex;
         justify-content: space-around;
         align-items: center;
         .nav-link-wrapper {
           display: flex;
           height: 100%;
-          width: 210px;
+          width: 220px;
           align-items: center;
           .nav-link {
             display: flex;
-            font-size: 1.2rem;
+            font-size: 1.35rem;
             color: $grey7;
             font-weight: 700;
             width: 100%;
             vertical-align: middle;
             justify-content: center;
             &.active {
-              color: $blue1;
+              // color: $blue1;
+              color: $redDay2;
               font-weight: bold;
             }
 
@@ -168,12 +169,21 @@
         }
       }
       .navBar__logo {
+        display: flex;
+        justify-content: center;
+        align-items: center; // vertikalno centriranje
         text-align: center;
+        // text-align: center;
         height: 100%;
-        width: 340px;
+        width: 300px;
         padding: 0 1rem;
+        margin: 0;
+        // border: 1px solid red;
+        // align-items: center;
+        // display: block;
         img {
-          height: 80px;
+          // display: block;
+          height: 60px;
           width: auto;
         }
       }

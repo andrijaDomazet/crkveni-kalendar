@@ -38,20 +38,20 @@
             font-size: 1.25rem;
             line-height: 1.4rem;
           }
-          p {
-            padding: 0.4rem 0;
-            font-size: 1.2rem; //?????????????????
-            span {
-              font-size: 1.15rem;
-              font-weight: 900;
-            }
-            a {
-              font-weight: 900;
-              font-size: 1.15rem;
-              color: $blue1;
-              text-decoration: none;
-            }
-          }
+          // p {
+          //   padding: 0.4rem 0;
+          //   font-size: 1.2rem; //?????????????????
+          //   span {
+          //     font-size: 1.15rem;
+          //     font-weight: 900;
+          //   }
+          //   a {
+          //     font-weight: 900;
+          //     font-size: 1.15rem;
+          //     color: $blue1;
+          //     text-decoration: none;
+          //   }
+          // }
           .molitveBoxes {
             display: grid;
             margin: 0 0.5rem;
@@ -77,6 +77,7 @@
                 border-radius: 0.3rem;
                 color: white;
                 background: $orange2;
+                background: $redDay2;
                 font-weight: 600;
                 margin-bottom: 0.3rem;
               }
@@ -107,7 +108,8 @@
       }
 
       .mainContent-subtitle {
-        color: $blue1;
+        // color: $blue1;
+        color: $redDay1;
         padding-top: 0.8rem;
         font-size: 1.4rem;
         line-height: 2.2rem;
@@ -205,10 +207,6 @@
             .mainContent-lead {
               font-size: 1.35rem;
               line-height: 1.5rem;
-            }
-            p {
-              font-size: 1.25rem;
-              padding: 0.25rem 0;
             }
             .molitveBoxes {
               margin: 0 1rem;
