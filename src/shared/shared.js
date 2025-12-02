@@ -202,6 +202,24 @@ export const options = [
           pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
         },
       },
+      {
+        title: "Januar 2026",
+        route: "/2026/januar/",
+        social: {
+          title: "Običaji i tradicija",
+          lead: "Najnovije vesti - Običaji i tradicija",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
+        },
+      },
+      {
+        title: "Februar 2026",
+        route: "/2026/februar/",
+        social: {
+          title: "Običaji i tradicija",
+          lead: "Najnovije vesti - Običaji i tradicija",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
+        },
+      },
     ],
   },
   //2

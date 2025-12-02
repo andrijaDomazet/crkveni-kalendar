@@ -43,7 +43,8 @@ $barGreen4: #1a4c40;
 $barGreen5: #153d33;
 
 // $orange0: #f6e7c4;
-$orange0: rgb(247, 243, 228);
+// $orange0: rgb(247, 243, 228);
+$orange0: rgb(253, 247, 229);
 $orange1: #d09850;
 // $orange22: #b5904f;
 // $orange2: #965315;
@@ -56,8 +57,9 @@ $dark0: #f6e7c4;
 $dark1: #d8a68d;
 $dark2: #b5904f;
 $dark3: #a57f3c;
-$dark4: #724027;
-$dark5: #392014;
+$dark4: #a87d31;
+// $dark4: #724027;
+$dark5: #99451f;
 
 $eggShell: #e7e4ce;
 $eggShell2: #bcb476;
@@ -95,7 +97,7 @@ $blue1: #1565c0;
   align-items: center;
   // border: 1px solid red;
   // width: 300px;
-  // height: 600px;
+  // height: 250px;
 }
 
 .banner-wrapper.bilbord,
@@ -134,6 +136,7 @@ $blue1: #1565c0;
     top: 0;
     margin: 1rem auto;
     position: sticky;
+    order: 2;
     // height: 250px;
     // height: calc(100% - 1200px);
     // height: 100%;

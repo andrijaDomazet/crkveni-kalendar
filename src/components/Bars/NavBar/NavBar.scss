@@ -15,7 +15,9 @@
   .navBar {
     flex: 3;
     display: flex;
-    background: #fff6e3;
+    // background: #fff6e3;
+    background: $orange0;
+    box-shadow: 0 0 3px $grey2;
     .navBar-wrapper {
       display: flex;
       width: 1200px;
