@@ -7,6 +7,7 @@
     padding: 0 0.4rem;
     .calendar-2026 {
       margin-top: 1rem;
+      padding: 0 0.15rem;
       h2 {
         font-size: 1.35rem;
       }
@@ -16,7 +17,7 @@
           font-size: 1.1rem;
         }
         a {
-          font-size: 1.1rem;
+          font-size: 1.2rem;
           font-weight: 600;
           text-decoration: underline;
         }
@@ -24,7 +25,7 @@
     }
     .home__wrapper-left {
       .home-afterZone {
-        background: $dark0;
+        background: $dark1;
         padding: 0 1rem;
         border-radius: 0.3rem;
         box-shadow: 0 0 3px $grey2;
@@ -63,7 +64,7 @@
             font-weight: 600;
             margin-right: 2px;
           }
-          .home__molitva-wrapper{
+          .home__molitva-wrapper {
             position: relative;
             z-index: 1;
           }
@@ -124,7 +125,7 @@
           font-size: 1.5rem;
         }
         p {
-          font-size: 1.4rem;
+          font-size: 1.35rem;
           strong {
             font-size: 1.35rem;
           }

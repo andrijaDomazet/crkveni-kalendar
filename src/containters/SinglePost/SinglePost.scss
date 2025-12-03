@@ -38,20 +38,6 @@
             font-size: 1.25rem;
             line-height: 1.4rem;
           }
-          // p {
-          //   padding: 0.4rem 0;
-          //   font-size: 1.2rem; //?????????????????
-          //   span {
-          //     font-size: 1.15rem;
-          //     font-weight: 900;
-          //   }
-          //   a {
-          //     font-weight: 900;
-          //     font-size: 1.15rem;
-          //     color: $blue1;
-          //     text-decoration: none;
-          //   }
-          // }
           .molitveBoxes {
             display: grid;
             margin: 0 0.5rem;
@@ -76,8 +62,7 @@
                 margin-right: 0.3rem;
                 border-radius: 0.3rem;
                 color: white;
-                background: $orange2;
-                background: $redDay2;
+                background: $dark3;
                 font-weight: 600;
                 margin-bottom: 0.3rem;
               }
@@ -93,7 +78,7 @@
       }
       .mainContent-cat {
         text-transform: capitalize;
-        background: $silver2;
+        background: $redDay2;
         font-size: 1.2rem;
         color: white;
         padding: 0.1rem 1rem;
@@ -108,7 +93,6 @@
       }
 
       .mainContent-subtitle {
-        // color: $blue1;
         color: $redDay1;
         padding-top: 0.8rem;
         font-size: 1.4rem;

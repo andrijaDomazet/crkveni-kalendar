@@ -4,11 +4,7 @@ $large: 1280px;
 $extraLarge: 1368px;
 
 body {
-  // background: #f8f8f880;
   background: #f7f1e3;
-  // background: red;
-  // background-color: black;
-  // background-image: radial-gradient(rgba(236, 230, 195, 0.75), black 120%);
   margin: 0;
   // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
   //   "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -30,48 +26,27 @@ code {
   transition: 2s all east-out;
   text-decoration: none;
 }
-$green1: #34c118;
-$green2: #0d6d2f;
-$green3: #0b5b27;
-$green4: #09491f;
-$green5: #0c3d1d;
 
-$barGreen1: #67cbb4;
-$barGreen2: #39a78e;
-$barGreen3: #215f51;
-$barGreen4: #1a4c40;
-$barGreen5: #153d33;
-
-// $orange0: #f6e7c4;
-// $orange0: rgb(247, 243, 228);
-$orange0: #fffef9;
+// $orange0: #f7f4ea;
+$orange0: #faf9f2;
 $orange1: #d09850;
-// $orange22: #b5904f;
-// $orange2: #965315;
 $orange2: #ff642d;
 $orange22: #b5904f;
 $orange3: #7c4512;
 $orange4: #693d0b;
 
-$dark0: #f6e7c4;
-$dark1: #d8a68d;
-$dark2: #b5904f;
-$dark3: #a57f3c;
-$dark4: #a87d31;
-// $dark4: #724027;
-$dark5: #99451f;
+$dark0: #f7eedd;
+$dark1: #eedcb6;
+$dark2: #d7ac53;
+$dark3: #ac8228;
+$dark4: #674e18;
+$dark5: #221a08;
+// $dark6: #201805;
 
 $eggShell: #e7e4ce;
 $eggShell2: #bcb476;
 $eggShell3: #898143;
 $eggShell4: #55502a;
-
-$silver0: #609aa2;
-$silver1: #2c7983;
-$silver2: #235d64;
-$silver3: #1c4d53;
-$silver4: #1d4d55;
-$silver5: #153a3f;
 
 $grey0: #f3f3f3;
 $grey1: #f4f4f4;

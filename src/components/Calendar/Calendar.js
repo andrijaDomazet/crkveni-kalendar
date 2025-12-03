@@ -21,14 +21,14 @@ export default function Calendar(props) {
   const navigate = useNavigate();
 
   const changeMonth = (val) => {
-    console.log("ID", id, isYear, val);
+    console.log("ID", id, isYear, isMonth, val);
 
     if (id === undefined) {
       // navigate(`/${isYear}/${tableTitle(val)}/`);
       if (val === 1) {
         navigate(`../${isYear + 1}/januar/`);
       } else {
-        navigate(`../${isYear - 1}/decembar/`);
+        navigate(`../${isYear}/${monthSerb[isMonth-1]}/`);
       }
     } else if (isMonth === 11 && val === 1) {
       navigate(`../${+isYear + 1}/januar/`);
@@ -60,7 +60,7 @@ export default function Calendar(props) {
   const tableTitle = (x) => {
     if (id === undefined) {
       if (isMonth + x === 12) {
-        return `JANUAR (${+isYear + 1})`;
+        return `Januar (${+isYear + 1})`;
       } else if (isMonth + x === -1) {
         return `${monthSerb[11]} (${+isYear + x})`;
       } else {

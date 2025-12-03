@@ -120,6 +120,7 @@
     tbody {
       tr {
         background: $orange0;
+        // background: red;
       }
       .opisNedelje {
         td {
@@ -147,8 +148,9 @@
         font-weight: 600;
         td {
           background: #ffeca6;
-          // background: #f1e199;
+          // background: $dark2;
           h3 {
+            // text-shadow: 0 0 3px red;
             font-weight: 600;
           }
         }
@@ -184,10 +186,10 @@
           }
           .slavaStrong {
             height: 1.1rem;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             line-height: 1.1rem;
-            background: $dark4;
-            background: $dark5;
+            padding: 0.1rem 0.3rem;
+            background: $dark3;
             letter-spacing: 0.02rem;
           }
           .zadusniceStrong {
@@ -235,23 +237,27 @@
   }
   .calendar-month {
     box-shadow: 0 0px 2px $grey3;
-    display: flex;
+    display: grid;
+    // display: flex;
+    grid-template-columns: 3fr 2fr 3fr;
     justify-content: space-between;
     background: $orange0;
     padding: 0.5rem 0;
     border-bottom-left-radius: 0.3rem;
     border-bottom-right-radius: 0.3rem;
+    // border: 1px solid red;
     button {
       text-align: center;
       text-transform: capitalize;
       flex: 1;
       border: none;
-      line-height: 1.4rem;
-      font-size: 1.1rem;
+      line-height: 1.2rem;
+      font-size: 1rem;
       color: $grey7;
       text-decoration: underline;
+      // border: 1px solid green;
       i {
-        margin: 0 0.5rem;
+        margin: 0 0.2rem;
         font-size: 1rem;
       }
     }
@@ -259,7 +265,7 @@
       text-align: center;
       button {
         text-decoration: none;
-        text-transform: uppercase;
+        // text-transform: uppercase;
         font-weight: bold;
         font-size: 1rem;
         color: $grey7;
@@ -360,10 +366,11 @@
           text-align: left;
           .test {
             padding-left: 0.5rem;
-            .slavaStrong {
-              font-size: 1rem;
-              line-height: 1.25rem;
-              height: 1.25rem;
+            .slavaStrong,
+            .zadusniceStrong {
+              font-size: 1.15rem;
+              line-height: 1.35rem;
+              height: 1.35rem;
             }
             h2 {
               font-size: 1.25rem;
@@ -392,6 +399,7 @@
         line-height: 1.6rem;
         cursor: pointer;
         i {
+          margin: 0 0.4rem;
           font-size: 1.2rem;
         }
       }

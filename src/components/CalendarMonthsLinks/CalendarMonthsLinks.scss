@@ -12,7 +12,9 @@
           border-radius: 0.3rem;
           padding: 0.5rem;
           text-align: center;
-          background: #f6e7c4;
+          // background: #f6e7c4;
+          background: $dark1;
+          // background: red;
           justify-content: space-between;
           width: 100%;
           h2 {
@@ -33,6 +35,7 @@
     }
     tbody {
       tr {
+        background: $orange0;
         td {
           border-radius: 0.3rem;
           color: $grey4;

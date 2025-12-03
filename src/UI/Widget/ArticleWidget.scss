@@ -2,12 +2,15 @@
 
 .wBox {
   height: 140px;
+
   .box-wrapper {
+    background: $dark0;
     display: flex;
     box-shadow: 0 0 3px $grey2;
     border-radius: 0.3rem;
     img {
-        object-fit: cover;
+      // padding: 1rem 0;
+      object-fit: cover;
       height: 120px;
       width: 140px;
     }
@@ -18,9 +21,10 @@
     // width: 100%;
     // text-align: center;
     justify-content: center;
-    .ornament-line{
+
+    .ornament-line {
       margin: 0 auto;
-      padding: .6rem .3rem;
+      padding: 0.6rem 0.3rem;
       width: 80%;
       height: auto;
     }
@@ -31,7 +35,8 @@
 
     .box-content-3 {
       // color: rgb(13, 78, 13);
-      color: #8b2e2e;
+      // color: #8b2e2e;
+      color: $redDay2;
       margin-top: auto;
       padding: 0 0.3rem;
     }

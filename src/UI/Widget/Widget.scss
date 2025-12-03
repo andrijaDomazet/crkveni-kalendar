@@ -3,9 +3,8 @@
 .widget__box {
   margin: 1rem 0.2rem;
   padding: 0 0.6rem;
-  // background: rgb(246, 246, 246);
   background: #f6e7c4;
-  // border: 1px solid $orange22;
+  background: $dark1;
   box-shadow: 0 0px 3px $grey2;
   border-radius: 10px;
   .widget__title {
@@ -16,8 +15,7 @@
       text-decoration: none;
       h2 {
         font-size: 1.4rem;
-        color: $barGreen3;
-        color: #8b2e2e;
+        color: $redDay2;
       }
     }
 

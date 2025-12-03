@@ -4,10 +4,11 @@
   display: flex;
   h1 {
     display: inline-block;
-    color: $barGreen4;
+    // color: $barGreen4;
+    color: $redDay2;
     font-size: 1.4rem;
     line-height: 1.8rem;
-    border-bottom: 3px solid $barGreen5;
+    border-bottom: 3px solid $grey7;
     margin: 2rem 0 1rem 0;
   }
   p {
@@ -43,7 +44,7 @@
       // border: 1px solid red;
       h1 {
         font-size: 1.6rem;
-        border-bottom: 4px solid $barGreen5;
+        border-bottom: 4px solid $grey7;
       }
       h2 {
         font-size: 1.4rem;
