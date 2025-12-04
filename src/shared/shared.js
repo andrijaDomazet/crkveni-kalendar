@@ -81,8 +81,8 @@ export const options = [
   },
   //1
   {
-    route: "/2025/",
-    title: "Crkveni kalendar 2025",
+    route: "/2026/",
+    title: "Crkveni kalendar 2026",
     social: {
       title: "Crkveni kalendar",
       lead: "Crkveni pravoslavni kalendar | Svi praznici, slave i posti u godini na jednom mestu",
@@ -94,114 +94,6 @@ export const options = [
       pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
     },
     item_list: [
-      {
-        title: "Januar 2025",
-        route: "/2025/januar/",
-        social: {
-          title: "Običaji i tradicija",
-          lead: "Najnovije vesti - Običaji i tradicija",
-          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
-        },
-      },
-      {
-        title: "Februar 2025",
-        route: "/2025/februar/",
-        social: {
-          title: "Običaji i tradicija",
-          lead: "Najnovije vesti - Običaji i tradicija",
-          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
-        },
-      },
-      {
-        title: "Mart 2025",
-        route: "/2025/mart/",
-        social: {
-          title: "Običaji i tradicija",
-          lead: "Najnovije vesti - Običaji i tradicija",
-          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
-        },
-      },
-      {
-        title: "April 2025",
-        route: "/2025/april/",
-        social: {
-          title: "Običaji i tradicija",
-          lead: "Najnovije vesti - Običaji i tradicija",
-          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
-        },
-      },
-      {
-        title: "Maj 2025",
-        route: "/2025/maj/",
-        social: {
-          title: "Običaji i tradicija",
-          lead: "Najnovije vesti - Običaji i tradicija",
-          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
-        },
-      },
-      {
-        title: "Jun 2025",
-        route: "/2025/jun/",
-        social: {
-          title: "Običaji i tradicija",
-          lead: "Najnovije vesti - Običaji i tradicija",
-          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
-        },
-      },
-      {
-        title: "Jul 2025",
-        route: "/2025/jul/",
-        social: {
-          title: "Običaji i tradicija",
-          lead: "Najnovije vesti - Običaji i tradicija",
-          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
-        },
-      },
-      {
-        title: "Avgust 2025",
-        route: "/2025/avgust/",
-        social: {
-          title: "Običaji i tradicija",
-          lead: "Najnovije vesti - Običaji i tradicija",
-          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
-        },
-      },
-      {
-        title: "Septembar 2025",
-        route: "/2025/septembar/",
-        social: {
-          title: "Običaji i tradicija",
-          lead: "Najnovije vesti - Običaji i tradicija",
-          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
-        },
-      },
-      {
-        title: "Oktobar 2025",
-        route: "/2025/oktobar/",
-        social: {
-          title: "Običaji i tradicija",
-          lead: "Najnovije vesti - Običaji i tradicija",
-          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
-        },
-      },
-      {
-        title: "Novembar 2025",
-        route: "/2025/novembar/",
-        social: {
-          title: "Običaji i tradicija",
-          lead: "Najnovije vesti - Običaji i tradicija",
-          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
-        },
-      },
-      {
-        title: "Decembar 2025",
-        route: "/2025/decembar/",
-        social: {
-          title: "Običaji i tradicija",
-          lead: "Najnovije vesti - Običaji i tradicija",
-          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
-        },
-      },
       {
         title: "Januar 2026",
         route: "/2026/januar/",
@@ -220,6 +112,96 @@ export const options = [
           pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
         },
       },
+      {
+        title: "Mart 2026",
+        route: "/2026/mart/",
+        social: {
+          title: "Običaji i tradicija",
+          lead: "Najnovije vesti - Običaji i tradicija",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
+        },
+      },
+      {
+        title: "April 2026",
+        route: "/2026/april/",
+        social: {
+          title: "Običaji i tradicija",
+          lead: "Najnovije vesti - Običaji i tradicija",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
+        },
+      },
+      {
+        title: "Maj 2026",
+        route: "/2026/maj/",
+        social: {
+          title: "Običaji i tradicija",
+          lead: "Najnovije vesti - Običaji i tradicija",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
+        },
+      },
+      {
+        title: "Jun 2026",
+        route: "/2026/jun/",
+        social: {
+          title: "Običaji i tradicija",
+          lead: "Najnovije vesti - Običaji i tradicija",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
+        },
+      },
+      {
+        title: "Jul 2026",
+        route: "/2026/jul/",
+        social: {
+          title: "Običaji i tradicija",
+          lead: "Najnovije vesti - Običaji i tradicija",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
+        },
+      },
+      {
+        title: "Avgust 2026",
+        route: "/2026/avgust/",
+        social: {
+          title: "Običaji i tradicija",
+          lead: "Najnovije vesti - Običaji i tradicija",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
+        },
+      },
+      {
+        title: "Septembar 2026",
+        route: "/2026/septembar/",
+        social: {
+          title: "Običaji i tradicija",
+          lead: "Najnovije vesti - Običaji i tradicija",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
+        },
+      },
+      {
+        title: "Oktobar 2026",
+        route: "/2026/oktobar/",
+        social: {
+          title: "Običaji i tradicija",
+          lead: "Najnovije vesti - Običaji i tradicija",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
+        },
+      },
+      {
+        title: "Novembar 2026",
+        route: "/2026/novembar/",
+        social: {
+          title: "Običaji i tradicija",
+          lead: "Najnovije vesti - Običaji i tradicija",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
+        },
+      },
+      {
+        title: "Decembar 2026",
+        route: "/2026/decembar/",
+        social: {
+          title: "Običaji i tradicija",
+          lead: "Najnovije vesti - Običaji i tradicija",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
+        },
+      }
     ],
   },
   //2
