@@ -49,19 +49,34 @@
 import { useEffect, useRef } from "react";
 import { useGlobalLocation } from "../../shared/LocationContext";
 
-const AdManagerSlot = ({ slotNumber, onSlotRenderEnded }) => {
+export default function AdManagerSlot({ slotNumber, onSlotRenderEnded }) {
   const { location } = useGlobalLocation();
   const previousLocation = useRef("");
 
+  // helper: čekaj da slot postoji pa osveži
+  const tryRefreshSlot = () => {
+    if (!window.googletag?.pubads) return;
+
+    const pubads = window.googletag.pubads();
+    const slot = pubads
+      .getSlots()
+      .find((s) => s.getSlotElementId() === slotNumber);
+
+    if (slot) {
+      pubads.refresh([slot]);
+      return true;
+    }
+
+    return false;
+  };
+
+  // init display + listener
   useEffect(() => {
-    if (typeof window === "undefined" || !window.googletag) return;
+    if (!window.googletag) return;
 
     window.googletag.cmd.push(() => {
-      // prikazujemo slot SAMO prvi put
+      // display slot SAMO prvi put
       window.googletag.display(slotNumber);
-
-      // Listener dodajemo samo jednom po slotu
-      const pubads = window.googletag.pubads();
 
       const handler = (event) => {
         if (event.slot.getSlotElementId() === slotNumber) {
@@ -69,33 +84,31 @@ const AdManagerSlot = ({ slotNumber, onSlotRenderEnded }) => {
         }
       };
 
-      pubads.addEventListener("slotRenderEnded", handler);
+      window.googletag.pubads().addEventListener("slotRenderEnded", handler);
     });
-  }, []); // ← NE SME imati dependencije!
+  }, []);
 
-  // REFRESH deo
+  // refresh on navigation
   useEffect(() => {
-    if (typeof window === "undefined" || !window.googletag?.pubads) return;
+    if (!window.googletag?.cmd) return;
 
     if (
       previousLocation.current &&
       previousLocation.current !== location.pathname
     ) {
-      // NAĐI slot
-      const slot = window.googletag
-        .pubads()
-        .getSlots()
-        .find((s) => s.getSlotElementId() === slotNumber);
+      window.googletag.cmd.push(() => {
+        // odmah pokušaj refresh
+        if (tryRefreshSlot()) return;
 
-      if (slot) {
-        window.googletag.pubads().refresh([slot]);
-      }
+        // ako ne postoji — retry na 150 ms
+        setTimeout(() => {
+          tryRefreshSlot();
+        }, 150);
+      });
     }
 
     previousLocation.current = location.pathname;
-  }, [location.pathname, slotNumber]);
+  }, [location.pathname]);
 
   return <div id={slotNumber}></div>;
-};
-
-export default AdManagerSlot;
+}
