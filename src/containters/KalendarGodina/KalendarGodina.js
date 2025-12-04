@@ -1,12 +1,14 @@
 import "./KalendarGodina.scss";
 import Calendar from "../../components/Calendar/Calendar";
-import Zadusnice from "../../components/Zadusnice/Zadusnice";
 import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
 import { lazy, Suspense } from "react";
 
 const WidgetLazy = lazy(() => import("../../UI/Widget/Widget.js"));
 const CalendarMonthsLinksLazy = lazy(() =>
   import("../../components/CalendarMonthsLinks/CalendarMonthsLinks.js")
+);
+const ZadusniceLazy = lazy(() =>
+  import("../../components/Zadusnice/Zadusnice.js")
 );
 
 export default function KalendarGodina() {
@@ -23,7 +25,9 @@ export default function KalendarGodina() {
           </div>
         </div>
         <div className="kalendarGodina-right">
-          <Zadusnice />
+          <Suspense fallback={<div></div>}>
+            <ZadusniceLazy />
+          </Suspense>
           <div className="banner-wrapper xl_sticky">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750411708088-0"} />
           </div>

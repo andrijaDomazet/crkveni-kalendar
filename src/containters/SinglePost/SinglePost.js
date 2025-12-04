@@ -1,7 +1,6 @@
 import { lazy, Suspense, useState } from "react";
 import "./SinglePost.scss";
 import BodyText from "../../components/BodyText/BodyText";
-// import { useIdContext } from "../../shared/IdProvider";
 import { useGlobalLocation } from "../../shared/LocationContext";
 import { urlTitle2 } from "../../shared/utility";
 import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
@@ -19,7 +18,6 @@ const CrossingDataLazy = lazy(() =>
 );
 
 export default function SinglePost() {
-  // const { data } = useIdContext();
   const { pathPart } = useGlobalLocation();
   const [isNews, setIsNews] = useState(() => setArticleState());
 
@@ -78,7 +76,6 @@ export default function SinglePost() {
               <div>
                 {pathPart[1] === "zadusnice" && (
                   <Suspense fallback={<div></div>}>
-                    {/* <ZadusniceLazy /> */}
                     <ZadusniceLazy setYear={2026} />
                   </Suspense>
                 )}

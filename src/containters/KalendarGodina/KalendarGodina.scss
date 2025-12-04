@@ -6,16 +6,12 @@
     padding: 0 0.4rem;
   }
 }
-
 @media screen and (min-width: $medium) {
   .kalendarGodina {
-    // padding: 2rem 0;
     width: 1200px;
     margin: 2rem auto;
     .kalendarGodina-wrapper {
       display: flex;
-      // padding: 0;
-      // margin: 2rem auto;
       .kalendarGodina-left {
         width: calc(100% - 340px);
         margin-right: 20px;

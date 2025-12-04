@@ -88,7 +88,6 @@
           height: 60px;
           span {
             font-size: 1.2rem;
-            // color: red;
           }
         }
       }
@@ -112,23 +111,17 @@
       }
       th:nth-child(4) {
         font-size: 1.2rem;
-        // h2{
-        //   font-size: 10rem;
-        // }
       }
     }
     tbody {
       tr {
         background: $orange0;
-        // background: red;
       }
       .opisNedelje {
         td {
           height: 0.8rem;
           font-weight: 700;
-          // background: $grey0;
-          background: rgb(221, 219, 215);
-          // background: red;
+          background: $grey1;
           border-left: none;
           border-right: none;
         }
@@ -147,7 +140,7 @@
       .today {
         font-weight: 600;
         td {
-          background: #ffeca6;
+          background: $orange1;
           // background: $dark2;
           h3 {
             // text-shadow: 0 0 3px red;
@@ -207,7 +200,7 @@
             font-size: 1rem;
             letter-spacing: 0.03rem;
             .redStrong {
-              color: $redDay0;
+              color: $redDay1;
             }
             .blackStrong {
               color: $grey5;
@@ -242,6 +235,7 @@
     grid-template-columns: 3fr 2fr 3fr;
     justify-content: space-between;
     background: $orange0;
+    // background: red;
     padding: 0.5rem 0;
     border-bottom-left-radius: 0.3rem;
     border-bottom-right-radius: 0.3rem;
