@@ -2,8 +2,8 @@
 
 .calendar-allMonths {
   .calendar-allMonths-wrapper {
-    // margin: 1rem 0;
-    width: 100%;
+    margin: 0 0.6rem;
+    // width: 100%;
     box-shadow: 0 0px 3px $grey2;
     border-radius: 0.3rem;
     thead {
@@ -68,6 +68,8 @@
 @media screen and (min-width: 768px) {
   .calendar-allMonths {
     .calendar-allMonths-wrapper {
+      margin: 0;
+      width: 100%;
       thead {
         tr {
           th {
