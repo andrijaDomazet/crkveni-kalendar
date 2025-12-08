@@ -19,7 +19,7 @@ export default function KalendarGodina() {
       </div>
       <div className="kalendarGodina-wrapper">
         <div className="kalendarGodina-left">
-          <Calendar soc={false} />
+          <Calendar soc={false} isMonth2={0}/>
           <div className="banner-wrapper fix-size-horizontal">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750409157804-0"} />
           </div>

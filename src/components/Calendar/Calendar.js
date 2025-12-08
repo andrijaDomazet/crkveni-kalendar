@@ -14,9 +14,13 @@ import { useIdContext } from "../../shared/IdProvider";
 import { renderTitleSection } from "../../shared/utility";
 
 export default function Calendar(props) {
+  console.log("Props", props.isMonth2);
+
   let { id, currentDate, isYear, isMonth, holidays, isEasterDay } =
     useIdContext();
-  isMonth = currentDate.getFullYear() === isYear ? isMonth : 0;
+  isMonth = props.isMonth2 ?? isMonth;
+  console.log("IsMonth", isMonth);
+
   const location = useGlobalLocation();
   const [dropDownYear, setDropDownYear] = useState(false);
   const navigate = useNavigate();
@@ -25,11 +29,12 @@ export default function Calendar(props) {
     // console.log("ID", id, isYear, isMonth, val);
 
     if (id === undefined) {
-      // navigate(`/${isYear}/${tableTitle(val)}/`);
-      if (val === 1) {
+      if (isMonth === 11 && val === 1) {
         navigate(`../${isYear + 1}/januar/`);
+      } else  if (isMonth === 0 && val === -1) {
+        navigate(`../${isYear - 1}/decembar/`);
       } else {
-        navigate(`../${isYear}/${monthSerb[isMonth - 1]}/`);
+        navigate(`../${isYear}/${monthSerb[isMonth + val]}/`);
       }
     } else if (isMonth === 11 && val === 1) {
       navigate(`../${+isYear + 1}/januar/`);
@@ -59,6 +64,7 @@ export default function Calendar(props) {
     }
   }
   const tableTitle = (x) => {
+    // console.log("ID", id, isYear, isMonth, x);
     if (id === undefined) {
       if (isMonth + x === 12) {
         return `Januar (${+isYear + 1})`;
