@@ -176,6 +176,17 @@ export const IdProvider = ({ children }) => {
       .map((item) => ({ ...item })); // shallow copy po itemu
     //end---------------------------------------------------------------------
 
+    // Dodavanje 29. februara za prestupnu godinu
+    const isLeap =
+      (isYear % 4 === 0 && isYear % 100 !== 0) || isYear % 400 === 0;
+
+    if (isMonth === 1 && isLeap) {
+      // Ubacujemo na poziciju 28 (29. dan)
+      setHol.splice(28, 0, {
+        title: ["Sveti mučenici Pamfil", "Porfirije i drugih deset mučenika"],
+      });
+    }
+
     let setHolTest = setHol.map((item, index) => {
       item.title = Array.isArray(item.title)
         ? item.title.map((item) => item)
@@ -290,12 +301,12 @@ export const IdProvider = ({ children }) => {
           slavaSymbol: true,
           strongClass: "redStrong",
         });
-      } else if (currentDay2 === 2 && diffInDays > 15 && diffInDays < 20) {
+      } else if (currentDay2 === 3 && diffInDays > 15 && diffInDays < 20) {
         item.title = renderTitleSection({
           mainTitle: item.title,
           extraLabel: "(Prvo bdenije)",
         });
-      } else if (currentDay2 === 4 && diffInDays > 15 && diffInDays < 20) {
+      } else if (currentDay2 === 5 && diffInDays > 15 && diffInDays < 20) {
         item.title = renderTitleSection({
           mainTitle: item.title,
           extraLabel: "(Drugo bdenije)",

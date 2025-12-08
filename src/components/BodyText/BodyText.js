@@ -2,6 +2,12 @@ import { lazy, Suspense } from "react";
 import "./BodyText.scss";
 import AdManagerSlot from "../AdvModule/AdManagerSlot";
 import { useGlobalLocation } from "../../shared/LocationContext.js";
+import Zadusnice from "../Zadusnice/Zadusnice.js";
+
+const dynamicComponents = {
+  Zadusnice
+};
+
 const PostImage = lazy(() =>
   import("../../containters/SinglePost/img/PostImage.js")
 );
@@ -37,6 +43,18 @@ const setImg = (item) => {
     );
   }
 };
+const setComponent = (item) => {
+  if (item.component && dynamicComponents[item.component]) {
+    const Component = dynamicComponents[item.component];
+
+    return (
+      <Suspense fallback={<div></div>}>
+        <Component />
+      </Suspense>
+    );
+  }
+  return null;
+};
 
 export default function BodyText(props) {
   const { pathPart } = useGlobalLocation();
@@ -65,6 +83,7 @@ export default function BodyText(props) {
               <p dangerouslySetInnerHTML={{ __html: item["text"] }}></p>
               {setImg(item)}
               {setQuote(item)}
+              {setComponent(item)}
             </div>
           );
         }

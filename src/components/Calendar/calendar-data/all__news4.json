@@ -203,11 +203,11 @@
   },
   {
     "id": 44,
-    "title": "Sveti besrebrenici Kir i Jovan"
+    "title": ["Sveti besrebrenici Kir i Jovan","(Pretprazništvo Sretenja)"]
   },
   {
     "id": 45,
-    "title": ["Sveti mučenik Trifun", "(Pretprazništvo Sretenja)"],
+    "title": "Sveti mučenik Trifun",
     "slava": true
   },
   {
@@ -230,7 +230,7 @@
   },
   {
     "id": 50,
-    "title": ["Sveti Fotije Carigradski", "Sveti Vukol, Episkop Smirnski"]
+    "title": ["Sveti Fotije Carigradski", "Sveti Vukol, Episkop Smirnski", "(Odanije Sretenja)"]
   },
   {
     "id": 51,

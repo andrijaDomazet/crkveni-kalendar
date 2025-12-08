@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   .content {
-    padding: 0.5rem 0.5rem 2rem 0.5rem;
+    padding: 0.5rem 0.6rem 2rem 0.6rem;
     .mainContent {
       .mainContent-img {
         height: auto;
@@ -33,6 +33,7 @@
       .mainContent-body {
         display: flex;
         flex-direction: column;
+        padding-top: 0.5rem;
         .mainContent-text {
           .mainContent-lead {
             font-size: 1.25rem;

@@ -14,21 +14,22 @@ import { useIdContext } from "../../shared/IdProvider";
 import { renderTitleSection } from "../../shared/utility";
 
 export default function Calendar(props) {
-  const { id, currentDate, isYear, isMonth, holidays, isEasterDay } =
+  let { id, currentDate, isYear, isMonth, holidays, isEasterDay } =
     useIdContext();
+  isMonth = currentDate.getFullYear() === isYear ? isMonth : 0;
   const location = useGlobalLocation();
   const [dropDownYear, setDropDownYear] = useState(false);
   const navigate = useNavigate();
 
   const changeMonth = (val) => {
-    console.log("ID", id, isYear, isMonth, val);
+    // console.log("ID", id, isYear, isMonth, val);
 
     if (id === undefined) {
       // navigate(`/${isYear}/${tableTitle(val)}/`);
       if (val === 1) {
         navigate(`../${isYear + 1}/januar/`);
       } else {
-        navigate(`../${isYear}/${monthSerb[isMonth-1]}/`);
+        navigate(`../${isYear}/${monthSerb[isMonth - 1]}/`);
       }
     } else if (isMonth === 11 && val === 1) {
       navigate(`../${+isYear + 1}/januar/`);
