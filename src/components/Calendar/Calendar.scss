@@ -178,8 +178,8 @@
             white-space: nowrap;
           }
           .slavaStrong {
-            height: 1.1rem;
-            font-size: 0.8rem;
+            height: 1.2rem;
+            font-size: 0.9rem;
             line-height: 1.1rem;
             padding: 0.1rem 0.3rem;
             background: $dark3;
@@ -363,10 +363,11 @@
             .slavaStrong,
             .zadusniceStrong {
               font-size: 1.15rem;
-              line-height: 1.35rem;
-              height: 1.35rem;
+              line-height: 1.4rem;
+              height: 1.4rem;
+              // padding: .2rem;
             }
-            strong{
+            strong {
               font-size: 1.15rem;
             }
             h2 {

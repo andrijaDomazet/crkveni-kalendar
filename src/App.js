@@ -55,11 +55,11 @@ export default function App() {
             exact="true"
             element={React.createElement(withIdProvider(SinglePost))}
           />
-          <Route
+          {/* <Route
             path="/slave/:test"
             exact="true"
             element={React.createElement(withIdProvider(SinglePost))}
-          />
+          /> */}
           <Route
             path="/imenoslov/"
             exact="true"

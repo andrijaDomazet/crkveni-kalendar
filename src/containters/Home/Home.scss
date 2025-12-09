@@ -25,16 +25,15 @@
     }
     .home__wrapper-left {
       .home-afterZone {
-        background: $dark1;
-        // padding: 0 1rem;
-        margin: 0 .6rem;
-        padding: 0.3rem;
+        display: flex;
+        flex-direction: column;
         border-radius: 0.3rem;
-        box-shadow: 0 0 3px $grey2;
+        gap: 1rem;
         .home__molitva {
+          border-radius: 0.5rem;
+          background: $dark1;
           position: relative;
           text-align: center;
-          // margin: 1rem 0;
           padding: 1rem 1.5rem;
           padding-left: 2rem;
           img {
@@ -53,6 +52,8 @@
           }
           p {
             font-size: 1.3rem;
+            padding-left: 0.3rem;
+            padding-right: 0.3rem;
             a {
               font-size: 1.3rem;
               color: $redDay2;
@@ -70,31 +71,31 @@
             position: relative;
             z-index: 1;
           }
-        }
-        .home__molitva::before {
-          position: absolute;
-          content: "";
-          left: 1rem;
-          right: 1rem;
-          top: 1rem;
-          bottom: 1rem;
-          border: 1px solid #b5904f;
-          border-radius: 0.3rem;
-          a {
-            cursor: pointer;
+          .home__links.second::before {
+            position: absolute;
+            content: "";
+            left: 1.2rem;
+            right: 1.2rem;
+            top: 1.2rem;
+            bottom: 1.2rem;
+            border: 1px solid #b5904f;
+            border-radius: 0.3rem;
+            a {
+              cursor: pointer;
+            }
           }
-        }
-        .home__molitva::after {
-          position: absolute;
-          content: "";
-          left: 0.3rem;
-          right: 0.3rem;
-          top: 0.3rem;
-          bottom: 0.3rem;
-          border: 3px solid #a57f3c;
-          border-radius: 0.5rem;
-          a {
-            cursor: pointer;
+          .home__links.second::after {
+            position: absolute;
+            content: "";
+            left: 0.6rem;
+            right: 0.6rem;
+            top: 0.6rem;
+            bottom: 0.6rem;
+            border: 3px solid #a57f3c;
+            border-radius: 0.5rem;
+            a {
+              cursor: pointer;
+            }
           }
         }
       }
@@ -143,14 +144,18 @@
         width: calc(100% - 380px);
         .home-afterZone {
           margin: 0;
-          padding: 0 1rem;
+          // padding: 0 1rem;
           display: flex;
+          flex-direction: row;
           gap: 0.5rem;
           .home__molitva {
             width: 450px;
-            margin: 1rem 0;
+            // margin: 1rem 0;
           }
-          .home__molitva::before {
+          .home__links-wrapper {
+            width: 350px;
+          }
+          .home__links.second::before {
             // position: absolute;
             // content: "";
             left: 1.3rem;
@@ -163,7 +168,7 @@
             //   cursor: pointer;
             // }
           }
-          .home__molitva::after {
+          .home__links.second::after {
             // position: absolute;
             // content: "";
             // left: 0.3rem;
@@ -175,9 +180,6 @@
             // a {
             //   cursor: pointer;
             // }
-          }
-          .home__links-wrapper {
-            width: 350px;
           }
         }
       }

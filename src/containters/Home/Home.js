@@ -44,10 +44,13 @@ export default function Home() {
             <AdManagerSlot slotNumber={"div-gpt-ad-1750409277034-0"} />
           </div>
           <div className="home-afterZone">
+            
             <div className="home__molitva">
-              <h2>Oče naš - Molitva Gospodnja</h2>
-              <div className="home__molitva-wrapper">
-              <Molitva molitva={molitve[molitve.length - 1]} />
+              <div className="home__links second">
+                <h2>Oče naš - Molitva Gospodnja</h2>
+                <div className="home__molitva-wrapper">
+                  <Molitva molitva={molitve[molitve.length - 1]} />
+                </div>
               </div>
             </div>
             <section className="home__molitva">
@@ -75,7 +78,7 @@ export default function Home() {
           </div>
         </div>
         <div className="home__wrapper-right">
-              <div className="banner-wrapper xl_sticky">
+          <div className="banner-wrapper xl_sticky">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750411708088-0"} />
           </div>
           <Zadusnice />
@@ -91,7 +94,6 @@ export default function Home() {
               .
             </p>
           </section>
-      
         </div>
       </section>
       <div className="banner-wrapper bilbord">
