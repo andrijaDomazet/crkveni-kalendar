@@ -25,28 +25,36 @@ export const IdProvider = ({ children }) => {
   const currentDate = new Date();
 
   // --- AUTO RELOAD KADA SE PROMENI DAN ---
-React.useEffect(() => {
-  const check = () => {
-    if (document.visibilityState !== "visible") return;
-
+  React.useEffect(() => {
     const today = new Date().toISOString().slice(0, 10);
+
+    // Inicijalno postavljanje ako ne postoji
     const last = localStorage.getItem("lastReloadDay");
-
-    if (today !== last) {
+    if (!last) {
       localStorage.setItem("lastReloadDay", today);
-      window.location.reload();
     }
-  };
 
-  document.addEventListener("visibilitychange", check);
-  const interval = setInterval(check, 30000);
+    const check = () => {
+      if (document.visibilityState !== "visible") return;
 
-  return () => {
-    document.removeEventListener("visibilitychange", check);
-    clearInterval(interval);
-  };
-}, []);
-// --- END AUTO RELOAD ---
+      const now = new Date().toISOString().slice(0, 10);
+      const stored = localStorage.getItem("lastReloadDay");
+
+      if (now !== stored) {
+        localStorage.setItem("lastReloadDay", now);
+        window.location.reload();
+      }
+    };
+
+    document.addEventListener("visibilitychange", check);
+    const interval = setInterval(check, 30000);
+
+    return () => {
+      document.removeEventListener("visibilitychange", check);
+      clearInterval(interval);
+    };
+  }, []);
+  // --- END AUTO RELOAD ---
 
   const currentYear = currentDate.getFullYear();
   const { slug, id } = useParams();
