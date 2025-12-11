@@ -5,6 +5,7 @@ import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
 import { lazy, Suspense } from "react";
 import Molitva from "../../components/Molitva/Molitva.js";
 import molitve from "../../molitve.json";
+import NextMonthBox from "../../components/NextMonthBox/NextMonthBox.js";
 
 const WidgetLazy = lazy(() => import("../../UI/Widget/Widget.js"));
 const CalendarMonthsLinksLazy = lazy(() =>
@@ -19,6 +20,7 @@ export default function Home() {
       </div>
       <section className="home__wrapper">
         <div className="home__wrapper-left">
+          <NextMonthBox month="januar" year={2026} />
           <Calendar shortCal={6} soc={false} />
           <section class="calendar-2026">
             <h2>📅 Crkveni kalendar 2026</h2>
@@ -44,7 +46,6 @@ export default function Home() {
             <AdManagerSlot slotNumber={"div-gpt-ad-1750409277034-0"} />
           </div>
           <div className="home-afterZone">
-            
             <div className="home__molitva">
               <div className="home__links second">
                 <h2>Oče naš - Molitva Gospodnja</h2>

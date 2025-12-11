@@ -23,6 +23,31 @@ export const useIdContext = () => useContext(IdContext);
 
 export const IdProvider = ({ children }) => {
   const currentDate = new Date();
+
+  // --- AUTO RELOAD KADA SE PROMENI DAN ---
+React.useEffect(() => {
+  const check = () => {
+    if (document.visibilityState !== "visible") return;
+
+    const today = new Date().toISOString().slice(0, 10);
+    const last = localStorage.getItem("lastReloadDay");
+
+    if (today !== last) {
+      localStorage.setItem("lastReloadDay", today);
+      window.location.reload();
+    }
+  };
+
+  document.addEventListener("visibilitychange", check);
+  const interval = setInterval(check, 30000);
+
+  return () => {
+    document.removeEventListener("visibilitychange", check);
+    clearInterval(interval);
+  };
+}, []);
+// --- END AUTO RELOAD ---
+
   const currentYear = currentDate.getFullYear();
   const { slug, id } = useParams();
   // console.log("Slug2", slug);

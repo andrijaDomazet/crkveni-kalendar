@@ -36,8 +36,8 @@
     flex-direction: row;
     height: auto;
     justify-content: flex-end;
-    background: $dark3;
-    min-height: 25px;
+    background: linear-gradient(to left, $dark2, $dark3);
+    min-height: .5rem;
     .topBar__logo {
       display: none;
     }

@@ -5,6 +5,7 @@
   padding: 0 0.6rem;
   background: #f6e7c4;
   background: $dark1;
+  // background: $dark2;
   box-shadow: 0 0px 3px $grey2;
   border-radius: 10px;
   .widget__title {
@@ -37,8 +38,8 @@
   .widget__box {
     display: flex;
     flex-direction: column;
-    border-radius: 10px;
-    height: 435px;
+    border-radius: 0.5rem;
+    height: 430px;
     // margin: 10.8 auto;
     padding: 0.5rem 1.5rem 1.5rem 1.5rem;
     // border: 2px solid #b5904f;

@@ -1,0 +1,80 @@
+@import "../../index.scss";
+
+.next-month-box {
+  position: relative;
+  //   margin: 0 0.6rem;
+
+  border-radius: 0.2rem;
+  //   border-radius: 6px;
+  //   background-color: #f5f5f5;
+  background: $orange0;
+
+//   background: #f7f1e3;
+  //   margin: 2.5rem 0 0.5rem 0;
+
+  //   font-weight: 500;
+
+  font-weight: 600;
+  color: $redDay2;
+  line-height: 1.4rem;
+  box-shadow: 0 0 2px #a57f3c;
+  .next-month-box-wrapper {
+      background: $dark0;
+      background: #f7f1e3;
+    // margin: 0.5rem 0.2rem 1.5rem 0.2rem;
+    padding: 0.8rem 1rem;
+    position: relative;
+    // box-shadow: 0 0 2px $grey2;
+    box-shadow: 0 0 2px #a57f3c;
+    font-size: 1.2rem;
+    letter-spacing: 0.03rem;
+    a {
+      font-weight: 600;
+      font-size: 1.2rem;
+      //   line-height: 1.2rem;
+      color: $blue1;
+      //   color: $redDay2;
+      text-decoration: underline;
+    }
+  }
+//   .next-month-box-wrapper::before {
+//     position: absolute;
+//     content: "";
+//     left: 0.5rem;
+//     right: 0.5rem;
+//     top: 0.4rem;
+//     bottom: 0.4rem;
+//     //   border: 1px solid #a57f3c;
+//     box-shadow: 0 0 2px #a57f3c;
+//     border-radius: 0.2rem;
+//     a {
+//       cursor: pointer;
+//     }
+//   }
+}
+
+.next-month-box.top {
+  //   position: sticky; // ostaje na vrhu kad se skroluje
+  top: 0;
+  z-index: 10;
+}
+
+.next-month-box.bottom {
+  display: none;
+  // obična pozicija u toku dokumenta
+}
+
+@media screen and (min-width: $medium) {
+  .next-month-box {
+    margin: 0 0 1.5rem 0;
+    padding: .8rem;
+    // padding: .5rem;
+    font-size: 1.25rem;
+    .next-month-box-wrapper {
+        
+      a {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
