@@ -13,7 +13,7 @@
         aspect-ratio: 4/3;
         overflow: hidden; /*dodato*/
         .mainContent-title {
-          h1 {
+          h2 {
             font-size: 1.8rem;
             line-height: 2rem;
           }
@@ -156,14 +156,14 @@
               rgba(24, 24, 24, 0.3) 20%,
               rgba(24, 24, 24, 0.75) 60%
             );
-            h1 {
+            h2 {
               margin: 0 0 0.2rem 0.5rem;
               color: white;
               font-weight: 600;
               font-size: 4rem;
               line-height: 4.5rem;
             }
-            h2 {
+            h3 {
               margin: 0 0 0.5rem 0.5rem;
               color: rgb(175, 175, 175);
               font-weight: 600;

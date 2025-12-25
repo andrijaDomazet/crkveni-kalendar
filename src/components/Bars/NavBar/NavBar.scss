@@ -68,7 +68,7 @@
   .navBar-siteLink {
     // margin-top: 0.5rem;
     color: #f6f3eecc;
-    font-size: .9rem;
+    font-size: 0.9rem;
     // border: 1px solid red;
     margin-bottom: 1.5rem;
     letter-spacing: 0.1rem;
@@ -155,7 +155,9 @@
           box-shadow: 1px 2px 3px rgb(54, 54, 54);
           padding: 0.5rem;
           // background: $orange0;
-          background: #7326390d;
+          // background: #7326390d;
+          // background: #f6f3ee;
+          background: #f2ece3;
           li {
             width: 100%;
             padding: 0 0.2rem;
@@ -166,7 +168,7 @@
               border-radius: 0.1rem;
               border-top-left-radius: 0;
               border-bottom-left-radius: 0;
-              color: black;
+           color: #856147;
               line-height: 2.5rem;
               align-items: center;
               vertical-align: middle;
@@ -175,11 +177,15 @@
               margin: 0.1rem;
               padding: 0.3rem 1rem;
               box-shadow: 0 0 2px $grey2;
-              border-left: 0.5rem solid $dark2;
-              border-left: 0.5rem solid $dark3;
+              // border-left: 0.5rem solid $dark2;
+              // border-left: 2px solid $dark3;
+              background: #f9f6f180;
+              // border-bottom: 2px solid $dark3;
               &:hover {
-                background: $grey0;
-                border-left: 0.5rem solid $dark2;
+                // background: $grey0;
+                background: #e4d8d2;
+
+                // border-left: 0.5rem solid $dark2;
               }
             }
           }
@@ -217,13 +223,13 @@
             width: 250px;
             display: grid;
             grid-template-columns: 1fr;
-            top: 38px;
+            top: 15px;
             left: -250px;
             box-shadow: 1px 2px 3px rgb(0, 0, 0);
             padding: 0.3rem 0.4rem;
             a {
               // border-radius: 5px;
-              color: black;
+  color: #856147;
               line-height: 35px;
               align-items: center;
               vertical-align: middle;
@@ -240,7 +246,8 @@
                 transform: translateY(-50%);
               }
               &:hover {
-                background: $grey0;
+                // background: $grey0;
+                background: #e4d8d2;
               }
             }
           }
@@ -254,9 +261,9 @@
 }
 // }
 @media screen and (min-width: $medium) {
-  .navBar {  padding: 0;
+  .navBar {
+    padding: 0;
     .navBar-first {
-    
       span {
         font-size: 1.2rem;
       }
@@ -279,14 +286,14 @@
         display: inline;
       }
     }
-      .navBar-siteLink {
-    // margin-top: 0.5rem;
-    color: #f6f3eecc;
-    font-size: 1.2rem;
-    // border: 1px solid red;
-    margin-bottom: 1.5rem;
-    letter-spacing: 0.1rem;
-  }
+    .navBar-siteLink {
+      // margin-top: 0.5rem;
+      color: #f6f3eecc;
+      font-size: 1.2rem;
+      // border: 1px solid red;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.1rem;
+    }
     .navBar-wrapper {
       display: flex;
     }

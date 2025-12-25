@@ -59,7 +59,7 @@ export default function SinglePost() {
             itemType="https://schema.org/ImageObject"
           >
             <div className="mainContent-title">
-              <h1>{isNews.title_2 || isNews.title}</h1>
+              <h2>{isNews.title_2 || isNews.title}</h2>
             </div>
             <PostImage
               src={isNews.pics[0]}
