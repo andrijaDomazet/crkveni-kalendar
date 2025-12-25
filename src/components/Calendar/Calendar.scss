@@ -7,8 +7,8 @@
     justify-content: space-between;
     margin-bottom: 0.5rem;
     align-items: center;
-    h1 {
-      width: 60%;
+    h2 {
+      width: 80%;
       margin: 0;
       padding: 0;
       font-size: 1.4rem;
@@ -19,9 +19,10 @@
       display: flex;
       z-index: 100;
       padding: 0 0.3rem;
-      background: white;
+      // background: white;
+             background: #f9f6f1;
       border: 1px solid $grey7;
-      border-radius: 0.3rem;
+      border-radius: 0.1rem;
       height: 1.8rem;
       color: $grey7;
       b {
@@ -48,20 +49,21 @@
         display: flex;
         flex-direction: column;
         padding: 0.2rem;
-        width: 80px;
+        width: 85px;
         position: absolute;
         top: 28px;
         right: -2px;
-        background: white;
+        // background: white;
+               background: #f9f6f1;
         box-shadow: 0 0 5px $grey3;
-        border-bottom-left-radius: 0.3rem;
-        border-bottom-right-radius: 0.3rem;
+        border-bottom-left-radius: 0.1rem;
+        border-bottom-right-radius: 0.1rem;
         list-style-type: none;
         z-index: 100;
         a {
           text-align: center;
           width: 100%;
-          border-radius: 5px;
+          border-radius: 0.1rem;
           color: $grey7;
           line-height: 35px;
           font-size: 1.1rem;
@@ -74,16 +76,23 @@
     }
   }
   .calendar-table {
-    box-shadow: 0 0px 3px $grey3;
-    border-top-left-radius: 0.3rem;
-    border-top-right-radius: 0.3rem;
+    box-shadow: 0 10px 40px -5px rgba(139, 90, 43, 0.2),
+      0 4px 16px -4px rgba(139, 90, 43, 0.15);
+    border: 1px solid #85614733;
+
+    // box-shadow: 0 0px 3px $grey3;
+    border-top-left-radius: 0.1rem;
+    border-top-right-radius: 0.1rem;
     thead {
       tr {
-        background: $dark3;
-        color: $orange0;
-        th {
+        // background: $dark3;
+        background: #f9f6f1;
+        color: #732639;
+        border: 1px solid #85614733;
+   
+        th {     border: 1px solid  #85614733;
           position: relative;
-          padding: 0.3rem 0.5rem;
+          padding: 0 0.5rem;
           font-size: 1.4rem;
           height: 60px;
           span {
@@ -115,24 +124,27 @@
     }
     tbody {
       tr {
-        background: $orange0;
+        // background: $orange0;
+        // background: #f2ece3;
+        background: #f9f6f1;
       }
       .opisNedelje {
         td {
           height: 0.8rem;
           font-weight: 700;
-          background: $grey1;
+          // background: $grey1;
+          background: rgba(241, 237, 223, 0.763);
           border-left: none;
           border-right: none;
         }
       }
       td {
         // border-bottom: 1px solid $grey2;
-        border-bottom: 1px solid rgb(226, 226, 226);
+        border-bottom: 1px solid #cfc2af;
         // border-left: 1px solid $grey0;
-        border-left: 1px solid rgb(226, 226, 226);
+        border-left: 1px solid #cfc2af;
         // border-right: 1px solid $grey0;
-        border-right: 1px solid rgb(226, 226, 226);
+        border-right: 1px solid #cfc2af;
         h2 {
           font-weight: 400;
         }
@@ -140,8 +152,10 @@
       .today {
         font-weight: 600;
         td {
-          background: $orange1;
-          // background: $dark2;
+          // background: $orange1;
+          background: rgb(255, 231, 154);
+          // border-top: 2px solid red;
+          // border-bottom: 2px solid red;
           h3 {
             // text-shadow: 0 0 3px red;
             font-weight: 600;
@@ -163,21 +177,28 @@
         padding: 0.3rem 0.4rem;
         display: table;
         width: 100%;
+        // width: 80%;
         .test {
+          // position: relative;
           display: table-cell;
           vertical-align: middle;
           align-items: center;
           height: 55px;
+          // max-width: 80%;
+          padding-right: 1rem;
           .slavaStrong,
           .zadusniceStrong {
             font-weight: 600;
             display: inline-block;
             color: white;
             padding: 0 0.3rem;
-            border-radius: 0.2rem;
+            border-radius: 0.1rem;
             white-space: nowrap;
           }
           .slavaStrong {
+            // right: .5rem;
+            // top: .5rem;
+            // position: absolute;
             height: 1.2rem;
             font-size: 0.9rem;
             line-height: 1.1rem;
@@ -199,6 +220,8 @@
             display: inline;
             font-size: 1rem;
             letter-spacing: 0.03rem;
+            // max-width: 60%;
+            // padding-right: 5rem;
             .redStrong {
               color: $redDay1;
             }
@@ -234,7 +257,11 @@
     // display: flex;
     grid-template-columns: 3fr 2fr 3fr;
     justify-content: space-between;
-    background: $orange0;
+    // background: $orange0;
+    // background: #f2ece3;
+         background: #f9f6f1;
+    // background-color: #674e18;
+    // background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ac8228' fill-opacity='0.1' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
     // background: red;
     padding: 0.5rem 0;
     border-bottom-left-radius: 0.3rem;
@@ -278,7 +305,7 @@
   .calendar {
     padding-bottom: 1rem;
     .first {
-      h1 {
+      h2 {
         font-size: 1.8rem;
       }
       .yearBox {
@@ -288,7 +315,8 @@
         .drop_down_menu {
           a {
             &:hover {
-              background: $grey1;
+              // background: $grey1;
+              background: white;
               font-weight: 700;
             }
           }
@@ -304,7 +332,7 @@
             padding: 0.6rem 1rem;
             font-size: 1.4rem;
             h2 {
-              font-size: 1.4rem;
+              font-size: 1.25rem;
             }
           }
         }
@@ -314,8 +342,8 @@
           display: table-cell;
 
           span {
-            line-height: 1.4rem;
-            font-size: 1.25rem;
+            line-height: 1.25rem;
+            font-size: 1.15rem;
             bottom: inherit;
             position: relative;
             -webkit-transform: rotate(-90deg);
@@ -340,12 +368,12 @@
         }
         td:nth-child(1) {
           display: table-cell;
-          font-size: 1.25rem;
+          font-size: 1.15rem;
         }
         td:nth-child(2) {
           width: 145px;
-          font-size: 1.25rem;
-          line-height: 1.4rem;
+          font-size: 1.15rem;
+          line-height: 1.25rem;
           text-align: center;
           text-transform: lowercase;
         }
@@ -360,24 +388,25 @@
           text-align: left;
           .test {
             padding-left: 0.5rem;
+            padding-right: 2rem;
             .slavaStrong,
             .zadusniceStrong {
-              font-size: 1.15rem;
-              line-height: 1.4rem;
-              height: 1.4rem;
+              font-size: 1rem;
+              line-height: 1.1rem;
+              height: 1.2rem;
               // padding: .2rem;
             }
             strong {
               font-size: 1.15rem;
             }
             h2 {
-              font-size: 1.25rem;
+              font-size: 1.15rem;
             }
           }
         }
         td:nth-child(5) {
           padding: 0 1rem;
-          font-size: 1.25rem;
+          font-size: 1.1rem;
         }
       }
     }
@@ -388,17 +417,17 @@
       margin: 0;
       .month-center {
         button {
-          font-size: 1.6rem;
+          font-size: 1.4rem;
         }
       }
       button {
         width: 100%;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         line-height: 1.6rem;
         cursor: pointer;
         i {
           margin: 0 0.4rem;
-          font-size: 1.2rem;
+          font-size: 1rem;
         }
       }
     }

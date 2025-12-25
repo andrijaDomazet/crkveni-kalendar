@@ -8,6 +8,8 @@ import ArticleBox from "../../components/ArticleBox/ArticleBox";
 import molitve from "../../molitve.json";
 import PostImage from "./img/PostImage";
 import data from "../../all__news.json";
+import { calendarYears } from "../../components/Calendar/calendar-data/calendar-data.js";
+import { useIdContext } from "../../shared/IdProvider.js";
 
 const WidgetLazy = lazy(() => import("../../UI/Widget/Widget.js"));
 const ZadusniceLazy = lazy(() =>
@@ -18,6 +20,7 @@ const CrossingDataLazy = lazy(() =>
 );
 
 export default function SinglePost() {
+  const { yearIndex } = useIdContext();
   const { pathPart } = useGlobalLocation();
   const [isNews, setIsNews] = useState(() => setArticleState());
 
@@ -76,7 +79,11 @@ export default function SinglePost() {
               <div>
                 {pathPart[1] === "zadusnice" && (
                   <Suspense fallback={<div></div>}>
-                    <ZadusniceLazy setYear={2026} />
+                    <ZadusniceLazy
+                      setYear={2026}
+                      boxTitle={`🕯 Zadušnice u ${2026}. godini`}
+                      data={calendarYears[0].item_list[yearIndex]}
+                    />
                   </Suspense>
                 )}
               </div>
@@ -106,7 +113,11 @@ export default function SinglePost() {
             <div className="home__wrapper-right">
               {["slave", "meseceve-mene"].includes(pathPart[1]) && (
                 <Suspense fallback={<div></div>}>
-                  <ZadusniceLazy />
+                  <ZadusniceLazy
+                    setYear={2026}
+                    boxTitle={`🕯 Zadušnice u ${2026}. godini`}
+                    data={calendarYears[0].item_list[yearIndex]}
+                  />
                 </Suspense>
               )}
               <div className="banner-wrapper xl_sticky">

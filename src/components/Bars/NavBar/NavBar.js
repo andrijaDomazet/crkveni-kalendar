@@ -129,11 +129,54 @@ export default function NavBar() {
   };
   return (
     <div className="navBar">
+      <div className="navBar-first">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          // class="lucide lucide-cross w-6 h-6 text-gold"
+        >
+          <path d="M4 9a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h4a1 1 0 0 1 1 1v4a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-4a1 1 0 0 1 1-1h4a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-4a1 1 0 0 1-1-1V4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4a1 1 0 0 1-1 1z"></path>
+        </svg>
+        <span>PRAVOSLAVNI</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          // class="lucide lucide-cross w-6 h-6 text-gold"
+        >
+          <path d="M4 9a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h4a1 1 0 0 1 1 1v4a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-4a1 1 0 0 1 1-1h4a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-4a1 1 0 0 1-1-1V4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4a1 1 0 0 1-1 1z"></path>
+        </svg>
+      </div>
+      <div className="navBar__logo">
+        <div className="line"></div>
+        <div className="box45"></div>
+        <NavLink to="/">
+          {/* <img src="/img/logo.png" /> */}
+          <h1>Crkveni Kalendar</h1>
+        </NavLink>
+        <div className="box45"></div>
+        <div className="line right"></div>
+      </div>
+
+      <span className="navBar-siteLink">crkveni-kalendar.net</span>
       <div className="navBar-wrapper">
         {navBarOptions(1, 3)}
-        <NavLink to="/" className="navBar__logo">
+        {/* <NavLink to="/" className="navBar__logo">
           <img src="/img/logo.png" />
-        </NavLink>
+        </NavLink> */}
         {navBarOptions(3, 5)}
         {test(options, lastIndex)}
       </div>

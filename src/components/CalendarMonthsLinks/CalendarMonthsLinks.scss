@@ -1,30 +1,61 @@
 @import "../../index.scss";
 
 .calendar-allMonths {
+  margin: 0 0.6rem;
+  padding: 0.6rem;
+  box-shadow: 0 10px 40px -5px rgba(139, 90, 43, 0.2),
+    0 4px 16px -4px rgba(139, 90, 43, 0.15);
+  border: 1px solid #85614733;
+  border-radius: 0.1rem;
+  background: #f2ece3;
+
+  .calendar-title {
+    padding: 0.5rem;
+    color: $redDay2;
+    font-size: 1.2rem;
+
+  }
+  .calendar-monthsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // MOBILE: 4 po redu
+    gap: 0.5rem;
+    padding-bottom: 0.3rem;
+    .calendar-month {
+      background: #f9f6f180;
+      color: #856147;
+      text-align: center;
+      padding: 0.5rem;
+      &:hover{
+        background: #e4d8d2;
+      }
+    }
+  }
+
   .calendar-allMonths-wrapper {
-    margin: 0 0.6rem;
-    // width: 100%;
-    box-shadow: 0 0px 3px $grey2;
-    border-radius: 0.3rem;
+    box-shadow: 0 10px 40px -5px rgba(139, 90, 43, 0.2),
+      0 4px 16px -4px rgba(139, 90, 43, 0.15);
+    border: 1px solid #85614733;
+    border-radius: 0.1rem;
+    background: #f2ece3;
+    width: 100%;
+    table-layout: fixed;
     thead {
       tr {
         th {
-          border-radius: 0.3rem;
+          border-top-left-radius: 0.1rem;
+          border-top-right-radius: 0.1rem;
           padding: 0.5rem;
           text-align: center;
-          // background: #f6e7c4;
-          background: $dark1;
-          // background: red;
+          background: #f2ece3;
           justify-content: space-between;
           width: 100%;
           h2 {
             text-align: center;
             display: flex;
-            padding: 0 1rem;
             color: white;
             font-size: 1.4rem;
             color: $redDay2;
-            // font-weight: 900;
+            font-weight: 600;
             img {
               height: auto;
               width: 150px;
@@ -34,17 +65,21 @@
       }
     }
     tbody {
+      // background: #f9f6f180;
       tr {
-        background: $orange0;
+        // background: $orange0;
+        background: #f9f6f180;
         td {
-          border-radius: 0.3rem;
-          color: $grey4;
+          border-radius: 0.1rem;
+          // color: $grey4;
           margin: 0.3rem;
           padding: 0.8rem 0;
           text-align: center;
           a {
-            color: $blue1;
-            text-decoration: underline;
+            // color: $blue1;
+            // color: $redDay2;
+            color: #856147;
+            // text-decoration: underline;
             h3 {
               font-weight: normal;
             }
@@ -67,25 +102,37 @@
 
 @media screen and (min-width: 768px) {
   .calendar-allMonths {
+    margin: 0;
+
+    .calendar-monthsGrid {
+      grid-template-columns: repeat(6, 1fr);
+    }
     .calendar-allMonths-wrapper {
-      margin: 0;
-      width: 100%;
+      // border-spacing: 0.8rem 0.5rem;
+      // margin: 0;
+      // width: 100%;
       thead {
         tr {
           th {
             h2 {
-              font-size: 1.6rem;
+              font-size: 1.2rem;
             }
           }
         }
       }
       tbody {
         tr {
+          // height: 100%;
           td {
+            // height: 100%;
             a {
               h3 {
-                font-size: 1.4rem;
+                font-size: 1rem;
               }
+            }
+            :hover {
+              text-decoration: underline;
+              // background: $redDay0;
             }
           }
         }

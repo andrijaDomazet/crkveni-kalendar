@@ -2,6 +2,8 @@ import { lazy, Suspense } from "react";
 import Calendar from "../../components/Calendar/Calendar";
 import "./Kalendar.scss";
 import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
+import { calendarYears } from "../../components/Calendar/calendar-data/calendar-data.js";
+import { useIdContext } from "../../shared/IdProvider.js";
 
 const WidgetLazy = lazy(() => import("../../UI/Widget/Widget.js"));
 const ZadusniceLazy = lazy(() =>
@@ -12,6 +14,11 @@ const CalendarMonthsLinksLazy = lazy(() =>
 );
 
 export default function Kalendar() {
+  const { yearIndex } = useIdContext();
+  // let yearIndex = calendarYears[0].item_list.findIndex(
+  //   (item) => item.title == isYear
+  // );
+
   return (
     <div className="kalendar">
       <div className="banner-wrapper bilbord">
@@ -32,7 +39,11 @@ export default function Kalendar() {
         </div>
         <div className="kalendar-right">
           <Suspense fallback={<div></div>}>
-            <ZadusniceLazy />
+            <ZadusniceLazy
+              setYear={2026}
+              boxTitle={`🕯 Zadušnice u ${2026}. godini`}
+              data={calendarYears[0].item_list[yearIndex]}
+            />
           </Suspense>
 
           <div className="banner-wrapper xl_sticky">

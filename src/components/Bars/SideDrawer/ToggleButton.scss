@@ -25,16 +25,16 @@
   .toggle-button-line {
     width: 2rem;
     height: 0.35rem;
-    border-radius: 5px;
-    background: $grey7;
+    border-radius: 0.3rem;
+    background:  #f6f3eecc;
     transition: all 0.1s linear;
     &:active {
-      background: $dark2;
+      background: #dfa620;
     }
   }
 }
 .toggle > :nth-child(2) {
-  background: $dark3;
+  background: #dfa620;
   margin-left: -3px;
 }
 @media screen and (min-width: 768px) {

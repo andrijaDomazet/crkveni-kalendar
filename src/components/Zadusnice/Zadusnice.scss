@@ -3,48 +3,49 @@
 .zadusnice {
   width: 100%;
   max-width: 500px;
-  background: $orange0;
-  padding: 0 1rem;
-  box-shadow: 0 0px 3px $grey2;
-  border-radius: 0.3rem;
+  background: #f2ece3;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem 0.8rem 1rem;
+  box-shadow: 0 10px 40px -5px rgba(139, 90, 43, .2), 0 4px 16px -4px rgba(139, 90, 43, .15);;
+  border-radius: 0.1rem;
   table {
     width: 100%;
-    // border-bottom: 1px solid $redDay2;
-    border-collapse: collapse;
+    border-spacing: 0rem 0.4rem;
     thead {
       display: table-header-group;
       vertical-align: middle;
       unicode-bidi: isolate;
       tr {
-        background: $redDay1;
         border-bottom-left-radius: 0.3rem;
         border-bottom-right-radius: 0.3rem;
 
         th {
-          height: 50px;
+          height: 35px;
           border-bottom-left-radius: 0.3rem;
           border-bottom-right-radius: 0.3rem;
           h2 {
-            margin: 0 1rem;
             display: flex;
             align-items: center;
-            justify-content: center;
-            letter-spacing: 0.05rem;
+            letter-spacing: 0.01rem;
+            text-align: left;
           }
         }
       }
     }
     tbody {
       tr {
+        background: #f9f6f180;
         td {
-          text-align: center;
+          color: #856147;
+          text-align: left;
           min-width: 120px;
-          padding: 0.4rem 0;
-          border-bottom: 2px solid $redDay2;
-          font-size: 1.15rem;
+          padding: 0.5rem;
+          // border-bottom: 2px solid $redDay2;
+          font-size: 1rem;
           a {
-            font-size: 1.15rem;
-            color: $grey7;
+            font-size: 1rem;
+            // color: $grey7;
+            color: #856147;
           }
         }
         &:last-child {
@@ -55,11 +56,13 @@
       }
     }
     thead tr th h2 {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       height: 1.35rem;
       line-height: 1.3rem;
       padding-left: 0.3rem;
-      color: #f6e7c4;
+      // color: #f6e7c4;
+      color: #732639;
+          //  color: #856147;
     }
   }
 }

@@ -31,7 +31,7 @@ export default function Calendar(props) {
     if (id === undefined) {
       if (isMonth === 11 && val === 1) {
         navigate(`../${isYear + 1}/januar/`);
-      } else  if (isMonth === 0 && val === -1) {
+      } else if (isMonth === 0 && val === -1) {
         navigate(`../${isYear - 1}/decembar/`);
       } else {
         navigate(`../${isYear}/${monthSerb[isMonth + val]}/`);
@@ -91,8 +91,8 @@ export default function Calendar(props) {
       : "";
   };
 
-  const todayClass = (x) =>
-    x.toDateString() === currentDate.toDateString() ? " today" : "";
+  // const todayClass = (x) =>
+  //   x.toDateString() === currentDate.toDateString() ? " today" : "";
 
   const setCloseClass = () => {
     if (location.pathname === "/") {
@@ -132,7 +132,7 @@ export default function Calendar(props) {
     <div className="calendar">
       {/* ---- Gornje ranfle kalendara ---- */}
       <div className="first">
-        <h1>Crkveni pravoslavni kalendar {isYear}</h1>
+        <h2>Crkveni pravoslavni kalendar {isYear}</h2>
         <div
           className={`yearBox${setCloseClass()}`}
           onClick={() => setDropDownYear((prev) => !prev)}
@@ -187,7 +187,8 @@ export default function Calendar(props) {
                   key={index}
                   className={
                     rowClasses(item, eventDay) +
-                    todayClass(new Date(item.date)) +
+                    (item.today ? ` ${item.today}` : "") +
+                    // todayClass(new Date(item.date)) +
                     " dayClass"
                   }
                 >

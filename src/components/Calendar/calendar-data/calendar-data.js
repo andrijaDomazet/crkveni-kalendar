@@ -1,3 +1,13 @@
+
+export const days = [
+  "Nedelja",
+  "Ponedeljak",
+  "Utorak",
+  "Sreda",
+  "Četvrtak",
+  "Petak",
+  "Subota"
+];
 export const monthSerb = [
   "januar",
   "februar",
@@ -130,75 +140,92 @@ export const calendarYears = [
       {
         title: 2022,
         route: "/2022",
-        zadusnice: [
+        tableNum: [
           [1, 26],
           [5, 11],
           [9, 8],
           [10, 5],
         ],
+        zadusnice: ["zimske", "letnje", "miholjske", "jesenje (mitrovske)"],
       },
       {
         title: 2023,
         route: "/2023",
-        zadusnice: [
+        tableNum: [
           [1, 18],
           [5, 3],
           [9, 7],
           [10, 4],
         ],
+        zadusnice: ["zimske", "letnje", "miholjske", "jesenje (mitrovske)"],
       },
       {
         title: 2024,
         route: "/2024",
-        zadusnice: [
+        tableNum: [
           [2, 9],
           [5, 22],
           [9, 5],
           [10, 2],
         ],
+        zadusnice: ["zimske", "letnje", "miholjske", "jesenje (mitrovske)"],
       },
       {
         title: 2025,
         route: "/2025",
-        zadusnice: [
+        tableNum: [
           [1, 22],
           [5, 7],
           [9, 11],
           [10, 1],
         ],
+        zadusnice: ["zimske", "letnje", "miholjske", "jesenje (mitrovske)"],
       },
       {
         title: 2026,
         route: "/2026",
-        zadusnice: [
+        tableNum: [
           [1, 14],
           [4, 30],
           [9, 10],
           [10, 7],
         ],
+        zadusnice: ["zimske", "letnje", "miholjske", "jesenje (mitrovske)"],
       },
       {
         title: 2027,
         route: "/2027",
-        zadusnice: [
+        tableNum: [
           [2, 6],
           [5, 19],
           [9, 9],
           [10, 6],
         ],
+        zadusnice: ["zimske", "letnje", "miholjske", "jesenje (mitrovske)"],
       },
       {
         title: 2028,
         route: "/2028",
-        zadusnice: [
+        tableNum: [
           [1, 19],
           [5, 3],
           [9, 7],
           [10, 4],
         ],
+        zadusnice: ["zimske", "letnje", "miholjske", "jesenje (mitrovske)"],
       },
+      // zadusnice: ["zimske", "letnje", "miholjske", "jesenje (mitrovske)"],
     ],
     zadusnice: ["zimske", "letnje", "miholjske", "jesenje (mitrovske)"],
+  },
+  {
+    tableNum: [
+      [10, 28],
+      [5, 3],
+      [9, 7],
+      [10, 4],
+    ],
+    zadusnice: ["Božićni post", "Vaskršnji post", "Petrovski post", "Gospojinski post"],
   },
 ];
 // export const inCalendarArr = [

@@ -7,9 +7,9 @@ import "./TopBar.scss";
 export default function TopBar() {
   return (
     <div className="topBar">
-      <NavLink to="/" className="topBar__logo">
+      {/* <NavLink to="/" className="topBar__logo">
         <img src="/img/logo.png" />
-      </NavLink>
+      </NavLink> */}
       {/* <NavBar */}
       {/* <NavLink */}
       {/* <NavLink to="/kontakt" className="topBar__link">

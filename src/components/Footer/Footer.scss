@@ -6,11 +6,18 @@
   // background: $grey1;
   // background: #f6e7c4;
   background: $dark1;
-  color: #333;
-  padding: 30px 20px;
+  background: #571929;
+  // color: #333;
+  color: white;
+
   font-family: Arial, sans-serif;
-// border-top: 2px solid #8b2e2e;
+  // border-top: 2px solid #8b2e2e;
   /* 2. Kratak Opis Sajta */
+  .footer-border{
+    height: 5px;
+    background: linear-gradient(to right, #732639, #dfa620, #732639);
+    width: 100%;
+  }
   .footer-description p {
     text-align: center;
     margin-bottom: 20px;
@@ -20,7 +27,7 @@
   }
 
   /* 3. Kolone (podrazumevani Mobile-First raspored) */
-  .footer-columns {
+  .footer-columns {  padding: 30px 20px;
     /* Na mobilnom, sekcije (kolone) se ređaju jedna ispod druge */
     display: block;
   }
@@ -35,7 +42,10 @@
     font-size: 1.2rem;
     // color: #004d40; /* Tamna boja, npr. tamnozelena */
     color: $redDay2;
-    border-bottom: 2px solid $redDay2;
+    color: #dfa620;
+    font-weight: normal;
+    // color: green;
+    // border-bottom: 2px solid $redDay2;
     padding-bottom: 0.3rem;
     margin-bottom: 0.8rem;
   }
@@ -57,7 +67,9 @@
     text-decoration: none;
     // color: #333;
     color: $grey7;
-    font-size: 1.15rem;
+    color: #f6f3eeb3;
+    font-weight: normal;
+    font-size: 0.9rem;
     line-height: 1.3rem;
     transition: color 0.3s;
     i {
@@ -66,18 +78,19 @@
   }
 
   .footer-columns a:hover {
-    color: $redDay1; /* Svetlozelena, za hover efekat */
-    text-decoration: underline;
+    color: #dfa620; /* Svetlozelena, za hover efekat */
+    // text-decoration: underline;
   }
 
   .footer-copyright {
     text-align: center;
     border-top: 1px solid $grey7;
-    padding-top: 1rem;
+    padding: 1rem 0;
     margin-top: 1.5rem;
     font-size: 0.9rem;
-    color: $grey7;
+    color: #f6f3eeb3;
     text-shadow: 0 0 1px $grey1;
+    font-weight: normal;
   }
   .home__section5-bottom {
     text-align: center;
@@ -90,7 +103,7 @@
 @media screen and (min-width: 768px) {
   .footer {
     margin-top: 3rem;
-    padding: 2rem 0;
+    // padding: 2rem 0;
     .footer-columns {
       max-width: 1200px;
       margin: 0 auto;

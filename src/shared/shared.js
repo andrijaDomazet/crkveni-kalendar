@@ -25,6 +25,7 @@ export const daysIsPost = [
   [8, 11],
   [8, 27],
 ];
+
 export const monthSerb = [
   "januar",
   "februar",

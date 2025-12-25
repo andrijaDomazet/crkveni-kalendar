@@ -14,6 +14,7 @@ import {
   idsMonths,
   manualDateEaster,
   monthSerb,
+  days,
 } from "../components/Calendar/calendar-data/calendar-data";
 import { renderTitleSection } from "./utility";
 import news2 from "../components/Calendar/calendar-data/all__news4.json";
@@ -23,7 +24,10 @@ export const useIdContext = () => useContext(IdContext);
 
 export const IdProvider = ({ children }) => {
   const currentDate = new Date();
-
+  let currentDay = currentDate.getDate();
+  let dayName = days[currentDate.getDay()];
+  const monthName = monthSerb[currentDate.getMonth()];
+  let todayHoliday;
   // --- AUTO RELOAD KADA SE PROMENI DAN ---
   React.useEffect(() => {
     const today = new Date().toISOString().slice(0, 10);
@@ -57,9 +61,13 @@ export const IdProvider = ({ children }) => {
   // --- END AUTO RELOAD ---
 
   const currentYear = currentDate.getFullYear();
+ 
   const { slug, id } = useParams();
   // console.log("Slug2", slug);
   const isYear = Number(slug) || currentDate.getFullYear();
+ let yearIndex = calendarYears[0].item_list.findIndex(
+    (item) => item.title == isYear
+  );
   const isMonth = id ? monthSerb.indexOf(id) : currentDate.getMonth();
 
   const easterDay = useMemo(
@@ -71,7 +79,7 @@ export const IdProvider = ({ children }) => {
   const endEasterDate = new Date(easterDate);
   endEasterDate.setDate(easterDate.getDate() - 1);
   const startEasterDate = new Date(easterDate);
-  startEasterDate.setDate(easterDate.getDate() - 49);
+  startEasterDate.setDate(easterDate.getDate() - 48);
 
   // helper koji vrati timestamp u ponoć
   const toTs = (y, m, d) => new Date(y, m, d).setHours(0, 0, 0, 0);
@@ -90,7 +98,7 @@ export const IdProvider = ({ children }) => {
     const startEasterTs = toTs(
       easterDay.getFullYear(),
       easterDay.getMonth(),
-      easterDay.getDate() - 49
+      easterDay.getDate() - 48
     );
     const endEasterTs = toTs(
       easterDay.getFullYear(),
@@ -195,9 +203,9 @@ export const IdProvider = ({ children }) => {
     //zadusnice-------------------------------------------------------------
     let zadusniceIndex = calendarYears[0].item_list[
       yearIndex
-    ].zadusnice.findIndex((item) => item[0] == isMonth);
+    ].tableNum.findIndex((item) => item[0] == isMonth);
 
-    let zadusniceDate = calendarYears[0].item_list[yearIndex].zadusnice.find(
+    let zadusniceDate = calendarYears[0].item_list[yearIndex].tableNum.find(
       (item) => item[0] === isMonth
     );
     //end---------------------------------------------------------------------
@@ -358,24 +366,36 @@ export const IdProvider = ({ children }) => {
         });
       }
       item.post = setPostDays(item.date.getTime());
+      // console.log("Current date",currentDate,item.date);
+      if (currentDate.setHours(0, 0, 0, 0) === item.date.setHours(0, 0, 0, 0)) {
+        // console.log("Current date");
+        item.today = " today";
+        todayHoliday = item;
+      }
       return item;
     });
 
     return setHolTest;
   }
+  // console.log("Today holiday", todayHoliday);
 
   return (
     <IdContext.Provider
       value={{
         // data,
+        dayName,
         id,
         slug,
         currentDate,
+        currentDay,
+        monthName,
         currentYear,
         easterDay,
         isYear,
+        yearIndex,
         isMonth,
         holidays,
+        todayHoliday,
       }}
     >
       {children}

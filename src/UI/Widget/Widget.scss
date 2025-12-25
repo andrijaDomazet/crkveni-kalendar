@@ -7,7 +7,7 @@
   background: $dark1;
   // background: $dark2;
   box-shadow: 0 0px 3px $grey2;
-  border-radius: 10px;
+  border-radius: 0.1rem;
   .widget__title {
     display: flex;
     justify-content: space-between;
@@ -18,7 +18,8 @@
         height: 2rem;
         line-height: 2rem;
         font-size: 1.4rem;
-        color: $redDay2;
+        // color: $redDay2;
+        color: #732639;
       }
     }
 
@@ -38,7 +39,7 @@
   .widget__box {
     display: flex;
     flex-direction: column;
-    border-radius: 0.5rem;
+    border-radius: 0.1rem;
     height: 430px;
     // margin: 10.8 auto;
     padding: 0.5rem 1.5rem 1.5rem 1.5rem;
