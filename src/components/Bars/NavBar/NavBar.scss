@@ -46,7 +46,7 @@
       h1 {
         font-size: 2.2rem;
         font-weight: 700;
-        color: #f6f3eecc;
+        color: rgb(246, 241, 241);
         letter-spacing: 0.025em;
         // border: 1px solid red;
         // margin-top: 2rem;
@@ -146,7 +146,7 @@
         z-index: 99999;
         // background: white;
         .drop_down_menu {
-          width: 450px;
+          width: 400px;
           display: grid;
           grid-template-columns: 1fr 1fr;
           gap: 0.3rem;
@@ -168,7 +168,7 @@
               border-radius: 0.1rem;
               border-top-left-radius: 0;
               border-bottom-left-radius: 0;
-           color: #856147;
+              color: #856147;
               line-height: 2.5rem;
               align-items: center;
               vertical-align: middle;
@@ -229,7 +229,7 @@
             padding: 0.3rem 0.4rem;
             a {
               // border-radius: 5px;
-  color: #856147;
+              color: #856147;
               line-height: 35px;
               align-items: center;
               vertical-align: middle;

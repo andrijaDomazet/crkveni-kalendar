@@ -8,7 +8,6 @@
     .calendar-2026 {
       margin-top: 1rem;
       padding: 0 0.15rem;
-      // margin-bottom: 1rem;
       h2 {
         font-size: 1.35rem;
       }
@@ -94,14 +93,37 @@
             font-weight: 600;
           }
           .today-post {
+            display: flex;
+            // width: 100%;
+            // text-align: center;
+            // margin: 0 auto;
             // margin-top: 2rem;
             padding: 1.5rem 0 1rem 0;
             border-top: 1px solid #cfc2af;
-            span {
-              padding: 0.5rem 1.5rem;
-              margin: 1.5rem 0;
+            justify-content: center;
+            // border: 1px solid red;
+            .today-post-wrapper {
               background: #6170431a;
-              color: #617043;
+              display: flex;
+              align-items: center;
+              //  text-align: center;
+              width: auto;
+              // margin: 1.5rem 0;
+              padding: 0 0.8rem;
+              width: 110px;
+              .circle {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: #617043;
+                margin-right: 0.5rem;
+              }
+              span {
+                padding: 0.5rem 0;
+                // margin: 1.5rem 0;
+
+                color: #617043;
+              }
             }
           }
           .corners-leftTop {

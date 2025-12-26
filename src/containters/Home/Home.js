@@ -69,7 +69,10 @@ export default function Home() {
               <h2 className="today-title">{todayHoliday.title[0]}</h2>
               {todayHoliday.post && (
                 <div className="today-post">
-                  <span>Posni dan</span>
+                  <div className="today-post-wrapper">
+                    <div className="circle"></div>
+                    <span>Posni dan</span>
+                  </div>
                 </div>
               )}
               {/* <div className="today-post">

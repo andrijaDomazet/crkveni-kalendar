@@ -9,7 +9,7 @@ import { useIdContext } from "../../shared/IdProvider";
 import { Link } from "react-router-dom";
 
 export default function Zadusnice({ setYear, boxTitle, data }) {
-  console.log("TEST1", data);
+  // console.log("TEST1", data);
 
   const { slug, currentDate } = useIdContext();
   // console.log("");
@@ -19,6 +19,8 @@ export default function Zadusnice({ setYear, boxTitle, data }) {
   let yearIndex = calendarYears[0].item_list.findIndex(
     (item) => item.title == currentYear
   );
+   let zadusniceDate = calendarYears[0].item_list[yearIndex];
+console.log("Zadusnice", zadusniceDate);
 
   return (
     <div className="zadusnice">
@@ -32,7 +34,7 @@ export default function Zadusnice({ setYear, boxTitle, data }) {
           </tr>
         </thead>
         <tbody>
-          {data.tableNum.map((item, index) => {
+          {zadusniceDate.tableNum.map((item, index) => {
             return (
               <tr key={index}>
                 <td>
