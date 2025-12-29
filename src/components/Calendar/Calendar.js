@@ -200,7 +200,7 @@ export default function Calendar(props) {
                     );
                   })}
                   <td>
-                    <div className="test">
+                    <div className="mainTitle">
                       {renderTitleSection({
                         mainTitle: item.title,
                         slavaSymbol: item.slava,

@@ -12,7 +12,7 @@ export default function NavBar() {
       navRef.current.scrollLeft = 0;
     }
   };
-  const test = (options, lastIndex) => {
+  const setLastLink = (options, lastIndex) => {
     if (window.innerWidth < 768) {
       return (
         <>
@@ -178,7 +178,7 @@ export default function NavBar() {
           <img src="/img/logo.png" />
         </NavLink> */}
         {navBarOptions(3, 5)}
-        {test(options, lastIndex)}
+        {setLastLink(options, lastIndex)}
       </div>
     </div>
   );

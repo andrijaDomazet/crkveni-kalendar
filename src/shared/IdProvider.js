@@ -61,11 +61,11 @@ export const IdProvider = ({ children }) => {
   // --- END AUTO RELOAD ---
 
   const currentYear = currentDate.getFullYear();
- 
+
   const { slug, id } = useParams();
   // console.log("Slug2", slug);
   const isYear = Number(slug) || currentDate.getFullYear();
- let yearIndex = calendarYears[0].item_list.findIndex(
+  let yearIndex = calendarYears[0].item_list.findIndex(
     (item) => item.title == isYear
   );
   const isMonth = id ? monthSerb.indexOf(id) : currentDate.getMonth();
@@ -193,10 +193,93 @@ export const IdProvider = ({ children }) => {
     // 8) Default
     return "";
   };
+  const getTargetSundayBeforeChristmas = (year) => {
+    // broj nedelja (Sunday) u periodu 1–6. januar naredne godine
+    const nextYear = isYear + 1;
+    let sundayCount = 0;
+
+    for (let d = 1; d <= 6; d++) {
+      const date = new Date(nextYear, 0, d);
+      if (date.getDay() === 0) sundayCount++;
+    }
+
+    // poslednja i pretposlednja nedelja u decembru tekuće godine
+    const lastSundayOfDecember = (() => {
+      const d = new Date(isYear, 11, 31);
+      d.setDate(d.getDate() - d.getDay()); // vraća na nedelju
+      d.setHours(0, 0, 0, 0);
+      return d;
+    })();
+
+    if (sundayCount === 1) {
+      return lastSundayOfDecember;
+    }
+
+    // sundayCount === 0
+    const secondLastSunday = new Date(lastSundayOfDecember);
+    secondLastSunday.setDate(lastSundayOfDecember.getDate() - 7);
+    return secondLastSunday;
+  };
+  const getSundaysBeforeChristmas = (year) => {
+    const result = [];
+    const result1 = [];
+    const result2 = [];
+    const nextYear = isYear + 1;
+
+    // 1) Nedelja u periodu 1–6. januar tekuce godine
+    for (let d = 1; d <= 6; d++) {
+      const date = new Date(isYear, 0, d);
+      if (date.getDay() === 0) {
+        date.setHours(0, 0, 0, 0);
+        result1.push(date);
+        break; // može biti samo jedna
+      }
+    }
+
+    // 1) Nedelja u periodu 1–6. januar naredne godine
+    for (let d = 1; d <= 6; d++) {
+      const date = new Date(nextYear, 0, d);
+      if (date.getDay() === 0) {
+        date.setHours(0, 0, 0, 0);
+        result2.push(date);
+        break; // može biti samo jedna
+      }
+    }
+
+    // 2) Poslednja nedelja u decembru tekuće godine
+    const lastSunday = new Date(isYear, 11, 31);
+    lastSunday.setDate(lastSunday.getDate() - lastSunday.getDay());
+    lastSunday.setHours(0, 0, 0, 0);
+
+    //ako postoji januarska u tekucoj → dodaj
+    if (result1.length !== 0) {
+      result.push(result1[0]);
+      return result;
+    }
+
+    // ako ne postoji januarska u narednoj → dodaj poslednju
+    if (result2.length === 0) {
+      result.push(lastSunday);
+      return result;
+    }
+
+    // ako ne postoji → dodaj pretposlednju
+    // const secondLastSunday = new Date(lastSunday);
+    // secondLastSunday.setDate(lastSunday.getDate() - 7);
+    // secondLastSunday.setHours(0, 0, 0, 0);
+
+    // result.push(secondLastSunday);
+    return result;
+  };
 
   const holidays = useMemo(() => filterHolidays(), [isYear, isMonth]);
 
   function filterHolidays() {
+    const secondSundayBeforeChristmas = getTargetSundayBeforeChristmas(isYear);
+    const sundaysBeforeChristmas = getSundaysBeforeChristmas(isYear);
+
+    console.log("sundayBeforeChristmas", sundaysBeforeChristmas);
+
     let yearIndex = calendarYears[0].item_list.findIndex(
       (item) => item.title == isYear
     );
@@ -236,6 +319,8 @@ export const IdProvider = ({ children }) => {
       item.date = date1;
       let currentDay2 = date1.getDay();
       let diffInDays = Math.round((easterDay - date1) / (1000 * 60 * 60 * 24)); // Razlika u danima
+
+      // console.log("Sunday", item.date.setHours(0, 0, 0, 0)===targetSunday.setHours(0, 0, 0, 0));
 
       if (zadusniceDate && zadusniceDate[1] === index + 1) {
         item.title = (
@@ -288,7 +373,7 @@ export const IdProvider = ({ children }) => {
         item.title = renderTitleSection({
           mainTitle: false,
           strongClass: "redStrong",
-          extraLabel: "Vaznesenje Gospodnje – Spasovdan",
+          extraLabel: "Vaznesenje Gospodnje - Spasovdan",
         });
       } else if (diffInDays == -47) {
         item.title = renderTitleSection({
@@ -338,7 +423,7 @@ export const IdProvider = ({ children }) => {
       } else if (currentDay2 == 6 && diffInDays > 5 && diffInDays < 10) {
         item.title = renderTitleSection({
           mainTitle: false,
-          extraLabel: "Ulazak Gospoda Isusa Hrista u Jerusalim – Cveti",
+          extraLabel: "Ulazak Gospoda Isusa Hrista u Jerusalim - Cveti",
           slavaSymbol: true,
           strongClass: "redStrong",
         });
@@ -365,10 +450,42 @@ export const IdProvider = ({ children }) => {
           separatorSymbol: "; ",
         });
       }
+
+      // else if (currentDay2 === 0) {
+      //   item.title = renderTitleSection({
+      //     mainTitle: item.title,
+      //     extraLabel: "Istočni petak",
+      //     separatorSymbol: "; ",
+      //   });
+      // }
+
+      if (
+        item.date.setHours(0, 0, 0, 0) ===
+        secondSundayBeforeChristmas.setHours(0, 0, 0, 0)
+      ) {
+        console.log("targetSunday", secondSundayBeforeChristmas);
+        item.title = renderTitleSection({
+          mainTitle: item.title,
+          extraLabel: "Materice",
+          strongClass: "blackStrong",
+          separatorSymbol: " - ",
+        });
+      }
+      // Nedelja pred Božić
+      if (
+        sundaysBeforeChristmas.some((d) => d.getTime() === item.date.getTime())
+      ) {
+        item.title = renderTitleSection({
+          mainTitle: item.title,
+          extraLabel: "Oci (Paterice)",
+          strongClass: "blackStrong",
+          separatorSymbol: " - ",
+        });
+      }
+
       item.post = setPostDays(item.date.getTime());
       // console.log("Current date",currentDate,item.date);
       if (currentDate.setHours(0, 0, 0, 0) === item.date.setHours(0, 0, 0, 0)) {
-        // console.log("Current date");
         item.today = " today";
         todayHoliday = item;
       }

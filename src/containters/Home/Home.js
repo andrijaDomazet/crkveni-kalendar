@@ -8,6 +8,7 @@ import molitve from "../../molitve.json";
 import NextMonthBox from "../../components/NextMonthBox/NextMonthBox.js";
 import { calendarYears } from "../../components/Calendar/calendar-data/calendar-data.js";
 import { useIdContext } from "../../shared/IdProvider.js";
+import TodayBox from "../../components/TodayBox/TodayBox.js";
 
 const WidgetLazy = lazy(() => import("../../UI/Widget/Widget.js"));
 const CalendarMonthsLinksLazy = lazy(() =>
@@ -37,7 +38,8 @@ export default function Home() {
       </div>
       <section className="home__wrapper">
         <div className="home__wrapper-left">
-          <div className="today__box">
+          <TodayBox />
+          {/* <div className="today__box">
             <div className="today-border"></div>
             <div className="today__box-wrapper">
               <div className="corners-leftTop"></div>
@@ -65,7 +67,6 @@ export default function Home() {
                 </svg>
                 <div className="line right"></div>
               </div>
-              {/* <p className="today-head">SVETITELJ DANA</p> */}
               <h2 className="today-title">{todayHoliday.title[0]}</h2>
               {todayHoliday.post && (
                 <div className="today-post">
@@ -75,11 +76,8 @@ export default function Home() {
                   </div>
                 </div>
               )}
-              {/* <div className="today-post">
-                <span>Posni dan</span>
-              </div> */}
             </div>
-          </div>
+          </div> */}
           <Zadusnice
             setYear={2026}
             boxTitle={`🕯 Zadušnice u ${2026}. godini`}
