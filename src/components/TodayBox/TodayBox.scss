@@ -9,18 +9,14 @@
   .today__box-wrapper {
     margin-bottom: 1rem;
     position: relative;
-    // border: 1px solid red;
     background: #f9f6f180;
     padding: 2rem;
     width: 100%;
-    // height: 500px;
     text-align: center;
     box-shadow: 0 10px 40px -5px rgba(139, 90, 43, 0.2),
       0 4px 16px -4px rgba(139, 90, 43, 0.15);
     .today-day {
-      // margin: 1rem 0;
       color: #856147;
-      // padding: 1rem;
       letter-spacing: 0.05rem;
       font-size: 1.2rem;
     }
@@ -33,7 +29,7 @@
     .today-month {
       color: #856147;
       padding-bottom: 1rem;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
     }
     .today-head {
       // color: #856147;
