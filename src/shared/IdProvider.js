@@ -28,37 +28,38 @@ export const IdProvider = ({ children }) => {
   let dayName = days[currentDate.getDay()];
   const monthName = monthSerb[currentDate.getMonth()];
   let todayHoliday;
-  // --- AUTO RELOAD KADA SE PROMENI DAN ---
-  React.useEffect(() => {
-    const today = new Date().toISOString().slice(0, 10);
 
-    // Inicijalno postavljanje ako ne postoji
-    const last = localStorage.getItem("lastReloadDay");
-    if (!last) {
-      localStorage.setItem("lastReloadDay", today);
-    }
+  // // --- AUTO RELOAD KADA SE PROMENI DAN ---
+  // React.useEffect(() => {
+  //   const today = new Date().toISOString().slice(0, 10);
 
-    const check = () => {
-      if (document.visibilityState !== "visible") return;
+  //   // Inicijalno postavljanje ako ne postoji
+  //   const last = localStorage.getItem("lastReloadDay");
+  //   if (!last) {
+  //     localStorage.setItem("lastReloadDay", today);
+  //   }
 
-      const now = new Date().toISOString().slice(0, 10);
-      const stored = localStorage.getItem("lastReloadDay");
+  //   const check = () => {
+  //     if (document.visibilityState !== "visible") return;
 
-      if (now !== stored) {
-        localStorage.setItem("lastReloadDay", now);
-        window.location.reload();
-      }
-    };
+  //     const now = new Date().toISOString().slice(0, 10);
+  //     const stored = localStorage.getItem("lastReloadDay");
 
-    document.addEventListener("visibilitychange", check);
-    const interval = setInterval(check, 30000);
+  //     if (now !== stored) {
+  //       localStorage.setItem("lastReloadDay", now);
+  //       window.location.reload();
+  //     }
+  //   };
 
-    return () => {
-      document.removeEventListener("visibilitychange", check);
-      clearInterval(interval);
-    };
-  }, []);
-  // --- END AUTO RELOAD ---
+  //   document.addEventListener("visibilitychange", check);
+  //   const interval = setInterval(check, 30000);
+
+  //   return () => {
+  //     document.removeEventListener("visibilitychange", check);
+  //     clearInterval(interval);
+  //   };
+  // }, []);
+  // // --- END AUTO RELOAD ---
 
   const currentYear = currentDate.getFullYear();
 
