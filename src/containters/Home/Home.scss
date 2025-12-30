@@ -25,27 +25,22 @@
     }
     .home__wrapper-left {
       margin: 0 auto;
-      // width: 300px;
       width: 100%;
       padding: 0 1rem;
     }
     .home__wrapper-center {
-      // border: 1px solid red;
       .home__wrapper-center-first {
         padding: 0 1rem;
       }
       .home-afterZone {
         display: flex;
         flex-direction: column;
-        // display: grid;
-        // grid-template-columns: 3fr 2fr;
         border-radius: 0.1rem;
         gap: 1rem;
         padding: 0 1rem;
         .home__molitva {
           border-radius: 0.1rem;
           border: 1px solid #85614733;
-          // background: $dark1;
           background: #f2ece3;
           position: relative;
           text-align: center;

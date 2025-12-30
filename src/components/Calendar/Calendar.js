@@ -132,7 +132,7 @@ export default function Calendar(props) {
     <div className="calendar">
       {/* ---- Gornje ranfle kalendara ---- */}
       <div className="first">
-        <h2>Crkveni pravoslavni kalendar {isYear}</h2>
+        <h1>Crkveni pravoslavni kalendar {isYear}</h1>
         <div
           className={`yearBox${setCloseClass()}`}
           onClick={() => setDropDownYear((prev) => !prev)}

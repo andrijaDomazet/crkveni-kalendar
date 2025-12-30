@@ -165,7 +165,7 @@ export default function NavBar() {
         <div className="box45"></div>
         <NavLink to="/">
           {/* <img src="/img/logo.png" /> */}
-          <h1>Crkveni Kalendar</h1>
+          <strong>Crkveni Kalendar</strong>
         </NavLink>
         <div className="box45"></div>
         <div className="line right"></div>

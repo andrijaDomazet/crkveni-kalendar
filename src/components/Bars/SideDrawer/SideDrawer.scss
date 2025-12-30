@@ -11,7 +11,10 @@
   left: 0;
   bottom: 0;
   width: 70%;
-  background: linear-gradient(to top, $grey1, $grey0);
+  // background: linear-gradient(to top, $grey1, $grey0);
+  background: #f2ece3;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c4a052' fill-opacity='0.08'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
   transform: translateX(-105%);
   transition: transform 0.5s ease-out;
   z-index: 99999;
@@ -42,11 +45,14 @@
   }
   .nameTitle {
     margin-top: auto;
-    color: $grey7;
+    // color: $grey7;
+    color: #856147;
+    //  color: #732639;
     font-weight: 600;
     text-align: center;
     font-size: 1.2rem;
     padding: 0.8rem 0;
+    font-style: italic;
   }
   li {
     .top-link2 {
@@ -56,7 +62,9 @@
       font-size: 1.25rem;
       padding: 0.4rem 0;
       text-decoration: none;
-      color: $dark5;
+      // color: $dark5;
+      color: #732639;
+      // color: #856147;
       font-weight: bold;
 
       &.active {
@@ -72,6 +80,7 @@
         padding: 0.25rem 0;
         a {
           font-size: 1.2rem;
+          color: #856147;
         }
       }
     }
