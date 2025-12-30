@@ -63,7 +63,6 @@ export const IdProvider = ({ children }) => {
   const currentYear = currentDate.getFullYear();
 
   const { slug, id } = useParams();
-  // console.log("Slug2", slug);
   const isYear = Number(slug) || currentDate.getFullYear();
   let yearIndex = calendarYears[0].item_list.findIndex(
     (item) => item.title == isYear
@@ -262,13 +261,6 @@ export const IdProvider = ({ children }) => {
       result.push(lastSunday);
       return result;
     }
-
-    // ako ne postoji → dodaj pretposlednju
-    // const secondLastSunday = new Date(lastSunday);
-    // secondLastSunday.setDate(lastSunday.getDate() - 7);
-    // secondLastSunday.setHours(0, 0, 0, 0);
-
-    // result.push(secondLastSunday);
     return result;
   };
 
@@ -451,19 +443,12 @@ export const IdProvider = ({ children }) => {
         });
       }
 
-      // else if (currentDay2 === 0) {
-      //   item.title = renderTitleSection({
-      //     mainTitle: item.title,
-      //     extraLabel: "Istočni petak",
-      //     separatorSymbol: "; ",
-      //   });
-      // }
-
+      //Materice, Oci
       if (
         item.date.setHours(0, 0, 0, 0) ===
         secondSundayBeforeChristmas.setHours(0, 0, 0, 0)
       ) {
-        console.log("targetSunday", secondSundayBeforeChristmas);
+        // console.log("targetSunday", secondSundayBeforeChristmas);
         item.title = renderTitleSection({
           mainTitle: item.title,
           extraLabel: "Materice",
