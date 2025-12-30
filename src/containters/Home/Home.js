@@ -97,7 +97,9 @@ export default function Home() {
           </div> */}
         </div>
         <div className="home__wrapper-center">
-          <NextMonthBox month="januar" year={2026} />
+          <div className="home__wrapper-center-first">
+            <NextMonthBox month="januar" year={2026} />
+          </div>
           <Calendar shortCal={6} soc={false} />
           <section class="calendar-2026">
             <h2>📅 Crkveni kalendar 2026</h2>

@@ -3,15 +3,9 @@
 .footer {
   position: relative;
   z-index: +100;
-  // background: $grey1;
-  // background: #f6e7c4;
-  background: $dark1;
   background: #571929;
-  // color: #333;
   color: white;
-
   font-family: Arial, sans-serif;
-  // border-top: 2px solid #8b2e2e;
   /* 2. Kratak Opis Sajta */
   .footer-border{
     height: 5px;
@@ -22,7 +16,6 @@
     text-align: center;
     margin-bottom: 20px;
     font-size: 0.9em;
-    // color: #666;
     color: $grey5;
   }
 
@@ -39,13 +32,12 @@
 
   /* Stilovi za naslove sekcija */
   .footer-columns h3 {
-    font-size: 1.2rem;
-    // color: #004d40; /* Tamna boja, npr. tamnozelena */
-    color: $redDay2;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: 1.1rem;
     color: #dfa620;
     font-weight: normal;
-    // color: green;
-    // border-bottom: 2px solid $redDay2;
     padding-bottom: 0.3rem;
     margin-bottom: 0.8rem;
   }
@@ -65,8 +57,6 @@
   /* Stilovi za linkove */
   .footer-columns a {
     text-decoration: none;
-    // color: #333;
-    color: $grey7;
     color: #f6f3eeb3;
     font-weight: normal;
     font-size: 0.9rem;
@@ -103,7 +93,6 @@
 @media screen and (min-width: 768px) {
   .footer {
     margin-top: 3rem;
-    // padding: 2rem 0;
     .footer-columns {
       max-width: 1200px;
       margin: 0 auto;

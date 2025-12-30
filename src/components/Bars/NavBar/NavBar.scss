@@ -23,7 +23,7 @@
   padding-top: 2.5rem;
   text-align: center;
   .navBar-first {
-    margin: 1.5rem 0 0 0;
+    margin-top: 1rem;
     color: #dfa620;
     align-items: center;
     justify-content: center;
@@ -50,7 +50,7 @@
         letter-spacing: 0.025em;
         // border: 1px solid red;
         // margin-top: 2rem;
-        margin: 0 1rem;
+        margin: 0.3rem 1rem;
       }
     }
     .box45 {
@@ -264,6 +264,7 @@
   .navBar {
     padding: 0;
     .navBar-first {
+      margin-top: 1.5rem;
       span {
         font-size: 1.2rem;
       }
