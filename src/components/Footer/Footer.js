@@ -34,9 +34,9 @@ export default function Footer() {
           </h3>
           <ul>
             <li>
-              <a href="/2025/decembar/">
+              <a href="/2026/januar/">
                 {/* <i className="fa-solid fa-circle-arrow-right"></i>  */}
-                Crkveni kalendar decembar 2025
+                Crkveni kalendar januar 2026
               </a>
             </li>
             <li>

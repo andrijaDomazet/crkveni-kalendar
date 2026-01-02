@@ -73,10 +73,10 @@ export const options = [
   //0
   {
     route: "/",
-    title: "Crkveni kalendar 2025 | Црквени календар 2025",
+    title: "Crkveni kalendar 2026 | Црквени календар 2026",
     social: {
-      title: "Crkveni kalendar 2025 | Црквени календар 2025",
-      lead: "Crkveni pravoslavni kalendar 2025 | Svi praznici, slave i posti u godini na jednom mestu",
+      title: "Crkveni kalendar 2026 | Црквени календар 2026",
+      lead: "Crkveni pravoslavni kalendar 2026 | Svi praznici, slave i posti u godini na jednom mestu",
       pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
     },
   },
