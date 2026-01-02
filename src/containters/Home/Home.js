@@ -44,7 +44,7 @@ export default function Home() {
             boxTitle={`🕯 Zadušnice u ${2026}. godini`}
             data={calendarYears[0].item_list[yearIndex]}
           />
-             <div className="banner-wrapper">
+          <div className="banner-wrapper">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750930023966-0"} />
           </div>
           {/* <Zadusnice
@@ -79,15 +79,14 @@ export default function Home() {
               .
             </p>
           </section>
-          <div className="banner-wrapper fix-size-horizontal">
-            <AdManagerSlot slotNumber={"div-gpt-ad-1750409157804-0"} />
-          </div>
+
           <Suspense fallback={<div></div>}>
             <CalendarMonthsLinksLazy />
           </Suspense>
           <div className="banner-wrapper fix-size-horizontal">
-            <AdManagerSlot slotNumber={"div-gpt-ad-1750409277034-0"} />
+            <AdManagerSlot slotNumber={"div-gpt-ad-1750409157804-0"} />
           </div>
+
           <div className="home-afterZone">
             <div className="home__molitva">
               <div className="home__links second">
@@ -119,6 +118,9 @@ export default function Home() {
                 <AdManagerSlot slotNumber={"div-gpt-ad-1763130338013-0"} />
               </div> */}
             </section>
+          </div>
+          <div className="banner-wrapper fix-size-horizontal">
+            <AdManagerSlot slotNumber={"div-gpt-ad-1750409277034-0"} />
           </div>
         </div>
 
@@ -184,12 +186,12 @@ export default function Home() {
           </section> */}
         </div>
       </section>
-      <div className="banner-wrapper bilbord">
-        <AdManagerSlot slotNumber={"div-gpt-ad-1764593675864-0"} />
-      </div>
       <Suspense fallback={<div></div>}>
         <WidgetLazy />
       </Suspense>
+      <div className="banner-wrapper">
+        <AdManagerSlot slotNumber={"div-gpt-ad-1764593675864-0"} />
+      </div>
     </div>
   );
 }
