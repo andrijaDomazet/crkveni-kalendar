@@ -219,7 +219,7 @@ export default function Calendar(props) {
       {/* ---- Donja ranfla kalendara ---- */}
       <div className="calendar-month">
         {[-1, 0, 1].map((offset) => (
-          <div key={offset} className={offset === 0 ? "month-center" : ""}>
+          <div key={offset} className={offset === 0 ? "month-center" : ``}>
             <SimpleButton clicked={() => changeMonth(offset)}>
               {offset === -1 && <i className="fa-solid fa-backward"></i>}
               {tableTitle(offset)}

@@ -46,6 +46,10 @@
             font-size: 1rem;
             // color: $grey7;
             color: #856147;
+            transition: transform 11s;
+            &:hover{
+              border-bottom: 2px solid #856147;
+            }
           }
         }
         &:last-child {
@@ -53,6 +57,10 @@
             border-bottom: none; // <<< uklanja border samo na poslednjem redu
           }
         }
+          // &:hover {
+          //   background: #e0dad14d;
+          //   // cursor: pointer;
+          // }
       }
     }
     thead tr th h2 {

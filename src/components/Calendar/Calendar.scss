@@ -175,23 +175,24 @@
             display: inline-block;
             color: white;
             padding: 0 0.3rem;
-            border-radius: 0.1rem;
+            border-radius: 0.3rem;
             white-space: nowrap;
+            letter-spacing: 0.05rem;
           }
           .slavaStrong {
             height: 1.2rem;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             line-height: 1.1rem;
             padding: 0.1rem 0.3rem;
             background: $dark3;
-            letter-spacing: 0.02rem;
+            // background: #732639;
           }
           .zadusniceStrong {
-            font-size: 1rem;
-            height: 1.2rem;
+            font-size: 0.9rem;
+            height: 1.4rem;
             line-height: 1.2rem;
             background: $grey4;
-            padding: 0 0.4rem;
+            padding: 0.15rem 0.5rem;
           }
           strong {
             font-size: 1.1rem;
@@ -237,16 +238,10 @@
     // display: flex;
     grid-template-columns: 3fr 2fr 3fr;
     justify-content: space-between;
-    // background: $orange0;
-    // background: #f2ece3;
     background: #f9f6f1;
-    // background-color: #674e18;
-    // background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ac8228' fill-opacity='0.1' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
-    // background: red;
     padding: 0.5rem 0;
     border-bottom-left-radius: 0.3rem;
     border-bottom-right-radius: 0.3rem;
-    // border: 1px solid red;
     button {
       text-align: center;
       text-transform: capitalize;
@@ -256,7 +251,6 @@
       font-size: 1rem;
       color: $grey7;
       text-decoration: underline;
-      // border: 1px solid green;
       i {
         margin: 0 0.2rem;
         font-size: 1rem;
@@ -266,7 +260,6 @@
       text-align: center;
       button {
         text-decoration: none;
-        // text-transform: uppercase;
         font-weight: bold;
         font-size: 1rem;
         color: $grey7;
@@ -295,7 +288,6 @@
         .drop_down_menu {
           a {
             &:hover {
-              // background: $grey1;
               background: white;
               font-weight: 700;
             }
@@ -309,8 +301,8 @@
       thead {
         tr {
           th {
-            padding: 0.6rem 1rem;
-            font-size: 1.4rem;
+            // padding: 0.6rem 1rem;
+            // font-size: 1.4rem;
             h2 {
               font-size: 1.25rem;
             }
@@ -332,7 +324,7 @@
         th:nth-child(4) {
           // font-size: 1.5rem;
           span {
-            font-size: 1.6rem;
+            font-size: 1.35rem;
           }
         }
       }
@@ -371,10 +363,10 @@
             padding-right: 2rem;
             .slavaStrong,
             .zadusniceStrong {
-              font-size: 1rem;
-              line-height: 1.15rem;
-              height: 1.2rem;
-              // padding: .2rem;
+              font-size: .9rem;
+              line-height: 1.2rem;
+              height: 1.3rem;
+              padding: 0.12rem 0.4rem;
             }
             strong {
               font-size: 1.15rem;
@@ -392,9 +384,12 @@
     }
     .calendar-month {
       display: grid;
-      grid-template-columns: 1fr 2fr 1fr;
-      text-align: center;
+      grid-template-columns: 1fr 1fr 1fr;
+      // text-align: center;
+      justify-content: space-between;
       margin: 0;
+      height: 50px;
+      align-items: center;
       .month-center {
         button {
           font-size: 1.4rem;

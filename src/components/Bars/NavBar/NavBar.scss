@@ -24,6 +24,7 @@
   text-align: center;
   .navBar-first {
     margin-top: 1rem;
+    padding-bottom: .3rem;
     color: #dfa620;
     align-items: center;
     justify-content: center;
@@ -70,7 +71,7 @@
     color: #f6f3eecc;
     font-size: 0.9rem;
     // border: 1px solid red;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
     letter-spacing: 0.1rem;
     font-style: italic;
   }
@@ -149,18 +150,18 @@
           width: 400px;
           display: grid;
           grid-template-columns: 1fr 1fr;
-          gap: 0.3rem;
+          // gap: 0.3rem;
           top: 19px;
           left: -240px;
           box-shadow: 1px 2px 3px rgb(54, 54, 54);
-          padding: 0.5rem;
+          // padding: 0.5rem;
           // background: $orange0;
           // background: #7326390d;
           // background: #f6f3ee;
           background: #f2ece3;
           li {
             width: 100%;
-            padding: 0 0.2rem;
+            // padding: 0 0.2rem;
 
             a {
               display: inline-block;
@@ -176,7 +177,7 @@
               flex: 0 0 50%;
               margin: 0.1rem;
               padding: 0.3rem 1rem;
-              box-shadow: 0 0 2px $grey2;
+              // box-shadow: 0 0 2px $grey2;
               // border-left: 0.5rem solid $dark2;
               // border-left: 2px solid $dark3;
               background: #f9f6f180;
@@ -265,6 +266,7 @@
     padding: 0;
     .navBar-first {
       margin-top: 1.5rem;
+      padding: 0;
       span {
         font-size: 1.2rem;
       }

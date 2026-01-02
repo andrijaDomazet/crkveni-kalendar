@@ -1,3 +1,4 @@
+import React from "react";
 import { lazy, Suspense } from "react";
 import "./BodyText.scss";
 import AdManagerSlot from "../AdvModule/AdManagerSlot";
@@ -5,7 +6,7 @@ import { useGlobalLocation } from "../../shared/LocationContext.js";
 import Zadusnice from "../Zadusnice/Zadusnice.js";
 
 const dynamicComponents = {
-  Zadusnice
+  Zadusnice,
 };
 
 const PostImage = lazy(() =>
@@ -64,7 +65,7 @@ export default function BodyText(props) {
       {props.bodyText?.map((item, index) => {
         if (index === 0) {
           return (
-            <div key={index}>
+            <React.Fragment key={index}>
               {setSubTitle(item)}
               <p dangerouslySetInnerHTML={{ __html: item["text"] }}></p>
               {setQuote(item)}
@@ -74,17 +75,17 @@ export default function BodyText(props) {
                   <AdManagerSlot slotNumber={"div-gpt-ad-1750930023966-0"} />
                 </div>
               )}
-            </div>
+            </React.Fragment>
           );
         } else {
           return (
-            <div key={index}>
+            <React.Fragment key={index}>
               {setSubTitle(item)}
               <p dangerouslySetInnerHTML={{ __html: item["text"] }}></p>
               {setImg(item)}
               {setQuote(item)}
               {setComponent(item)}
-            </div>
+            </React.Fragment>
           );
         }
       })}
