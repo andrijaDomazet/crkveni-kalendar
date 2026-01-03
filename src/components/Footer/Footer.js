@@ -1,6 +1,9 @@
+import { useIdContext } from "../../shared/IdProvider";
+import { monthSerb } from "../../shared/shared";
 import "./Footer.scss";
 
 export default function Footer() {
+  let {isMonth, isYear}=useIdContext()
   return (
     <footer className="footer">
       <div className="footer-border"></div>
@@ -34,19 +37,19 @@ export default function Footer() {
           </h3>
           <ul>
             <li>
-              <a href="/2026/januar/">
+              <a href={`/${isYear}/${monthSerb[isMonth]}/`}>
                 {/* <i className="fa-solid fa-circle-arrow-right"></i>  */}
-                Crkveni kalendar januar 2026
+                Crkveni kalendar {`${monthSerb[isMonth]}`} {`${isYear}`}
               </a>
             </li>
             <li>
-              <a href="/2026/">Crkveni kalendar 2026</a>
+              <a href={`/${isYear}/`}>{`Crkveni kalendar ${isYear}`}</a>
             </li>
             <li>
               <a href="/slave/">Krsne slave</a>
             </li>
             <li>
-              <a href="/zadusnice/">Zadušnice u 2026. godini</a>
+              <a href="/zadusnice/">{`Zadušnice u ${isYear}. godini`}</a>
             </li>
             {/* <li>
               <a href="/molitvenik/"><i className="fa-solid fa-circle-arrow-right"></i> Molitvenik</a>
