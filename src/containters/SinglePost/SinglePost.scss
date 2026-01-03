@@ -59,11 +59,14 @@
               span {
                 font-size: 0.9rem;
                 text-transform: uppercase;
-                padding: 0.2rem 0.8rem;
+                padding: 0.3rem 1rem;
                 margin-right: 0.3rem;
                 border-radius: 0.1rem;
-                color: white;
-                background: $dark3;
+                color: $grey7;
+                background: #7326390d;
+                box-shadow: 0 10px 40px -5px rgba(139, 90, 43, 0.2),
+                  0 4px 16px -4px rgba(139, 90, 43, 0.15);
+                // border: 1px solid #85614733;
                 font-weight: 600;
                 margin-bottom: 0.3rem;
               }

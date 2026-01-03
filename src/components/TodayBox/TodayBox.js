@@ -5,6 +5,15 @@ import { useIdContext } from "../../shared/IdProvider";
 export default function TodayBox() {
   const { dayName, currentDay, monthName, currentYear, todayHoliday } =
     useIdContext();
+  console.log(
+    "TodayBox",
+    dayName,
+    currentDay,
+    monthName,
+    currentYear,
+    todayHoliday
+  );
+
   return (
     <div className="today__box">
       <div className="today-border"></div>
@@ -34,8 +43,9 @@ export default function TodayBox() {
           </svg>
           <div className="line right"></div>
         </div>
-        {/* <p className="today-head">SVETITELJ DANA</p> */}
-        <h2 className="today-title">{todayHoliday.title[0]}</h2>
+        <h2 className="today-title">
+          {todayHoliday.title[0]}
+        </h2>
         {todayHoliday.post && (
           <div className="today-post">
             <div className="today-post-wrapper">
@@ -44,9 +54,6 @@ export default function TodayBox() {
             </div>
           </div>
         )}
-        {/* <div className="today-post">
-                <span>Posni dan</span>
-              </div> */}
       </div>
     </div>
   );

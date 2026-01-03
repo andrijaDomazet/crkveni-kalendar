@@ -74,6 +74,7 @@ export const IdProvider = ({ children }) => {
     () => new Date(`${isYear}-${manualDateEaster[isYear - 2020]}`),
     [isYear]
   );
+  // console.log("Easter day", easterDay);
 
   const easterDate = new Date(easterDay);
   const endEasterDate = new Date(easterDate);
@@ -156,6 +157,7 @@ export const IdProvider = ({ children }) => {
       typeof dateInfo === "number"
         ? dateInfo
         : new Date(dateInfo).setHours(0, 0, 0, 0);
+    // console.log("TS", ts);
 
     const {
       bozicniPostStartTs,
@@ -188,7 +190,7 @@ export const IdProvider = ({ children }) => {
     // 6) Sreda ili petak (3 ili 5) osim ako je u notPostSet
     const day = new Date(ts).getDay();
     if ((day === 3 || day === 5) && !notPostSet.has(ts)) return "post";
-    // 7) Explicitne postovanjske datume iz isPostSet
+    // 7) Datumi iz isPostSet
     if (isPostSet.has(ts)) return "post";
     // 8) Default
     return "";
@@ -430,13 +432,13 @@ export const IdProvider = ({ children }) => {
           mainTitle: item.title,
           extraLabel: "(Drugo bdenije)",
         });
-      } else if (currentDay2 === 0 && diffInDays > -10 && diffInDays < 0) {
+      } else if (currentDay2 === 1 && diffInDays > -10 && diffInDays < 0) {
         item.title = renderTitleSection({
           mainTitle: item.title,
           extraLabel: "Pobusani ponedeljak",
           separatorSymbol: "- ",
         });
-      } else if (currentDay2 === 4 && diffInDays > -8 && diffInDays < 2) {
+      } else if (currentDay2 === 5 && diffInDays > -8 && diffInDays < 2) {
         item.title = renderTitleSection({
           mainTitle: item.title,
           extraLabel: "Istočni petak",
@@ -470,7 +472,7 @@ export const IdProvider = ({ children }) => {
       }
 
       item.post = setPostDays(item.date.getTime());
-      // console.log("Current date",currentDate,item.date);
+      // console.log("Current date",currentDate.setHours(0, 0, 0, 0) === item.date.setHours(0, 0, 0, 0));
       if (currentDate.setHours(0, 0, 0, 0) === item.date.setHours(0, 0, 0, 0)) {
         item.today = " today";
         todayHoliday = item;
