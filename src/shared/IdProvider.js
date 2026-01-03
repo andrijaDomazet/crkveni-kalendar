@@ -271,7 +271,7 @@ export const IdProvider = ({ children }) => {
     const secondSundayBeforeChristmas = getTargetSundayBeforeChristmas(isYear);
     const sundaysBeforeChristmas = getSundaysBeforeChristmas(isYear);
 
-    console.log("sundayBeforeChristmas", sundaysBeforeChristmas);
+    // console.log("sundayBeforeChristmas", sundaysBeforeChristmas);
 
     let yearIndex = calendarYears[0].item_list.findIndex(
       (item) => item.title == isYear
@@ -406,14 +406,14 @@ export const IdProvider = ({ children }) => {
           mainTitle: item.title,
           extraLabel: "(Početak Petrovskog posta)",
         });
-      } else if (currentDay2 === 5 && diffInDays > 5 && diffInDays < 10) {
+      } else if (currentDay2 === 6 && diffInDays > 5 && diffInDays < 10) {
         item.title = renderTitleSection({
           mainTitle: item.title,
           extraLabel: "Lazareva subota (Vrbica)",
           separatorSymbol: "- ",
           slavaSymbol: true,
         });
-      } else if (currentDay2 == 6 && diffInDays > 5 && diffInDays < 10) {
+      } else if (currentDay2 == 0 && diffInDays > 5 && diffInDays < 10) {
         item.title = renderTitleSection({
           mainTitle: false,
           extraLabel: "Ulazak Gospoda Isusa Hrista u Jerusalim - Cveti",

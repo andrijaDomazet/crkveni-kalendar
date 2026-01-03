@@ -5,6 +5,7 @@ import TopBar from "./TopBar/TopBar";
 import ToggleButton from "./SideDrawer/ToggleButton";
 import SideDrawer from "./SideDrawer/SideDrawer";
 import NavBar from "./NavBar/NavBar.js";
+// import Snow from "./Snow/Snow.js";
 
 export default function Bars() {
   const [sideDrawerOpen, setSideDrawerOpen] = useState(false);
@@ -14,6 +15,7 @@ export default function Bars() {
   };
   return (
     <div className="bars">
+      {/* <Snow count={30}/> */}
       {/* <NavLink to="/" className="bars__logo">
         <img src="/img/logo.png" alt="logo" />
       </NavLink> */}

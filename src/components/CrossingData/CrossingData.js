@@ -44,9 +44,9 @@ export default function CrossingData() {
                     <h3>
                       {/* <Link to={`/${currentYear}/${monthName}/`}> */}
                       {/* nedostaje dobar category !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/}
-                      <Link to={`${getPreUrlTitle(item)}`}>
+                      {/* <Link to={`${getPreUrlTitle(item)}`}> */}
                         {item.title}
-                      </Link>
+                      {/* </Link> */}
                     </h3>
                   </td>
                 </tr>

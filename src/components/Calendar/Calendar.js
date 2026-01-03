@@ -14,12 +14,12 @@ import { useIdContext } from "../../shared/IdProvider";
 import { renderTitleSection } from "../../shared/utility";
 
 export default function Calendar(props) {
-  console.log("Props", props.isMonth2);
+  // console.log("Props", props.isMonth2);
 
   let { id, currentDate, isYear, isMonth, holidays, isEasterDay } =
     useIdContext();
   isMonth = props.isMonth2 ?? isMonth;
-  console.log("IsMonth", isMonth);
+  // console.log("IsMonth", isMonth);
 
   const location = useGlobalLocation();
   const [dropDownYear, setDropDownYear] = useState(false);

@@ -29,6 +29,8 @@ export function renderTitleSection({
   strongClass = "",
 }) {
   const normalize = (str) => str.replace(/\s+/g, " ").trim();
+  console.log("Element", mainTitle);
+
   return (
     <>
       {slavaSymbol && (

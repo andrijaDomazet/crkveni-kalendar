@@ -20,7 +20,7 @@ export default function Zadusnice({ setYear, boxTitle, data }) {
     (item) => item.title == currentYear
   );
    let zadusniceDate = calendarYears[0].item_list[yearIndex];
-console.log("Zadusnice", zadusniceDate);
+// console.log("Zadusnice", zadusniceDate);
 
   return (
     <div className="zadusnice">

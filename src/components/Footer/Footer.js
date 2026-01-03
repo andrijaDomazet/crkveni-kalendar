@@ -3,12 +3,12 @@ import { monthSerb } from "../../shared/shared";
 import "./Footer.scss";
 
 export default function Footer() {
-  let {isMonth, isYear}=useIdContext()
+  let { isMonth, isYear } = useIdContext();
   return (
     <footer className="footer">
       <div className="footer-border"></div>
       {/* <footer> */}
-      {/* <div class="footer-description">
+      {/* <div className="footer-description">
         <p>
           Crkveni kalendar je vaš pouzdani izvor informacija o svim pravoslavnim
           praznicima, krsnim slavama, postovima i običajima za 2026. godinu i
@@ -16,7 +16,7 @@ export default function Footer() {
         </p>
       </div> */}
 
-      <div class="footer-columns">
+      <div className="footer-columns">
         <section>
           <h3>
             <svg
@@ -26,10 +26,10 @@ export default function Footer() {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
+              strokeWidth="2"
+              strokeLinecap="round"
               stroke-linejoin="round"
-              class="lucide lucide-star w-4 h-4"
+              className="lucide lucide-star w-4 h-4"
             >
               <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
             </svg>
@@ -65,10 +65,10 @@ export default function Footer() {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
+              strokeWidth="2"
+              strokeLinecap="round"
               stroke-linejoin="round"
-              class="lucide lucide-book-open w-4 h-4"
+              className="lucide lucide-book-open w-4 h-4"
             >
               <path d="M12 7v14"></path>
               <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path>
@@ -112,7 +112,7 @@ export default function Footer() {
         </section> */}
       </div>
 
-      <div class="footer-copyright">
+      <div className="footer-copyright">
         <p>&copy; 2025 crkveni-kalendar.net. Sva prava zadržana.</p>
       </div>
       {/* </footer> */}

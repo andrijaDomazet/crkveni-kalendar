@@ -1,6 +1,7 @@
 @import "../../index.scss";
 
 .bars {
+  position: relative;
   min-width: 300px;
   height: 160px;
   min-height: 35px;
@@ -28,7 +29,7 @@
     text-align: center;
     // padding: 0 1rem;
     // border-bottom: 1px solid $silver1;
-    
+
     .bars__logo {
       height: 5rem;
       img {
