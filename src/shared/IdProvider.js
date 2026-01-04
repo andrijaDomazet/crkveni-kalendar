@@ -463,18 +463,25 @@ export const IdProvider = ({ children }) => {
       if (
         sundaysBeforeChristmas.some((d) => d.getTime() === item.date.getTime())
       ) {
-        item.title = renderTitleSection({
-          mainTitle: item.title,
-          extraLabel: "Oci (Paterice)",
-          strongClass: "blackStrong",
-          separatorSymbol: " - ",
-        });
+        // item.title = renderTitleSection({
+        //   mainTitle: item.title,
+        //   extraLabel: "Oci (Paterice)",
+        //   strongClass: "blackStrong",
+        //   separatorSymbol: " - ",
+        // });
+
+        item.mainTitle = item.title;
+        item.extraLabel = "Oci (Paterice)";
+        item.strongClass = "blackStrong";
+        item.separatorSymbol = " - ";
       }
 
       item.post = setPostDays(item.date.getTime());
       // console.log("Current date",currentDate.setHours(0, 0, 0, 0) === item.date.setHours(0, 0, 0, 0));
       if (currentDate.setHours(0, 0, 0, 0) === item.date.setHours(0, 0, 0, 0)) {
         item.today = " today";
+        // console.log("Today item", item.title.props.children[1]);
+
         todayHoliday = item;
       }
       return item;

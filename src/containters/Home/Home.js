@@ -49,7 +49,7 @@ export default function Home() {
         </div>
         <div className="home__wrapper-center">
           <div className="home__wrapper-center-first">
-            <NextMonthBox month="januar" year={2026} />
+            <NextMonthBox />
           </div>
           <Calendar shortCal={6} soc={false} />
           <section className="calendar-2026">

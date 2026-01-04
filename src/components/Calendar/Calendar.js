@@ -167,6 +167,8 @@ export default function Calendar(props) {
             let eventDay = eventDate.getDay();
             const tdClasses = ["onlyDay", "noDay", "before"];
             nedelje.push(inTextNumber);
+            console.log("ITEM calendar", item);
+            
             if (eventDay === 1) {
               inTextNumber++;
             }
@@ -204,6 +206,8 @@ export default function Calendar(props) {
                       {renderTitleSection({
                         mainTitle: item.title,
                         slavaSymbol: item.slava,
+                        extraLabel:item.extraLabel,
+                        separatorSymbol:item.separatorSymbol
                       })}
                     </div>
                   </td>

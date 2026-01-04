@@ -31,9 +31,8 @@
   z-index: 10;
 }
 
-.next-month-box.bottom {
+.next-month-box.close {
   display: none;
-  // obična pozicija u toku dokumenta
 }
 
 @media screen and (min-width: $medium) {
