@@ -13,6 +13,7 @@ export default function TodayBox() {
     currentYear,
     todayHoliday
   );
+  console.log("Today holiday", todayHoliday);
 
   return (
     <div className="today__box">
@@ -43,9 +44,7 @@ export default function TodayBox() {
           </svg>
           <div className="line right"></div>
         </div>
-        <h2 className="today-title">
-          {todayHoliday.title[0]}
-        </h2>
+        <h2 className="today-title">{todayHoliday.title[0]}</h2>
         {todayHoliday.post && (
           <div className="today-post">
             <div className="today-post-wrapper">

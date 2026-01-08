@@ -24,6 +24,8 @@
       }
     }
     .home__wrapper-left {
+      display: flex;
+      flex-direction: column;
       margin: 0 auto;
       width: 100%;
       padding: 0 1rem;
@@ -188,6 +190,9 @@
       .home__wrapper-left {
         width: 300px;
         padding: 0;
+        .third-element{
+          order: 2;
+        }
       }
       .home__wrapper-center {
         width: 728px;

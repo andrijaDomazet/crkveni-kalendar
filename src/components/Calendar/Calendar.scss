@@ -148,6 +148,10 @@
           }
         }
       }
+      .mainRedStrong{
+        color: $redDay0 !important;
+        font-weight: 700 !important;
+      }
       td:nth-child(1),
       td:nth-child(2),
       td:nth-child(3) {

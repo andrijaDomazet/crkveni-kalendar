@@ -315,135 +315,106 @@ export const IdProvider = ({ children }) => {
       let currentDay2 = date1.getDay();
       let diffInDays = Math.round((easterDay - date1) / (1000 * 60 * 60 * 24)); // Razlika u danima
 
-      // console.log("Sunday", item.date.setHours(0, 0, 0, 0)===targetSunday.setHours(0, 0, 0, 0));
-
       if (zadusniceDate && zadusniceDate[1] === index + 1) {
-        item.title = (
-          <>
-            {Array.isArray(item.title)
-              ? item.title.map((el, index) => (
-                  <React.Fragment key={index}>
-                    <>{el}</>
-                    {index !== item.title.length - 1 ? "; " : ""}
-                  </React.Fragment>
-                ))
-              : item.title}{" "}
-            -{" "}
-            <Link to="/zadusnice/" className="zadusniceStrong">
-              Zadušnice
-            </Link>{" "}
-            <strong style={{ color: "black", fontWeight: 600 }}>
-              {calendarYears[0].zadusnice[zadusniceIndex]}
-            </strong>
-          </>
-        );
+        // item.title = (
+        //   <>
+        //     {Array.isArray(item.title)
+        //       ? item.title.map((el, index) => (
+        //           <React.Fragment key={index}>
+        //             <>{el}</>
+        //             {index !== item.title.length - 1 ? "; " : ""}
+        //           </React.Fragment>
+        //         ))
+        //       : item.title}{" "}
+        //     -{" "}
+        //     <Link to="/zadusnice/" className="zadusniceStrong">
+        //       Zadušnice
+        //     </Link>{" "}
+        //     <strong style={{ color: "black", fontWeight: 600 }}>
+        //       {calendarYears[0].zadusnice[zadusniceIndex]}
+        //     </strong>
+        //   </>
+        // );
+        item.mainTitle = item.title;
+        item.extraLabel = `Zadušnice ${calendarYears[0].zadusnice[zadusniceIndex]}`;
+        item.strongClass = "zadusniceStrong";
+        item.separatorSymbol = " - ";
       }
 
       if (diffInDays >= -2 && diffInDays <= 6) {
-        item.title = renderTitleSection({
-          extraLabel: easterDays[easterDays.length - 3 - diffInDays],
-          strongClass:
-            currentDay2 === 3 || currentDay2 === 5
-              ? "blackStrong"
-              : diffInDays < 4
-              ? "redStrong"
-              : "blackStrong",
-        });
+        // item.title = renderTitleSection({
+        item.title = easterDays[easterDays.length - 3 - diffInDays];
+        item.strongClass =
+          currentDay2 === 3 || currentDay2 === 5
+            ? "blackStrong"
+            : diffInDays < 4
+            ? "redStrong"
+            : "blackStrong";
+        // });
       } else if (diffInDays == -24) {
-        item.title = renderTitleSection({
-          mainTitle: item.title,
-          extraLabel: "(Prepolovljenje)",
-        });
+        item.mainTitle = item.title;
+        item.extraLabel = "(Prepolovljenje)";
       } else if (diffInDays == -31) {
-        item.title = renderTitleSection({
-          mainTitle: item.title,
-          extraLabel: "(Odanije Prepolovljenja)",
-        });
+        item.mainTitle = item.title;
+        item.extraLabel = "(Odanije Prepolovljenja)";
       } else if (diffInDays == -38) {
-        item.title = renderTitleSection({
-          mainTitle: item.title,
-          extraLabel: "(Odanije Vaskrsa)",
-        });
+        item.mainTitle = item.title;
+        item.extraLabel = "(Odanije Vaskrsa)";
       } else if (diffInDays == -39) {
-        item.title = renderTitleSection({
-          mainTitle: false,
-          strongClass: "redStrong",
-          extraLabel: "Vaznesenje Gospodnje - Spasovdan",
-        });
+        item.mainTitle = false;
+        item.strongClass = "redStrong";
+        item.extraLabel = "Vaznesenje Gospodnje - Spasovdan";
       } else if (diffInDays == -47) {
-        item.title = renderTitleSection({
-          mainTitle: item.title,
-          extraLabel: "(Odanije Vaznesenja)",
-        });
+        item.mainTitle = item.title;
+        item.extraLabel = "(Odanije Vaznesenja)";
       } else if (diffInDays == -49) {
-        item.title = renderTitleSection({
-          mainTitle: false,
-          strongClass: "redStrong",
-          extraLabel: "Silazak Svetog Duha na apostole - Pedesetnica - Trojice",
-        });
+        item.mainTitle = false;
+        item.strongClass = "redStrong";
+        item.extraLabel =
+          "Silazak Svetog Duha na apostole - Pedesetnica - Trojice";
       } else if (diffInDays == -50) {
-        item.title = renderTitleSection({
-          mainTitle: false,
-          strongClass: "redStrong",
-          extraLabel: "Duhovski ponedeljak",
-        });
+        item.mainTitle = false;
+        item.strongClass = "redStrong";
+        item.extraLabel = "Duhovski ponedeljak";
       } else if (diffInDays == -51) {
-        item.title = renderTitleSection({
-          mainTitle: false,
-          strongClass: "redStrong",
-          extraLabel: "Duhovski utorak",
-        });
+        item.mainTitle = false;
+        item.strongClass = "redStrong";
+        item.extraLabel = "Duhovski utorak";
       } else if (diffInDays == -55) {
-        item.title = renderTitleSection({
-          mainTitle: item.title,
-          extraLabel: "(Odanije Pedesetnice)",
-        });
+        item.mainTitle = item.title;
+        item.extraLabel = "(Odanije Pedesetnice)";
       } else if (diffInDays == -56) {
-        item.title = renderTitleSection({
-          mainTitle: item.title,
-          extraLabel: "(Petrovske poklade)",
-        });
+        item.mainTitle = item.title;
+        item.extraLabel = "(Petrovske poklade)";
       } else if (diffInDays == -57) {
-        item.title = renderTitleSection({
-          mainTitle: item.title,
-          extraLabel: "(Početak Petrovskog posta)",
-        });
+        item.mainTitle = item.title;
+        item.extraLabel = "(Početak Petrovskog posta)";
       } else if (currentDay2 === 6 && diffInDays > 5 && diffInDays < 10) {
-        item.title = renderTitleSection({
-          mainTitle: item.title,
-          extraLabel: "Lazareva subota (Vrbica)",
-          separatorSymbol: "- ",
-          slavaSymbol: true,
-        });
+        item.mainTitle = item.title;
+        item.extraLabel = "Lazareva subota (Vrbica)";
+        item.separatorSymbol = "- ";
+        item.slava = true;
       } else if (currentDay2 == 0 && diffInDays > 5 && diffInDays < 10) {
-        item.title = renderTitleSection({
-          mainTitle: false,
-          extraLabel: "Ulazak Gospoda Isusa Hrista u Jerusalim - Cveti",
-          slavaSymbol: true,
-          strongClass: "redStrong",
-        });
+        // item.mainTitle = false;
+        item.title = "Ulazak Gospoda Isusa Hrista u Jerusalim - Cveti";
+        item.slava = true;
+        item.mainClass = "mainRedStrong";
+        item.strongClass = "redStrong";
       } else if (currentDay2 === 3 && diffInDays > 15 && diffInDays < 20) {
-        item.title = renderTitleSection({
-          mainTitle: item.title,
-          extraLabel: "(Prvo bdenije)",
-        });
+        item.mainTitle = item.title;
+        item.extraLabel = "(Prvo bdenije)";
       } else if (currentDay2 === 5 && diffInDays > 15 && diffInDays < 20) {
-        item.title = renderTitleSection({
-          mainTitle: item.title,
-          extraLabel: "(Drugo bdenije)",
-        });
+        item.mainTitle = item.title;
+        item.extraLabel = "(Drugo bdenije)";
       } else if (currentDay2 === 1 && diffInDays > -10 && diffInDays < 0) {
-        item.title = renderTitleSection({
-          mainTitle: item.title,
-          extraLabel: "Pobusani ponedeljak",
-          separatorSymbol: "- ",
-        });
+        item.mainTitle = item.title;
+        item.extraLabel = "Pobusani ponedeljak";
+        item.separatorSymbol = "; ";
+        // item.strongClass = "redStrong";
       } else if (currentDay2 === 5 && diffInDays > -8 && diffInDays < 2) {
-        item.title = renderTitleSection({
-          mainTitle: item.title,
-          extraLabel: "Istočni petak",
-          separatorSymbol: "; ",
-        });
+        item.mainTitle = item.title;
+        item.extraLabel = "Istočni petak";
+        item.separatorSymbol = "; ";
       }
 
       //Materice, Oci
@@ -451,37 +422,23 @@ export const IdProvider = ({ children }) => {
         item.date.setHours(0, 0, 0, 0) ===
         secondSundayBeforeChristmas.setHours(0, 0, 0, 0)
       ) {
-        // console.log("targetSunday", secondSundayBeforeChristmas);
-        item.title = renderTitleSection({
-          mainTitle: item.title,
-          extraLabel: "Materice",
-          strongClass: "blackStrong",
-          separatorSymbol: " - ",
-        });
+        item.mainTitle = item.title;
+        item.extraLabel = "Materice";
+        item.strongClass = "blackStrong";
+        item.separatorSymbol = " - ";
       }
       // Nedelja pred Božić
       if (
         sundaysBeforeChristmas.some((d) => d.getTime() === item.date.getTime())
       ) {
-        // item.title = renderTitleSection({
-        //   mainTitle: item.title,
-        //   extraLabel: "Oci (Paterice)",
-        //   strongClass: "blackStrong",
-        //   separatorSymbol: " - ",
-        // });
-
         item.mainTitle = item.title;
         item.extraLabel = "Oci (Paterice)";
         item.strongClass = "blackStrong";
         item.separatorSymbol = " - ";
       }
-
       item.post = setPostDays(item.date.getTime());
-      // console.log("Current date",currentDate.setHours(0, 0, 0, 0) === item.date.setHours(0, 0, 0, 0));
       if (currentDate.setHours(0, 0, 0, 0) === item.date.setHours(0, 0, 0, 0)) {
         item.today = " today";
-        // console.log("Today item", item.title.props.children[1]);
-
         todayHoliday = item;
       }
       return item;
@@ -490,11 +447,9 @@ export const IdProvider = ({ children }) => {
     return setHolTest;
   }
   // console.log("Today holiday", todayHoliday);
-
   return (
     <IdContext.Provider
       value={{
-        // data,
         dayName,
         id,
         slug,

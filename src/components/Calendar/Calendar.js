@@ -168,7 +168,7 @@ export default function Calendar(props) {
             const tdClasses = ["onlyDay", "noDay", "before"];
             nedelje.push(inTextNumber);
             console.log("ITEM calendar", item);
-            
+
             if (eventDay === 1) {
               inTextNumber++;
             }
@@ -189,7 +189,11 @@ export default function Calendar(props) {
                   key={index}
                   className={
                     rowClasses(item, eventDay) +
-                    (item.today ? ` ${item.today}` : "") +
+                    (item.today
+                      ? ` ${item.today}`
+                      : item.mainClass
+                      ? ` ${item.mainClass}`
+                      : "") +
                     // todayClass(new Date(item.date)) +
                     " dayClass"
                   }
@@ -206,8 +210,10 @@ export default function Calendar(props) {
                       {renderTitleSection({
                         mainTitle: item.title,
                         slavaSymbol: item.slava,
-                        extraLabel:item.extraLabel,
-                        separatorSymbol:item.separatorSymbol
+                        extraLabel: item.extraLabel,
+                        separatorSymbol: item.separatorSymbol,
+                        strongClass: item.strongClass,
+                        mainClass: item.mainClass,
                       })}
                     </div>
                   </td>

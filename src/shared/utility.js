@@ -26,6 +26,7 @@ export function renderTitleSection({
   separatorSymbol = " ",
   slavaSymbol = false,
   linkClass = "slavaStrong",
+  mainClass = "",
   strongClass = "",
 }) {
   const normalize = (str) => str.replace(/\s+/g, " ").trim();
@@ -46,7 +47,7 @@ export function renderTitleSection({
             (day) => normalize(day) === normalize(el)
           );
           return (
-            <React.Fragment key={index}>
+            <React.Fragment key={index} className={mainClass}>
               <h2 className={isBlackDay ? "blackDay" : ""}>{el}</h2>
               {index !== mainTitle.length - 1 && <span>; </span>}
             </React.Fragment>
@@ -60,6 +61,7 @@ export function renderTitleSection({
       {separatorSymbol}
       {extraLabel && (
         <h2>
+          {/* {extraLabel} */}
           <strong className={strongClass}>{extraLabel}</strong>
         </h2>
       )}
