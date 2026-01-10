@@ -13,7 +13,7 @@ export default function TodayBox() {
     currentYear,
     todayHoliday
   );
-  console.log("Today holiday", todayHoliday);
+  console.log("Today holiday", todayHoliday.strongClass);
 
   return (
     <div className="today__box">

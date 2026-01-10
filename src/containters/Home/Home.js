@@ -154,8 +154,8 @@ export default function Home() {
                 </svg>
               </div>
               <div>
-                <span>9. januar</span>
-                <h2>Sveti Stefan</h2>
+                <span>14. januar</span>
+                <h2>Sveti Vasilije</h2>
               </div>
             </div>
             <div className="midBox-bodyLine">

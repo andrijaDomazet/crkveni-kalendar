@@ -91,9 +91,6 @@ export default function Calendar(props) {
       : "";
   };
 
-  // const todayClass = (x) =>
-  //   x.toDateString() === currentDate.toDateString() ? " today" : "";
-
   const setCloseClass = () => {
     if (location.pathname === "/") {
       return " close";
@@ -167,7 +164,7 @@ export default function Calendar(props) {
             let eventDay = eventDate.getDay();
             const tdClasses = ["onlyDay", "noDay", "before"];
             nedelje.push(inTextNumber);
-            console.log("ITEM calendar", item);
+            // console.log("ITEM calendar", item);
 
             if (eventDay === 1) {
               inTextNumber++;
