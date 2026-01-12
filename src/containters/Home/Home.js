@@ -5,10 +5,11 @@ import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
 import { lazy, Suspense } from "react";
 import Molitva from "../../components/Molitva/Molitva.js";
 import molitve from "../../molitve.json";
-import NextMonthBox from "../../components/NextMonthBox/NextMonthBox.js";
+import NextMonthBox from "../../components/Boxes/NextMonthBox/NextMonthBox.js";
 import { calendarYears } from "../../components/Calendar/calendar-data/calendar-data.js";
 import { useIdContext } from "../../shared/IdProvider.js";
-import TodayBox from "../../components/TodayBox/TodayBox.js";
+import TodayBox from "../../components/Boxes/TodayBox/TodayBox.js";
+import SimpleBox from "../../components/Boxes/SimpleBox/SimpleBox.js";
 
 const WidgetLazy = lazy(() => import("../../UI/Widget/Widget.js"));
 const CalendarMonthsLinksLazy = lazy(() =>
@@ -234,7 +235,7 @@ export default function Home() {
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
-                     strokeLinecap="round"
+                  strokeLinecap="round"
                   stroke-linejoin="round"
                   className="star"
                 >
@@ -248,6 +249,12 @@ export default function Home() {
             </div>
           </div>
           {/* <Zadusnice /> */}
+          <SimpleBox
+            linkText="/2026/april/"
+            mainTitle="Vaskrs 2026."
+            mainBody="Vaskrs (Uskrs) u 2026. godini pada na 12. april po novom kalendaru."
+            buttonText="Kalendar za april 2026. →"
+          />
           <div className="banner-wrapper xl_sticky">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750411708088-0"} />
           </div>

@@ -23,6 +23,7 @@ export function urlTitle2(title) {
 export function renderTitleSection({
   mainTitle,
   extraLabel,
+  extraLabelLink = null,
   separatorSymbol = " ",
   slavaSymbol = false,
   linkClass = "slavaStrong",
@@ -48,8 +49,10 @@ export function renderTitleSection({
           );
           return (
             <React.Fragment key={index} className={mainClass}>
+              {/* <div key={index} className={mainClass}> */}
               <h2 className={isBlackDay ? "blackDay" : ""}>{el}</h2>
               {index !== mainTitle.length - 1 && <span>; </span>}
+              {/* </div> */}
             </React.Fragment>
           );
         })
@@ -58,13 +61,22 @@ export function renderTitleSection({
           {mainTitle}
         </h2>
       )}
-      {separatorSymbol}
-      {extraLabel && (
-        <h2>
-          {/* {extraLabel} */}
-          <strong className={strongClass}>{extraLabel}</strong>
-        </h2>
-      )}
+      {separatorSymbol && <span>{separatorSymbol}</span>}
+
+      {extraLabel &&
+        (() => {
+          const content = (
+            <h2>
+              <strong className={strongClass}>{extraLabel}</strong>
+            </h2>
+          );
+
+          return extraLabelLink ? (
+            <Link to={extraLabelLink}>{content}</Link>
+          ) : (
+            content
+          );
+        })()}
     </>
   );
 }

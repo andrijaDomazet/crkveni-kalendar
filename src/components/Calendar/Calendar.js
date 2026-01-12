@@ -208,6 +208,7 @@ export default function Calendar(props) {
                         mainTitle: item.title,
                         slavaSymbol: item.slava,
                         extraLabel: item.extraLabel,
+                        extraLabelLink: item.extraLabelLink,
                         separatorSymbol: item.separatorSymbol,
                         strongClass: item.strongClass,
                         mainClass: item.mainClass,

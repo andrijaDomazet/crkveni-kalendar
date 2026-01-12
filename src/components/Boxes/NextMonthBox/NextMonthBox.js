@@ -1,8 +1,8 @@
 // components/NextMonthBox/NextMonthBox.js
 import React from "react";
 import "./NextMonthBox.scss";
-import { useIdContext } from "../../shared/IdProvider";
-import { monthSerb } from "../../shared/shared";
+import { useIdContext } from "../../../shared/IdProvider";
+import { monthSerb } from "../../../shared/shared";
 
 //srediti da za 12 mesec daje januar naredne godine!!!!!!!!!!!
 export default function NextMonthBox() {

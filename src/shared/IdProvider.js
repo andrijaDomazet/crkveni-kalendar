@@ -74,9 +74,7 @@ export const IdProvider = ({ children }) => {
     () => new Date(`${isYear}-${manualDateEaster[isYear - 2020]}`),
     [isYear]
   );
-  // console.log("Easter day", easterDay);
-
-  const easterDate = new Date(easterDay);
+   const easterDate = new Date(easterDay);
   const endEasterDate = new Date(easterDate);
   endEasterDate.setDate(easterDate.getDate() - 1);
   const startEasterDate = new Date(easterDate);
@@ -157,7 +155,6 @@ export const IdProvider = ({ children }) => {
       typeof dateInfo === "number"
         ? dateInfo
         : new Date(dateInfo).setHours(0, 0, 0, 0);
-    // console.log("TS", ts);
 
     const {
       bozicniPostStartTs,
@@ -273,8 +270,6 @@ export const IdProvider = ({ children }) => {
     const secondSundayBeforeChristmas = getTargetSundayBeforeChristmas(isYear);
     const sundaysBeforeChristmas = getSundaysBeforeChristmas(isYear);
 
-    // console.log("sundayBeforeChristmas", sundaysBeforeChristmas);
-
     let yearIndex = calendarYears[0].item_list.findIndex(
       (item) => item.title == isYear
     );
@@ -289,7 +284,6 @@ export const IdProvider = ({ children }) => {
     //end---------------------------------------------------------------------
 
     //uskrs-------------------------------------------------------------------
-    // console.log("isMonth idProvider", id, isMonth);
     let setHol = news2
       .slice(idsMonths[isMonth][0], idsMonths[isMonth][1])
       .map((item) => ({ ...item })); // shallow copy po itemu
@@ -316,33 +310,14 @@ export const IdProvider = ({ children }) => {
       let diffInDays = Math.round((easterDay - date1) / (1000 * 60 * 60 * 24)); // Razlika u danima
 
       if (zadusniceDate && zadusniceDate[1] === index + 1) {
-        // item.title = (
-        //   <>
-        //     {Array.isArray(item.title)
-        //       ? item.title.map((el, index) => (
-        //           <React.Fragment key={index}>
-        //             <>{el}</>
-        //             {index !== item.title.length - 1 ? "; " : ""}
-        //           </React.Fragment>
-        //         ))
-        //       : item.title}{" "}
-        //     -{" "}
-        //     <Link to="/zadusnice/" className="zadusniceStrong">
-        //       Zadušnice
-        //     </Link>{" "}
-        //     <strong style={{ color: "black", fontWeight: 600 }}>
-        //       {calendarYears[0].zadusnice[zadusniceIndex]}
-        //     </strong>
-        //   </>
-        // );
         item.mainTitle = item.title;
         item.extraLabel = `Zadušnice ${calendarYears[0].zadusnice[zadusniceIndex]}`;
+        item.extraLabelLink = "/zadusnice/";
         item.strongClass = "zadusniceStrong";
         item.separatorSymbol = " - ";
       }
 
       if (diffInDays >= -2 && diffInDays <= 6) {
-        // item.title = renderTitleSection({
         item.title = easterDays[easterDays.length - 3 - diffInDays];
         item.strongClass =
           currentDay2 === 3 || currentDay2 === 5
@@ -350,7 +325,6 @@ export const IdProvider = ({ children }) => {
             : diffInDays < 4
             ? "redStrong"
             : "blackStrong";
-        // });
       } else if (diffInDays == -24) {
         item.mainTitle = item.title;
         item.extraLabel = "(Prepolovljenje)";
@@ -395,7 +369,6 @@ export const IdProvider = ({ children }) => {
         item.separatorSymbol = "- ";
         item.slava = true;
       } else if (currentDay2 == 0 && diffInDays > 5 && diffInDays < 10) {
-        // item.mainTitle = false;
         item.title = "Ulazak Gospoda Isusa Hrista u Jerusalim - Cveti";
         item.slava = true;
         item.mainClass = "mainRedStrong";
@@ -410,7 +383,6 @@ export const IdProvider = ({ children }) => {
         item.mainTitle = item.title;
         item.extraLabel = "Pobusani ponedeljak";
         item.separatorSymbol = "; ";
-        // item.strongClass = "redStrong";
       } else if (currentDay2 === 5 && diffInDays > -8 && diffInDays < 2) {
         item.mainTitle = item.title;
         item.extraLabel = "Istočni petak";
@@ -446,7 +418,6 @@ export const IdProvider = ({ children }) => {
 
     return setHolTest;
   }
-  // console.log("Today holiday", todayHoliday);
   return (
     <IdContext.Provider
       value={{

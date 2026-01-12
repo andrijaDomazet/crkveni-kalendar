@@ -1,19 +1,10 @@
 import React from "react";
 import "./TodayBox.scss";
-import { useIdContext } from "../../shared/IdProvider";
+import { useIdContext } from "../../../shared/IdProvider";
 
 export default function TodayBox() {
   const { dayName, currentDay, monthName, currentYear, todayHoliday } =
     useIdContext();
-  console.log(
-    "TodayBox",
-    dayName,
-    currentDay,
-    monthName,
-    currentYear,
-    todayHoliday
-  );
-  console.log("Today holiday", todayHoliday.strongClass);
 
   return (
     <div className="today__box">
