@@ -3,10 +3,7 @@
 .widget__box {
   margin: 1rem 0.6rem;
   padding: 0 0.6rem;
-  // background: #f6e7c4;
-  // background: $dark1;
   background: #f2ece3;
-  // background: $dark2;
   box-shadow: 0 0px 3px $grey2;
   border-radius: 0.1rem;
   .widget__title {
@@ -15,13 +12,11 @@
     color: white;
     a {
       text-decoration: none;
-      h2 {
-        height: 2rem;
-        line-height: 2rem;
-        font-size: 1.4rem;
-        // color: $redDay2;
-        color: #732639;
-      }
+      height: 2rem;
+      line-height: 2rem;
+      font-size: 1.4rem;
+      // color: $redDay2;
+      color: #732639;
     }
 
     span {
@@ -51,11 +46,10 @@
       padding: 0 0.5rem 0.5rem 0;
       a {
         text-decoration: none;
-        h2 {
-          font-size: 2rem;
-          line-height: 2.4rem;
-          height: 2.4rem;
-        }
+        font-size: 2rem;
+        line-height: 2.4rem;
+        height: 2.4rem;
+        font-weight: 600;
       }
       span {
         font-size: 2rem;

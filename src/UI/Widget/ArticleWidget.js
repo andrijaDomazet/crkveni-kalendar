@@ -9,9 +9,8 @@ export default function ArticleWidget(props) {
           <img src={data.pics[0]} alt="" />
           <div className="box-content">
             <img className="ornament-line" src="/img/line.png" loading="lazy" />
-            <h2>{data.title_2 || data.title}</h2>
-
-            <h3 className="box-content-3">{data.category}</h3>
+            <strong>{data.title_2 || data.title}</strong>
+            <span className="box-content-3">{data.category}</span>
           </div>
         </div>
       </a>

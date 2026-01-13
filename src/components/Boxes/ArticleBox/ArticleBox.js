@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./ArticleBox.scss";
 import { Link, useNavigate } from "react-router-dom";
-import PostImage from "../../containters/SinglePost/img/PostImage.js";
-import { getPreUrlTitle } from "../../shared/utility.js";
-import Buttons from "../../UI/Button/Buttons.js";
+import PostImage from "../../../containters/SinglePost/img/PostImage.js";
+import { getPreUrlTitle } from "../../../shared/utility.js";
+import Buttons from "../../../UI/Button/Buttons.js";
 
 function ArticleBox({ n = {}, classes = "", loading = false }) {
   const articleData = n;

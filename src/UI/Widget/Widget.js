@@ -16,7 +16,9 @@ export default function Widget() {
     <section className="widget__box">
       <div className="widget__title">
         <a href="https://agroweb.rs/" target="_blank">
-          <h2>Agroweb.rs</h2>
+          {/* <h2> */}
+          Agroweb.rs
+          {/* </h2> */}
         </a>
       </div>
       {/* <div className="widget__container"> */}

@@ -20,11 +20,12 @@ export default function CalendarMonthsLinks() {
             title={`Prikaži kalendar za ${item} ${slug || currentYear}. godine`}
             className="calendar-month"
           >
-            <h3>{item.charAt(0).toUpperCase() + item.slice(1)}</h3>
+            {/* <h3> */}
+            {item.charAt(0).toUpperCase() + item.slice(1)}
+            {/* </h3> */}
           </NavLink>
         ))}
       </div>
     </section>
   );
 }
-

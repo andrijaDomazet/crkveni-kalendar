@@ -4,7 +4,7 @@ import BodyText from "../../components/BodyText/BodyText";
 import { useGlobalLocation } from "../../shared/LocationContext";
 import { urlTitle2 } from "../../shared/utility";
 import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
-import ArticleBox from "../../components/ArticleBox/ArticleBox";
+import ArticleBox from "../../components/Boxes/ArticleBox/ArticleBox";
 import molitve from "../../molitve.json";
 import PostImage from "./img/PostImage";
 import data from "../../all__news.json";
