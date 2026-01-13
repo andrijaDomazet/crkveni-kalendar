@@ -1,6 +1,6 @@
 import "./Home.scss";
 import Calendar from "../../components/Calendar/Calendar";
-import Zadusnice from "../../components/Zadusnice/Zadusnice";
+import Zadusnice from "../../components/Boxes/Zadusnice/Zadusnice.js";
 import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
 import { lazy, Suspense } from "react";
 import Molitva from "../../components/Molitva/Molitva.js";
@@ -35,7 +35,7 @@ export default function Home() {
             />
           </div>
 
-          <div className="banner-wrapper">
+          <div className="banner-wrapper fix-size-mediumRectangle">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750930023966-0"} />
           </div>
           {/* <Zadusnice
@@ -250,6 +250,7 @@ export default function Home() {
           </div>
           {/* <Zadusnice /> */}
           <SimpleBox
+            classes="green"
             linkText="/2026/april/"
             mainTitle="Vaskrs 2026."
             mainBody="Vaskrs (Uskrs) u 2026. godini pada na 12. april po novom kalendaru."

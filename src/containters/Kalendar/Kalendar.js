@@ -7,7 +7,7 @@ import { useIdContext } from "../../shared/IdProvider.js";
 
 const WidgetLazy = lazy(() => import("../../UI/Widget/Widget.js"));
 const ZadusniceLazy = lazy(() =>
-  import("../../components/Zadusnice/Zadusnice.js")
+  import("../../components/Boxes/Zadusnice/Zadusnice.js")
 );
 const CalendarMonthsLinksLazy = lazy(() =>
   import("../../components/CalendarMonthsLinks/CalendarMonthsLinks.js")

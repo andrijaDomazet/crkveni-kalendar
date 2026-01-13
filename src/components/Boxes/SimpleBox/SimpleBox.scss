@@ -1,37 +1,43 @@
 @import "../../../index.scss";
 
 .simpleBox {
-  //   margin: 0.8rem auto;
-  padding: 0.6rem 0.3rem;
-  background: #99a57f33;
-  box-shadow: 0 10px 40px -5px rgba(139, 90, 43, 0.2),
-    0 4px 16px -4px rgba(139, 90, 43, 0.15);
-  border: 1px solid #61704333;
-  h2{
+  padding-bottom: 0.3rem;
+
+  strong {
+    display: block;
+    padding: 0.6rem 1rem;
     font-size: 1.2rem;
   }
-  h2,
+  strong,
   a {
     color: #732639;
-    padding: 0.3rem 0.3rem;
     line-height: 1.6rem;
   }
   p {
-    padding: 0.5rem .3rem;
+    padding: 0.3rem 1rem;
     color: #362417b3;
     line-height: 1.4rem;
   }
   a {
     display: block;
-    padding: 0.3rem;
+    padding: 0.6rem 1rem;
     &:hover {
       text-decoration: underline;
-
-      // border-bottom: 1px solid #732639;
     }
   }
-  //   b {
-  //     color: #732639;
-  //     padding: 0.6rem 0.3rem;
-  //   }
+}
+.simpleBox.green {
+  background: #a7b19241;
+  border: 1px solid #61704333;
+}
+
+.simpleBox.orange {
+  background: #f2ece3;
+  border: 1px solid #73263928;
+  box-shadow: 0 10px 40px -5px rgba(139, 90, 43, 0.2),
+    0 4px 16px -4px rgba(139, 90, 43, 0.15);
+
+  strong {
+    background: #7326390d;
+  }
 }

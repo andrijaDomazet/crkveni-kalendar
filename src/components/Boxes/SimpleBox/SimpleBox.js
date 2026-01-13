@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import "./SimpleBox.scss";
 
@@ -7,12 +6,25 @@ export default function SimpleBox({
   mainBody,
   linkText,
   buttonText,
+  classes="",
 }) {
   return (
-    <div className="simpleBox">
-      <h2>{mainTitle}</h2>
+    <section className={`simpleBox ${classes}`}>
+      <strong>{mainTitle}</strong>
       <p>{mainBody}</p>
-      <Link to={linkText}>{buttonText}</Link>
-    </div>
+      <div>
+        {Array.isArray(buttonText) ? (
+          buttonText.map((item, index) => {
+            return (
+              <Link key={index} to={item[0]}>
+                {item[1]}
+              </Link>
+            );
+          })
+        ) : (
+          <Link to={linkText}>{buttonText}</Link>
+        )}
+      </div>
+    </section>
   );
 }

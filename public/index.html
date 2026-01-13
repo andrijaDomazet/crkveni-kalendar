@@ -129,27 +129,9 @@
 
         var mappingInText = googletag
           .sizeMapping()
-          .addSize(
-            [21, 21],
-            [
-              [320, 100],
-              [300, 250],
-            ]
-          )
-          .addSize(
-            [860, 21],
-            [
-              [300, 250],
-              [728, 90],
-            ]
-          )
-          .addSize(
-            [1030, 21],
-            [
-              [300, 250],
-              [728, 90],
-            ]
-          )
+          .addSize([21, 21], [[300, 250]])
+          .addSize([860, 21], [[300, 250]])
+          .addSize([1030, 21], [[300, 250]])
           .build();
         var mappingInterstitial = googletag
           .sizeMapping()

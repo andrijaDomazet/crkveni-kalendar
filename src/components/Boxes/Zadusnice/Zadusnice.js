@@ -1,9 +1,7 @@
 import "./Zadusnice.scss";
-import {
-  calendarYears
-} from "../Calendar/calendar-data/calendar-data.js";
-import { monthSerb } from "../../shared/shared.js";
-import { useIdContext } from "../../shared/IdProvider";
+import { calendarYears } from "../../Calendar/calendar-data/calendar-data.js";
+import { monthSerb } from "../../../shared/shared.js";
+import { useIdContext } from "../../../shared/IdProvider.js";
 import { Link } from "react-router-dom";
 
 export default function Zadusnice({ setYear, boxTitle, data }) {
@@ -12,8 +10,7 @@ export default function Zadusnice({ setYear, boxTitle, data }) {
   let yearIndex = calendarYears[0].item_list.findIndex(
     (item) => item.title == currentYear
   );
-   let zadusniceDate = calendarYears[0].item_list[yearIndex];
-
+  let zadusniceDate = calendarYears[0].item_list[yearIndex];
 
   return (
     <div className="zadusnice">

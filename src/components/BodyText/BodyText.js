@@ -3,7 +3,7 @@ import { lazy, Suspense } from "react";
 import "./BodyText.scss";
 import AdManagerSlot from "../AdvModule/AdManagerSlot";
 import { useGlobalLocation } from "../../shared/LocationContext.js";
-import Zadusnice from "../Zadusnice/Zadusnice.js";
+import Zadusnice from "../Boxes/Zadusnice/Zadusnice.js";
 
 const dynamicComponents = {
   Zadusnice,

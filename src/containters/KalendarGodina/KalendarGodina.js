@@ -5,13 +5,14 @@ import { lazy, Suspense } from "react";
 import { useIdContext } from "../../shared/IdProvider.js";
 // import { useGlobalLocation } from "../../shared/LocationContext.js";
 import { calendarYears } from "../../components/Calendar/calendar-data/calendar-data.js";
+import SimpleBox from "../../components/Boxes/SimpleBox/SimpleBox.js";
 
 const WidgetLazy = lazy(() => import("../../UI/Widget/Widget.js"));
 const CalendarMonthsLinksLazy = lazy(() =>
   import("../../components/CalendarMonthsLinks/CalendarMonthsLinks.js")
 );
 const ZadusniceLazy = lazy(() =>
-  import("../../components/Zadusnice/Zadusnice.js")
+  import("../../components/Boxes/Zadusnice/Zadusnice.js")
 );
 
 export default function KalendarGodina() {
@@ -37,6 +38,23 @@ export default function KalendarGodina() {
               data={calendarYears[0].item_list[yearIndex]}
             />
           </Suspense>
+          <SimpleBox
+            classes="green"
+            linkText="/2026/april/"
+            mainTitle="Vaskrs 2026."
+            mainBody="Vaskrs (Uskrs) u 2026. godini pada na 12. april po novom kalendaru."
+            buttonText="Kalendar za april 2026. →"
+          />
+          <SimpleBox
+            classes="orange"
+            linkText="/2026/april/"
+            mainTitle="Ostale godine"
+            // mainBody="Vaskrs (Uskrs) u 2026. godini pada na 12. april po novom kalendaru."
+            buttonText={[
+              ["/2025/", "Kalendar 2025. →"],
+              ["/2027/", "Kalendar 2027. →"],
+            ]}
+          />
           <div className="banner-wrapper xl_sticky">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750411708088-0"} />
           </div>
