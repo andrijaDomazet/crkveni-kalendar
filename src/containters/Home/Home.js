@@ -25,32 +25,6 @@ export default function Home() {
         <AdManagerSlot slotNumber={"div-gpt-ad-1761641124263-0"} />
       </div>
       <section className="home__wrapper">
-        <div className="home__wrapper-left">
-          <TodayBox />
-          <div className="third-element">
-            <Zadusnice
-              setYear={2026}
-              boxTitle={`🕯 Zadušnice u ${2026}. godini`}
-              data={calendarYears[0].item_list[yearIndex]}
-            />
-          </div>
-
-          <div className="banner-wrapper fix-size-mediumRectangle">
-            <AdManagerSlot slotNumber={"div-gpt-ad-1750930023966-0"} />
-          </div>
-          {/* <Zadusnice
-            setYear={2026}
-            boxTitle={`🍞 Veliki postovi u ${2026}. godini`}
-            data={calendarYears[1]}
-          /> */}
-          {/* <div>
-            <div>🍞 Veliki postovi 2026</div>
-            <div>Божићни пост — 28.11 - 6.1</div>
-            <div>Васкршњи пост — 23.2 - 11.4</div>
-            <div>Петровски пост — 8.6 - 11.7</div>
-            <div>Богородичин пост — 14.8 - 27.8</div>
-          </div> */}
-        </div>
         <div className="home__wrapper-center">
           <div className="home__wrapper-center-first">
             <NextMonthBox />
@@ -114,7 +88,32 @@ export default function Home() {
             <AdManagerSlot slotNumber={"div-gpt-ad-1750409277034-0"} />
           </div>
         </div>
+        <div className="home__wrapper-left">
+          <TodayBox />
+          <div className="third-element">
+            <Zadusnice
+              setYear={2026}
+              boxTitle={`🕯 Zadušnice u ${2026}. godini`}
+              data={calendarYears[0].item_list[yearIndex]}
+            />
+          </div>
 
+          <div className="banner-wrapper fix-size-mediumRectangle">
+            <AdManagerSlot slotNumber={"div-gpt-ad-1750930023966-0"} />
+          </div>
+          {/* <Zadusnice
+            setYear={2026}
+            boxTitle={`🍞 Veliki postovi u ${2026}. godini`}
+            data={calendarYears[1]}
+          /> */}
+          {/* <div>
+            <div>🍞 Veliki postovi 2026</div>
+            <div>Божићни пост — 28.11 - 6.1</div>
+            <div>Васкршњи пост — 23.2 - 11.4</div>
+            <div>Петровски пост — 8.6 - 11.7</div>
+            <div>Богородичин пост — 14.8 - 27.8</div>
+          </div> */}
+        </div>
         <div className="home__wrapper-right">
           <div className="midBox">
             <div className="midBox-title">

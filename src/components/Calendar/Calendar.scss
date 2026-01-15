@@ -1,5 +1,12 @@
 @import "../../index.scss";
 .calendar {
+  position: relative;
+  width: 100%;
+  // display: flex;
+  // justify-content: center;
+  // text-align: center;
+  // display: block;
+  // border: 2px solid blue !important;
   // box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
   .first {
     color: $grey5;
@@ -148,7 +155,7 @@
           }
         }
       }
-      .mainRedStrong{
+      .mainRedStrong {
         color: $redDay0 !important;
         font-weight: 700 !important;
       }
@@ -367,7 +374,7 @@
             padding-right: 2rem;
             .slavaStrong,
             .zadusniceStrong {
-              font-size: .9rem;
+              font-size: 0.9rem;
               line-height: 1.2rem;
               height: 1.3rem;
               padding: 0.12rem 0.4rem;

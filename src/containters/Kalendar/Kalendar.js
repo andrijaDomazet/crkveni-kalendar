@@ -27,15 +27,15 @@ export default function Kalendar() {
       <div className="kalendar-wrapper">
         <div className="kalendar-left">
           <Calendar />
-          <div className="banner-wrapper fix-size-horizontal">
-            <AdManagerSlot slotNumber={"div-gpt-ad-1750409157804-0"} />
-          </div>
           <Suspense fallback={<div></div>}>
             <CalendarMonthsLinksLazy />
           </Suspense>
-          <div className="banner-wrapper">
-            <AdManagerSlot slotNumber={"div-gpt-ad-1750409277034-0"} />
+          <div className="banner-wrapper fix-size-horizontal">
+            <AdManagerSlot slotNumber={"div-gpt-ad-1750409157804-0"} />
           </div>
+          {/* <div className="banner-wrapper">
+            <AdManagerSlot slotNumber={"div-gpt-ad-1750409277034-0"} />
+          </div> */}
         </div>
         <div className="kalendar-right">
           <Suspense fallback={<div></div>}>

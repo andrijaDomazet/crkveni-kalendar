@@ -12,6 +12,7 @@ import TimeFormat from "../TimeFormat/TimeFormat";
 import { useGlobalLocation } from "../../shared/LocationContext";
 import { useIdContext } from "../../shared/IdProvider";
 import { renderTitleSection } from "../../shared/utility";
+import StickyAd from "../AdvModule/StickyAd";
 
 export default function Calendar(props) {
   // console.log("Props", props.isMonth2);
@@ -235,6 +236,11 @@ export default function Calendar(props) {
         ))}
       </div>
       {/* ---- END Donja ranfla kalendara ---- */}
+
+      <StickyAd
+        adUnitPath={location.pathname}
+        slotNumber={"div-gpt-ad-1768472077826-0"}
+      />
     </div>
   );
 }
