@@ -103,13 +103,14 @@
 @import "../../index.scss";
 .sticky-banner {
   position: sticky;
+  // position: absolute;
   bottom: 0;
   z-index: 1000;
   // margin: 1.2rem 0;
   display: flex;
   justify-content: center;
   //  width: 320px;
-  height: 100px;
+  // height: 100px;
   .sticky-banner-box {
     // border: 1px solid red;
     // width: 320px;
@@ -136,9 +137,11 @@
   .sticky-banner {
     // height: 90px;
     margin-top: 2.5rem;
+    height: 90px;
     .sticky-banner-box {
+      position: relative;
       width: 728px;
-      // height: 90px;
+
       .closeButton {
         position: absolute;
         cursor: pointer;
