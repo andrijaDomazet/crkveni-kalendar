@@ -112,8 +112,8 @@
   height: 100px;
   .sticky-banner-box {
     // border: 1px solid red;
-    width: 320px;
-    height: 100px;
+    // width: 320px;
+    // height: 100px;
         .sticky-banner-wrapper {
       margin: 0 auto;
       height: 100%;
@@ -134,11 +134,11 @@
 
 @media screen and (min-width: $medium) {
   .sticky-banner {
-    height: 90px;
+    // height: 90px;
     margin: 1.5rem 0 1rem 0;
     .sticky-banner-box {
       width: 728px;
-      height: 90px;
+      // height: 90px;
       .closeButton {
         position: absolute;
         cursor: pointer;
