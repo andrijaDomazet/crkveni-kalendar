@@ -126,8 +126,8 @@
     .closeButton {
       position: absolute;
       cursor: pointer;
-      top: 0;
-      right: -25px;
+      top: -25px;
+      right: 15px;
     }
   }
 }
@@ -135,15 +135,15 @@
 @media screen and (min-width: $medium) {
   .sticky-banner {
     // height: 90px;
-    margin: 1.5rem 0 1rem 0;
+    margin-top: 2.5rem;
     .sticky-banner-box {
       width: 728px;
       // height: 90px;
       .closeButton {
         position: absolute;
         cursor: pointer;
-        top: 0;
-        right: -31px;
+        top: -25px;
+        right: 0;
       }
     }
   }
