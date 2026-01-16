@@ -42,15 +42,17 @@ const AdManagerSlot = ({ slotNumber, onSlotRenderEnded }) => {
   //   sessionStorage.setItem("prevPathname", location.pathname);
   // }, [location.pathname, slotNumber]);
 
+  const previousPathRef = useRef(null);
+
   useEffect(() => {
     if (!window.googletag) return;
 
-    if (!previousLocation.current) {
-      previousLocation.current = location.pathname;
+    if (previousPathRef.current === null) {
+      previousPathRef.current = location.pathname;
       return;
     }
 
-    if (previousLocation.current !== location.pathname) {
+    if (previousPathRef.current !== location.pathname) {
       window.googletag.cmd.push(() => {
         const pubads = window.googletag.pubads?.();
         if (!pubads) return;
@@ -61,14 +63,12 @@ const AdManagerSlot = ({ slotNumber, onSlotRenderEnded }) => {
 
         if (!slot) return;
 
-        // 👇 KLJUČNA RAZLIKA
+        // ✅ ZA BILBORD
         window.googletag.display(slotNumber);
-        // pubads.refresh([slot]); ❌ ne radi pouzdano za bilbord
       });
-    }
 
-    previousLocation.current = location.pathname;
-    sessionStorage.setItem("prevPathname", location.pathname);
+      previousPathRef.current = location.pathname;
+    }
   }, [location.pathname, slotNumber]);
 
   return <div id={slotNumber}></div>;
