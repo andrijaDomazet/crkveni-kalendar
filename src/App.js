@@ -67,6 +67,11 @@ export default function App() {
             element={React.createElement(withIdProvider(SinglePost))}
           />
           <Route
+            path="/hriscanski-postovi/"
+            exact="true"
+            element={React.createElement(withIdProvider(SinglePost))}
+          />
+          <Route
             path="/molitvenik/"
             exact="true"
             element={React.createElement(withIdProvider(SinglePost))}

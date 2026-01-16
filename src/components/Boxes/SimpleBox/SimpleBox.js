@@ -6,12 +6,30 @@ export default function SimpleBox({
   mainBody,
   linkText,
   buttonText,
-  classes="",
+  classes = "",
 }) {
   return (
-    <section className={`simpleBox ${classes}`}>
-      <strong>{mainTitle}</strong>
-      <p>{mainBody}</p>
+    <section
+      className={`simpleBox ${classes}`}
+      // style={{ order: 4 }}
+    >
+      <h2>{mainTitle}</h2>
+      {/* <p>{mainBody}</p> */}
+      <p>
+        {Array.isArray(mainBody) ? (
+          <ul>
+            {mainBody.map((item, index) => {
+              return (
+                <li key={index} to={item[0]}>
+                  {item}
+                </li>
+              );
+            })}
+          </ul>
+        ) : (
+          <Link to={linkText}>{mainBody}</Link>
+        )}
+      </p>
       <div>
         {Array.isArray(buttonText) ? (
           buttonText.map((item, index) => {

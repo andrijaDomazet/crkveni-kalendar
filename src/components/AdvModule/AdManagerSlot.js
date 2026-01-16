@@ -27,22 +27,49 @@ const AdManagerSlot = ({ slotNumber, onSlotRenderEnded }) => {
     }
   }, [slotNumber, onSlotRenderEnded]);
 
+  // useEffect(() => {
+  //   if (!previousLocation.current) previousLocation.current = location.pathname;
+
+  //   if (previousLocation.current !== location.pathname) {
+  //     const slot = window.googletag
+  //       .pubads()
+  //       .getSlots()
+  //       .find((s) => s.getSlotElementId() === slotNumber);
+  //     if (slot) window.googletag.pubads().refresh([slot]);
+  //   }
+
+  //   previousLocation.current = location.pathname;
+  //   sessionStorage.setItem("prevPathname", location.pathname);
+  // }, [location.pathname, slotNumber]);
+
   useEffect(() => {
-    if (!previousLocation.current) previousLocation.current = location.pathname;
+    if (!window.googletag) return;
+
+    if (!previousLocation.current) {
+      previousLocation.current = location.pathname;
+      return;
+    }
 
     if (previousLocation.current !== location.pathname) {
-      const slot = window.googletag
-        .pubads()
-        .getSlots()
-        .find((s) => s.getSlotElementId() === slotNumber);
-      if (slot) window.googletag.pubads().refresh([slot]);
+      window.googletag.cmd.push(() => {
+        const pubads = window.googletag.pubads?.();
+        if (!pubads) return;
+
+        const slot = pubads
+          .getSlots()
+          .find((s) => s.getSlotElementId() === slotNumber);
+
+        if (slot) {
+          pubads.refresh([slot]);
+        }
+      });
     }
 
     previousLocation.current = location.pathname;
     sessionStorage.setItem("prevPathname", location.pathname);
   }, [location.pathname, slotNumber]);
+
   return <div id={slotNumber}></div>;
 };
 
 export default AdManagerSlot;
-
