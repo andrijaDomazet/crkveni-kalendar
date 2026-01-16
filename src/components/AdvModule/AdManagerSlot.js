@@ -44,10 +44,11 @@ const AdManagerSlot = ({ slotNumber, onSlotRenderEnded }) => {
 
   const previousPathRef = useRef(null);
 
+  
   useEffect(() => {
     if (!window.googletag) return;
 
-    if (previousPathRef.current === null) {
+    if (!previousPathRef.current) {
       previousPathRef.current = location.pathname;
       return;
     }
@@ -63,8 +64,9 @@ const AdManagerSlot = ({ slotNumber, onSlotRenderEnded }) => {
 
         if (!slot) return;
 
-        // ✅ ZA BILBORD
-        window.googletag.display(slotNumber);
+        // 👇 SPA-safe update
+        window.googletag.display(slotNumber); // za bilbord
+        // ili pubads.refresh([slot]); // za običan slot
       });
 
       previousPathRef.current = location.pathname;
