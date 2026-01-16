@@ -66,11 +66,11 @@ export default function App() {
             exact="true"
             element={React.createElement(withIdProvider(SinglePost))}
           />
-          <Route
+          {/* <Route
             path="/hriscanski-postovi/"
             exact="true"
             element={React.createElement(withIdProvider(SinglePost))}
-          />
+          /> */}
           <Route
             path="/molitvenik/"
             exact="true"

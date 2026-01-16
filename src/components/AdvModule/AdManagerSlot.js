@@ -62,7 +62,7 @@ const AdManagerSlot = ({ slotNumber, onSlotRenderEnded }) => {
         if (!slot) return;
 
         // 👇 KLJUČNA RAZLIKA
-        googletag.display(slotNumber);
+        window.googletag.display(slotNumber);
         // pubads.refresh([slot]); ❌ ne radi pouzdano za bilbord
       });
     }
