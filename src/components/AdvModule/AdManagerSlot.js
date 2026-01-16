@@ -99,6 +99,10 @@ const AdManagerSlot = ({ slotNumber, onSlotRenderEnded }) => {
             .find((s) => s.getSlotElementId() === slotNumber);
 
           if (slot) {
+            // 🔥 KLJUČNA LINIJA
+            const el = document.getElementById(slotNumber);
+            if (el) el.innerHTML = "";
+
             pubads.refresh([slot]);
           }
         } catch (e) {
