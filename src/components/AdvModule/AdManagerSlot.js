@@ -59,9 +59,11 @@ const AdManagerSlot = ({ slotNumber, onSlotRenderEnded }) => {
           .getSlots()
           .find((s) => s.getSlotElementId() === slotNumber);
 
-        if (slot) {
-          pubads.refresh([slot]);
-        }
+        if (!slot) return;
+
+        // 👇 KLJUČNA RAZLIKA
+        googletag.display(slotNumber);
+        // pubads.refresh([slot]); ❌ ne radi pouzdano za bilbord
       });
     }
 
