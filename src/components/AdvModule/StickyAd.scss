@@ -1,120 +1,11 @@
-// @import "../../index.scss";
-
-// .sticky-banner {
-//   position: sticky;
-//   left: 0;
-//   bottom: 0;
-//   z-index: 999;
-//   margin: 1rem 0;
-//   // text-align: center;
-//   // justify-content: center;
-//   .sticky-banner-box {
-//     position: relative;
-//     height: 100%;
-//     .sticky-banner-wrapper {
-//       margin: 0 auto;
-//       height: 100%;
-//       text-align: center;
-//       img {
-//         width: auto;
-//         height: 100%;
-//       }
-//     }
-//     .closeButton {
-//       position: absolute;
-//       top: -25px;
-//       right: 0;
-//     }
-//   }
-// }
-// @media screen and (min-width: $medium) {
-//   .sticky-banner {
-//     // position: absolute;
-//     width: 728px;
-//     height: 90px;
-//     border: 1px solid red;
-//     // left: -50%;
-//     // transform: translateX(-50%);
-//     margin-left: 1px;
-//     .sticky-banner-box {
-//       .closeButton {
-//         cursor: pointer;
-//       }
-//     }
-//   }
-// }
-// @media screen and (min-width: $large) {
-//   .sticky-banner {
-//     // transform: translateX(-512px);
-//   }
-// }
-// @media screen and (min-width: $extraLarge) {
-//   .sticky-banner {
-//     // transform: translateX(-584px);
-//   }
-// }
-
-// @import "../../index.scss";
-
-// .sticky-banner {
-//   position: sticky;
-//   left: 0;
-//   // right: 0;
-//   bottom: 0;
-//   z-index: 1000;
-//   .sticky-banner-box {
-//     position: relative;
-//     height: 100%;
-//     .sticky-banner-wrapper {
-//       margin: 0 auto;
-//       height: 100%;
-//       text-align: center;
-//       img {
-//         width: auto;
-//         height: 100%;
-//       }
-//     }
-//     .closeButton {
-//       position: absolute;
-//       cursor: pointer;
-//       top: 0;
-//       right: -25px;
-//     }
-//   }
-// }
-// @media screen and (min-width: $medium) {
-//   .sticky-banner {
-//     width: 728px;
-//     height: 90px;
-//     left: 50%;
-//     transform: translateX(-72px);
-//     // transform: translateX(-50%);
-//     border: 1px solid red;
-//     .sticky-banner-box {
-//       .closeButton {
-//         position: absolute;
-//         cursor: pointer;
-//         // top: 0;
-//         // right: -31px;
-//       }
-//     }
-//   }
-// }
 @import "../../index.scss";
 .sticky-banner {
   position: sticky;
-  // position: absolute;
   bottom: 0;
   z-index: 1000;
-  // margin: 1.2rem 0;
   display: flex;
   justify-content: center;
-  //  width: 320px;
-  // height: 100px;
   .sticky-banner-box {
-    // border: 1px solid red;
-    // width: 320px;
-    // height: 100px;
     .sticky-banner-wrapper {
       margin: 0 auto;
       height: 100%;
@@ -135,13 +26,10 @@
 
 @media screen and (min-width: $medium) {
   .sticky-banner {
-    // height: 90px;
     margin-top: 2.5rem;
-    // height: 90px;
     .sticky-banner-box {
       position: relative;
       width: 728px;
-
       .closeButton {
         position: absolute;
         cursor: pointer;
