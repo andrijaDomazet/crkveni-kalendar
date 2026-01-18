@@ -4,7 +4,7 @@ import { useIdContext } from "../../../shared/IdProvider";
 
 export default function TodayBox() {
   const { dayName, currentDay, monthName, currentYear, yearIndex, isYear, todayHoliday } = useIdContext();
-  console.log("TodayBox", currentYear, yearIndex, isYear);
+  // console.log("TodayBox", currentYear, yearIndex, isYear);
 
   if (currentYear !== isYear) {
     return;

@@ -13,9 +13,9 @@ const CalendarMonthsLinksLazy = lazy(() => import("../../components/CalendarMont
 const ZadusniceLazy = lazy(() => import("../../components/Boxes/Zadusnice/Zadusnice.js"));
 
 export default function KalendarGodina() {
-  const { yearIndex, easterDay } = useIdContext();
+  const { currentYear, yearIndex, easterDay,isYear,slug } = useIdContext();
 
-  console.log("ID data", easterDay);
+  console.log("ID data", slug);
   // const { pathPart } = useGlobalLocation();
   return (
     <div className="kalendarGodina">
@@ -23,18 +23,17 @@ export default function KalendarGodina() {
         <AdManagerSlot slotNumber={"div-gpt-ad-1761641124263-0"} />
       </div>
       <div className="kalendarGodina-wrapper">
-   
         <div className="kalendarGodina-center">
           <div className="kalendarGodina-title">
-            <h1>Pravoslavni kalendar 2026.</h1>
-            <h2>Kompletan pregled svih meseci, velikih praznika, posnih dana i zadušnica za 2026. godinu po crkvenom kalendaru Srpske Pravoslavne Crkve.</h2>
+            <h1>Pravoslavni kalendar {isYear}.</h1>
+            <h2>Kompletan pregled svih meseci, velikih praznika, posnih dana i zadušnica za {isYear}. godinu po crkvenom kalendaru Srpske Pravoslavne Crkve.</h2>
           </div>
           <div className="monthsGrid">
             {monthSerb.map((item, index) => {
               return (
                 <SimpleBox
                   // classes="orange"
-                  topNavLink={`/2026/${item}/`}
+                  topNavLink={`/${isYear}/${item}/`}
                   // linkText={`/2026/${item}/`}
                   mainTitle={item.substring(0, 1).toUpperCase() + item.substring(1)}
                   mainBody={importantHolidaysPerMonth[index]}
@@ -67,12 +66,13 @@ export default function KalendarGodina() {
           <SimpleBox classes="green" linkText="/2026/april/" mainTitle="Vaskrs 2026." mainBody="Vaskrs (Uskrs) u 2026. godini pada na 12. april po novom kalendaru." buttonText="Kalendar za april 2026. →" />
           <SimpleBox
             classes="orange"
-            linkText="/2026/april/"
+            // linkText="/2026/april/"
             mainTitle="Ostale godine"
             // mainBody="Vaskrs (Uskrs) u 2026. godini pada na 12. april po novom kalendaru."
             buttonText={[
-              ["/2025/", "Kalendar 2025. →"],
-              ["/2027/", "Kalendar 2027. →"],
+              [`/${+slug-1}/`, `Kalendar ${+slug-1}. →`],
+              [`/${+slug+1}/`, `Kalendar ${+slug+1}. →`],
+              // ["/2027/", "Kalendar 2027. →"],
             ]}
           />
           <div className="banner-wrapper xl_sticky">
