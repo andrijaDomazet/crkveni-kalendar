@@ -22,6 +22,20 @@ export const monthSerb = [
   "novembar",
   "decembar",
 ];
+export const importantHolidaysPerMonth=[
+  ["Božić (7.)", "Bogojavljanje (19.)","Sveti Sava (27.)" ],
+  ["Sveti Trifun (14.)","Sretenje (15.)"],
+  ["Mladenci (22.)"],
+  ["Blagovesti (7.)"],
+  ["Đurđevdan (6.)","Sveti Vasilije (12.)"],
+  ["Vidovdan (28.)"],
+  ["Petrovdan (12.)"],
+  ["Preobraženje (19.)", "Velika Gospojina (28.)"],
+  ["Mala Gospojina (21.)","Krstovdan (27.)"],
+  ["Sveti Luka (31.)"],
+  ["Mitrovdan (8.)", "Aranđelovdan (21.)"],
+  ["Nikoljdan (19.)"],
+]
 export const zadusniceName = [
   "Zimske",
   "Letnje",

@@ -2,32 +2,50 @@
 
 .simpleBox {
   padding-bottom: 0.3rem;
-
+  background: #f2ece3;
+  border: 1px solid #73263928;
+  // height: 100%;
   h2 {
     display: block;
     padding: 0.6rem 1rem;
     font-size: 1.2rem;
+    font-weight: 400;
   }
   h2,
   a {
+    // text-transform: capitalize;
     color: #732639;
     line-height: 1.6rem;
   }
-  p {
-    // padding: 0.3rem 1rem;
-    color: #362417b3;
-    line-height: 1.4rem;
-    ul {
-      padding-left: 2rem;
-      li {
-        padding: 0.1rem 0;
-        // font-size: 1rem;
-        // padding-left: .5rem;
+  .simpleBox-body {
+    // height: 100%;
+    display: flex;
+    flex-direction: column;
+    // position: relative;
+    p {
+      padding: 0 0.1rem;
+      color: #362417b3;
+      line-height: 1.4rem;
+      ul {
+        padding-left: 2rem;
+        li {
+          padding: 0.1rem 0;
+          // font-size: 1rem;
+          // padding-left: .5rem;
+        }
       }
     }
+    .secondBody {
+      // margin-top: auto;
+      margin: .5rem 1rem 0.5rem 1rem;
+      padding: .5rem 0;
+      border-top: 1px solid rgba(128, 128, 128, 0.596);
+    }
   }
+
   a {
     display: block;
+    // text-transform: capitalize;
     padding: 0.6rem 1rem;
     &:hover {
       text-decoration: underline;
@@ -40,10 +58,9 @@
 }
 
 .simpleBox.orange {
-  background: #f2ece3;
-  border: 1px solid #73263928;
-  box-shadow: 0 10px 40px -5px rgba(139, 90, 43, 0.2),
-    0 4px 16px -4px rgba(139, 90, 43, 0.15);
+  // background: #f2ece3;
+  // border: 1px solid #73263928;
+  box-shadow: 0 10px 40px -5px rgba(139, 90, 43, 0.2), 0 4px 16px -4px rgba(139, 90, 43, 0.15);
 
   h2 {
     background: #7326390d;

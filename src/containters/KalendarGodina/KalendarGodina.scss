@@ -4,26 +4,81 @@
   margin-top: 1rem;
   .kalendarGodina-wrapper {
     padding: 0 0.4rem;
+
+    .kalendarGodina-center {
+      .kalendarGodina-title {
+        h1 {
+          color: #732639;
+          font-size: 1.4rem;
+        }
+        h2 {
+          font-size: 1rem;
+          color: #362417cc;
+          padding: 0.5rem 0;
+        }
+      }
+      .monthsGrid {
+        padding: 0.3rem 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+        grid-auto-rows: minmax(140px, auto);
+      }
+    }
+    .kalendarGodina-left {
+      padding-bottom: 1rem;
+    }
     .kalendarGodina-right {
+      display: flex;
+      flex-direction: column;
       gap: 1rem;
     }
   }
 }
 @media screen and (min-width: $medium) {
   .kalendarGodina {
-    width: 1200px;
-    margin: 2rem auto;
+    width: 1380px;
+    margin: 0 auto;
     .kalendarGodina-wrapper {
       display: flex;
+      gap: 1.5rem;
       .kalendarGodina-left {
-        width: calc(100% - 340px);
-        margin-right: 20px;
-      }
-      .kalendarGodina-right {
         display: flex;
         flex-direction: column;
+        width: 300px;
+        gap: 1rem;
+        // width: calc(100% - 340px);
+        // margin-right: 20px;
+      }
+      .kalendarGodina-center {
+        order: 2;
+        width: 728px;
+        .kalendarGodina-title {
+          h1 {
+            // color: #732639;
+            font-size: 2rem;
+          }
+          h2 {
+            font-size: 1.1rem;
+            // color: #362417cc;
+            // padding: 0.3rem 0;
+          }
+        }
+        .monthsGrid {
+          // padding: 0.3rem 0;
+          // display: grid;
+          // grid-template-columns: repeat(2, 1fr);
+          gap: 0.8rem;
+          grid-auto-rows: minmax(140px, auto);
+        }
+      }
+
+      .kalendarGodina-right {
+        order: 3;
+        // display: flex;
+        // flex-direction: column;
         width: 340px;
-        padding: 0 20px;
+        // padding: 0 20px;
         gap: 1.5rem;
       }
     }

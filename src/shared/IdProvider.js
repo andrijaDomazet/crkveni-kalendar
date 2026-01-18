@@ -16,7 +16,6 @@ import {
   monthSerb,
   days,
 } from "../components/Calendar/calendar-data/calendar-data";
-import { renderTitleSection } from "./utility";
 import news2 from "../components/Calendar/calendar-data/all__news4.json";
 const IdContext = createContext();
 
@@ -338,6 +337,7 @@ export const IdProvider = ({ children }) => {
         item.mainTitle = false;
         item.strongClass = "redStrong";
         item.extraLabel = "Vaznesenje Gospodnje - Spasovdan";
+        item.separatorSymbol = "; ";
       } else if (diffInDays == -47) {
         item.mainTitle = item.title;
         item.extraLabel = "(Odanije Vaznesenja)";
@@ -350,10 +350,12 @@ export const IdProvider = ({ children }) => {
         item.mainTitle = false;
         item.strongClass = "redStrong";
         item.extraLabel = "Duhovski ponedeljak";
+        item.separatorSymbol = "; ";
       } else if (diffInDays == -51) {
         item.mainTitle = false;
         item.strongClass = "redStrong";
         item.extraLabel = "Duhovski utorak";
+        item.separatorSymbol = "; ";
       } else if (diffInDays == -55) {
         item.mainTitle = item.title;
         item.extraLabel = "(Odanije Pedesetnice)";
