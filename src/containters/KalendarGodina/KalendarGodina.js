@@ -9,14 +9,23 @@ import {
 } from "../../components/Calendar/calendar-data/calendar-data.js";
 import SimpleBox from "../../components/Boxes/SimpleBox/SimpleBox.js";
 import TodayBox from "../../components/Boxes/TodayBox/TodayBox.js";
+import { getDayMonth } from "../../shared/utility.js";
 
 const WidgetLazy = lazy(() => import("../../UI/Widget/Widget.js"));
-const ZadusniceLazy = lazy(() =>
-  import("../../components/Boxes/Zadusnice/Zadusnice.js")
+const ZadusniceLazy = lazy(
+  () => import("../../components/Boxes/Zadusnice/Zadusnice.js"),
 );
 
 export default function KalendarGodina() {
-  const { yearIndex, easterDay, isYear, slug } = useIdContext();
+  const {
+    yearIndex,
+    easterDay,
+    startEasterTs,
+    endEasterTs,
+    isYear,
+    slug,
+    petrovPostStartDate,
+  } = useIdContext();
   const pageYear = Number(slug);
   const years = [2026, 2027, 2028];
   const otherYears = years.filter((y) => y !== pageYear);
@@ -27,6 +36,10 @@ export default function KalendarGodina() {
   const date = new Date(easterDay);
   const day = date.getDate();
   const month = monthSerb[date.getMonth()];
+
+  const startEaster = getDayMonth(new Date(startEasterTs));
+  const endEaster = getDayMonth(new Date(endEasterTs));
+  const petrovPost = getDayMonth(new Date(petrovPostStartDate));
 
   return (
     <div className="kalendarGodina">
@@ -66,10 +79,10 @@ export default function KalendarGodina() {
           <SimpleBox
             classes="green"
             // linkText="/2026/april/"
-            mainTitle="🍞 Veliki postovi 2026."
+            mainTitle={`🍞 Veliki postovi ${isYear}.`}
             mainBody={[
-              "Vaskršnji post — 23.2. - 11.4.",
-              "Petrovski post — 8.6. - 11.7.",
+              `Vaskršnji post — ${startEaster.day}. ${startEaster.month + 1} - ${endEaster.day}. ${startEaster.month + 1}.`,
+              `Petrovski post — ${petrovPost.day}.6. - 11.7.`,
               "Gospojinski post — 14.8. - 27.8.",
               "Božićni post — 28.11. - 6.1.",
             ]}

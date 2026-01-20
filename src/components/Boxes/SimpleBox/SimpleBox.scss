@@ -61,17 +61,23 @@
 }
 .simpleBox.hoverable {
   border: 1px solid transparent;
-  transition: transform 0.2s ease, box-shadow 0.2s ease,
+  border: 1px solid #8b5b3825;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
     border-color 0.2s ease;
-
+  box-shadow:
+    0 10px 40px -5px rgba(139, 90, 43, 0.1),
+    0 4px 16px -4px rgba(139, 90, 43, 0.05);
   h2 {
     padding: 0.8rem 1rem;
     font-size: 1.4rem;
   }
   &:hover {
     transform: translateY(-2px);
-    border: 1px solid #8b5b382f;
-    box-shadow: 0 10px 40px -5px rgba(139, 90, 43, 0.2),
+    border: 1px solid #8b5b383b;
+    box-shadow:
+      0 10px 40px -5px rgba(139, 90, 43, 0.2),
       0 4px 16px -4px rgba(139, 90, 43, 0.15);
   }
 }
@@ -83,7 +89,8 @@
 .simpleBox.orange {
   // background: #f2ece3;
   // border: 1px solid #73263928;
-  box-shadow: 0 10px 40px -5px rgba(139, 90, 43, 0.2),
+  box-shadow:
+    0 10px 40px -5px rgba(139, 90, 43, 0.2),
     0 4px 16px -4px rgba(139, 90, 43, 0.15);
 
   h2 {

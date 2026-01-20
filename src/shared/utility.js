@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { blackDays } from "../components/Calendar/calendar-data/calendar-data";
+import { monthSerb } from "./shared";
 
 export function urlTitle2(title) {
   // console.log("TITLE", title);
@@ -45,7 +46,7 @@ export function renderTitleSection({
       {Array.isArray(mainTitle) ? (
         mainTitle.map((el, index) => {
           const isBlackDay = blackDays.some(
-            (day) => normalize(day) === normalize(el)
+            (day) => normalize(day) === normalize(el),
           );
           return (
             <React.Fragment key={index} className={mainClass}>
@@ -95,3 +96,8 @@ export const getPreUrlTitle = (item) => {
   // return route ? `${route}${cat ? "" : urlTitle2(item.title) + "/"}` : "";
   return `/${item.category}/${urlTitle2(item.title)}/`;
 };
+
+export const getDayMonth = (date) => ({
+  day: date.getDate(),
+  month: date.getMonth(), // ili +1 ako ti treba broj meseca
+});

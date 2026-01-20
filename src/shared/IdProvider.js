@@ -65,15 +65,22 @@ export const IdProvider = ({ children }) => {
   const { slug, id } = useParams();
   const isYear = Number(slug) || currentDate.getFullYear();
   let yearIndex = calendarYears[0].item_list.findIndex(
-    (item) => item.title == isYear
+    (item) => item.title == isYear,
   );
   const isMonth = id ? monthSerb.indexOf(id) : currentDate.getMonth();
 
   const easterDay = useMemo(
     () => new Date(`${isYear}-${manualDateEaster[isYear - 2020]}`),
-    [isYear]
+    [isYear],
   );
-   const easterDate = new Date(easterDay);
+  const petrovPostStartDate = useMemo(() => {
+    const d = new Date(easterDay);
+    d.setDate(d.getDate() + 57);
+    d.setHours(0, 0, 0, 0);
+    return d;
+  }, [easterDay]);
+
+  const easterDate = new Date(easterDay);
   const endEasterDate = new Date(easterDate);
   endEasterDate.setDate(easterDate.getDate() - 1);
   const startEasterDate = new Date(easterDate);
@@ -91,22 +98,25 @@ export const IdProvider = ({ children }) => {
     const easterTs = toTs(
       easterDay.getFullYear(),
       easterDay.getMonth(),
-      easterDay.getDate()
+      easterDay.getDate(),
     );
     const startEasterTs = toTs(
       easterDay.getFullYear(),
       easterDay.getMonth(),
-      easterDay.getDate() - 48
+      easterDay.getDate() - 48,
     );
+    let e = new Date(startEasterDate);
+    // console.log("startEasterTs", postLookup);
+
     const endEasterTs = toTs(
       easterDay.getFullYear(),
       easterDay.getMonth(),
-      easterDay.getDate() - 1
+      easterDay.getDate() - 1,
     );
 
     // set-ovi za eksplicitne datume iz daysIsNotPost i daysIsPost
     const notPostSet = new Set(
-      daysIsNotPost.map(([m, d]) => toTs(isYear, m, d))
+      daysIsNotPost.map(([m, d]) => toTs(isYear, m, d)),
     );
     const isPostSet = new Set(daysIsPost.map(([m, d]) => toTs(isYear, m, d)));
 
@@ -147,7 +157,7 @@ export const IdProvider = ({ children }) => {
       isPostSet,
     };
   }, [isYear, easterDay]);
-
+  console.log("startEasterTs", postLookup.startEasterTs);
   const setPostDays = (dateInfo) => {
     // Pretvori ulaz u timestamp ponoć
     const ts =
@@ -270,7 +280,7 @@ export const IdProvider = ({ children }) => {
     const sundaysBeforeChristmas = getSundaysBeforeChristmas(isYear);
 
     let yearIndex = calendarYears[0].item_list.findIndex(
-      (item) => item.title == isYear
+      (item) => item.title == isYear,
     );
     //zadusnice-------------------------------------------------------------
     let zadusniceIndex = calendarYears[0].item_list[
@@ -278,7 +288,7 @@ export const IdProvider = ({ children }) => {
     ].tableNum.findIndex((item) => item[0] == isMonth);
 
     let zadusniceDate = calendarYears[0].item_list[yearIndex].tableNum.find(
-      (item) => item[0] === isMonth
+      (item) => item[0] === isMonth,
     );
     //end---------------------------------------------------------------------
 
@@ -322,8 +332,8 @@ export const IdProvider = ({ children }) => {
           currentDay2 === 3 || currentDay2 === 5
             ? "blackStrong"
             : diffInDays < 4
-            ? "redStrong"
-            : "blackStrong";
+              ? "redStrong"
+              : "blackStrong";
       } else if (diffInDays == -24) {
         item.mainTitle = item.title;
         item.extraLabel = "(Prepolovljenje)";
@@ -363,6 +373,9 @@ export const IdProvider = ({ children }) => {
         item.mainTitle = item.title;
         item.extraLabel = "(Petrovske poklade)";
       } else if (diffInDays == -57) {
+        // console.log("TESTTTT");
+
+        // morePostDays = item.date;
         item.mainTitle = item.title;
         item.extraLabel = "(Početak Petrovskog posta)";
       } else if (currentDay2 === 6 && diffInDays > 5 && diffInDays < 10) {
@@ -431,11 +444,16 @@ export const IdProvider = ({ children }) => {
         monthName,
         currentYear,
         easterDay,
+        // startEasterTs,
+        // endEasterTs
+        startEasterTs: postLookup.startEasterTs,
+        endEasterTs: postLookup.endEasterTs,
         isYear,
         yearIndex,
         isMonth,
         holidays,
         todayHoliday,
+        petrovPostStartDate,
       }}
     >
       {children}
