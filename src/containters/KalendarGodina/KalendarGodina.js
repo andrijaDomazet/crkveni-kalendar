@@ -81,7 +81,7 @@ export default function KalendarGodina() {
             // linkText="/2026/april/"
             mainTitle={`🍞 Veliki postovi ${isYear}.`}
             mainBody={[
-              `Vaskršnji post — ${startEaster.day}. ${startEaster.month + 1}. - ${endEaster.day}. ${startEaster.month + 1}.`,
+              `Vaskršnji post — ${startEaster.day}. ${startEaster.month + 1}. - ${endEaster.day}. ${endEaster.month + 1}.`,
               `Petrovski post — ${petrovPost.day}.6. - 11.7.`,
               "Gospojinski post — 14.8. - 27.8.",
               "Božićni post — 28.11. - 6.1.",

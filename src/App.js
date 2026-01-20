@@ -17,6 +17,7 @@ import Footer from "./components/Footer/Footer";
 import NoMatch from "./containters/NoMatch/NoMatch";
 import SinglePost2 from "./containters/SinglePost/SinglePost2";
 import SimplePage from "./containters/SimplePage/SimplePage";
+import PreFooter from "./components/Footer/PreFooter";
 
 export default function App() {
   return (
@@ -96,10 +97,10 @@ export default function App() {
             element={React.createElement(withIdProvider(NoMatch))}
           />
         </Routes>
+        {/* <PreFooter /> */}
         <IdProvider>
-           <Footer />
+          <Footer />
         </IdProvider>
-       
       </LocationProvider>
     </Router>
   );

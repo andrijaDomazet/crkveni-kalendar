@@ -10,6 +10,7 @@ import { calendarYears } from "../../components/Calendar/calendar-data/calendar-
 import { useIdContext } from "../../shared/IdProvider.js";
 import TodayBox from "../../components/Boxes/TodayBox/TodayBox.js";
 import SimpleBox from "../../components/Boxes/SimpleBox/SimpleBox.js";
+import PreFooter from "../../components/Footer/PreFooter.js";
 
 const WidgetLazy = lazy(() => import("../../UI/Widget/Widget.js"));
 const CalendarMonthsLinksLazy = lazy(() => import("../../components/CalendarMonthsLinks/CalendarMonthsLinks.js"));
@@ -226,6 +227,7 @@ export default function Home() {
       {/* <div className="banner-wrapper">
         <AdManagerSlot slotNumber={"div-gpt-ad-1764593675864-0"} />
       </div> */}
+      {/* <PreFooter/> */}
     </div>
   );
 }

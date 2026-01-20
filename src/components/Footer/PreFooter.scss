@@ -1,0 +1,17 @@
+@import "../../index.scss";
+
+.preFooter {
+  background: rgba(255, 255, 255, 0.397);
+  border-top: 1px solid rgba(128, 128, 128, 0.452);
+
+  .preFooter-wrapper {
+    margin: 0 auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 1rem 2rem;
+    gap: 1rem;
+
+    //   background: red;
+  }
+}
