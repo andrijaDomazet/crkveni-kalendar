@@ -6,12 +6,23 @@
 
   .preFooter-wrapper {
     margin: 0 auto;
-    width: 80%;
+
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    padding: 1rem 2rem;
-    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    padding: .6rem;
+    gap: .6rem;
 
     //   background: red;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .preFooter {
+    .preFooter-wrapper {
+      width: 80%;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 1rem 2rem;
+      gap: 1rem;
+    }
   }
 }

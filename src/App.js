@@ -97,7 +97,7 @@ export default function App() {
             element={React.createElement(withIdProvider(NoMatch))}
           />
         </Routes>
-        {/* <PreFooter /> */}
+        <PreFooter />
         <IdProvider>
           <Footer />
         </IdProvider>
