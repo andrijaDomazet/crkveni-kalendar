@@ -26,7 +26,7 @@ export const IdProvider = ({ children }) => {
   let currentDay = currentDate.getDate();
   let dayName = days[currentDate.getDay()];
   const monthName = monthSerb[currentDate.getMonth()];
-  let todayHoliday;
+  // let todayHoliday;
 
   // // --- AUTO RELOAD KADA SE PROMENI DAN ---
   // React.useEffect(() => {
@@ -426,13 +426,22 @@ export const IdProvider = ({ children }) => {
       item.post = setPostDays(item.date.getTime());
       if (currentDate.setHours(0, 0, 0, 0) === item.date.setHours(0, 0, 0, 0)) {
         item.today = " today";
-        todayHoliday = item;
+        // todayHoliday = item;
       }
       return item;
     });
 
     return setHolTest;
   }
+  const todayTs = new Date().setHours(0, 0, 0, 0);
+
+  const todayHoliday = useMemo(() => {
+    return holidays?.find(
+      (item) =>
+        item?.date && new Date(item.date).setHours(0, 0, 0, 0) === todayTs,
+    );
+  }, [holidays]);
+
   return (
     <IdContext.Provider
       value={{

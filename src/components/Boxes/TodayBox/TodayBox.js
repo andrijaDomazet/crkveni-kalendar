@@ -14,6 +14,8 @@ export default function TodayBox() {
   } = useIdContext();
   // console.log("TodayBox", currentYear, yearIndex, isYear);
 
+  console.log("TodayHoliday", todayHoliday);
+
   if (currentYear !== isYear) {
     return;
   }
@@ -46,10 +48,9 @@ export default function TodayBox() {
           </svg>
           <div className="line right"></div>
         </div>
-        {todayHoliday?.post && (
-          <h2 className="today-title">{todayHoliday.title[0]}</h2>
-        )}
-        {todayHoliday?.post && (
+
+        <h2 className="today-title">{todayHoliday.title[0]}</h2>
+        {todayHoliday.post && (
           <div className="today-post">
             <div className="today-post-wrapper">
               <div className="circle"></div>
