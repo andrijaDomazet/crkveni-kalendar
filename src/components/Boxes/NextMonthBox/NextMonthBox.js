@@ -6,8 +6,8 @@ import { monthSerb } from "../../../shared/shared";
 
 //srediti da za 12 mesec daje januar naredne godine!!!!!!!!!!!
 export default function NextMonthBox() {
-  let { isYear, isMonth } = useIdContext();
-  let nextMonth = monthSerb[isMonth + 1];
+  let { pageYear, pageMonth } = useIdContext();
+  let nextMonth = monthSerb[pageMonth + 1];
   const today = new Date();
   const day = today.getDate();
 
@@ -20,9 +20,9 @@ export default function NextMonthBox() {
         ℹ️ Kalendar za naredni mesec:{" "}
         <a
           href={`/2026/${nextMonth}/`}
-          title={`Crkveni kalendar ${nextMonth} ${isYear}`}
+          title={`Crkveni kalendar ${nextMonth} ${pageYear}`}
         >
-          Pogledajte kalendar za {nextMonth} {isYear}. godine
+          Pogledajte kalendar za {nextMonth} {pageYear}. godine
         </a>
       </div>
     </section>

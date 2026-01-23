@@ -3,7 +3,7 @@ import { monthSerb } from "../../shared/shared";
 import "./Footer.scss";
 
 export default function Footer() {
-  let { isMonth, isYear } = useIdContext();
+  let { pageMonth, pageYear } = useIdContext();
   return (
     <footer className="footer">
       <div className="footer-border"></div>
@@ -37,19 +37,19 @@ export default function Footer() {
           </div>
           <ul>
             <li>
-              <a href={`/${isYear}/${monthSerb[isMonth]}/`}>
+              <a href={`/${pageYear}/${monthSerb[pageMonth]}/`}>
                 {/* <i className="fa-solid fa-circle-arrow-right"></i>  */}
-                Crkveni kalendar {`${monthSerb[isMonth]}`} {`${isYear}`}
+                Crkveni kalendar {`${monthSerb[pageMonth]}`} {`${pageYear}`}
               </a>
             </li>
             <li>
-              <a href={`/${isYear}/`}>{`Crkveni kalendar ${isYear}`}</a>
+              <a href={`/${pageYear}/`}>{`Crkveni kalendar ${pageYear}`}</a>
             </li>
             <li>
               <a href="/slave/">Krsne slave</a>
             </li>
             <li>
-              <a href="/zadusnice/">{`Zadušnice u ${isYear}. godini`}</a>
+              <a href="/zadusnice/">{`Zadušnice u ${pageYear}. godini`}</a>
             </li>
             {/* <li>
               <a href="/molitvenik/"><i className="fa-solid fa-circle-arrow-right"></i> Molitvenik</a>

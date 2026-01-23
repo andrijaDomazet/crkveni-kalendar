@@ -8,7 +8,7 @@ export default function Zadusnice({ setYear, boxTitle, data }) {
   const { slug, currentDate } = useIdContext();
   let currentYear = setYear || slug || currentDate.getFullYear();
   let yearIndex = calendarYears[0].item_list.findIndex(
-    (item) => item.title == currentYear
+    (item) => item.title == currentYear,
   );
   let zadusniceDate = calendarYears[0].item_list[yearIndex];
 

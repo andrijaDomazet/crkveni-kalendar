@@ -100,4 +100,8 @@ export const getPreUrlTitle = (item) => {
 export const getDayMonth = (date) => ({
   day: date.getDate(),
   month: date.getMonth(), // ili +1 ako ti treba broj meseca
+  year: date.getFullYear(),
 });
+
+export const toMidnightTs = (date) =>
+  new Date(date.getFullYear(), date.getMonth(), date.getDate()).getTime();

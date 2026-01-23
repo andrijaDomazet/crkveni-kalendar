@@ -17,13 +17,18 @@ import {
   days,
 } from "../components/Calendar/calendar-data/calendar-data";
 import news2 from "../components/Calendar/calendar-data/all__news4.json";
+import { toMidnightTs } from "./utility";
 const IdContext = createContext();
 
 export const useIdContext = () => useContext(IdContext);
 
 export const IdProvider = ({ children }) => {
   const currentDate = new Date();
+  console.log("currentDate", currentDate);
+
   let currentDay = currentDate.getDate();
+  console.log("currentDay", currentDay);
+
   let dayName = days[currentDate.getDay()];
   const monthName = monthSerb[currentDate.getMonth()];
   // let todayHoliday;
@@ -63,15 +68,15 @@ export const IdProvider = ({ children }) => {
   const currentYear = currentDate.getFullYear();
 
   const { slug, id } = useParams();
-  const isYear = Number(slug) || currentDate.getFullYear();
+  const pageYear = Number(slug) || currentDate.getFullYear();
   let yearIndex = calendarYears[0].item_list.findIndex(
-    (item) => item.title == isYear,
+    (item) => item.title == pageYear,
   );
-  const isMonth = id ? monthSerb.indexOf(id) : currentDate.getMonth();
+  const pageMonth = id ? monthSerb.indexOf(id) : currentDate.getMonth();
 
   const easterDay = useMemo(
-    () => new Date(`${isYear}-${manualDateEaster[isYear - 2020]}`),
-    [isYear],
+    () => new Date(`${pageYear}-${manualDateEaster[pageYear - 2020]}`),
+    [pageYear],
   );
   const petrovPostStartDate = useMemo(() => {
     const d = new Date(easterDay);
@@ -91,9 +96,9 @@ export const IdProvider = ({ children }) => {
 
   const postLookup = useMemo(() => {
     // fiksne granice
-    const bozicniPostStartTs = toTs(isYear, 10, 28);
-    const bozicniPostEndTs = toTs(isYear, 0, 6);
-    const vikendPosleBozicaTs = toTs(isYear, 0, 17);
+    const bozicniPostStartTs = toTs(pageYear, 10, 28);
+    const bozicniPostEndTs = toTs(pageYear, 0, 6);
+    const vikendPosleBozicaTs = toTs(pageYear, 0, 17);
 
     const easterTs = toTs(
       easterDay.getFullYear(),
@@ -116,9 +121,9 @@ export const IdProvider = ({ children }) => {
 
     // set-ovi za eksplicitne datume iz daysIsNotPost i daysIsPost
     const notPostSet = new Set(
-      daysIsNotPost.map(([m, d]) => toTs(isYear, m, d)),
+      daysIsNotPost.map(([m, d]) => toTs(pageYear, m, d)),
     );
-    const isPostSet = new Set(daysIsPost.map(([m, d]) => toTs(isYear, m, d)));
+    const isPostSet = new Set(daysIsPost.map(([m, d]) => toTs(pageYear, m, d)));
 
     // Petrovski post granice ts
     const startPetrovskiPostTs = (() => {
@@ -127,11 +132,11 @@ export const IdProvider = ({ children }) => {
       d.setHours(0, 0, 0, 0);
       return d.getTime();
     })();
-    const endPetrovskiPostTs = toTs(isYear, 6, 12);
+    const endPetrovskiPostTs = toTs(pageYear, 6, 12);
 
     // Gospojinski post
-    const startGospojinskiPostTs = toTs(isYear, 7, 14);
-    const endGospojinskiPostTs = toTs(isYear, 7, 27);
+    const startGospojinskiPostTs = toTs(pageYear, 7, 14);
+    const endGospojinskiPostTs = toTs(pageYear, 7, 27);
 
     // Bela nedelja (posle Uskrsa)
     const endBelaNedeljaTs = (() => {
@@ -156,8 +161,8 @@ export const IdProvider = ({ children }) => {
       notPostSet,
       isPostSet,
     };
-  }, [isYear, easterDay]);
-  console.log("startEasterTs", postLookup.startEasterTs);
+  }, [pageYear, easterDay]);
+  // console.log("startEasterTs", postLookup.startEasterTs);
   const setPostDays = (dateInfo) => {
     // Pretvori ulaz u timestamp ponoć
     const ts =
@@ -203,7 +208,7 @@ export const IdProvider = ({ children }) => {
   };
   const getTargetSundayBeforeChristmas = (year) => {
     // broj nedelja (Sunday) u periodu 1–6. januar naredne godine
-    const nextYear = isYear + 1;
+    const nextYear = pageYear + 1;
     let sundayCount = 0;
 
     for (let d = 1; d <= 6; d++) {
@@ -213,7 +218,7 @@ export const IdProvider = ({ children }) => {
 
     // poslednja i pretposlednja nedelja u decembru tekuće godine
     const lastSundayOfDecember = (() => {
-      const d = new Date(isYear, 11, 31);
+      const d = new Date(pageYear, 11, 31);
       d.setDate(d.getDate() - d.getDay()); // vraća na nedelju
       d.setHours(0, 0, 0, 0);
       return d;
@@ -232,11 +237,11 @@ export const IdProvider = ({ children }) => {
     const result = [];
     const result1 = [];
     const result2 = [];
-    const nextYear = isYear + 1;
+    const nextYear = pageYear + 1;
 
     // 1) Nedelja u periodu 1–6. januar tekuce godine
     for (let d = 1; d <= 6; d++) {
-      const date = new Date(isYear, 0, d);
+      const date = new Date(pageYear, 0, d);
       if (date.getDay() === 0) {
         date.setHours(0, 0, 0, 0);
         result1.push(date);
@@ -255,7 +260,7 @@ export const IdProvider = ({ children }) => {
     }
 
     // 2) Poslednja nedelja u decembru tekuće godine
-    const lastSunday = new Date(isYear, 11, 31);
+    const lastSunday = new Date(pageYear, 11, 31);
     lastSunday.setDate(lastSunday.getDate() - lastSunday.getDay());
     lastSunday.setHours(0, 0, 0, 0);
 
@@ -273,36 +278,37 @@ export const IdProvider = ({ children }) => {
     return result;
   };
 
-  const holidays = useMemo(() => filterHolidays(), [isYear, isMonth]);
+  const holidays = useMemo(() => filterHolidays(), [pageYear, pageMonth]);
 
   function filterHolidays() {
-    const secondSundayBeforeChristmas = getTargetSundayBeforeChristmas(isYear);
-    const sundaysBeforeChristmas = getSundaysBeforeChristmas(isYear);
+    const secondSundayBeforeChristmas =
+      getTargetSundayBeforeChristmas(pageYear);
+    const sundaysBeforeChristmas = getSundaysBeforeChristmas(pageYear);
 
     let yearIndex = calendarYears[0].item_list.findIndex(
-      (item) => item.title == isYear,
+      (item) => item.title == pageYear,
     );
     //zadusnice-------------------------------------------------------------
     let zadusniceIndex = calendarYears[0].item_list[
       yearIndex
-    ].tableNum.findIndex((item) => item[0] == isMonth);
+    ].tableNum.findIndex((item) => item[0] == pageMonth);
 
     let zadusniceDate = calendarYears[0].item_list[yearIndex].tableNum.find(
-      (item) => item[0] === isMonth,
+      (item) => item[0] === pageMonth,
     );
     //end---------------------------------------------------------------------
 
     //uskrs-------------------------------------------------------------------
     let setHol = news2
-      .slice(idsMonths[isMonth][0], idsMonths[isMonth][1])
+      .slice(idsMonths[pageMonth][0], idsMonths[pageMonth][1])
       .map((item) => ({ ...item })); // shallow copy po itemu
     //end---------------------------------------------------------------------
 
     // Dodavanje 29. februara za prestupnu godinu
     const isLeap =
-      (isYear % 4 === 0 && isYear % 100 !== 0) || isYear % 400 === 0;
+      (pageYear % 4 === 0 && pageYear % 100 !== 0) || pageYear % 400 === 0;
 
-    if (isMonth === 1 && isLeap) {
+    if (pageMonth === 1 && isLeap) {
       // Ubacujemo na poziciju 28 (29. dan)
       setHol.splice(28, 0, {
         title: ["Sveti mučenici Pamfil", "Porfirije i drugih deset mučenika"],
@@ -313,7 +319,7 @@ export const IdProvider = ({ children }) => {
       item.title = Array.isArray(item.title)
         ? item.title.map((item) => item)
         : [item.title];
-      let date1 = new Date(isYear, isMonth, index + 1);
+      let date1 = new Date(pageYear, pageMonth, index + 1);
       item.date = date1;
       let currentDay2 = date1.getDay();
       let diffInDays = Math.round((easterDay - date1) / (1000 * 60 * 60 * 24)); // Razlika u danima
@@ -373,9 +379,6 @@ export const IdProvider = ({ children }) => {
         item.mainTitle = item.title;
         item.extraLabel = "(Petrovske poklade)";
       } else if (diffInDays == -57) {
-        // console.log("TESTTTT");
-
-        // morePostDays = item.date;
         item.mainTitle = item.title;
         item.extraLabel = "(Početak Petrovskog posta)";
       } else if (currentDay2 === 6 && diffInDays > 5 && diffInDays < 10) {
@@ -406,8 +409,7 @@ export const IdProvider = ({ children }) => {
 
       //Materice, Oci
       if (
-        item.date.setHours(0, 0, 0, 0) ===
-        secondSundayBeforeChristmas.setHours(0, 0, 0, 0)
+        toMidnightTs(item.date) === toMidnightTs(secondSundayBeforeChristmas)
       ) {
         item.mainTitle = item.title;
         item.extraLabel = "Materice";
@@ -424,9 +426,8 @@ export const IdProvider = ({ children }) => {
         item.separatorSymbol = " - ";
       }
       item.post = setPostDays(item.date.getTime());
-      if (currentDate.setHours(0, 0, 0, 0) === item.date.setHours(0, 0, 0, 0)) {
+      if (toMidnightTs(item.date) === toMidnightTs(currentDate)) {
         item.today = " today";
-        // todayHoliday = item;
       }
       return item;
     });
@@ -445,22 +446,23 @@ export const IdProvider = ({ children }) => {
   return (
     <IdContext.Provider
       value={{
-        dayName,
+        //IdProvider
         id,
         slug,
         currentDate,
+        pageYear,
+        pageMonth,
+        holidays,
+
+        //Other
+        dayName,
         currentDay,
         monthName,
         currentYear,
         easterDay,
-        // startEasterTs,
-        // endEasterTs
         startEasterTs: postLookup.startEasterTs,
         endEasterTs: postLookup.endEasterTs,
-        isYear,
         yearIndex,
-        isMonth,
-        holidays,
         todayHoliday,
         petrovPostStartDate,
       }}

@@ -8,7 +8,7 @@ import Calendar from "./components/Calendar/Calendar";
 import Bars from "./components/Bars/Bars";
 import { LocationProvider } from "./shared/LocationContext";
 import { IdProvider } from "./shared/IdProvider";
-import withIdProvider from "./shared/HOC";
+import {withIdProvider} from "./shared/HOC";
 import ScrollToTop from "./UI/ScrollToTop/ScrollToTop";
 import HeadHelmet from "./components/HeadHelmet/HeadHelmet";
 import KalendarGodina from "./containters/KalendarGodina/KalendarGodina";

@@ -10,13 +10,15 @@ import { calendarYears } from "../../components/Calendar/calendar-data/calendar-
 import { useIdContext } from "../../shared/IdProvider.js";
 import TodayBox from "../../components/Boxes/TodayBox/TodayBox.js";
 import SimpleBox from "../../components/Boxes/SimpleBox/SimpleBox.js";
-import PreFooter from "../../components/Footer/PreFooter.js";
 
 const WidgetLazy = lazy(() => import("../../UI/Widget/Widget.js"));
-const CalendarMonthsLinksLazy = lazy(() => import("../../components/CalendarMonthsLinks/CalendarMonthsLinks.js"));
+const CalendarMonthsLinksLazy = lazy(
+  () => import("../../components/CalendarMonthsLinks/CalendarMonthsLinks.js"),
+);
 
 export default function Home() {
   const { yearIndex } = useIdContext();
+  console.log("YearIndex home", yearIndex);
 
   return (
     <div className="home">
@@ -32,8 +34,12 @@ export default function Home() {
           <section className="calendar-2026">
             <h2>📅 Crkveni kalendar 2026</h2>
             <p>
-              Sve važne datume i praznike za 2026. godinu pogledajte klikom na sledeći link:{" "}
-              <a href="https://crkveni-kalendar.net/2026/" title="Crkveni kalendar 2026">
+              Sve važne datume i praznike za 2026. godinu pogledajte klikom na
+              sledeći link:{" "}
+              <a
+                href="https://crkveni-kalendar.net/2026/"
+                title="Crkveni kalendar 2026"
+              >
                 Crkveni kalendar za 2026. godinu
               </a>
               .
@@ -60,14 +66,17 @@ export default function Home() {
               <div className="home__links second">
                 <h2>Krsne slave</h2>
                 <p className="home__molitva-wrapper">
-                  Informacije o krsnim slavama (datumi, običaji i značenje) možete pronaći na sledećoj stranici: <a href="/slave/">Krsne slave</a>.
+                  Informacije o krsnim slavama (datumi, običaji i značenje)
+                  možete pronaći na sledećoj stranici:{" "}
+                  <a href="/slave/">Krsne slave</a>.
                 </p>
               </div>
               <img src="/img/line.png" loading="lazy" />
               <div className="home__links second">
                 <h2>Molitvenik</h2>
                 <p className="home__molitva-wrapper">
-                  Molitve za različite prilike možete pronaći na stranici: <a href="/molitvenik/">Molitvenik</a>.
+                  Molitve za različite prilike možete pronaći na stranici:{" "}
+                  <a href="/molitvenik/">Molitvenik</a>.
                 </p>
                 <img src="/img/line.png" loading="lazy" />
               </div>
@@ -83,7 +92,11 @@ export default function Home() {
         <div className="home__wrapper-left">
           <TodayBox />
           <div className="third-element">
-            <Zadusnice setYear={2026} boxTitle={`🕯 Zadušnice u ${2026}. godini`} data={calendarYears[0].item_list[yearIndex]} />
+            <Zadusnice
+              setYear={2026}
+              boxTitle={`🕯 Zadušnice u ${2026}. godini`}
+              data={calendarYears[0].item_list[yearIndex]}
+            />
           </div>
 
           <div className="banner-wrapper fix-size-mediumRectangle">
@@ -93,7 +106,12 @@ export default function Home() {
             classes="green"
             // linkText="/2026/april/"
             mainTitle="🍞 Veliki postovi 2026."
-            mainBody={["Vaskršnji post — 23. 2. - 11. 4.", "Petrovski post — 8. 6. - 11. 7.", "Gospojinski post — 14. 8. - 27. 8.", "Božićni post — 28. 11. - 6. 1."]}
+            mainBody={[
+              "Vaskršnji post — 23. 2. - 11. 4.",
+              "Petrovski post — 8. 6. - 11. 7.",
+              "Gospojinski post — 14. 8. - 27. 8.",
+              "Božićni post — 28. 11. - 6. 1.",
+            ]}
             // buttonText="Hrišćanski postovi u 2026. godini →"
           />
           {/* <Zadusnice
@@ -105,7 +123,18 @@ export default function Home() {
         <div className="home__wrapper-right">
           <div className="midBox">
             <div className="midBox-title">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" stroke-linejoin="round" className="star">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                stroke-linejoin="round"
+                className="star"
+              >
                 <path d="M8 2v4"></path>
                 <path d="M16 2v4"></path>
                 <rect width="18" height="18" x="3" y="4" rx="2"></rect>
@@ -113,73 +142,7 @@ export default function Home() {
               </svg>
               <h2>Predstojeći praznici</h2>
             </div>
-            {/* <div className="midBox-bodyLine">
-              <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" stroke-linejoin="round" className="star">
-                  <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
-                </svg>
-              </div>
-              <div>
-                <span>19. januar</span>
-                <h2>Bogojavljenje</h2>
-              </div>
-            </div> */}
-            {/* <div className="midBox-bodyLine">
-              <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" stroke-linejoin="round" className="star">
-                  <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
-                </svg>
-              </div>
-              <div>
-                <span>20. januar</span>
-                <h2>Sabor svetog Jovana Krstitelja - Jovanjdan</h2>
-              </div>
-            </div> */}
             <div className="midBox-bodyLine">
-              <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" stroke-linejoin="round" className="star">
-                  <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
-                </svg>
-              </div>
-              <div>
-                <span>27. januar</span>
-                <h2>Sveti Sava</h2>
-              </div>
-            </div>
-            <div className="midBox-bodyLine">
-              <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" stroke-linejoin="round" className="star">
-                  <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
-                </svg>
-              </div>
-              <div>
-                <span>14. februar</span>
-                <h2>Sveti Trifun</h2>
-              </div>
-            </div>
-            <div className="midBox-bodyLine">
-              <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" stroke-linejoin="round" className="star">
-                  <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
-                </svg>
-              </div>
-              <div>
-                <span>15. februar</span>
-                <h2>Sretenje Gospodnje</h2>
-              </div>
-            </div>
-            <div className="midBox-bodyLine">
-              <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" stroke-linejoin="round" className="star">
-                  <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
-                </svg>
-              </div>
-              <div>
-                <span>16. februar</span>
-                <h2>Sveti Simeon i Ana</h2>
-              </div>
-            </div>
-            {/* <div className="midBox-bodyLine">
               <div>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -197,13 +160,85 @@ export default function Home() {
                 </svg>
               </div>
               <div>
-                <span>22. mart</span>
-                <h2>Mladenci</h2>
+                <span>27. januar</span>
+                <h2>Sveti Sava</h2>
               </div>
-            </div> */}
+            </div>
+            <div className="midBox-bodyLine">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  stroke-linejoin="round"
+                  className="star"
+                >
+                  <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                </svg>
+              </div>
+              <div>
+                <span>14. februar</span>
+                <h2>Sveti Trifun</h2>
+              </div>
+            </div>
+            <div className="midBox-bodyLine">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  stroke-linejoin="round"
+                  className="star"
+                >
+                  <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                </svg>
+              </div>
+              <div>
+                <span>15. februar</span>
+                <h2>Sretenje Gospodnje</h2>
+              </div>
+            </div>
+            <div className="midBox-bodyLine">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  stroke-linejoin="round"
+                  className="star"
+                >
+                  <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path>
+                </svg>
+              </div>
+              <div>
+                <span>16. februar</span>
+                <h2>Sveti Simeon i Ana</h2>
+              </div>
+            </div>
           </div>
           {/* <Zadusnice /> */}
-          <SimpleBox classes="green" linkText="/2026/april/" mainTitle="Vaskrs 2026." mainBody="Vaskrs (Uskrs) u 2026. godini pada na 12. april po novom kalendaru." buttonText="Kalendar za april 2026. →" />
+          <SimpleBox
+            classes="green"
+            linkText="/2026/april/"
+            mainTitle="Vaskrs 2026."
+            mainBody="Vaskrs (Uskrs) u 2026. godini pada na 12. april po novom kalendaru."
+            buttonText="Kalendar za april 2026. →"
+          />
           <div className="banner-wrapper xl_sticky">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750411708088-0"} />
           </div>

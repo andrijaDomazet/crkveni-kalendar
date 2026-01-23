@@ -1,24 +1,19 @@
-import React from "react";
 import "./TodayBox.scss";
 import { useIdContext } from "../../../shared/IdProvider";
+import { getDayMonth } from "../../../shared/utility";
+import { monthSerb } from "../../Calendar/calendar-data/calendar-data";
 
 export default function TodayBox() {
-  const {
-    dayName,
-    currentDay,
-    monthName,
-    currentYear,
-    yearIndex,
-    isYear,
-    todayHoliday,
-  } = useIdContext();
-  // console.log("TodayBox", currentYear, yearIndex, isYear);
+  const { dayName, currentDate, pageYear, todayHoliday } = useIdContext();
 
-  console.log("TodayHoliday", todayHoliday);
+  //set details from currentDate
+  let todayDetails = getDayMonth(currentDate);
 
-  if (currentYear !== isYear) {
+  //check is curentYear some other year then current
+  if (todayDetails.year !== pageYear) {
     return;
   }
+  
   return (
     <div className="today__box">
       <div className="today-border"></div>
@@ -28,8 +23,8 @@ export default function TodayBox() {
         <div className="corners-rightTop"></div>
         <div className="corners-rightBottom"></div>
         <span className="today-day">{dayName}</span>
-        <p className="today-dayNum">{currentDay}</p>
-        <p className="today-month">{`${monthName} ${currentYear}`}</p>
+        <p className="today-dayNum">{todayDetails.day}</p>
+        <p className="today-month">{`${monthSerb[todayDetails.month]} ${todayDetails.year}`}</p>
         <div className="today-center">
           <div className="line"></div>
           <svg

@@ -1,4 +1,3 @@
-
 export const days = [
   "Nedelja",
   "Ponedeljak",
@@ -6,7 +5,7 @@ export const days = [
   "Sreda",
   "Četvrtak",
   "Petak",
-  "Subota"
+  "Subota",
 ];
 export const monthSerb = [
   "januar",
@@ -22,20 +21,20 @@ export const monthSerb = [
   "novembar",
   "decembar",
 ];
-export const importantHolidaysPerMonth=[
-  ["Božić (7.)", "Bogojavljanje (19.)","Sveti Sava (27.)" ],
-  ["Sveti Trifun (14.)","Sretenje (15.)"],
+export const importantHolidaysPerMonth = [
+  ["Božić (7.)", "Bogojavljanje (19.)", "Sveti Sava (27.)"],
+  ["Sveti Trifun (14.)", "Sretenje (15.)"],
   ["Mladenci (22.)"],
   ["Blagovesti (7.)"],
-  ["Đurđevdan (6.)","Sveti Vasilije (12.)"],
+  ["Đurđevdan (6.)", "Sveti Vasilije (12.)"],
   ["Vidovdan (28.)"],
   ["Petrovdan (12.)"],
   ["Preobraženje (19.)", "Velika Gospojina (28.)"],
-  ["Mala Gospojina (21.)","Krstovdan (27.)"],
-  ["Sveti Luka (31.)"],
+  ["Mala Gospojina (21.)", "Krstovdan (27.)"],
+  ["Sveta Petka (27.)", "Sveti Luka (31.)"],
   ["Mitrovdan (8.)", "Aranđelovdan (21.)"],
-  ["Nikoljdan (19.)"],
-]
+  ["Vavedenje Presvete Bogorodice (4.)", "Nikoljdan (19.)"],
+];
 export const zadusniceName = [
   "Zimske",
   "Letnje",
@@ -239,7 +238,12 @@ export const calendarYears = [
       [9, 7],
       [10, 4],
     ],
-    zadusnice: ["Božićni post", "Vaskršnji post", "Petrovski post", "Gospojinski post"],
+    zadusnice: [
+      "Božićni post",
+      "Vaskršnji post",
+      "Petrovski post",
+      "Gospojinski post",
+    ],
   },
 ];
 // export const inCalendarArr = [

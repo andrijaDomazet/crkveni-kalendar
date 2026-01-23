@@ -1,13 +1,24 @@
 import React from "react";
 import { IdProvider } from "./IdProvider";
 
-const withIdProvider = (Component) => {
+export const withIdProvider = (Component) => {
   return (props) => {
     return (
-      <IdProvider {...props}>
+      <IdProvider>
         <Component {...props} />
       </IdProvider>
     );
   };
 };
-export default withIdProvider;
+
+// export const withFullDataProvider = (Component)=>{
+//   return (props)=>{
+// return(
+//   <IdProvider>
+// <FullDataProvider>
+// <Component {...props}/>
+// </FullDataProvider>
+//   </IdProvider>
+// )
+//   }
+// }

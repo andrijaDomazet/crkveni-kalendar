@@ -15,12 +15,10 @@ import { renderTitleSection } from "../../shared/utility";
 import StickyAd from "../AdvModule/StickyAd";
 
 export default function Calendar(props) {
-  // console.log("Props", props.isMonth2);
 
-  let { id, currentDate, isYear, isMonth, holidays, isEasterDay } =
+  let { id, currentDate, pageYear, pageMonth, holidays } =
     useIdContext();
-  isMonth = props.isMonth2 ?? isMonth;
-  // console.log("IsMonth", isMonth);
+  pageMonth = props.isMonth2 ?? pageMonth;
 
   const location = useGlobalLocation();
   const [dropDownYear, setDropDownYear] = useState(false);
@@ -28,19 +26,19 @@ export default function Calendar(props) {
 
   const changeMonth = (val) => {
     if (id === undefined) {
-      if (isMonth === 11 && val === 1) {
-        navigate(`../${isYear + 1}/januar/`);
-      } else if (isMonth === 0 && val === -1) {
-        navigate(`../${isYear - 1}/decembar/`);
+      if (pageMonth === 11 && val === 1) {
+        navigate(`../${pageYear + 1}/januar/`);
+      } else if (pageMonth === 0 && val === -1) {
+        navigate(`../${pageYear - 1}/decembar/`);
       } else {
-        navigate(`../${isYear}/${monthSerb[isMonth + val]}/`);
+        navigate(`../${pageYear}/${monthSerb[pageMonth + val]}/`);
       }
-    } else if (isMonth === 11 && val === 1) {
-      navigate(`../${+isYear + 1}/januar/`);
-    } else if (isMonth === 0 && val === -1) {
-      navigate(`../${+isYear - 1}/decembar/`);
+    } else if (pageMonth === 11 && val === 1) {
+      navigate(`../${+pageYear + 1}/januar/`);
+    } else if (pageMonth === 0 && val === -1) {
+      navigate(`../${+pageYear - 1}/decembar/`);
     } else {
-      navigate(`../${isYear}/${tableTitle(val)}/`);
+      navigate(`../${pageYear}/${tableTitle(val)}/`);
     }
   };
 
@@ -63,20 +61,20 @@ export default function Calendar(props) {
     }
   }
   const tableTitle = (x) => {
-    // console.log("ID", id, isYear, isMonth, x);
+    // console.log("ID", id, pageYear, pageMonth, x);
     if (id === undefined) {
-      if (isMonth + x === 12) {
-        return `Januar (${+isYear + 1})`;
-      } else if (isMonth + x === -1) {
-        return `${monthSerb[11]} (${+isYear + x})`;
+      if (pageMonth + x === 12) {
+        return `Januar (${+pageYear + 1})`;
+      } else if (pageMonth + x === -1) {
+        return `${monthSerb[11]} (${+pageYear + x})`;
       } else {
-        return monthSerb[isMonth + x];
+        return monthSerb[pageMonth + x];
       }
     } else {
-      if (isMonth + x === 12) {
-        return `${monthSerb[0]} (${+isYear + x})`;
-      } else if (isMonth + x === -1) {
-        return `${monthSerb[11]} (${+isYear + x})`;
+      if (pageMonth + x === 12) {
+        return `${monthSerb[0]} (${+pageYear + x})`;
+      } else if (pageMonth + x === -1) {
+        return `${monthSerb[11]} (${+pageYear + x})`;
       } else {
         return monthSerb[monthSerb.indexOf(id) + x];
       }
@@ -128,12 +126,12 @@ export default function Calendar(props) {
     <div className="calendar">
       {/* ---- Gornje ranfle kalendara ---- */}
       <div className="first">
-        <h1>Crkveni pravoslavni kalendar {isYear}</h1>
+        <h1>Crkveni pravoslavni kalendar {pageYear}</h1>
         <div
           className={`yearBox${setCloseClass()}`}
           onClick={() => setDropDownYear((prev) => !prev)}
         >
-          <b>{isYear}</b>
+          <b>{pageYear}</b>
           <i className="fa-solid fa-square-caret-down"></i>
           <div className="botDiv">{items_list(calendarYears[0].item_list)}</div>
         </div>

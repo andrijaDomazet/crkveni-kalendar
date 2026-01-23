@@ -22,7 +22,6 @@ export default function KalendarGodina() {
     easterDay,
     startEasterTs,
     endEasterTs,
-    isYear,
     slug,
     petrovPostStartDate,
   } = useIdContext();
@@ -49,10 +48,10 @@ export default function KalendarGodina() {
       <div className="kalendarGodina-wrapper">
         <div className="kalendarGodina-center">
           <div className="kalendarGodina-title">
-            <h1>Pravoslavni kalendar {isYear}.</h1>
+            <h1>Pravoslavni kalendar {pageYear}.</h1>
             <h2>
               Kompletan pregled svih meseci, velikih praznika, posnih dana i
-              zadušnica za {isYear}. godinu po crkvenom kalendaru Srpske
+              zadušnica za {pageYear}. godinu po crkvenom kalendaru Srpske
               Pravoslavne Crkve.
             </h2>
           </div>
@@ -61,7 +60,7 @@ export default function KalendarGodina() {
               return (
                 <SimpleBox
                   classes="hoverable"
-                  topNavLink={`/${isYear}/${item}/`}
+                  topNavLink={`/${pageYear}/${item}/`}
                   mainTitle={
                     item.substring(0, 1).toUpperCase() + item.substring(1)
                   }
@@ -79,7 +78,7 @@ export default function KalendarGodina() {
           <SimpleBox
             classes="green"
             // linkText="/2026/april/"
-            mainTitle={`🍞 Veliki postovi ${isYear}.`}
+            mainTitle={`🍞 Veliki postovi ${pageYear}.`}
             mainBody={[
               `Vaskršnji post — ${startEaster.day}. ${startEaster.month + 1}. - ${endEaster.day}. ${endEaster.month + 1}.`,
               `Petrovski post — ${petrovPost.day}.6. - 11.7.`,
