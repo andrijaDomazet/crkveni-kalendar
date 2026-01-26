@@ -4,13 +4,14 @@ import "./BodyText.scss";
 import AdManagerSlot from "../AdvModule/AdManagerSlot";
 import { useGlobalLocation } from "../../shared/LocationContext.js";
 import Zadusnice from "../Boxes/Zadusnice/Zadusnice.js";
-
+import TodayBox from "../Boxes/TodayBox/TodayBox.js";
 const dynamicComponents = {
   Zadusnice,
+  TodayBox,
 };
 
-const PostImage = lazy(() =>
-  import("../../containters/SinglePost/img/PostImage.js")
+const PostImage = lazy(
+  () => import("../../containters/SinglePost/img/PostImage.js"),
 );
 
 const setSubTitle = (item) =>
@@ -47,10 +48,9 @@ const setImg = (item) => {
 const setComponent = (item) => {
   if (item.component && dynamicComponents[item.component]) {
     const Component = dynamicComponents[item.component];
-
     return (
       <Suspense fallback={<div></div>}>
-        <Component />
+        <Component classes="horizontal"/>
       </Suspense>
     );
   }
@@ -66,6 +66,7 @@ export default function BodyText(props) {
         if (index === 0) {
           return (
             <React.Fragment key={index}>
+              {/* {setComponent(item)} */}
               {setSubTitle(item)}
               <p dangerouslySetInnerHTML={{ __html: item["text"] }}></p>
               {setQuote(item)}
@@ -80,11 +81,12 @@ export default function BodyText(props) {
         } else {
           return (
             <React.Fragment key={index}>
+              {setComponent(item)}
               {setSubTitle(item)}
               <p dangerouslySetInnerHTML={{ __html: item["text"] }}></p>
               {setImg(item)}
               {setQuote(item)}
-              {setComponent(item)}
+              {/* {setComponent(item)} */}
             </React.Fragment>
           );
         }

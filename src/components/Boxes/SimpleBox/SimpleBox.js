@@ -2,6 +2,8 @@ import { Link, useNavigate } from "react-router-dom";
 import "./SimpleBox.scss";
 
 export default function SimpleBox({
+  as: Component = "section",
+  href,
   mainTitle,
   mainTitleSymbol = false,
   mainBody,
@@ -9,24 +11,29 @@ export default function SimpleBox({
   buttonText,
   classes = "",
   topNavLink = false,
+  textAnchor,
 }) {
   let navigate = useNavigate();
+
+  const isClickable = topNavLink && Component === "section";
+  const isAnchor = Component === "a";
+
   return (
-    <section
+    <Component
       className={`simpleBox ${classes}`}
-      {...(topNavLink && {
+      {...(Component === "a" && href
+        ? { href, title: textAnchor || mainTitle }
+        : {})}
+      {...(isClickable && {
         onClick: () => navigate(topNavLink),
-        style: {
-          cursor: "pointer",
-        },
+        style: { cursor: "pointer" },
       })}
     >
       <h2>
         {mainTitle}
         {/* set i icon to control from props */}
-        {mainTitleSymbol && <i class="fa-solid fa-angle-right"></i>}
+        {mainTitleSymbol && <i className="fa-solid fa-angle-right"></i>}
       </h2>
-      {/* <p>{mainBody}</p> */}
       <div className="simpleBox-body">
         <div className="simpleBox-body-wrapper">
           {Array.isArray(mainBody) ? (
@@ -36,27 +43,24 @@ export default function SimpleBox({
               })}
             </ul>
           ) : (
-            <p to={linkText}>{mainBody}</p>
+            <p>{mainBody}</p>
           )}
         </div>
-        {/* <p className="secondBody">
-        Test
-      </p> */}
       </div>
-
       <div>
-        {Array.isArray(buttonText) ? (
-          buttonText.map((item, index) => {
-            return (
+        {buttonText &&
+          (isAnchor ? (
+            <span className="simpleBox-cta">{buttonText}</span>
+          ) : Array.isArray(buttonText) ? (
+            buttonText.map((item, index) => (
               <Link key={index} to={item[0]}>
                 {item[1]}
               </Link>
-            );
-          })
-        ) : (
-          <Link to={linkText}>{buttonText}</Link>
-        )}
+            ))
+          ) : (
+            <Link to={linkText}>{buttonText}</Link>
+          ))}
       </div>
-    </section>
+    </Component>
   );
 }

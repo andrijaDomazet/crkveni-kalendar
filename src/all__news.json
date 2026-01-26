@@ -101,13 +101,14 @@
       {
         "subtitle": "",
         "text": "Pre dolaska hrišćanstva, Srbi su bili mnogobožački narod, poštujući Peruna kao vrhovnog boga, dok su u domovima gajili kult domaćih božanstava. Kada je Sveti Sava uveo hrišćanstvo, umesto starih božanstava, srpske porodice su za zaštitnike preuzele hrišćanske svetitelje, što je dovelo do nastanka krsne slave.",
-        "textQuote": "<h2>Koja je danas slava?</h2><p>Odgovor na ovo pitanje, kao i kompletan spisak pravoslavnih slava i svetitelja koji se obeležavaju tokom tekućeg meseca, pronađite u našem pravoslavnom kalendaru - svi datumi i svetitelji nalaze se na ovom <a href=\"https://crkveni-kalendar.net/2026/\">linku</a>.</p>"
+        "textQuote": "<h2>Koja je danas slava?</h2><p>Kompletan spisak pravoslavnih slava i svetitelja koji se obeležavaju tokom tekućeg meseca, pronađite u našem pravoslavnom kalendaru - svi datumi i svetitelji nalaze se na ovom <a href=\"https://crkveni-kalendar.net/2026/\">linku</a>.</p>"
       },
-      {
+      { "component": "TodayBox",
         "subtitle": "",
         "text": "<strong>Krsna slava</strong> je postala jedan od najvažnijih porodičnih praznika, prenošen s kolena na koleno. Svaka porodica slavi svetitelja pod čijim se okriljem nalazi, slično kao što su hrišćanski hramovi posvećeni određenim svecima."
       },
       {
+       
         "subtitle": "",
         "text": "U pojedinim krajevima Srbije, Bosne i Hercegovine i Crne Gore, običaj je da se gosti dočekuju uoči slave. Ova praksa je nastala iz praktičnih i istorijskih razloga - nekada su ljudi dolazili iz udaljenih mesta dan ranije, dok su u teškim vremenima, poput osmanske vladavine i komunističkog režima, Srbi često slavili svoju slavu u tajnosti tokom noći."
       },

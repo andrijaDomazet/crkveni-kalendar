@@ -119,9 +119,11 @@
     }
   }
   .simpleBox.hoverable {
+
     &:hover {
+        background: #f7f1e9;
       transform: translateY(-2px);
-      border: 1px solid #8b5b383b;
+      border: 1px solid #8b5b3848;
       box-shadow:
         0 10px 40px -5px rgba(139, 90, 43, 0.2),
         0 4px 16px -4px rgba(139, 90, 43, 0.15);

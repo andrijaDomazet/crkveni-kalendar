@@ -13,7 +13,8 @@
     padding: 2rem;
     width: 100%;
     text-align: center;
-    box-shadow: 0 10px 40px -5px rgba(139, 90, 43, 0.2),
+    box-shadow:
+      0 10px 40px -5px rgba(139, 90, 43, 0.2),
       0 4px 16px -4px rgba(139, 90, 43, 0.15);
     .today-day {
       display: block;
@@ -64,7 +65,7 @@
       font-size: 1.4rem;
       line-height: 1.6rem;
       font-weight: 600;
-      padding: 0 .5rem;
+      padding: 0 0.5rem;
     }
     .today-post {
       display: flex;
@@ -131,17 +132,40 @@
     }
   }
 }
+  .today__box.horizontal {
+  // width: 600px;
+    margin: 1rem;
+    .today__box-wrapper {
+      // border: 2px solid red;
+      // display: flex;
+      // padding: 2rem;
+      // align-items: center;
+      // justify-content: space-between;
+    }
+  }
+
 @media screen and (min-width: $large) {
   .today__box {
+    // max-width: 300px;
     .today__box-wrapper {
       .today-title {
         margin: 1rem auto;
         font-size: 1.5rem;
         line-height: 1.8rem;
       }
-         .today-post {
-
-         }
+      .today-post {
+      }
+    }
+  }
+  .today__box.horizontal {
+  width: 600px;
+    margin: 1rem auto;
+    .today__box-wrapper {
+      // border: 2px solid red;
+      // display: flex;
+      padding: 1.5rem 4rem;
+      align-items: center;
+      justify-content: space-between;
     }
   }
 }

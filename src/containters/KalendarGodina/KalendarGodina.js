@@ -59,9 +59,12 @@ export default function KalendarGodina() {
             {monthSerb.map((item, index) => {
               return (
                 <SimpleBox
+                  as="a"
+                  textAnchor={`Crkveni kalendar za ${item} ${pageYear}`}
+                  href={`/${pageYear}/${item}/`}
                   mainTitleSymbol={true}
                   classes="hoverable"
-                  topNavLink={`/${pageYear}/${item}/`}
+                  // topNavLink={`/${pageYear}/${item}/`}
                   mainTitle={
                     item.substring(0, 1).toUpperCase() + item.substring(1)
                   }
