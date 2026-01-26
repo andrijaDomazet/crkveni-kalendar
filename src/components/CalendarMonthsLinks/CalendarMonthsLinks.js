@@ -8,21 +8,12 @@ export default function CalendarMonthsLinks() {
 
   return (
     <section className="calendar-allMonths">
-      <h2 className="calendar-title">
-        Crkveni kalendar za {slug || currentYear}. godinu po mesecima
-      </h2>
+      <h2 className="calendar-title">Crkveni kalendar za {slug || currentYear}. godinu po mesecima</h2>
 
       <div className="calendar-monthsGrid">
         {monthSerb.map((item) => (
-          <NavLink
-            key={item}
-            to={`/${slug || currentYear}/${item}/`}
-            title={`Prikaži kalendar za ${item} ${slug || currentYear}. godine`}
-            className="calendar-month"
-          >
-            {/* <h3> */}
+          <NavLink key={item} to={`/${slug || currentYear}/${item}/`} title={`Prikaži kalendar za ${item} ${slug || currentYear}. godine`} className="calendar-month">
             {item.charAt(0).toUpperCase() + item.slice(1)}
-            {/* </h3> */}
           </NavLink>
         ))}
       </div>
