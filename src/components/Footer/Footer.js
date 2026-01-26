@@ -89,6 +89,9 @@ export default function Footer() {
               <a href="/molitvenik/">Molitvenik</a>
             </li>
             <li>
+              <a href="/hriscanski-post/">Hrišćanski post</a>
+            </li>
+            <li>
               <a href="/meseceve-mene/">Mesečeve mene</a>
             </li>
           </ul>

@@ -253,6 +253,16 @@ export const options = [
           pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
         },
       },
+        {
+        title: "Hrišćanski post",
+        route: "/hriscanski-post/",
+        icon: "/img/krst__logo.png",
+        social: {
+          title: "Hrišćanski post | crkveni-kalendar.net",
+          lead: "Šta je hrišćanski post u pravoslavlju? Objašnjenje smisla posta, pravila, posnih dana i trapavih sedmica",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
+        },
+      },
       {
         title: "Imenoslov",
         route: "/imenoslov/",
@@ -263,6 +273,7 @@ export const options = [
           pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
         },
       },
+    
       // {
       //   title: "Ostalo",
       //   route: "/vesti/ostalo/",

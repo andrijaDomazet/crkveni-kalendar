@@ -29,36 +29,80 @@
   },
   {
     "news_id": 5,
-    "time": "1. jun",
+    "time": "26. januar",
     "category": "Ostalo",
-    "pics": ["/img/noMatch/noMatch.png", "crkveni-kalendar.net"],
-    "title": "Sv. Nikola letnji",
+    "pics": ["https://res.cloudinary.com/dvi29tcsc/image/upload/v1769460348/crkveniKalendar/hriscanski-post_hlzs1x.jpg", "AI ilustracija"],
+    "title": "Hrišćanski post",
     "title_2": "",
-    "lead": "",
+    "lead": "Hrišćanski post u pravoslavlju nije samo uzdržavanje od hrane, već duboki duhovni podvig koji vernike vodi ka smirenju, samodisciplini i unutrašnjem preobražaju",
     "body": [
       {
-        "subtitle": "Stranica je u pripremi...",
-        "text": ""
+        "subtitle": "",
+        "text": "Post u pravoslavlju nije dijeta niti puko odricanje od hrane. On predstavlja duboki duhovni proces kroz koji se vernik uči uzdržanju, smirenju i unutrašnjem preobražaju. Post je vekovima sastavni deo pravoslavne vere i neodvojiv je od molitve, pokajanja i duhovnog rasta."
       },
       {
         "subtitle": "",
+        "text": "U pravoslavnom učenju, čovek se posmatra kao jedinstvo tela i duše. Zato se i post odnosi na oba aspekta - telesni i duhovni - jer bez njihovog zajedničkog delovanja nema istinskog napretka u veri."
+      },
+      {
+        "subtitle": "Šta je post u pravoslavnom hrišćanstvu?",
+        "text": "Post u pravoslavnom hrišćanstvu podrazumeva uzdržavanje od mrsne hrane, ali i od grešnih misli, želja i dela. Iako se najčešće vezuje za ishranu, njegov pravi smisao je mnogo dublji."
+      },
+      {
+        "subtitle": "",
+        "text": "Sveti oci uče da telo i duša stalno međusobno deluju - ono što se događa u duši ostavlja trag na telu, i obrnuto. Zbog toga post nije usmeren ka slabljenju tela, već ka jačanju duše i obuzdavanju strasti."
+      },
+      {
+        "subtitle": "",
+        "text": "Bez duhovnog posta, telesni post gubi svoj puni smisao. Kako ističu crkveni oci, sam uzdržaj od hrane, bez unutrašnje promene, ne donosi duhovnu korist."
+      },
+      {
+        "subtitle3": "Svrha posta - zašto se posti?",
+        "text": "Cilj posta nije mučenje tela, već oslobađanje čoveka od strasti. Pravi post znači: <ul><li>uzdržavanje od loših misli i dela</li><li>borbu protiv gordosti, zavisti i pohote</li><li>jačanje samokontrole i smirenja</li><li>približavanje Bogu kroz molitvu</li></ul>"
+      },
+      {
+        "subtitle": "",
+        "text": "Istinski post vodi ka smirenju, a smirenje donosi spoznaju da se spasenje nalazi jedino u Božijoj milosti."
+      },
+      {
+        "subtitle": "Vrste posta u pravoslavnoj crkvi",
         "text": ""
+      },
+      {
+        "subtitle3": "Višednevni postovi",
+        "text": "Pravoslavna crkva propisuje četiri velika višednevna posta tokom godine: <ul><li>Veliki post i Strasna ili Stradalna nedelja - traje ukupno 7 sedmica i smatra se najvažnijim i najstrožim postom</li><li>Petrovski post - počinje posle Duhova i traje u zavisnosti od datuma Vaskrsa (od nekoliko dana do oko 40)</li><li>Velikogospojinski post - traje 14 dana i posvećen je Presvetoj Bogorodici</li><li>Božićni post - traje 40 dana i priprema vernike za praznik Rođenja Hristovog</li></ul>"
+      },
+      {
+        "subtitle3": "Jednodnevni postovi",
+        "text": "Pored višednevnih postova, u pravoslavlju postoje i značajni jednodnevni postovi: <ul><li>Svaka sreda i petak (osim u trapavim sedmicama)</li><li>Krstovdan - uoči Bogojavljenja</li><li>Usekovanje glave Svetog Jovana Krstitelja</li><li>Vozdviženje Časnog Krsta (Krstovdan)</li></ul>"
+      },
+      {
+        "subtitle3": "Lični ili zavetni post",
+        "text": "Lični ili zavetni post praktikuju vernici iz ličnih duhovnih razloga - radi jačanja vere, pokajanja ili kao zavet određenom svetitelju. Pravoslavna crkva odobrava ovakvu vrstu posta, ali se preporučuje savetovanje sa nadležnim parohom, kako bi post bio duhovno koristan i primeren mogućnostima vernika."
+      },
+      {
+        "subtitle3": "Trapave sedmice - kada se ne posti",
+        "text": "Trapave sedmice su periodi u godini kada se post ne drži, čak ni sredom i petkom:<ul><li>Sedmica posle Nedelje Mitara i Fariseja</li><li>Siropusna sedmica</li><li>Svetla sedmica (posle Vaskrsa)</li><li>Duhovska sedmica (posle Duhova)</li><li>Sedmica posle Božića</li></ul>"
+      },
+      {
+        "subtitle": "",
+        "text": "Hrišćanski post u pravoslavlju nije spoljašnja forma, već unutrašnja borba i put ka duhovnom očišćenju. On podseća vernike da se istinska promena ne događa samo na tanjiru, već u srcu i mislima. Kada se post praktikuje sa smirenjem, rasuđivanjem i molitvom, on postaje snažno sredstvo duhovnog rasta i približavanja Bogu."
       }
     ],
     "tags": [
-      "Pravoslavne molitve",
-      "Molitvenik",
-      "Jutarnje molitve",
-      "Večernje molitve",
-      "Molitve za svaki dan",
-      "Pravoslavna vera"
+      "Hrišćanski post",
+      "Pravoslavni post",
+      "Post u pravoslavlju",
+      "Pravila posta",
+      "Posni dani",
+      "Trapave sedmice"
     ],
     "source": "crkveni-kalendar"
   },
   {
     "news_id": 4,
     "time": "1. jun",
-    "category": "povrtarstvo",
+    "category": "Ostalo",
     "pics": [
       "https://res.cloudinary.com/dvi29tcsc/image/upload/v1760429651/crkveniKalendar/molitvenik_gef7mv.jpg",
       "Pexels"

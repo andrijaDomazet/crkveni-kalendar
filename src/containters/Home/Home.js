@@ -104,7 +104,7 @@ export default function Home() {
           </div>
           <SimpleBox
             classes="green"
-            // linkText="/2026/april/"
+            linkText="/hriscanski-post/"
             mainTitle="🍞 Veliki postovi 2026."
             mainBody={[
               "Vaskršnji post — 23. 2. - 11. 4.",
@@ -112,7 +112,7 @@ export default function Home() {
               "Gospojinski post — 14. 8. - 27. 8.",
               "Božićni post — 28. 11. - 6. 1.",
             ]}
-            // buttonText="Hrišćanski postovi u 2026. godini →"
+            buttonText="Hrišćanski postovi →"
           />
           {/* <Zadusnice
             setYear={2026}
