@@ -59,6 +59,7 @@ export default function KalendarGodina() {
             {monthSerb.map((item, index) => {
               return (
                 <SimpleBox
+                  mainTitleSymbol={true}
                   classes="hoverable"
                   topNavLink={`/${pageYear}/${item}/`}
                   mainTitle={

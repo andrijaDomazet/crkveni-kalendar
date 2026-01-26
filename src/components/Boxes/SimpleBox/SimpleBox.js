@@ -1,7 +1,15 @@
 import { Link, useNavigate } from "react-router-dom";
 import "./SimpleBox.scss";
 
-export default function SimpleBox({ mainTitle, mainBody, linkText, buttonText, classes = "", topNavLink = false }) {
+export default function SimpleBox({
+  mainTitle,
+  mainTitleSymbol = false,
+  mainBody,
+  linkText,
+  buttonText,
+  classes = "",
+  topNavLink = false,
+}) {
   let navigate = useNavigate();
   return (
     <section
@@ -16,7 +24,7 @@ export default function SimpleBox({ mainTitle, mainBody, linkText, buttonText, c
       <h2>
         {mainTitle}
         {/* set i icon to control from props */}
-        {/* <i class="fa-solid fa-angle-right"></i> */}
+        {mainTitleSymbol && <i class="fa-solid fa-angle-right"></i>}
       </h2>
       {/* <p>{mainBody}</p> */}
       <div className="simpleBox-body">
