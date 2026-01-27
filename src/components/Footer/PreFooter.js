@@ -16,6 +16,7 @@ export default function PreFooter() {
         {allLinks.map((item, index) => {
           return (
             <SimpleBox
+              key={index}
               classes="central"
               //   classes="orange"
               linkText={item[1]}

@@ -18,7 +18,7 @@ const CalendarMonthsLinksLazy = lazy(
 
 export default function Home() {
   const { yearIndex } = useIdContext();
-  console.log("YearIndex home", yearIndex);
+  // console.log("YearIndex home", yearIndex);
 
   return (
     <div className="home">
@@ -114,11 +114,6 @@ export default function Home() {
             ]}
             buttonText="Hrišćanski postovi →"
           />
-          {/* <Zadusnice
-            setYear={2026}
-            boxTitle={`🍞 Veliki postovi u ${2026}. godini`}
-            data={calendarYears[1]}
-          /> */}
         </div>
         <div className="home__wrapper-right">
           <div className="midBox">

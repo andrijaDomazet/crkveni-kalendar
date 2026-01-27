@@ -8,44 +8,32 @@ import { urlTitle2 } from "../../shared/utility";
 
 export default function HeadHelmet() {
   const loc = useLocation();
-  const { id, test } = useParams();
   let pathPart = loc.pathname.split("/");
-  let lastPathPart = pathPart[pathPart.length - 2];
-  // const tagNews = data.filter((item) => {
-  //   // return urlTitle2(item.tags[0]) === lastPathPart;
-  // });
-  // console.log("PAth part", pathPart[1] === "crkveni-kalendar", pathPart);
   const [post, setPost] = useState(() => setArticleState());
 
   useEffect(() => {
-    // console.log("Effect Helmet", pathPart);
     setPost(setArticleState());
-    // console.log("Post", post);
   }, [loc.pathname]);
 
   function setArticleState() {
     let lastPathPart = pathPart[pathPart.length - 2];
-    // console.log("Pathparts helmet", pathPart);
-    // console.log("Last Pathparts helmet", lastPathPart);
-
     if (lastPathPart === "") {
-      // console.log("IF 1");
-
+      //home
       let post = options[0].social;
       return post;
-
-      // } else if (pathPart[1] === "crkveni-kalendar" && pathPart.length > 2) {
     } else if (pathPart.length === 4) {
-      //po mesecima
+      //sve sto ima 4 elementa (trenutno pojedinacni meseci i pojedinacne molitve)
       // console.log("Else 1");
       if (pathPart[1] === "molitvenik") {
+        //single molitve
         let post = molitve.filter((item) => {
           return urlTitle2(item.title) === pathPart[2];
         });
         post[0].lead = `${post[0].title}, tekst molitve: ${post[0].lead}`;
         let post2 = post[0];
         return post2;
-      } else {
+      } else if (/^\d+$/.test(pathPart[1])) {
+        //single months on calendar
         let post = options[1].social2;
         let testSocTag = {
           pics: post.pics,
@@ -61,16 +49,14 @@ export default function HeadHelmet() {
         };
         return testSocTag;
       }
-    } else if (pathPart[1] === "crkveni-kalendar" && pathPart.length === 2) {
+    } else if (!/^\d+$/.test(pathPart[1]) && pathPart.length === 3) {
+      //single post
       // console.log("Else 2");
-      let post = options[3].social;
-      return post;
-    } else if (pathPart[2] === "meseceve-mene") {
-      // console.log("Else 3");
-      let post = options[4].social;
-      return post;
+      let post = data.filter((item) => {
+        return urlTitle2(item.title) === pathPart[1];
+      });
+      return post[0];
     } else {
-      // console.log("Else 4");
       let post = options[0].social;
       return post;
     }
@@ -78,6 +64,7 @@ export default function HeadHelmet() {
   const setTitle = (postTitle) => {
     return postTitle.title_2 ? postTitle.title_2 : postTitle.title;
   };
+
   return (
     <Helmet>
       <meta charSet="utf-8" />

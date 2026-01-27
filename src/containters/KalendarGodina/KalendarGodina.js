@@ -59,6 +59,7 @@ export default function KalendarGodina() {
             {monthSerb.map((item, index) => {
               return (
                 <SimpleBox
+                  key={index}
                   as="a"
                   textAnchor={`Crkveni kalendar za ${item} ${pageYear}`}
                   href={`/${pageYear}/${item}/`}
@@ -81,7 +82,7 @@ export default function KalendarGodina() {
           </div>
           <SimpleBox
             classes="green"
-            // linkText="/2026/april/"
+            linkText="/hriscanski-post/"
             mainTitle={`🍞 Veliki postovi ${pageYear}.`}
             mainBody={[
               `Vaskršnji post — ${startEaster.day}. ${startEaster.month + 1}. - ${endEaster.day}. ${endEaster.month + 1}.`,
@@ -89,7 +90,7 @@ export default function KalendarGodina() {
               "Gospojinski post — 14.8. - 27.8.",
               "Božićni post — 28.11. - 6.1.",
             ]}
-            // buttonText="Hrišćanski postovi u 2026. godini →"
+            buttonText="Hrišćanski postovi →"
           />
           <SimpleBox
             classes="orange"

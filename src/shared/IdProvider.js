@@ -24,10 +24,10 @@ export const useIdContext = () => useContext(IdContext);
 
 export const IdProvider = ({ children }) => {
   const currentDate = new Date();
-  console.log("currentDate", currentDate);
+  // console.log("currentDate", currentDate);
 
   let currentDay = currentDate.getDate();
-  console.log("currentDay", currentDay);
+  // console.log("currentDay", currentDay);
 
   let dayName = days[currentDate.getDay()];
   const monthName = monthSerb[currentDate.getMonth()];
