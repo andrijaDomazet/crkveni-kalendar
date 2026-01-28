@@ -8,7 +8,7 @@ import Calendar from "./components/Calendar/Calendar";
 import Bars from "./components/Bars/Bars";
 import { LocationProvider } from "./shared/LocationContext";
 import { IdProvider } from "./shared/IdProvider";
-import {withIdProvider} from "./shared/HOC";
+import { withIdProvider } from "./shared/HOC";
 import ScrollToTop from "./UI/ScrollToTop/ScrollToTop";
 import HeadHelmet from "./components/HeadHelmet/HeadHelmet";
 import KalendarGodina from "./containters/KalendarGodina/KalendarGodina";
@@ -23,7 +23,7 @@ export default function App() {
   return (
     <Router>
       <LocationProvider>
-        <HeadHelmet />
+        {/* <HeadHelmet /> */}
         <ScrollToTop />
         <Bars />
         <Routes>
@@ -92,6 +92,11 @@ export default function App() {
           path="/:slug"
           element={React.createElement(withIdProvider(SimplePage))}
           /> */}
+       
+   <Route
+            path="/info/:slug/"
+            element={React.createElement(withIdProvider(SimplePage))}
+          />
           <Route
             path="*"
             element={React.createElement(withIdProvider(NoMatch))}

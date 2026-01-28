@@ -12,7 +12,6 @@ export default function SimplePage() {
 
   const validSlugs = [
     "o-nama",
-    "marketing",
     "pravila-koriscenja",
     "politika-privatnosti",
   ];

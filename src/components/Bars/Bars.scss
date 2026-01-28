@@ -7,18 +7,21 @@
   min-height: 35px;
   z-index: +999;
   // background: red;
-  .bars__logo {
-    padding: 0.3rem;
-    height: 3.5rem;
-    color: black;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    img {
-      height: 100%;
-      width: auto;
-    }
+  .bars__links{
+    width: 100%;
   }
+  // .bars__logo {
+  //   padding: 0.3rem;
+  //   height: 3.5rem;
+  //   color: black;
+  //   display: flex;
+  //   justify-content: left;
+  //   align-items: center;
+  //   img {
+  //     height: 100%;
+  //     width: auto;
+  //   }
+  // }
 }
 @media screen and (min-width: $medium) {
   .bars {
@@ -30,12 +33,12 @@
     // padding: 0 1rem;
     // border-bottom: 1px solid $silver1;
 
-    .bars__logo {
-      height: 5rem;
-      img {
-        padding: 0 2rem;
-      }
-    }
+    // .bars__logo {
+    //   height: 5rem;
+    //   img {
+    //     padding: 0 2rem;
+    //   }
+    // }
   }
 }
 @media screen and (min-width: $large) {

@@ -8,7 +8,7 @@
     color: $redDay2;
     font-size: 1.4rem;
     line-height: 1.8rem;
-    border-bottom: 3px solid $grey7;
+    border-bottom: 3px solid $redDay2;
     margin: 2rem 0 1rem 0;
   }
   p {
@@ -28,6 +28,7 @@
   }
   h2 {
     font-size: 1.25rem;
+    margin: 1rem 0 0.5rem 0;
   }
   a {
     font-size: 1.15rem;
@@ -40,16 +41,21 @@
     min-height: 560px;
 
     .simplePage-left {
-      width: calc(100% - 340px);
+      // width: calc(100% - 340px);
+      width: 800px;
+      margin: 0 auto;
       // border: 1px solid red;
       h1 {
         font-size: 1.6rem;
-        border-bottom: 4px solid $grey7;
+        border-bottom: 4px solid $redDay2;
       }
       h2 {
         font-size: 1.4rem;
+        color: $redDay2;
       }
-      p {
+      p,
+      b,
+      a,span {
         font-size: 1.2rem;
         line-height: 1.6rem;
         padding-bottom: 5rem;
@@ -59,9 +65,9 @@
         line-height: 2.4rem;
         margin-bottom: 1rem;
       }
-      a {
-        font-size: 1.2rem;
-      }
+      // a {
+      //   font-size: 1.2rem;
+      // }
     }
     .simplePage-right {
     }
