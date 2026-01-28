@@ -4,49 +4,6 @@
   .content {
     padding: 0.5rem 0.5rem 2rem 0.5rem;
     .mainContent {
-      // .social {
-      //   display: flex;
-      //   padding: 1.2rem 0 0.2rem 1rem;
-      //   line-height: 2.2rem;
-      //   color: black;
-      //   border-top: 1px solid $grey1;
-      //   border-bottom: 1px solid $grey1;
-      //   span {
-      //     color: black;
-      //     font-size: 1.2rem;
-      //   }
-      //   button {
-      //     margin-left: 0.5rem;
-      //   }
-      //   .chain {
-      //     position: relative;
-      //     img {
-      //       margin-left: 0.5rem;
-      //       height: 32px;
-      //     }
-      //     .copiedLink {
-      //       padding: 0.3rem 0;
-      //       margin: 0;
-      //       font-size: 1rem;
-      //       line-height: 1.4rem;
-      //       text-align: center;
-      //       width: 130px;
-      //       top: -2rem;
-      //       left: -40px;
-      //       position: absolute;
-      //       background: $dark1;
-      //       color: white;
-      //       z-index: +999;
-      //       border-radius: 3px;
-      //     }
-      //     .copiedLink.close {
-      //       display: none;
-      //     }
-      //     .copiedLink.cov {
-      //       background: grey;
-      //     }
-      //   }
-      // }
       .mainContent-wrapper {
         .mainContent-img {
           position: relative;
@@ -70,9 +27,7 @@
           }
         }
         .mainContent-title {
-          // color: $dark1;
-          // color: red;
-          color: $blue1;
+          color: $redDay2;
           margin: 1rem 0;
           font-size: 1.8rem;
           line-height: 2rem;

@@ -55,7 +55,7 @@
   }
 
   /* Stilovi za linkove */
-  .footer-columns a {
+  .footer-columns a, p {
     text-decoration: none;
     color: #f6f3eeb3;
     font-weight: normal;
@@ -78,7 +78,7 @@
     padding: 1rem 0;
     margin-top: 1.5rem;
     font-size: 0.9rem;
-    color: #f6f3eeb3;
+    color: #dad6d0b3;
     text-shadow: 0 0 1px $grey1;
     font-weight: normal;
   }

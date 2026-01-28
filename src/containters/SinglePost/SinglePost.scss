@@ -38,6 +38,7 @@
           .mainContent-lead {
             font-size: 1.25rem;
             line-height: 1.4rem;
+            // padding-bottom: 0.3rem;
           }
           .molitveBoxes {
             display: grid;
@@ -64,7 +65,8 @@
                 border-radius: 0.1rem;
                 color: $grey7;
                 background: #7326390d;
-                box-shadow: 0 10px 40px -5px rgba(139, 90, 43, 0.2),
+                box-shadow:
+                  0 10px 40px -5px rgba(139, 90, 43, 0.2),
                   0 4px 16px -4px rgba(139, 90, 43, 0.15);
                 // border: 1px solid #85614733;
                 font-weight: 600;
@@ -195,6 +197,7 @@
             .mainContent-lead {
               font-size: 1.35rem;
               line-height: 1.5rem;
+              // margin-bottom: 11rem;
             }
             .molitveBoxes {
               margin: 0 1rem;

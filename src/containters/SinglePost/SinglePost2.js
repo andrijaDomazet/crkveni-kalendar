@@ -1,12 +1,8 @@
-import React, { useState, useEffect, lazy, Suspense } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import { useParams } from "react-router-dom";
 import "./SinglePost2.scss";
-// import AdvModule from "../../components/AdvModule/AdvModule";
-// import BodyText from "../../components/BodyText/BodyText";
 import { useGlobalLocation } from "../../shared/LocationContext";
-import { useIdContext } from "../../shared/IdProvider";
 import { urlTitle2 } from "../../shared/utility";
-// import Molitva from "../../components/Molitva/Molitva";
 import NoMatch from "../NoMatch/NoMatch";
 import molitve from "../../molitve.json";
 import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
@@ -17,10 +13,9 @@ const setTitle = (postTitle) => {
 };
 
 export default function SinglePost2() {
-  const { data } = useIdContext();
-  const { id, test } = useParams();
+  // const { data } = useIdContext();
+  const { test } = useParams();
   const location = useGlobalLocation();
-  // console.log("ID", test);
 
   const newData = () => {
     let dd = molitve.filter((item) => {
