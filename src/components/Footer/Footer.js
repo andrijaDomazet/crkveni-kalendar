@@ -64,6 +64,9 @@ export default function Footer() {
             Dodatni sadržaj
           </div>
           <ul>
+            {/* <li>
+              <a href="/danas-je/">Danas je...</a>
+            </li> */}
             <li>
               <a href="/molitvenik/">Molitvenik</a>
             </li>

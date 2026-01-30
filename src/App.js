@@ -18,12 +18,13 @@ import NoMatch from "./containters/NoMatch/NoMatch";
 import SinglePost2 from "./containters/SinglePost/SinglePost2";
 import SimplePage from "./containters/SimplePage/SimplePage";
 import PreFooter from "./components/Footer/PreFooter";
+import TodayPage from "./containters/TodayPage/TodayPage";
 
 export default function App() {
   return (
     <Router>
       <LocationProvider>
-        {/* <HeadHelmet /> */}
+        <HeadHelmet />
         <ScrollToTop />
         <Bars />
         <Routes>
@@ -62,6 +63,11 @@ export default function App() {
             exact="true"
             element={React.createElement(withIdProvider(SinglePost))}
           /> */}
+          {/* <Route
+            path="/danas-je/"
+            exact="true"
+            element={React.createElement(withIdProvider(TodayPage))}
+          /> */}
           <Route
             path="/imenoslov/"
             exact="true"
@@ -92,8 +98,8 @@ export default function App() {
           path="/:slug"
           element={React.createElement(withIdProvider(SimplePage))}
           /> */}
-       
-   <Route
+
+          <Route
             path="/info/:slug/"
             element={React.createElement(withIdProvider(SimplePage))}
           />
