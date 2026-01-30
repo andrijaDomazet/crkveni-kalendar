@@ -7,9 +7,11 @@ import molitve from "../../molitve.json";
 import { urlTitle2 } from "../../shared/utility";
 
 export default function HeadHelmet() {
+  const validPathParts = ["pravila-koriscenja", "pravila-koriscenja", "o-nama"];
   const loc = useLocation();
   let pathPart = loc.pathname.split("/");
   const [post, setPost] = useState(() => setArticleState());
+  console.log("TEST", pathPart);
 
   useEffect(() => {
     setPost(setArticleState());
@@ -17,7 +19,7 @@ export default function HeadHelmet() {
 
   function setArticleState() {
     let lastPathPart = pathPart[pathPart.length - 2];
-    if (lastPathPart === "") {
+    if (lastPathPart === "" || validPathParts.includes(pathPart[2])) {
       //home
       let post = options[0].social;
       return post;
