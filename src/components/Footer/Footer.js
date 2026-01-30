@@ -7,15 +7,6 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-border"></div>
-      {/* <footer> */}
-      {/* <div className="footer-description">
-        <p>
-          Crkveni kalendar je vaš pouzdani izvor informacija o svim pravoslavnim
-          praznicima, krsnim slavama, postovima i običajima za 2026. godinu i
-          naredne godine.
-        </p>
-      </div> */}
-
       <div className="footer-columns">
         <section>
           <div>
@@ -51,9 +42,6 @@ export default function Footer() {
             <li>
               <a href="/zadusnice/">{`Zadušnice u ${pageYear}. godini`}</a>
             </li>
-            {/* <li>
-              <a href="/molitvenik/"><i className="fa-solid fa-circle-arrow-right"></i> Molitvenik</a>
-            </li> */}
           </ul>
         </section>
         <section>
@@ -76,15 +64,6 @@ export default function Footer() {
             Dodatni sadržaj
           </div>
           <ul>
-            {/* <li>
-              <a href="/o-nama/"><i className="fa-solid fa-circle-arrow-right"></i> O nama / Impressum</a>
-            </li>
-            <li>
-              <a href="/kontakt/"><i className="fa-solid fa-circle-arrow-right"></i> Kontakt</a>
-            </li>
-            <li>
-              <a href="/faq/"><i className="fa-solid fa-circle-arrow-right"></i> Najčešća pitanja (FAQ)</a>
-            </li> */}
             <li>
               <a href="/molitvenik/">Molitvenik</a>
             </li>
@@ -128,9 +107,6 @@ export default function Footer() {
             <li>
               <a href="/info/politika-privatnosti/">Politika privatnosti</a>
             </li>
-            {/* <li>
-              <a href="/sitemap.html">Mapa sajta</a>
-            </li> */}
           </ul>
         </section>
         <section>
@@ -165,10 +141,6 @@ export default function Footer() {
       <div className="footer-copyright">
         <p>&copy; 2025 crkveni-kalendar.net. Sva prava zadržana.</p>
       </div>
-      {/* </footer> */}
-      {/* <div className="home__section5-bottom">
-        © 2025 crkveni-kalendar.net® Sva prava zadržana.
-      </div> */}
     </footer>
   );
 }

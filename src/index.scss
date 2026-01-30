@@ -17,8 +17,8 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family:
+    source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 * {
   margin: 0 0;
@@ -75,6 +75,10 @@ $redDay3: #732639;
   // height: 250px;
 }
 
+.banner-wrapper.inCalendar {
+  margin: 0.3rem auto;
+}
+
 .banner-wrapper.bilbord,
 .banner-wrapper.fix-size-horizontal {
   margin: 2rem auto;
@@ -101,7 +105,8 @@ $redDay3: #732639;
   background: #f2ece3;
   // box-shadow: 0 0 2px $grey2;
   border: 1px solid #8561474d;
-  box-shadow: 0 4px 20px -2px rgba(139, 90, 43, 0.15),
+  box-shadow:
+    0 4px 20px -2px rgba(139, 90, 43, 0.15),
     0 2px 8px -2px rgba(139, 90, 43, 0.1);
   &::before {
     content: "OGLAS";
@@ -146,5 +151,8 @@ $redDay3: #732639;
       letter-spacing: 3px;
       font-size: 1rem;
     }
+  }
+    .banner-wrapper.inCalendar {
+    margin: 0 auto;
   }
 }

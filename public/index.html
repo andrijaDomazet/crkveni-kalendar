@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -70,14 +70,14 @@
             [
               [1, 1],
               [320, 100],
-            ]
+            ],
           )
           .addSize(
             [768, 21],
             [
               [1, 1],
               [728, 90],
-            ]
+            ],
           )
           .addSize(
             [1023, 21],
@@ -85,7 +85,7 @@
               [1, 1],
               [970, 250],
               [728, 90],
-            ]
+            ],
           )
           .build();
         var mappingAfterText = googletag
@@ -96,14 +96,14 @@
               [1, 1],
               [320, 100],
               [300, 250],
-            ]
+            ],
           )
           .addSize(
             [860, 21],
             [
               [1, 1],
               [728, 90],
-            ]
+            ],
           )
           .build();
 
@@ -115,7 +115,7 @@
             [
               [300, 250],
               [300, 600],
-            ]
+            ],
           )
           .addSize([1030, 21], [[300, 600]])
           .build();
@@ -133,6 +133,13 @@
           .addSize([860, 21], [[300, 250]])
           .addSize([1030, 21], [[300, 250]])
           .build();
+
+        var mappingCalendar = googletag
+          .sizeMapping()
+          .addSize([21, 21], [320, 100])
+          .addSize([1030, 21], [])
+          .build();
+
         var mappingInterstitial = googletag
           .sizeMapping()
           .addSize(
@@ -140,7 +147,7 @@
             [
               [300, 250],
               [320, 480],
-            ]
+            ],
           )
           .build();
 
@@ -160,7 +167,7 @@
               [300, 250],
               [728, 90],
             ],
-            "div-gpt-ad-1750409157804-0"
+            "div-gpt-ad-1750409157804-0",
           )
           .addService(googletag.pubads())
           .defineSizeMapping(mappingAfterText);
@@ -173,7 +180,7 @@
               [300, 250],
               [728, 90],
             ],
-            "div-gpt-ad-1750409277034-0"
+            "div-gpt-ad-1750409277034-0",
           )
           .addService(googletag.pubads())
           .defineSizeMapping(mappingAfterText);
@@ -185,7 +192,7 @@
               [300, 250],
               [300, 600],
             ],
-            "div-gpt-ad-1750411708088-0"
+            "div-gpt-ad-1750411708088-0",
           )
           .addService(googletag.pubads())
           .defineSizeMapping(mappingSideBar);
@@ -197,7 +204,7 @@
               [300, 250],
               [300, 600],
             ],
-            "div-gpt-ad-1750930023966-0"
+            "div-gpt-ad-1750930023966-0",
           )
           .addService(googletag.pubads())
           .defineSizeMapping(mappingInText);
@@ -210,7 +217,7 @@
               [320, 100],
               [970, 250],
             ],
-            "div-gpt-ad-1761641124263-0"
+            "div-gpt-ad-1761641124263-0",
           )
           .addService(googletag.pubads())
           .defineSizeMapping(mappingBillboard);
@@ -223,7 +230,7 @@
               [320, 100],
               [970, 250],
             ],
-            "div-gpt-ad-1763130338013-0"
+            "div-gpt-ad-1763130338013-0",
           )
           .addService(googletag.pubads())
           .defineSizeMapping(mappingSideBar2);
@@ -236,7 +243,7 @@
               [320, 100],
               [970, 250],
             ],
-            "div-gpt-ad-1764593675864-0"
+            "div-gpt-ad-1764593675864-0",
           )
           .addService(googletag.pubads())
           .defineSizeMapping(mappingBillboard);
@@ -248,10 +255,38 @@
               [320, 100],
               [728, 90],
             ],
-            "div-gpt-ad-1768472077826-0"
+            "div-gpt-ad-1768472077826-0",
           )
           .addService(googletag.pubads())
           .defineSizeMapping(mappingSticky);
+
+        const adSlots = [
+          {
+            path: "/23098387262/crkveni-kalendar/InCalendar-1",
+            id: "div-gpt-ad-1769765602091-0",
+            size: [320, 100],
+          },
+          {
+            path: "/23098387262/crkveni-kalendar/InCalendar-2",
+            id: "div-gpt-ad-1769765622164-0",
+            size: [320, 100],
+          },
+          {
+            path: "/23098387262/crkveni-kalendar/InCalendar-3",
+            id: "div-gpt-ad-1769765646981-0",
+            size: [320, 100],
+          },
+          {
+            path: "/23098387262/crkveni-kalendar/InCalendar-4",
+            id: "div-gpt-ad-1769765669736-0",
+            size: [320, 100],
+          },
+          {
+            path: "/23098387262/crkveni-kalendar/InCalendar-5",
+            id: "div-gpt-ad-1769765520606-0",
+            size: [320, 100],
+          },
+        ];
 
         // interstitialSlot = googletag
         //   .defineOutOfPageSlot(
@@ -275,7 +310,7 @@
         interstitialSlot = googletag
           .defineOutOfPageSlot(
             "/23098387262/crkveni-kalendar/crkveni-kalendar-interstitial",
-            googletag.enums.OutOfPageFormat.INTERSTITIAL
+            googletag.enums.OutOfPageFormat.INTERSTITIAL,
           )
           .defineSizeMapping(mappingInterstitial);
 
@@ -290,6 +325,13 @@
             },
           });
         }
+
+        adSlots.forEach((slot, index) => {
+          adUnits[index + 8] = googletag
+            .defineSlot(slot.path, [slot.size], slot.id)
+            .addService(googletag.pubads())
+            .defineSizeMapping(mappingCalendar);
+        });
 
         // Ukloni enableServices() iznad ako već postoji jedan dole
         // googletag.enableServices();
@@ -335,17 +377,17 @@
             return;
           }
         }
-        (k = e.createElement(t)),
+        ((k = e.createElement(t)),
           (a = e.getElementsByTagName(t)[0]),
           (k.async = 1),
           (k.src = r),
-          a.parentNode.insertBefore(k, a);
+          a.parentNode.insertBefore(k, a));
       })(
         window,
         document,
         "script",
         "https://mc.yandex.ru/metrika/tag.js",
-        "ym"
+        "ym",
       );
 
       ym(99513608, "init", {

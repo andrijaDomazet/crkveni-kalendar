@@ -246,13 +246,13 @@ export const calendarYears = [
     ],
   },
 ];
-// export const inCalendarArr = [
-//   "div-gpt-ad-1724672473185-0",
-//   "div-gpt-ad-1724680335213-0",
-//   "div-gpt-ad-1724680376368-0",
-//   "div-gpt-ad-1724680398271-0",
-//   "div-gpt-ad-1724680417311-0",
-// ];
+export const inCalendarArr = [
+  "div-gpt-ad-1769765602091-0",
+  "div-gpt-ad-1769765622164-0",
+  "div-gpt-ad-1769765646981-0",
+  "div-gpt-ad-1769765669736-0",
+  "div-gpt-ad-1769765520606-0",
+];
 
 export const easterDays = [
   "Veliki ponedeljak",

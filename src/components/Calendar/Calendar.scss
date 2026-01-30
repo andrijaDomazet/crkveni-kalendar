@@ -81,7 +81,8 @@
     }
   }
   .calendar-table {
-    box-shadow: 0 10px 40px -5px rgba(139, 90, 43, 0.2),
+    box-shadow:
+      0 10px 40px -5px rgba(139, 90, 43, 0.2),
       0 4px 16px -4px rgba(139, 90, 43, 0.15);
     border: 1px solid #85614733;
     border-top-left-radius: 0.1rem;
@@ -246,6 +247,7 @@
   .calendar-month {
     box-shadow: 0 0px 2px $grey3;
     display: grid;
+    // grid-template-columns: repeat(3, 1fr);
     // display: flex;
     grid-template-columns: 3fr 2fr 3fr;
     justify-content: space-between;
@@ -253,17 +255,27 @@
     padding: 0.5rem 0;
     border-bottom-left-radius: 0.3rem;
     border-bottom-right-radius: 0.3rem;
+    .left{
+      display: flex;
+      // border: 1px solid red;
+      text-align: left;
+      // justify-content: left;
+      
+    }
+    .right{
+      text-align: right;
+    }
     button {
-      text-align: center;
+      // text-align: center;
       text-transform: capitalize;
-      flex: 1;
+      // flex: 1;
       border: none;
       line-height: 1.2rem;
       font-size: 1rem;
       color: $grey7;
       text-decoration: underline;
       i {
-        margin: 0 0.2rem;
+        margin: 0 0.5rem;
         font-size: 1rem;
       }
     }
@@ -401,18 +413,19 @@
       margin: 0;
       height: 50px;
       align-items: center;
+      padding: 0 2rem;
       .month-center {
         button {
           font-size: 1.4rem;
         }
       }
       button {
-        width: 100%;
-        font-size: 1.2rem;
+        // width: 100%;
+        font-size: 1.25rem;
         line-height: 1.6rem;
         cursor: pointer;
         i {
-          margin: 0 0.4rem;
+          margin: 0 0.6rem;
           font-size: 1rem;
         }
       }

@@ -6,6 +6,7 @@ import {
   calendarYears,
   redDaysId,
   easterDays,
+  inCalendarArr,
 } from "./calendar-data/calendar-data";
 import SimpleButton from "../../UI/Buttons/SimpleButton";
 import TimeFormat from "../TimeFormat/TimeFormat";
@@ -13,11 +14,10 @@ import { useGlobalLocation } from "../../shared/LocationContext";
 import { useIdContext } from "../../shared/IdProvider";
 import { renderTitleSection } from "../../shared/utility";
 import StickyAd from "../AdvModule/StickyAd";
+import AdManagerSlot from "../AdvModule/AdManagerSlot";
 
 export default function Calendar(props) {
-
-  let { id, currentDate, pageYear, pageMonth, holidays } =
-    useIdContext();
+  let { id, currentDate, pageYear, pageMonth, holidays } = useIdContext();
   pageMonth = props.isMonth2 ?? pageMonth;
 
   const location = useGlobalLocation();
@@ -51,7 +51,7 @@ export default function Calendar(props) {
         } else {
           return holidays.slice(
             currentDate.getDate() - short,
-            currentDate.getDate() + short
+            currentDate.getDate() + short,
           );
         }
       };
@@ -122,6 +122,7 @@ export default function Calendar(props) {
   };
   let inTextNumber = 0;
   const nedelje = [];
+  let classsesButtons = ["left", "month-center", "right"];
   return (
     <div className="calendar">
       {/* ---- Gornje ranfle kalendara ---- */}
@@ -171,11 +172,15 @@ export default function Calendar(props) {
                 {eventDay === 1 && (
                   <tr className="opisNedelje">
                     <td colSpan={5}>
-                      {/* {[1, 2, 3, 4, 5].includes(inTextNumber) && (
-                        <div className="banner-wrapper calendar">
-                          <AdManagerSlot adUnitPath={location.pathname} slotNumber={inCalendarArr[inTextNumber - 1]} />
+                      {[1, 2, 3, 4, 5].includes(inTextNumber) && (
+                        <div className="banner-wrapper inCalendar">
+                          {/* slotNumber={inCalendarArr[inTextNumber - 1]} */}
+                          <AdManagerSlot
+                            adUnitPath={location.pathname}
+                            slotNumber={inCalendarArr[inTextNumber - 1]}
+                          />
                         </div>
-                      )} */}
+                      )}
                     </td>
                   </tr>
                 )}
@@ -186,8 +191,8 @@ export default function Calendar(props) {
                     (item.today
                       ? ` ${item.today}`
                       : item.mainClass
-                      ? ` ${item.mainClass}`
-                      : "") +
+                        ? ` ${item.mainClass}`
+                        : "") +
                     // todayClass(new Date(item.date)) +
                     " dayClass"
                   }
@@ -224,7 +229,11 @@ export default function Calendar(props) {
       {/* ---- Donja ranfla kalendara ---- */}
       <div className="calendar-month">
         {[-1, 0, 1].map((offset) => (
-          <div key={offset} className={offset === 0 ? "month-center" : ``}>
+          <div
+            key={offset}
+            //  className={offset === 0 ? "month-center" : ``}
+            className={classsesButtons[offset + 1]}
+          >
             <SimpleButton clicked={() => changeMonth(offset)}>
               {offset === -1 && <i className="fa-solid fa-backward"></i>}
               {tableTitle(offset)}
