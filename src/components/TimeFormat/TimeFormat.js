@@ -36,7 +36,7 @@ const setTime = (postTime, classes) => {
     let beforeDate = date - 1000 * 60 * 60 * 24 * 13;
     beforeDate = new Date(beforeDate);
     let date2 = beforeDate.getDate();
-    let month = months[beforeDate.getMonth()];
+    // let month = months[beforeDate.getMonth()];
     return <>{date2}</>;
   } else if (classes === "onlyDay") {
     var date3 = new Date(postTime);

@@ -4,7 +4,6 @@
   padding-bottom: 0.3rem;
   background: #f2ece3;
   border: 1px solid #73263928;
-  // height: 100%;
   h2 {
     display: block;
     padding: 0.6rem 1rem;
@@ -16,21 +15,16 @@
     i {
       margin-right: 0.2rem;
       color: #732639;
-      // color: red;
     }
   }
   h2,
   a {
-    // text-transform: capitalize;
     color: #732639;
     line-height: 1.6rem;
   }
   .simpleBox-body {
-    // height: 100%;
     display: flex;
     flex-direction: column;
-    // border: 1px solid red;
-    // position: relative;
     .simpleBox-body-wrapper {
       padding: 0 0.1rem;
       color: #362417b3;
@@ -41,39 +35,26 @@
       ul {
         padding-left: 1.5rem;
         li {
-          // padding: 0.1rem 0;
           font-size: 0.9rem;
-          // padding-left: .5rem;
         }
       }
     }
     .secondBody {
-      // margin-top: auto;
-      margin: 0.5rem 1rem 0.5rem 1rem;
+      margin: 0.5rem 1rem;
       padding: 0.5rem 0;
-      border-top: 1px solid rgba(128, 128, 128, 0.596);
+      border-top: 1px solid rgba(128, 128, 128, 0.6);
     }
   }
 
   a {
     display: block;
-    // text-transform: capitalize;
     padding: 0.6rem 1rem;
   }
-  // &:hover{
-
-  // }
 }
 .simpleBox.hoverable {
-  // border: 1px solid transparent;
   border: 1px solid #8b5b3825;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    border-color 0.2s ease;
-  box-shadow:
-    0 10px 40px -5px rgba(139, 90, 43, 0.1),
-    0 4px 16px -4px rgba(139, 90, 43, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 10px 40px -5px rgba(139, 90, 43, 0.1), 0 4px 16px -4px rgba(139, 90, 43, 0.05);
   h2 {
     padding: 0.8rem 1rem;
     font-size: 1.4rem;
@@ -88,11 +69,7 @@
 }
 
 .simpleBox.orange {
-  // background: #f2ece3;
-  // border: 1px solid #73263928;
-  box-shadow:
-    0 10px 40px -5px rgba(139, 90, 43, 0.2),
-    0 4px 16px -4px rgba(139, 90, 43, 0.15);
+  box-shadow: 0 10px 40px -5px rgba(139, 90, 43, 0.2), 0 4px 16px -4px rgba(139, 90, 43, 0.15);
 
   h2 {
     background: #7326390d;
@@ -112,21 +89,17 @@
       }
     }
     a {
-      // border: 1px solid red;
       &:hover {
         text-decoration: underline;
       }
     }
   }
   .simpleBox.hoverable {
-
     &:hover {
-        background: #f7f1e9;
+      background: #f7f1e9;
       transform: translateY(-2px);
       border: 1px solid #8b5b3848;
-      box-shadow:
-        0 10px 40px -5px rgba(139, 90, 43, 0.2),
-        0 4px 16px -4px rgba(139, 90, 43, 0.15);
+      box-shadow: 0 10px 40px -5px rgba(139, 90, 43, 0.2), 0 4px 16px -4px rgba(139, 90, 43, 0.15);
     }
   }
 }

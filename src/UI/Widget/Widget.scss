@@ -10,7 +10,9 @@
     display: flex;
     justify-content: space-between;
     color: white;
+    padding: .3rem 0;
     a {
+      font-weight: 600;
       text-decoration: none;
       height: 2rem;
       line-height: 2rem;
@@ -49,7 +51,7 @@
         font-size: 2rem;
         line-height: 2.4rem;
         height: 2.4rem;
-        font-weight: 600;
+        // font-weight: 600;
       }
       span {
         font-size: 2rem;

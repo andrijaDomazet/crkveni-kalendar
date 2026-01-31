@@ -30,7 +30,7 @@
       margin: 0 auto;
       width: 100%;
       padding: 0 1rem;
-      gap: 1rem;
+      gap: 1.5rem;
       margin-bottom: 1.2rem;
     }
     .home__wrapper-center {
@@ -43,7 +43,7 @@
         display: flex;
         flex-direction: column;
         border-radius: 0.1rem;
-        gap: 1rem;
+        gap: 1.5rem;
         padding: 0 0.7rem;
         .home__molitva {
           border-radius: 0.1rem;
@@ -100,7 +100,7 @@
       width: 100%;
       padding: 0 1rem;
       margin: 0 auto;
-      gap: 1.2rem;
+      gap: 1.5rem;
       .midBox {
         margin-top: 1rem;
         display: flex;
@@ -204,24 +204,18 @@
       .home__wrapper-center {
         width: 728px;
         padding: 0;
-        // margin-right: 20px;
-        // width: calc(100% - 380px);
         .home__wrapper-center-first {
           padding: 0;
         }
         .home-afterZone {
           margin: 0;
           padding: 0;
-          display: flex;
-          flex-direction: row;
           display: grid;
+          flex-direction: row;
           grid-template-columns: 4fr 3fr;
           gap: 1rem;
 
           .home__molitva {
-            // width: 450px;
-            // margin: 1rem 0;
-
             img {
               width: 80%;
             }

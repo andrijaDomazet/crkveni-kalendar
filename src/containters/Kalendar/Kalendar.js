@@ -15,9 +15,6 @@ const CalendarMonthsLinksLazy = lazy(
 
 export default function Kalendar() {
   const { yearIndex } = useIdContext();
-  // let yearIndex = calendarYears[0].item_list.findIndex(
-  //   (item) => item.title == pageYear
-  // );
 
   return (
     <div className="kalendar">

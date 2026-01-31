@@ -3,21 +3,19 @@
 .preFooter {
   background: rgba(255, 255, 255, 0.397);
   border-top: 1px solid rgba(128, 128, 128, 0.452);
-
+  margin-top: 1.5rem;
   .preFooter-wrapper {
     margin: 0 auto;
-
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: .6rem;
-    gap: .6rem;
-
-    //   background: red;
+    padding: 0.6rem;
+    gap: 0.6rem;
   }
 }
 
 @media screen and (min-width: 768px) {
   .preFooter {
+    margin-top: 2.5rem;
     .preFooter-wrapper {
       width: 80%;
       grid-template-columns: repeat(3, 1fr);
