@@ -215,7 +215,8 @@ export const IdProvider = ({ children }) => {
       return "post";
     // 5) Bela nedelja (posle Uskrsa) i vikend posle Božića -> ne-post
     if (ts <= vikendPosleBozicaTs) return "";
-        if (ts > startNedeljaBludnogSinaTs&&ts <= endNedeljaBludnogSinaTs) return "";
+    if (ts > startNedeljaBludnogSinaTs && ts <= endNedeljaBludnogSinaTs)
+      return "";
     if (ts > easterTs && ts <= endBelaNedeljaTs) return "";
 
     // 6) Sreda ili petak (3 ili 5) osim ako je u notPostSet
@@ -426,6 +427,20 @@ export const IdProvider = ({ children }) => {
         item.mainTitle = item.title;
         item.extraLabel = "Istočni petak";
         item.separatorSymbol = "; ";
+      } else if (currentDay2 === 6 && diffInDays < 50 && diffInDays > 40) {
+        item.mainTitle = item.title;
+        item.extraLabel = "Teodorova subota";
+        item.separatorSymbol = "; ";
+      } else if (currentDay2 === 0 && diffInDays < 60 && diffInDays > 50) {
+        item.mainTitle = item.title;
+        item.extraLabel = "(Mesne poklade)";
+        item.strongClass = "blackStrong";
+        item.separatorSymbol = " ";
+      } else if (currentDay2 === 0 && diffInDays < 50 && diffInDays > 40) {
+        item.mainTitle = item.title;
+        item.extraLabel = "(Bele poklade)";
+        item.strongClass = "blackStrong";
+        item.separatorSymbol = " ";
       }
 
       //Materice, Oci
