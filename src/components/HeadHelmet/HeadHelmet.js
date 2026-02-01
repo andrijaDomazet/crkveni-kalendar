@@ -11,7 +11,7 @@ export default function HeadHelmet() {
   const loc = useLocation();
   let pathPart = loc.pathname.split("/");
   const [post, setPost] = useState(() => setArticleState());
-  console.log("TEST", pathPart);
+  // console.log("TEST", pathPart);
 
   useEffect(() => {
     setPost(setArticleState());

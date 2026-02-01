@@ -142,7 +142,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-copyright">
-        <p>&copy; 2025 crkveni-kalendar.net. Sva prava zadržana.</p>
+        <p>&copy; 2025 crkveni-kalendar.net. Sva prava zadržana | Dizajn i održavanje: <a href="https://tausolutions.rs/">TAUsolutions</a></p>
       </div>
     </footer>
   );

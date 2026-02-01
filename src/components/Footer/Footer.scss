@@ -7,7 +7,7 @@
   color: white;
   font-family: Arial, sans-serif;
   /* 2. Kratak Opis Sajta */
-  .footer-border{
+  .footer-border {
     height: 5px;
     background: linear-gradient(to right, #732639, #dfa620, #732639);
     width: 100%;
@@ -20,7 +20,8 @@
   }
 
   /* 3. Kolone (podrazumevani Mobile-First raspored) */
-  .footer-columns {  padding: 30px 20px;
+  .footer-columns {
+    padding: 30px 20px;
     /* Na mobilnom, sekcije (kolone) se ređaju jedna ispod druge */
     display: block;
   }
@@ -34,7 +35,7 @@
   .footer-columns div {
     display: flex;
     align-items: center;
-    gap: .5rem;
+    gap: 0.5rem;
     font-size: 1.1rem;
     color: #dfa620;
     font-weight: normal;
@@ -55,7 +56,8 @@
   }
 
   /* Stilovi za linkove */
-  .footer-columns a, p {
+  .footer-columns a,
+  p {
     text-decoration: none;
     color: #f6f3eeb3;
     font-weight: normal;
@@ -79,8 +81,16 @@
     margin-top: 1.5rem;
     font-size: 0.9rem;
     color: #e2d6c396;
-    text-shadow: 0 0 1px $grey1;
+    // color: #7e78729c;
+    // text-shadow: 0 0 1px $grey1;
     font-weight: normal;
+    a {
+      font-size: 0.9rem;
+      color: #e2d6c396;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
   .home__section5-bottom {
     text-align: center;

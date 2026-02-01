@@ -153,7 +153,7 @@ export default function Calendar(props) {
             <th>
               <span>{tableTitle(0)}</span>
             </th>
-            <th></th>
+            <th>    <span>Post</span></th>
           </tr>
         </thead>
         <tbody>

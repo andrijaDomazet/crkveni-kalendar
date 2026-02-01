@@ -138,6 +138,20 @@ export const IdProvider = ({ children }) => {
     const startGospojinskiPostTs = toTs(pageYear, 7, 14);
     const endGospojinskiPostTs = toTs(pageYear, 7, 27);
 
+    // Nedelja bludnog sin (pre poceka Uskrsnjeg posta)
+    const startNedeljaBludnogSinaTs = (() => {
+      const d = new Date(easterTs);
+      d.setDate(d.getDate() - 70);
+      d.setHours(0, 0, 0, 0);
+      return d.getTime();
+    })();
+    const endNedeljaBludnogSinaTs = (() => {
+      const d = new Date(easterTs);
+      d.setDate(d.getDate() - 63);
+      d.setHours(0, 0, 0, 0);
+      return d.getTime();
+    })();
+
     // Bela nedelja (posle Uskrsa)
     const endBelaNedeljaTs = (() => {
       const d = new Date(easterTs);
@@ -150,6 +164,8 @@ export const IdProvider = ({ children }) => {
       bozicniPostStartTs,
       bozicniPostEndTs,
       vikendPosleBozicaTs,
+      startNedeljaBludnogSinaTs,
+      endNedeljaBludnogSinaTs,
       easterTs,
       startEasterTs: startEasterTs,
       endEasterTs: endEasterTs,
@@ -174,6 +190,8 @@ export const IdProvider = ({ children }) => {
       bozicniPostStartTs,
       bozicniPostEndTs,
       vikendPosleBozicaTs,
+      startNedeljaBludnogSinaTs,
+      endNedeljaBludnogSinaTs,
       easterTs,
       startEasterTs,
       endEasterTs,
@@ -197,7 +215,9 @@ export const IdProvider = ({ children }) => {
       return "post";
     // 5) Bela nedelja (posle Uskrsa) i vikend posle Božića -> ne-post
     if (ts <= vikendPosleBozicaTs) return "";
+        if (ts > startNedeljaBludnogSinaTs&&ts <= endNedeljaBludnogSinaTs) return "";
     if (ts > easterTs && ts <= endBelaNedeljaTs) return "";
+
     // 6) Sreda ili petak (3 ili 5) osim ako je u notPostSet
     const day = new Date(ts).getDay();
     if ((day === 3 || day === 5) && !notPostSet.has(ts)) return "post";
@@ -233,6 +253,7 @@ export const IdProvider = ({ children }) => {
     secondLastSunday.setDate(lastSundayOfDecember.getDate() - 7);
     return secondLastSunday;
   };
+
   const getSundaysBeforeChristmas = (year) => {
     const result = [];
     const result1 = [];
