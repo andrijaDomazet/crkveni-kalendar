@@ -31,7 +31,10 @@
     "news_id": 5,
     "time": "26. januar",
     "category": "Ostalo",
-    "pics": ["https://res.cloudinary.com/dvi29tcsc/image/upload/v1769460348/crkveniKalendar/hriscanski-post_hlzs1x.jpg", "AI ilustracija"],
+    "pics": [
+      "https://res.cloudinary.com/dvi29tcsc/image/upload/v1769460348/crkveniKalendar/hriscanski-post_hlzs1x.jpg",
+      "AI ilustracija"
+    ],
     "title": "Hrišćanski post",
     "title_2": "",
     "lead": "Hrišćanski post u pravoslavlju nije samo uzdržavanje od hrane, već duboki duhovni podvig koji vernike vodi ka smirenju, samodisciplini i unutrašnjem preobražaju",
@@ -147,12 +150,12 @@
         "text": "Pre dolaska hrišćanstva, Srbi su bili mnogobožački narod, poštujući Peruna kao vrhovnog boga, dok su u domovima gajili kult domaćih božanstava. Kada je Sveti Sava uveo hrišćanstvo, umesto starih božanstava, srpske porodice su za zaštitnike preuzele hrišćanske svetitelje, što je dovelo do nastanka krsne slave.",
         "textQuote": "<h2>Koja je danas slava?</h2><p>Kompletan spisak pravoslavnih slava i svetitelja koji se obeležavaju tokom tekućeg meseca, pronađite u našem pravoslavnom kalendaru - svi datumi i svetitelji nalaze se na ovom <a href=\"https://crkveni-kalendar.net/2026/\">linku</a>.</p>"
       },
-      { "component": "TodayBox",
+      {
+        "component": "TodayBox",
         "subtitle": "",
         "text": "<strong>Krsna slava</strong> je postala jedan od najvažnijih porodičnih praznika, prenošen s kolena na koleno. Svaka porodica slavi svetitelja pod čijim se okriljem nalazi, slično kao što su hrišćanski hramovi posvećeni određenim svecima."
       },
       {
-       
         "subtitle": "",
         "text": "U pojedinim krajevima Srbije, Bosne i Hercegovine i Crne Gore, običaj je da se gosti dočekuju uoči slave. Ova praksa je nastala iz praktičnih i istorijskih razloga - nekada su ljudi dolazili iz udaljenih mesta dan ranije, dok su u teškim vremenima, poput osmanske vladavine i komunističkog režima, Srbi često slavili svoju slavu u tajnosti tokom noći."
       },
@@ -189,8 +192,8 @@
       "Pexels"
     ],
     "title": "Zadušnice",
-    "title_2": "",
-    "lead": "Zadušnice su hrišćanski pravoslavni praznik koji je posvećen sećanju na preminule. Praznuje se ne samo ukazivanjem poštovanja našim precima već i kroz velikodušnost i milostinju prema sirotinji i onima kojima je to potrebno",
+    "title_2": "Zadušnice u 2026. godini",
+    "lead": "Kada su Zadušnice 2026? Ovaj pravoslavni praznik uvek pada u subotu i posvećen je sećanju na preminule",
     "body": [
       {
         "subtitle": "Šta su Zadušnice i kada se obeležavaju?",

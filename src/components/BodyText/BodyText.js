@@ -50,7 +50,7 @@ const setComponent = (item) => {
     const Component = dynamicComponents[item.component];
     return (
       <Suspense fallback={<div></div>}>
-        <Component classes="horizontal"/>
+        <Component classes="horizontal" />
       </Suspense>
     );
   }
