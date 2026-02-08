@@ -4,7 +4,7 @@
 // },
 import React, { useMemo } from "react";
 import { createContext, useContext } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 // import data from "../all__news";
 import {
   calendarYears,
@@ -90,6 +90,7 @@ export const IdProvider = ({ children }) => {
   endEasterDate.setDate(easterDate.getDate() - 1);
   const startEasterDate = new Date(easterDate);
   startEasterDate.setDate(easterDate.getDate() - 48);
+  console.log("Start", startEasterDate);
 
   // helper koji vrati timestamp u ponoć
   const toTs = (y, m, d) => new Date(y, m, d).setHours(0, 0, 0, 0);
@@ -403,6 +404,9 @@ export const IdProvider = ({ children }) => {
       } else if (diffInDays == -57) {
         item.mainTitle = item.title;
         item.extraLabel = "(Početak Petrovskog posta)";
+      } else if (diffInDays == 48) {
+        item.mainTitle = item.title;
+        item.extraLabel = "(Početak Vaskršnjeg posta)";
       } else if (currentDay2 === 6 && diffInDays > 5 && diffInDays < 10) {
         item.mainTitle = item.title;
         item.extraLabel = "Lazareva subota (Vrbica)";
