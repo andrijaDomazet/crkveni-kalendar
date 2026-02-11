@@ -5,6 +5,7 @@ import AdManagerSlot from "../AdvModule/AdManagerSlot";
 import { useGlobalLocation } from "../../shared/LocationContext.js";
 import Zadusnice from "../Boxes/Zadusnice/Zadusnice.js";
 import TodayBox from "../Boxes/TodayBox/TodayBox.js";
+import OnNetworkVideo from "../AdvModule/OnNetworkVideo.js";
 const dynamicComponents = {
   Zadusnice,
   TodayBox,
@@ -71,6 +72,11 @@ export default function BodyText(props) {
               <p dangerouslySetInnerHTML={{ __html: item["text"] }}></p>
               {setQuote(item)}
               {setImg(item)}
+
+              {pathPart[1] !== "molitvenik" && pathPart[1] !== "" && (
+                <OnNetworkVideo sid="NVNnLDAsMVd4" />
+              )}
+              {/* NVNnLDAsMVd4 */}
               {pathPart[1] !== "molitvenik" && pathPart[1] !== "" && (
                 <div className="banner-wrapper">
                   <AdManagerSlot slotNumber={"div-gpt-ad-1750930023966-0"} />

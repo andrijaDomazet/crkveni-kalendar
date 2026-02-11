@@ -1,0 +1,23 @@
+@import "../../index.scss";
+
+.video-embed-wrapper {
+  margin: 20px 0;
+  padding: 12px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  text-align: center;
+  .video-embed-title {
+    margin-bottom: 12px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #333;
+  }
+  .video-embed-container iframe {
+    width: 100%;
+    max-width: 640px;
+    height: 360px;
+    border: none;
+    border-radius: 6px;
+  }
+}

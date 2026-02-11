@@ -105,3 +105,51 @@ export const getDayMonth = (date) => ({
 
 export const toMidnightTs = (date) =>
   new Date(date.getFullYear(), date.getMonth(), date.getDate()).getTime();
+
+export const getDaysInMonth = (year, month) => {
+  const daysCount = new Date(year, month + 1, 0).getDate();
+
+  return Array.from(
+    { length: daysCount },
+    (_, i) => new Date(year, month, i + 1),
+  );
+};
+
+export const getFullCalendar = (year, month) => {
+  const firstDayRaw = new Date(year, month, 1).getDay();
+  const firstDay = firstDayRaw === 0 ? 6 : firstDayRaw - 1;
+
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+  const daysInPrevMonth = new Date(year, month, 0).getDate();
+
+  const calendar = [];
+
+  // Prethodni mesec
+  for (let i = firstDay; i > 0; i--) {
+    calendar.push({
+      day: daysInPrevMonth - i + 1,
+      currentMonth: false,
+    });
+  }
+
+  // Trenutni mesec
+  for (let i = 1; i <= daysInMonth; i++) {
+    calendar.push({
+      day: i,
+      currentMonth: true,
+    });
+  }
+
+  // Sledeći mesec
+  let nextMonthDay = 1;
+
+  while (calendar.length % 7 !== 0) {
+    calendar.push({
+      day: nextMonthDay,
+      currentMonth: false,
+    });
+    nextMonthDay++;
+  }
+
+  return calendar;
+};

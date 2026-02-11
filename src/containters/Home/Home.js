@@ -10,6 +10,7 @@ import { calendarYears } from "../../components/Calendar/calendar-data/calendar-
 import { useIdContext } from "../../shared/IdProvider.js";
 import TodayBox from "../../components/Boxes/TodayBox/TodayBox.js";
 import SimpleBox from "../../components/Boxes/SimpleBox/SimpleBox.js";
+import MonthBox from "../../components/Boxes/MonthBox/MonthBox.js";
 
 const WidgetLazy = lazy(() => import("../../UI/Widget/Widget.js"));
 const CalendarMonthsLinksLazy = lazy(
@@ -27,10 +28,11 @@ export default function Home() {
       </div>
       <section className="home__wrapper">
         <div className="home__wrapper-center">
+          {/* <MonthBox/> */}
           <div className="home__wrapper-center-first">
             <NextMonthBox />
           </div>
-          <Calendar shortCal={6} soc={false} />
+          <Calendar shortCal={5} soc={false} />
           <section className="calendar-2026">
             <h2>📅 Crkveni kalendar 2026</h2>
             <p>
@@ -116,6 +118,7 @@ export default function Home() {
           />
         </div>
         <div className="home__wrapper-right">
+          {/* <MonthBox /> */}
           <div className="midBox">
             <div className="midBox-title">
               <svg
