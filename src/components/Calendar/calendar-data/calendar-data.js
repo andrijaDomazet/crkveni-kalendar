@@ -133,8 +133,8 @@ export const daysIsPost = [
 export const daysIsNotPost = [
   [0, 7],
   [0, 19],
-  [1, 16],
-  [1, 18],
+  // [1, 16],
+  // [1, 18],
 ];
 export const manualDateEaster = [
   "4-19",

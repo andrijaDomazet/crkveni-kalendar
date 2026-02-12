@@ -19,7 +19,7 @@ const CalendarMonthsLinksLazy = lazy(
 
 export default function Home() {
   const { yearIndex } = useIdContext();
-  // console.log("YearIndex home", yearIndex);
+ 
 
   return (
     <div className="home">
@@ -28,7 +28,7 @@ export default function Home() {
       </div>
       <section className="home__wrapper">
         <div className="home__wrapper-center">
-          {/* <MonthBox/> */}
+          {/* <MonthBox /> */}
           <div className="home__wrapper-center-first">
             <NextMonthBox />
           </div>
@@ -118,7 +118,6 @@ export default function Home() {
           />
         </div>
         <div className="home__wrapper-right">
-          {/* <MonthBox /> */}
           <div className="midBox">
             <div className="midBox-title">
               <svg
