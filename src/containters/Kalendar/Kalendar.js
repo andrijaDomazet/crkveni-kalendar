@@ -4,6 +4,7 @@ import "./Kalendar.scss";
 import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
 import { calendarYears } from "../../components/Calendar/calendar-data/calendar-data.js";
 import { useIdContext } from "../../shared/IdProvider.js";
+import OnNetworkVideo from "../../components/AdvModule/OnNetworkVideo.js";
 
 const WidgetLazy = lazy(() => import("../../UI/Widget/Widget.js"));
 const ZadusniceLazy = lazy(
@@ -24,6 +25,7 @@ export default function Kalendar() {
       <div className="kalendar-wrapper">
         <div className="kalendar-left">
           <Calendar />
+          <OnNetworkVideo sid="NVNnLDAsMVd4" />
           <Suspense fallback={<div></div>}>
             <CalendarMonthsLinksLazy />
           </Suspense>

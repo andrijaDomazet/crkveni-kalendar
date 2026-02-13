@@ -34,14 +34,19 @@
 
 // export default OnNetworkVideo;
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
+import "./OnNetwork.scss";
 
-const OnNetworkVideo = ({ sid }) => {
+const OnNetworkVideo = ({ sid, title }) => {
+  const containerRef = useRef(null);
+  const location = useLocation();
+
   useEffect(() => {
-    const container = document.getElementById(`video-container-${sid}`);
+    const container = containerRef.current;
     if (!container) return;
 
-    // 🔥 Očisti prethodni sadržaj (iframe itd.)
+    // očisti stari video
     container.innerHTML = "";
 
     const script = document.createElement("script");
@@ -49,18 +54,22 @@ const OnNetworkVideo = ({ sid }) => {
     script.async = true;
 
     container.appendChild(script);
-  }, [sid]);
+
+    return () => {
+      container.innerHTML = "";
+    };
+  }, [location.pathname]); // 🔥 reaguje na promenu članka
 
   return (
     <div className="video-embed-wrapper">
-      <p className="video-embed-cta">🎥 Ovaj video će vam biti zanimljiv</p>
-      <div className="video-arrows">👇👇👇</div>
-      <div
-        id={`video-container-${sid}`}
-        className="video-embed-container"
-      ></div>
+      <p className="video-embed-title">
+        {title || "Ovaj video će vam biti zanimljiv 👇👇👇"}
+      </p>
+
+      <div ref={containerRef} className="video-embed-container"></div>
     </div>
   );
 };
 
 export default OnNetworkVideo;
+
