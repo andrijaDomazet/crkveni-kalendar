@@ -1,11 +1,12 @@
 export const days = [
-  "Nedelja",
+  // "Nedelja",
   "Ponedeljak",
   "Utorak",
   "Sreda",
   "Četvrtak",
   "Petak",
   "Subota",
+  "Nedelja",
 ];
 export const monthSerb = [
   "januar",

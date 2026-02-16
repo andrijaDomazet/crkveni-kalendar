@@ -1,6 +1,7 @@
 import "./MonthBox.scss";
 import { getDayMonth, getFullCalendar } from "../../../shared/utility";
 import { useIdContext } from "../../../shared/IdProvider";
+import { days } from "../../Calendar/calendar-data/calendar-data";
 
 export default function MonthBox() {
   let { currentDate, holidays } = useIdContext();
@@ -11,6 +12,11 @@ export default function MonthBox() {
   return (
     <div className="monthBox">
       <h2>Februar 2026</h2>
+      <div className="monthBox-header">{
+        days.map((item)=>{
+          return <span>{item.substring(0,3)}</span>
+        })
+        }</div>
       <div className="monthBox-wrapper">
         {daysMonth.map((item, index) => (
           <div
@@ -19,9 +25,9 @@ export default function MonthBox() {
           >
             <strong>{item.day}</strong>
             {holidays[item.day - 1]?.post && (
-              <strong className="monthBox-post">
+              <span className="monthBox-post">
                 {holidays[item.day - 1].post}
-              </strong>
+              </span>
             )}
           </div>
         ))}
