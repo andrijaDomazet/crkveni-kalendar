@@ -1,0 +1,26 @@
+@import "../../index.scss";
+
+.names {
+  display: grid;
+  gap: 1rem;
+  table {
+    background: #f9f6f1;
+    thead {
+      tr {
+        th {
+          padding: 0.3rem 0;
+          background: grey;
+          color: white;
+        }
+      }
+    }
+    tbody {
+      tr {
+        padding: 0.15rem;
+        td {
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
+}

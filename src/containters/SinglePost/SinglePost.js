@@ -10,6 +10,7 @@ import PostImage from "./img/PostImage";
 import data from "../../all__news.json";
 import { calendarYears } from "../../components/Calendar/calendar-data/calendar-data.js";
 import { useIdContext } from "../../shared/IdProvider.js";
+// import ImenoslovTabela from "../../components/Boxes/Names.js";
 
 const WidgetLazy = lazy(() => import("../../UI/Widget/Widget.js"));
 const ZadusniceLazy = lazy(() =>
@@ -17,6 +18,9 @@ const ZadusniceLazy = lazy(() =>
 );
 const CrossingDataLazy = lazy(() =>
   import("../../components/CrossingData/CrossingData.js")
+);
+const ImenoslovTabelaLazy = lazy(() =>
+  import("../../components/Boxes/Names.js")
 );
 
 export default function SinglePost() {
@@ -94,6 +98,14 @@ export default function SinglePost() {
                   </Suspense>
                 )}
               </div>
+              <div>
+                {pathPart[1] === "imenoslov" && (
+                  <Suspense fallback={<div></div>}>
+                    <ImenoslovTabelaLazy />
+                  </Suspense>
+                )}
+              </div>
+              {/* <ImenoslovTabela/> */}
               <div className="banner-wrapper">
                 <AdManagerSlot slotNumber={"div-gpt-ad-1750409157804-0"} />
               </div>

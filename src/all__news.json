@@ -3,14 +3,14 @@
     "news_id": 4,
     "time": "1. jun",
     "category": "povrtarstvo",
-    "pics": ["/img/noMatch/noMatch.png", "crkveni-kalendar.net"],
+    "pics": ["https://res.cloudinary.com/dvi29tcsc/image/upload/v1771535518/crkveniKalendar/srpska-imena_i0wwcy.jpg", "AI ilustracija"],
     "title": "Imenoslov",
     "title_2": "",
     "lead": "",
     "body": [
       {
-        "subtitle": "Stranica je u pripremi...",
-        "text": ""
+        "subtitle": "",
+        "text": "Dobrodošli na Imenoslov, stranicu na kojoj ćete pronaći sve srpske muške i ženske ime. Ovde su sabrana tradicionalna i moderna imena, tako da možete lako pregledati i pronaći ime koje vas zanima."
       },
       {
         "subtitle": "",
@@ -18,13 +18,7 @@
       }
     ],
     "tags": [
-      "Pravoslavne molitve",
-      "Molitvenik",
-      "Jutarnje molitve",
-      "Večernje molitve",
-      "Molitve za svaki dan",
-      "Pravoslavna vera"
-    ],
+      "Srpska imena", "Imena po abecedi","Muška i ženska imena"],
     "source": "crkveni-kalendar"
   },
   {
