@@ -73,6 +73,7 @@ export const blackDays = [
   "Sveti sveštenomučenik Haralampije",
   "Prepodobni Simeon Mirotočivi",
   "Sveti velikomučenik Teodor Tiron",
+  "Prvo i drugo obretenje glave Svetog Jovana Krstitelja",
   "Svetih 40 mučenika Sevastijskih - Mladenci",
   "Sveti Aleksije Čovek Božji",
   "Sveti apostol i jevanđelist Marko - Markovdan",

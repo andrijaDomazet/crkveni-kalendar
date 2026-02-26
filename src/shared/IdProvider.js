@@ -366,6 +366,7 @@ export const IdProvider = ({ children }) => {
       } else if (diffInDays == -24) {
         item.mainTitle = item.title;
         item.extraLabel = "(Prepolovljenje)";
+        item.strongClass = "blackStrong";
       } else if (diffInDays == -31) {
         item.mainTitle = item.title;
         item.extraLabel = "(Odanije Prepolovljenja)";
@@ -440,7 +441,7 @@ export const IdProvider = ({ children }) => {
         item.extraLabel = "(Mesne poklade)";
         item.strongClass = "blackStrong";
         item.separatorSymbol = " ";
-      } else if (currentDay2 === 0 && diffInDays < 50 && diffInDays > 40) {
+      } else if (currentDay2 === 0 && diffInDays < 50 && diffInDays > 45) {
         item.mainTitle = item.title;
         item.extraLabel = "(Bele poklade)";
         item.strongClass = "blackStrong";
