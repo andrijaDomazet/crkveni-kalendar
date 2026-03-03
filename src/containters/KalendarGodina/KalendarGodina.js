@@ -10,6 +10,7 @@ import {
 import SimpleBox from "../../components/Boxes/SimpleBox/SimpleBox.js";
 import TodayBox from "../../components/Boxes/TodayBox/TodayBox.js";
 import { getDayMonth } from "../../shared/utility.js";
+import MidBox from "../../components/Boxes/MidBox/MidBox.js";
 
 const WidgetLazy = lazy(() => import("../../UI/Widget/Widget.js"));
 const ZadusniceLazy = lazy(
@@ -22,10 +23,14 @@ export default function KalendarGodina() {
     easterDay,
     startEasterTs,
     endEasterTs,
-    slug,
+    // slug,
+    // currentYear,
+    pageYear,
     petrovPostStartDate,
   } = useIdContext();
-  const pageYear = Number(slug);
+  // const pageYear = currentYear;
+  console.log("Page year", pageYear);
+
   const years = [2026, 2027, 2028];
   const otherYears = years.filter((y) => y !== pageYear);
   const buttonText = otherYears.map((year) => [
@@ -80,6 +85,8 @@ export default function KalendarGodina() {
           <div className="banner-wrapper fix-size-mediumRectangle">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750930023966-0"} />
           </div>
+
+          {/* <MidBox /> */}
           <SimpleBox
             classes="green"
             linkText="/hriscanski-post/"
@@ -92,7 +99,7 @@ export default function KalendarGodina() {
             ]}
             buttonText="Hrišćanski postovi →"
           />
-          <SimpleBox
+            <SimpleBox
             classes="orange"
             mainTitle="Ostale godine"
             buttonText={buttonText}
@@ -116,7 +123,7 @@ export default function KalendarGodina() {
             mainBody={`Vaskrs (Uskrs) u ${pageYear}. godini pada na ${day}. ${month} po novom kalendaru.`}
             buttonText={`Kalendar za ${month} ${pageYear}. →`}
           />
-
+        
           <div className="banner-wrapper xl_sticky">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750411708088-0"} />
           </div>

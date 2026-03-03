@@ -24,93 +24,55 @@ export default function App() {
   return (
     <Router>
       <LocationProvider>
-        <HeadHelmet />
-        <ScrollToTop />
-        <Bars />
-        <Routes>
-          <Route path="/" element={React.createElement(withIdProvider(Home))} />
-          {/* <Route
-            path="/o-nama/"
-            element={React.createElement(withIdProvider(SimplePage))}
-          /> */}
-          <Route
-            path="/:slug/"
-            exact="true"
-            element={React.createElement(withIdProvider(KalendarGodina))}
-          />
-          <Route
-            path="/:slug/:id/"
-            exact="true"
-            element={React.createElement(withIdProvider(Kalendar))}
-          />
-          <Route
-            path="/meseceve-mene/"
-            exact="true"
-            element={React.createElement(withIdProvider(SinglePost))}
-          />
-          <Route
-            path="/zadusnice/"
-            exact="true"
-            element={React.createElement(withIdProvider(SinglePost))}
-          />
-          <Route
-            path="/slave/"
-            exact="true"
-            element={React.createElement(withIdProvider(SinglePost))}
-          />
-          {/* <Route
+        <IdProvider>
+          <HeadHelmet />
+          <ScrollToTop />
+          <Bars />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/:slug/" exact="true" element={<KalendarGodina />} />
+            <Route path="/:slug/:id/" exact="true" element={<Kalendar />} />
+            <Route
+              path="/meseceve-mene/"
+              exact="true"
+              element={<SinglePost />}
+            />
+            <Route path="/zadusnice/" exact="true" element={<SinglePost />} />
+            <Route path="/slave/" exact="true" element={<SinglePost />} />
+            {/* <Route
             path="/slave/:test"
             exact="true"
             element={React.createElement(withIdProvider(SinglePost))}
           /> */}
-          {/* <Route
+            {/* <Route
             path="/danas-je/"
             exact="true"
             element={React.createElement(withIdProvider(TodayPage))}
           /> */}
-          <Route
-            path="/imenoslov/"
-            exact="true"
-            element={React.createElement(withIdProvider(SinglePost))}
-          />
-          <Route
-            path="/hriscanski-post/"
-            exact="true"
-            element={React.createElement(withIdProvider(SinglePost))}
-          />
-          <Route
-            path="/molitvenik/"
-            exact="true"
-            element={React.createElement(withIdProvider(SinglePost))}
-          />
-          <Route
-            path="/molitvenik/:test"
-            exact="true"
-            element={React.createElement(withIdProvider(SinglePost2))}
-          />
-          <Route
-            path="/widget/"
-            exact="true"
-            element={React.createElement(withIdProvider(Calendar))}
-          />
-
-          {/* <Route
+            <Route path="/imenoslov/" exact="true" element={<SinglePost />} />
+            <Route
+              path="/hriscanski-post/"
+              exact="true"
+              element={<SinglePost />}
+            />
+            <Route path="/molitvenik/" exact="true" element={<SinglePost />} />
+            <Route
+              path="/molitvenik/:test"
+              exact="true"
+              element={<SinglePost2 />}
+            />
+            <Route path="/widget/" exact="true" element={<Calendar />} />
+            {/* <Route
           path="/:slug"
           element={React.createElement(withIdProvider(SimplePage))}
           /> */}
-
-          <Route
-            path="/info/:slug/"
-            element={React.createElement(withIdProvider(SimplePage))}
-          />
-          <Route
-            path="*"
-            element={React.createElement(withIdProvider(NoMatch))}
-          />
-        </Routes>
-        <PreFooter />
-        <IdProvider>
+            <Route path="/info/:slug/" element={<SimplePage />} />
+            <Route path="*" element={<NoMatch />} />
+          </Routes>
+          <PreFooter />
+          {/* <IdProvider> */}
           <Footer />
+          {/* </IdProvider> */}{" "}
         </IdProvider>
       </LocationProvider>
     </Router>

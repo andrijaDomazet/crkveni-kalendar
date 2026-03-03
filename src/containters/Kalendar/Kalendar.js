@@ -15,7 +15,7 @@ const CalendarMonthsLinksLazy = lazy(
 );
 
 export default function Kalendar() {
-  const { yearIndex } = useIdContext();
+  const { yearIndex,pageYear } = useIdContext();
 
   return (
     <div className="kalendar">
@@ -39,8 +39,8 @@ export default function Kalendar() {
         <div className="kalendar-right">
           <Suspense fallback={<div></div>}>
             <ZadusniceLazy
-              setYear={2026}
-              boxTitle={`🕯 Zadušnice u ${2026}. godini`}
+              setYear={pageYear}
+              boxTitle={`🕯 Zadušnice u ${pageYear}. godini`}
               data={calendarYears[0].item_list[yearIndex]}
             />
           </Suspense>

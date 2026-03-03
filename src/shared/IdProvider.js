@@ -2,9 +2,9 @@
 //   "date": [1, 27],
 //   "title": "Prepodobni Avksentije i Sveti Kiril slovenski – Ćirilovdan (ako pada u Veliki post, pomera se na nedelju siropusnu)"
 // },
-import React, { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { createContext, useContext } from "react";
-import { useParams } from "react-router-dom";
+import { matchPath, useLocation } from "react-router-dom";
 // import data from "../all__news";
 import {
   calendarYears,
@@ -23,14 +23,14 @@ const IdContext = createContext();
 export const useIdContext = () => useContext(IdContext);
 
 export const IdProvider = ({ children }) => {
-  const currentDate = new Date();
+  // const currentDate = new Date();
+  // const currentDate = useMemo(() => {
+  //   const d = new Date();
+  //   d.setHours(0, 0, 0, 0);
+  //   return d;
+  // }, []);
   // console.log("currentDate", currentDate);
 
-  let currentDay = currentDate.getDate();
-  // console.log("currentDay", currentDay);
-
-  let dayName = days[currentDate.getDay()];
-  const monthName = monthSerb[currentDate.getMonth()];
   // let todayHoliday;
 
   // // --- AUTO RELOAD KADA SE PROMENI DAN ---
@@ -65,10 +65,44 @@ export const IdProvider = ({ children }) => {
   // }, []);
   // // --- END AUTO RELOAD ---
 
+  // const { slug, id } = useParams();
+  const location = useLocation();
+
+  // probaj da izvadiš slug i id iz URL-a
+  const match = matchPath("/:slug/:id?", location.pathname);
+  const slug = match?.params?.slug;
+  const id = match?.params?.id;
+  // console.log("SLUG", slug);
+  const currentDate = useMemo(() => {
+    const d = new Date();
+    d.setHours(0, 0, 0, 0);
+    return d;
+  }, []);
+
+  const [pageYear, setPageYear] = useState(() => {
+    const parsed = Number(slug);
+    return !isNaN(parsed) ? parsed : new Date().getFullYear(); // fallback na danasnju godinu
+  });
+
+  useEffect(() => {
+    const parsed = Number(slug);
+    if (!isNaN(parsed)) {
+      if (parsed !== pageYear) setPageYear(parsed);
+    } else {
+      // Nema slug → vraćamo na danasnju godinu
+      if (pageYear !== currentDate.getFullYear())
+        setPageYear(currentDate.getFullYear());
+    }
+  }, [slug, pageYear, currentDate]);
+
   const currentYear = currentDate.getFullYear();
 
-  const { slug, id } = useParams();
-  const pageYear = Number(slug) || currentDate.getFullYear();
+  let currentDay = currentDate.getDate();
+  // console.log("currentDay", currentDay);
+
+  let dayName = days[currentDate.getDay()];
+  const monthName = monthSerb[currentDate.getMonth()];
+
   let yearIndex = calendarYears[0].item_list.findIndex(
     (item) => item.title == pageYear,
   );
@@ -111,7 +145,7 @@ export const IdProvider = ({ children }) => {
       easterDay.getMonth(),
       easterDay.getDate() - 48,
     );
-    let e = new Date(startEasterDate);
+    // let e = new Date(startEasterDate);
     // console.log("startEasterTs", postLookup);
 
     const endEasterTs = toTs(

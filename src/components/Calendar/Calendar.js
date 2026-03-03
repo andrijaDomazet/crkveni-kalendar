@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { lazy, Suspense, useState } from "react";
 import "./Calendar.scss";
 import { NavLink, useNavigate } from "react-router-dom";
 import {
@@ -13,9 +13,9 @@ import TimeFormat from "../TimeFormat/TimeFormat";
 import { useGlobalLocation } from "../../shared/LocationContext";
 import { useIdContext } from "../../shared/IdProvider";
 import { renderTitleSection } from "../../shared/utility";
-import StickyAd from "../AdvModule/StickyAd";
 import AdManagerSlot from "../AdvModule/AdManagerSlot";
 
+const StickyAdLazy = lazy(() => import("../AdvModule/StickyAd.js"));
 export default function Calendar(props) {
   let { id, currentDate, pageYear, pageMonth, holidays } = useIdContext();
   pageMonth = props.isMonth2 ?? pageMonth;
@@ -153,7 +153,10 @@ export default function Calendar(props) {
             <th>
               <span>{tableTitle(0)}</span>
             </th>
-            <th>    <span>Post</span></th>
+            <th>
+              {" "}
+              <span>Post</span>
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -243,11 +246,12 @@ export default function Calendar(props) {
         ))}
       </div>
       {/* ---- END Donja ranfla kalendara ---- */}
-
-      <StickyAd
-        adUnitPath={location.pathname}
-        slotNumber={"div-gpt-ad-1768472077826-0"}
-      />
+      <Suspense fallback={<div></div>}>
+        <StickyAdLazy
+          adUnitPath={location.pathname}
+          slotNumber={"div-gpt-ad-1768472077826-0"}
+        />
+      </Suspense>
     </div>
   );
 }

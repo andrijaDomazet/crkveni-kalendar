@@ -6,6 +6,9 @@ const LocationContext = createContext();
 export const useGlobalLocation = () => useContext(LocationContext);
 
 export const LocationProvider = ({ children }) => {
+  // const {slug}=useParams();
+  // console.log("Slug Location", slug);
+  
   const location = useLocation();
 
   const pathPart = location.pathname.split("/");
