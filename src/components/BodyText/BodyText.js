@@ -2,10 +2,11 @@ import React from "react";
 import { lazy, Suspense } from "react";
 import "./BodyText.scss";
 import AdManagerSlot from "../AdvModule/AdManagerSlot";
-import { useGlobalLocation } from "../../shared/LocationContext.js";
+// import { useGlobalLocation } from "../../shared/LocationContext.js";
 import Zadusnice from "../Boxes/Zadusnice/Zadusnice.js";
 import TodayBox from "../Boxes/TodayBox/TodayBox.js";
 import OnNetworkVideo from "../AdvModule/OnNetworkVideo.js";
+import { useRouteContext } from "../../shared/RouteProvider.js";
 const dynamicComponents = {
   Zadusnice,
   TodayBox,
@@ -59,7 +60,7 @@ const setComponent = (item) => {
 };
 
 export default function BodyText(props) {
-  const { pathPart } = useGlobalLocation();
+  const { pathPart } = useRouteContext();
 
   return (
     <div className="bodyText">

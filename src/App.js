@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import "./App.scss";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./containters/Home/Home";
@@ -6,9 +6,6 @@ import Home from "./containters/Home/Home";
 import Kalendar from "./containters/Kalendar/Kalendar";
 import Calendar from "./components/Calendar/Calendar";
 import Bars from "./components/Bars/Bars";
-import { LocationProvider } from "./shared/LocationContext";
-import { IdProvider } from "./shared/IdProvider";
-import { withIdProvider } from "./shared/HOC";
 import ScrollToTop from "./UI/ScrollToTop/ScrollToTop";
 import HeadHelmet from "./components/HeadHelmet/HeadHelmet";
 import KalendarGodina from "./containters/KalendarGodina/KalendarGodina";
@@ -18,16 +15,19 @@ import NoMatch from "./containters/NoMatch/NoMatch";
 import SinglePost2 from "./containters/SinglePost/SinglePost2";
 import SimplePage from "./containters/SimplePage/SimplePage";
 import PreFooter from "./components/Footer/PreFooter";
-import TodayPage from "./containters/TodayPage/TodayPage";
+// import TodayPage from "./containters/TodayPage/TodayPage";
+import { RouteProvider } from "./shared/RouteProvider";
+import { CalendarProvider } from "./shared/CalendarProvider";
 
 export default function App() {
   return (
     <Router>
-      <LocationProvider>
-        <IdProvider>
-          <HeadHelmet />
-          <ScrollToTop />
-          <Bars />
+      {/* <LocationProvider> */}
+      <RouteProvider>
+        <HeadHelmet />
+        <ScrollToTop />
+        <Bars />
+        <CalendarProvider>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/:slug/" exact="true" element={<KalendarGodina />} />
@@ -70,11 +70,10 @@ export default function App() {
             <Route path="*" element={<NoMatch />} />
           </Routes>
           <PreFooter />
-          {/* <IdProvider> */}
           <Footer />
-          {/* </IdProvider> */}{" "}
-        </IdProvider>
-      </LocationProvider>
+        </CalendarProvider>
+      </RouteProvider>
+      {/* </LocationProvider> */}
     </Router>
   );
 }

@@ -1,10 +1,13 @@
 import "./TodayBox.scss";
-import { useIdContext } from "../../../shared/IdProvider";
 import { getDayMonth } from "../../../shared/utility";
 import { monthSerb } from "../../Calendar/calendar-data/calendar-data";
+import { useRouteContext } from "../../../shared/RouteProvider";
+import { useCalendarContext } from "../../../shared/CalendarProvider";
 
 export default function TodayBox({ classes = false }) {
-  const { dayName, currentDate, pageYear, todayHoliday } = useIdContext();
+  const { currentDate, pageYear } = useRouteContext();
+  const { dayName, todayHoliday } = useCalendarContext();
+  // const { dayName, currentDate, pageYear, todayHoliday } = useIdContext();
 
   //set details from currentDate
   let todayDetails = getDayMonth(currentDate);

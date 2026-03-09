@@ -49,9 +49,10 @@
 
 import { useEffect, useRef } from "react";
 import { useGlobalLocation } from "../../shared/LocationContext.js";
+import { useRouteContext } from "../../shared/RouteProvider.js";
 
 const AdManagerSlot = ({ slotNumber, onSlotRenderEnded }) => {
-  const { location } = useGlobalLocation();
+  const { location } = useRouteContext();
   const prevPathRef = useRef(null);
 
   // 🔹 LISTENER + PRVI DISPLAY

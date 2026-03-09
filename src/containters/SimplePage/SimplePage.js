@@ -8,7 +8,7 @@ import { infoText } from "../../shared/shared.js";
 export default function SimplePage() {
   const navigate = useNavigate();
   const { id, slug } = useParams();
-  console.log("Slug", slug);
+  // console.log("Slug", slug);
 
   const validSlugs = [
     "o-nama",

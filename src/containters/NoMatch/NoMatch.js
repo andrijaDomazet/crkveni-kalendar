@@ -2,10 +2,9 @@ import Buttons from "../../UI/Button/Buttons.js";
 import "./NoMatch.scss";
 // import ArticleBox from "../../components/ArticleBox/ArticleBox.js";
 import { useNavigate } from "react-router";
-import { useIdContext } from "../../shared/IdProvider.js";
 
 export default function NoMatch() {
-  const { publishedNews, topNews } = useIdContext();
+  // const { publishedNews, topNews } = useIdContext();
   const navigate = useNavigate();
 
   const changePage = () => {

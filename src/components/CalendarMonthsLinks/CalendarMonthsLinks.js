@@ -1,10 +1,10 @@
 import "./CalendarMonthsLinks.scss";
 import { monthSerb } from "../Calendar/calendar-data/calendar-data";
 import { NavLink } from "react-router-dom";
-import { useIdContext } from "../../shared/IdProvider";
+import { useRouteContext } from "../../shared/RouteProvider";
 
 export default function CalendarMonthsLinks() {
-  const { slug, currentYear } = useIdContext();
+  const { slug, currentYear } = useRouteContext();
 
   return (
     <section className="calendar-allMonths">

@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Helmet from "react-helmet";
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { options } from "../../shared/shared";
 import data from "../../all__news";
 import molitve from "../../molitve.json";
@@ -23,7 +23,7 @@ export default function HeadHelmet() {
       //home
       let post = options[0].social;
       return post;
-    } else if (pathPart.length === 4) {
+    } else if (pathPart.length === 4 && pathPart[1] !== "info") {
       //sve sto ima 4 elementa (trenutno pojedinacni meseci i pojedinacne molitve)
       // console.log("Else 1");
       if (pathPart[1] === "molitvenik") {

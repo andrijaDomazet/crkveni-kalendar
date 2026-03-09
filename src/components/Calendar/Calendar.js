@@ -10,17 +10,20 @@ import {
 } from "./calendar-data/calendar-data";
 import SimpleButton from "../../UI/Buttons/SimpleButton";
 import TimeFormat from "../TimeFormat/TimeFormat";
-import { useGlobalLocation } from "../../shared/LocationContext";
-import { useIdContext } from "../../shared/IdProvider";
 import { renderTitleSection } from "../../shared/utility";
 import AdManagerSlot from "../AdvModule/AdManagerSlot";
+import { useRouteContext } from "../../shared/RouteProvider.js";
+import { useCalendarContext } from "../../shared/CalendarProvider.js";
 
 const StickyAdLazy = lazy(() => import("../AdvModule/StickyAd.js"));
 export default function Calendar(props) {
-  let { id, currentDate, pageYear, pageMonth, holidays } = useIdContext();
+  let { id, currentDate, pageYear, pageMonth } = useRouteContext();
+  let { holidays } = useCalendarContext();
+
+  // let { id, currentDate, pageYear, pageMonth, holidays } = useIdContext();
   pageMonth = props.isMonth2 ?? pageMonth;
 
-  const location = useGlobalLocation();
+  const location = useRouteContext();
   const [dropDownYear, setDropDownYear] = useState(false);
   const navigate = useNavigate();
 

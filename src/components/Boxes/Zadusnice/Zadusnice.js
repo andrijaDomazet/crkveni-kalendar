@@ -1,11 +1,11 @@
 import "./Zadusnice.scss";
 import { calendarYears } from "../../Calendar/calendar-data/calendar-data.js";
 import { monthSerb } from "../../../shared/shared.js";
-import { useIdContext } from "../../../shared/IdProvider.js";
 import { Link } from "react-router-dom";
+import { useRouteContext } from "../../../shared/RouteProvider.js";
 
 export default function Zadusnice({ setYear, boxTitle, data }) {
-  const { slug, currentDate } = useIdContext();
+  const { slug, currentDate } = useRouteContext()
   let currentYear = setYear || slug || currentDate.getFullYear();
   let yearIndex = calendarYears[0].item_list.findIndex(
     (item) => item.title == currentYear,

@@ -1,7 +1,6 @@
-import { lazy, Suspense, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import "./SinglePost.scss";
 import BodyText from "../../components/BodyText/BodyText";
-import { useGlobalLocation } from "../../shared/LocationContext";
 import { urlTitle2 } from "../../shared/utility";
 import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
 import ArticleBox from "../../components/Boxes/ArticleBox/ArticleBox";
@@ -9,24 +8,29 @@ import molitve from "../../molitve.json";
 import PostImage from "./img/PostImage";
 import data from "../../all__news.json";
 import { calendarYears } from "../../components/Calendar/calendar-data/calendar-data.js";
-import { useIdContext } from "../../shared/IdProvider.js";
+import { useCalendarContext } from "../../shared/CalendarProvider.js";
+import { useRouteContext } from "../../shared/RouteProvider.js";
 // import ImenoslovTabela from "../../components/Boxes/Names.js";
 
 const WidgetLazy = lazy(() => import("../../UI/Widget/Widget.js"));
-const ZadusniceLazy = lazy(() =>
-  import("../../components/Boxes/Zadusnice/Zadusnice.js")
+const ZadusniceLazy = lazy(
+  () => import("../../components/Boxes/Zadusnice/Zadusnice.js"),
 );
-const CrossingDataLazy = lazy(() =>
-  import("../../components/CrossingData/CrossingData.js")
+const CrossingDataLazy = lazy(
+  () => import("../../components/CrossingData/CrossingData.js"),
 );
-const ImenoslovTabelaLazy = lazy(() =>
-  import("../../components/Boxes/Names.js")
+const ImenoslovTabelaLazy = lazy(
+  () => import("../../components/Boxes/Names.js"),
 );
 
 export default function SinglePost() {
-  const { yearIndex } = useIdContext();
-  const { pathPart } = useGlobalLocation();
+  const { yearIndex } = useCalendarContext();
+  const { pathPart } = useRouteContext();
   const [isNews, setIsNews] = useState(() => setArticleState());
+
+  useEffect(() => {
+    setIsNews(setArticleState());
+  }, [pathPart]);
 
   function setArticleState() {
     return data.find((post) => {

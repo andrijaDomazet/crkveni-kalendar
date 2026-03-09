@@ -1,7 +1,6 @@
 import "./KalendarGodina.scss";
 import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
 import { lazy, Suspense } from "react";
-import { useIdContext } from "../../shared/IdProvider.js";
 import {
   calendarYears,
   importantHolidaysPerMonth,
@@ -11,6 +10,8 @@ import SimpleBox from "../../components/Boxes/SimpleBox/SimpleBox.js";
 import TodayBox from "../../components/Boxes/TodayBox/TodayBox.js";
 import { getDayMonth } from "../../shared/utility.js";
 import MidBox from "../../components/Boxes/MidBox/MidBox.js";
+import { useRouteContext } from "../../shared/RouteProvider.js";
+import { useCalendarContext } from "../../shared/CalendarProvider.js";
 
 const WidgetLazy = lazy(() => import("../../UI/Widget/Widget.js"));
 const ZadusniceLazy = lazy(
@@ -18,16 +19,15 @@ const ZadusniceLazy = lazy(
 );
 
 export default function KalendarGodina() {
+  const { pageYear } = useRouteContext();
+
   const {
+    petrovPostStartDate,
     yearIndex,
     easterDay,
     startEasterTs,
     endEasterTs,
-    // slug,
-    // currentYear,
-    pageYear,
-    petrovPostStartDate,
-  } = useIdContext();
+  } = useCalendarContext();
   // const pageYear = currentYear;
   console.log("Page year", pageYear);
 
@@ -99,7 +99,7 @@ export default function KalendarGodina() {
             ]}
             buttonText="Hrišćanski postovi →"
           />
-            <SimpleBox
+          <SimpleBox
             classes="orange"
             mainTitle="Ostale godine"
             buttonText={buttonText}
@@ -123,7 +123,7 @@ export default function KalendarGodina() {
             mainBody={`Vaskrs (Uskrs) u ${pageYear}. godini pada na ${day}. ${month} po novom kalendaru.`}
             buttonText={`Kalendar za ${month} ${pageYear}. →`}
           />
-        
+
           <div className="banner-wrapper xl_sticky">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750411708088-0"} />
           </div>

@@ -1,12 +1,12 @@
 import "./CrossingData.scss";
 import slave from "../Calendar/calendar-data/slave.json";
-import { useIdContext } from "../../shared/IdProvider";
 import { monthSerb } from "../../shared/shared";
 import { Link } from "react-router-dom";
 import React from "react";
 import { getPreUrlTitle } from "../../shared/utility";
+import { useRouteContext } from "../../shared/RouteProvider";
 export default function CrossingData() {
-  const { slug, currentDate } = useIdContext();
+  const { slug, currentDate } = useRouteContext();
   let currentYear = slug || currentDate.getFullYear();
   let currentMonth = null;
 

@@ -1,16 +1,18 @@
-import React from "react";
+// import React from "react";
 import TodayBox from "../../components/Boxes/TodayBox/TodayBox";
 import Zadusnice from "../../components/Boxes/Zadusnice/Zadusnice";
 import {
   calendarYears,
   monthSerb,
 } from "../../components/Calendar/calendar-data/calendar-data";
-import { useIdContext } from "../../shared/IdProvider";
 import Molitva from "../../components/Molitva/Molitva";
 import molitve from "../../molitve.json";
 import { getDayMonth } from "../../shared/utility";
+import { useRouteContext } from "../../shared/RouteProvider";
+
 export default function TodayPage() {
-  const { yearIndex, currentDate } = useIdContext();
+  // const { yearIndex, currentDate } = useIdContext();
+  const { yearIndex, currentDate } = useRouteContext();
   let todayDetails = getDayMonth(currentDate);
 
   return (

@@ -1,9 +1,9 @@
-import { useIdContext } from "../../shared/IdProvider";
+import { useRouteContext } from "../../shared/RouteProvider";
 import { monthSerb } from "../../shared/shared";
 import "./Footer.scss";
 
 export default function Footer() {
-  let { pageMonth, pageYear } = useIdContext();
+  let { pageMonth, pageYear } = useRouteContext();
   return (
     <footer className="footer">
       <div className="footer-border"></div>

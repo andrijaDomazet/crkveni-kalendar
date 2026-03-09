@@ -2,8 +2,6 @@ import { lazy, Suspense } from "react";
 import Calendar from "../../components/Calendar/Calendar";
 import "./Kalendar.scss";
 import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
-import { calendarYears } from "../../components/Calendar/calendar-data/calendar-data.js";
-import { useIdContext } from "../../shared/IdProvider.js";
 import OnNetworkVideo from "../../components/AdvModule/OnNetworkVideo.js";
 
 const WidgetLazy = lazy(() => import("../../UI/Widget/Widget.js"));
@@ -15,7 +13,7 @@ const CalendarMonthsLinksLazy = lazy(
 );
 
 export default function Kalendar() {
-  const { yearIndex,pageYear } = useIdContext();
+  // const { yearIndex, pageYear } = useRouteContext();
 
   return (
     <div className="kalendar">
@@ -37,13 +35,13 @@ export default function Kalendar() {
           </div> */}
         </div>
         <div className="kalendar-right">
-          <Suspense fallback={<div></div>}>
+          {/* <Suspense fallback={<div></div>}>
             <ZadusniceLazy
               setYear={pageYear}
               boxTitle={`🕯 Zadušnice u ${pageYear}. godini`}
               data={calendarYears[0].item_list[yearIndex]}
             />
-          </Suspense>
+          </Suspense> */}
 
           <div className="banner-wrapper xl_sticky">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750411708088-0"} />

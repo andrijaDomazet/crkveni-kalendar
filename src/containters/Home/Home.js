@@ -7,11 +7,11 @@ import Molitva from "../../components/Molitva/Molitva.js";
 import molitve from "../../molitve.json";
 import NextMonthBox from "../../components/Boxes/NextMonthBox/NextMonthBox.js";
 import { calendarYears } from "../../components/Calendar/calendar-data/calendar-data.js";
-import { useIdContext } from "../../shared/IdProvider.js";
 import TodayBox from "../../components/Boxes/TodayBox/TodayBox.js";
 import SimpleBox from "../../components/Boxes/SimpleBox/SimpleBox.js";
 // import MonthBox from "../../components/Boxes/MonthBox/MonthBox.js";
 import MidBox from "../../components/Boxes/MidBox/MidBox.js";
+import { useCalendarContext } from "../../shared/CalendarProvider.js";
 
 const WidgetLazy = lazy(() => import("../../UI/Widget/Widget.js"));
 const CalendarMonthsLinksLazy = lazy(
@@ -19,7 +19,7 @@ const CalendarMonthsLinksLazy = lazy(
 );
 
 export default function Home() {
-  const { yearIndex } = useIdContext();
+  const { yearIndex } = useCalendarContext();
 
   return (
     <div className="home">
@@ -119,7 +119,7 @@ export default function Home() {
           />
         </div>
         <div className="home__wrapper-right">
-          <MidBox/>
+          <MidBox />
           {/* <Zadusnice /> */}
           <SimpleBox
             classes="green"
