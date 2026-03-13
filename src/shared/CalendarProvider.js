@@ -163,7 +163,7 @@ export const CalendarProvider = ({ children }) => {
     return "";
   };
   // console.time("holidays calc");
-  console.time("holidays calc");
+  // console.time("holidays calc");
   const holidays = useMemo(() => {
     if (pageMonth === undefined || pageMonth < 0 || !idsMonths[pageMonth]) {
       return [];
@@ -171,7 +171,7 @@ export const CalendarProvider = ({ children }) => {
 
     return filterHolidays();
   }, [pageYear, pageMonth, currentDate]);
-  console.timeEnd("holidays calc");
+  // console.timeEnd("holidays calc");
   function filterHolidays() {
     const secondSundayBeforeChristmas =
       getTargetSundayBeforeChristmas(pageYear);

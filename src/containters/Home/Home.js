@@ -1,23 +1,24 @@
 import "./Home.scss";
 import Calendar from "../../components/Calendar/Calendar";
-import Zadusnice from "../../components/Boxes/Zadusnice/Zadusnice.js";
 import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
 import { lazy, Suspense } from "react";
-import Molitva from "../../components/Molitva/Molitva.js";
 import molitve from "../../molitve.json";
 import NextMonthBox from "../../components/Boxes/NextMonthBox/NextMonthBox.js";
 import { calendarYears } from "../../components/Calendar/calendar-data/calendar-data.js";
 import TodayBox from "../../components/Boxes/TodayBox/TodayBox.js";
-import SimpleBox from "../../components/Boxes/SimpleBox/SimpleBox.js";
-// import MonthBox from "../../components/Boxes/MonthBox/MonthBox.js";
 import MidBox from "../../components/Boxes/MidBox/MidBox.js";
 import { useCalendarContext } from "../../shared/CalendarProvider.js";
-
+const ZadusniceLazy = lazy(
+  () => import("../../components/Boxes/Zadusnice/Zadusnice.js"),
+);
+const SimpleBoxLazy = lazy(
+  () => import("../../components/Boxes/SimpleBox/SimpleBox.js"),
+);
 const WidgetLazy = lazy(() => import("../../UI/Widget/Widget.js"));
 const CalendarMonthsLinksLazy = lazy(
   () => import("../../components/CalendarMonthsLinks/CalendarMonthsLinks.js"),
 );
-
+const MolitvaLazy = lazy(() => import("../../components/Molitva/Molitva.js"));
 export default function Home() {
   const { yearIndex } = useCalendarContext();
 
@@ -61,7 +62,9 @@ export default function Home() {
               <div className="home__links second">
                 <h2>Oče naš - Molitva Gospodnja</h2>
                 <div className="home__molitva-wrapper">
-                  <Molitva molitva={molitve[molitve.length - 1]} />
+                  <Suspense fallback={<div></div>}>
+                    <MolitvaLazy molitva={molitve[molitve.length - 1]} />
+                  </Suspense>
                 </div>
               </div>
             </div>
@@ -95,39 +98,45 @@ export default function Home() {
         <div className="home__wrapper-left">
           <TodayBox />
           <div className="third-element">
-            <Zadusnice
-              setYear={2026}
-              boxTitle={`🕯 Zadušnice u ${2026}. godini`}
-              data={calendarYears[0].item_list[yearIndex]}
-            />
+            <Suspense fallback={<div></div>}>
+              <ZadusniceLazy
+                setYear={2026}
+                boxTitle={`🕯 Zadušnice u ${2026}. godini`}
+                data={calendarYears[0].item_list[yearIndex]}
+              />
+            </Suspense>
           </div>
-
           <div className="banner-wrapper fix-size-mediumRectangle">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750930023966-0"} />
           </div>
-          <SimpleBox
-            classes="green"
-            linkText="/hriscanski-post/"
-            mainTitle="🍞 Veliki postovi 2026."
-            mainBody={[
-              "Vaskršnji post — 23. 2. - 11. 4.",
-              "Petrovski post — 8. 6. - 11. 7.",
-              "Gospojinski post — 14. 8. - 27. 8.",
-              "Božićni post — 28. 11. - 6. 1.",
-            ]}
-            buttonText="Hrišćanski postovi →"
-          />
+          <Suspense fallback={<div></div>}>
+            <SimpleBoxLazy
+              classes="green"
+              linkText="/hriscanski-post/"
+              mainTitle="🍞 Veliki postovi 2026."
+              mainBody={[
+                "Vaskršnji post — 23. 2. - 11. 4.",
+                "Petrovski post — 8. 6. - 11. 7.",
+                "Gospojinski post — 14. 8. - 27. 8.",
+                "Božićni post — 28. 11. - 6. 1.",
+              ]}
+              buttonText="Hrišćanski postovi →"
+            />
+          </Suspense>
         </div>
         <div className="home__wrapper-right">
           <MidBox />
           {/* <Zadusnice /> */}
-          <SimpleBox
-            classes="green"
-            linkText="/2026/april/"
-            mainTitle="Vaskrs 2026."
-            mainBody="Vaskrs (Uskrs) u 2026. godini pada na 12. april po novom kalendaru."
-            buttonText="Kalendar za april 2026. →"
-          />
+          <Suspense fallback={<div></div>}>
+            <SimpleBoxLazy
+              classes="green"
+              linkText="/2026/april/"
+              mainTitle="Vaskrs 2026."
+              mainBody="Vaskrs (Uskrs) u 2026. godini pada na 12. april po novom kalendaru."
+              buttonText="Kalendar za april 2026. →"
+            />
+          </Suspense>
+
           <div className="banner-wrapper xl_sticky">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750411708088-0"} />
           </div>
@@ -151,7 +160,6 @@ export default function Home() {
       {/* <div className="banner-wrapper">
         <AdManagerSlot slotNumber={"div-gpt-ad-1764593675864-0"} />
       </div> */}
-      {/* <PreFooter/> */}
     </div>
   );
 }
