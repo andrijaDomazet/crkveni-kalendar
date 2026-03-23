@@ -7,6 +7,7 @@ import NextMonthBox from "../../components/Boxes/NextMonthBox/NextMonthBox.js";
 import { calendarYears } from "../../components/Calendar/calendar-data/calendar-data.js";
 import TodayBox from "../../components/Boxes/TodayBox/TodayBox.js";
 import MidBox from "../../components/Boxes/MidBox/MidBox.js";
+import MonthBox from "../../components/Boxes/MonthBox/MonthBox.js";
 import { useCalendarContext } from "../../shared/CalendarProvider.js";
 const ZadusniceLazy = lazy(
   () => import("../../components/Boxes/Zadusnice/Zadusnice.js"),

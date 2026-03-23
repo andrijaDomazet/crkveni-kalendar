@@ -3,7 +3,7 @@ import slave from "../Calendar/calendar-data/slave.json";
 import { monthSerb } from "../../shared/shared";
 import { Link } from "react-router-dom";
 import React from "react";
-import { getPreUrlTitle } from "../../shared/utility";
+// import { getPreUrlTitle } from "../../shared/utility";
 import { useRouteContext } from "../../shared/RouteProvider";
 export default function CrossingData() {
   const { slug, currentDate } = useRouteContext();
