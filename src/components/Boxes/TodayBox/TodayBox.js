@@ -16,6 +16,7 @@ export default function TodayBox({ classes = false }) {
   if (todayDetails.year !== pageYear) {
     return;
   }
+  console.log("Today holiday", todayHoliday.title);
 
   return (
     <div className={`today__box ${classes}`}>
@@ -49,7 +50,11 @@ export default function TodayBox({ classes = false }) {
             </svg>
             <div className="line right"></div>
           </div>
-          <h2 className="today-title">{todayHoliday.title[0]}</h2>
+          <h2 className="today-title">
+            {Array.isArray(todayHoliday.title)
+              ? todayHoliday.title[0]
+              : todayHoliday?.title}
+          </h2>
           {todayHoliday.post && (
             <div className="today-post">
               <div className="today-post-wrapper">
