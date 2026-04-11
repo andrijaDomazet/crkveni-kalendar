@@ -3,17 +3,17 @@ import Calendar from "../../components/Calendar/Calendar";
 import "./Kalendar.scss";
 import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
 import OnNetworkVideo from "../../components/AdvModule/OnNetworkVideo.js";
+// import { useRouteContext } from "../../shared/RouteProvider.js";
+import { calendarYears } from "../../components/Calendar/calendar-data/calendar-data.js";
+import { useCalendarContext } from "../../shared/CalendarProvider.js";
 
 const WidgetLazy = lazy(() => import("../../UI/Widget/Widget.js"));
-const ZadusniceLazy = lazy(
-  () => import("../../components/Boxes/Zadusnice/Zadusnice.js"),
-);
-const CalendarMonthsLinksLazy = lazy(
-  () => import("../../components/CalendarMonthsLinks/CalendarMonthsLinks.js"),
-);
+const ZadusniceLazy = lazy(() => import("../../components/Boxes/Zadusnice/Zadusnice.js"));
+const CalendarMonthsLinksLazy = lazy(() => import("../../components/CalendarMonthsLinks/CalendarMonthsLinks.js"));
 
 export default function Kalendar() {
-  // const { yearIndex, pageYear } = useRouteContext();
+  const { yearIndex, pageYear } = useCalendarContext();
+  // console.log("Year", yearIndex, pageYear);
 
   return (
     <div className="kalendar">
@@ -35,13 +35,9 @@ export default function Kalendar() {
           </div> */}
         </div>
         <div className="kalendar-right">
-          {/* <Suspense fallback={<div></div>}>
-            <ZadusniceLazy
-              setYear={pageYear}
-              boxTitle={`🕯 Zadušnice u ${pageYear}. godini`}
-              data={calendarYears[0].item_list[yearIndex]}
-            />
-          </Suspense> */}
+          <Suspense fallback={<div></div>}>
+            <ZadusniceLazy setYear={calendarYears[0].item_list[yearIndex].title} boxTitle={`🕯 Zadušnice u ${calendarYears[0].item_list[yearIndex].title}. godini`} data={calendarYears[0].item_list[yearIndex]} />
+          </Suspense>
 
           <div className="banner-wrapper xl_sticky">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750411708088-0"} />
