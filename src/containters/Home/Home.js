@@ -26,7 +26,8 @@ export default function Home() {
   return (
     <div className="home">
       <div className="banner-wrapper bilbord">
-        <AdManagerSlot slotNumber={"div-gpt-ad-1761641124263-0"} />
+        {/* <AdManagerSlot slotNumber={"div-gpt-ad-1761641124263-0"} /> */}
+        <div id="onBid_billboard"></div>
       </div>
       <section className="home__wrapper">
         <div className="home__wrapper-center">

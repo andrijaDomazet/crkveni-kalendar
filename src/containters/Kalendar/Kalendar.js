@@ -8,8 +8,12 @@ import { calendarYears } from "../../components/Calendar/calendar-data/calendar-
 import { useCalendarContext } from "../../shared/CalendarProvider.js";
 
 const WidgetLazy = lazy(() => import("../../UI/Widget/Widget.js"));
-const ZadusniceLazy = lazy(() => import("../../components/Boxes/Zadusnice/Zadusnice.js"));
-const CalendarMonthsLinksLazy = lazy(() => import("../../components/CalendarMonthsLinks/CalendarMonthsLinks.js"));
+const ZadusniceLazy = lazy(
+  () => import("../../components/Boxes/Zadusnice/Zadusnice.js"),
+);
+const CalendarMonthsLinksLazy = lazy(
+  () => import("../../components/CalendarMonthsLinks/CalendarMonthsLinks.js"),
+);
 
 export default function Kalendar() {
   const { yearIndex, pageYear } = useCalendarContext();
@@ -18,7 +22,8 @@ export default function Kalendar() {
   return (
     <div className="kalendar">
       <div className="banner-wrapper bilbord">
-        <AdManagerSlot slotNumber={"div-gpt-ad-1761641124263-0"} />
+        {/* <AdManagerSlot slotNumber={"div-gpt-ad-1761641124263-0"} /> */}
+        <div id="onBid_billboard"></div>
       </div>
       <div className="kalendar-wrapper">
         <div className="kalendar-left">
@@ -36,7 +41,11 @@ export default function Kalendar() {
         </div>
         <div className="kalendar-right">
           <Suspense fallback={<div></div>}>
-            <ZadusniceLazy setYear={calendarYears[0].item_list[yearIndex].title} boxTitle={`🕯 Zadušnice u ${calendarYears[0].item_list[yearIndex].title}. godini`} data={calendarYears[0].item_list[yearIndex]} />
+            <ZadusniceLazy
+              setYear={calendarYears[0].item_list[yearIndex].title}
+              boxTitle={`🕯 Zadušnice u ${calendarYears[0].item_list[yearIndex].title}. godini`}
+              data={calendarYears[0].item_list[yearIndex]}
+            />
           </Suspense>
 
           <div className="banner-wrapper xl_sticky">

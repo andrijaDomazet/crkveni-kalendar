@@ -48,7 +48,8 @@ export default function KalendarGodina() {
   return (
     <div className="kalendarGodina">
       <div className="banner-wrapper bilbord">
-        <AdManagerSlot slotNumber={"div-gpt-ad-1761641124263-0"} />
+        {/* <AdManagerSlot slotNumber={"div-gpt-ad-1761641124263-0"} /> */}
+        <div id="onBid_billboard"></div>
       </div>
       <div className="kalendarGodina-wrapper">
         <div className="kalendarGodina-center">
