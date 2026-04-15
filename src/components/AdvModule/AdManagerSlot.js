@@ -1,67 +1,14 @@
-// import { useEffect, useRef } from "react";
-// import { useGlobalLocation } from "../../shared/LocationContext.js";
-
-// const AdManagerSlot = ({ slotNumber, onSlotRenderEnded }) => {
-//   const { location } = useGlobalLocation();
-//   const previousLocation = useRef(
-//     typeof window !== "undefined"
-//       ? sessionStorage.getItem("prevPathname") || ""
-//       : ""
-//   );
-
-//   useEffect(() => {
-//     if (typeof window !== "undefined" && window.googletag) {
-//       window.googletag.cmd.push(function () {
-//         window.googletag.display(slotNumber);
-//         // 🎯 dodaj listener samo jednom
-//         window.googletag
-//           .pubads()
-//           .addEventListener("slotRenderEnded", (event) => {
-//             if (event.slot.getSlotElementId() === slotNumber) {
-//               if (typeof onSlotRenderEnded === "function") {
-//                 onSlotRenderEnded(event); // prosledi parent komponenti
-//               }
-//             }
-//           });
-//       });
-//     }
-//   }, [slotNumber, onSlotRenderEnded]);
-
-//   useEffect(() => {
-//     if (!previousLocation.current) previousLocation.current = location.pathname;
-
-//     if (previousLocation.current !== location.pathname) {
-//       const slot = window.googletag
-//         .pubads()
-//         .getSlots()
-//         .find((s) => s.getSlotElementId() === slotNumber);
-//       if (slot) window.googletag.pubads().refresh([slot]);
-//     }
-
-//     previousLocation.current = location.pathname;
-//     sessionStorage.setItem("prevPathname", location.pathname);
-//   }, [location.pathname, slotNumber]);
-
-//   return <div id={slotNumber}></div>;
-// };
-
-// export default AdManagerSlot;
-
-import { useEffect, useRef } from "react";
-import { useGlobalLocation } from "../../shared/LocationContext.js";
+import { useEffect } from "react";
 import { useRouteContext } from "../../shared/RouteProvider.js";
 
-// Slotovi koji su već jednom prošli kroz display() — globalni tokom sesije
+// Pamti koje smo slotove već jednom display()-ovali tokom sesije
 const displayedSlots = new Set();
 
 const AdManagerSlot = ({ slotNumber, onSlotRenderEnded }) => {
   const { location } = useRouteContext();
-  const prevPathRef = useRef(null);
 
-  // 🔹 LISTENER + DISPLAY ILI REFRESH
   useEffect(() => {
     if (typeof window === "undefined") return;
-
     window.googletag = window.googletag || { cmd: [] };
 
     window.googletag.cmd.push(() => {
@@ -78,60 +25,21 @@ const AdManagerSlot = ({ slotNumber, onSlotRenderEnded }) => {
         }
 
         if (displayedSlots.has(slotNumber)) {
-          // Slot je već bio prikazan (SPA navigacija) — osvježi ga
+          // SPA navigacija — osveži bez brisanja innerHTML
           const slot = pubads
             .getSlots()
             .find((s) => s.getSlotElementId() === slotNumber);
-          if (slot) {
-            const el = document.getElementById(slotNumber);
-            if (el) el.innerHTML = "";
-            pubads.refresh([slot]);
-          }
+          if (slot) pubads.refresh([slot]);
         } else {
-          // Prvo prikazivanje — display() mora biti pozvan tačno jednom
+          // Prvo prikazivanje
           window.googletag.display(slotNumber);
           displayedSlots.add(slotNumber);
         }
       } catch (e) {
-        console.warn("GPT init skipped:", e);
+        console.warn("GPT skipped:", e);
       }
     });
-  }, [slotNumber]);
-
-  // 🔹 SPA ROUTE CHANGE = REFRESH (SAFE)
-  useEffect(() => {
-    if (!window.googletag?.cmd) return;
-
-    if (prevPathRef.current === null) {
-      prevPathRef.current = location.pathname;
-      return;
-    }
-
-    if (prevPathRef.current !== location.pathname) {
-      window.googletag.cmd.push(() => {
-        try {
-          const pubads = window.googletag.pubads?.();
-          if (!pubads) return;
-
-          const slot = pubads
-            .getSlots()
-            .find((s) => s.getSlotElementId() === slotNumber);
-
-          if (slot) {
-            // 🔥 KLJUČNA LINIJA
-            const el = document.getElementById(slotNumber);
-            if (el) el.innerHTML = "";
-
-            pubads.refresh([slot]);
-          }
-        } catch (e) {
-          console.warn("GPT refresh skipped:", e);
-        }
-      });
-
-      prevPathRef.current = location.pathname;
-    }
-  }, [location.pathname, slotNumber]);
+  }, [slotNumber, location.pathname]);
 
   return <div id={slotNumber} />;
 };
