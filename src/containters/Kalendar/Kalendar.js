@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect } from "react";
+import { lazy, Suspense } from "react";
 import Calendar from "../../components/Calendar/Calendar";
 import "./Kalendar.scss";
 import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
@@ -17,13 +17,6 @@ const CalendarMonthsLinksLazy = lazy(
 
 export default function Kalendar() {
   const { yearIndex, pageYear } = useCalendarContext();
-
-  useEffect(() => {
-
-    setTimeout(() => {
-      window.onbid?.reinit && window.onbid.reinit();
-    }, 1000);
-  }, []);
 
   // console.log("Year", yearIndex, pageYear);
 
