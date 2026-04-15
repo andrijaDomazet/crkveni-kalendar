@@ -19,7 +19,7 @@ export default function Kalendar() {
   const { yearIndex, pageYear } = useCalendarContext();
 
   useEffect(() => {
-    
+
     setTimeout(() => {
       window.onbid?.reinit && window.onbid.reinit();
     }, 1000);
@@ -30,8 +30,8 @@ export default function Kalendar() {
   return (
     <div className="kalendar">
       <div className="banner-wrapper bilbord">
-        {/* <AdManagerSlot slotNumber={"div-gpt-ad-1761641124263-0"} /> */}
-        <div id="onBid_billboard"></div>
+        <AdManagerSlot slotNumber={"div-gpt-ad-1761641124263-0"} />
+        {/* <div id="onBid_billboard"></div> */}
       </div>
       <div className="kalendar-wrapper">
         <div className="kalendar-left">
