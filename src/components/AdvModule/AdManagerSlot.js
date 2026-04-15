@@ -51,6 +51,9 @@ import { useEffect, useRef } from "react";
 import { useGlobalLocation } from "../../shared/LocationContext.js";
 import { useRouteContext } from "../../shared/RouteProvider.js";
 
+// Slotovi koji su već jednom prošli kroz display() — globalni tokom sesije
+const displayedSlots = new Set();
+
 const AdManagerSlot = ({ slotNumber, onSlotRenderEnded }) => {
   const { location } = useRouteContext();
   const prevPathRef = useRef(null);
@@ -74,18 +77,20 @@ const AdManagerSlot = ({ slotNumber, onSlotRenderEnded }) => {
           });
         }
 
-        const existingSlot = pubads
-          .getSlots()
-          .find((s) => s.getSlotElementId() === slotNumber);
-
-        if (existingSlot) {
+        if (displayedSlots.has(slotNumber)) {
           // Slot je već bio prikazan (SPA navigacija) — osvježi ga
-          const el = document.getElementById(slotNumber);
-          if (el) el.innerHTML = "";
-          pubads.refresh([existingSlot]);
+          const slot = pubads
+            .getSlots()
+            .find((s) => s.getSlotElementId() === slotNumber);
+          if (slot) {
+            const el = document.getElementById(slotNumber);
+            if (el) el.innerHTML = "";
+            pubads.refresh([slot]);
+          }
         } else {
-          // Prvo prikazivanje
+          // Prvo prikazivanje — display() mora biti pozvan tačno jednom
           window.googletag.display(slotNumber);
+          displayedSlots.add(slotNumber);
         }
       } catch (e) {
         console.warn("GPT init skipped:", e);
