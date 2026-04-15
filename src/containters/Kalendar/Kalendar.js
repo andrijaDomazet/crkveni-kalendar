@@ -2,7 +2,7 @@ import { lazy, Suspense } from "react";
 import Calendar from "../../components/Calendar/Calendar";
 import "./Kalendar.scss";
 import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
-import OnNetworkVideo from "../../components/AdvModule/OnNetworkVideo.js";
+// import OnNetworkVideo from "../../components/AdvModule/OnNetworkVideo.js";
 // import { useRouteContext } from "../../shared/RouteProvider.js";
 import { calendarYears } from "../../components/Calendar/calendar-data/calendar-data.js";
 import { useCalendarContext } from "../../shared/CalendarProvider.js";
@@ -29,7 +29,7 @@ export default function Kalendar() {
       <div className="kalendar-wrapper">
         <div className="kalendar-left">
           <Calendar />
-          <OnNetworkVideo sid="NVNnLDAsMVd4" />
+          {/* <OnNetworkVideo sid="NVNnLDAsMVd4" /> */}
           <Suspense fallback={<div></div>}>
             <CalendarMonthsLinksLazy />
           </Suspense>
