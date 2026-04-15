@@ -55,7 +55,7 @@ const AdManagerSlot = ({ slotNumber, onSlotRenderEnded }) => {
   const { location } = useRouteContext();
   const prevPathRef = useRef(null);
 
-  // 🔹 LISTENER + PRVI DISPLAY
+  // 🔹 LISTENER + DISPLAY ILI REFRESH
   useEffect(() => {
     if (typeof window === "undefined") return;
 
@@ -66,19 +66,32 @@ const AdManagerSlot = ({ slotNumber, onSlotRenderEnded }) => {
         const pubads = window.googletag.pubads?.();
         if (!pubads) return;
 
-        pubads.addEventListener("slotRenderEnded", (event) => {
-          if (event.slot.getSlotElementId() === slotNumber) {
-            onSlotRenderEnded?.(event);
-          }
-        });
+        if (onSlotRenderEnded) {
+          pubads.addEventListener("slotRenderEnded", (event) => {
+            if (event.slot.getSlotElementId() === slotNumber) {
+              onSlotRenderEnded(event);
+            }
+          });
+        }
 
-        // ⬅️ display SAMO jednom
-        window.googletag.display(slotNumber);
+        const existingSlot = pubads
+          .getSlots()
+          .find((s) => s.getSlotElementId() === slotNumber);
+
+        if (existingSlot) {
+          // Slot je već bio prikazan (SPA navigacija) — osvježi ga
+          const el = document.getElementById(slotNumber);
+          if (el) el.innerHTML = "";
+          pubads.refresh([existingSlot]);
+        } else {
+          // Prvo prikazivanje
+          window.googletag.display(slotNumber);
+        }
       } catch (e) {
         console.warn("GPT init skipped:", e);
       }
     });
-  }, [slotNumber, onSlotRenderEnded]);
+  }, [slotNumber]);
 
   // 🔹 SPA ROUTE CHANGE = REFRESH (SAFE)
   useEffect(() => {

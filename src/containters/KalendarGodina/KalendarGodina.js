@@ -22,12 +22,13 @@ export default function KalendarGodina() {
   const { pageYear } = useRouteContext();
 
   const {
-    petrovPostStartDate,
     yearIndex,
     easterDay,
-    startEasterTs,
-    endEasterTs,
+    postLookup,
   } = useCalendarContext();
+
+  const { startEasterTs, endEasterTs } = postLookup;
+  const petrovPostStartDate = new Date(easterDay).setDate(new Date(easterDay).getDate() + 57);
   // const pageYear = currentYear;
   console.log("Page year", pageYear);
 
