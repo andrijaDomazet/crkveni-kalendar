@@ -5,17 +5,19 @@ import { options } from "../../shared/shared";
 import data from "../../all__news";
 import molitve from "../../molitve.json";
 import { urlTitle2 } from "../../shared/utility";
+import { useRouteContext } from "../../shared/RouteProvider";
 
 export default function HeadHelmet() {
   const validPathParts = ["pravila-koriscenja", "pravila-koriscenja", "o-nama"];
   const loc = useLocation();
   let pathPart = loc.pathname.split("/");
+  console.log("pathPart", pathPart, pathPart.length);
+  const { pageYear } = useRouteContext();
   const [post, setPost] = useState(() => setArticleState());
-  // console.log("TEST", pathPart);
 
   useEffect(() => {
     setPost(setArticleState());
-  }, [loc.pathname]);
+  }, [loc.pathname, pageYear]);
 
   function setArticleState() {
     let lastPathPart = pathPart[pathPart.length - 2];
@@ -25,7 +27,7 @@ export default function HeadHelmet() {
       return post;
     } else if (pathPart.length === 4 && pathPart[1] !== "info") {
       //sve sto ima 4 elementa (trenutno pojedinacni meseci i pojedinacne molitve)
-      // console.log("Else 1");
+      console.log("Else 1");
       if (pathPart[1] === "molitvenik") {
         //single molitve
         let post = molitve.filter((item) => {
@@ -53,14 +55,24 @@ export default function HeadHelmet() {
       }
     } else if (!/^\d+$/.test(pathPart[1]) && pathPart.length === 3) {
       //single post
-      // console.log("Else 2");
+      console.log("Else 2");
       let post = data.filter((item) => {
         return urlTitle2(item.title) === pathPart[1];
       });
       return post[0];
     } else {
+      console.log("Else 3");
+      const id = Number(pathPart[1]);
       let post = options[0].social;
-      return post;
+      if (Number.isInteger(id)) {
+        return {
+          ...post,
+          title: `Crkveni pravoslavni kalendar - ${pageYear} `,
+          lead: `Crkveni pravoslavni kalendar - ${pageYear} | Svi praznici, slave i posti u godini na jednom mestu. | Pravoslavni kalendar ${pageYear}.`,
+        };
+      } else {
+        return post;
+      }
     }
   }
   const setTitle = (postTitle) => {
