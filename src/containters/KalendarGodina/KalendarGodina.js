@@ -55,7 +55,7 @@ export default function KalendarGodina() {
       <div className="kalendarGodina-wrapper">
         <div className="kalendarGodina-center">
           <div className="kalendarGodina-title">
-            <h1>Pravoslavni crkveni kalendar {pageYear}.</h1>
+            <h1>Crkveni pravoslavni kalendar {pageYear}.</h1>
             <h2>
               Kompletan pregled svih meseci, velikih praznika, posnih dana i
               zadušnica za {pageYear}. godinu po crkvenom kalendaru Srpske
