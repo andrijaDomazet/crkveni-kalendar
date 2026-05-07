@@ -1,14 +1,13 @@
+"use client";
 import { useEffect, useRef } from "react";
-import { useRouteContext } from "../../shared/RouteProvider.js";
+import { usePathname } from "next/navigation";
 
-// Slotovi koje smo već jednom display()-ovali tokom sesije
 const displayedSlots = new Set();
 
 const AdManagerSlot = ({ slotNumber, onSlotRenderEnded }) => {
-  const { location } = useRouteContext();
+  const pathname = usePathname();
   const prevPathRef = useRef(null);
 
-  // Prvo prikazivanje — display() jednom po slotu
   useEffect(() => {
     if (typeof window === "undefined") return;
     window.googletag = window.googletag || { cmd: [] };
@@ -27,7 +26,9 @@ const AdManagerSlot = ({ slotNumber, onSlotRenderEnded }) => {
         }
 
         if (displayedSlots.has(slotNumber)) {
-          const slot = pubads.getSlots().find((s) => s.getSlotElementId() === slotNumber);
+          const slot = pubads
+            .getSlots()
+            .find((s) => s.getSlotElementId() === slotNumber);
           if (slot) pubads.refresh([slot]);
         } else {
           window.googletag.display(slotNumber);
@@ -39,27 +40,27 @@ const AdManagerSlot = ({ slotNumber, onSlotRenderEnded }) => {
     });
   }, [slotNumber]);
 
-  // SPA navigacija unutar iste rute (komponenta ostaje montirana)
   useEffect(() => {
     if (prevPathRef.current === null) {
-      prevPathRef.current = location.pathname;
+      prevPathRef.current = pathname;
       return;
     }
-    if (prevPathRef.current === location.pathname) return;
-
-    prevPathRef.current = location.pathname;
+    if (prevPathRef.current === pathname) return;
+    prevPathRef.current = pathname;
 
     window.googletag?.cmd?.push(() => {
       try {
         const pubads = window.googletag.pubads?.();
         if (!pubads) return;
-        const slot = pubads.getSlots().find((s) => s.getSlotElementId() === slotNumber);
+        const slot = pubads
+          .getSlots()
+          .find((s) => s.getSlotElementId() === slotNumber);
         if (slot) pubads.refresh([slot]);
       } catch (e) {
         console.warn("GPT refresh skipped:", e);
       }
     });
-  }, [location.pathname, slotNumber]);
+  }, [pathname, slotNumber]);
 
   return <div id={slotNumber} />;
 };

@@ -1,18 +1,19 @@
-import { createContext, useContext, useState } from "react";
-import { useLocation } from "react-router-dom";
+"use client";
+import { createContext, useContext } from "react";
+import { usePathname } from "next/navigation";
 
 const LocationContext = createContext();
 
 export const useGlobalLocation = () => useContext(LocationContext);
 
 export const LocationProvider = ({ children }) => {
-  // const {slug}=useParams();
-  // console.log("Slug Location", slug);
-  
-  const location = useLocation();
+  const pathname = usePathname();
+  const pathPart = pathname.split("/");
+  const location = { pathname };
 
-  const pathPart = location.pathname.split("/");
-  const [previousLocation, setPreviousLocation] = useState(null);
-
-  return <LocationContext.Provider value={{ location, pathPart, previousLocation }}>{children}</LocationContext.Provider>;
+  return (
+    <LocationContext.Provider value={{ location, pathPart }}>
+      {children}
+    </LocationContext.Provider>
+  );
 };

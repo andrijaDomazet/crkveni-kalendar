@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import ArticleWidget from "./ArticleWidget.js";
 import "./Widget.scss";

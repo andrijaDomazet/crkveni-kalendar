@@ -1,10 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { blackDays } from "../components/Calendar/calendar-data/calendar-data";
 import { monthSerb } from "./shared";
 
 export function urlTitle2(title) {
-  // console.log("TITLE", title);
   const cyrilic = ["č", "ć", "ž", "š", "đ", ",", ":", "-", "?", "!", "."];
   const replArray = ["c", "c", "z", "s", "dj", "", "", "", "", "", ""];
   let regex = /--/gi;
@@ -32,13 +31,12 @@ export function renderTitleSection({
   strongClass = "",
 }) {
   const normalize = (str) => str.replace(/\s+/g, " ").trim();
-  // console.log("Element", mainTitle);
 
   return (
     <>
       {slavaSymbol && (
         <>
-          <Link to="/slave/" className="slavaStrong">
+          <Link href="/slave/" className="slavaStrong">
             SLAVA
           </Link>{" "}
         </>
@@ -50,10 +48,8 @@ export function renderTitleSection({
           );
           return (
             <React.Fragment key={index} className={mainClass}>
-              {/* <div key={index} className={mainClass}> */}
               <h2 className={isBlackDay ? "blackDay" : ""}>{el}</h2>
               {index !== mainTitle.length - 1 && <span>; </span>}
-              {/* </div> */}
             </React.Fragment>
           );
         })
@@ -73,7 +69,7 @@ export function renderTitleSection({
           );
 
           return extraLabelLink ? (
-            <Link to={extraLabelLink}>{content}</Link>
+            <Link href={extraLabelLink}>{content}</Link>
           ) : (
             content
           );
@@ -83,23 +79,12 @@ export function renderTitleSection({
 }
 
 export const getPreUrlTitle = (item) => {
-  // console.log("TEST", allC);
-
-  // if (!item || !Array.isArray(allC)) return "";
-
-  // const found = allC.find(
-  //   (e) => urlTitle2(e.title) === urlTitle2(item.category)
-  // );
-  // console.log("Found", found);
-
-  // const route = found?.route;
-  // return route ? `${route}${cat ? "" : urlTitle2(item.title) + "/"}` : "";
   return `/${item.category}/${urlTitle2(item.title)}/`;
 };
 
 export const getDayMonth = (date) => ({
   day: date.getDate(),
-  month: date.getMonth(), // ili +1 ako ti treba broj meseca
+  month: date.getMonth(),
   year: date.getFullYear(),
 });
 
@@ -124,30 +109,17 @@ export const getFullCalendar = (year, month) => {
 
   const calendar = [];
 
-  // Prethodni mesec
   for (let i = firstDay; i > 0; i--) {
-    calendar.push({
-      day: daysInPrevMonth - i + 1,
-      currentMonth: false,
-    });
+    calendar.push({ day: daysInPrevMonth - i + 1, currentMonth: false });
   }
 
-  // Trenutni mesec
   for (let i = 1; i <= daysInMonth; i++) {
-    calendar.push({
-      day: i,
-      currentMonth: true,
-    });
+    calendar.push({ day: i, currentMonth: true });
   }
 
-  // Sledeći mesec
   let nextMonthDay = 1;
-
   while (calendar.length % 7 !== 0) {
-    calendar.push({
-      day: nextMonthDay,
-      currentMonth: false,
-    });
+    calendar.push({ day: nextMonthDay, currentMonth: false });
     nextMonthDay++;
   }
 

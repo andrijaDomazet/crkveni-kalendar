@@ -1,3 +1,4 @@
+"use client";
 import { lazy, Suspense, useEffect, useState } from "react";
 import "./SinglePost.scss";
 import BodyText from "../../components/BodyText/BodyText";

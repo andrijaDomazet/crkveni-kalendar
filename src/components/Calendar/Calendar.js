@@ -1,6 +1,8 @@
+"use client";
 import React, { lazy, Suspense, useState } from "react";
 import "./Calendar.scss";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useRouter, usePathname } from "next/navigation";
+import NavLink from "../../UI/NavLink/NavLink";
 import {
   monthSerb,
   calendarYears,
@@ -16,38 +18,34 @@ import { useRouteContext } from "../../shared/RouteProvider.js";
 import { useCalendarContext } from "../../shared/CalendarProvider.js";
 
 const StickyAdLazy = lazy(() => import("../AdvModule/StickyAd.js"));
+
 export default function Calendar(props) {
   let { id, currentDate, pageYear, pageMonth } = useRouteContext();
   let { holidays } = useCalendarContext();
 
-  // let { id, currentDate, pageYear, pageMonth, holidays } = useIdContext();
   pageMonth = props.isMonth2 ?? pageMonth;
 
-  const location = useRouteContext();
+  const pathname = usePathname();
+  const router = useRouter();
   const [dropDownYear, setDropDownYear] = useState(false);
-  const navigate = useNavigate();
 
   const changeMonth = (val) => {
-    if (id === undefined) {
-      if (pageMonth === 11 && val === 1) {
-        navigate(`../${pageYear + 1}/januar/`);
-      } else if (pageMonth === 0 && val === -1) {
-        navigate(`../${pageYear - 1}/decembar/`);
-      } else {
-        navigate(`../${pageYear}/${monthSerb[pageMonth + val]}/`);
-      }
-    } else if (pageMonth === 11 && val === 1) {
-      navigate(`../${+pageYear + 1}/januar/`);
-    } else if (pageMonth === 0 && val === -1) {
-      navigate(`../${+pageYear - 1}/decembar/`);
-    } else {
-      navigate(`../${pageYear}/${tableTitle(val)}/`);
+    let newYear = pageYear;
+    let newMonth = pageMonth + val;
+
+    if (newMonth === 12) {
+      newMonth = 0;
+      newYear = pageYear + 1;
+    } else if (newMonth === -1) {
+      newMonth = 11;
+      newYear = pageYear - 1;
     }
+
+    router.push(`/${newYear}/${monthSerb[newMonth]}/`);
   };
 
   function setMonth(short) {
     if (short) {
-      //short month on home page
       const setShortCal = () => {
         if (currentDate.getDate() < 7) {
           return holidays.slice(0, currentDate.getDate() + short);
@@ -63,8 +61,8 @@ export default function Calendar(props) {
       return holidays;
     }
   }
+
   const tableTitle = (x) => {
-    // console.log("ID", id, pageYear, pageMonth, x);
     if (id === undefined) {
       if (pageMonth + x === 12) {
         return `Januar (${+pageYear + 1})`;
@@ -92,14 +90,13 @@ export default function Calendar(props) {
   };
 
   const setCloseClass = () => {
-    if (location.pathname === "/") {
+    if (pathname === "/") {
       return " close";
     } else {
       return "";
     }
   };
 
-  //change the calendar year
   const items_list = (items) => {
     return (
       <ul className={getDropDownMenu()}>
@@ -118,17 +115,18 @@ export default function Calendar(props) {
         })}
       </ul>
     );
-    // }
   };
+
   const getDropDownMenu = () => {
     return dropDownYear ? "drop_down_menu" : "drop_down_menu close";
   };
+
   let inTextNumber = 0;
   const nedelje = [];
   let classsesButtons = ["left", "month-center", "right"];
+
   return (
     <div className="calendar">
-      {/* ---- Gornje ranfle kalendara ---- */}
       <div className="first">
         <h1>Crkveni pravoslavni kalendar {pageYear}</h1>
         <div
@@ -140,9 +138,7 @@ export default function Calendar(props) {
           <div className="botDiv">{items_list(calendarYears[0].item_list)}</div>
         </div>
       </div>
-      {/* ---- END Gornje ranfle kalendara ---- */}
 
-      {/* ---- Kalendar ---- */}
       <table className="calendar-table" cellSpacing="0" cellPadding="0">
         <thead>
           <tr>
@@ -157,7 +153,6 @@ export default function Calendar(props) {
               <span>{tableTitle(0)}</span>
             </th>
             <th>
-              {" "}
               <span>Post</span>
             </th>
           </tr>
@@ -168,7 +163,6 @@ export default function Calendar(props) {
             let eventDay = eventDate.getDay();
             const tdClasses = ["onlyDay", "noDay", "before"];
             nedelje.push(inTextNumber);
-            // console.log("ITEM calendar", item);
 
             if (eventDay === 1) {
               inTextNumber++;
@@ -180,9 +174,7 @@ export default function Calendar(props) {
                     <td colSpan={5}>
                       {[1, 2, 3, 4, 5].includes(inTextNumber) && (
                         <div className="banner-wrapper inCalendar">
-                          {/* slotNumber={inCalendarArr[inTextNumber - 1]} */}
                           <AdManagerSlot
-                            adUnitPath={location.pathname}
                             slotNumber={inCalendarArr[inTextNumber - 1]}
                           />
                         </div>
@@ -199,7 +191,6 @@ export default function Calendar(props) {
                       : item.mainClass
                         ? ` ${item.mainClass}`
                         : "") +
-                    // todayClass(new Date(item.date)) +
                     " dayClass"
                   }
                 >
@@ -230,16 +221,10 @@ export default function Calendar(props) {
           })}
         </tbody>
       </table>
-      {/* ---- END Kalendar ---- */}
 
-      {/* ---- Donja ranfla kalendara ---- */}
       <div className="calendar-month">
         {[-1, 0, 1].map((offset) => (
-          <div
-            key={offset}
-            //  className={offset === 0 ? "month-center" : ``}
-            className={classsesButtons[offset + 1]}
-          >
+          <div key={offset} className={classsesButtons[offset + 1]}>
             <SimpleButton clicked={() => changeMonth(offset)}>
               {offset === -1 && <i className="fa-solid fa-backward"></i>}
               {tableTitle(offset)}
@@ -248,12 +233,9 @@ export default function Calendar(props) {
           </div>
         ))}
       </div>
-      {/* ---- END Donja ranfla kalendara ---- */}
+
       <Suspense fallback={<div></div>}>
-        <StickyAdLazy
-          adUnitPath={location.pathname}
-          slotNumber={"div-gpt-ad-1768472077826-0"}
-        />
+        <StickyAdLazy slotNumber={"div-gpt-ad-1768472077826-0"} />
       </Suspense>
     </div>
   );

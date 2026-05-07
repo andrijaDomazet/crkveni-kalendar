@@ -1,3 +1,4 @@
+"use client";
 import "./MonthBox.scss";
 import { getDayMonth, getFullCalendar } from "../../../shared/utility";
 import { days } from "../../Calendar/calendar-data/calendar-data";

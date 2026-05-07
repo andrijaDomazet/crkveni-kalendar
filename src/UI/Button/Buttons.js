@@ -1,3 +1,4 @@
+"use client";
 import "./Buttons.scss";
 
 export default function Buttons({ classes = "", clicked = () => {}, label = "", children }) {

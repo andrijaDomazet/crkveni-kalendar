@@ -1,7 +1,8 @@
+"use client";
 import "./Zadusnice.scss";
 import { calendarYears } from "../../Calendar/calendar-data/calendar-data.js";
 import { monthSerb } from "../../../shared/shared.js";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { useRouteContext } from "../../../shared/RouteProvider.js";
 
 export default function Zadusnice({ setYear, boxTitle, data }) {
@@ -28,7 +29,7 @@ export default function Zadusnice({ setYear, boxTitle, data }) {
               <tr key={index}>
                 <td>
                   <h3>
-                    <Link to={`/${currentYear}/${monthSerb[item[0]]}/`}>
+                    <Link href={`/${currentYear}/${monthSerb[item[0]]}/`}>
                       {/* {zadusniceName[index]} */}
                       {data.zadusnice[index].charAt(0).toUpperCase() +
                         data.zadusnice[index].slice(1)}

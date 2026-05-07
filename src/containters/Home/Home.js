@@ -1,3 +1,4 @@
+"use client";
 import "./Home.scss";
 import Calendar from "../../components/Calendar/Calendar";
 import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";

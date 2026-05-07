@@ -1,19 +1,18 @@
+"use client";
 import { createContext, useContext, useState, useMemo, useEffect } from "react";
-import { useLocation, matchPath } from "react-router-dom";
+import { usePathname, useParams } from "next/navigation";
 import { monthSerb } from "../components/Calendar/calendar-data/calendar-data";
 
 const RouteContext = createContext();
 export const useRouteContext = () => useContext(RouteContext);
 
 export const RouteProvider = ({ children }) => {
-  const location = useLocation();
+  const pathname = usePathname();
+  const params = useParams();
 
-  const pathPart = location.pathname.split("/");
-  const [previousLocation, setPreviousLocation] = useState(null);
-
-  const match = matchPath("/:slug/:id?", location.pathname);
-  const slug = match?.params?.slug;
-  const id = match?.params?.id;
+  const pathPart = useMemo(() => pathname.split("/"), [pathname]);
+  const slug = params?.slug;
+  const id = params?.id;
 
   const currentDate = useMemo(() => {
     const d = new Date();
@@ -38,11 +37,13 @@ export const RouteProvider = ({ children }) => {
 
   const pageMonth = id ? monthSerb.indexOf(id) : currentDate.getMonth();
   const currentYear = currentDate.getFullYear();
+
+  const location = useMemo(() => ({ pathname }), [pathname]);
+
   const value = useMemo(
     () => ({
       location,
       pathPart,
-      previousLocation,
       slug,
       id,
       currentDate,
@@ -50,34 +51,8 @@ export const RouteProvider = ({ children }) => {
       pageMonth,
       currentYear,
     }),
-    [
-      location,
-      pathPart,
-      previousLocation,
-      slug,
-      id,
-      currentDate,
-      pageYear,
-      pageMonth,
-      currentYear,
-    ],
+    [location, pathPart, slug, id, currentDate, pageYear, pageMonth, currentYear],
   );
-  return (
-    <RouteContext.Provider
-      // value={{
-      //   location,
-      //   pathPart,
-      //   previousLocation,
-      //   slug,
-      //   id,
-      //   currentDate,
-      //   pageYear,
-      //   pageMonth,
-      //   currentYear,
-      // }}
-      value={value}
-    >
-      {children}
-    </RouteContext.Provider>
-  );
+
+  return <RouteContext.Provider value={value}>{children}</RouteContext.Provider>;
 };

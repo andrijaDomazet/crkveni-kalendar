@@ -1,5 +1,6 @@
+"use client";
 import React, { useState, useRef } from "react";
-import { NavLink } from "react-router-dom";
+import NavLink from "../../../UI/NavLink/NavLink";
 import "./NavBar.scss";
 import { options } from "../../../shared/shared";
 
@@ -13,7 +14,7 @@ export default function NavBar() {
     }
   };
   const setLastLink = (options, lastIndex) => {
-    if (window.innerWidth < 768) {
+    if (typeof window !== "undefined" && window.innerWidth < 768) {
       return (
         <>
           <div className="nav-link-wrapper">
@@ -61,7 +62,7 @@ export default function NavBar() {
             <div className="botDiv">
               {items_list(
                 options[lastIndex].route,
-                options[lastIndex].item_list
+                options[lastIndex].item_list,
               )}
             </div>
           </div>
@@ -102,7 +103,6 @@ export default function NavBar() {
             </div>
           );
         })}
-        {/* {test(options, lastIndex)} */}
       </nav>
     );
   };
@@ -139,8 +139,7 @@ export default function NavBar() {
           stroke="currentColor"
           strokeWidth="2"
           strokeLinecap="round"
-          stroke-linejoin="round"
-          // className="lucide lucide-cross w-6 h-6 text-gold"
+          strokeLinejoin="round"
         >
           <path d="M4 9a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h4a1 1 0 0 1 1 1v4a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-4a1 1 0 0 1 1-1h4a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-4a1 1 0 0 1-1-1V4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4a1 1 0 0 1-1 1z"></path>
         </svg>
@@ -154,8 +153,7 @@ export default function NavBar() {
           stroke="currentColor"
           strokeWidth="2"
           strokeLinecap="round"
-          stroke-linejoin="round"
-          // className="lucide lucide-cross w-6 h-6 text-gold"
+          strokeLinejoin="round"
         >
           <path d="M4 9a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h4a1 1 0 0 1 1 1v4a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-4a1 1 0 0 1 1-1h4a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-4a1 1 0 0 1-1-1V4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4a1 1 0 0 1-1 1z"></path>
         </svg>
@@ -164,7 +162,6 @@ export default function NavBar() {
         <div className="line"></div>
         <div className="box45"></div>
         <NavLink to="/">
-          {/* <img src="/img/logo.png" /> */}
           <strong>Crkveni Kalendar</strong>
         </NavLink>
         <div className="box45"></div>
@@ -174,9 +171,6 @@ export default function NavBar() {
       <span className="navBar-siteLink">crkveni-kalendar.net</span>
       <div className="navBar-wrapper">
         {navBarOptions(1, 3)}
-        {/* <NavLink to="/" className="navBar__logo">
-          <img src="/img/logo.png" />
-        </NavLink> */}
         {navBarOptions(3, 5)}
         {setLastLink(options, lastIndex)}
       </div>

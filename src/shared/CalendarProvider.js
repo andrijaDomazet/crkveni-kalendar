@@ -1,3 +1,4 @@
+"use client";
 import { createContext, useContext, useMemo } from "react";
 import { useRouteContext } from "./RouteProvider";
 import {

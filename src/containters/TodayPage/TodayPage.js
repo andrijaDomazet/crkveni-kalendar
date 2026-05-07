@@ -1,3 +1,4 @@
+"use client";
 // import React from "react";
 import TodayBox from "../../components/Boxes/TodayBox/TodayBox";
 import Zadusnice from "../../components/Boxes/Zadusnice/Zadusnice";

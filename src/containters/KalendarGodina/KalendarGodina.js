@@ -1,3 +1,4 @@
+"use client";
 import "./KalendarGodina.scss";
 import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
 import { lazy, Suspense } from "react";

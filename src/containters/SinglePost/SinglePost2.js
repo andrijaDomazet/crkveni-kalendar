@@ -1,7 +1,8 @@
+"use client";
 import { useState, useEffect, lazy, Suspense } from "react";
-import { useParams } from "react-router-dom";
+import { useParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import "./SinglePost2.scss";
-import { useGlobalLocation } from "../../shared/LocationContext";
 import { urlTitle2 } from "../../shared/utility";
 import NoMatch from "../NoMatch/NoMatch";
 import molitve from "../../molitve.json";
@@ -13,9 +14,9 @@ const setTitle = (postTitle) => {
 };
 
 export default function SinglePost2() {
-  // const { data } = useIdContext();
-  const { test } = useParams();
-  const location = useGlobalLocation();
+  const params = useParams();
+  const test = params?.test;
+  const pathname = usePathname();
 
   const newData = () => {
     let dd = molitve.filter((item) => {
@@ -26,23 +27,21 @@ export default function SinglePost2() {
   const [newsPost, setNewsPost] = useState(newData);
   useEffect(() => {
     setNewsPost(newData);
-  }, [location.pathname]);
+  }, [pathname]);
 
-  if (!newData) {
-    return <NoMatch />; // pravi 404 tek kad znaš da fetch nije uspeo
+  if (!newsPost) {
+    return <NoMatch />;
   }
 
   return (
     <div className="singlePost2">
       <div className="banner-wrapper bilbord">
-        {/* <AdManagerSlot slotNumber={"div-gpt-ad-1761641124263-0"} /> */}
         <div id="onBid_billboard"></div>
       </div>
       <div className="content">
         <main className="mainContent">
           <article className="mainContent-wrapper">
             <h1 className="mainContent-title">{setTitle(newsPost)}</h1>
-            {/* <strong className="mainContent-lead">{newsPost.lead}</strong> */}
             <div className="mainContent-img">
               <img src={`${newsPost.pics[0]}`} alt="" />
               <div className="mainContent-img_source">

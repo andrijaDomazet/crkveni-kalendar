@@ -1,10 +1,11 @@
+"use client";
 import "./CrossingData.scss";
 import slave from "../Calendar/calendar-data/slave.json";
 import { monthSerb } from "../../shared/shared";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import React from "react";
-// import { getPreUrlTitle } from "../../shared/utility";
 import { useRouteContext } from "../../shared/RouteProvider";
+
 export default function CrossingData() {
   const { slug, currentDate } = useRouteContext();
   let currentYear = slug || currentDate.getFullYear();
@@ -31,7 +32,7 @@ export default function CrossingData() {
                   <tr className="monthTitle">
                     <td colSpan="2" style={{ fontWeight: "bold" }}>
                       <h2>
-                        <Link to={`/${currentYear}/${monthName}/`}>
+                        <Link href={`/${currentYear}/${monthName}/`}>
                           {monthName}
                         </Link>
                       </h2>
@@ -41,13 +42,7 @@ export default function CrossingData() {
                 <tr>
                   <td>{`${day}. ${monthName}`}</td>
                   <td>
-                    <h3>
-                      {/* <Link to={`/${currentYear}/${monthName}/`}> */}
-                      {/* nedostaje dobar category !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/}
-                      {/* <Link to={`${getPreUrlTitle(item)}`}> */}
-                        {item.title}
-                      {/* </Link> */}
-                    </h3>
+                    <h3>{item.title}</h3>
                   </td>
                 </tr>
               </React.Fragment>

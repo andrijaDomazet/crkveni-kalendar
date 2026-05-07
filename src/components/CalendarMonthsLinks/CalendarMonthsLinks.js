@@ -1,6 +1,7 @@
+"use client";
 import "./CalendarMonthsLinks.scss";
 import { monthSerb } from "../Calendar/calendar-data/calendar-data";
-import { NavLink } from "react-router-dom";
+import NavLink from "../../UI/NavLink/NavLink";
 import { useRouteContext } from "../../shared/RouteProvider";
 
 export default function CalendarMonthsLinks() {
@@ -8,11 +9,18 @@ export default function CalendarMonthsLinks() {
 
   return (
     <section className="calendar-allMonths">
-      <h2 className="calendar-title">Crkveni kalendar za {slug || currentYear}. godinu po mesecima</h2>
+      <h2 className="calendar-title">
+        Crkveni kalendar za {slug || currentYear}. godinu po mesecima
+      </h2>
 
       <div className="calendar-monthsGrid">
         {monthSerb.map((item) => (
-          <NavLink key={item} to={`/${slug || currentYear}/${item}/`} title={`Prikaži kalendar za ${item} ${slug || currentYear}. godine`} className="calendar-month">
+          <NavLink
+            key={item}
+            to={`/${slug || currentYear}/${item}/`}
+            title={`Prikaži kalendar za ${item} ${slug || currentYear}. godine`}
+            className="calendar-month"
+          >
             {item.charAt(0).toUpperCase() + item.slice(1)}
           </NavLink>
         ))}

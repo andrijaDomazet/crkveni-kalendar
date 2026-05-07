@@ -1,3 +1,4 @@
+"use client";
 import { lazy, Suspense } from "react";
 import Calendar from "../../components/Calendar/Calendar";
 import "./Kalendar.scss";

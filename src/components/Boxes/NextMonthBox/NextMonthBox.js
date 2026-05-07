@@ -1,7 +1,7 @@
-// components/NextMonthBox/NextMonthBox.js
+"use client";
 import "./NextMonthBox.scss";
 import { monthSerb } from "../../../shared/shared";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { useRouteContext } from "../../../shared/RouteProvider";
 
 export default function NextMonthBox() {
@@ -10,7 +10,6 @@ export default function NextMonthBox() {
   let pageMonthLoc = pageMonth;
   let pageYearLoc = pageYear;
 
-  // ako je decembar, resetujemo mesec i prelazimo u sledeću godinu
   if (pageMonthLoc === 11) {
     pageMonthLoc = -1;
     ++pageYearLoc;
@@ -20,7 +19,6 @@ export default function NextMonthBox() {
   const today = new Date();
   const day = today.getDate();
 
-  // Odlučujemo klasu na osnovu dana u mesecu
   const boxPositionClass =
     day >= 15 ? "next-month-box top" : "next-month-box close";
 
@@ -29,7 +27,7 @@ export default function NextMonthBox() {
       <div className="next-month-box-wrapper">
         ℹ️ Kalendar za naredni mesec:{" "}
         <Link
-          to={`/${pageYearLoc}/${nextMonth}/`}
+          href={`/${pageYearLoc}/${nextMonth}/`}
           title={`Crkveni kalendar ${nextMonth} ${pageYearLoc}`}
         >
           Pogledajte kalendar za {nextMonth} {pageYearLoc}. godine

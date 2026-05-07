@@ -1,5 +1,6 @@
+"use client";
 import "./SideDrawer.scss";
-import { NavLink } from "react-router-dom";
+import NavLink from "../../../UI/NavLink/NavLink";
 import { options } from "../../../shared/shared";
 
 export default function SideDrawer(props) {
@@ -42,9 +43,8 @@ export default function SideDrawer(props) {
             );
           })}
         </ul>
-         <div className="nameTitle">crkveni-kalendar.net</div>
+        <div className="nameTitle">crkveni-kalendar.net</div>
       </nav>
-     
     </div>
   );
 }

@@ -1,3 +1,4 @@
+"use client";
 import "./TodayBox.scss";
 import { getDayMonth } from "../../../shared/utility";
 import { monthSerb } from "../../Calendar/calendar-data/calendar-data";

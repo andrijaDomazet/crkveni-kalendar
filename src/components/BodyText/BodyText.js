@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { lazy, Suspense } from "react";
 import "./BodyText.scss";

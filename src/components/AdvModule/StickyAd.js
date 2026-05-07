@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react";
 import "./StickyAd.scss";
 import AdManagerSlot from "./AdManagerSlot.js";

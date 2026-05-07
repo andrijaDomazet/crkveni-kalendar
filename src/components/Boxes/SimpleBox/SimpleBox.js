@@ -1,4 +1,6 @@
-import { Link, useNavigate } from "react-router-dom";
+"use client";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import "./SimpleBox.scss";
 
 export default function SimpleBox({
@@ -13,7 +15,7 @@ export default function SimpleBox({
   topNavLink = false,
   textAnchor,
 }) {
-  let navigate = useNavigate();
+  const router = useRouter();
 
   const isClickable = topNavLink && Component === "section";
   const isAnchor = Component === "a";
@@ -25,13 +27,12 @@ export default function SimpleBox({
         ? { href, title: textAnchor || mainTitle }
         : {})}
       {...(isClickable && {
-        onClick: () => navigate(topNavLink),
+        onClick: () => router.push(topNavLink),
         style: { cursor: "pointer" },
       })}
     >
       <h2>
         {mainTitle}
-        {/* set i icon to control from props */}
         {mainTitleSymbol && <i className="fa-solid fa-angle-right"></i>}
       </h2>
       <div className="simpleBox-body">
@@ -53,12 +54,12 @@ export default function SimpleBox({
             <span className="simpleBox-cta">{buttonText}</span>
           ) : Array.isArray(buttonText) ? (
             buttonText.map((item, index) => (
-              <Link key={index} to={item[0]}>
+              <Link key={index} href={item[0]}>
                 {item[1]}
               </Link>
             ))
           ) : (
-            <Link to={linkText}>{buttonText}</Link>
+            <Link href={linkText}>{buttonText}</Link>
           ))}
       </div>
     </Component>
