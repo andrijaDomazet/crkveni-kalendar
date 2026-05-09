@@ -1,68 +1,58 @@
 "use client";
+
 import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 
-const displayedSlots = new Set();
-
 const AdManagerSlot = ({ slotNumber, onSlotRenderEnded }) => {
   const pathname = usePathname();
-  const prevPathRef = useRef(null);
+  const previousLocation = useRef(
+    typeof window !== "undefined"
+      ? sessionStorage.getItem("prevPathname") || ""
+      : "",
+  );
 
   useEffect(() => {
-    if (typeof window === "undefined") return;
-    window.googletag = window.googletag || { cmd: [] };
-
-    window.googletag.cmd.push(() => {
-      try {
-        const pubads = window.googletag.pubads?.();
-        if (!pubads) return;
-
-        if (onSlotRenderEnded) {
-          pubads.addEventListener("slotRenderEnded", (event) => {
+    if (typeof window !== "undefined" && window.googletag) {
+      window.googletag.cmd.push(function () {
+        const slots = window.googletag.pubads().getSlots();
+        console.log(
+          "Dostupni slotovi:",
+          slots.map((s) => s.getSlotElementId()),
+        );
+        console.log("Tražim:", slotNumber);
+        window.googletag.display(slotNumber);
+        window.googletag
+          .pubads()
+          .addEventListener("slotRenderEnded", (event) => {
             if (event.slot.getSlotElementId() === slotNumber) {
-              onSlotRenderEnded(event);
+              if (typeof onSlotRenderEnded === "function") {
+                onSlotRenderEnded(event);
+              }
             }
           });
-        }
-
-        if (displayedSlots.has(slotNumber)) {
-          const slot = pubads
-            .getSlots()
-            .find((s) => s.getSlotElementId() === slotNumber);
-          if (slot) pubads.refresh([slot]);
-        } else {
-          window.googletag.display(slotNumber);
-          displayedSlots.add(slotNumber);
-        }
-      } catch (e) {
-        console.warn("GPT skipped:", e);
-      }
-    });
-  }, [slotNumber]);
+      });
+    }
+  }, [slotNumber, onSlotRenderEnded]);
 
   useEffect(() => {
-    if (prevPathRef.current === null) {
-      prevPathRef.current = pathname;
-      return;
-    }
-    if (prevPathRef.current === pathname) return;
-    prevPathRef.current = pathname;
+    if (!window.googletag?.cmd) return;
+    if (!previousLocation.current) previousLocation.current = pathname;
 
-    window.googletag?.cmd?.push(() => {
-      try {
-        const pubads = window.googletag.pubads?.();
-        if (!pubads) return;
-        const slot = pubads
+    if (previousLocation.current !== pathname) {
+      window.googletag.cmd.push(() => {
+        const slot = window.googletag
+          .pubads()
           .getSlots()
           .find((s) => s.getSlotElementId() === slotNumber);
-        if (slot) pubads.refresh([slot]);
-      } catch (e) {
-        console.warn("GPT refresh skipped:", e);
-      }
-    });
+        if (slot) window.googletag.pubads().refresh([slot]);
+      });
+    }
+
+    previousLocation.current = pathname;
+    sessionStorage.setItem("prevPathname", pathname);
   }, [pathname, slotNumber]);
 
-  return <div id={slotNumber} />;
+  return <div id={slotNumber}></div>;
 };
 
 export default AdManagerSlot;
