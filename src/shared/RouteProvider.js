@@ -20,10 +20,12 @@ export const RouteProvider = ({ children }) => {
     return d;
   }, []);
 
-  const [pageYear, setPageYear] = useState(() => {
-    const parsed = Number(slug);
-    return !isNaN(parsed) ? parsed : new Date().getFullYear();
-  });
+  const [pageYear, setPageYear] = useState(new Date().getFullYear());
+
+  useEffect(() => {
+    const parsed = Number(params?.godina || params?.slug);
+    if (!isNaN(parsed)) setPageYear(parsed);
+  }, [params]);
 
   useEffect(() => {
     const parsed = Number(slug);
