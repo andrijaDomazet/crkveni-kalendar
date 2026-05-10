@@ -14,7 +14,7 @@ function ArticleBox({ n = {}, classes = "", loading = false }) {
     <div className={classes}>
       <div className="artBox-wrapper">
         <div className="artBox-desc">
-          <Link href={preUrlTitle}>
+          <Link prefetch={false} href={preUrlTitle}>
             <h3>{displayTitle}</h3>
           </Link>
         </div>

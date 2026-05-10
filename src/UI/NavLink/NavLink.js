@@ -12,7 +12,7 @@ export default function NavLink({ to, children, className, exact, ...rest }) {
     .filter(Boolean)
     .join(" ");
   return (
-    <Link href={to} className={finalClass} {...rest}>
+    <Link prefetch={false} href={to} className={finalClass} {...rest}>
       {children}
     </Link>
   );

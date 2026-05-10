@@ -36,7 +36,7 @@ export function renderTitleSection({
     <>
       {slavaSymbol && (
         <>
-          <Link href="/slave/" className="slavaStrong">
+          <Link prefetch={false} href="/slave/" className="slavaStrong">
             SLAVA
           </Link>{" "}
         </>
@@ -69,7 +69,7 @@ export function renderTitleSection({
           );
 
           return extraLabelLink ? (
-            <Link href={extraLabelLink}>{content}</Link>
+            <Link prefetch={false} href={extraLabelLink}>{content}</Link>
           ) : (
             content
           );

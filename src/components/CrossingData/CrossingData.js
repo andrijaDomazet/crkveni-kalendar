@@ -32,7 +32,7 @@ export default function CrossingData() {
                   <tr className="monthTitle">
                     <td colSpan="2" style={{ fontWeight: "bold" }}>
                       <h2>
-                        <Link href={`/${currentYear}/${monthName}/`}>
+                        <Link prefetch={false} href={`/${currentYear}/${monthName}/`}>
                           {monthName}
                         </Link>
                       </h2>

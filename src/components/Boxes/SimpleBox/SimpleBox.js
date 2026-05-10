@@ -54,12 +54,12 @@ export default function SimpleBox({
             <span className="simpleBox-cta">{buttonText}</span>
           ) : Array.isArray(buttonText) ? (
             buttonText.map((item, index) => (
-              <Link key={index} href={item[0]}>
+              <Link prefetch={false} key={index} href={item[0]}>
                 {item[1]}
               </Link>
             ))
           ) : (
-            <Link href={linkText}>{buttonText}</Link>
+            <Link prefetch={false} href={linkText}>{buttonText}</Link>
           ))}
       </div>
     </Component>

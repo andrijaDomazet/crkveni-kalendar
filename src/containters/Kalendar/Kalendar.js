@@ -35,7 +35,7 @@ export default function Kalendar() {
             <CalendarMonthsLinksLazy />
           </Suspense>
           <div className="banner-wrapper fix-size-horizontal">
-          <div id="onBid_aftertext-1"></div>
+            <div id="onBid_aftertext-1"></div>
             {/* <AdManagerSlot slotNumber={"div-gpt-ad-1750409157804-0"} /> */}
           </div>
           {/* <div className="banner-wrapper">

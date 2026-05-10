@@ -29,7 +29,7 @@ export default function Zadusnice({ setYear, boxTitle, data }) {
               <tr key={index}>
                 <td>
                   <h3>
-                    <Link href={`/${currentYear}/${monthSerb[item[0]]}/`}>
+                    <Link prefetch={false} href={`/${currentYear}/${monthSerb[item[0]]}/`}>
                       {/* {zadusniceName[index]} */}
                       {data.zadusnice[index].charAt(0).toUpperCase() +
                         data.zadusnice[index].slice(1)}
