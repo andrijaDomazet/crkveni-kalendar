@@ -1,4 +1,4 @@
-export const dynamic = "force-dynamic";
+
 import Home from "../src/containters/Home/Home";
 import { options } from "../src/shared/shared";
 

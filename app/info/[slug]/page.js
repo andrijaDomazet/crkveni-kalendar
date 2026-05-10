@@ -1,6 +1,10 @@
-export const dynamic = "force-dynamic";
+
 import SimplePage from "../../../src/containters/SimplePage/SimplePage";
 import { infoText } from "../../../src/shared/shared";
+
+export function generateStaticParams() {
+  return ["o-nama", "pravila-koriscenja", "politika-privatnosti"].map((slug) => ({ slug }));
+}
 
 export function generateMetadata({ params }) {
   const { slug } = params;

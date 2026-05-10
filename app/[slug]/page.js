@@ -1,6 +1,10 @@
-export const dynamic = "force-dynamic";
+
 import KalendarGodina from "../../src/containters/KalendarGodina/KalendarGodina";
 import { options } from "../../src/shared/shared";
+
+export function generateStaticParams() {
+  return ["2024", "2025", "2026", "2027"].map((slug) => ({ slug }));
+}
 
 export function generateMetadata({ params }) {
   const { slug } = params;

@@ -1,4 +1,4 @@
-export const dynamic = "force-dynamic";
+
 import Calendar from "../../src/components/Calendar/Calendar";
 
 export const metadata = {

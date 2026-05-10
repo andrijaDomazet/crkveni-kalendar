@@ -1,4 +1,4 @@
-export const dynamic = "force-dynamic";
+
 import SinglePost2 from "../../../src/containters/SinglePost/SinglePost2";
 import molitve from "../../../src/molitve.json";
 
@@ -13,6 +13,10 @@ function urlTitle2(title) {
     .split(" ")
     .join("-")
     .replace(/--/gi, "-");
+}
+
+export function generateStaticParams() {
+  return molitve.map((item) => ({ test: urlTitle2(item.title) }));
 }
 
 export function generateMetadata({ params }) {

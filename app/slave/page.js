@@ -1,4 +1,4 @@
-export const dynamic = "force-dynamic";
+
 import SinglePost from "../../src/containters/SinglePost/SinglePost";
 import data from "../../src/all__news.json";
 

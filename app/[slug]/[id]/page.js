@@ -1,6 +1,18 @@
-export const dynamic = "force-dynamic";
+
 import Kalendar from "../../../src/containters/Kalendar/Kalendar";
 import { options } from "../../../src/shared/shared";
+
+export function generateStaticParams() {
+  const slugs = ["januar", "februar", "mart", "april", "maj", "jun", "jul", "avgust", "septembar", "oktobar", "novembar", "decembar"];
+  const years = ["2024", "2025", "2026", "2027"];
+  const params = [];
+  slugs.forEach((slug) => {
+    years.forEach((id) => {
+      params.push({ slug, id });
+    });
+  });
+  return params;
+}
 
 export function generateMetadata({ params }) {
   const { slug, id } = params;
