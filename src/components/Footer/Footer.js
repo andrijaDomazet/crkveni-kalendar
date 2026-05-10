@@ -1,10 +1,14 @@
 "use client";
 import { useRouteContext } from "../../shared/RouteProvider";
 import { monthSerb } from "../../shared/shared";
+import { getDayMonth } from "../../shared/utility";
 import "./Footer.scss";
 
 export default function Footer() {
-  let { pageMonth, pageYear } = useRouteContext();
+  let { pageMonth, pageYear, currentDate } = useRouteContext();
+
+    let dateDetails = getDayMonth(currentDate);
+
   return (
     <footer className="footer">
       <div className="footer-border"></div>
@@ -29,19 +33,19 @@ export default function Footer() {
           </div>
           <ul>
             <li>
-              <a href={`/${pageYear}/${monthSerb[pageMonth]}/`}>
+              <a href={`/${dateDetails.year}/${monthSerb[dateDetails.month]}/`}>
                 {/* <i className="fa-solid fa-circle-arrow-right"></i>  */}
-                Crkveni kalendar {`${monthSerb[pageMonth]}`} {`${pageYear}`}
+                Crkveni kalendar {`${monthSerb[dateDetails.month]}`} {`${dateDetails.year}`}
               </a>
             </li>
             <li>
-              <a href={`/${pageYear}/`}>{`Crkveni kalendar ${pageYear}`}</a>
+              <a href={`/${pageYear}/`}>{`Crkveni kalendar ${dateDetails.year}`}</a>
             </li>
             <li>
               <a href="/slave/">Krsne slave</a>
             </li>
             <li>
-              <a href="/zadusnice/">{`Zadušnice u ${pageYear}. godini`}</a>
+              <a href="/zadusnice/">{`Zadušnice u ${dateDetails.year}. godini`}</a>
             </li>
           </ul>
         </section>
@@ -143,7 +147,10 @@ export default function Footer() {
       </div>
 
       <div className="footer-copyright">
-        <p>&copy; 2025 crkveni-kalendar.net. Sva prava zadržana | Dizajn i održavanje: <a href="https://tausolutions.rs/">TAUsolutions</a></p>
+        <p>
+          &copy; 2025 crkveni-kalendar.net. Sva prava zadržana | Dizajn i
+          održavanje: <a href="https://tausolutions.rs/">TAUsolutions</a>
+        </p>
       </div>
     </footer>
   );

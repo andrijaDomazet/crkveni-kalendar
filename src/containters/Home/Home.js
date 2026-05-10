@@ -133,10 +133,10 @@ export default function Home() {
           <Suspense fallback={<div></div>}>
             <SimpleBoxLazy
               classes="green"
-              linkText="/2026/april/"
-              mainTitle="Vaskrs 2026."
-              mainBody="Vaskrs (Uskrs) u 2026. godini pada na 12. april po novom kalendaru."
-              buttonText="Kalendar za april 2026. →"
+              linkText="/2027/maj/"
+              mainTitle="Vaskrs 2027."
+              mainBody="Vaskrs (Uskrs) u 2027. godini pada na 2. maj po novom kalendaru."
+              buttonText="Kalendar za maj 2027. →"
             />
           </Suspense>
 

@@ -19,8 +19,6 @@ const CalendarMonthsLinksLazy = lazy(
 export default function Kalendar() {
   const { yearIndex, pageYear } = useCalendarContext();
 
-  // console.log("Year", yearIndex, pageYear);
-
   return (
     <div className="kalendar">
       <div className="banner-wrapper bilbord">
