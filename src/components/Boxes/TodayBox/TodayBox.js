@@ -8,16 +8,15 @@ import { useCalendarContext } from "../../../shared/CalendarProvider";
 export default function TodayBox({ classes = false }) {
   const { currentDate, pageYear } = useRouteContext();
   const { dayName, todayHoliday } = useCalendarContext();
-  // const { dayName, currentDate, pageYear, todayHoliday } = useIdContext();
+
+  if (!currentDate || !todayHoliday) return null;
 
   //set details from currentDate
   let todayDetails = getDayMonth(currentDate);
 
   //check is curentYear some other year then current
-  if (todayDetails.year !== pageYear) {
-    return;
-  }
-  console.log("Today holiday", todayHoliday.title);
+  if (todayDetails.year !== pageYear) return null;
+  // console.log("Today holiday", todayHoliday.title);
 
   return (
     <div className={`today__box ${classes}`}>

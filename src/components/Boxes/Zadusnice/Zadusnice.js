@@ -6,8 +6,9 @@ import Link from "next/link";
 import { useRouteContext } from "../../../shared/RouteProvider.js";
 
 export default function Zadusnice({ setYear, boxTitle, data }) {
-  const { slug, currentDate } = useRouteContext()
-  let currentYear = setYear || slug || currentDate.getFullYear();
+  const { slug, currentDate } = useRouteContext();
+  let currentYear =
+    setYear || slug || (currentDate?.getFullYear() ?? new Date().getFullYear());
   let yearIndex = calendarYears[0].item_list.findIndex(
     (item) => item.title == currentYear,
   );
@@ -29,7 +30,10 @@ export default function Zadusnice({ setYear, boxTitle, data }) {
               <tr key={index}>
                 <td>
                   <h3>
-                    <Link prefetch={false} href={`/${currentYear}/${monthSerb[item[0]]}/`}>
+                    <Link
+                      prefetch={false}
+                      href={`/${currentYear}/${monthSerb[item[0]]}/`}
+                    >
                       {/* {zadusniceName[index]} */}
                       {data.zadusnice[index].charAt(0).toUpperCase() +
                         data.zadusnice[index].slice(1)}

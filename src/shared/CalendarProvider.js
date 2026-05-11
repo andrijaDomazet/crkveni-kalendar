@@ -165,11 +165,11 @@ export const CalendarProvider = ({ children }) => {
   };
   // console.time("holidays calc");
   // console.time("holidays calc");
+  // 1. holidays useMemo
   const holidays = useMemo(() => {
     if (pageMonth === undefined || pageMonth < 0 || !idsMonths[pageMonth]) {
       return [];
     }
-
     return filterHolidays();
   }, [pageYear, pageMonth, currentDate]);
   // console.timeEnd("holidays calc");
@@ -337,7 +337,10 @@ export const CalendarProvider = ({ children }) => {
         item.separatorSymbol = " - ";
       }
       item.post = setPostDays(item.date.getTime());
-      if (toMidnightTs(item.date) === toMidnightTs(currentDate)) {
+      if (
+        currentDate &&
+        toMidnightTs(item.date) === toMidnightTs(currentDate)
+      ) {
         item.today = " today";
       }
       return item;
@@ -346,9 +349,14 @@ export const CalendarProvider = ({ children }) => {
     return setHolTest;
   }
 
+  // 3. todayHoliday — null check
   const todayHoliday = useMemo(
     () =>
-      holidays.find((h) => toMidnightTs(h.date) === toMidnightTs(currentDate)),
+      currentDate
+        ? holidays.find(
+            (h) => toMidnightTs(h.date) === toMidnightTs(currentDate),
+          )
+        : null,
     [holidays, currentDate],
   );
 

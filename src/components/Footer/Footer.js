@@ -7,7 +7,7 @@ import "./Footer.scss";
 export default function Footer() {
   let { pageMonth, pageYear, currentDate } = useRouteContext();
 
-    let dateDetails = getDayMonth(currentDate);
+  const dateDetails = getDayMonth(currentDate ?? new Date());
 
   return (
     <footer className="footer">
@@ -35,11 +35,14 @@ export default function Footer() {
             <li>
               <a href={`/${dateDetails.year}/${monthSerb[dateDetails.month]}/`}>
                 {/* <i className="fa-solid fa-circle-arrow-right"></i>  */}
-                Crkveni kalendar {`${monthSerb[dateDetails.month]}`} {`${dateDetails.year}`}
+                Crkveni kalendar {`${monthSerb[dateDetails.month]}`}{" "}
+                {`${dateDetails.year}`}
               </a>
             </li>
             <li>
-              <a href={`/${pageYear}/`}>{`Crkveni kalendar ${dateDetails.year}`}</a>
+              <a
+                href={`/${pageYear}/`}
+              >{`Crkveni kalendar ${dateDetails.year}`}</a>
             </li>
             <li>
               <a href="/slave/">Krsne slave</a>

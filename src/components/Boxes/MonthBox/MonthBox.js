@@ -5,8 +5,10 @@ import { days } from "../../Calendar/calendar-data/calendar-data";
 import { useCalendarContext } from "../../../shared/CalendarProvider";
 
 export default function MonthBox() {
-  // let { currentDate, holidays } = useIdContext();
-  const { currentDate, holidays } = useCalendarContext();
+  const { currentDate } = useRouteContext();
+  const { holidays } = useCalendarContext();
+  if (!currentDate) return null;
+
   const currentData = getDayMonth(currentDate);
   const daysMonth = getFullCalendar(currentData.year, currentData.month);
   //   console.log("Holidays", holidays);

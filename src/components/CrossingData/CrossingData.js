@@ -8,7 +8,8 @@ import { useRouteContext } from "../../shared/RouteProvider";
 
 export default function CrossingData() {
   const { slug, currentDate } = useRouteContext();
-  let currentYear = slug || currentDate.getFullYear();
+  let currentYear =
+    slug || (currentDate?.getFullYear() ?? new Date().getFullYear());
   let currentMonth = null;
 
   return (
@@ -32,7 +33,10 @@ export default function CrossingData() {
                   <tr className="monthTitle">
                     <td colSpan="2" style={{ fontWeight: "bold" }}>
                       <h2>
-                        <Link prefetch={false} href={`/${currentYear}/${monthName}/`}>
+                        <Link
+                          prefetch={false}
+                          href={`/${currentYear}/${monthName}/`}
+                        >
                           {monthName}
                         </Link>
                       </h2>

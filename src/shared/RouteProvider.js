@@ -2,7 +2,7 @@
 import { createContext, useContext, useState, useMemo, useEffect } from "react";
 import { usePathname, useParams } from "next/navigation";
 import { monthSerb } from "../components/Calendar/calendar-data/calendar-data";
-// 
+//
 const RouteContext = createContext();
 export const useRouteContext = () => useContext(RouteContext);
 
@@ -14,10 +14,18 @@ export const RouteProvider = ({ children }) => {
   const slug = params?.godina || params?.slug;
   const id = params?.mesec || params?.id;
 
-  const currentDate = useMemo(() => {
+  const [currentDate, setCurrentDate] = useState(() => {
+    // Vraća null na serveru, datum na klijentu
+    if (typeof window === "undefined") return null;
     const d = new Date();
     d.setHours(0, 0, 0, 0);
     return d;
+  });
+
+  useEffect(() => {
+    const d = new Date();
+    d.setHours(0, 0, 0, 0);
+    setCurrentDate(d);
   }, []);
 
   const [pageYear, setPageYear] = useState(new Date().getFullYear());
@@ -27,18 +35,10 @@ export const RouteProvider = ({ children }) => {
     if (!isNaN(parsed)) setPageYear(parsed);
   }, [params]);
 
-  useEffect(() => {
-    const parsed = Number(slug);
-    if (!isNaN(parsed)) {
-      if (parsed !== pageYear) setPageYear(parsed);
-    } else {
-      if (pageYear !== currentDate.getFullYear())
-        setPageYear(currentDate.getFullYear());
-    }
-  }, [slug, pageYear, currentDate]);
-
-  const pageMonth = id ? monthSerb.indexOf(id) : currentDate.getMonth();
-  const currentYear = currentDate.getFullYear();
+  const pageMonth = id
+    ? monthSerb.indexOf(id)
+    : (currentDate?.getMonth() ?? new Date().getMonth());
+  const currentYear = currentDate?.getFullYear() ?? new Date().getFullYear();
 
   const location = useMemo(() => ({ pathname }), [pathname]);
 

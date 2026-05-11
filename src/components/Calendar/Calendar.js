@@ -45,7 +45,7 @@ export default function Calendar(props) {
   };
 
   function setMonth(short) {
-    if (short) {
+    if (short && currentDate) {
       const setShortCal = () => {
         if (currentDate.getDate() < 7) {
           return holidays.slice(0, currentDate.getDate() + short);

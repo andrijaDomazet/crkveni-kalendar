@@ -12,8 +12,8 @@ import { getDayMonth } from "../../shared/utility";
 import { useRouteContext } from "../../shared/RouteProvider";
 
 export default function TodayPage() {
-  // const { yearIndex, currentDate } = useIdContext();
   const { yearIndex, currentDate } = useRouteContext();
+  if (!currentDate) return null;
   let todayDetails = getDayMonth(currentDate);
 
   return (
