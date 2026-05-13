@@ -2,6 +2,9 @@ import React from "react";
 import "./ArticleWidget.scss";
 export default function ArticleWidget(props) {
   const { data, classes } = props;
+
+  if (!data) return null;
+
   return (
     <div>
       <a target="_blank" className={classes} href={data.testUrl}>

@@ -10,7 +10,7 @@ export default function Widget() {
       response
         .json()
         .then((data) => setData(data))
-        .catch((error) => console.log("Error fetching data:", error))
+        .catch((error) => console.log("Error fetching data:", error)),
     );
   }, []);
   return (
@@ -21,12 +21,11 @@ export default function Widget() {
         </a>
       </div>
       {/* <div className="widget__container"> */}
-      {data && (
+      {data && data.length >= 3 && (
         <div className="widget__container">
           <ArticleWidget data={data[0]} classes="wBox" />
           <ArticleWidget data={data[1]} classes="wBox" />
           <ArticleWidget data={data[2]} classes="wBox" />
-          {/* <ArticleWidget data={data[3]} classes="wBox" /> */}
         </div>
       )}
       {/* </div> */}
