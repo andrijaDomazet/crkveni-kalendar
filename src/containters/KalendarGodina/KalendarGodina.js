@@ -31,7 +31,7 @@ export default function KalendarGodina() {
   const { startEasterTs, endEasterTs } = postLookup;
   const petrovPostStartDate = new Date(easterDay).setDate(new Date(easterDay).getDate() + 57);
   // const pageYear = currentYear;
-  console.log("Page year", pageYear);
+  // console.log("Page year", pageYear);
 
   const years = [2026, 2027, 2028];
   const otherYears = years.filter((y) => y !== pageYear);

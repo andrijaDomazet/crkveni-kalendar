@@ -32,7 +32,12 @@ export const RouteProvider = ({ children }) => {
 
   useEffect(() => {
     const parsed = Number(params?.godina || params?.slug);
-    if (!isNaN(parsed)) setPageYear(parsed);
+    if (!isNaN(parsed) && parsed > 2000) {
+      setPageYear(parsed);
+    } else {
+      // Kada smo na /, resetuj na trenutnu godinu
+      setPageYear(new Date().getFullYear());
+    }
   }, [params]);
 
   const pageMonth = id

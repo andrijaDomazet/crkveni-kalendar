@@ -30,10 +30,17 @@ export const CalendarProvider = ({ children }) => {
     [pageYear],
   );
 
+  const petrovPostStartDate = useMemo(
+    () => new Date(easterDay).setDate(new Date(easterDay).getDate() + 57),
+    [pageYear],
+  );
+
   const postLookup = useMemo(() => {
     const bozicniPostStartTs = toTs(pageYear, 10, 28);
     const bozicniPostEndTs = toTs(pageYear, 0, 6);
     const vikendPosleBozicaTs = toTs(pageYear, 0, 17);
+    const petrovPostStartTs = toMidnightTs(new Date(petrovPostStartDate));
+    const petrovPostEndTs = toTs(pageYear, 6, 12);
 
     const easterTs = toTs(
       easterDay.getFullYear(),
@@ -60,6 +67,8 @@ export const CalendarProvider = ({ children }) => {
       bozicniPostStartTs,
       bozicniPostEndTs,
       vikendPosleBozicaTs,
+      petrovPostStartTs,
+      petrovPostEndTs,
       startEasterTs,
       endEasterTs,
       easterTs,
@@ -150,12 +159,15 @@ export const CalendarProvider = ({ children }) => {
       bozicniPostEndTs,
       startEasterTs,
       endEasterTs,
+      petrovPostStartTs, // DODAJ
+      petrovPostEndTs, // DODAJ
       notPostSet,
       isPostSet,
     } = postLookup;
 
     if (ts >= bozicniPostStartTs || ts <= bozicniPostEndTs) return "post";
     if (ts >= startEasterTs && ts <= endEasterTs) return "post";
+    if (ts >= petrovPostStartTs && ts <= petrovPostEndTs) return "post";
 
     const day = new Date(ts).getDay();
     if ((day === 3 || day === 5) && !notPostSet.has(ts)) return "post";
@@ -163,8 +175,7 @@ export const CalendarProvider = ({ children }) => {
 
     return "";
   };
-  // console.time("holidays calc");
-  // console.time("holidays calc");
+
   // 1. holidays useMemo
   const holidays = useMemo(() => {
     if (pageMonth === undefined || pageMonth < 0 || !idsMonths[pageMonth]) {

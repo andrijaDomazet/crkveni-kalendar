@@ -1,12 +1,22 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import NavLink from "../../../UI/NavLink/NavLink";
 import "./NavBar.scss";
 import { options } from "../../../shared/shared";
 
 export default function NavBar() {
   let navRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
   const [dropDown, setDropDown] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+    // opcionalno: pratiti resize
+    const handler = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handler);
+    return () => window.removeEventListener("resize", handler);
+  }, []);
+
   let lastIndex = options.length - 1;
   const handleClick = () => {
     if (navRef.current) {
@@ -14,7 +24,7 @@ export default function NavBar() {
     }
   };
   const setLastLink = (options, lastIndex) => {
-    if (typeof window !== "undefined" && window.innerWidth < 768) {
+    if (isMobile) {
       return (
         <>
           <div className="nav-link-wrapper">
