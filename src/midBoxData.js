@@ -3,8 +3,9 @@ export const nextHolidays = [
   // ["4. april", "Lazareva subota (Vrbica)"],
   // ["5. april", "Ulazak Gospoda Isusa Hrista u Jerusalim - Cveti"],
   // ["12. april", "Vaskrs - Vaskrsenje Gospoda Isusa Hrista"],
-  ["21. maj", "Vaznesenje Gospodnje - Spasovdan"],
-  ["22. maj", "Prenos moštiju Svetog oca Nikolaj"],
+  // ["21. maj", "Vaznesenje Gospodnje - Spasovdan"],
+  ["31. maj", "Silazak Svetog Duha na apostole - Pedesetnica - Trojice"],
   ["28. jun", "Vidovdan"],
   ["7. jul", "Ivanjdan"],
+  ["12. jul", "Petrovdan"],
 ];
