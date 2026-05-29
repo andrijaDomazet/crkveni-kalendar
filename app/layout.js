@@ -132,10 +132,14 @@ export default function RootLayout({ children }) {
                 interstitialSlot.setConfig({ interstitial: { triggers: { navBar: true, unhideWindow: true } } });
               }
 
-              googletag.pubads().setCentering(true);
+              googletag.setConfig({centering: true});
               googletag.pubads().collapseEmptyDivs(true,true);
               googletag.pubads().enableAsyncRendering();
-              googletag.pubads().setSafeFrameConfig({allowOverlayExpansion:true});
+              googletag.pubads().setSafeFrameConfig({
+              allowOverlayExpansion: true,
+              allowPushExpansion: true,
+              sandbox: false
+              });
               googletag.pubads().enableLazyLoad({fetchMarginPercent:200,renderMarginPercent:100,mobileScaling:0.5});
             
               googletag.enableServices();

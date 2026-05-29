@@ -7,6 +7,7 @@ import OnNetworkVideo from "../../components/AdvModule/OnNetworkVideo.js";
 // import { useRouteContext } from "../../shared/RouteProvider.js";
 import { calendarYears } from "../../components/Calendar/calendar-data/calendar-data.js";
 import { useCalendarContext } from "../../shared/CalendarProvider.js";
+import AdRefresh from "../../components/AdvModule/AdRefresh.js";
 
 const WidgetLazy = lazy(() => import("../../UI/Widget/Widget.js"));
 const ZadusniceLazy = lazy(
@@ -51,6 +52,7 @@ export default function Kalendar() {
 
           <div className="banner-wrapper xl_sticky">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750411708088-0"} />
+            <AdRefresh slotId="div-gpt-ad-1750411708088-0" />
           </div>
           {/* <div className="posni_kalendar">
             <h2>Kalendar posta</h2>
