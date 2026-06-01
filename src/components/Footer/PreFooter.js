@@ -1,30 +1,33 @@
+"use client";
 import React from "react";
 import "./PreFooter.scss";
 import SimpleBox from "../Boxes/SimpleBox/SimpleBox";
+import { usePathname } from "next/navigation";
 
 export default function PreFooter() {
+  const pathname = usePathname();
+
   const allLinks = [
-    // ["Kalendar 2026", "/2026/"],
-    ["Vaskrs 2026", "/2026/april/"],
-    // ["Pravoslavni kalendar", "/2026/"],
-    ["Mladenci 2026", "/2026/mart/"],
-    ["Spasovdan 2026", "/2026/maj/"],
+    ["Petrovdan 2026", "/2026/jul/"],
+    ["Petrovski post", "/hriscanski-post/"],
+    ["Miholjske zadušnice", "/2026/oktobar/"],
+    ["Crkveni kalendar 2027", "/2027/"],
+    ["Mesečeve mene 2026", "/meseceve-mene/"],
   ];
+
+  const filteredLinks = allLinks.filter((item) => !pathname.startsWith(item[1]));
+
   return (
     <div className="preFooter">
       <div className="preFooter-wrapper">
-        {allLinks.map((item, index) => {
-          return (
-            <SimpleBox
-              key={index}
-              classes="central"
-              //   classes="orange"
-              linkText={item[1]}
-              buttonText={item[0]}
-              // buttonText={buttonText}
-            />
-          );
-        })}
+        {filteredLinks.map((item, index) => (
+          <SimpleBox
+            key={index}
+            classes="central"
+            linkText={item[1]}
+            buttonText={item[0]}
+          />
+        ))}
       </div>
     </div>
   );

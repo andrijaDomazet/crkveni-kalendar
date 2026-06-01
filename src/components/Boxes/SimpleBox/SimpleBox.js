@@ -9,7 +9,7 @@ export default function SimpleBox({
   mainTitle,
   mainTitleSymbol = false,
   mainBody,
-  linkText,
+  linkText = "#",
   buttonText,
   classes = "",
   topNavLink = false,
@@ -31,10 +31,16 @@ export default function SimpleBox({
         style: { cursor: "pointer" },
       })}
     >
-      <h2>
+      {(mainTitle || mainTitleSymbol) && (
+        <h2>
+          {mainTitle}
+          {mainTitleSymbol && <i className="fa-solid fa-angle-right"></i>}
+        </h2>
+      )}
+      {/* <h2>
         {mainTitle}
         {mainTitleSymbol && <i className="fa-solid fa-angle-right"></i>}
-      </h2>
+      </h2> */}
       <div className="simpleBox-body">
         <div className="simpleBox-body-wrapper">
           {Array.isArray(mainBody) ? (
@@ -59,7 +65,9 @@ export default function SimpleBox({
               </Link>
             ))
           ) : (
-            <Link prefetch={false} href={linkText}>{buttonText}</Link>
+            <Link prefetch={false} href={linkText}>
+              {buttonText}
+            </Link>
           ))}
       </div>
     </Component>

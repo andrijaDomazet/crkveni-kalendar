@@ -84,6 +84,9 @@ export default function Footer() {
             <li>
               <a href="/meseceve-mene/">Mesečeve mene</a>
             </li>
+            <li>
+              <a href="/imenoslov/">Imenoslov</a>
+            </li>
           </ul>
         </section>
         <section>
