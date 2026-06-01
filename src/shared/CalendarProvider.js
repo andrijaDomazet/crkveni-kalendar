@@ -159,8 +159,8 @@ export const CalendarProvider = ({ children }) => {
       bozicniPostEndTs,
       startEasterTs,
       endEasterTs,
-      petrovPostStartTs, // DODAJ
-      petrovPostEndTs, // DODAJ
+      petrovPostStartTs,
+      petrovPostEndTs,
       notPostSet,
       isPostSet,
     } = postLookup;
@@ -170,6 +170,34 @@ export const CalendarProvider = ({ children }) => {
     if (ts >= petrovPostStartTs && ts <= petrovPostEndTs) return "post";
 
     const day = new Date(ts).getDay();
+
+    // Neposni dani nakon Božića — od Božića do prve nedjelje (uključujući nedjelju)
+    const bozicTs = toTs(pageYear, 0, 7);
+    const dateObj = new Date(ts);
+    if (ts >= bozicTs) {
+      // Nađi prvu nedjelju nakon Božića (ili sam Božić ako je nedjelja)
+      const bozicDate = new Date(bozicTs);
+      const daysUntilSunday =
+        bozicDate.getDay() === 0 ? 0 : 7 - bozicDate.getDay();
+      const firstSundayAfterBozicTs = toTs(pageYear, 0, 7 + daysUntilSunday);
+      if (ts <= firstSundayAfterBozicTs) return "";
+    }
+
+    // Petrovske poklade — srijeda i petak u sedmici prije početka posta
+    const petrovPostaDateObj = new Date(petrovPostStartTs);
+    const dayOfWeek = petrovPostaDateObj.getDay();
+    const daysBackToMonday = dayOfWeek === 0 ? 6 : dayOfWeek - 1;
+    const thisMonday = toTs(
+      petrovPostaDateObj.getFullYear(),
+      petrovPostaDateObj.getMonth(),
+      petrovPostaDateObj.getDate() - daysBackToMonday,
+    );
+
+    const petrovPokladeStartTs =
+      dayOfWeek === 1 ? thisMonday - 7 * 24 * 60 * 60 * 1000 : thisMonday;
+
+    if (ts >= petrovPokladeStartTs && ts < petrovPostStartTs) return "";
+
     if ((day === 3 || day === 5) && !notPostSet.has(ts)) return "post";
     if (isPostSet.has(ts)) return "post";
 
