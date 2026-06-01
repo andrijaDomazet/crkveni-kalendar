@@ -14,6 +14,7 @@ export default function SimpleBox({
   classes = "",
   topNavLink = false,
   textAnchor,
+  listType = "ul",
 }) {
   const router = useRouter();
 
@@ -44,11 +45,19 @@ export default function SimpleBox({
       <div className="simpleBox-body">
         <div className="simpleBox-body-wrapper">
           {Array.isArray(mainBody) ? (
-            <ul>
-              {mainBody.map((item, index) => {
-                return <li key={index}>{item}</li>;
-              })}
-            </ul>
+            listType === "ol" ? (
+              <ol>
+                {mainBody.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ol>
+            ) : (
+              <ul>
+                {mainBody.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            )
           ) : (
             <p>{mainBody}</p>
           )}

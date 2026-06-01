@@ -97,6 +97,29 @@ export default function Home() {
           <div className="banner-wrapper fix-size-horizontal">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750409277034-0"} />
           </div>
+          <section>
+            <Suspense fallback={<div></div>}>
+              <SimpleBoxLazy
+                classes="green"
+                // linkText="/hriscanski-post/"
+                mainTitle="Deset Božijih zapovesti"
+                listType="ol"
+                mainBody={[
+                  "Ja sam Gospod Bog Tvoj, nemoj imati drugih bogova osim mene.",
+                  "Ne pravi sebi idola niti kakva lika; nemoj im se klanjati niti im služiti.",
+                  "Ne uzimaj uzalud imena Gospoda Boga svojega.",
+                  "Sećaj se dana odmora da ga svetkuješ; šest dana radi i svrši sve svoje poslove, a sedmi dan je odmor Gospodu Bogu tvojemu.",
+                  "Poštuj oca svojega i mater svoju, da ti dobro bude i da dugo poživiš na zemlji.",
+                  "Ne ubij.",
+                  "Ne čini preljube.",
+                  "Ne kradi.",
+                  "Ne svedoči lažno na bližnjega svojega.",
+                  "Ne poželi ništa tuđe.",
+                ]}
+                // buttonText="Hrišćanski postovi →"
+              />
+            </Suspense>
+          </section>
         </div>
         <div className="home__wrapper-left">
           <TodayBox />

@@ -32,7 +32,7 @@
       p {
         padding: 0 0.8rem;
       }
-      ul {
+      ul, ol {
         padding-left: 1.5rem;
         li {
           font-size: 0.9rem;
@@ -80,7 +80,7 @@
   .simpleBox {
     .simpleBox-body {
       .simpleBox-body-wrapper {
-        ul {
+        ul,ol {
           padding-left: 2rem;
           li {
             font-size: 1rem;

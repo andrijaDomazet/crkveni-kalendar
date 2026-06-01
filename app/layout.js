@@ -133,7 +133,7 @@ export default function RootLayout({ children }) {
               }
 
               googletag.setConfig({centering: true});
-              googletag.pubads().collapseEmptyDivs(true,true);
+              googletag.setConfig({ collapseDiv: { collapseBeforeAdFetch: true } });
               googletag.pubads().enableAsyncRendering();
               googletag.pubads().setSafeFrameConfig({
               allowOverlayExpansion: true,

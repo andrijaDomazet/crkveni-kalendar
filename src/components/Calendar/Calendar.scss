@@ -124,7 +124,6 @@
       }
       th:nth-child(4) {
         font-size: 1.2rem;
-        // background: red;
       }
     }
     tbody {
@@ -215,10 +214,8 @@
             display: inline;
             font-size: 1rem;
             letter-spacing: 0.03rem;
-            // max-width: 60%;
-            // padding-right: 5rem;
             .redStrong {
-              color: $redDay1;
+              color: #df2525;
             }
             .blackStrong {
               color: $grey5;
@@ -258,14 +255,13 @@
     padding: 0.5rem 0;
     border-bottom-left-radius: 0.3rem;
     border-bottom-right-radius: 0.3rem;
-    .left{
+    .left {
       display: flex;
       // border: 1px solid red;
       text-align: left;
       // justify-content: left;
-      
     }
-    .right{
+    .right {
       text-align: right;
     }
     button {
