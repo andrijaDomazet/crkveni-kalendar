@@ -124,6 +124,7 @@ export const blackDays = [
   "Sveti apostol Andrej Prvozvani",
   "Sveta velikomučenica Varvara",
   "Prepodobni Sava Osvećeni",
+  "Sveti Spiridon Čudotvorac, episkop trimitunski",
 ];
 
 export const daysIsPost = [

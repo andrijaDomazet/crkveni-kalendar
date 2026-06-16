@@ -3,7 +3,10 @@
     "news_id": 4,
     "time": "1. jun",
     "category": "povrtarstvo",
-    "pics": ["https://res.cloudinary.com/dvi29tcsc/image/upload/v1771535518/crkveniKalendar/srpska-imena_i0wwcy.jpg", "AI ilustracija"],
+    "pics": [
+      "https://res.cloudinary.com/dvi29tcsc/image/upload/v1771535518/crkveniKalendar/srpska-imena_i0wwcy.jpg",
+      "AI ilustracija"
+    ],
     "title": "Imenoslov",
     "title_2": "",
     "lead": "",
@@ -17,8 +20,7 @@
         "text": ""
       }
     ],
-    "tags": [
-      "Srpska imena", "Imena po abecedi","Muška i ženska imena"],
+    "tags": ["Srpska imena", "Imena po abecedi", "Muška i ženska imena"],
     "source": "crkveni-kalendar"
   },
   {
@@ -189,8 +191,8 @@
     "title_2": "Zadušnice u 2026. godini",
     "lead": "Kada su Zadušnice 2026? Ovaj pravoslavni praznik uvek pada u subotu i posvećen je sećanju na preminule",
     "body": [
-      {
-        "subtitle": "Šta su Zadušnice i kada se obeležavaju?",
+      { "component": "Zadusnice",
+        "subtitle": "Dani sećanja, molitve i pomena za upokojene",
         "text": "Zadušnice su hrišćanski praznik Srpske pravoslavne crkve koji je posvećen sećanju na preminule. Obeležavaju se ne samo kroz poštovanje prema precima, već i delima milosrđa - davanjem milostinje siromašnima i pomoći onima kojima je potrebna.",
         "textQuote": "Prema običaju, tokom Zadušnica vernici se mole za svoje pokojne čitajući molitvu za upokojene.<br/>Ova molitva se čita i u hramu i kod kuće - njen tekst možete pronaći <a href=\"https://crkveni-kalendar.net/molitvenik/molitva-za-upokojene/\">ovde</>."
       },

@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { blackDays } from "../components/Calendar/calendar-data/calendar-data";
 import { monthSerb } from "./shared";
+import { useScriptContext } from "./ScriptProvider";
 
 export function urlTitle2(title) {
   const cyrilic = ["č", "ć", "ž", "š", "đ", ",", ":", "-", "?", "!", "."];
@@ -31,13 +32,13 @@ export function renderTitleSection({
   strongClass = "",
 }) {
   const normalize = (str) => str.replace(/\s+/g, " ").trim();
-
+  const { cyr } = useScriptContext();
   return (
     <>
       {slavaSymbol && (
         <>
           <Link prefetch={false} href="/slave/" className="slavaStrong">
-            SLAVA
+           {cyr(`SLAVA`)}
           </Link>{" "}
         </>
       )}
@@ -48,14 +49,14 @@ export function renderTitleSection({
           );
           return (
             <React.Fragment key={index} className={mainClass}>
-              <h2 className={isBlackDay ? "blackDay" : ""}>{el}</h2>
+              <h2 className={isBlackDay ? "blackDay" : ""}>{cyr(`${el}`)}</h2>
               {index !== mainTitle.length - 1 && <span>; </span>}
             </React.Fragment>
           );
         })
       ) : (
         <h2 className={blackDays.includes(mainTitle) ? "blackDay" : ""}>
-          {mainTitle}
+          {cyr(`${mainTitle}`)}
         </h2>
       )}
       {separatorSymbol && <span>{separatorSymbol}</span>}
@@ -64,7 +65,7 @@ export function renderTitleSection({
         (() => {
           const content = (
             <h2>
-              <strong className={strongClass}>{extraLabel}</strong>
+              <strong className={strongClass}>{cyr(`${extraLabel}`)}   </strong>
             </h2>
           );
 

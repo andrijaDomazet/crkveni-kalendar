@@ -7,7 +7,7 @@ import Kalendar from "./containters/Kalendar/Kalendar";
 import Calendar from "./components/Calendar/Calendar";
 import Bars from "./components/Bars/Bars";
 import ScrollToTop from "./UI/ScrollToTop/ScrollToTop";
-import HeadHelmet from "./components/HeadHelmet/HeadHelmet";
+
 import KalendarGodina from "./containters/KalendarGodina/KalendarGodina";
 import SinglePost from "./containters/SinglePost/SinglePost";
 import Footer from "./components/Footer/Footer";
@@ -25,7 +25,6 @@ export default function App() {
     <Router>
       {/* <LocationProvider> */}
       <RouteProvider>
-        <HeadHelmet />
         <ScrollToTop />
         <Bars />
         <CalendarProvider>

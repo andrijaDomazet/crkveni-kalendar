@@ -16,12 +16,14 @@ import { renderTitleSection } from "../../shared/utility";
 import AdManagerSlot from "../AdvModule/AdManagerSlot";
 import { useRouteContext } from "../../shared/RouteProvider.js";
 import { useCalendarContext } from "../../shared/CalendarProvider.js";
+import { useScriptContext } from "../../shared/ScriptProvider.js";
 
 const StickyAdLazy = lazy(() => import("../AdvModule/StickyAd.js"));
 
 export default function Calendar(props) {
   let { id, currentDate, pageYear, pageMonth } = useRouteContext();
   let { holidays } = useCalendarContext();
+  const { cyr } = useScriptContext();
 
   pageMonth = props.isMonth2 ?? pageMonth;
 
@@ -128,7 +130,7 @@ export default function Calendar(props) {
   return (
     <div className="calendar">
       <div className="first">
-        <h1>Crkveni pravoslavni kalendar {pageYear}</h1>
+        <h1>{cyr(`Crkveni pravoslavni kalendar ${pageYear}`)}</h1>
         <div
           className={`yearBox${setCloseClass()}`}
           onClick={() => setDropDownYear((prev) => !prev)}
@@ -145,15 +147,15 @@ export default function Calendar(props) {
             {["Dani", "Novi", "Stari"].map((item, index) => {
               return (
                 <th key={index}>
-                  <span>{item}</span>
+                  <span>{cyr(`${item}`)}</span>
                 </th>
               );
             })}
             <th>
-              <span>{tableTitle(0)}</span>
+              <span>{cyr(`${tableTitle(0)}`)}</span>
             </th>
             <th>
-              <span>Post</span>
+              <span>{cyr(`Post`)}</span>
             </th>
           </tr>
         </thead>
@@ -214,7 +216,7 @@ export default function Calendar(props) {
                       })}
                     </div>
                   </td>
-                  <td>{item.post}</td>
+                  <td>{cyr(`${item.post}`)}</td>
                 </tr>
               </React.Fragment>
             );
@@ -227,7 +229,7 @@ export default function Calendar(props) {
           <div key={offset} className={classsesButtons[offset + 1]}>
             <SimpleButton clicked={() => changeMonth(offset)}>
               {offset === -1 && <i className="fa-solid fa-backward"></i>}
-              {tableTitle(offset)}
+              {cyr(`${tableTitle(offset)}`)}
               {offset === 1 && <i className="fa-solid fa-forward"></i>}
             </SimpleButton>
           </div>

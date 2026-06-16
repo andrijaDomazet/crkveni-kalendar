@@ -18,8 +18,9 @@
     margin-top: 2.5rem;
     .preFooter-wrapper {
       width: 80%;
+      max-width: 1200px;
       grid-template-columns: repeat(3, 1fr);
-      padding: 1rem 2rem;
+      padding: 1.5rem 0;
       gap: 1rem;
     }
   }

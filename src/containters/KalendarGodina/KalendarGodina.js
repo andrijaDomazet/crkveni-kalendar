@@ -13,6 +13,7 @@ import { getDayMonth } from "../../shared/utility.js";
 import MidBox from "../../components/Boxes/MidBox/MidBox.js";
 import { useRouteContext } from "../../shared/RouteProvider.js";
 import { useCalendarContext } from "../../shared/CalendarProvider.js";
+import { useScriptContext } from "../../shared/ScriptProvider.js";
 
 const WidgetLazy = lazy(() => import("../../UI/Widget/Widget.js"));
 const ZadusniceLazy = lazy(
@@ -20,16 +21,16 @@ const ZadusniceLazy = lazy(
 );
 
 export default function KalendarGodina() {
+  const { cyr } = useScriptContext();
   const { pageYear } = useRouteContext();
 
-  const {
-    yearIndex,
-    easterDay,
-    postLookup,
-  } = useCalendarContext();
+  const { yearIndex, easterDay, postLookup, getDynamicHolidays } =
+    useCalendarContext();
 
   const { startEasterTs, endEasterTs } = postLookup;
-  const petrovPostStartDate = new Date(easterDay).setDate(new Date(easterDay).getDate() + 57);
+  const petrovPostStartDate = new Date(easterDay).setDate(
+    new Date(easterDay).getDate() + 57,
+  );
   // const pageYear = currentYear;
   // console.log("Page year", pageYear);
 
@@ -56,12 +57,13 @@ export default function KalendarGodina() {
       <div className="kalendarGodina-wrapper">
         <div className="kalendarGodina-center">
           <div className="kalendarGodina-title">
-            <h1>Crkveni pravoslavni kalendar {pageYear}.</h1>
-            <h2>
-              Kompletan pregled svih meseci, velikih praznika, posnih dana i
-              zadušnica za {pageYear}. godinu po crkvenom kalendaru Srpske
-              Pravoslavne Crkve.
-            </h2>
+            <h1>{cyr(`Crkveni pravoslavni kalendar ${pageYear}`)}.</h1>
+            <strong>
+              {cyr(`Kompletan pregled svih meseci, velikih praznika, posnih dana i
+              zadušnica za ${pageYear}. godinu po crkvenom kalendaru Srpske
+              Pravoslavne Crkve`)}
+              .
+            </strong>
           </div>
           <div className="monthsGrid">
             {monthSerb.map((item, index) => {
@@ -78,6 +80,7 @@ export default function KalendarGodina() {
                     item.substring(0, 1).toUpperCase() + item.substring(1)
                   }
                   mainBody={importantHolidaysPerMonth[index]}
+                  // mainBody2={getDynamicHolidays(index)}
                 />
               );
             })}

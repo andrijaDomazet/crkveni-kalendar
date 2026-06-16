@@ -1,64 +1,62 @@
 @import "../../../index.scss";
 
-      .midBox {
-        margin-top: 1rem;
-        display: flex;
-        flex-direction: column;
-        background: #f2ece3;
-        // padding: 1rem 0;
-        box-shadow:
-          0 10px 40px -5px rgba(139, 90, 43, 0.2),
-          0 4px 16px -4px rgba(139, 90, 43, 0.15);
-        border-radius: 0.1rem;
-        .midBox-title {
-          display: flex;
-          background: #7326390d;
-          padding: 1.5rem 1rem;
-          align-items: center;
-          color: #732639;
-          h2 {
-            color: $grey7;
-            margin: 0 0.3rem;
-            font-size: 1.2rem;
-          }
-        }
-        .midBox-bodyLine {
-          display: flex;
-          gap: 0.6rem;
-          padding: 0.8rem 1rem;
-          border-top: 1px solid #cfc2af;
-          height: 100%;
-          // transition: 1.2s ease;
-          .star {
-            color: #dfa620;
-          }
-          span {
-            // display: inline-block;
-            color: #8a6f5c;
-            font-size: 0.9rem;
-            // margin-right: 0.5rem;
-            // padding: 0.5rem 0;
-          }
-          h2 {
-            padding: 0.3rem 0 0.1rem 0;
-            // color: #362417;
-            // color: #362417;
-            // color: red;
-            color: rgba(54, 36, 23, 0.7);
-            font-size: 1.1rem;
-            // color: red;
-          }
-          &:hover {
-            background: #e0dad14d;
-            cursor: pointer;
-            // transition: 2s all ease-in;
-          }
-        }
-        .midBox-bodyLine h2 {
-          // background: #7326390d;
-        }
+.midBox {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  background: #f2ece3;
+  box-shadow:
+    0 10px 40px -5px rgba(139, 90, 43, 0.2),
+    0 4px 16px -4px rgba(139, 90, 43, 0.15);
+  border-radius: 0.1rem;
+  .midBox-title {
+    display: flex;
+    background: #7326390d;
+    padding: 1.5rem 1rem;
+    align-items: center;
+    color: #732639;
+    span {
+      display: inline-block;
+      color: $grey7;
+      margin: 0 0.3rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+  }
+  .midBox-bodyLine {
+    display: flex;
+    gap: 0.6rem;
+    padding: 0.8rem 1rem;
+    border-top: 1px solid #cfc2af;
+    height: 100%;
+    .star {
+      color: #dfa620;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      time {
+        // display: inline-block;
+        color: #8a6f5c;
+        font-size: 0.9rem;
       }
-      .midBox-bodyLine .calendar-2026.zadusnice {
-        font-style: italic;
-        line-height: 1.4rem;
+      strong {
+        // display: inline-block;
+        font-weight: 600;
+        padding: 0.3rem 0 0.1rem 0;
+        color: rgba(54, 36, 23, 0.7);
+        font-size: 1.1rem;
+        // color: red;
       }
+    }
+
+    &:hover {
+      background: #e0dad14d;
+      cursor: pointer;
+    }
+  }
+}
+.midBox-bodyLine .calendar-2026.zadusnice {
+  font-style: italic;
+  line-height: 1.4rem;
+}

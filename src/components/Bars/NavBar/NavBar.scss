@@ -23,12 +23,14 @@
   padding-top: 2.5rem;
   text-align: center;
   .navBar-first {
+    position: relative;
     margin-top: 1rem;
     padding-bottom: .3rem;
     color: #dfa620;
     align-items: center;
     justify-content: center;
     display: flex;
+    // border: 1px solid red;
     svg {
       margin: 0 1rem;
     }
@@ -265,8 +267,11 @@
   .navBar {
     padding: 0;
     .navBar-first {
+      margin: 0 auto;
       margin-top: 1.5rem;
       padding: 0;
+      width: 1200px;
+
       span {
         font-size: 1.2rem;
       }
@@ -301,4 +306,14 @@
       display: flex;
     }
   }
+}
+@media screen and (min-width: $large) {
+  .navBar {
+    // padding: 0;
+    .navBar-first {
+      margin: 0 auto;
+      margin-top: 1.5rem;
+      padding: 0;
+      width: 1380px;
+    }}
 }

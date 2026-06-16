@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import "./SimpleBox.scss";
+import { useScriptContext } from "../../../shared/ScriptProvider";
 
 export default function SimpleBox({
   as: Component = "section",
@@ -9,6 +10,7 @@ export default function SimpleBox({
   mainTitle,
   mainTitleSymbol = false,
   mainBody,
+  mainBody2,
   linkText = "#",
   buttonText,
   classes = "",
@@ -20,6 +22,7 @@ export default function SimpleBox({
 
   const isClickable = topNavLink && Component === "section";
   const isAnchor = Component === "a";
+  const { cyr } = useScriptContext();
 
   return (
     <Component
@@ -34,7 +37,7 @@ export default function SimpleBox({
     >
       {(mainTitle || mainTitleSymbol) && (
         <h2>
-          {mainTitle}
+          {cyr(`${mainTitle}`)}
           {mainTitleSymbol && <i className="fa-solid fa-angle-right"></i>}
         </h2>
       )}
@@ -48,19 +51,54 @@ export default function SimpleBox({
             listType === "ol" ? (
               <ol>
                 {mainBody.map((item, index) => (
-                  <li key={index}>{item}</li>
+                  <li key={index}> {cyr(`${item}`)}</li>
                 ))}
               </ol>
             ) : (
               <ul>
                 {mainBody.map((item, index) => (
-                  <li key={index}>{item}</li>
+                  <li key={index}>{cyr(`${item}`)}</li>
                 ))}
               </ul>
             )
           ) : (
-            <p>{mainBody}</p>
+            mainBody && <p>{cyr(`${mainBody}`)}</p>
           )}
+          <div>
+            {Array.isArray(mainBody2) ? (
+              listType === "ol" ? (
+                <div
+                  style={{
+                    display: "flex",
+                    width: "80%",
+                    height: "2px",
+                    border: "1px solid grey",
+                    marginTop: "auto",
+                  }}
+                >
+                  {mainBody2.map((item, index) => (
+                    <span key={index}>{cyr(`${item}`)}</span>
+                  ))}
+                </div>
+              ) : (
+                <div
+                  style={{
+                    display: "flex",
+                    width: "80%",
+                    height: "2px",
+                    border: "1px solid grey",
+                    marginTop: "auto",
+                  }}
+                >
+                  {mainBody2.map((item, index) => (
+                    <div key={index}>{cyr(`${item}`)}</div>
+                  ))}
+                </div>
+              )
+            ) : (
+              mainBody2 && <p>{cyr(`${mainBody2}`)}</p>
+            )}
+          </div>
         </div>
       </div>
       <div>
@@ -70,12 +108,12 @@ export default function SimpleBox({
           ) : Array.isArray(buttonText) ? (
             buttonText.map((item, index) => (
               <Link prefetch={false} key={index} href={item[0]}>
-                {item[1]}
+                {cyr(`${item[1]}`)}
               </Link>
             ))
           ) : (
             <Link prefetch={false} href={linkText}>
-              {buttonText}
+              {cyr(`${buttonText}`)}
             </Link>
           ))}
       </div>

@@ -17,6 +17,7 @@ export default function SinglePost2() {
   const params = useParams();
   const test = params?.test;
   const pathname = usePathname();
+  const { cyr, cyrHtml } = useScriptContext();
 
   const newData = () => {
     let dd = molitve.filter((item) => {
@@ -45,7 +46,7 @@ export default function SinglePost2() {
             <div className="mainContent-img">
               <img src={`${newsPost.pics[0]}`} alt="" />
               <div className="mainContent-img_source">
-                Foto: {newsPost.pics[1]}
+                {cyr(`Foto:`)} {cyr(`${newsPost.pics[1]}`)}
               </div>
             </div>
             <div className="mainContent-text">

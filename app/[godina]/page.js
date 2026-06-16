@@ -2,11 +2,11 @@ import KalendarGodina from "../../src/containters/KalendarGodina/KalendarGodina"
 import { options } from "../../src/shared/shared";
 
 export function generateStaticParams() {
-  return ["2024", "2025", "2026", "2027"].map((godina) => ({ godina }));
+  return ["2024", "2025", "2026", "2027","2028"].map((godina) => ({ godina }));
 }
 
-export function generateMetadata({ params }) {
-  const { godina } = params;
+export async function generateMetadata({ params }) {
+  const { godina } = await params;
   const pics = options[0].social.pics;
   const title = `Crkveni pravoslavni kalendar - ${godina}.`;
   const description = `Crkveni pravoslavni kalendar - ${godina} | Svi praznici, slave i posti u godini na jednom mestu.`;

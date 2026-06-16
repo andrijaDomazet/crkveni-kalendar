@@ -398,7 +398,70 @@ export const CalendarProvider = ({ children }) => {
         : null,
     [holidays, currentDate],
   );
+  const getDynamicHolidays = useMemo(() => {
+    return (monthIndex) => {
+      const dynamic = [];
 
+      // Vaskrs
+      if (easterDay.getMonth() === monthIndex) {
+        dynamic.push(`Vaskrs (${easterDay.getDate()}.)`);
+      }
+
+      // Lazareva subota (8 dana pre Vaskrsa)
+      const lazareva = new Date(easterDay);
+      lazareva.setDate(easterDay.getDate() - 8);
+      if (lazareva.getMonth() === monthIndex) {
+        dynamic.push(`Lazareva subota (${lazareva.getDate()}.)`);
+      }
+
+      // Cveti (7 dana pre Vaskrsa)
+      const cveti = new Date(easterDay);
+      cveti.setDate(easterDay.getDate() - 7);
+      if (cveti.getMonth() === monthIndex) {
+        dynamic.push(`Cveti (${cveti.getDate()}.)`);
+      }
+
+      // Spasovdan (39 dana posle Vaskrsa)
+      const spasovdan = new Date(easterDay);
+      spasovdan.setDate(easterDay.getDate() + 39);
+      if (spasovdan.getMonth() === monthIndex) {
+        dynamic.push(`Spasovdan (${spasovdan.getDate()}.)`);
+      }
+
+      // Trojice (49 dana posle Vaskrsa)
+      const trojice = new Date(easterDay);
+      trojice.setDate(easterDay.getDate() + 49);
+      if (trojice.getMonth() === monthIndex) {
+        dynamic.push(`Trojice (${trojice.getDate()}.)`);
+      }
+
+      // Početak Vaskršnjeg posta
+      const startEasterDate = new Date(postLookup.startEasterTs);
+      if (startEasterDate.getMonth() === monthIndex) {
+        dynamic.push(`Početak Vaskršnjeg posta (${startEasterDate.getDate()}.)`);
+      }
+
+      // Početak Petrovskog posta
+      const petrovDate = new Date(petrovPostStartDate);
+      if (petrovDate.getMonth() === monthIndex) {
+        dynamic.push(`Početak Petrovskog posta (${petrovDate.getDate()}.)`);
+      }
+
+      // Zadušnice
+      if (yearIndex !== -1) {
+        const zadusnice = calendarYears[0].item_list[yearIndex]?.tableNum;
+        if (zadusnice) {
+          zadusnice.forEach((z, i) => {
+            if (z[0] === monthIndex) {
+              dynamic.push(`Zadušnice (${z[1]}.)`);
+            }
+          });
+        }
+      }
+
+      return dynamic;
+    };
+  }, [easterDay, postLookup, petrovPostStartDate, yearIndex]);
   return (
     <CalendarContext.Provider
       value={{
@@ -408,6 +471,7 @@ export const CalendarProvider = ({ children }) => {
         postLookup,
         setPostDays,
         todayHoliday,
+        getDynamicHolidays,
       }}
     >
       {children}

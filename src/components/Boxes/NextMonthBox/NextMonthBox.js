@@ -3,8 +3,10 @@ import "./NextMonthBox.scss";
 import { monthSerb } from "../../../shared/shared";
 import Link from "next/link";
 import { useRouteContext } from "../../../shared/RouteProvider";
+import { useScriptContext } from "../../../shared/ScriptProvider";
 
 export default function NextMonthBox() {
+  const { cyr } = useScriptContext();
   let { pageYear, pageMonth } = useRouteContext();
 
   let pageMonthLoc = pageMonth;
@@ -25,12 +27,12 @@ export default function NextMonthBox() {
   return (
     <section className={boxPositionClass}>
       <div className="next-month-box-wrapper">
-        ℹ️ Kalendar za naredni mesec:{" "}
+           {cyr("ℹ️ Kalendar za naredni mesec:")}{" "}
         <Link
           href={`/${pageYearLoc}/${nextMonth}/`}
           title={`Crkveni kalendar ${nextMonth} ${pageYearLoc}`}
         >
-          Pogledajte kalendar za {nextMonth} {pageYearLoc}. godine
+             {cyr(`Pogledajte kalendar za ${nextMonth} ${pageYearLoc}. godine`)}
         </Link>
       </div>
     </section>

@@ -11,6 +11,7 @@ import data from "../../all__news.json";
 import { calendarYears } from "../../components/Calendar/calendar-data/calendar-data.js";
 import { useCalendarContext } from "../../shared/CalendarProvider.js";
 import { useRouteContext } from "../../shared/RouteProvider.js";
+import { useScriptContext } from "../../shared/ScriptProvider.js";
 // import ImenoslovTabela from "../../components/Boxes/Names.js";
 
 const WidgetLazy = lazy(() => import("../../UI/Widget/Widget.js"));
@@ -28,6 +29,7 @@ export default function SinglePost() {
   const { yearIndex } = useCalendarContext();
   const { pathPart } = useRouteContext();
   const [isNews, setIsNews] = useState(() => setArticleState());
+  const { cyr, cyrHtml } = useScriptContext();
 
   useEffect(() => {
     setIsNews(setArticleState());
@@ -69,7 +71,7 @@ export default function SinglePost() {
             itemType="https://schema.org/ImageObject"
           >
             <div className="mainContent-title">
-              <h1>{isNews.title_2 || isNews.title}</h1>
+              <h1>{cyr(`${isNews.title_2 || isNews.title}`)}</h1>
             </div>
             <PostImage
               src={isNews.pics[0]}
@@ -77,16 +79,16 @@ export default function SinglePost() {
               loading="eager"
             />
             <div className="mainContent-img_source">
-              Foto: {isNews.pics && isNews.pics[1]}
+              {cyr(`Foto:`)} {cyr(`${isNews.pics && isNews.pics[1]}`)}
             </div>
           </figure>
 
           <div className="mainContent-body">
             <div className="mainContent-text">
-              <strong className="mainContent-lead">{isNews.lead}</strong>
+              <strong className="mainContent-lead">{cyr(`${isNews.lead}`)}</strong>
               <BodyText bodyText={isNews.body} />
               {pathPart[1] === "molitvenik" && molitveBoxes()}
-              <div>
+              {/* <div>
                 {pathPart[1] === "zadusnice" && (
                   <Suspense fallback={<div></div>}>
                     <ZadusniceLazy
@@ -96,7 +98,7 @@ export default function SinglePost() {
                     />
                   </Suspense>
                 )}
-              </div>
+              </div> */}
               <div>
                 {pathPart[1] === "slave" && (
                   <Suspense fallback={<div></div>}>
@@ -116,10 +118,10 @@ export default function SinglePost() {
                 <AdManagerSlot slotNumber={"div-gpt-ad-1750409157804-0"} />
               </div>
               <div className="tags">
-                <span className="tags-title">Tagovi</span>
+                <span className="tags-title">{cyr(`Tagovi`)}</span>
                 <div className="tags__arr">
                   {isNews.tags.map((x, index) => {
-                    return <span key={index}>{x}</span>;
+                    return <span key={index}>{cyr(`${x}`)}</span>;
                   })}
                 </div>
               </div>

@@ -2,16 +2,14 @@
 import { useParams } from "next/navigation";
 import "./SimplePage.scss";
 import { infoText } from "../../shared/shared.js";
+import { useScriptContext } from "../../shared/ScriptProvider.js";
 
 export default function SimplePage() {
+  const { cyr, cyrHtml, script } = useScriptContext();
   const params = useParams();
   const slug = params?.slug;
 
-  const validSlugs = [
-    "o-nama",
-    "pravila-koriscenja",
-    "politika-privatnosti",
-  ];
+  const validSlugs = ["o-nama", "pravila-koriscenja", "politika-privatnosti"];
   const slugIndex = validSlugs.indexOf(slug);
 
   if (slugIndex === -1) return null;

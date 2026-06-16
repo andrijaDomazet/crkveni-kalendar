@@ -4,10 +4,12 @@ import { getDayMonth } from "../../../shared/utility";
 import { monthSerb } from "../../Calendar/calendar-data/calendar-data";
 import { useRouteContext } from "../../../shared/RouteProvider";
 import { useCalendarContext } from "../../../shared/CalendarProvider";
+import { useScriptContext } from "../../../shared/ScriptProvider";
 
 export default function TodayBox({ classes = false }) {
   const { currentDate, pageYear } = useRouteContext();
   const { dayName, todayHoliday } = useCalendarContext();
+  const { cyr } = useScriptContext();
 
   if (!currentDate || !todayHoliday) return null;
 
@@ -29,7 +31,7 @@ export default function TodayBox({ classes = false }) {
         <div>
           <span className="today-day">{dayName}</span>
           <p className="today-dayNum">{todayDetails.day}</p>
-          <p className="today-month">{`${monthSerb[todayDetails.month]} ${todayDetails.year}`}</p>
+          <p className="today-month"> {cyr(`${monthSerb[todayDetails.month]} ${todayDetails.year}`)}</p>
         </div>
         <div>
           <div className="today-center">
@@ -43,7 +45,7 @@ export default function TodayBox({ classes = false }) {
               stroke="currentColor"
               strokeWidth="2"
               strokeLinecap="round"
-              stroke-linejoin="round"
+              strokeLinejoin="round"
               className="lucide lucide-cross w-6 h-6 text-gold"
             >
               <path d="M4 9a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h4a1 1 0 0 1 1 1v4a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-4a1 1 0 0 1 1-1h4a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-4a1 1 0 0 1-1-1V4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4a1 1 0 0 1-1 1z"></path>
@@ -51,15 +53,17 @@ export default function TodayBox({ classes = false }) {
             <div className="line right"></div>
           </div>
           <h2 className="today-title">
-            {Array.isArray(todayHoliday.title)
-              ? todayHoliday.title[0]
-              : todayHoliday?.title}
+              {cyr(
+                Array.isArray(todayHoliday.title)
+                  ? todayHoliday.title[0]
+                  : todayHoliday?.title,
+              )}
           </h2>
           {todayHoliday.post && (
             <div className="today-post">
               <div className="today-post-wrapper">
                 <div className="circle"></div>
-                <span>Posni dan</span>
+                <span>{cyr(`Posni dan`)}</span>
               </div>
             </div>
           )}

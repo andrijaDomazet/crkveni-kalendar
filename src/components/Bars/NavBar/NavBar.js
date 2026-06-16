@@ -3,11 +3,14 @@ import React, { useState, useRef, useEffect } from "react";
 import NavLink from "../../../UI/NavLink/NavLink";
 import "./NavBar.scss";
 import { options } from "../../../shared/shared";
+import ScriptToggle from "../../../UI/ScriptToggle/ScriptToggle";
+import { useScriptContext } from "../../../shared/ScriptProvider";
 
 export default function NavBar() {
   let navRef = useRef(null);
   const [isMobile, setIsMobile] = useState(false);
   const [dropDown, setDropDown] = useState(false);
+  const { cyr } = useScriptContext();
 
   useEffect(() => {
     setIsMobile(window.innerWidth < 768);
@@ -36,7 +39,7 @@ export default function NavBar() {
                 handleClick();
               }}
             >
-              {options[5].item_list[0].title}
+              {cyr(`${options[5].item_list[0].title}`)}
             </NavLink>
           </div>
           <div className="nav-link-wrapper">
@@ -48,7 +51,7 @@ export default function NavBar() {
                 handleClick();
               }}
             >
-              {options[5].item_list[1].title}
+              {cyr(`${options[5].item_list[1].title}`)}
             </NavLink>
           </div>
         </>
@@ -105,7 +108,7 @@ export default function NavBar() {
                 exact="true"
                 className={`nav-link ${option.title}`}
               >
-                {option.title}
+                {cyr(`${option.title}`)}
               </NavLink>
               <div className="botDiv">
                 {items_list(option.route, option.item_list)}
@@ -123,7 +126,7 @@ export default function NavBar() {
           {itemlList.map((item, index) => {
             return (
               <li key={index}>
-                <NavLink to={item.route}>{item.title}</NavLink>
+                <NavLink to={item.route}>{cyr(`${item.title}`)}</NavLink>
               </li>
             );
           })}
@@ -153,7 +156,7 @@ export default function NavBar() {
         >
           <path d="M4 9a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h4a1 1 0 0 1 1 1v4a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-4a1 1 0 0 1 1-1h4a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-4a1 1 0 0 1-1-1V4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4a1 1 0 0 1-1 1z"></path>
         </svg>
-        <span>PRAVOSLAVNI</span>
+        <span>{cyr(`PRAVOSLAVNI`)}</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -167,12 +170,13 @@ export default function NavBar() {
         >
           <path d="M4 9a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h4a1 1 0 0 1 1 1v4a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-4a1 1 0 0 1 1-1h4a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-4a1 1 0 0 1-1-1V4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4a1 1 0 0 1-1 1z"></path>
         </svg>
+        <ScriptToggle />
       </div>
       <div className="navBar__logo">
         <div className="line"></div>
         <div className="box45"></div>
         <NavLink to="/">
-          <strong>Crkveni Kalendar</strong>
+          <strong>{cyr(`Crkveni Kalendar`)}</strong>
         </NavLink>
         <div className="box45"></div>
         <div className="line right"></div>

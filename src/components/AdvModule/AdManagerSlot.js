@@ -15,11 +15,11 @@ const AdManagerSlot = ({ slotNumber, onSlotRenderEnded }) => {
     if (typeof window !== "undefined" && window.googletag) {
       window.googletag.cmd.push(function () {
         const slots = window.googletag.pubads().getSlots();
-        console.log(
-          "Dostupni slotovi:",
-          slots.map((s) => s.getSlotElementId()),
-        );
-        console.log("Tražim:", slotNumber);
+        // console.log(
+        //   "Dostupni slotovi:",
+        //   slots.map((s) => s.getSlotElementId()),
+        // );
+        // console.log("Tražim:", slotNumber);
         window.googletag.display(slotNumber);
         window.googletag
           .pubads()

@@ -224,30 +224,14 @@
             width: 350px;
           }
           .home__links.second::before {
-            // position: absolute;
-            // content: "";
             left: 1.3rem;
             right: 1.3rem;
             top: 1.3rem;
             bottom: 1.3rem;
             border: 2px solid #b5904f;
-            // border-radius: 0.3rem;
-            // a {
-            //   cursor: pointer;
-            // }
           }
           .home__links.second::after {
-            // position: absolute;
-            // content: "";
-            // left: 0.3rem;
-            // right: 0.3rem;
-            // top: 0.3rem;
-            // bottom: 0.3rem;
             border: 5px solid #a57f3c;
-            // border-radius: 0.5rem;
-            // a {
-            //   cursor: pointer;
-            // }
           }
         }
       }

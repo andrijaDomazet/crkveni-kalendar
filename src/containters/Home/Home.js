@@ -10,6 +10,7 @@ import TodayBox from "../../components/Boxes/TodayBox/TodayBox.js";
 import MidBox from "../../components/Boxes/MidBox/MidBox.js";
 import MonthBox from "../../components/Boxes/MonthBox/MonthBox.js";
 import { useCalendarContext } from "../../shared/CalendarProvider.js";
+import { useScriptContext } from "../../shared/ScriptProvider.js";
 const ZadusniceLazy = lazy(
   () => import("../../components/Boxes/Zadusnice/Zadusnice.js"),
 );
@@ -23,12 +24,11 @@ const CalendarMonthsLinksLazy = lazy(
 const MolitvaLazy = lazy(() => import("../../components/Molitva/Molitva.js"));
 export default function Home() {
   const { yearIndex } = useCalendarContext();
-
+  const { cyr } = useScriptContext();
   return (
     <div className="home">
       <div className="banner-wrapper bilbord">
         <AdManagerSlot slotNumber={"div-gpt-ad-1761641124263-0"} />
-        {/* <div id="onBid_billboard"></div> */}
       </div>
       <section className="home__wrapper">
         <div className="home__wrapper-center">
@@ -39,15 +39,14 @@ export default function Home() {
 
           <Calendar shortCal={5} soc={false} />
           <section className="calendar-2026">
-            <h2>📅 Crkveni kalendar 2026</h2>
+            <h2>   {cyr("📅 Crkveni kalendar 2026")}</h2>
             <p>
-              Sve važne datume i praznike za 2026. godinu pogledajte klikom na
-              sledeći link:{" "}
+                 {cyr("Sve važne datume i praznike za 2026. godinu pogledajte klikom na sledeći link:")}{" "}
               <a
                 href="https://crkveni-kalendar.net/2026/"
                 title="Crkveni kalendar 2026"
               >
-                Crkveni kalendar za 2026. godinu
+                   {cyr("Crkveni kalendar za 2026. godinu")}
               </a>
               .
             </p>
@@ -63,7 +62,7 @@ export default function Home() {
           <div className="home-afterZone">
             <div className="home__molitva">
               <div className="home__links second">
-                <h2>Oče naš - Molitva Gospodnja</h2>
+                <h2>{cyr(`Oče naš - Molitva Gospodnja`)}</h2>
                 <div className="home__molitva-wrapper">
                   <Suspense fallback={<div></div>}>
                     <MolitvaLazy molitva={molitve[molitve.length - 1]} />
@@ -73,19 +72,20 @@ export default function Home() {
             </div>
             <section className="home__molitva">
               <div className="home__links second">
-                <h2>Krsne slave</h2>
+                <h2>{cyr(`Krsne slave`)}</h2>
                 <p className="home__molitva-wrapper">
-                  Informacije o krsnim slavama (datumi, običaji i značenje)
-                  možete pronaći na sledećoj stranici:{" "}
-                  <a href="/slave/">Krsne slave</a>.
+                  {cyr(
+                    "Informacije o krsnim slavama (datumi, običaji i značenje) možete pronaći na sledećoj stranici:",
+                  )}{" "}
+                  <a href="/slave/">{cyr("Krsne slave")}</a>.
                 </p>
               </div>
               <img src="/img/line.png" loading="lazy" />
               <div className="home__links second">
-                <h2>Molitvenik</h2>
+                <h2>{cyr(`Molitvenik`)}</h2>
                 <p className="home__molitva-wrapper">
-                  Molitve za različite prilike možete pronaći na stranici:{" "}
-                  <a href="/molitvenik/">Molitvenik</a>.
+                  {cyr(`Molitve za različite prilike možete pronaći na stranici:`)}{" "}
+                  <a href="/molitvenik/">{cyr("Molitvenik")}</a>.
                 </p>
                 <img src="/img/line.png" loading="lazy" />
               </div>
@@ -101,7 +101,6 @@ export default function Home() {
             <Suspense fallback={<div></div>}>
               <SimpleBoxLazy
                 classes="green"
-                // linkText="/hriscanski-post/"
                 mainTitle="Deset Božijih zapovesti"
                 listType="ol"
                 mainBody={[
@@ -116,7 +115,6 @@ export default function Home() {
                   "Ne svedoči lažno na bližnjega svojega.",
                   "Ne poželi ništa tuđe.",
                 ]}
-                // buttonText="Hrišćanski postovi →"
               />
             </Suspense>
           </section>
@@ -152,7 +150,6 @@ export default function Home() {
         </div>
         <div className="home__wrapper-right">
           <MidBox />
-          {/* <Zadusnice /> */}
           <Suspense fallback={<div></div>}>
             <SimpleBoxLazy
               classes="green"

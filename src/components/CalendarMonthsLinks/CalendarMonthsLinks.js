@@ -3,14 +3,15 @@ import "./CalendarMonthsLinks.scss";
 import { monthSerb } from "../Calendar/calendar-data/calendar-data";
 import NavLink from "../../UI/NavLink/NavLink";
 import { useRouteContext } from "../../shared/RouteProvider";
+import { useScriptContext } from "../../shared/ScriptProvider";
 
 export default function CalendarMonthsLinks() {
   const { slug, currentYear } = useRouteContext();
-
+  const { cyr } = useScriptContext();
   return (
     <section className="calendar-allMonths">
       <h2 className="calendar-title">
-        Crkveni kalendar za {slug || currentYear}. godinu po mesecima
+      {cyr(`Crkveni kalendar za ${slug || currentYear}. godinu po mesecima`)}
       </h2>
 
       <div className="calendar-monthsGrid">
@@ -21,7 +22,7 @@ export default function CalendarMonthsLinks() {
             title={`Prikaži kalendar za ${item} ${slug || currentYear}. godine`}
             className="calendar-month"
           >
-            {item.charAt(0).toUpperCase() + item.slice(1)}
+            {cyr(`${item.charAt(0).toUpperCase() + item.slice(1)}`)}
           </NavLink>
         ))}
       </div>
