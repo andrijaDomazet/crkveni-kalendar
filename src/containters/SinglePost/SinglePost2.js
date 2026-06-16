@@ -7,6 +7,7 @@ import { urlTitle2 } from "../../shared/utility";
 import NoMatch from "../NoMatch/NoMatch";
 import molitve from "../../molitve.json";
 import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
+import { useScriptContext } from "../../shared/ScriptProvider.js";
 
 const MolitvaLazy = lazy(() => import("../../components/Molitva/Molitva.js"));
 const setTitle = (postTitle) => {
