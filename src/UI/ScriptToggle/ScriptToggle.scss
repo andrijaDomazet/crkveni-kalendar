@@ -3,13 +3,13 @@
 
 .script-toggle {
   position: absolute;
-  width: 50px;
+  width: 40px;
   left: 0.8rem;
   top: -2.6rem;
   background: #dfa620;
   border: 1px solid #dfa620;
   border-radius: 0.25rem;
-  padding: 0.2rem 0.4rem;
+  padding: 0.1rem 0.4rem;
   cursor: pointer;
   font-size: 0.8rem;
   font-weight: 600;
@@ -21,16 +21,16 @@
 
 @media screen and (min-width: $medium) {
   .script-toggle {
-    width: 55px;
+    width: 45px;
     left: initial;
     top: initial;
     right: 0;
     font-size: 0.9rem;
-    padding: 0.25rem 0.6rem;
-
+    padding: 0.15rem 0.4rem;
+    opacity: 0.6;
     &:hover {
       opacity: 0.9;
-    //   background: rgba(255, 255, 255, 0.9);
+      //   background: rgba(255, 255, 255, 0.9);
       background: #dfa620;
       color: #732639;
       // color: #dfa620;
