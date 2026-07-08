@@ -80,7 +80,7 @@ export default function KalendarGodina() {
                     item.substring(0, 1).toUpperCase() + item.substring(1)
                   }
                   mainBody={importantHolidaysPerMonth[index]}
-                  // mainBody2={getDynamicHolidays(index)}
+                  mainBody2={getDynamicHolidays(index)}
                 />
               );
             })}

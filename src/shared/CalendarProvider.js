@@ -41,6 +41,8 @@ export const CalendarProvider = ({ children }) => {
     const vikendPosleBozicaTs = toTs(pageYear, 0, 17);
     const petrovPostStartTs = toMidnightTs(new Date(petrovPostStartDate));
     const petrovPostEndTs = toTs(pageYear, 6, 12);
+    const gospojinskiPostStartTs = toTs(pageYear, 7, 14);
+    const gospojinskiPostEndTs = toTs(pageYear, 7, 28);
 
     const easterTs = toTs(
       easterDay.getFullYear(),
@@ -69,6 +71,8 @@ export const CalendarProvider = ({ children }) => {
       vikendPosleBozicaTs,
       petrovPostStartTs,
       petrovPostEndTs,
+      gospojinskiPostStartTs,
+      gospojinskiPostEndTs,
       startEasterTs,
       endEasterTs,
       easterTs,
@@ -76,6 +80,7 @@ export const CalendarProvider = ({ children }) => {
       isPostSet,
     };
   }, [pageYear, easterDay]);
+
   const getTargetSundayBeforeChristmas = (year) => {
     // broj nedelja (Sunday) u periodu 1–6. januar naredne godine
     const nextYear = pageYear + 1;
@@ -161,6 +166,8 @@ export const CalendarProvider = ({ children }) => {
       endEasterTs,
       petrovPostStartTs,
       petrovPostEndTs,
+      gospojinskiPostStartTs,
+      gospojinskiPostEndTs,
       notPostSet,
       isPostSet,
     } = postLookup;
@@ -168,6 +175,8 @@ export const CalendarProvider = ({ children }) => {
     if (ts >= bozicniPostStartTs || ts <= bozicniPostEndTs) return "post";
     if (ts >= startEasterTs && ts <= endEasterTs) return "post";
     if (ts >= petrovPostStartTs && ts <= petrovPostEndTs) return "post";
+    if (ts >= gospojinskiPostStartTs && ts <= gospojinskiPostEndTs)
+      return "post";
 
     const day = new Date(ts).getDay();
 
@@ -183,7 +192,7 @@ export const CalendarProvider = ({ children }) => {
       if (ts <= firstSundayAfterBozicTs) return "";
     }
 
-    // Petrovske poklade — srijeda i petak u sedmici prije početka posta
+    // Petrovske poklade — sreda i petak u sedmici prije početka posta
     const petrovPostaDateObj = new Date(petrovPostStartTs);
     const dayOfWeek = petrovPostaDateObj.getDay();
     const daysBackToMonday = dayOfWeek === 0 ? 6 : dayOfWeek - 1;
@@ -212,6 +221,7 @@ export const CalendarProvider = ({ children }) => {
     return filterHolidays();
   }, [pageYear, pageMonth, currentDate]);
   // console.timeEnd("holidays calc");
+
   function filterHolidays() {
     const secondSundayBeforeChristmas =
       getTargetSundayBeforeChristmas(pageYear);
@@ -357,6 +367,18 @@ export const CalendarProvider = ({ children }) => {
         item.separatorSymbol = " ";
       }
 
+      //Gospojinski post
+      const gospojinskiStart = new Date(pageYear, 7, 14);
+      if (toMidnightTs(item.date) === toMidnightTs(gospojinskiStart)) {
+        item.mainTitle = item.title;
+        item.extraLabel = "(Početak Gospojinskog posta)";
+      }
+      const gospojinskiEnd = new Date(pageYear, 7, 28);
+      if (toMidnightTs(item.date) === toMidnightTs(gospojinskiEnd)) {
+        item.mainTitle = item.title;
+        item.extraLabel = "(Početak Gospojinskog posta)";
+      }
+
       //Materice, Oci
       if (
         toMidnightTs(item.date) === toMidnightTs(secondSundayBeforeChristmas)
@@ -402,6 +424,17 @@ export const CalendarProvider = ({ children }) => {
     return (monthIndex) => {
       const dynamic = [];
 
+      // Kraj Božićnog posta
+      // const bozicPostEnd = new Date(pageYear, 0, 6);
+      // if (bozicPostEnd.getMonth() === monthIndex) {
+      //   dynamic.push(`Kraj Božićnog posta (${bozicPostEnd.getDate()}.)`);
+      // }
+      // Obrezanje Gospodnje
+      const serbNewYear = new Date(pageYear, 0, 14);
+      if (serbNewYear.getMonth() === monthIndex) {
+        dynamic.push(`Obrezanje Gospodnje (${serbNewYear.getDate()}.)`);
+      }
+
       // Vaskrs
       if (easterDay.getMonth() === monthIndex) {
         dynamic.push(`Vaskrs (${easterDay.getDate()}.)`);
@@ -438,13 +471,27 @@ export const CalendarProvider = ({ children }) => {
       // Početak Vaskršnjeg posta
       const startEasterDate = new Date(postLookup.startEasterTs);
       if (startEasterDate.getMonth() === monthIndex) {
-        dynamic.push(`Početak Vaskršnjeg posta (${startEasterDate.getDate()}.)`);
+        dynamic.push(
+          `Početak Vaskršnjeg posta (${startEasterDate.getDate()}.)`,
+        );
       }
 
       // Početak Petrovskog posta
       const petrovDate = new Date(petrovPostStartDate);
       if (petrovDate.getMonth() === monthIndex) {
         dynamic.push(`Početak Petrovskog posta (${petrovDate.getDate()}.)`);
+      }
+
+      // Početak Gospojinskog posta
+      const gospojinskiPost = new Date(pageYear, 7, 14);
+      if (gospojinskiPost.getMonth() === monthIndex) {
+        dynamic.push(`Početak Gospojinskog posta (${gospojinskiPost.getDate()}.)`);
+      }
+
+      // Početak Bozicnog posta
+      const bozicniPost = new Date(pageYear, 10, 28);
+      if (bozicniPost.getMonth() === monthIndex) {
+        dynamic.push(`Početak Božićnog posta (${bozicniPost.getDate()}.)`);
       }
 
       // Zadušnice

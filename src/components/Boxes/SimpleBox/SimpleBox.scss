@@ -23,16 +23,22 @@
     line-height: 1.6rem;
   }
   .simpleBox-body {
+    flex: 1;
     display: flex;
     flex-direction: column;
     .simpleBox-body-wrapper {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
       padding: 0 0.1rem;
       color: #362417b3;
       line-height: 1.4rem;
       p {
         padding: 0 0.8rem;
       }
-      ul, ol {
+      ul,
+      ol {
         padding-left: 1.5rem;
         li {
           font-size: 0.9rem;
@@ -44,6 +50,27 @@
       padding: 0.5rem 0;
       border-top: 1px solid rgba(128, 128, 128, 0.6);
     }
+    .simpleBox-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      width: 90%;
+      margin: 0 auto;
+      margin-top: .5rem; // gura ceo blok na dno boxa
+      padding: 0.5rem .2rem;
+      border-top: 1px solid grey;
+      row-gap: 0.1rem;
+      column-gap: 0.2rem;
+      box-sizing: border-box;
+
+      &-item {
+        flex-shrink: 0;
+        max-width: 100%;
+        white-space: normal;
+        overflow-wrap: break-word;
+        font-size: 0.8rem;
+        line-height: 1rem;
+      }
+    }
   }
 
   a {
@@ -53,8 +80,13 @@
 }
 .simpleBox.hoverable {
   border: 1px solid #8b5b3825;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-  box-shadow: 0 10px 40px -5px rgba(139, 90, 43, 0.1), 0 4px 16px -4px rgba(139, 90, 43, 0.05);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+  box-shadow:
+    0 10px 40px -5px rgba(139, 90, 43, 0.1),
+    0 4px 16px -4px rgba(139, 90, 43, 0.05);
   h2 {
     padding: 0.8rem 1rem;
     font-size: 1.4rem;
@@ -69,7 +101,9 @@
 }
 
 .simpleBox.orange {
-  box-shadow: 0 10px 40px -5px rgba(139, 90, 43, 0.2), 0 4px 16px -4px rgba(139, 90, 43, 0.15);
+  box-shadow:
+    0 10px 40px -5px rgba(139, 90, 43, 0.2),
+    0 4px 16px -4px rgba(139, 90, 43, 0.15);
 
   h2 {
     background: #7326390d;
@@ -80,7 +114,8 @@
   .simpleBox {
     .simpleBox-body {
       .simpleBox-body-wrapper {
-        ul,ol {
+        ul,
+        ol {
           padding-left: 2rem;
           li {
             font-size: 1rem;
@@ -99,7 +134,9 @@
       background: #f7f1e9;
       transform: translateY(-2px);
       border: 1px solid #8b5b3848;
-      box-shadow: 0 10px 40px -5px rgba(139, 90, 43, 0.2), 0 4px 16px -4px rgba(139, 90, 43, 0.15);
+      box-shadow:
+        0 10px 40px -5px rgba(139, 90, 43, 0.2),
+        0 4px 16px -4px rgba(139, 90, 43, 0.15);
     }
   }
 }

@@ -64,41 +64,27 @@ export default function SimpleBox({
           ) : (
             mainBody && <p>{cyr(`${mainBody}`)}</p>
           )}
-          <div>
-            {Array.isArray(mainBody2) ? (
-              listType === "ol" ? (
-                <div
-                  style={{
-                    display: "flex",
-                    width: "80%",
-                    height: "2px",
-                    border: "1px solid grey",
-                    marginTop: "auto",
-                  }}
-                >
-                  {mainBody2.map((item, index) => (
-                    <span key={index}>{cyr(`${item}`)}</span>
-                  ))}
-                </div>
-              ) : (
-                <div
-                  style={{
-                    display: "flex",
-                    width: "80%",
-                    height: "2px",
-                    border: "1px solid grey",
-                    marginTop: "auto",
-                  }}
-                >
-                  {mainBody2.map((item, index) => (
-                    <div key={index}>{cyr(`${item}`)}</div>
-                  ))}
-                </div>
-              )
+
+          {Array.isArray(mainBody2) && mainBody2.length > 0 ? (
+            listType === "ol" ? (
+              <div className="simpleBox-divider">
+                {mainBody2.map((item, index) => (
+                  <span key={index}>{cyr(`${item}`)}</span>
+                ))}
+              </div>
             ) : (
-              mainBody2 && <p>{cyr(`${mainBody2}`)}</p>
-            )}
-          </div>
+              <div className="simpleBox-highlights">
+                {mainBody2.map((item, index) => (
+                  <span className="simpleBox-highlights-item" key={index}>
+                    {cyr(`${item}`)}
+                    {index < mainBody2.length - 1 && ","}
+                  </span>
+                ))}
+              </div>
+            )
+          ) : (
+            mainBody2 && <p>{cyr(`${mainBody2}`)}</p>
+          )}
         </div>
       </div>
       <div>
