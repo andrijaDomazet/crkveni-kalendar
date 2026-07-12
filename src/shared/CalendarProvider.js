@@ -40,7 +40,7 @@ export const CalendarProvider = ({ children }) => {
     const bozicniPostEndTs = toTs(pageYear, 0, 6);
     const vikendPosleBozicaTs = toTs(pageYear, 0, 17);
     const petrovPostStartTs = toMidnightTs(new Date(petrovPostStartDate));
-    const petrovPostEndTs = toTs(pageYear, 6, 12);
+    const petrovPostEndTs = toTs(pageYear, 6, 11);
     const gospojinskiPostStartTs = toTs(pageYear, 7, 14);
     const gospojinskiPostEndTs = toTs(pageYear, 7, 28);
 
@@ -485,7 +485,9 @@ export const CalendarProvider = ({ children }) => {
       // Početak Gospojinskog posta
       const gospojinskiPost = new Date(pageYear, 7, 14);
       if (gospojinskiPost.getMonth() === monthIndex) {
-        dynamic.push(`Početak Gospojinskog posta (${gospojinskiPost.getDate()}.)`);
+        dynamic.push(
+          `Početak Gospojinskog posta (${gospojinskiPost.getDate()}.)`,
+        );
       }
 
       // Početak Bozicnog posta
@@ -500,6 +502,8 @@ export const CalendarProvider = ({ children }) => {
         if (zadusnice) {
           zadusnice.forEach((z, i) => {
             if (z[0] === monthIndex) {
+              console.log("Z", z);
+
               dynamic.push(`Zadušnice (${z[1]}.)`);
             }
           });
