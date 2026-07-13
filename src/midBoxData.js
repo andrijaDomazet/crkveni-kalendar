@@ -5,8 +5,11 @@ export const nextHolidays = [
   // ["12. april", "Vaskrs - Vaskrsenje Gospoda Isusa Hrista"],
   // ["21. maj", "Vaznesenje Gospodnje - Spasovdan"],
 
-  ["7. jul", "Ivanjdan"],
-  ["12. jul", "Petrovdan"],
+  // ["7. jul", "Ivanjdan"],
+  // ["12. jul", "Petrovdan"],
   ["26. jul", "Sabor Svetog Arhangela Gavrila"],
   ["30. jul", "Ognjena Marija"],
+  ["2. avgust", "Sveti Ilija"],
+  ["4. avgust", "Blaga Marija"],
+  ["14. avgust", "Početak Gospojinskog posta"],
 ];

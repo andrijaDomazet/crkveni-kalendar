@@ -8,8 +8,8 @@ export default function PreFooter() {
   const pathname = usePathname();
 
   const allLinks = [
-    ["Petrovdan 2026", "/2026/jul/"],
-    ["Petrovski post", "/hriscanski-post/"],
+    ["Preobraženje Gospodnje", "/2026/avgust/"],
+    ["Gospojinski post", "/hriscanski-post/"],
     ["Miholjske zadušnice", "/2026/oktobar/"],
     ["Crkveni kalendar 2027", "/2027/"],
     ["Mesečeve mene 2026", "/meseceve-mene/"],
