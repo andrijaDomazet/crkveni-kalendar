@@ -31,7 +31,10 @@ export default function TodayBox({ classes = false }) {
         <div>
           <span className="today-day">{dayName}</span>
           <p className="today-dayNum">{todayDetails.day}</p>
-          <p className="today-month"> {cyr(`${monthSerb[todayDetails.month]} ${todayDetails.year}`)}</p>
+          <p className="today-month">
+            {" "}
+            {cyr(`${monthSerb[todayDetails.month]} ${todayDetails.year}`)}
+          </p>
         </div>
         <div>
           <div className="today-center">
@@ -53,11 +56,11 @@ export default function TodayBox({ classes = false }) {
             <div className="line right"></div>
           </div>
           <h2 className="today-title">
-              {cyr(
-                Array.isArray(todayHoliday.title)
-                  ? todayHoliday.title[0]
-                  : todayHoliday?.title,
-              )}
+            {cyr(
+              Array.isArray(todayHoliday.title)
+                ? todayHoliday.title[0]
+                : todayHoliday?.title,
+            )}
           </h2>
           {todayHoliday.post && (
             <div className="today-post">

@@ -8,7 +8,7 @@ import {
   monthSerb,
 } from "../../components/Calendar/calendar-data/calendar-data.js";
 import SimpleBox from "../../components/Boxes/SimpleBox/SimpleBox.js";
-import TodayBox from "../../components/Boxes/TodayBox/TodayBox.js";
+// import TodayBox from "../../components/Boxes/TodayBox/TodayBox.js";
 import { getDayMonth } from "../../shared/utility.js";
 import MidBox from "../../components/Boxes/MidBox/MidBox.js";
 import { useRouteContext } from "../../shared/RouteProvider.js";
@@ -19,7 +19,7 @@ const WidgetLazy = lazy(() => import("../../UI/Widget/Widget.js"));
 const ZadusniceLazy = lazy(
   () => import("../../components/Boxes/Zadusnice/Zadusnice.js"),
 );
-
+const TodayBoxLazy = lazy(() => import("../../components/Boxes/TodayBox/TodayBox.js"));
 export default function KalendarGodina() {
   const { cyr } = useScriptContext();
   const { pageYear } = useRouteContext();
@@ -31,8 +31,6 @@ export default function KalendarGodina() {
   const petrovPostStartDate = new Date(easterDay).setDate(
     new Date(easterDay).getDate() + 57,
   );
-  // const pageYear = currentYear;
-  // console.log("Page year", pageYear);
 
   const years = [2026, 2027, 2028];
   const otherYears = years.filter((y) => y !== pageYear);
@@ -52,7 +50,6 @@ export default function KalendarGodina() {
     <div className="kalendarGodina">
       <div className="banner-wrapper bilbord">
         <AdManagerSlot slotNumber={"div-gpt-ad-1761641124263-0"} />
-        {/* <div id="onBid_billboard"></div> */}
       </div>
       <div className="kalendarGodina-wrapper">
         <div className="kalendarGodina-center">
@@ -75,7 +72,6 @@ export default function KalendarGodina() {
                   href={`/${pageYear}/${item}/`}
                   mainTitleSymbol={true}
                   classes="hoverable"
-                  // topNavLink={`/${pageYear}/${item}/`}
                   mainTitle={
                     item.substring(0, 1).toUpperCase() + item.substring(1)
                   }
@@ -87,12 +83,12 @@ export default function KalendarGodina() {
           </div>
         </div>
         <div className="kalendarGodina-left">
-          <TodayBox />
+          <Suspense fallback={<div></div>}>
+            <TodayBoxLazy />
+          </Suspense>
           <div className="banner-wrapper fix-size-mediumRectangle">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750930023966-0"} />
           </div>
-
-          {/* <MidBox /> */}
           <SimpleBox
             classes="green"
             linkText="/hriscanski-post/"
@@ -110,9 +106,6 @@ export default function KalendarGodina() {
             mainTitle="Ostale godine"
             buttonText={buttonText}
           />
-          {/* <div className="banner-wrapper fix-size-horizontal">
-            <AdManagerSlot slotNumber={"div-gpt-ad-1750409157804-0"} />
-          </div> */}
         </div>
         <div className="kalendarGodina-right">
           <Suspense fallback={<div></div>}>
@@ -129,7 +122,6 @@ export default function KalendarGodina() {
             mainBody={`Vaskrs (Uskrs) u ${pageYear}. godini pada na ${day}. ${month} po novom kalendaru.`}
             buttonText={`Kalendar za ${month} ${pageYear}. →`}
           />
-
           <div className="banner-wrapper xl_sticky">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750411708088-0"} />
           </div>

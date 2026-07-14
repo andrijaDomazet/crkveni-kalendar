@@ -1,8 +1,8 @@
 "use client";
 import "./Home.scss";
-import Calendar from "../../components/Calendar/Calendar";
+// import Calendar from "../../components/Calendar/Calendar";
 import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
-import { lazy, Suspense } from "react";
+import { useRef, lazy, Suspense } from "react";
 import molitve from "../../molitve.json";
 import NextMonthBox from "../../components/Boxes/NextMonthBox/NextMonthBox.js";
 import { calendarYears } from "../../components/Calendar/calendar-data/calendar-data.js";
@@ -11,9 +11,16 @@ import MidBox from "../../components/Boxes/MidBox/MidBox.js";
 import MonthBox from "../../components/Boxes/MonthBox/MonthBox.js";
 import { useCalendarContext } from "../../shared/CalendarProvider.js";
 import { useScriptContext } from "../../shared/ScriptProvider.js";
-const ZadusniceLazy = lazy(
-  () => import("../../components/Boxes/Zadusnice/Zadusnice.js"),
+import { useIsMobile } from "../../shared/useIsMobile.js";
+import { useInViewport } from "../../shared/useInViewport.js";
+import Zadusnice from "../../components/Boxes/Zadusnice/Zadusnice.js";
+
+const CalendarLazy = lazy(
+  () => import("../../components/Calendar/Calendar.js"),
 );
+// const ZadusniceLazy = lazy(
+//   () => import("../../components/Boxes/Zadusnice/Zadusnice.js"),
+// );
 const SimpleBoxLazy = lazy(
   () => import("../../components/Boxes/SimpleBox/SimpleBox.js"),
 );
@@ -22,9 +29,20 @@ const CalendarMonthsLinksLazy = lazy(
   () => import("../../components/CalendarMonthsLinks/CalendarMonthsLinks.js"),
 );
 const MolitvaLazy = lazy(() => import("../../components/Molitva/Molitva.js"));
+
 export default function Home() {
   const { yearIndex } = useCalendarContext();
   const { cyr } = useScriptContext();
+  const isMobile = useIsMobile();
+  const calendarRef = useRef(null);
+  const isInView = useInViewport(calendarRef);
+
+  // desktop: renderuj odmah čim se zna da nije mobile
+  // mobile: čekaj dok sekcija ne uđe u viewport
+  // dok se isMobile ne utvrdi (null): ne renderuj ništa
+  const shouldLoadCalendar =
+    isMobile === null ? false : isMobile ? isInView : true;
+
   return (
     <div className="home">
       <div className="banner-wrapper bilbord">
@@ -36,17 +54,25 @@ export default function Home() {
             <NextMonthBox />
           </div>
           {/* <MonthBox /> */}
-
-          <Calendar shortCal={5} soc={false} />
+          <div ref={calendarRef}>
+            {shouldLoadCalendar && (
+              <Suspense fallback={<div></div>}>
+                <CalendarLazy shortCal={5} soc={false} />
+              </Suspense>
+            )}
+          </div>
+          {/* <Calendar shortCal={5} soc={false} /> */}
           <section className="calendar-2026">
-            <h2>   {cyr("📅 Crkveni kalendar 2026")}</h2>
+            <h2> {cyr("📅 Crkveni kalendar 2026")}</h2>
             <p>
-                 {cyr("Sve važne datume i praznike za 2026. godinu pogledajte klikom na sledeći link:")}{" "}
+              {cyr(
+                "Sve važne datume i praznike za 2026. godinu pogledajte klikom na sledeći link:",
+              )}{" "}
               <a
                 href="https://crkveni-kalendar.net/2026/"
                 title="Crkveni kalendar 2026"
               >
-                   {cyr("Crkveni kalendar za 2026. godinu")}
+                {cyr("Crkveni kalendar za 2026. godinu")}
               </a>
               .
             </p>
@@ -84,7 +110,9 @@ export default function Home() {
               <div className="home__links second">
                 <h2>{cyr(`Molitvenik`)}</h2>
                 <p className="home__molitva-wrapper">
-                  {cyr(`Molitve za različite prilike možete pronaći na stranici:`)}{" "}
+                  {cyr(
+                    `Molitve za različite prilike možete pronaći na stranici:`,
+                  )}{" "}
                   <a href="/molitvenik/">{cyr("Molitvenik")}</a>.
                 </p>
                 <img src="/img/line.png" loading="lazy" />
@@ -120,15 +148,23 @@ export default function Home() {
           </section>
         </div>
         <div className="home__wrapper-left">
-          <TodayBox />
+          <div style={{ height: "380px" }}>
+            <TodayBox />
+          </div>
+
           <div className="third-element">
-            <Suspense fallback={<div></div>}>
+            <Zadusnice
+              setYear={2026}
+              boxTitle={`🕯 Zadušnice u ${2026}. godini`}
+              data={calendarYears[0].item_list[yearIndex]}
+            />
+            {/* <Suspense fallback={<div></div>}>
               <ZadusniceLazy
                 setYear={2026}
                 boxTitle={`🕯 Zadušnice u ${2026}. godini`}
                 data={calendarYears[0].item_list[yearIndex]}
               />
-            </Suspense>
+            </Suspense> */}
           </div>
           <div className="banner-wrapper fix-size-mediumRectangle">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750930023966-0"} />
