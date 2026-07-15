@@ -104,14 +104,10 @@ function MoonSvg({ p, size = 130 }) {
   const r = size / 2;
   const theta = p * 2 * Math.PI;
   const rx = Math.abs(Math.cos(theta)) * r;
-  const waxing = p < 0.5;
-  const limbSweep = waxing ? 1 : 0;
-  const termSweep =
-    theta < Math.PI / 2 || theta > (3 * Math.PI) / 2
-      ? limbSweep
-      : 1 - limbSweep;
+  const outerSweep = p < 0.5 ? 1 : 0;
+  const innerSweep = p < 0.25 || p > 0.75 ? 1 - outerSweep : outerSweep;
 
-  const path = `M ${r} 0 A ${r} ${r} 0 0 ${limbSweep} ${r} ${2 * r} A ${rx} ${r} 0 0 ${termSweep} ${r} 0 Z`;
+  const path = `M ${r} 0 A ${r} ${r} 0 0 ${outerSweep} ${r} ${2 * r} A ${rx} ${r} 0 0 ${innerSweep} ${r} 0 Z`;
 
   return (
     <svg
@@ -131,7 +127,7 @@ function MoonSvg({ p, size = 130 }) {
         r={r}
         fill="none"
         stroke="#c9a94f"
-        strokeWidth="1.5"
+        strokeWidth="3"
       />
     </svg>
   );
