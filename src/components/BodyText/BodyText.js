@@ -9,9 +9,11 @@ import TodayBox from "../Boxes/TodayBox/TodayBox.js";
 import OnNetworkVideo from "../AdvModule/OnNetworkVideo.js";
 import { useRouteContext } from "../../shared/RouteProvider.js";
 import { useScriptContext } from "../../shared/ScriptProvider.js";
+import MoonPhasesList from "../Boxes/MoonPhasesList/MoonPhasesList.jsx";
 const dynamicComponents = {
   Zadusnice,
   TodayBox,
+  MoonPhasesList
 };
 
 const PostImage = lazy(
@@ -103,7 +105,6 @@ const setComponent = (item) => {
               ></p>
               {setImg(item)}
               {setQuote(item)}
-              {/* {setComponent(item)} */}
             </React.Fragment>
           );
         }

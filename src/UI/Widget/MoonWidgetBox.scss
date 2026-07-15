@@ -1,0 +1,133 @@
+// MoonWidgetBox.module.scss
+
+.moon-widget-box {
+//   max-width: 340px;
+  border: 1px solid #cfc2af;
+  overflow: hidden;
+  background: #f2ece3;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  font-family: inherit;
+
+  &__header {
+    background: #732639e6;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 1rem 1.25rem;
+  }
+
+  &__icon {
+    color: #d9a441;
+    font-size: 1.4rem;
+    line-height: 1;
+  }
+
+  &__title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  &__body {
+    padding: 1.2rem;
+    text-align: center;
+  }
+
+  &__age-card {
+    background: #f9f6f199;
+    border: 1px solid #dfa62033;
+    border-radius: 4px;
+    padding: .6rem;
+    margin-bottom: 1.25rem;
+  }
+
+  &__age-label {
+    margin: 0 0 0.4rem;
+    font-size: 0.9rem;
+    color: #4a3f2f;
+  }
+
+  &__age-value {
+    margin: 0 0 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #2b2314;
+    line-height: 1.3;
+  }
+
+  &__phase-italic {
+    margin: 0;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: #b8862f;
+  }
+
+  &__visual {
+    display: flex;
+    justify-content: center;
+    padding: 0.2rem 0 1rem;
+  }
+
+  &__svg {
+    border-radius: 50%;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
+  }
+
+  &__placeholder {
+    width: 130px;
+    height: 130px;
+  }
+
+  &__phase-name {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #2b2314;
+    margin: 0 0 1.25rem;
+  }
+
+  &__info-card {
+    background: #f9f6f199;
+    border: 1px solid #dfa62033;
+    border-radius: 4px;
+    padding: 0.6rem 1rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+
+  &__info-label {
+    margin: 0 0 0.25rem;
+    font-size: 0.85rem;
+    color: #4a3f2f;
+  }
+
+  &__info-value {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2b2314;
+  }
+
+  &__cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    background: #732639e6;
+    color: #fff;
+    text-decoration: none;
+    padding: .6rem 1.2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: #611831;
+    }
+  }
+
+  &__cta-arrow {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+}

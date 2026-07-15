@@ -14,6 +14,7 @@ import { useScriptContext } from "../../shared/ScriptProvider.js";
 import { useIsMobile } from "../../shared/useIsMobile.js";
 import { useInViewport } from "../../shared/useInViewport.js";
 import Zadusnice from "../../components/Boxes/Zadusnice/Zadusnice.js";
+import MoonWidgetBox from "../../UI/Widget/MoonWidgetBox.jsx";
 
 const CalendarLazy = lazy(
   () => import("../../components/Calendar/Calendar.js"),
@@ -165,6 +166,7 @@ export default function Home() {
                 data={calendarYears[0].item_list[yearIndex]}
               />
             </Suspense> */}
+            {/* <MoonWidgetBox /> */}
           </div>
           <div className="banner-wrapper fix-size-mediumRectangle">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750930023966-0"} />
@@ -195,7 +197,7 @@ export default function Home() {
               buttonText="Kalendar za maj 2027. →"
             />
           </Suspense>
-
+          <MoonWidgetBox />
           <div className="banner-wrapper xl_sticky">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750411708088-0"} />
           </div>

@@ -15,9 +15,7 @@ export default function Zadusnice({ setYear, boxTitle, data }) {
     (item) => item.title == currentYear,
   );
   let zadusniceDate = calendarYears[0].item_list[yearIndex];
-  // console.log("Data", zadusniceDate);
   let boxTitle2 = boxTitle || `🕯 Zadušnice u ${currentYear}. godini`;
-  // let data = data || calendarYears[0].item_list[yearIndex]
   return (
     <div className="zadusnice">
       <table>
@@ -38,12 +36,8 @@ export default function Zadusnice({ setYear, boxTitle, data }) {
                       prefetch={false}
                       href={`/${currentYear}/${monthSerb[item[0]]}/`}
                     >
-                      {/* {zadusniceName[index]} */}
-                      {/* {data.zadusnice[index].charAt(0).toUpperCase() +
-                        data.zadusnice[index].slice(1)} */}
                       {cyr(`${zadusniceDate.zadusnice[index].charAt(0).toUpperCase() +
                         zadusniceDate.zadusnice[index].slice(1)}`)}
-                      {/* {item[0]} */}
                     </Link>
                   </h3>
                 </td>
