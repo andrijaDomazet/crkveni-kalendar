@@ -1,7 +1,7 @@
 // MoonWidgetBox.module.scss
 
 .moon-widget-box {
-//   max-width: 340px;
+  //   max-width: 340px;
   border: 1px solid #cfc2af;
   overflow: hidden;
   background: #f2ece3;
@@ -38,7 +38,7 @@
     background: #f9f6f199;
     border: 1px solid #dfa62033;
     border-radius: 4px;
-    padding: .6rem;
+    padding: 0.6rem;
     margin-bottom: 1.25rem;
   }
 
@@ -116,7 +116,7 @@
     background: #732639e6;
     color: #fff;
     text-decoration: none;
-    padding: .6rem 1.2rem;
+    padding: 0.6rem 1.2rem;
     font-weight: 600;
     font-size: 1rem;
     transition: background 0.2s ease;
@@ -129,5 +129,74 @@
   &__cta-arrow {
     font-size: 1.2rem;
     flex-shrink: 0;
+  }
+}
+
+.moon-widget-box--horizontal {
+  max-width: 100%;
+
+  .moon-widget-box__row {
+    display: flex;
+    align-items: stretch;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .moon-widget-box__visual {
+    padding: 0;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .moon-widget-box__age-card {
+    flex: 1.4;
+    min-width: 220px;
+    margin: 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .moon-widget-box__side-column {
+    flex: 1;
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .moon-widget-box__side-column .moon-widget-box__info-card {
+    margin: 0;
+    text-align: left;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .moon-widget-box__cta {
+    // justify-content: flex-end;
+    flex-shrink: 0;
+    // border-radius: 6px;
+    align-self: center;
+    margin-left: auto
+  }
+
+  @media (max-width: 860px) {
+    .moon-widget-box__row {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .moon-widget-box__age-card,
+    .moon-widget-box__side-column,
+    .moon-widget-box__cta {
+      text-align: center;
+      align-items: center;
+      width: 100%;
+    }
   }
 }

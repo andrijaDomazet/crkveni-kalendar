@@ -2,8 +2,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import "./MoonWidgetBox.scss";
+import { usePathname } from "next/navigation";
 import { moonPhases } from "../../moonPhases.js";
+import "./MoonWidgetBox.scss";
 
 const monthNames = [
   "januar",
@@ -35,13 +36,27 @@ function formatBelgradeShort(isoString) {
   return `${get("day")}. ${get("month")}. ${get("year")}. u ${get("hour")}:${get("minute")}`;
 }
 
+function pluralize(n, one, few, many) {
+  const mod10 = n % 10;
+  const mod100 = n % 100;
+  if (mod10 === 1 && mod100 !== 11) return one;
+  if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) return few;
+  return many;
+}
+
+function formatAge(days, hours, minutes) {
+  const daysWord = pluralize(days, "dan", "dana", "dana");
+  const hoursWord = pluralize(hours, "sat", "sata", "sati");
+  const minutesWord = pluralize(minutes, "minut", "minuta", "minuta");
+  return `${days} ${daysWord}, ${hours} ${hoursWord} i ${minutes} ${minutesWord}`;
+}
+
 function phaseLabel(p) {
   const eps = 0.02;
-  if (p < eps || p > 1 - eps) return "Nov mesec";
+  if (p < eps || p > 1 - eps) return "Mlad mesec";
   if (Math.abs(p - 0.25) < eps) return "Prva četvrt";
   if (Math.abs(p - 0.5) < eps) return "Pun mesec";
   if (Math.abs(p - 0.75) < eps) return "Poslednja četvrt";
-  //   if (p < 0.25) return "Mlađak";
   if (p < 0.5) return "Rastući mesec";
   if (p < 0.75) return "Opadajući mesec";
   return "Stari mesec";
@@ -49,11 +64,10 @@ function phaseLabel(p) {
 
 function phaseLabelItalic(p) {
   const eps = 0.02;
-  if (p < eps || p > 1 - eps) return "mlađak";
+  if (p < eps || p > 1 - eps) return "mlad mesec";
   if (Math.abs(p - 0.25) < eps) return "prva četvrt";
   if (Math.abs(p - 0.5) < eps) return "uštap";
   if (Math.abs(p - 0.75) < eps) return "poslednja četvrt";
-  //   if (p < 0.25) return "mlađak";
   if (p < 0.5) return "rastući srp";
   if (p < 0.75) return "opadajući mesec";
   return "stari srp";
@@ -133,8 +147,9 @@ function MoonSvg({ p, size = 130 }) {
   );
 }
 
-export default function MoonWidgetBox() {
+export default function MoonWidgetBox({ layout = "vertical" }) {
   const [state, setState] = useState(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     const update = () => setState(computeMoonState(new Date()));
@@ -142,26 +157,93 @@ export default function MoonWidgetBox() {
     const interval = setInterval(update, 60 * 1000);
     return () => clearInterval(interval);
   }, []);
-  function pluralize(n, one, few, many) {
-    // srpska pravila: 1, 21, 31... -> one; 2-4, 22-24... -> few; ostalo -> many
-    const mod10 = n % 10;
-    const mod100 = n % 100;
-    if (mod10 === 1 && mod100 !== 11) return one;
-    if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) return few;
-    return many;
+
+  const showCta = !pathname?.startsWith("/meseceve-mene");
+
+  const rootClass =
+    layout === "horizontal"
+      ? "moon-widget-box moon-widget-box--horizontal"
+      : "moon-widget-box";
+
+  if (layout === "horizontal") {
+    return (
+      <div className={rootClass}>
+        <div className="moon-widget-box__header">
+          <span className="moon-widget-box__icon">☾</span>
+          <h2 className="moon-widget-box__title">Mesečeve mene</h2>
+        </div>
+
+        <div className="moon-widget-box__row">
+          <div className="moon-widget-box__visual">
+            {state ? (
+              <MoonSvg p={state.p} size={110} />
+            ) : (
+              <div className="moon-widget-box__placeholder" />
+            )}
+          </div>
+
+          <div className="moon-widget-box__age-card">
+            {state ? (
+              <>
+                <p className="moon-widget-box__age-label">
+                  Mesec je trenutno star:
+                </p>
+                <p className="moon-widget-box__age-value">
+                  {formatAge(state.days, state.hours, state.minutes)}
+                </p>
+                <p className="moon-widget-box__phase-italic">
+                  — {state.labelItalic} —
+                </p>
+              </>
+            ) : (
+              <p>&nbsp;</p>
+            )}
+          </div>
+
+          <div className="moon-widget-box__side-column">
+            <div className="moon-widget-box__info-card">
+              {state?.nextFullMoon && (
+                <>
+                  <p className="moon-widget-box__info-label">
+                    Pun mesec (uštap) će biti:
+                  </p>
+                  <p className="moon-widget-box__info-value">
+                    {formatBelgradeShort(state.nextFullMoon.date)}
+                  </p>
+                </>
+              )}
+            </div>
+
+            <div className="moon-widget-box__info-card">
+              {state?.nextNewMoon && (
+                <>
+                  <p className="moon-widget-box__info-label">
+                    Sledeći mlađi mesec biće:
+                  </p>
+                  <p className="moon-widget-box__info-value">
+                    {formatBelgradeShort(state.nextNewMoon.date)}
+                  </p>
+                </>
+              )}
+            </div>
+          </div>
+
+          {showCta && (
+            <a href="/meseceve-mene" className="moon-widget-box__cta">
+              <span>Detaljni lunarni kalendar</span>
+              <span className="moon-widget-box__cta-arrow">→</span>
+            </a>
+          )}
+        </div>
+      </div>
+    );
   }
 
-  function formatAge(days, hours, minutes) {
-    const daysWord = pluralize(days, "dan", "dana", "dana");
-    const hoursWord = pluralize(hours, "sat", "sata", "sati");
-    const minutesWord = pluralize(minutes, "minut", "minuta", "minuta");
-    return `${days} ${daysWord}, ${hours} ${hoursWord} i ${minutes} ${minutesWord}`;
-  }
   return (
-    <div className="moon-widget-box">
+    <div className={rootClass}>
       <div className="moon-widget-box__header">
         <span className="moon-widget-box__icon">☾</span>
-        <h2 className="moon-widget-box__title">Mesečeve mene</h2>
+        <h3 className="moon-widget-box__title">Mesečeve mene</h3>
       </div>
 
       <div className="moon-widget-box__body">
@@ -192,7 +274,7 @@ export default function MoonWidgetBox() {
         </div>
 
         {state && (
-          <h3 className="moon-widget-box__phase-name">{state.label}</h3>
+          <h4 className="moon-widget-box__phase-name">{state.label}</h4>
         )}
 
         <div className="moon-widget-box__info-card">
@@ -212,7 +294,7 @@ export default function MoonWidgetBox() {
           {state?.nextNewMoon && (
             <>
               <p className="moon-widget-box__info-label">
-                Sledeći mladi mesec biće:
+                Sledeći mlađi mesec biće:
               </p>
               <p className="moon-widget-box__info-value">
                 {formatBelgradeShort(state.nextNewMoon.date)}
@@ -220,12 +302,13 @@ export default function MoonWidgetBox() {
             </>
           )}
         </div>
-      </div>
-      <div style={{ padding: "0 1.5rem 1rem" }}>
-        <a href="/meseceve-mene" className="moon-widget-box__cta">
-          <span>Detaljni lunarni kalendar</span>
-          <span className="moon-widget-box__cta-arrow">→</span>
-        </a>
+
+        {showCta && (
+          <a href="/meseceve-mene" className="moon-widget-box__cta">
+            <span>Detaljni lunarni kalendar</span>
+            <span className="moon-widget-box__cta-arrow">→</span>
+          </a>
+        )}
       </div>
     </div>
   );

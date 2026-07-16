@@ -24,6 +24,9 @@ const CrossingDataLazy = lazy(
 const ImenoslovTabelaLazy = lazy(
   () => import("../../components/Boxes/Names.js"),
 );
+const MoonWidgetBoxLazy = lazy(
+  () => import("../../UI/Widget/MoonWidgetBox.jsx"),
+);
 
 export default function SinglePost() {
   const { yearIndex } = useCalendarContext();
@@ -85,7 +88,17 @@ export default function SinglePost() {
 
           <div className="mainContent-body">
             <div className="mainContent-text">
-              <strong className="mainContent-lead">{cyr(`${isNews.lead}`)}</strong>
+              <strong className="mainContent-lead">
+                {cyr(`${isNews.lead}`)}
+              </strong>
+              {pathPart[1] === "meseceve-mene" && (
+                <Suspense fallback={<div></div>}>
+                  <div style={{margin:"1rem 0"}}>
+                                <MoonWidgetBoxLazy layout="horizontal" />  
+                  </div>
+
+                </Suspense>
+              )}
               <BodyText bodyText={isNews.body} />
               {pathPart[1] === "molitvenik" && molitveBoxes()}
               {/* <div>

@@ -14,6 +14,7 @@ import MidBox from "../../components/Boxes/MidBox/MidBox.js";
 import { useRouteContext } from "../../shared/RouteProvider.js";
 import { useCalendarContext } from "../../shared/CalendarProvider.js";
 import { useScriptContext } from "../../shared/ScriptProvider.js";
+import MoonWidgetBox from "../../UI/Widget/MoonWidgetBox.jsx";
 
 const WidgetLazy = lazy(() => import("../../UI/Widget/Widget.js"));
 const ZadusniceLazy = lazy(
@@ -81,6 +82,7 @@ export default function KalendarGodina() {
               );
             })}
           </div>
+          <MoonWidgetBox layout="horizontal" /> 
         </div>
         <div className="kalendarGodina-left">
           <Suspense fallback={<div></div>}>

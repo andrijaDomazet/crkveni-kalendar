@@ -6,6 +6,9 @@
     padding: 0 0.6rem;
 
     .kalendarGodina-center {
+      display: grid;
+
+      gap: 1rem;
       margin-bottom: 1rem;
       .kalendarGodina-title {
         h1 {
@@ -56,13 +59,15 @@
         padding: 0;
       }
       .kalendarGodina-center {
+        display: grid;
         order: 2;
         width: 728px;
+        gap: 1rem;
         .kalendarGodina-title {
           h1 {
             font-size: 2rem;
           }
-        strong {
+          strong {
             font-size: 1.1rem;
           }
         }
