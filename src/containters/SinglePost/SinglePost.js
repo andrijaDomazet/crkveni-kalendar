@@ -93,10 +93,9 @@ export default function SinglePost() {
               </strong>
               {pathPart[1] === "meseceve-mene" && (
                 <Suspense fallback={<div></div>}>
-                  <div style={{margin:"1rem 0"}}>
-                                <MoonWidgetBoxLazy layout="horizontal" />  
+                  <div style={{ margin: "1rem 0" }}>
+                    <MoonWidgetBoxLazy layout="horizontal" />
                   </div>
-
                 </Suspense>
               )}
               <BodyText bodyText={isNews.body} />
