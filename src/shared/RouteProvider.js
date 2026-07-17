@@ -11,6 +11,8 @@ export const RouteProvider = ({ children }) => {
   const params = useParams();
 
   const pathPart = useMemo(() => pathname.split("/"), [pathname]);
+   const pageSlug = useMemo(() => pathPart[pathPart.length - 2] || "", [pathPart]);
+
   const slug = params?.godina || params?.slug;
   const id = params?.mesec || params?.id;
 
@@ -51,6 +53,7 @@ export const RouteProvider = ({ children }) => {
     () => ({
       location,
       pathPart,
+      pageSlug,
       slug,
       id,
       currentDate,
@@ -61,6 +64,7 @@ export const RouteProvider = ({ children }) => {
     [
       location,
       pathPart,
+      pageSlug,
       slug,
       id,
       currentDate,

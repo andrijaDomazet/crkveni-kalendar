@@ -38,7 +38,7 @@ export function renderTitleSection({
       {slavaSymbol && (
         <>
           <Link prefetch={false} href="/slave/" className="slavaStrong">
-           {cyr(`SLAVA`)}
+            {cyr(`SLAVA`)}
           </Link>{" "}
         </>
       )}
@@ -65,12 +65,14 @@ export function renderTitleSection({
         (() => {
           const content = (
             <h2>
-              <strong className={strongClass}>{cyr(`${extraLabel}`)}   </strong>
+              <strong className={strongClass}>{cyr(`${extraLabel}`)} </strong>
             </h2>
           );
 
           return extraLabelLink ? (
-            <Link prefetch={false} href={extraLabelLink}>{content}</Link>
+            <Link prefetch={false} href={extraLabelLink}>
+              {content}
+            </Link>
           ) : (
             content
           );
@@ -79,8 +81,11 @@ export function renderTitleSection({
   );
 }
 
+// export const getPreUrlTitle = (item) => {
+//   return `/${item.category}/${urlTitle2(item.title)}/`;
+// };
 export const getPreUrlTitle = (item) => {
-  return `/${item.category}/${urlTitle2(item.title)}/`;
+  return `/${urlTitle2(item.category)}/${urlTitle2(item.title)}/`;
 };
 
 export const getDayMonth = (date) => ({

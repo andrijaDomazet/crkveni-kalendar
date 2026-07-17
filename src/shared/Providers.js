@@ -5,11 +5,10 @@ import { ScriptProvider } from "./ScriptProvider";
 
 export default function Providers({ children }) {
   return (
-       <ScriptProvider>
-            <RouteProvider>
-      <CalendarProvider>{children}</CalendarProvider>
-    </RouteProvider>
-       </ScriptProvider>
-
+    <ScriptProvider>
+      <RouteProvider>
+        <CalendarProvider>{children}</CalendarProvider>
+      </RouteProvider>
+    </ScriptProvider>
   );
 }

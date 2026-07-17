@@ -53,16 +53,7 @@ export const calendarYears = [
     ],
   },
 ];
-export const spisakNedelja = [
-  "Седмица прва – Светла",
-  "Седмица друга – Мироносица",
-  "Седмица трећа – Раслабљеног",
-  "Седмица четврта – Самарјанке",
-  "Седмица пета – Слепога",
-  "Седмица шеста – Светих Отаца Првог васељенског сабора",
-  "Седмица шеста – Светих Отаца Првог васељенског сабора",
-  "Седмица Педесетнице",
-];
+
 export const details = [
   { title: "Ime i prezime", name: "name" },
   { title: "Kontakt telefon", name: "tel" },
@@ -252,6 +243,16 @@ export const options = [
     route: "/vesti/ostalo/",
     icon: "/img/krst__logo.png",
     item_list: [
+      {
+        title: "Praznici",
+        route: "/praznici/",
+
+        social: {
+          title: "Praznici | crkveni-kalendar.net",
+          lead: "Pregled velikih pravoslavnih praznika, njihovog porekla i narodnih običaja",
+          pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
+        },
+      },
       {
         title: "Molitvenik",
         route: "/molitvenik/",

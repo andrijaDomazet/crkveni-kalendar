@@ -1,0 +1,59 @@
+@import "../index.scss";
+
+.content {
+  padding: 2rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.mainContent-title {
+  font-size: 1.8rem;
+  color: #4a1f2b;
+  margin-bottom: 0.5rem;
+}
+
+.mainContent-lead {
+  color: #6b5a4a;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.praznikBoxes {
+  max-width: 1024px;
+  //   margin: 0 auto;
+  //   border: 1px solid red;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.praznikBoxes .artBox-wrapper {
+  border: 1px solid #d8c9a3;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f3e9d8;
+  transition: box-shadow 0.2s ease;
+}
+
+.praznikBoxes .artBox-wrapper:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.praznikBoxes .artBox-desc {
+  padding: 1.25rem;
+}
+
+.praznikBoxes .artBox-desc a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.praznikBoxes h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #4a1f2b;
+}
+
+.praznikBoxes .artBox-desc h3,
+.praznikBoxes h3 {
+  color: #4a1f2b !important;
+}

@@ -30,17 +30,17 @@ const MoonWidgetBoxLazy = lazy(
 
 export default function SinglePost() {
   const { yearIndex } = useCalendarContext();
-  const { pathPart } = useRouteContext();
+  const { pathPart, pageSlug } = useRouteContext();
   const [isNews, setIsNews] = useState(() => setArticleState());
   const { cyr, cyrHtml } = useScriptContext();
 
   useEffect(() => {
     setIsNews(setArticleState());
-  }, [pathPart]);
+  }, [pageSlug]);
 
   function setArticleState() {
     return data.find((post) => {
-      return urlTitle2(post.title) === pathPart[1];
+      return urlTitle2(post.title) === pageSlug; // umesto pathPart[1]
     });
   }
   function molitveBoxes() {

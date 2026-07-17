@@ -1,5 +1,57 @@
 [
   {
+    "news_id": 3,
+    "type": "praznik",
+    "published": true,
+    "time2": "2026-07-20T09:30:03.969Z",
+    "category": "Praznici",
+    "pics": [
+      "https://res.cloudinary.com/dvi29tcsc/image/upload/v1722594351/agroweb/ilija_atbjzh.png",
+      "Pexels"
+    ],
+    "title": "Ilindan",
+    "title_2": "Ilindan 2026 — Sveti prorok Ilija",
+    "lead": "Kada je Ilindan 2026? Ovaj veliki pravoslavni praznik uvek pada 2. avgusta i posvećen je Svetom proroku Iliji, poznatom u narodu kao Ilija Gromovnik.",
+    "body": [
+      {
+        "subtitle": "Kada je Ilindan i zašto je važan",
+        "text": "Ilindan se svake godine obeležava 2. avgusta po novom kalendaru, odnosno 20. jula po starom (julijanskom) kalendaru. Za razliku od pokretnih praznika poput Vaskrsa, datum Ilindana je stalan i ne menja se iz godine u godinu. U crkvenom kalendaru obeležen je crvenim slovom, što ga svrstava među velike praznike, a spada i među najpoštovanije i najstrože praznike u srpskom narodu.",
+        "textQuote": "Detaljan pregled svih pravoslavnih praznika po mesecima možete pronaći na <a href=\"https://crkveni-kalendar.net/2026/\">stranici crkvenog kalendara za 2026. godinu</a>."
+      },
+      {
+        "subtitle": "",
+        "text": "Sveti Ilija je starozavetni prorok, rođen u 9. veku pre nove ere u mestu Tesvit. Prema predanju, već njegovo rođenje najavljivalo je izuzetnu, 'ognjenu' sudbinu - anđeli su ga, kako priča kaže, povijali ognjem i hranili plamenom. Odrastao je u dubokoj molitvi, često se povlačeći u pustinju, a kasnije se suprotstavio caru Ahavu koji je pod uticajem svoje žene Jezavelje napustio veru otaca. Ilija se pominje i u Novom zavetu: po predanju je, zajedno sa prorokom Mojsijem, bio prisutan na Preobraženju Gospodnjem, zbog čega se često prikazuje na ikonama tog praznika."
+      },
+      {
+        "subtitle3": "Ilija Gromovnik — poreklo naziva i narodna verovanja",
+        "text": "U srpskoj narodnoj tradiciji, lik Svetog Ilije preuzeo je odlike starog slovenskog boga Peruna, gospodara groma i munje - otuda i naziv Ilija Gromovnik. Po narodnom verovanju:<ul><li>kada zagrmi na Ilindan, to Ilija gađa nečastive sile,</li><li>tog dana se ne preporučuje krstiti se dok grmi,</li><li>ne radi se u polju ni vinogradu, da se ne bi 'navukao gnev' svetitelja,</li><li>posle Ilindana više se ne kupa u rekama, jer leto polako ustupa mesto jeseni.</li></ul>Otuda i stara narodna izreka: 'Od Svetog Ilije, sunce sve milije.'"
+      },
+      {
+        "subtitle": "Običaji na Ilindan",
+        "text": "Postoji običaj da se deci na Ilindan medom premažu čelo i obrazi, kako bi bila zdrava i vesela tokom cele godine. Toga dana se ne pere veš i ne diže prašina po kući ili dvorištu. Ilindan je po pravilu mrsan praznik - izuzetak je jedino ako 2. avgust padne u sredu ili petak, kada važe redovna pravila posta."
+      },
+      {
+        "subtitle": "",
+        "text": "Kod porodica koje slave Svetog Iliju kao krsnu slavu, na trpezi su obavezni slavski kolač, sveća i vino, dok se žito kod ove slave ponekad izostavlja - postoji predanje da je ovaj svetitelj i danas živ. Sveti Ilija je česta krsna slava, naročito u brdskim i planinskim krajevima Srbije."
+      },
+      {
+        "subtitle": "Sveti Ilija — slava vazduhoplovaca",
+        "text": "Sveti Ilija je u Srbiji proglašen zaštitnikom vazduhoplovstva ukazom iz 1924. godine. Tradicija je prekinuta posle propasti Kraljevine Jugoslavije, da bi bila obnovljena 1992. godine - otuda je Ilindan i danas slava srpskog vazduhoplovstva."
+      }
+    ],
+    "tags": [
+      "Ilindan",
+      "Sveti Ilija",
+      "Ilija Gromovnik",
+      "Krsna slava",
+      "Avgust praznici",
+      "Pravoslavni praznici",
+      "Narodni običaji"
+    ],
+    "source": "crkveni-kalendar",
+    "page_view": 0
+  },
+  {
     "news_id": 4,
     "time": "1. jun",
     "category": "Ostalo",
