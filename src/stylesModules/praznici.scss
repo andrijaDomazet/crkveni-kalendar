@@ -1,10 +1,58 @@
 @import "../index.scss";
 
 .content {
+  display: flex;
+  flex-direction: row;
+  // gap: 1rem;
   padding: 2rem 0;
   max-width: 1200px;
   margin: 0 auto;
 }
+
+.mainContent-right {
+  flex-direction: column;
+  display: flex;
+  gap: 1rem;
+}
+/* ===== Header stranice ===== */
+
+.praznikPage {
+  max-width: 1024px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.praznikPage-eyebrow {
+  color: #b8862f;
+  letter-spacing: 0.15em;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.praznikPage-title {
+  font-size: 2.8rem;
+  color: #7a1f3d;
+  margin: 0 0 1rem;
+}
+
+.praznikPage-lead {
+  color: #6b5a4a;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+}
+
+.praznikPage-sectionTitle {
+  text-align: left;
+  color: #4a1f2b;
+  font-size: 1.3rem;
+  border-bottom: 1px solid #d8c9a3;
+  padding-bottom: 0.5rem;
+  margin: 2.5rem 0 1.5rem;
+}
+
+/* fallback ako koristiš mainContent-title/lead umesto praznikPage-title/lead */
 .mainContent-title {
   font-size: 1.8rem;
   color: #4a1f2b;
@@ -17,43 +65,145 @@
   display: block;
 }
 
+/* ===== Grid layout ===== */
+
+.praznikGrid {
+  display: grid;
+  gap: 1.25rem;
+  text-align: left;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.praznikGrid--large {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.praznikGrid--small {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* fallback naziv ako koristiš praznikBoxes umesto praznikGrid */
 .praznikBoxes {
   max-width: 1024px;
-  //   margin: 0 auto;
-  //   border: 1px solid red;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+  padding: 1rem 0;
 }
 
-.praznikBoxes .artBox-wrapper {
-  border: 1px solid #d8c9a3;
-  border-radius: 8px;
-  overflow: hidden;
+/* ===== Kartica ===== */
+
+.praznikCard,
+.praznikBox .artBox-wrapper {
+  display: flex;
+  gap: 0.9rem;
   background: #f3e9d8;
+  // border-radius: 6px;
+  // border: 1px solid red;
+  padding: 1.1rem 1.25rem;
+  text-decoration: none;
+  color: inherit;
   transition: box-shadow 0.2s ease;
+  border-top: 3px solid transparent;
+  border-image: linear-gradient(to right, #732639, #dfa620, #732639);
+  border-image-slice: 1;
 }
 
-.praznikBoxes .artBox-wrapper:hover {
+.praznikCard:hover,
+.praznikBox:hover .artBox-wrapper {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.praznikBoxes .artBox-desc {
-  padding: 1.25rem;
+.praznikCard--disabled {
+  opacity: 0.6;
+  cursor: default;
 }
 
-.praznikBoxes .artBox-desc a {
+.praznikCard-icon,
+.praznikBox .artBox-wrapper::before {
+  content: "✛";
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #e5d7bb;
+  color: #b8862f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  margin-top: 0.15rem;
+}
+
+.praznikCard-body {
+  flex: 1;
+}
+
+.praznikCard-date {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #b8862f;
+  margin-bottom: 0.15rem;
+}
+
+.praznikCard-title,
+.praznikBox h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #4a1f2b;
+  text-align: left;
+  line-height: 1.4;
+}
+
+.praznikCard-lead {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #6b5a4a;
+  line-height: 1.4;
+}
+
+.praznikCard-tag {
+  margin-top: 0.6rem;
+  font-size: 0.8rem;
+  color: #b8862f;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* ArticleBox specifično: sredi desc/link unutra */
+.praznikBox .artBox-desc {
+  flex: 1;
+}
+
+.praznikBox .artBox-desc a {
   text-decoration: none;
   color: inherit;
+  display: block;
 }
 
-.praznikBoxes h3 {
-  margin: 0;
-  font-size: 1.1rem;
-  color: #4a1f2b;
+/* ===== Responsive ===== */
+
+@media (max-width: 768px) {
+  .praznikGrid--large,
+  .praznikGrid--small,
+  .praznikBoxes {
+    grid-template-columns: 1fr;
+  }
+
+  .praznikPage-title {
+    font-size: 2rem;
+  }
 }
 
-.praznikBoxes .artBox-desc h3,
-.praznikBoxes h3 {
-  color: #4a1f2b !important;
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    padding: 1rem 0.6rem;
+  }
 }
