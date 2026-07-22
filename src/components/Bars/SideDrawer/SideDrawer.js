@@ -2,8 +2,10 @@
 import "./SideDrawer.scss";
 import NavLink from "../../../UI/NavLink/NavLink";
 import { options } from "../../../shared/shared";
+import { useScriptContext } from "../../../shared/ScriptProvider";
 
 export default function SideDrawer(props) {
+  const { cyr } = useScriptContext();
   let drawerClasses = "side-drawer";
   if (props.show) {
     drawerClasses = "side-drawer open";
@@ -16,7 +18,7 @@ export default function SideDrawer(props) {
             return (
               <li key={index}>
                 <NavLink key={index} to={`${item.route}`}>
-                  {item.title}
+                  {cyr(`${item.title}`)}
                 </NavLink>
               </li>
             );
@@ -36,7 +38,7 @@ export default function SideDrawer(props) {
             return (
               <li key={index}>
                 <NavLink to={option.route} exact="true" className="top-link2">
-                  {option.title}
+                  {cyr(`${option.title}`)}
                 </NavLink>
                 {items_list(option.item_list)}
               </li>

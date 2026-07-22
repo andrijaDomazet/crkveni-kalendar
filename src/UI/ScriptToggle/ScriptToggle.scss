@@ -6,8 +6,8 @@
   width: 40px;
   left: 0.8rem;
   top: -2.6rem;
-  background: transparent;
-  border: 1px solid currentColor;
+  background: #dfa620;
+  border: 1px solid #dfa620;
   border-radius: 0.25rem;
   padding: 0.1rem 0.4rem;
   cursor: pointer;
@@ -26,13 +26,11 @@
     top: initial;
     right: 0;
     font-size: 0.9rem;
-    padding: 0.15rem 0.4rem;
-    opacity: 0.6;
+    padding: 0.25rem 0.6rem;
     &:hover {
       opacity: 0.9;
-      background: #dfa620;
+      background: rgba(255, 255, 255, 0.9);
       color: #732639;
-      // color: #dfa620;
     }
   }
 }
