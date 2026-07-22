@@ -1,2 +1,5 @@
 /widget.html
   Content-Security-Policy: frame-ancestors *
+
+/.well-known/assetlinks.json
+  Content-Type: application/json

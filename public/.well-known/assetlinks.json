@@ -1,0 +1,10 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "net.crkveni_kalendar.app",
+    "sha256_cert_fingerprints": [
+      "EE:56:95:1E:20:28:1A:41:0D:5E:8E:61:CB:7F:92:BD:5F:39:C9:11:53:72:D4:2B:B9:DA:35:09:36:6A:73:2E"
+    ]
+  }
+}]
