@@ -1,24 +1,21 @@
 {
   "short_name": "Crkveni kalendar",
-  "name": "Crkveni-kalendar.net",
+  "name": "Crkveni kalendar",
   "icons": [
     {
       "src": "img/krst__logo.png",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "sizes": "192x192",
+      "type": "image/png"
     },
     {
       "src": "img/krst__logo.png",
+      "sizes": "512x512",
       "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "img/krst__logo.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "purpose": "any maskable"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "theme_color": "#bcb476",
   "background_color": "#898143"

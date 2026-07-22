@@ -6,8 +6,8 @@
   width: 40px;
   left: 0.8rem;
   top: -2.6rem;
-  background: #dfa620;
-  border: 1px solid #dfa620;
+  background: transparent;
+  border: 1px solid currentColor;
   border-radius: 0.25rem;
   padding: 0.1rem 0.4rem;
   cursor: pointer;
@@ -15,7 +15,7 @@
   font-weight: 600;
   opacity: 0.7;
   transition: opacity 0.2s;
-  color: #732639;
+
   //   &.active { opacity: 1; }
 }
 
@@ -30,7 +30,6 @@
     opacity: 0.6;
     &:hover {
       opacity: 0.9;
-      //   background: rgba(255, 255, 255, 0.9);
       background: #dfa620;
       color: #732639;
       // color: #dfa620;
