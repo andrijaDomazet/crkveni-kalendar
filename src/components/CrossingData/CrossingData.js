@@ -5,6 +5,7 @@ import { monthSerb } from "../../shared/shared";
 import Link from "next/link";
 import React from "react";
 import { useRouteContext } from "../../shared/RouteProvider";
+// import Link from 'next/link';
 
 export default function CrossingData() {
   const { slug, currentDate } = useRouteContext();
@@ -46,7 +47,14 @@ export default function CrossingData() {
                 <tr>
                   <td>{`${day}. ${monthName}`}</td>
                   <td>
-                    <h3>{item.title}</h3>
+                    {item.artLink ? (
+                      <h3>
+                        <Link href={item.artLink}>{item.title}</Link>
+                      </h3>
+                    ) : (
+                      <h3>{item.title}</h3>
+                    )}
+                    {/* <h3>{item.title}</h3> */}
                   </td>
                 </tr>
               </React.Fragment>
