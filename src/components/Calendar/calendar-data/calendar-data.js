@@ -29,7 +29,7 @@ export const importantHolidaysPerMonth = [
   ["Blagovesti (7.)"],
   ["Đurđevdan (6.)", "Sveti Vasilije (12.)"],
   ["Vidovdan (28.)"],
-  ["Petrovdan (12.)"],
+  ["Ivanjdan (7.)","Petrovdan (12.)"],
   ["Preobraženje (19.)", "Velika Gospojina (28.)"],
   ["Mala Gospojina (21.)", "Krstovdan (27.)"],
   ["Sveta Petka (27.)", "Sveti Luka (31.)"],

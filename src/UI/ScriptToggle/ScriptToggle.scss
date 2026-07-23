@@ -8,9 +8,11 @@
   top: -2.6rem;
   background: #dfa620;
   border: 1px solid #dfa620;
+  border: none;
   border-radius: 0.25rem;
   padding: 0.1rem 0.4rem;
   cursor: pointer;
+  color: #732639;
   font-size: 0.8rem;
   font-weight: 600;
   opacity: 0.7;
@@ -21,7 +23,7 @@
 
 @media screen and (min-width: $medium) {
   .script-toggle {
-    width: 45px;
+    width: 50px;
     left: initial;
     top: initial;
     right: 0;
@@ -29,7 +31,7 @@
     padding: 0.25rem 0.6rem;
     &:hover {
       opacity: 0.9;
-      background: rgba(255, 255, 255, 0.9);
+      // background: rgba(255, 255, 255, 0.9);
       color: #732639;
     }
   }
