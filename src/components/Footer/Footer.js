@@ -1,15 +1,17 @@
 "use client";
+import Link from "next/link";
 import { useRouteContext } from "../../shared/RouteProvider";
 import { useScriptContext } from "../../shared/ScriptProvider";
-import { monthSerb } from "../../shared/shared";
+import { monthSerb, options } from "../../shared/shared";
 import { getDayMonth } from "../../shared/utility";
 import "./Footer.scss";
+import { nextYear } from "./nextYear";
 
 export default function Footer() {
   let { pageMonth, pageYear, currentDate } = useRouteContext();
-
   const dateDetails = getDayMonth(currentDate ?? new Date());
   const { cyr } = useScriptContext();
+
   return (
     <footer className="footer">
       <div className="footer-border"></div>
@@ -117,13 +119,18 @@ export default function Footer() {
               <a href="/info/o-nama/">{cyr(`O nama`)}</a>
             </li>
             <li>
-              <a href="/info/pravila-koriscenja/">{cyr(`Politika korišćenja`)}</a>
+              <a href="/info/pravila-koriscenja/">
+                {cyr(`Politika korišćenja`)}
+              </a>
             </li>
             <li>
-              <a href="/info/politika-privatnosti/">{cyr(`Politika privatnosti`)}</a>
+              <a href="/info/politika-privatnosti/">
+                {cyr(`Politika privatnosti`)}
+              </a>
             </li>
           </ul>
         </section>
+
         <section>
           <div>
             <svg
@@ -152,11 +159,71 @@ export default function Footer() {
           </p>
         </section>
       </div>
+      <section className="nextYear">
+        <div className="nextYear__top">
+          {/* <div> */}
+          <div className="line"></div>
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              class="lucide lucide-calendar w-3.5 h-3.5"
+            >
+              <path d="M8 2v4"></path>
+              <path d="M16 2v4"></path>
+              <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+              <path d="M3 10h18"></path>
+            </svg>
+            <strong>
+              <Link href={"/2027/"}>{cyr("Crkveni kalendar 2027.")}</Link>
+            </strong>
+          </div>
 
+          <div className="line right"></div>
+        </div>
+        {/* </div> */}
+        <ul className="nextYear__middle">
+          {nextYear[0].item_list.map((item, index) => {
+            const isLast = index === nextYear[0].item_list.length - 1;
+            return (
+              <li key={index}>
+                <Link href={item.route}>{cyr(`${item.title}`)}</Link>
+                {!isLast && <span className="text-gold/30 text-xs">✚</span>}
+              </li>
+            );
+          })}
+        </ul>
+        <div className="nextYear__bottom">
+          <div className="line"></div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M4 9a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h4a1 1 0 0 1 1 1v4a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-4a1 1 0 0 1 1-1h4a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-4a1 1 0 0 1-1-1V4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4a1 1 0 0 1-1 1z"></path>
+          </svg>
+          <div className="line right"></div>
+        </div>
+      </section>
       <div className="footer-copyright">
         <p>
-          &copy; 2025 crkveni-kalendar.net. {cyr(`Sva prava zadržana | Dizajn i
-          održavanje:`)} <a href="https://tausolutions.rs/">TAUsolutions</a>
+          &copy; 2025 crkveni-kalendar.net.{" "}
+          {cyr(`Sva prava zadržana | Dizajn i
+          održavanje:`)}{" "}
+          <a href="https://tausolutions.rs/">TAUsolutions</a>
         </p>
       </div>
     </footer>

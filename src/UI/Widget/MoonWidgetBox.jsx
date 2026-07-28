@@ -205,7 +205,7 @@ export default function MoonWidgetBox({ layout = "vertical" }) {
             <div className="moon-widget-box__info-card">
               {state?.nextNewMoon && (
                 <>
-                  <p className="moon-widget-box__info-label">{cyr("Sledeći mlađi mesec biće:")}</p>
+                  <p className="moon-widget-box__info-label">{cyr("Sledeći mladi mesec biće:")}</p>
                   <p className="moon-widget-box__info-value">
                     {formatBelgradeShort(state.nextNewMoon.date)}
                   </p>
@@ -271,7 +271,7 @@ export default function MoonWidgetBox({ layout = "vertical" }) {
         <div className="moon-widget-box__info-card">
           {state?.nextNewMoon && (
             <>
-              <p className="moon-widget-box__info-label">{cyr("Sledeći mlađi mesec biće:")}</p>
+              <p className="moon-widget-box__info-label">{cyr("Sledeći mladi mesec biće:")}</p>
               <p className="moon-widget-box__info-value">
                 {formatBelgradeShort(state.nextNewMoon.date)}
               </p>
