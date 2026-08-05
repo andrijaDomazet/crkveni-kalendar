@@ -152,7 +152,7 @@ export default function Calendar(props) {
               );
             })}
             <th>
-              <span>{cyr(`${tableTitle(0)}`)}</span>
+              <h2>{cyr(`${tableTitle(0)}`)}</h2>
             </th>
             <th>
               <span>{cyr(`Post`)}</span>
