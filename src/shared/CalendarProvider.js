@@ -376,7 +376,7 @@ export const CalendarProvider = ({ children }) => {
       const gospojinskiEnd = new Date(pageYear, 7, 28);
       if (toMidnightTs(item.date) === toMidnightTs(gospojinskiEnd)) {
         item.mainTitle = item.title;
-        item.extraLabel = "(Početak Gospojinskog posta)";
+        // item.extraLabel = "(Početak Gospojinskog posta)";
       }
 
       //Materice, Oci
