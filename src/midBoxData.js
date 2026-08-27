@@ -10,9 +10,11 @@ export const nextHolidays = [
   // ["26. jul", "Sabor Svetog Arhangela Gavrila"],
   // ["2. avgust", "Sveti Ilija", "/praznici/ilindan/"],
 
-  ["14. avgust", "Početak Gospojinskog posta"],
-  ["19. avgust", "Preobraženje Gospodnje"],
+  // ["14. avgust", "Početak Gospojinskog posta"],
+  // ["19. avgust", "Preobraženje Gospodnje"],
   // ["30. jul", "Ognjena Marija"],
   ["28. avgust", "Velika Gospojina"],
   ["11. septembar", "Usekovanje glave Svetog Jovana Krstitelja"],
+  ["21. septembar", "Mala Gospojina"],
+  ["21. septembar", "Krstovdan"],
 ];
