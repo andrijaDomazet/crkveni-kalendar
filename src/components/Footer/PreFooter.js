@@ -9,13 +9,16 @@ export default function PreFooter() {
 
   const allLinks = [
     ["Preobraženje Gospodnje", "/2026/avgust/"],
-    ["Gospojinski post", "/hriscanski-post/"],
+    // ["Gospojinski post", "/hriscanski-post/"],
+    ["Krstovdan", "/2026/septembar/"],
     ["Miholjske zadušnice", "/2026/oktobar/"],
     // ["Crkveni kalendar 2027", "/2027/"],
     ["Mesečeve mene 2026", "/meseceve-mene/"],
   ];
 
-  const filteredLinks = allLinks.filter((item) => !pathname.startsWith(item[1]));
+  const filteredLinks = allLinks.filter(
+    (item) => !pathname.startsWith(item[1]),
+  );
 
   return (
     <div className="preFooter">
