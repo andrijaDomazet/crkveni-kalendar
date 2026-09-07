@@ -62,7 +62,7 @@ export default function TodayBox({ classes = false }) {
                 : todayHoliday?.title,
             )}
           </h2>
-          {todayHoliday.post && (
+          {!todayHoliday.post && (
             <div className="today-post">
               <div className="today-post-wrapper">
                 <div className="circle"></div>

@@ -16,5 +16,5 @@ export const nextHolidays = [
   // ["28. avgust", "Velika Gospojina"],
   ["11. septembar", "Usekovanje glave Svetog Jovana Krstitelja"],
   ["21. septembar", "Mala Gospojina"],
-  ["21. septembar", "Krstovdan"],
+  ["27. septembar", "Krstovdan"],
 ];
