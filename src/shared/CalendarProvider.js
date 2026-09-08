@@ -8,7 +8,6 @@ import {
   easterDays,
   idsMonths,
   manualDateEaster,
-  monthSerb,
 } from "../components/Calendar/calendar-data/calendar-data";
 import news2 from "../components/Calendar/calendar-data/all__news4.json";
 import { toMidnightTs } from "./utility";
@@ -478,107 +477,7 @@ export const CalendarProvider = ({ children }) => {
       return dynamic.sort((a, b) => a.day - b.day).map((d) => d.label);
     };
   }, [easterDay, postLookup, petrovPostStartDate, yearIndex]);
-  // const getDynamicHolidays = useMemo(() => {
-  //   return (monthIndex) => {
-  //     const dynamic = [];
 
-  //     // Obrezanje Gospodnje
-  //     const serbNewYear = new Date(pageYear, 0, 14);
-  //     if (serbNewYear.getMonth() === monthIndex) {
-  //       dynamic.push(`Obrezanje Gospodnje (${serbNewYear.getDate()}.)`);
-  //     }
-
-  //     // Vaskrs
-  //     if (easterDay.getMonth() === monthIndex) {
-  //       dynamic.push(`Vaskrs (${easterDay.getDate()}.)`);
-  //     }
-
-  //     // Lazareva subota (8 dana pre Vaskrsa)
-  //     const lazareva = new Date(easterDay);
-  //     lazareva.setDate(easterDay.getDate() - 8);
-  //     if (lazareva.getMonth() === monthIndex) {
-  //       dynamic.push(`Lazareva subota (${lazareva.getDate()}.)`);
-  //     }
-
-  //     // Cveti (7 dana pre Vaskrsa)
-  //     const cveti = new Date(easterDay);
-  //     cveti.setDate(easterDay.getDate() - 7);
-  //     if (cveti.getMonth() === monthIndex) {
-  //       dynamic.push(`Cveti (${cveti.getDate()}.)`);
-  //     }
-
-  //     // Spasovdan (39 dana posle Vaskrsa)
-  //     const spasovdan = new Date(easterDay);
-  //     spasovdan.setDate(easterDay.getDate() + 39);
-  //     if (spasovdan.getMonth() === monthIndex) {
-  //       dynamic.push(`Spasovdan (${spasovdan.getDate()}.)`);
-  //     }
-
-  //     // Trojice (49 dana posle Vaskrsa)
-  //     const trojice = new Date(easterDay);
-  //     trojice.setDate(easterDay.getDate() + 49);
-  //     if (trojice.getMonth() === monthIndex) {
-  //       dynamic.push(`Trojice (${trojice.getDate()}.)`);
-  //     }
-
-  //     // Početak Vaskršnjeg posta
-  //     const startEasterDate = new Date(postLookup.startEasterTs);
-  //     if (startEasterDate.getMonth() === monthIndex) {
-  //       dynamic.push(
-  //         `Početak Vaskršnjeg posta (${startEasterDate.getDate()}.)`,
-  //       );
-  //     }
-
-  //     // Početak Petrovskog posta
-  //     const petrovDate = new Date(petrovPostStartDate);
-  //     if (petrovDate.getMonth() === monthIndex) {
-  //       dynamic.push(`Početak Petrovskog posta (${petrovDate.getDate()}.)`);
-  //     }
-
-  //     // Početak Gospojinskog posta
-  //     const gospojinskiPost = new Date(pageYear, 7, 14);
-  //     if (gospojinskiPost.getMonth() === monthIndex) {
-  //       dynamic.push(
-  //         `Početak Gospojinskog posta (${gospojinskiPost.getDate()}.)`,
-  //       );
-  //     }
-
-  //     // Početak Bozicnog posta
-  //     const bozicniPost = new Date(pageYear, 10, 28);
-  //     if (bozicniPost.getMonth() === monthIndex) {
-  //       dynamic.push(`Početak Božićnog posta (${bozicniPost.getDate()}.)`);
-  //     }
-
-  //     // Materice
-  //     const matericeDate = getTargetSundayBeforeChristmas(pageYear);
-  //     if (matericeDate.getMonth() === monthIndex) {
-  //       dynamic.push(`Materice (${matericeDate.getDate()}.)`);
-  //     }
-
-  //     // Oci (Paterice)
-  //     getSundaysBeforeChristmas(pageYear).forEach((d) => {
-  //       if (d.getMonth() === monthIndex) {
-  //         dynamic.push(`Oci - Paterice (${d.getDate()}.)`);
-  //       }
-  //     });
-
-  //     // Zadušnice
-  //     if (yearIndex !== -1) {
-  //       const zadusnice = calendarYears[0].item_list[yearIndex]?.tableNum;
-  //       if (zadusnice) {
-  //         zadusnice.forEach((z, i) => {
-  //           if (z[0] === monthIndex) {
-  //             console.log("Z", z);
-
-  //             dynamic.push(`Zadušnice (${z[1]}.)`);
-  //           }
-  //         });
-  //       }
-  //     }
-
-  //     return dynamic;
-  //   };
-  // }, [easterDay, postLookup, petrovPostStartDate, yearIndex]);
   return (
     <CalendarContext.Provider
       value={{

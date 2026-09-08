@@ -2,12 +2,6 @@
 .calendar {
   position: relative;
   width: 100%;
-  // display: flex;
-  // justify-content: center;
-  // text-align: center;
-  // display: block;
-  // border: 2px solid blue !important;
-  // box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
   .first {
     color: $grey5;
     display: flex;
@@ -253,8 +247,8 @@
     justify-content: space-between;
     background: #f9f6f1;
     padding: 0.5rem 0;
-    border-bottom-left-radius: 0.3rem;
-    border-bottom-right-radius: 0.3rem;
+    // border-bottom-left-radius: 0.3rem;
+    // border-bottom-right-radius: 0.3rem;
     .left {
       display: flex;
       // border: 1px solid red;
@@ -290,6 +284,20 @@
 
     .closeButton {
       display: none;
+    }
+  }
+  .simpleBox.moonLegend {
+    // background: #f3e9d8;
+    border: 1px solid #d8c9a3;
+    // border-radius: 6px;
+    border-bottom-left-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem;
+    // max-width: 400px;
+    // margin: 1.5rem 0;
+
+    ul li {
+      font-size: 0.9rem;
+      color: #4a1f2b;
     }
   }
   .calendar-month.close {
@@ -381,8 +389,17 @@
           padding-left: 0.5rem;
           text-align: left;
           .mainTitle {
+            // display: flex;
+            align-items: center;
+            gap: 0.4rem;
             padding-left: 0.5rem;
             padding-right: 2rem;
+
+            .moonPhaseIcon {
+              flex-shrink: 0;
+              color: black;
+              margin-left: 0.3rem;
+            }
             .slavaStrong,
             .zadusniceStrong {
               font-size: 0.9rem;

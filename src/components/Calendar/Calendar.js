@@ -17,6 +17,10 @@ import AdManagerSlot from "../AdvModule/AdManagerSlot";
 import { useRouteContext } from "../../shared/RouteProvider.js";
 import { useCalendarContext } from "../../shared/CalendarProvider.js";
 import { useScriptContext } from "../../shared/ScriptProvider.js";
+import MoonPhaseIcon from "../../UI/MoonPhaseIcon/MoonPhaseIcon.jsx";
+import { getMoonPhaseForDate } from "../../shared/moonPhaseLookup.js";
+import SimpleBox from "../Boxes/SimpleBox/SimpleBox.js";
+// import MoonPhasesLegend from "./MoonPhasesLegend.jsx";
 
 const StickyAdLazy = lazy(() => import("../AdvModule/StickyAd.js"));
 
@@ -214,6 +218,9 @@ export default function Calendar(props) {
                         strongClass: item.strongClass,
                         mainClass: item.mainClass,
                       })}
+                      {getMoonPhaseForDate(item.date) && (
+                        <MoonPhaseIcon phase={getMoonPhaseForDate(item.date)} />
+                      )}
                     </div>
                   </td>
                   <td>{cyr(`${item.post}`)}</td>
@@ -235,7 +242,19 @@ export default function Calendar(props) {
           </div>
         ))}
       </div>
-
+      {/* <MoonPhasesLegend /> */}
+      <SimpleBox
+        as="section"
+        classes="moonLegend"
+        mainTitle="Mesečeve mene — oznake"
+        mainBody={[
+          "◑ Poslednja četvrt",
+          "● Mlad mesec (mladina)",
+          "◐ Prva četvrt",
+          "○ Pun mesec (uštap)",
+        ]}
+        mainBody2="* Oznaka pored datuma u kalendaru pokazuje koja mesečeva mena tog dana nastupa."
+      />
       <Suspense fallback={<div></div>}>
         <StickyAdLazy slotNumber={"div-gpt-ad-1768472077826-0"} />
       </Suspense>
