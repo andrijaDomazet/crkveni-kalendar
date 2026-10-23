@@ -82,7 +82,10 @@ export default function Home() {
           <Suspense fallback={<div></div>}>
             <CalendarMonthsLinksLazy />
           </Suspense>
-          <div className="banner-wrapper fix-size-horizontal">
+          <div
+            className="banner-wrapper"
+            // style={{ border: "1px solid red" }}
+          >
             <AdManagerSlot slotNumber={"div-gpt-ad-1750409157804-0"} />
           </div>
 
