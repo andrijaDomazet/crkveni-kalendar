@@ -1,5 +1,6 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Disallow: /23098387262/
+Disallow: /cdn-cgi/
 
 Sitemap: https://crkveni-kalendar.net/sitemap.xml
