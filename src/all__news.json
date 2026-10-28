@@ -1,5 +1,63 @@
 [
   {
+    "news_id": 4,
+    "type": "praznik",
+    "published": true,
+    "time2": "2026-10-28T09:30:00.000Z",
+    "category": "Praznici",
+    "pics": [
+      "https://res.cloudinary.com/dvi29tcsc/image/upload/v1730386381/agroweb/Apostol-Sveti-Luka-Evandjelista-ikona-Apostle-Saint-Luke-icon_eu7xaj.jpg",
+      "spc.rs"
+    ],
+    "title": "Lučindan",
+    "title_2": "Lučindan 2026 — Sveti apostol i jevanđelista Luka",
+    "lead": "Kada je Lučindan 2026? Srpska pravoslavna crkva praznuje Svetog apostola i jevanđelistu Luku 31. oktobra. Poznat i kao Sveti Luka, ovaj praznik jedna je od čestih krsnih slava u Srbiji, a u narodnoj tradiciji povezuje se sa lekarima, ikonopiscima i dolaskom zime.",
+    "body": [
+      {
+        "subtitle": "Kada je Lučindan i zašto se slavi",
+        "text": "Lučindan se svake godine obeležava 31. oktobra po gregorijanskom, odnosno 18. oktobra po julijanskom kalendaru. Godine 2026. pada u subotu. Praznik je posvećen Svetom apostolu i jevanđelisti Luki, jednom od značajnih ličnosti ranog hrišćanstva i autoru trećeg Jevanđelja Novog zaveta. Lučindan je i jedna od čestih krsnih slava u srpskom narodu, kada porodice u svojim domovima obeležavaju uspomenu na ovog svetitelja.",
+        "textQuote": "Detaljan pregled svih pravoslavnih praznika po mesecima možete pronaći na <a href=\"https://crkveni-kalendar.net/2026/\">stranici crkvenog kalendara za 2026. godinu</a>."
+      },
+      {
+        "subtitle": "Ko je bio Sveti Luka",
+        "text": "Sveti apostol i jevanđelista Luka, prema hrišćanskom predanju, bio je poreklom iz Antiohije i po zanimanju lekar. Bio je blizak saradnik apostola Pavla i pratio ga na misionarskim putovanjima, pomažući u širenju hrišćanske vere. Smatra se autorom Jevanđelja po Luki i Dela apostolskih, knjige koja opisuje život prve hrišćanske zajednice i širenje Hristove nauke nakon Vaskrsenja. Njegovo Jevanđelje posebno naglašava milosrđe, praštanje i brigu o ljudima koji su na margini društva. Prema predanju, Sveti Luka je doživeo duboku starost i mučenički postradao zbog svoje vere."
+      },
+      {
+        "subtitle": "Sveti Luka — zaštitnik lekara i ikonopisaca",
+        "text": "Sveti Luka se poštuje kao zaštitnik lekara, farmaceuta, bolnica i apoteka, što se povezuje sa njegovim lekarskim pozivom. U hrišćanskom predanju smatra se i prvim ikonopiscem. Veruje se da je naslikao ikone Presvete Bogorodice sa Hristom, kao i ikone apostola Petra i Pavla. Zbog toga ga posebno poštuju ikonopisci, slikari i drugi umetnici. Njegov lik često se prikazuje sa knjigom ili svitkom, kao simbolom Jevanđelja koje je napisao. Veza Svetog Luke sa medicinom i umetnošću učinila ga je svetiteljem kojem se obraćaju i ljudi koji se bave ovim zanimanjima."
+      },
+      {
+        "subtitle": "Lučindan u narodnoj tradiciji",
+        "text": "U srpskom narodu Lučindan se povezuje sa približavanjem zime i promenama vremena. O tome govore i poznate narodne izreke: <ul><li>„Ide Luka, eto vuka“ — izreka koja podseća na dolazak hladnijih dana i vreme kada su vukovi, prema nekadašnjem seoskom iskustvu, češće prilazili naseljima.</li><li>„Sveti Luka, sneg do kuka“ — narodna izreka kojom se najavljuju zimske padavine i hladnoća.</li></ul>Ove izreke deo su narodnog kalendara, u kojem su se praznici koristili kao orijentir za praćenje godišnjih doba i pripremu za zimu."
+      },
+      {
+        "subtitle": "Običaji i verovanja na Lučindan",
+        "text": "U pojedinim krajevima Srbije sačuvani su običaji koji se vezuju za Lučindan. Prema narodnom verovanju, na ovaj dan su se torovi i obori simbolično opasivali koncem kako bi se stoka zaštitila od vukova. U nekim mestima pažnja se obraćala i na prvog gosta koji uđe u kuću, jer se verovalo da njegov dolazak može nagovestiti kakva će biti predstojeća zima ili godina. U narodu se takođe savetovalo da se praznik provede mirno, bez svađe i nervoze. Ovi običaji razlikuju se od kraja do kraja i predstavljaju deo lokalne tradicije, a ne obavezna crkvena pravila."
+      },
+      {
+        "subtitle": "Kako se obeležava Lučindan kao krsna slava",
+        "text": "Porodice kojima je Sveti Luka krsna slava obeležavaju praznik molitvom, okupljanjem ukućana i gostiju i tradicionalnim slavskim obredom. Uobičajeni slavski darovi su slavski kolač, žito, sveća i vino. Sveštenik, kada je prisutan, osvećuje slavske darove i obavlja obred lomljenja kolača. Suština slave nije u bogatoj trpezi, već u molitvi, zahvalnosti i okupljanju porodice oko svetitelja kojeg dom poštuje kao svog zaštitnika. Lučindan 2026. godine pada u subotu, pa se slava po uobičajenim pravilima ne posti. Kada praznik padne u sredu ili petak, primenjuju se pravila posta."
+      },
+      {
+        "subtitle": "Lučindan i priprema za zimu",
+        "text": "U tradicionalnom seoskom životu kraj oktobra bio je vreme kada su se privodili kraju pojedini poljoprivredni radovi i pripremali domovi, stoka i zalihe za hladnije mesece. Zato se Lučindan u narodnom kalendaru našao među praznicima koji podsećaju na dolazak zime. Izreke o vukovima i snegu sačuvane su kao trag vremena kada su ljudi vremenske prilike pažljivo pratili kroz prirodu, ponašanje životinja i iskustva prethodnih generacija. Iako one nisu pouzdana meteorološka prognoza, ostale su prepoznatljiv deo srpske narodne tradicije."
+      }
+    ],
+    "tags": [
+      "Lučindan",
+      "Sveti Luka",
+      "Sveti apostol i jevanđelista Luka",
+      "Krsna slava",
+      "Pravoslavni praznici",
+      "Oktobarski praznici",
+      "Narodni običaji",
+      "Narodna verovanja",
+      "Crkveni kalendar"
+    ],
+    "source": "crkveni-kalendar",
+    "page_view": 0
+  },
+  {
     "news_id": 3,
     "type": "praznik",
     "published": true,

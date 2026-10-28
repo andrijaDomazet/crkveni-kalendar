@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import { blackDays } from "../components/Calendar/calendar-data/calendar-data";
-import { monthSerb } from "./shared";
 import { useScriptContext } from "./ScriptProvider";
 
 export function urlTitle2(title) {
@@ -81,9 +80,6 @@ export function renderTitleSection({
   );
 }
 
-// export const getPreUrlTitle = (item) => {
-//   return `/${item.category}/${urlTitle2(item.title)}/`;
-// };
 export const getPreUrlTitle = (item) => {
   return `/${urlTitle2(item.category)}/${urlTitle2(item.title)}/`;
 };

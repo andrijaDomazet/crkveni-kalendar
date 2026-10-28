@@ -21,8 +21,10 @@ export const nextHolidays = [
   // ["12. oktobar", "Miholjdan"],
   // ["19. oktobar", "Tomindan"],
   // ["20. oktobar", "Srđevdan"],
-  ["27. oktobar", "Sveta Petka"],
-  ["31. oktobar", "Sveti Luka"],
+  // ["27. oktobar", "Sveta Petka"],
+  ["31. oktobar", "Sveti Luka", "/praznici/lucindan/"],
   ["1. novembar", "Sveti Prohor Pčinjski"],
-  ["8. novembar", "Sveti Mitrovdan"],
+  ["8. novembar", "Mitrovdan"],
+  ["14. novembar", "Vračevi"],
+  ["16. novembar", "Đurđic"],
 ];
