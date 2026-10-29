@@ -1,71 +1,140 @@
-[{
-  "news_id": 5,
-  "type": "praznik",
-  "published": true,
-  "time2": "2026-10-28T09:30:00.000Z",
-  "category": "Praznici",
-  "pics": [
-    "https://res.cloudinary.com/dvi29tcsc/image/upload/v1731060569/agroweb/mitrovdan_znlyje.webp",
-    "Pexels"
-  ],
-  "title": "Mitrovdan",
-  "title_2": "Mitrovdan 2026 — Sveti velikomučenik Dimitrije",
-  "lead": "Kada je Mitrovdan 2026? Srpska pravoslavna crkva praznuje Svetog velikomučenika Dimitrija 8. novembra. Mitrovdan je jedna od najčešćih krsnih slava u Srbiji, a u narodnoj tradiciji označava dolazak zime. Poznat je i po izreci „Mitrovdanak – hajdučki rastanak, Đurđevdanak – hajdučki sastanak“.",
-  "body": [
-    {
-      "subtitle": "Kada je Mitrovdan i zašto se slavi",
-      "text": "Mitrovdan se svake godine obeležava 8. novembra po gregorijanskom, odnosno 26. oktobra po julijanskom kalendaru. Godine 2026. pada u nedelju. Praznik je posvećen Svetom velikomučeniku Dimitriju Solunskom, jednom od poštovanih hrišćanskih svetitelja i zaštitniku grada Soluna. U srpskom narodu Mitrovdan ima posebno mesto jer ga veliki broj porodica obeležava kao krsnu slavu. U crkvenom kalendaru označen je crvenim slovom.",
-      "textQuote": "Detaljan pregled svih pravoslavnih praznika po mesecima možete pronaći na <a href=\"https://crkveni-kalendar.net/2026/\">stranici crkvenog kalendara za 2026. godinu</a>."
-    },
-    {
-      "subtitle": "Ko je bio Sveti Dimitrije",
-      "text": "Sveti velikomučenik Dimitrije, poznat kao Dimitrije Solunski, prema hrišćanskom predanju rođen je u Solunu, u uglednoj porodici koja je tajno ispovedala hrišćansku veru. Živeo je krajem trećeg i početkom četvrtog veka, u vreme kada su hrišćani bili izloženi progonima Rimskog carstva. Nakon smrti svog oca, koji je bio upravitelj Soluna, Dimitrije je postavljen na njegov položaj. Međutim, umesto da progoni hrišćane, kako je od njega zahtevano, otvoreno je ispovedao svoju veru i propovedao hrišćanstvo. Zbog toga je, prema predanju, zatvoren po naređenju cara Maksimijana. Stradao je oko 306. godine, kada su ga rimski vojnici ubili kopljima u tamnici. Hrišćani su njegovo telo sahranili, a sećanje na njegovu veru i stradanje sačuvalo se kroz vekove."
-    },
-    {
-      "subtitle": "Sveti Dimitrije Mirotočivi — zaštitnik Soluna",
-      "text": "Sveti Dimitrije poznat je i pod imenom Mirotočivi. Prema crkvenom predanju, iz njegovih moštiju poteklo je miro, mirisno ulje kojem se u hrišćanskoj tradiciji pripisuje posebno duhovno značenje. Nad njegovim grobom u Solunu podignuta je crkva koja je postala važno mesto hodočašća. Sveti Dimitrije smatra se nebeskim zaštitnikom Soluna, a predanja govore o njegovoj pomoći stanovnicima grada tokom ratova, zemljotresa i drugih nesreća. Njegov kult proširio se širom pravoslavnog sveta, a posebno se poštuje u Grčkoj, Srbiji i Rusiji. Na ikonama se najčešće prikazuje kao vojnik, u skladu sa predanjem o njegovom položaju u Solunu."
-    },
-    {
-      "subtitle": "Mitrovdan kao krsna slava",
-      "text": "Mitrovdan je jedna od poznatih srpskih krsnih slava i obeležava se u mnogim porodicama širom Srbije. Kao i kod drugih krsnih slava, centralno mesto zauzimaju molitva, slavski kolač, žito, sveća i vino. U domu domaćina okupljaju se članovi porodice, rodbina i prijatelji kako bi zajedno obeležili praznik i odali poštovanje svetitelju zaštitniku. Slavski kolač i žito pripremaju se u skladu sa porodičnim i crkvenim običajima, dok se slavski obred obavlja uz blagoslov sveštenika. Suština krsne slave nije u bogatoj trpezi, već u veri, zahvalnosti i očuvanju porodične tradicije. Mitrovdan 2026. godine pada u nedelju i tog dana se ne posti, prema uobičajenom crkvenom kalendaru."
-    },
-    {
-      "subtitle": "Mitrovdan i dolazak zime",
-      "text": "U narodnom kalendaru Mitrovdan se smatra važnom prekretnicom između jeseni i zime. Nekadašnji način života na selu bio je tesno povezan sa promenama godišnjih doba, pa se ovaj praznik uzimao kao orijentir za završetak poljskih radova i pripremu za hladnije mesece. Verovalo se da do Mitrovdana treba završiti veće poslove na otvorenom, pripremiti ogrev i obezbediti dovoljno hrane za domaćinstvo i stoku. U pojedinim krajevima postojao je običaj da se na ovaj dan ne započinju veliki poslovi, već da se vreme provede u domu i sa porodicom. Ova verovanja razlikuju se od mesta do mesta i predstavljaju deo narodnog nasleđa."
-    },
-    {
-      "subtitle": "Narodne izreke i verovanja za Mitrovdan",
-      "text": "Mitrovdan prati više poznatih narodnih izreka koje su nastale iz nekadašnjeg seoskog života i posmatranja prirode. Među najpoznatijima su:<ul><li>„Mitrovdanak – hajdučki rastanak, Đurđevdanak – hajdučki sastanak“ — izreka koja se povezuje sa predanjem da su se hajduci u jesen razilazili i sklanjali kod svojih jataka, a na proleće ponovo okupljali.</li><li>„Ako na Mitrovdan padne sneg, zadržaće se do aprila“ — narodno verovanje koje povezuje prve snežne padavine sa dužinom zime.</li><li>Prema nekim verovanjima, lepo vreme na Mitrovdan najavljivalo je blažu zimu, dok se hladno i kišovito vreme smatralo nagoveštajem oštrijih zimskih dana.</li></ul>Ove izreke deo su tradicionalnog narodnog kalendara. One odražavaju iskustva i verovanja prethodnih generacija, ali nisu pouzdan način za predviđanje vremena."
-    },
-    {
-      "subtitle": "Običaji na Mitrovdan",
-      "text": "U različitim delovima Srbije sačuvani su običaji povezani sa Mitrovdanom. Prema tradicionalnom verovanju, do ovog praznika trebalo je završiti veće poslove u polju i pripremiti domaćinstvo za zimu. U pojedinim krajevima vodilo se računa o tome da se na praznik ne započinju teški poslovi, dok se posebna pažnja posvećivala porodici, kući i stoci. Postoje i narodna verovanja o tome da se na Mitrovdan ne valja svađati niti prekorevati decu, jer se smatralo da ponašanje na praznik može simbolično uticati na ostatak godine. Ovakvi običaji nisu crkvene zapovesti i ne praktikuju se jednako u svim krajevima."
-    },
-    {
-      "subtitle": "Mitrovske zadušnice — pomen upokojenima",
-      "text": "U crkvenom kalendaru jesenje, odnosno Mitrovske zadušnice, padaju u subotu uoči Mitrovdana. Godine 2026. obeležavaju se 7. novembra, dan pre praznika Svetog Dimitrija. To je dan kada se vernici u molitvi sećaju svojih preminulih srodnika i drugih upokojenih. Uobičajeno je da se odlazi na groblje, pale sveće i uređuju grobna mesta, a u crkvama se služe pomeni. Porodice u skladu sa svojim mogućnostima i lokalnim običajima pripremaju hranu za pomen i daju priloge za pokoj duša preminulih. Suština Zadušnica jeste molitveno sećanje na upokojene, a ne samo održavanje spoljašnjih običaja."
-    },
-    {
-      "subtitle": "Mitrovdan i gradovi koji nose ime svetitelja",
-      "text": "Poštovanje Svetog Dimitrija ostavilo je trag i u imenima gradova. Sremska Mitrovica u Srbiji i Kosovska Mitrovica na Kosovu nose imena povezana sa ovim svetiteljem. Njegov kult vekovima je prisutan u pravoslavnom svetu, a hramovi posvećeni Svetom Dimitriju nalaze se u brojnim mestima. Među značajnim svetinjama povezanim sa njegovim kultom nalazi se velika crkva Svetog Dimitrija u Solunu, u kojoj se čuvaju njegove mošti. Praznik tako povezuje versku tradiciju, istoriju i kulturno nasleđe različitih naroda."
-    }
-  ],
-  "tags": [
-    "Mitrovdan",
-    "Sveti Dimitrije",
-    "Sveti velikomučenik Dimitrije",
-    "Dimitrije Solunski",
-    "Dimitrije Mirotočivi",
-    "Krsna slava",
-    "Pravoslavni praznici",
-    "Novembarski praznici",
-    "Narodni običaji",
-    "Mitrovske zadušnice",
-    "Crkveni kalendar"
-  ],
-  "source": "crkveni-kalendar",
-  "page_view": 0
-},
+[
+  {
+    "news_id": 6,
+    "type": "praznik",
+    "published": true,
+    "time2": "2026-10-29T09:30:00.000Z",
+    "category": "Praznici",
+    "pics": [
+      "https://res.cloudinary.com/dvi29tcsc/image/upload/v1732101653/agroweb/Aran%C4%91elovdan_r9zw4d.webp",
+      "spc.rs"
+    ],
+    "title": "Aranđelovdan",
+    "title_2": "Aranđelovdan 2026 — Sveti arhangel Mihailo",
+    "lead": "Kada je Aranđelovdan 2026? Srpska pravoslavna crkva praznuje Sabor Svetog arhangela Mihaila i ostalih nebeskih sila 21. novembra. Aranđelovdan je jedna od najčešćih krsnih slava u Srbiji, a posvećen je arhangelu Mihailu, predvodniku nebeske vojske i simbolu borbe protiv zla.",
+    "body": [
+      {
+        "subtitle": "Kada je Aranđelovdan i zašto se slavi",
+        "text": "Aranđelovdan se svake godine obeležava 21. novembra po gregorijanskom, odnosno 8. novembra po julijanskom kalendaru. Godine 2026. pada u subotu. Puni crkveni naziv praznika je Sabor Svetog arhangela Mihaila i ostalih nebeskih sila bestelesnih. Ovaj praznik posvećen je arhangelu Mihailu i svim anđelskim činovima koji, prema hrišćanskom učenju, služe Bogu. Aranđelovdan je jedna od najrasprostranjenijih krsnih slava u srpskom narodu i zauzima posebno mesto u porodičnoj i verskoj tradiciji. U crkvenom kalendaru obeležen je crvenim slovom.",
+        "textQuote": "Detaljan pregled svih pravoslavnih praznika po mesecima možete pronaći na <a href=\"https://crkveni-kalendar.net/2026/\">stranici crkvenog kalendara za 2026. godinu</a>."
+      },
+      {
+        "subtitle": "Ko je Sveti arhangel Mihailo",
+        "text": "Sveti arhangel Mihailo u hrišćanskoj tradiciji poznat je kao arhistratig, odnosno predvodnik nebeskih sila. Njegovo ime potiče iz hebrejskog jezika i znači „Ko je kao Bog?“. Prema biblijskom predanju, Mihailo je predvodio anđele koji su ostali verni Bogu u borbi protiv sila zla. U Knjizi Otkrivenja opisuje se sukob Mihaila i njegovih anđela sa aždajom i njenim anđelima. Zbog toga se arhangel Mihailo u hrišćanskoj umetnosti prikazuje kao nebeski ratnik koji simbolizuje vernost Bogu, pravdu i pobedu dobra nad zlom. Vernici mu se u molitvama obraćaju tražeći duhovnu snagu, zaštitu i pomoć u teškim trenucima."
+      },
+      {
+        "subtitle": "Sabor svetih anđela i značaj praznika",
+        "text": "Aranđelovdan nije posvećen samo arhangelu Mihailu, već i saboru svih nebeskih sila bestelesnih. Prema hrišćanskom učenju, anđeli su duhovna bića koja služe Bogu i izvršavaju Njegovu volju. U crkvenoj tradiciji razlikuju se anđeli, arhanđeli i drugi anđelski činovi. Među arhanđelima se posebno poštuje i Gavrilo, poznat kao Božji vesnik koji je Presvetoj Bogorodici najavio rođenje Isusa Hrista. Praznik podseća vernike na duhovnu borbu između dobra i zla, ali i na značaj vere, poslušnosti Bogu i činjenja dobrih dela. Crkva je ustanovila posebno praznovanje nebeskih sila kako bi se njihovo poštovanje razlikovalo od obožavanja koje pripada jedino Bogu."
+      },
+      {
+        "subtitle": "Arhangel Mihailo na ikonama",
+        "text": "Na pravoslavnim ikonama arhangel Mihailo najčešće je prikazan kao krilati ratnik u vojničkoj odeći, sa mačem ili kopljem u ruci. Ovakav prikaz simbolizuje njegovu ulogu predvodnika nebeskih sila u borbi protiv zla. Na pojedinim ikonama prikazan je kako pobeđuje đavola ili stoji iznad poraženih sila tame. U drugim predstavama može se videti sa vagom, koja simbolizuje pravdu i vezuje se za predstave Strašnog suda. Ikone arhangela Mihaila zauzimaju značajno mesto u pravoslavnim domovima, naročito kod porodica koje ga slave kao krsnog zaštitnika. Njegov lik podseća vernike na istrajnost u veri, hrabrost i odgovornost za sopstvene postupke."
+      },
+      {
+        "subtitle": "Aranđelovdan kao krsna slava",
+        "text": "Aranđelovdan je jedna od najčešćih krsnih slava u Srbiji. Porodice koje slave Svetog arhangela Mihaila okupljaju se kako bi molitvom i tradicionalnim slavskim obredom obeležile praznik. Uobičajeni slavski darovi su slavski kolač, žito, sveća i vino. Slavski kolač se, prema običaju, osvećuje i lomi uz molitvu, najčešće u prisustvu sveštenika. Slavsko žito priprema se i za Aranđelovdan, kao i za druge krsne slave, u spomen na preminule pretke i u znak nade u vaskrsenje. Iako se u pojedinim krajevima ranije verovalo da žito nije potrebno za slavu Svetog arhangela Mihaila, crkvena praksa ne podržava njegovo izostavljanje samo zbog toga što je svetitelj anđeo. Suština slave je u molitvi, zahvalnosti Bogu i očuvanju porodične tradicije, a ne samo u svečanoj trpezi."
+      },
+      {
+        "subtitle": "Da li se na Aranđelovdan posti",
+        "text": "Aranđelovdan 2026. godine pada u subotu, 21. novembra, pa se tog dana ne posti. Slavska trpeza je mrsna, jer praznik nije u višednevnom postu, a ne pada ni u sredu ni u petak. Pravilo se menja od godine do godine: ako Aranđelovdan padne u sredu ili petak, odnosno tokom višednevnog posta, priprema se posna trpeza u skladu sa crkvenim pravilima. Zbog toga je važno proveriti kalendar za konkretnu godinu, umesto da se svake godine primenjuje isto pravilo. Porodice koje žele da usklade slavske običaje sa crkvenom praksom mogu se posavetovati sa svojim parohijskim sveštenikom."
+      },
+      {
+        "subtitle": "Narodni običaji i verovanja za Aranđelovdan",
+        "text": "U srpskom narodu sačuvana su brojna verovanja povezana sa Aranđelovdanom. U pojedinim krajevima smatralo se da vremenske prilike na ovaj praznik nagoveštavaju kakva će biti zima i proleće. Odatle potiče i narodno verovanje da lepo ili hladno vreme na Aranđelovdan može da nagovesti karakter narednih meseci. U nekim krajevima arhangel Mihailo poštuje se i kao zaštitnik stočara, pa su se praznik i običaji povezivali sa brigom o stoci i pripremom domaćinstva za zimu. Postoje i predanja prema kojima arhangel Mihailo pomaže ljudima u nevolji i štiti ih od zla. Ova verovanja razlikuju se od mesta do mesta i deo su narodne tradicije, a ne obavezna crkvena pravila."
+      },
+      {
+        "subtitle": "Narodna izreka o vremenu na Aranđelovdan",
+        "text": "Jedno od poznatih narodnih verovanja glasi: „Kakvo je vreme na Aranđelovdan, tako će biti tokom cele zime i proleća“. U prošlosti su ljudi pažljivo posmatrali vremenske prilike na velike praznike i povezivali ih sa promenama godišnjih doba. Takva zapažanja bila su deo narodnog kalendara, naročito u seoskim sredinama u kojima su poljoprivreda i stočarstvo zavisili od vremenskih uslova. Ipak, ova izreka predstavlja narodno verovanje i ne može se koristiti kao pouzdana meteorološka prognoza. Danas Aranđelovdan pre svega ostaje važan verski praznik i prilika za porodično okupljanje, molitvu i očuvanje tradicije."
+      },
+      {
+        "subtitle": "Aranđelovdan i početak zime",
+        "text": "Aranđelovdan se praznuje u drugoj polovini novembra, u periodu kada se priroda priprema za zimu. U tradicionalnom seoskom životu to je bilo vreme završetka jesenjih poslova, pripreme ogreva i obezbeđivanja hrane za domaćinstvo i stoku. Praznici u ovom periodu često su imali i praktičnu ulogu u narodnom kalendaru, jer su ljudima služili kao orijentir za smenu godišnjih doba. Zbog toga su se uz Aranđelovdan razvila različita lokalna verovanja o vremenu i nastupajućoj zimi. Danas se praznik najčešće obeležava liturgijom, porodičnim okupljanjem i slavskim obredom, dok se stari običaji čuvaju u meri u kojoj ih porodice i lokalne zajednice neguju."
+      }
+    ],
+    "tags": [
+      "Aranđelovdan",
+      "Sveti arhangel Mihailo",
+      "Sabor Svetog arhangela Mihaila",
+      "Nebeske sile bestelesne",
+      "Krsna slava",
+      "Pravoslavni praznici",
+      "Novembarski praznici",
+      "Narodni običaji",
+      "Narodna verovanja",
+      "Slavski običaji",
+      "Crkveni kalendar"
+    ],
+    "source": "crkveni-kalendar",
+    "page_view": 0
+  },
+  {
+    "news_id": 5,
+    "type": "praznik",
+    "published": true,
+    "time2": "2026-10-28T09:30:00.000Z",
+    "category": "Praznici",
+    "pics": [
+      "https://res.cloudinary.com/dvi29tcsc/image/upload/v1731060569/agroweb/mitrovdan_znlyje.webp",
+      "Pexels"
+    ],
+    "title": "Mitrovdan",
+    "title_2": "Mitrovdan 2026 — Sveti velikomučenik Dimitrije",
+    "lead": "Kada je Mitrovdan 2026? Srpska pravoslavna crkva praznuje Svetog velikomučenika Dimitrija 8. novembra. Mitrovdan je jedna od najčešćih krsnih slava u Srbiji, a u narodnoj tradiciji označava dolazak zime. Poznat je i po izreci „Mitrovdanak – hajdučki rastanak, Đurđevdanak – hajdučki sastanak“.",
+    "body": [
+      {
+        "subtitle": "Kada je Mitrovdan i zašto se slavi",
+        "text": "Mitrovdan se svake godine obeležava 8. novembra po gregorijanskom, odnosno 26. oktobra po julijanskom kalendaru. Godine 2026. pada u nedelju. Praznik je posvećen Svetom velikomučeniku Dimitriju Solunskom, jednom od poštovanih hrišćanskih svetitelja i zaštitniku grada Soluna. U srpskom narodu Mitrovdan ima posebno mesto jer ga veliki broj porodica obeležava kao krsnu slavu. U crkvenom kalendaru označen je crvenim slovom.",
+        "textQuote": "Detaljan pregled svih pravoslavnih praznika po mesecima možete pronaći na <a href=\"https://crkveni-kalendar.net/2026/\">stranici crkvenog kalendara za 2026. godinu</a>."
+      },
+      {
+        "subtitle": "Ko je bio Sveti Dimitrije",
+        "text": "Sveti velikomučenik Dimitrije, poznat kao Dimitrije Solunski, prema hrišćanskom predanju rođen je u Solunu, u uglednoj porodici koja je tajno ispovedala hrišćansku veru. Živeo je krajem trećeg i početkom četvrtog veka, u vreme kada su hrišćani bili izloženi progonima Rimskog carstva. Nakon smrti svog oca, koji je bio upravitelj Soluna, Dimitrije je postavljen na njegov položaj. Međutim, umesto da progoni hrišćane, kako je od njega zahtevano, otvoreno je ispovedao svoju veru i propovedao hrišćanstvo. Zbog toga je, prema predanju, zatvoren po naređenju cara Maksimijana. Stradao je oko 306. godine, kada su ga rimski vojnici ubili kopljima u tamnici. Hrišćani su njegovo telo sahranili, a sećanje na njegovu veru i stradanje sačuvalo se kroz vekove."
+      },
+      {
+        "subtitle": "Sveti Dimitrije Mirotočivi — zaštitnik Soluna",
+        "text": "Sveti Dimitrije poznat je i pod imenom Mirotočivi. Prema crkvenom predanju, iz njegovih moštiju poteklo je miro, mirisno ulje kojem se u hrišćanskoj tradiciji pripisuje posebno duhovno značenje. Nad njegovim grobom u Solunu podignuta je crkva koja je postala važno mesto hodočašća. Sveti Dimitrije smatra se nebeskim zaštitnikom Soluna, a predanja govore o njegovoj pomoći stanovnicima grada tokom ratova, zemljotresa i drugih nesreća. Njegov kult proširio se širom pravoslavnog sveta, a posebno se poštuje u Grčkoj, Srbiji i Rusiji. Na ikonama se najčešće prikazuje kao vojnik, u skladu sa predanjem o njegovom položaju u Solunu."
+      },
+      {
+        "subtitle": "Mitrovdan kao krsna slava",
+        "text": "Mitrovdan je jedna od poznatih srpskih krsnih slava i obeležava se u mnogim porodicama širom Srbije. Kao i kod drugih krsnih slava, centralno mesto zauzimaju molitva, slavski kolač, žito, sveća i vino. U domu domaćina okupljaju se članovi porodice, rodbina i prijatelji kako bi zajedno obeležili praznik i odali poštovanje svetitelju zaštitniku. Slavski kolač i žito pripremaju se u skladu sa porodičnim i crkvenim običajima, dok se slavski obred obavlja uz blagoslov sveštenika. Suština krsne slave nije u bogatoj trpezi, već u veri, zahvalnosti i očuvanju porodične tradicije. Mitrovdan 2026. godine pada u nedelju i tog dana se ne posti, prema uobičajenom crkvenom kalendaru."
+      },
+      {
+        "subtitle": "Mitrovdan i dolazak zime",
+        "text": "U narodnom kalendaru Mitrovdan se smatra važnom prekretnicom između jeseni i zime. Nekadašnji način života na selu bio je tesno povezan sa promenama godišnjih doba, pa se ovaj praznik uzimao kao orijentir za završetak poljskih radova i pripremu za hladnije mesece. Verovalo se da do Mitrovdana treba završiti veće poslove na otvorenom, pripremiti ogrev i obezbediti dovoljno hrane za domaćinstvo i stoku. U pojedinim krajevima postojao je običaj da se na ovaj dan ne započinju veliki poslovi, već da se vreme provede u domu i sa porodicom. Ova verovanja razlikuju se od mesta do mesta i predstavljaju deo narodnog nasleđa."
+      },
+      {
+        "subtitle": "Narodne izreke i verovanja za Mitrovdan",
+        "text": "Mitrovdan prati više poznatih narodnih izreka koje su nastale iz nekadašnjeg seoskog života i posmatranja prirode. Među najpoznatijima su:<ul><li>„Mitrovdanak – hajdučki rastanak, Đurđevdanak – hajdučki sastanak“ — izreka koja se povezuje sa predanjem da su se hajduci u jesen razilazili i sklanjali kod svojih jataka, a na proleće ponovo okupljali.</li><li>„Ako na Mitrovdan padne sneg, zadržaće se do aprila“ — narodno verovanje koje povezuje prve snežne padavine sa dužinom zime.</li><li>Prema nekim verovanjima, lepo vreme na Mitrovdan najavljivalo je blažu zimu, dok se hladno i kišovito vreme smatralo nagoveštajem oštrijih zimskih dana.</li></ul>Ove izreke deo su tradicionalnog narodnog kalendara. One odražavaju iskustva i verovanja prethodnih generacija, ali nisu pouzdan način za predviđanje vremena."
+      },
+      {
+        "subtitle": "Običaji na Mitrovdan",
+        "text": "U različitim delovima Srbije sačuvani su običaji povezani sa Mitrovdanom. Prema tradicionalnom verovanju, do ovog praznika trebalo je završiti veće poslove u polju i pripremiti domaćinstvo za zimu. U pojedinim krajevima vodilo se računa o tome da se na praznik ne započinju teški poslovi, dok se posebna pažnja posvećivala porodici, kući i stoci. Postoje i narodna verovanja o tome da se na Mitrovdan ne valja svađati niti prekorevati decu, jer se smatralo da ponašanje na praznik može simbolično uticati na ostatak godine. Ovakvi običaji nisu crkvene zapovesti i ne praktikuju se jednako u svim krajevima."
+      },
+      {
+        "subtitle": "Mitrovske zadušnice — pomen upokojenima",
+        "text": "U crkvenom kalendaru jesenje, odnosno Mitrovske zadušnice, padaju u subotu uoči Mitrovdana. Godine 2026. obeležavaju se 7. novembra, dan pre praznika Svetog Dimitrija. To je dan kada se vernici u molitvi sećaju svojih preminulih srodnika i drugih upokojenih. Uobičajeno je da se odlazi na groblje, pale sveće i uređuju grobna mesta, a u crkvama se služe pomeni. Porodice u skladu sa svojim mogućnostima i lokalnim običajima pripremaju hranu za pomen i daju priloge za pokoj duša preminulih. Suština Zadušnica jeste molitveno sećanje na upokojene, a ne samo održavanje spoljašnjih običaja."
+      },
+      {
+        "subtitle": "Mitrovdan i gradovi koji nose ime svetitelja",
+        "text": "Poštovanje Svetog Dimitrija ostavilo je trag i u imenima gradova. Sremska Mitrovica u Srbiji i Kosovska Mitrovica na Kosovu nose imena povezana sa ovim svetiteljem. Njegov kult vekovima je prisutan u pravoslavnom svetu, a hramovi posvećeni Svetom Dimitriju nalaze se u brojnim mestima. Među značajnim svetinjama povezanim sa njegovim kultom nalazi se velika crkva Svetog Dimitrija u Solunu, u kojoj se čuvaju njegove mošti. Praznik tako povezuje versku tradiciju, istoriju i kulturno nasleđe različitih naroda."
+      }
+    ],
+    "tags": [
+      "Mitrovdan",
+      "Sveti Dimitrije",
+      "Sveti velikomučenik Dimitrije",
+      "Dimitrije Solunski",
+      "Dimitrije Mirotočivi",
+      "Krsna slava",
+      "Pravoslavni praznici",
+      "Novembarski praznici",
+      "Narodni običaji",
+      "Mitrovske zadušnice",
+      "Crkveni kalendar"
+    ],
+    "source": "crkveni-kalendar",
+    "page_view": 0
+  },
   {
     "news_id": 4,
     "type": "praznik",

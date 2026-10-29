@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import NavLink from "../../../UI/NavLink/NavLink";
 import "./NavBar.scss";
 import { options } from "../../../shared/shared";
