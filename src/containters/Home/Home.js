@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import "./Home.scss";
 // import Calendar from "../../components/Calendar/Calendar";
 import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
@@ -63,18 +64,15 @@ export default function Home() {
             )}
           </div>
           {/* <Calendar shortCal={5} soc={false} /> */}
-          <section className="calendar-2026">
-            <h2> {cyr("📅 Crkveni kalendar 2026")}</h2>
+          <section className="calendar-annual">
+            <h2> {cyr("📅 Crkveni kalendar 2027")}</h2>
             <p>
               {cyr(
-                "Sve važne datume i praznike za 2026. godinu pogledajte klikom na sledeći link:",
+                "Sve važne datume i praznike za 2027. godinu pogledajte klikom na sledeći link:",
               )}{" "}
-              <a
-                href="https://crkveni-kalendar.net/2026/"
-                title="Crkveni kalendar 2026"
-              >
-                {cyr("Crkveni kalendar za 2026. godinu")}
-              </a>
+              <Link href="/2027/" title="Crkveni kalendar 2027">
+                {cyr("Crkveni kalendar 2027 - praznici i postovi")}
+              </Link>
               .
             </p>
           </section>
@@ -82,10 +80,7 @@ export default function Home() {
           <Suspense fallback={<div></div>}>
             <CalendarMonthsLinksLazy />
           </Suspense>
-          <div
-            className="banner-wrapper"
-            // style={{ border: "1px solid red" }}
-          >
+          <div className="banner-wrapper">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750409157804-0"} />
           </div>
 
