@@ -58,7 +58,8 @@
       font-weight: 900;
       font-size: 1rem;
       color: $blue1;
-      text-decoration: none;
+      // text-decoration: none;
+        text-decoration: underline;
     }
     ul,
     ol {
@@ -119,11 +120,11 @@
         font-size: 1.35rem;
       }
       a {
-        font-size: 1.28rem;
+        font-size: 1.35rem;
 
-        &:hover {
-          text-decoration: underline;
-        }
+        // &:hover {
+        //   text-decoration: underline;
+        // }
       }
       ul,
       ol {

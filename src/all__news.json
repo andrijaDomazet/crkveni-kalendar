@@ -1,4 +1,57 @@
 [
+{
+  "news_id": 8,
+  "type": "praznik",
+  "published": "2026-11-03",
+  "time2": "2026-11-03",
+  "category": "Praznici",
+  "pics": [
+    "OVDE_UNETI_POSTOJECI_CLOUDINARY_URL",
+    "Pexels"
+  ],
+  "title": "Zimski Krstovdan",
+  "title_2": "Kada je zimski Krstovdan 2027. godine i šta se tada radi",
+  "lead": "Zimski Krstovdan obeležava se 18. januara, uoči Bogojavljenja. Ovaj dan u pravoslavnoj tradiciji posvećen je uspomeni na prve hrišćane koji su primili veru, a prate ga strogi post, osvećenje vode i brojni narodni običaji. Saznajte kada se slavi Krstovdan 2027. godine, šta ovaj praznik znači i koja se verovanja vezuju za njega.",
+  "body": [
+    {
+      "subtitle": "Kada je zimski Krstovdan 2027. godine?",
+      "text": "Zimski Krstovdan uvek se obeležava 18. januara, dan uoči Bogojavljenja. Godine 2027. pada u ponedeljak, dok se Bogojavljenje slavi 19. januara, a Sveti Jovan Krstitelj 20. januara. Ova tri datuma povezana su sa događajima koji u pravoslavnoj tradiciji imaju posebno mesto i podsećaju na krštenje Isusa Hrista u reci Jordanu. Više važnih datuma i praznika možete pronaći u <a href=\"https://crkveni-kalendar.net/2027/\">pravoslavnom crkvenom kalendaru</a>.",
+      "textQuote": "Zimski Krstovdan se obeležava 18. januara, uoči Bogojavljenja."
+    },
+    {
+      "subtitle": "Šta se slavi na zimski Krstovdan?",
+      "text": "Srpska pravoslavna crkva obeležava Krstovdan kao uspomenu na prve hrišćane koji su primili veru na početku hrišćanske propovedi. Praznik je tesno povezan sa Bogojavljenjem, kojim se proslavlja krštenje Isusa Hrista u Jordanu, i sa Svetim Jovanom Krstiteljem, koji je Hrista krstio. U crkvenoj i narodnoj tradiciji zimski Krstovdan predstavlja pripremu za veliki praznik Bogojavljenja.",
+      "textQuote": "Zimski Krstovdan prethodi Bogojavljenju i deo je prazničnog perioda posvećenog krštenju Isusa Hrista."
+    },
+    {
+      "subtitle": "Da li se posti na Krstovdan?",
+      "text": "Zimski Krstovdan je posni dan, bez obzira na dan u nedelji na koji pada. Prema uobičajenoj pravoslavnoj praksi, kada Krstovdan pada radnim danom, posti se na vodi. Za 2027. godinu, Krstovdan pada u ponedeljak, pa je predviđen post na vodi. Vernici koji imaju nedoumice u vezi sa pravilima posta mogu se posavetovati sa svojim sveštenikom. U narodu je poznata izreka: „Ko se krstom krsti, taj Krstovdan posti.“",
+      "textQuote": "Krstovdan je dan posta uoči Bogojavljenja."
+    },
+    {
+      "subtitle": "Krstovdanska vodica i osvećenje vode",
+      "text": "U pravoslavnim hramovima na Krstovdan se obavlja obred velikog osvećenja vode. Vernici nakon bogosluženja mogu poneti osvećenu vodu u svoje domove, gde se ona čuva i koristi sa poštovanjem, prema crkvenoj praksi i porodičnom običaju. Krstovdanska vodica ima posebno mesto u danima koji prethode Bogojavljenju. O osvećenju vode i bogosluženju na ovaj praznik možete pročitati i u objavi <a href=\"https://spc.rs/en/news/kalendar/8701.krstovdan.html\">Srpske pravoslavne crkve o Krstovdanu</a>."
+    },
+    {
+      "subtitle": "Običaji i narodna verovanja za zimski Krstovdan",
+      "text": "Za zimski Krstovdan vezuju se različiti narodni običaji koji se razlikuju od kraja do kraja Srbije. U pojedinim mestima veruje se da na ovaj dan treba očistiti kuću i oprati veš, dok se vremenske prilike posmatraju kao nagoveštaj vremena koje dolazi. Prema jednom narodnom verovanju, vetar koji duva na Krstovdan mogao bi da nagovesti pravac vetrova tokom godine. Postoji i verovanje da se dani od Božića do Krstovdana simbolično povezuju sa mesecima u godini koja sledi. Ova tumačenja pripadaju narodnoj tradiciji i ne predstavljaju crkvena pravila niti pouzdanu vremensku prognozu."
+    },
+    {
+      "subtitle": "Zašto je zimski Krstovdan važan?",
+      "text": "Zimski Krstovdan uvodi vernike u proslavu Bogojavljenja i podseća na značaj krštenja u hrišćanskoj veri. Za mnoge porodice to je dan molitve, uzdržanja i pripreme za jedan od velikih praznika pravoslavnog kalendara. Iako zimski Krstovdan nije obeležen crvenim slovom u kalendaru, ima svoje mesto u bogoslužbenom životu Crkve. Ne treba ga mešati sa jesenjim Krstovdanom, koji se obeležava 27. septembra i posvećen je uspomeni na pronalaženje Časnog krsta."
+    }
+  ],
+  "tags": [
+    "zimski Krstovdan",
+    "Krstovdan 2027",
+    "kada je Krstovdan",
+    "običaji za Krstovdan",
+    "post na Krstovdan",
+    "Krstovdanska vodica"
+  ],
+  "source": "crkveni-kalendar",
+  "page_view": 0
+},
   {
     "news_id": 7,
     "type": "praznik",
