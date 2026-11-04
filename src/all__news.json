@@ -1,5 +1,61 @@
 [
 {
+  "news_id": 9,
+  "type": "praznik",
+  "published": "2026-11-04",
+  "time2": "2026-11-04",
+  "category": "Praznici",
+  "pics": [
+    "https://res.cloudinary.com/dvi29tcsc/image/upload/v1734621609/agroweb/sveti_nikola_hnt5ea.webp",
+    "wikipedia"
+  ],
+  "title": "Sveti Nikola",
+  "title_2": "Sveti Nikola 2026. godine - datum, običaji i posna slavska trpeza",
+  "lead": "Sveti Nikola, poznat i kao Nikolaj Čudotvorac, jedna je od najpoštovanijih svetiteljskih ličnosti u pravoslavlju i jedna od najčešćih krsnih slava kod Srba. Nikoljdan se svake godine obeležava 19. decembra, a 2026. godine pada u subotu. Praznik se slavi tokom Božićnog posta, zbog čega je slavska trpeza posna, uz dozvoljenu ribu.",
+  "body": [
+    {
+      "subtitle": "Kada se slavi Sveti Nikola 2026. godine?",
+      "text": "Pravoslavni vernici Svetog Nikolu slave 19. decembra, odnosno 6. decembra po julijanskom kalendaru. U 2026. godini Nikoljdan pada u subotu. Praznik je u crkvenom kalendaru označen kao veliki praznik i crveno slovo. Sveti Nikola se obeležava u vreme Božićnog posta, pa se ovaj dan u mnogim srpskim domovima provodi u znaku porodičnog okupljanja, molitve i slavske tradicije. Sve važne datume i praznike možete pogledati u <a href=\"https://crkveni-kalendar.net/2026/\">pravoslavnom crkvenom kalendaru za 2026. godinu</a>.",
+      "textQuote": "Nikoljdan se svake godine obeležava 19. decembra, a 2026. godine pada u subotu."
+    },
+    {
+      "subtitle": "Ko je bio Sveti Nikola Čudotvorac?",
+      "text": "Sveti Nikolaj Mirlikijski Čudotvorac živeo je u 3. i 4. veku i bio episkop grada Mire u Likiji, na prostoru današnje Turske. U hrišćanskom predanju ostao je upamćen po dobroti, milosrđu i pomoći siromašnima, naročito onima kojima je pomoć bila najpotrebnija. Prema predanju, tajno je pomogao siromašnom čoveku i njegovim trima kćerima tako što im je ostavio novac kako bi ih spasao od velike nevolje. Zbog svoje dobrote i čuda koja mu se pripisuju, poštovan je kao zaštitnik dece, putnika, moreplovaca i svih koji se nalaze u nevolji. Njegov kult proširio se širom hrišćanskog sveta, a Nikoljdan je postao jedan od najznačajnijih praznika u pravoslavnoj tradiciji."
+    },
+    {
+      "subtitle": "Nikoljdan kao krsna slava kod Srba",
+      "text": "Sveti Nikola jedna je od najčešćih krsnih slava u Srbiji. Za mnoge porodice Nikoljdan je prilika da se okupe rođaci, prijatelji i kumovi, da se u domu upali slavska sveća i obeleži porodični svetitelj. Kao i kod drugih krsnih slava, važan deo obeležavanja čine slavski kolač, žito i vino, uz molitvu i blagoslov. Slavski kolač se uobičajeno osvećuje i lomi uz prisustvo sveštenika, u crkvi ili domu, u skladu sa porodičnim običajem i mogućnostima. Suština slave nije u bogatoj trpezi i broju gostiju, već u molitvenom sećanju na svetitelja i negovanju porodične vere i zajedništva."
+    },
+    {
+      "subtitle": "Da li se posti na Svetog Nikolu i šta se sprema za slavu?",
+      "text": "Nikoljdan uvek pada tokom Božićnog posta, zbog čega je slavska trpeza posna. Prema pravilima posta, na ovaj praznik dozvoljena je riba, pa se na slavskim stolovima često nalaze pečeni šaran, pastrmka ili druga riblja jela. Uobičajena su i posna sarma, prebranac, posne salate, posne pite i kolači pripremljeni bez namirnica životinjskog porekla. U 2026. godini Sveti Nikola pada u subotu, pa je dozvoljena riba, ulje i vino. Ipak, način posta i eventualne posebne okolnosti vernici mogu proveriti sa svojim parohijskim sveštenikom."
+    },
+    {
+      "subtitle": "Običaji i verovanja za Nikoljdan",
+      "text": "Za Nikoljdan se vezuju brojni običaji koji su se prenosili sa generacije na generaciju. U domovima koji slave Svetog Nikolu pripremaju se slavski kolač i žito, pali se slavska sveća i dočekuju gosti. U nekim krajevima Srbije postojao je običaj da se na ovaj dan daruju deca, u znak sećanja na milosrđe i dobrotu Svetog Nikole. Svetitelj se posebno poštuje među porodicama čiji su članovi povezani sa morem, putovanjima i pomorstvom, jer se smatra njihovim zaštitnikom. Običaji se razlikuju od mesta do mesta, ali im je zajednička poruka poštovanja svetitelja, pomaganja drugima i okupljanja porodice."
+    },
+    {
+      "subtitle": "Zašto se Sveti Nikola naziva Čudotvorcem?",
+      "text": "Naziv Čudotvorac vezuje se za brojna čuda koja se u crkvenom predanju pripisuju Svetom Nikolaju. Priče o njegovoj pomoći siromašnima, spasavanju ljudi u opasnosti i zaštiti nevino optuženih učinile su ga jednim od najvoljenijih svetitelja. Prema predanju, njegove molitve pomagale su i mornarima koji su se našli u opasnosti na moru, zbog čega se Sveti Nikola i danas posebno poštuje među putnicima i pomorcima. Njegove mošti prenete su u italijanski grad Bari 1087. godine, gde se i danas čuvaju u bazilici posvećenoj ovom svetitelju."
+    },
+    {
+      "subtitle": "Letnji Sveti Nikola - kada se još obeležava praznik?",
+      "text": "Pored zimskog Nikoljdana, u pravoslavnom kalendaru obeležava se i Letnji Sveti Nikola, 22. maja. Tada se proslavlja prenos moštiju Svetog Nikolaja iz Mire u Likiji u italijanski grad Bari. Iako su oba datuma posvećena istom svetitelju, decembarski Nikoljdan je mnogo zastupljeniji kao krsna slava kod srpskih porodica."
+    }
+  ],
+  "tags": [
+    "Sveti Nikola",
+    "Nikoljdan 2026",
+    "kada je Sveti Nikola",
+    "Nikoljdan običaji",
+    "posna slava",
+    "Sveti Nikolaj Čudotvorac",
+    "slavska trpeza"
+  ],
+  "source": "crkveni-kalendar",
+  "page_view": 0
+},
+{
   "news_id": 8,
   "type": "praznik",
   "published": "2026-11-03",

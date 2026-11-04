@@ -10,7 +10,7 @@ export default function PreFooter() {
   const allLinks = [
     ["Zimski Krstovdan", "/praznici/zimski-krstovdan/"],
     ["Božićni post", "/hriscanski-post/"],
-    // ["Krstovdan", "/2026/septembar/"],
+    ["Sveti Nikola", "/praznici/sveti-nikola/"],
     ["Mitrovske zadušnice", "/2026/novembar/"],
     // ["Crkveni kalendar 2027", "/2027/"],
     ["Mesečeve mene 2026", "/meseceve-mene/"],
