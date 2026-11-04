@@ -6,7 +6,7 @@ import { useRouteContext } from "../../../shared/RouteProvider";
 import { useCalendarContext } from "../../../shared/CalendarProvider";
 import { useScriptContext } from "../../../shared/ScriptProvider";
 
-export default function TodayBox({ classes = false }) {
+export default function TodayBox({ classes = "" }) {
   const { currentDate, pageYear } = useRouteContext();
   const { dayName, todayHoliday } = useCalendarContext();
   const { cyr } = useScriptContext();

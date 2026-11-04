@@ -16,13 +16,9 @@ export const RouteProvider = ({ children }) => {
   const slug = params?.godina || params?.slug;
   const id = params?.mesec || params?.id;
 
-  const [currentDate, setCurrentDate] = useState(() => {
-    // Vraća null na serveru, datum na klijentu
-    if (typeof window === "undefined") return null;
-    const d = new Date();
-    d.setHours(0, 0, 0, 0);
-    return d;
-  });
+  // Uvek null na prvom renderu (i server i klijent), da se izbegne hydration mismatch.
+  // Pravi datum se postavlja u useEffect, nakon hidratacije.
+  const [currentDate, setCurrentDate] = useState(null);
 
   useEffect(() => {
     const d = new Date();
