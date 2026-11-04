@@ -77,6 +77,8 @@
     }
   }
   .calendar-table {
+    width: 100%;
+    table-layout: fixed;
     box-shadow:
       0 10px 40px -5px rgba(139, 90, 43, 0.2),
       0 4px 16px -4px rgba(139, 90, 43, 0.15);
@@ -104,6 +106,7 @@
       th:nth-child(2),
       th:nth-child(3) {
         position: relative;
+        width: 8.5%;
         min-width: 30px;
         span {
           -webkit-transform: rotate(-90deg);
@@ -115,11 +118,14 @@
       }
 
       th:nth-child(4) {
-        width: 90%;
+        width: 60%;
         text-transform: capitalize;
       }
       th:nth-child(4) {
         font-size: 1.2rem;
+      }
+      th:nth-child(5) {
+        width: 14.5%;
       }
     }
     tbody {
@@ -197,10 +203,11 @@
           }
           .zadusniceStrong {
             font-size: 0.9rem;
-            height: 1.4rem;
+            min-height: 1.4rem;
             line-height: 1.2rem;
             background: $grey4;
             padding: 0.15rem 0.5rem;
+            white-space: normal;
           }
           strong {
             // font-size: 1.1rem;
@@ -316,6 +323,8 @@
     }
 
     .calendar-table {
+      width: auto;
+      table-layout: auto;
       border-collapse: collapse;
       thead {
         tr {
@@ -329,6 +338,7 @@
         th:nth-child(2),
         th:nth-child(3) {
           display: table-cell;
+          width: auto;
 
           span {
             line-height: 1.25rem;
@@ -339,9 +349,13 @@
           }
         }
         th:nth-child(4) {
+          width: auto;
           span {
             font-size: 1.35rem;
           }
+        }
+        th:nth-child(5) {
+          width: auto;
         }
       }
       tbody {
