@@ -42,7 +42,8 @@
 
     .simplePage-left {
       // width: calc(100% - 340px);
-      width: 800px;
+      width: 100%;
+      max-width: 800px;
       margin: 0 auto;
       // border: 1px solid red;
       h1 {

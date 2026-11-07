@@ -338,7 +338,7 @@
         th:nth-child(2),
         th:nth-child(3) {
           display: table-cell;
-          width: auto;
+          width: 70px;
 
           span {
             line-height: 1.25rem;
@@ -370,10 +370,11 @@
         }
         td:nth-child(1) {
           display: table-cell;
+          width: 70px;
           font-size: 1.15rem;
         }
         td:nth-child(2) {
-          width: 145px;
+          width: 70px;
           font-size: 1.15rem;
           line-height: 1.25rem;
           text-align: center;
@@ -381,6 +382,7 @@
         }
         td:nth-child(3) {
           display: table-cell;
+          width: 70px;
           text-transform: lowercase;
           text-align: center;
           font-size: 1rem;

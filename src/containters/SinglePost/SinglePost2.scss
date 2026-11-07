@@ -110,7 +110,8 @@
 }
 @media screen and (min-width: $medium) {
   .singlePost2 {
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
     // border: 1px solid red;
     .content {

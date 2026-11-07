@@ -56,7 +56,7 @@ export default function Home() {
             <NextMonthBox />
           </div>
           {/* <MonthBox /> */}
-          <div ref={calendarRef}>
+          <div ref={calendarRef} className="home__calendar-slot">
             {shouldLoadCalendar && (
               <Suspense fallback={<div></div>}>
                 <CalendarLazy shortCal={5} soc={false} />

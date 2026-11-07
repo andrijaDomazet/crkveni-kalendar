@@ -39,6 +39,12 @@
       .home__wrapper-center-first {
         padding: 0 0.7rem;
       }
+      // Reserves space for the lazy-mounted Calendar (it mounts only once
+      // isMobile/inViewport is resolved client-side) so its appearance
+      // doesn't push the rest of the page down and cause layout shift.
+      .home__calendar-slot {
+        min-height: 1150px;
+      }
       .home-afterZone {
         display: flex;
         flex-direction: column;
@@ -99,6 +105,11 @@
       margin: 0 auto;
       gap: 1.5rem;
     }
+  }
+}
+@media screen and (min-width: 768px) {
+  .home .home__wrapper .home__wrapper-center .home__calendar-slot {
+    min-height: 950px;
   }
 }
 @media screen and (min-width: $large) {
