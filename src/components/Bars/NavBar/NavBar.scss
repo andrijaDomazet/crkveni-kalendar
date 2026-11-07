@@ -236,6 +236,10 @@
           img {
             width: 25px;
             height: auto;
+            // Matches .nav-link's padding-bottom so the icon's visual
+            // center lines up with the other links' text, not their
+            // full (padding-included) box.
+            margin-bottom: 1rem;
           }
           .botDiv {
             display: inline;
