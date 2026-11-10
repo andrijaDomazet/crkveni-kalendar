@@ -147,7 +147,7 @@ export default function Home() {
           </section>
         </div>
         <div className="home__wrapper-left">
-          <div style={{ height: "380px" }}>
+          <div style={{ minHeight: "380px" }}>
             <TodayBox />
           </div>
 

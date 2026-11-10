@@ -28,7 +28,7 @@ export default function TodayBox({ classes = "" }) {
         <div className="corners-leftBotom"></div>
         <div className="corners-rightTop"></div>
         <div className="corners-rightBottom"></div>
-        <div>
+        <div className="today-info">
           <span className="today-day">{dayName}</span>
           <p className="today-dayNum">{todayDetails.day}</p>
           <p className="today-month">
@@ -36,7 +36,7 @@ export default function TodayBox({ classes = "" }) {
             {cyr(`${monthSerb[todayDetails.month]} ${todayDetails.year}`)}
           </p>
         </div>
-        <div>
+        <div className="today-content">
           <div className="today-center">
             <div className="line"></div>
             <svg
