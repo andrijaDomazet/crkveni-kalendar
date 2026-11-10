@@ -12,12 +12,10 @@ import { calendarYears } from "../../components/Calendar/calendar-data/calendar-
 import { useCalendarContext } from "../../shared/CalendarProvider.js";
 import { useRouteContext } from "../../shared/RouteProvider.js";
 import { useScriptContext } from "../../shared/ScriptProvider.js";
+import Zadusnice from "../../components/Boxes/Zadusnice/Zadusnice.js";
 // import ImenoslovTabela from "../../components/Boxes/Names.js";
 
 const WidgetLazy = lazy(() => import("../../UI/Widget/Widget.js"));
-const ZadusniceLazy = lazy(
-  () => import("../../components/Boxes/Zadusnice/Zadusnice.js"),
-);
 const CrossingDataLazy = lazy(
   () => import("../../components/CrossingData/CrossingData.js"),
 );
@@ -144,13 +142,11 @@ export default function SinglePost() {
 
             <div className="home__wrapper-right">
               {["slave", "meseceve-mene"].includes(pathPart[1]) && (
-                <Suspense fallback={<div></div>}>
-                  <ZadusniceLazy
-                    setYear={2026}
-                    boxTitle={`🕯 Zadušnice u ${2026}. godini`}
-                    data={calendarYears[0].item_list[yearIndex]}
-                  />
-                </Suspense>
+                <Zadusnice
+                  setYear={2026}
+                  boxTitle={`🕯 Zadušnice u ${2026}. godini`}
+                  data={calendarYears[0].item_list[yearIndex]}
+                />
               )}
               <div className="banner-wrapper xl_sticky">
                 <AdManagerSlot slotNumber={"div-gpt-ad-1750411708088-0"} />

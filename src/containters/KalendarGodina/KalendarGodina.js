@@ -8,7 +8,8 @@ import {
   monthSerb,
 } from "../../components/Calendar/calendar-data/calendar-data.js";
 import SimpleBox from "../../components/Boxes/SimpleBox/SimpleBox.js";
-// import TodayBox from "../../components/Boxes/TodayBox/TodayBox.js";
+import TodayBox from "../../components/Boxes/TodayBox/TodayBox.js";
+import Zadusnice from "../../components/Boxes/Zadusnice/Zadusnice.js";
 import { getDayMonth } from "../../shared/utility.js";
 import MidBox from "../../components/Boxes/MidBox/MidBox.js";
 import { useRouteContext } from "../../shared/RouteProvider.js";
@@ -17,10 +18,6 @@ import { useScriptContext } from "../../shared/ScriptProvider.js";
 import MoonWidgetBox from "../../UI/Widget/MoonWidgetBox.jsx";
 
 const WidgetLazy = lazy(() => import("../../UI/Widget/Widget.js"));
-const ZadusniceLazy = lazy(
-  () => import("../../components/Boxes/Zadusnice/Zadusnice.js"),
-);
-const TodayBoxLazy = lazy(() => import("../../components/Boxes/TodayBox/TodayBox.js"));
 export default function KalendarGodina() {
   const { cyr } = useScriptContext();
   const { pageYear } = useRouteContext();
@@ -85,9 +82,7 @@ export default function KalendarGodina() {
           <MoonWidgetBox layout="horizontal" /> 
         </div>
         <div className="kalendarGodina-left">
-          <Suspense fallback={<div></div>}>
-            <TodayBoxLazy />
-          </Suspense>
+          <TodayBox />
           <div className="banner-wrapper fix-size-mediumRectangle">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750930023966-0"} />
           </div>
@@ -110,13 +105,11 @@ export default function KalendarGodina() {
           />
         </div>
         <div className="kalendarGodina-right">
-          <Suspense fallback={<div></div>}>
-            <ZadusniceLazy
-              setYear={pageYear}
-              boxTitle={`🕯 Zadušnice u ${pageYear}. godini`}
-              data={calendarYears[0].item_list[yearIndex]}
-            />
-          </Suspense>
+          <Zadusnice
+            setYear={pageYear}
+            boxTitle={`🕯 Zadušnice u ${pageYear}. godini`}
+            data={calendarYears[0].item_list[yearIndex]}
+          />
           <SimpleBox
             classes="green"
             linkText={`/${pageYear}/${month}/`}

@@ -8,11 +8,9 @@ import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
 import { calendarYears } from "../../components/Calendar/calendar-data/calendar-data.js";
 import { useCalendarContext } from "../../shared/CalendarProvider.js";
 import AdRefresh from "../../components/AdvModule/AdRefresh.js";
+import Zadusnice from "../../components/Boxes/Zadusnice/Zadusnice.js";
 
 const WidgetLazy = lazy(() => import("../../UI/Widget/Widget.js"));
-const ZadusniceLazy = lazy(
-  () => import("../../components/Boxes/Zadusnice/Zadusnice.js"),
-);
 const CalendarMonthsLinksLazy = lazy(
   () => import("../../components/CalendarMonthsLinks/CalendarMonthsLinks.js"),
 );
@@ -42,13 +40,11 @@ export default function Kalendar() {
           </div> */}
         </div>
         <div className="kalendar-right">
-          <Suspense fallback={<div></div>}>
-            <ZadusniceLazy
-              setYear={calendarYears[0].item_list[yearIndex].title}
-              boxTitle={`🕯 Zadušnice u ${calendarYears[0].item_list[yearIndex].title}. godini`}
-              data={calendarYears[0].item_list[yearIndex]}
-            />
-          </Suspense>
+          <Zadusnice
+            setYear={calendarYears[0].item_list[yearIndex].title}
+            boxTitle={`🕯 Zadušnice u ${calendarYears[0].item_list[yearIndex].title}. godini`}
+            data={calendarYears[0].item_list[yearIndex]}
+          />
 
           <div className="banner-wrapper xl_sticky">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750411708088-0"} />
