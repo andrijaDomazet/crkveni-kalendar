@@ -1,113 +1,171 @@
 [
-{
-  "news_id": 9,
-  "type": "praznik",
-  "published": "2026-11-04",
-  "time2": "2026-11-04",
-  "category": "Praznici",
-  "pics": [
-    "https://res.cloudinary.com/dvi29tcsc/image/upload/v1734621609/agroweb/sveti_nikola_hnt5ea.webp",
-    "wikipedia"
-  ],
-  "title": "Sveti Nikola",
-  "title_2": "Sveti Nikola 2026. godine - datum, običaji i posna slavska trpeza",
-  "lead": "Sveti Nikola, poznat i kao Nikolaj Čudotvorac, jedna je od najpoštovanijih svetiteljskih ličnosti u pravoslavlju i jedna od najčešćih krsnih slava kod Srba. Nikoljdan se svake godine obeležava 19. decembra, a 2026. godine pada u subotu. Praznik se slavi tokom Božićnog posta, zbog čega je slavska trpeza posna, uz dozvoljenu ribu.",
-  "body": [
-    {
-      "subtitle": "Kada se slavi Sveti Nikola 2026. godine?",
-      "text": "Pravoslavni vernici Svetog Nikolu slave 19. decembra, odnosno 6. decembra po julijanskom kalendaru. U 2026. godini Nikoljdan pada u subotu. Praznik je u crkvenom kalendaru označen kao veliki praznik i crveno slovo. Sveti Nikola se obeležava u vreme Božićnog posta, pa se ovaj dan u mnogim srpskim domovima provodi u znaku porodičnog okupljanja, molitve i slavske tradicije. Sve važne datume i praznike možete pogledati u <a href=\"https://crkveni-kalendar.net/2026/\">pravoslavnom crkvenom kalendaru za 2026. godinu</a>.",
-      "textQuote": "Nikoljdan se svake godine obeležava 19. decembra, a 2026. godine pada u subotu."
-    },
-    {
-      "subtitle": "Ko je bio Sveti Nikola Čudotvorac?",
-      "text": "Sveti Nikolaj Mirlikijski Čudotvorac živeo je u 3. i 4. veku i bio episkop grada Mire u Likiji, na prostoru današnje Turske. U hrišćanskom predanju ostao je upamćen po dobroti, milosrđu i pomoći siromašnima, naročito onima kojima je pomoć bila najpotrebnija. Prema predanju, tajno je pomogao siromašnom čoveku i njegovim trima kćerima tako što im je ostavio novac kako bi ih spasao od velike nevolje. Zbog svoje dobrote i čuda koja mu se pripisuju, poštovan je kao zaštitnik dece, putnika, moreplovaca i svih koji se nalaze u nevolji. Njegov kult proširio se širom hrišćanskog sveta, a Nikoljdan je postao jedan od najznačajnijih praznika u pravoslavnoj tradiciji."
-    },
-    {
-      "subtitle": "Nikoljdan kao krsna slava kod Srba",
-      "text": "Sveti Nikola jedna je od najčešćih krsnih slava u Srbiji. Za mnoge porodice Nikoljdan je prilika da se okupe rođaci, prijatelji i kumovi, da se u domu upali slavska sveća i obeleži porodični svetitelj. Kao i kod drugih krsnih slava, važan deo obeležavanja čine slavski kolač, žito i vino, uz molitvu i blagoslov. Slavski kolač se uobičajeno osvećuje i lomi uz prisustvo sveštenika, u crkvi ili domu, u skladu sa porodičnim običajem i mogućnostima. Suština slave nije u bogatoj trpezi i broju gostiju, već u molitvenom sećanju na svetitelja i negovanju porodične vere i zajedništva."
-    },
-    {
-      "subtitle": "Da li se posti na Svetog Nikolu i šta se sprema za slavu?",
-      "text": "Nikoljdan uvek pada tokom Božićnog posta, zbog čega je slavska trpeza posna. Prema pravilima posta, na ovaj praznik dozvoljena je riba, pa se na slavskim stolovima često nalaze pečeni šaran, pastrmka ili druga riblja jela. Uobičajena su i posna sarma, prebranac, posne salate, posne pite i kolači pripremljeni bez namirnica životinjskog porekla. U 2026. godini Sveti Nikola pada u subotu, pa je dozvoljena riba, ulje i vino. Ipak, način posta i eventualne posebne okolnosti vernici mogu proveriti sa svojim parohijskim sveštenikom."
-    },
-    {
-      "subtitle": "Običaji i verovanja za Nikoljdan",
-      "text": "Za Nikoljdan se vezuju brojni običaji koji su se prenosili sa generacije na generaciju. U domovima koji slave Svetog Nikolu pripremaju se slavski kolač i žito, pali se slavska sveća i dočekuju gosti. U nekim krajevima Srbije postojao je običaj da se na ovaj dan daruju deca, u znak sećanja na milosrđe i dobrotu Svetog Nikole. Svetitelj se posebno poštuje među porodicama čiji su članovi povezani sa morem, putovanjima i pomorstvom, jer se smatra njihovim zaštitnikom. Običaji se razlikuju od mesta do mesta, ali im je zajednička poruka poštovanja svetitelja, pomaganja drugima i okupljanja porodice."
-    },
-    {
-      "subtitle": "Zašto se Sveti Nikola naziva Čudotvorcem?",
-      "text": "Naziv Čudotvorac vezuje se za brojna čuda koja se u crkvenom predanju pripisuju Svetom Nikolaju. Priče o njegovoj pomoći siromašnima, spasavanju ljudi u opasnosti i zaštiti nevino optuženih učinile su ga jednim od najvoljenijih svetitelja. Prema predanju, njegove molitve pomagale su i mornarima koji su se našli u opasnosti na moru, zbog čega se Sveti Nikola i danas posebno poštuje među putnicima i pomorcima. Njegove mošti prenete su u italijanski grad Bari 1087. godine, gde se i danas čuvaju u bazilici posvećenoj ovom svetitelju."
-    },
-    {
-      "subtitle": "Letnji Sveti Nikola - kada se još obeležava praznik?",
-      "text": "Pored zimskog Nikoljdana, u pravoslavnom kalendaru obeležava se i Letnji Sveti Nikola, 22. maja. Tada se proslavlja prenos moštiju Svetog Nikolaja iz Mire u Likiji u italijanski grad Bari. Iako su oba datuma posvećena istom svetitelju, decembarski Nikoljdan je mnogo zastupljeniji kao krsna slava kod srpskih porodica."
-    }
-  ],
-  "tags": [
-    "Sveti Nikola",
-    "Nikoljdan 2026",
-    "kada je Sveti Nikola",
-    "Nikoljdan običaji",
-    "posna slava",
-    "Sveti Nikolaj Čudotvorac",
-    "slavska trpeza"
-  ],
-  "source": "crkveni-kalendar",
-  "page_view": 0
-},
-{
-  "news_id": 8,
-  "type": "praznik",
-  "published": "2026-11-03",
-  "time2": "2026-11-03",
-  "category": "Praznici",
-  "pics": [
-    "https://media.agroweb.rs/uploads/images/krstovdan-1793718200454-1200x675.webp",
-    "spc.rs"
-  ],
-  "title": "Zimski Krstovdan",
-  "title_2": "Kada je zimski Krstovdan 2027. godine i šta se tada radi",
-  "lead": "Zimski Krstovdan obeležava se 18. januara, uoči Bogojavljenja. Ovaj dan u pravoslavnoj tradiciji posvećen je uspomeni na prve hrišćane koji su primili veru, a prate ga strogi post, osvećenje vode i brojni narodni običaji. Saznajte kada se slavi Krstovdan 2027. godine, šta ovaj praznik znači i koja se verovanja vezuju za njega.",
-  "body": [
-    {
-      "subtitle": "Kada je zimski Krstovdan 2027. godine?",
-      "text": "Zimski Krstovdan uvek se obeležava 18. januara, dan uoči Bogojavljenja. Godine 2027. pada u ponedeljak, dok se Bogojavljenje slavi 19. januara, a Sveti Jovan Krstitelj 20. januara. Ova tri datuma povezana su sa događajima koji u pravoslavnoj tradiciji imaju posebno mesto i podsećaju na krštenje Isusa Hrista u reci Jordanu. Više važnih datuma i praznika možete pronaći u <a href=\"https://crkveni-kalendar.net/2027/\">pravoslavnom crkvenom kalendaru</a>.",
-      "textQuote": "Zimski Krstovdan se obeležava 18. januara, uoči Bogojavljenja."
-    },
-    {
-      "subtitle": "Šta se slavi na zimski Krstovdan?",
-      "text": "Srpska pravoslavna crkva obeležava Krstovdan kao uspomenu na prve hrišćane koji su primili veru na početku hrišćanske propovedi. Praznik je tesno povezan sa Bogojavljenjem, kojim se proslavlja krštenje Isusa Hrista u Jordanu, i sa Svetim Jovanom Krstiteljem, koji je Hrista krstio. U crkvenoj i narodnoj tradiciji zimski Krstovdan predstavlja pripremu za veliki praznik Bogojavljenja.",
-      "textQuote": "Zimski Krstovdan prethodi Bogojavljenju i deo je prazničnog perioda posvećenog krštenju Isusa Hrista."
-    },
-    {
-      "subtitle": "Da li se posti na Krstovdan?",
-      "text": "Zimski Krstovdan je posni dan, bez obzira na dan u nedelji na koji pada. Prema uobičajenoj pravoslavnoj praksi, kada Krstovdan pada radnim danom, posti se na vodi. Za 2027. godinu, Krstovdan pada u ponedeljak, pa je predviđen post na vodi. Vernici koji imaju nedoumice u vezi sa pravilima posta mogu se posavetovati sa svojim sveštenikom. U narodu je poznata izreka: „Ko se krstom krsti, taj Krstovdan posti.“",
-      "textQuote": "Krstovdan je dan posta uoči Bogojavljenja."
-    },
-    {
-      "subtitle": "Krstovdanska vodica i osvećenje vode",
-      "text": "U pravoslavnim hramovima na Krstovdan se obavlja obred velikog osvećenja vode. Vernici nakon bogosluženja mogu poneti osvećenu vodu u svoje domove, gde se ona čuva i koristi sa poštovanjem, prema crkvenoj praksi i porodičnom običaju. Krstovdanska vodica ima posebno mesto u danima koji prethode Bogojavljenju. O osvećenju vode i bogosluženju na ovaj praznik možete pročitati i u objavi <a href=\"https://spc.rs/en/news/kalendar/8701.krstovdan.html\">Srpske pravoslavne crkve o Krstovdanu</a>."
-    },
-    {
-      "subtitle": "Običaji i narodna verovanja za zimski Krstovdan",
-      "text": "Za zimski Krstovdan vezuju se različiti narodni običaji koji se razlikuju od kraja do kraja Srbije. U pojedinim mestima veruje se da na ovaj dan treba očistiti kuću i oprati veš, dok se vremenske prilike posmatraju kao nagoveštaj vremena koje dolazi. Prema jednom narodnom verovanju, vetar koji duva na Krstovdan mogao bi da nagovesti pravac vetrova tokom godine. Postoji i verovanje da se dani od Božića do Krstovdana simbolično povezuju sa mesecima u godini koja sledi. Ova tumačenja pripadaju narodnoj tradiciji i ne predstavljaju crkvena pravila niti pouzdanu vremensku prognozu."
-    },
-    {
-      "subtitle": "Zašto je zimski Krstovdan važan?",
-      "text": "Zimski Krstovdan uvodi vernike u proslavu Bogojavljenja i podseća na značaj krštenja u hrišćanskoj veri. Za mnoge porodice to je dan molitve, uzdržanja i pripreme za jedan od velikih praznika pravoslavnog kalendara. Iako zimski Krstovdan nije obeležen crvenim slovom u kalendaru, ima svoje mesto u bogoslužbenom životu Crkve. Ne treba ga mešati sa jesenjim Krstovdanom, koji se obeležava 27. septembra i posvećen je uspomeni na pronalaženje Časnog krsta."
-    }
-  ],
-  "tags": [
-    "zimski Krstovdan",
-    "Krstovdan 2027",
-    "kada je Krstovdan",
-    "običaji za Krstovdan",
-    "post na Krstovdan",
-    "Krstovdanska vodica"
-  ],
-  "source": "crkveni-kalendar",
-  "page_view": 0
-},
+  {
+    "news_id": 10,
+    "type": "praznik",
+    "published": "2026-11-12",
+    "time2": "2026-11-12",
+    "category": "Praznici",
+    "pics": [
+      "https://media.agroweb.rs/uploads/images/alimpije-stolpnik-1794479798749.jpg",
+      "spc.rs"
+    ],
+    "title": "Prepodobni Alimpije Stolpnik",
+    "title_2": "Prepodobni Alimpije Stolpnik – datum, žitije i običaji za Alimpijevdan",
+    "lead": "Srpska pravoslavna crkva 9. decembra obeležava praznik Prepodobnog Alimpija Stolpnika, svetitelja koji je više od pola veka proveo u molitvi i podvižništvu na stubu. Alimpijevdan se u pojedinim porodicama proslavlja i kao krsna slava. Saznajte kada se slavi Sveti Alimpije 2026. godine, ko je bio ovaj svetitelj i kakva se verovanja vezuju za njegov praznik.",
+    "body": [
+      {
+        "subtitle": "Kada se slavi Sveti Alimpije Stolpnik 2026. godine?",
+        "text": "Praznik Prepodobnog Alimpija Stolpnika obeležava se 9. decembra po gregorijanskom kalendaru, odnosno 26. novembra po julijanskom. U 2026. godini Alimpijevdan pada u sredu. Ovaj dan posvećen je svetitelju koji je ostao upamćen po izuzetnoj istrajnosti u molitvi, podvižništvu i duhovnom životu. Sveti Alimpije se u pojedinim porodicama proslavlja kao krsna slava, a njegovo ime nosi i tradicionalni naziv praznika – Alimpijevdan. Ostale važne datume pravoslavnih praznika možete pronaći u <a href=\"https://crkveni-kalendar.net/2026/\">crkvenom kalendaru za 2026. godinu</a>.",
+        "textQuote": "Alimpijevdan se obeležava 9. decembra, odnosno 26. novembra po starom kalendaru."
+      },
+      {
+        "subtitle": "Ko je bio Prepodobni Alimpije Stolpnik?",
+        "text": "Prepodobni Alimpije Stolpnik rođen je u Adrijanopolju, u oblasti Paflagonije, na prostoru Male Azije. Od mladosti je bio posvećen hrišćanskoj veri, a služio je kao đakon pri episkopu Teodoru. Iako je imao mesto u crkvenoj zajednici, želeo je život posvećen molitvi, tišini i podvižništvu. Zbog toga se povukao iz grada i nastanio na napuštenom groblju, gde je, prema hrišćanskom predanju, započeo svoj neobičan podvig.",
+        "textQuote": "Sveti Alimpije je primer istrajnosti, smirenja i potpune posvećenosti molitvi."
+      },
+      {
+        "subtitle": "Zašto je dobio ime Stolpnik?",
+        "text": "Alimpije je na mestu svog podviga podigao stub, odnosno stolp, na koji se popeo i na njemu proveo 53 godine u molitvi i postu. Po tome je dobio ime Stolpnik. Živeo je izložen vremenskim prilikama, bez udobnosti uobičajenog života, posvećen duhovnom podvigu. Prema predanju, oko njegovog stuba vremenom su podignuti hram posvećen Svetoj velikomučenici Efimiji, kao i muški i ženski manastir. U ženskom manastiru živele su i njegova majka i sestra. I kada zbog bolesti više nije mogao da stoji, nastavio je svoj podvig i molitvu.",
+        "textQuote": "Prema predanju, Prepodobni Alimpije Stolpnik proveo je 53 godine na stubu."
+      },
+      {
+        "subtitle": "Čuda i poštovanje Svetog Alimpija",
+        "text": "Žitije Prepodobnog Alimpija govori o iskušenjima i teškoćama koje je podnosio tokom svog dugog podvižničkog života. Predanje opisuje kako su ga ljudi u početku izbegavali i ismevali, ali su kasnije počeli da dolaze kod njega tražeći molitvu, utehu i duhovni savet. Svetitelju se pripisuju brojna čuda, a vernici ga poštuju kao primer vere, strpljenja i nepokolebljivosti. Njegov život podseća na značaj istrajnosti u veri i onda kada se čovek suočava sa velikim iskušenjima."
+      },
+      {
+        "subtitle": "Da li se posti na Alimpijevdan?",
+        "text": "Alimpijevdan se obeležava tokom Božićnog posta, pa je ovaj praznik posan. U 2026. godini pada u sredu, kada je prema pravilima posta predviđena posna hrana pripremljena na vodi. Porodice koje slave Svetog Alimpija kao krsnu slavu trebalo bi da prilagode slavsku trpezu crkvenom kalendaru i pravilima posta. Za posebne okolnosti i eventualno ublažavanje posta vernici se mogu posavetovati sa svojim parohijskim sveštenikom."
+      },
+      {
+        "subtitle": "Običaji i narodna verovanja za Alimpijevdan",
+        "text": "Alimpijevdan se u pojedinim krajevima obeležava kao krsna slava, uz slavski kolač, žito, sveću i porodično okupljanje. Kao i za druge praznike, i za ovaj dan vezuju se lokalna narodna verovanja koja su se prenosila kroz generacije. U nekim sredinama Sveti Alimpije se povezuje sa zaštitom stoke i domaćinstva, pa su postojala verovanja da na njegov praznik ne treba uprezati stoku i opterećivati životinje. Ovi običaji nisu crkvena pravila i razlikuju se od kraja do kraja. Suština praznovanja ostaje u molitvi, poštovanju svetitelja i negovanju porodične tradicije."
+      },
+      {
+        "subtitle": "Ko još ima praznik 9. decembra?",
+        "text": "Istog dana u pravoslavnom kalendaru pominje se i Prepodobni Stilijan Paflagonski, svetitelj koji se posebno poštuje kao zaštitnik dece. U crkvenom predanju poznat je po brizi za najmlađe i pomoći roditeljima. Ipak, glavni praznik koji se 9. decembra obeležava u čast Alimpija jeste spomen Prepodobnog Alimpija Stolpnika, po kome je ovaj dan poznat i kao Alimpijevdan."
+      }
+    ],
+    "tags": [
+      "Prepodobni Alimpije Stolpnik",
+      "Alimpijevdan 2026",
+      "Sveti Alimpije",
+      "kada je Alimpijevdan",
+      "Alimpijevdan običaji",
+      "Alimpijevdan slava",
+      "post na Alimpijevdan"
+    ],
+    "source": "crkveni-kalendar",
+    "page_view": 0
+  },
+  {
+    "news_id": 9,
+    "type": "praznik",
+    "published": "2026-11-04",
+    "time2": "2026-11-04",
+    "category": "Praznici",
+    "pics": [
+      "https://res.cloudinary.com/dvi29tcsc/image/upload/v1734621609/agroweb/sveti_nikola_hnt5ea.webp",
+      "wikipedia"
+    ],
+    "title": "Sveti Nikola",
+    "title_2": "Sveti Nikola 2026. godine - datum, običaji i posna slavska trpeza",
+    "lead": "Sveti Nikola, poznat i kao Nikolaj Čudotvorac, jedna je od najpoštovanijih svetiteljskih ličnosti u pravoslavlju i jedna od najčešćih krsnih slava kod Srba. Nikoljdan se svake godine obeležava 19. decembra, a 2026. godine pada u subotu. Praznik se slavi tokom Božićnog posta, zbog čega je slavska trpeza posna, uz dozvoljenu ribu.",
+    "body": [
+      {
+        "subtitle": "Kada se slavi Sveti Nikola 2026. godine?",
+        "text": "Pravoslavni vernici Svetog Nikolu slave 19. decembra, odnosno 6. decembra po julijanskom kalendaru. U 2026. godini Nikoljdan pada u subotu. Praznik je u crkvenom kalendaru označen kao veliki praznik i crveno slovo. Sveti Nikola se obeležava u vreme Božićnog posta, pa se ovaj dan u mnogim srpskim domovima provodi u znaku porodičnog okupljanja, molitve i slavske tradicije. Sve važne datume i praznike možete pogledati u <a href=\"https://crkveni-kalendar.net/2026/\">pravoslavnom crkvenom kalendaru za 2026. godinu</a>.",
+        "textQuote": "Nikoljdan se svake godine obeležava 19. decembra, a 2026. godine pada u subotu."
+      },
+      {
+        "subtitle": "Ko je bio Sveti Nikola Čudotvorac?",
+        "text": "Sveti Nikolaj Mirlikijski Čudotvorac živeo je u 3. i 4. veku i bio episkop grada Mire u Likiji, na prostoru današnje Turske. U hrišćanskom predanju ostao je upamćen po dobroti, milosrđu i pomoći siromašnima, naročito onima kojima je pomoć bila najpotrebnija. Prema predanju, tajno je pomogao siromašnom čoveku i njegovim trima kćerima tako što im je ostavio novac kako bi ih spasao od velike nevolje. Zbog svoje dobrote i čuda koja mu se pripisuju, poštovan je kao zaštitnik dece, putnika, moreplovaca i svih koji se nalaze u nevolji. Njegov kult proširio se širom hrišćanskog sveta, a Nikoljdan je postao jedan od najznačajnijih praznika u pravoslavnoj tradiciji."
+      },
+      {
+        "subtitle": "Nikoljdan kao krsna slava kod Srba",
+        "text": "Sveti Nikola jedna je od najčešćih krsnih slava u Srbiji. Za mnoge porodice Nikoljdan je prilika da se okupe rođaci, prijatelji i kumovi, da se u domu upali slavska sveća i obeleži porodični svetitelj. Kao i kod drugih krsnih slava, važan deo obeležavanja čine slavski kolač, žito i vino, uz molitvu i blagoslov. Slavski kolač se uobičajeno osvećuje i lomi uz prisustvo sveštenika, u crkvi ili domu, u skladu sa porodičnim običajem i mogućnostima. Suština slave nije u bogatoj trpezi i broju gostiju, već u molitvenom sećanju na svetitelja i negovanju porodične vere i zajedništva."
+      },
+      {
+        "subtitle": "Da li se posti na Svetog Nikolu i šta se sprema za slavu?",
+        "text": "Nikoljdan uvek pada tokom Božićnog posta, zbog čega je slavska trpeza posna. Prema pravilima posta, na ovaj praznik dozvoljena je riba, pa se na slavskim stolovima često nalaze pečeni šaran, pastrmka ili druga riblja jela. Uobičajena su i posna sarma, prebranac, posne salate, posne pite i kolači pripremljeni bez namirnica životinjskog porekla. U 2026. godini Sveti Nikola pada u subotu, pa je dozvoljena riba, ulje i vino. Ipak, način posta i eventualne posebne okolnosti vernici mogu proveriti sa svojim parohijskim sveštenikom."
+      },
+      {
+        "subtitle": "Običaji i verovanja za Nikoljdan",
+        "text": "Za Nikoljdan se vezuju brojni običaji koji su se prenosili sa generacije na generaciju. U domovima koji slave Svetog Nikolu pripremaju se slavski kolač i žito, pali se slavska sveća i dočekuju gosti. U nekim krajevima Srbije postojao je običaj da se na ovaj dan daruju deca, u znak sećanja na milosrđe i dobrotu Svetog Nikole. Svetitelj se posebno poštuje među porodicama čiji su članovi povezani sa morem, putovanjima i pomorstvom, jer se smatra njihovim zaštitnikom. Običaji se razlikuju od mesta do mesta, ali im je zajednička poruka poštovanja svetitelja, pomaganja drugima i okupljanja porodice."
+      },
+      {
+        "subtitle": "Zašto se Sveti Nikola naziva Čudotvorcem?",
+        "text": "Naziv Čudotvorac vezuje se za brojna čuda koja se u crkvenom predanju pripisuju Svetom Nikolaju. Priče o njegovoj pomoći siromašnima, spasavanju ljudi u opasnosti i zaštiti nevino optuženih učinile su ga jednim od najvoljenijih svetitelja. Prema predanju, njegove molitve pomagale su i mornarima koji su se našli u opasnosti na moru, zbog čega se Sveti Nikola i danas posebno poštuje među putnicima i pomorcima. Njegove mošti prenete su u italijanski grad Bari 1087. godine, gde se i danas čuvaju u bazilici posvećenoj ovom svetitelju."
+      },
+      {
+        "subtitle": "Letnji Sveti Nikola - kada se još obeležava praznik?",
+        "text": "Pored zimskog Nikoljdana, u pravoslavnom kalendaru obeležava se i Letnji Sveti Nikola, 22. maja. Tada se proslavlja prenos moštiju Svetog Nikolaja iz Mire u Likiji u italijanski grad Bari. Iako su oba datuma posvećena istom svetitelju, decembarski Nikoljdan je mnogo zastupljeniji kao krsna slava kod srpskih porodica."
+      }
+    ],
+    "tags": [
+      "Sveti Nikola",
+      "Nikoljdan 2026",
+      "kada je Sveti Nikola",
+      "Nikoljdan običaji",
+      "posna slava",
+      "Sveti Nikolaj Čudotvorac",
+      "slavska trpeza"
+    ],
+    "source": "crkveni-kalendar",
+    "page_view": 0
+  },
+  {
+    "news_id": 8,
+    "type": "praznik",
+    "published": "2026-11-03",
+    "time2": "2026-11-03",
+    "category": "Praznici",
+    "pics": [
+      "https://media.agroweb.rs/uploads/images/krstovdan-1793718200454-1200x675.webp",
+      "spc.rs"
+    ],
+    "title": "Zimski Krstovdan",
+    "title_2": "Kada je zimski Krstovdan 2027. godine i šta se tada radi",
+    "lead": "Zimski Krstovdan obeležava se 18. januara, uoči Bogojavljenja. Ovaj dan u pravoslavnoj tradiciji posvećen je uspomeni na prve hrišćane koji su primili veru, a prate ga strogi post, osvećenje vode i brojni narodni običaji. Saznajte kada se slavi Krstovdan 2027. godine, šta ovaj praznik znači i koja se verovanja vezuju za njega.",
+    "body": [
+      {
+        "subtitle": "Kada je zimski Krstovdan 2027. godine?",
+        "text": "Zimski Krstovdan uvek se obeležava 18. januara, dan uoči Bogojavljenja. Godine 2027. pada u ponedeljak, dok se Bogojavljenje slavi 19. januara, a Sveti Jovan Krstitelj 20. januara. Ova tri datuma povezana su sa događajima koji u pravoslavnoj tradiciji imaju posebno mesto i podsećaju na krštenje Isusa Hrista u reci Jordanu. Više važnih datuma i praznika možete pronaći u <a href=\"https://crkveni-kalendar.net/2027/\">pravoslavnom crkvenom kalendaru</a>.",
+        "textQuote": "Zimski Krstovdan se obeležava 18. januara, uoči Bogojavljenja."
+      },
+      {
+        "subtitle": "Šta se slavi na zimski Krstovdan?",
+        "text": "Srpska pravoslavna crkva obeležava Krstovdan kao uspomenu na prve hrišćane koji su primili veru na početku hrišćanske propovedi. Praznik je tesno povezan sa Bogojavljenjem, kojim se proslavlja krštenje Isusa Hrista u Jordanu, i sa Svetim Jovanom Krstiteljem, koji je Hrista krstio. U crkvenoj i narodnoj tradiciji zimski Krstovdan predstavlja pripremu za veliki praznik Bogojavljenja.",
+        "textQuote": "Zimski Krstovdan prethodi Bogojavljenju i deo je prazničnog perioda posvećenog krštenju Isusa Hrista."
+      },
+      {
+        "subtitle": "Da li se posti na Krstovdan?",
+        "text": "Zimski Krstovdan je posni dan, bez obzira na dan u nedelji na koji pada. Prema uobičajenoj pravoslavnoj praksi, kada Krstovdan pada radnim danom, posti se na vodi. Za 2027. godinu, Krstovdan pada u ponedeljak, pa je predviđen post na vodi. Vernici koji imaju nedoumice u vezi sa pravilima posta mogu se posavetovati sa svojim sveštenikom. U narodu je poznata izreka: „Ko se krstom krsti, taj Krstovdan posti.“",
+        "textQuote": "Krstovdan je dan posta uoči Bogojavljenja."
+      },
+      {
+        "subtitle": "Krstovdanska vodica i osvećenje vode",
+        "text": "U pravoslavnim hramovima na Krstovdan se obavlja obred velikog osvećenja vode. Vernici nakon bogosluženja mogu poneti osvećenu vodu u svoje domove, gde se ona čuva i koristi sa poštovanjem, prema crkvenoj praksi i porodičnom običaju. Krstovdanska vodica ima posebno mesto u danima koji prethode Bogojavljenju. O osvećenju vode i bogosluženju na ovaj praznik možete pročitati i u objavi <a href=\"https://spc.rs/en/news/kalendar/8701.krstovdan.html\">Srpske pravoslavne crkve o Krstovdanu</a>."
+      },
+      {
+        "subtitle": "Običaji i narodna verovanja za zimski Krstovdan",
+        "text": "Za zimski Krstovdan vezuju se različiti narodni običaji koji se razlikuju od kraja do kraja Srbije. U pojedinim mestima veruje se da na ovaj dan treba očistiti kuću i oprati veš, dok se vremenske prilike posmatraju kao nagoveštaj vremena koje dolazi. Prema jednom narodnom verovanju, vetar koji duva na Krstovdan mogao bi da nagovesti pravac vetrova tokom godine. Postoji i verovanje da se dani od Božića do Krstovdana simbolično povezuju sa mesecima u godini koja sledi. Ova tumačenja pripadaju narodnoj tradiciji i ne predstavljaju crkvena pravila niti pouzdanu vremensku prognozu."
+      },
+      {
+        "subtitle": "Zašto je zimski Krstovdan važan?",
+        "text": "Zimski Krstovdan uvodi vernike u proslavu Bogojavljenja i podseća na značaj krštenja u hrišćanskoj veri. Za mnoge porodice to je dan molitve, uzdržanja i pripreme za jedan od velikih praznika pravoslavnog kalendara. Iako zimski Krstovdan nije obeležen crvenim slovom u kalendaru, ima svoje mesto u bogoslužbenom životu Crkve. Ne treba ga mešati sa jesenjim Krstovdanom, koji se obeležava 27. septembra i posvećen je uspomeni na pronalaženje Časnog krsta."
+      }
+    ],
+    "tags": [
+      "zimski Krstovdan",
+      "Krstovdan 2027",
+      "kada je Krstovdan",
+      "običaji za Krstovdan",
+      "post na Krstovdan",
+      "Krstovdanska vodica"
+    ],
+    "source": "crkveni-kalendar",
+    "page_view": 0
+  },
   {
     "news_id": 7,
     "type": "praznik",
