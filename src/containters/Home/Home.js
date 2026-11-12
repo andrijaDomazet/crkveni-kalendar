@@ -34,6 +34,8 @@ const MolitvaLazy = lazy(() => import("../../components/Molitva/Molitva.js"));
 
 export default function Home() {
   const { yearIndex } = useCalendarContext();
+  console.log("YearIndex", yearIndex);
+
   const { cyr } = useScriptContext();
   const isMobile = useIsMobile();
   const calendarRef = useRef(null);
@@ -153,8 +155,8 @@ export default function Home() {
 
           <div className="third-element">
             <Zadusnice
-              setYear={2026}
-              boxTitle={`🕯 Zadušnice u ${2026}. godini`}
+              setYear={2027}
+              boxTitle={`🕯 Zadušnice u ${2027}. godini`}
               data={calendarYears[0].item_list[yearIndex]}
             />
             {/* <Suspense fallback={<div></div>}>

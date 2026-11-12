@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+
 import "./PreFooter.scss";
 import SimpleBox from "../Boxes/SimpleBox/SimpleBox";
 import { usePathname } from "next/navigation";
@@ -11,7 +11,7 @@ export default function PreFooter() {
     ["Zimski Krstovdan", "/praznici/zimski-krstovdan/"],
     ["Božićni post", "/hriscanski-post/"],
     ["Sveti Nikola", "/praznici/sveti-nikola/"],
-    ["Mitrovske zadušnice", "/2026/novembar/"],
+    ["Zimske zadušnice", "/2027/mart/"],
     // ["Crkveni kalendar 2027", "/2027/"],
     ["Mesečeve mene 2026", "/meseceve-mene/"],
   ];
