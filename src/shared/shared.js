@@ -64,17 +64,17 @@ export const options = [
   //0
   {
     route: "/",
-    title: "Crkveni kalendar 2026 | Црквени календар 2026",
+    title: "Crkveni kalendar 2027 | Црквени календар 2027",
     social: {
-      title: "Crkveni kalendar 2026 | Црквени календар 2026",
-      lead: "Crkveni pravoslavni kalendar 2026 | Svi praznici, slave i posti u godini na jednom mestu",
+      title: "Crkveni kalendar 2027 | Црквени календар 2027",
+      lead: "Crkveni pravoslavni kalendar 2027 | Svi praznici, slave i posti u godini na jednom mestu",
       pics: "https://res.cloudinary.com/dvi29tcsc/image/upload/v1753779373/crkveniKalendar/fallBack_qgg5vz.jpg",
     },
   },
   //1
   {
-    route: "/2026/",
-    title: "Crkveni kalendar 2026",
+    route: "/2027/",
+    title: "Crkveni kalendar 2027",
     social: {
       title: "Crkveni kalendar",
       lead: "Crkveni pravoslavni kalendar | Svi praznici, slave i posti u godini na jednom mestu",
@@ -87,8 +87,8 @@ export const options = [
     },
     item_list: [
       {
-        title: "Januar 2026",
-        route: "/2026/januar/",
+        title: "Januar 2027",
+        route: "/2027/januar/",
         social: {
           title: "Običaji i tradicija",
           lead: "Najnovije vesti - Običaji i tradicija",
@@ -96,8 +96,8 @@ export const options = [
         },
       },
       {
-        title: "Februar 2026",
-        route: "/2026/februar/",
+        title: "Februar 2027",
+        route: "/2027/februar/",
         social: {
           title: "Običaji i tradicija",
           lead: "Najnovije vesti - Običaji i tradicija",
@@ -105,8 +105,8 @@ export const options = [
         },
       },
       {
-        title: "Mart 2026",
-        route: "/2026/mart/",
+        title: "Mart 2027",
+        route: "/2027/mart/",
         social: {
           title: "Običaji i tradicija",
           lead: "Najnovije vesti - Običaji i tradicija",
@@ -114,8 +114,8 @@ export const options = [
         },
       },
       {
-        title: "April 2026",
-        route: "/2026/april/",
+        title: "April 2027",
+        route: "/2027/april/",
         social: {
           title: "Običaji i tradicija",
           lead: "Najnovije vesti - Običaji i tradicija",
@@ -123,8 +123,8 @@ export const options = [
         },
       },
       {
-        title: "Maj 2026",
-        route: "/2026/maj/",
+        title: "Maj 2027",
+        route: "/2027/maj/",
         social: {
           title: "Običaji i tradicija",
           lead: "Najnovije vesti - Običaji i tradicija",
@@ -132,8 +132,8 @@ export const options = [
         },
       },
       {
-        title: "Jun 2026",
-        route: "/2026/jun/",
+        title: "Jun 2027",
+        route: "/2027/jun/",
         social: {
           title: "Običaji i tradicija",
           lead: "Najnovije vesti - Običaji i tradicija",
@@ -141,8 +141,8 @@ export const options = [
         },
       },
       {
-        title: "Jul 2026",
-        route: "/2026/jul/",
+        title: "Jul 2027",
+        route: "/2027/jul/",
         social: {
           title: "Običaji i tradicija",
           lead: "Najnovije vesti - Običaji i tradicija",
@@ -150,8 +150,8 @@ export const options = [
         },
       },
       {
-        title: "Avgust 2026",
-        route: "/2026/avgust/",
+        title: "Avgust 2027",
+        route: "/2027/avgust/",
         social: {
           title: "Običaji i tradicija",
           lead: "Najnovije vesti - Običaji i tradicija",
@@ -159,8 +159,8 @@ export const options = [
         },
       },
       {
-        title: "Septembar 2026",
-        route: "/2026/septembar/",
+        title: "Septembar 2027",
+        route: "/2027/septembar/",
         social: {
           title: "Običaji i tradicija",
           lead: "Najnovije vesti - Običaji i tradicija",
@@ -168,8 +168,8 @@ export const options = [
         },
       },
       {
-        title: "Oktobar 2026",
-        route: "/2026/oktobar/",
+        title: "Oktobar 2027",
+        route: "/2027/oktobar/",
         social: {
           title: "Običaji i tradicija",
           lead: "Najnovije vesti - Običaji i tradicija",
@@ -177,8 +177,8 @@ export const options = [
         },
       },
       {
-        title: "Novembar 2026",
-        route: "/2026/novembar/",
+        title: "Novembar 2027",
+        route: "/2027/novembar/",
         social: {
           title: "Običaji i tradicija",
           lead: "Najnovije vesti - Običaji i tradicija",
@@ -186,8 +186,8 @@ export const options = [
         },
       },
       {
-        title: "Decembar 2026",
-        route: "/2026/decembar/",
+        title: "Decembar 2027",
+        route: "/2027/decembar/",
         social: {
           title: "Običaji i tradicija",
           lead: "Najnovije vesti - Običaji i tradicija",

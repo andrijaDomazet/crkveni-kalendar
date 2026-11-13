@@ -98,17 +98,6 @@ export default function SinglePost() {
               )}
               <BodyText bodyText={isNews.body} />
               {pathPart[1] === "molitvenik" && molitveBoxes()}
-              {/* <div>
-                {pathPart[1] === "zadusnice" && (
-                  <Suspense fallback={<div></div>}>
-                    <ZadusniceLazy
-                      setYear={2026}
-                      boxTitle={`🕯 Zadušnice u ${2026}. godini`}
-                      data={calendarYears[0].item_list[yearIndex]}
-                    />
-                  </Suspense>
-                )}
-              </div> */}
               <div>
                 {pathPart[1] === "slave" && (
                   <Suspense fallback={<div></div>}>
@@ -143,8 +132,8 @@ export default function SinglePost() {
             <div className="home__wrapper-right">
               {["slave", "meseceve-mene"].includes(pathPart[1]) && (
                 <Zadusnice
-                  setYear={2026}
-                  boxTitle={`🕯 Zadušnice u ${2026}. godini`}
+                  setYear={2027}
+                  boxTitle={`🕯 Zadušnice u ${2027}. godini`}
                   data={calendarYears[0].item_list[yearIndex]}
                 />
               )}

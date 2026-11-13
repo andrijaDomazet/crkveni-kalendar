@@ -159,13 +159,6 @@ export default function Home() {
               boxTitle={`🕯 Zadušnice u ${2027}. godini`}
               data={calendarYears[0].item_list[yearIndex]}
             />
-            {/* <Suspense fallback={<div></div>}>
-              <ZadusniceLazy
-                setYear={2026}
-                boxTitle={`🕯 Zadušnice u ${2026}. godini`}
-                data={calendarYears[0].item_list[yearIndex]}
-              />
-            </Suspense> */}
             {/* <MoonWidgetBox /> */}
           </div>
           <div className="banner-wrapper fix-size-mediumRectangle">
@@ -201,18 +194,6 @@ export default function Home() {
           <div className="banner-wrapper xl_sticky">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750411708088-0"} />
           </div>
-          {/* <section className="calendar-2026">
-            <p>
-              Pregled <strong>Zadušnica za 2026. godinu</strong> dostupan je{" "}
-              <a
-                href="https://crkveni-kalendar.net/zadusnice/"
-                title="Zadušnice 2026"
-              >
-                ovde
-              </a>
-              .
-            </p>
-          </section> */}
         </div>
       </section>
       <Suspense fallback={<div></div>}>

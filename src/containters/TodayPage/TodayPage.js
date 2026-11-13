@@ -32,8 +32,8 @@ export default function TodayPage() {
       </div>
       <div>
         <Zadusnice
-          setYear={2026}
-          boxTitle={`🕯 Zadušnice u ${2026}. godini`}
+          setYear={2027}
+          boxTitle={`🕯 Zadušnice u ${2027}. godini`}
           data={calendarYears[0].item_list[yearIndex]}
         />
         <div className="midBox">

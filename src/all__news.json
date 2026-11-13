@@ -662,51 +662,61 @@
   },
   {
     "news_id": 2,
-    "time2": "2026-02-20T09:30:03.969Z",
+    "time2": "2026-11-12T09:30:00.000Z",
     "category": "Ostalo",
     "pics": [
       "https://res.cloudinary.com/dvi29tcsc/image/upload/v1737583754/crkveniKalendar/zadusnice-sveca_dfuuqg.jpg",
       "Pexels"
     ],
     "title": "Zadušnice",
-    "title_2": "Zadušnice u 2026. godini",
-    "lead": "Kada su Zadušnice 2026? Ovaj pravoslavni praznik uvek pada u subotu i posvećen je sećanju na preminule",
+    "title_2": "Zadušnice u 2027. godini – datumi i običaji",
+    "lead": "Kada su Zadušnice 2027. godine? Srpska pravoslavna crkva i tokom ove godine obeležava četiri glavne zadušnice – zimske, letnje, Miholjske i Mitrovske. To su dani molitve i sećanja na preminule, kada vernici odlaze u hramove i, prema mogućnostima, obilaze grobove svojih najbližih.",
     "body": [
       {
         "component": "Zadusnice",
         "subtitle": "Dani sećanja, molitve i pomena za upokojene",
-        "text": "Zadušnice su hrišćanski praznik Srpske pravoslavne crkve koji je posvećen sećanju na preminule. Obeležavaju se ne samo kroz poštovanje prema precima, već i delima milosrđa - davanjem milostinje siromašnima i pomoći onima kojima je potrebna.",
-        "textQuote": "Prema običaju, tokom Zadušnica vernici se mole za svoje pokojne čitajući molitvu za upokojene.<br/>Ova molitva se čita i u hramu i kod kuće - njen tekst možete pronaći <a href=\"https://crkveni-kalendar.net/molitvenik/molitva-za-upokojene/\">ovde</>."
+        "text": "Zadušnice su posebni dani u pravoslavnom crkvenom kalendaru posvećeni molitvenom sećanju na preminule. Tada se vernici posebno mole za pokoj duša svojih upokojenih, odlaze u hramove i, kada su u mogućnosti, obilaze njihove grobove. Ovaj običaj nije samo izraz poštovanja prema precima i članovima porodice, već i podsećanje na hrišćansku ljubav, zajedništvo i milosrđe.",
+        "textQuote": "Na Zadušnice se vernici mole za svoje upokojene, kako u hramovima, tako i u svojim domovima. Tekst molitve za upokojene možete pronaći <a href=\"https://crkveni-kalendar.net/molitvenik/molitva-za-upokojene/\">ovde</a>."
       },
       {
-        "subtitle": "",
-        "text": "Najvažniji pomen za preminule je Proskomidija koja se služi na svakoj Svetoj Liturgiji. Pored ovih pominjanja i molitvi za preminule, Crkva je ustanovila posebne dane kad se sećamo naših dragih pokojnika i obilazimo njihove grobove.",
-        "imgSrc": [
-          "https://res.cloudinary.com/dvi29tcsc/image/upload/v1760355509/crkveniKalendar/paljenje-sveca_lbih7h.jpg",
-          "Pexels"
-        ]
+        "subtitle": "Kada su Zadušnice u 2027. godini?",
+        "text": "Srpska pravoslavna crkva tokom godine obeležava četiri glavna dana posvećena molitvenom sećanju na upokojene. Zadušnice se po pravilu obeležavaju subotom, a njihovi datumi zavise od crkvenog kalendara i pokretnih praznika. U 2027. godini datumi su sledeći:"
       },
       {
-        "subtitle3": "Dani kada se obeležavaju Zadušnice",
-        "text": "Srpska pravoslavna crkva propisala je četiri glavne Zadušnice:<ul><li>Zimske zadušnice (pred Mesne poklade),</li><li>Letnje zadušnice (uoči praznika Svetih Trojica (Duhova),</li></li><li>Miholjske zadušnice (pre Miholjdana - praznik prepodobnog Kirijaka Pustinika),<li>Mitrovske zadušnice (početkom novembra).</li></ul>"
+        "subtitle": "Zimske zadušnice – 6. mart 2027.",
+        "text": "Zimske ili mesopustne zadušnice obeležavaju se u subotu pred Mesne poklade, odnosno pred početak pripreme za Veliki post. To je prvi veliki pomen upokojenima u crkvenoj godini koji se posebno obeležava u ovom periodu. Vernici odlaze u hramove na Svetu liturgiju i parastos, a mnogi posećuju i grobove svojih najbližih."
+      },
+      {
+        "subtitle": "Letnje zadušnice – 19. jun 2027.",
+        "text": "Letnje zadušnice, poznate i kao Duhovske zadušnice, obeležavaju se u subotu uoči praznika Svete Trojice – Duhova. To je dan kada se vernici posebno mole za pokoj duša preminulih, a u mnogim krajevima Srbije ovaj pomen prati odlazak na groblje, paljenje sveća i davanje milostinje."
+      },
+      {
+        "subtitle": "Miholjske zadušnice – 9. oktobar 2027.",
+        "text": "Miholjske zadušnice obeležavaju se u jesen, u subotu pred praznik Svetog Kirijaka Otšelnika, poznatog i kao Miholjdan. Kao i ostali dani posvećeni upokojenima, namenjene su molitvenom sećanju na preminule članove porodice, prijatelje i sve one kojih se vernici sećaju."
+      },
+      {
+        "subtitle": "Mitrovske zadušnice – 6. novembar 2027.",
+        "text": "Mitrovske ili jesenje zadušnice obeležavaju se u subotu pred praznik Svetog velikomučenika Dimitrija – Mitrovdan. One su poslednje od četiri glavne zadušnice u godini i predstavljaju još jednu priliku da se vernici pomole za svoje upokojene i odaju im poštovanje."
       },
       {
         "subtitle": "Kako se pravilno obeležavaju Zadušnice?",
-        "text": "Zadušnice obeležavaju sećanje dana odvajanja duha od tela, člana Crkve. Uvek padaju u subotu, jer je to i inače, u toku čitave godine, dan kad se sećamo preminulih. Na zadušnice se obavezno izlazi na groblje. Tada se obavlja parastos ili pomen. Osvećuje se žito, prekađuje grob i pale sveće za pokoj duša umrlih. Obavezno se uređuje grob."
+        "text": "Na Zadušnice se u crkvama služe Sveta liturgija i parastos za upokojene. Vernici mogu predati imena svojih preminulih za pomen, prisustvovati bogosluženju i pomoliti se za pokoj njihovih duša. Mnogi nakon službe odlaze na groblja, gde uređuju grobove, pale sveće i, uz prisustvo sveštenika, obavljaju pomen. Ipak, odlazak na groblje nije uslov da bi se Zadušnice obeležile – najvažniji su molitva i sećanje na upokojene.",
+        "textQuote": "Suština Zadušnica nije u običajima i pripremi hrane, već u molitvi za pokoj duša preminulih."
       },
       {
-        "subtitle": "",
-        "text": "Koljivo ili kuvano žito se nosi u parohijski ili manastirski hram, kao i na groblje. Na dan zadušnica se služi Sveta Liturgija, i tada sveštenik vinom preliva žito, a posle službe se ide do grobova pokojnika. Pored grobova se pale sveće, a sveštenik obavi obred i okadi grobove. Ako su pokojnici sahranjeni daleko i nije moguće otići na njihove grobove, čitav obred se služi u hramu."
+        "subtitle": "Šta se nosi u crkvu i na groblje?",
+        "text": "Među najpoznatijim običajima za Zadušnice jeste pripremanje koljiva, odnosno kuvanog žita, koje se donosi u hram radi osvećenja i pomena upokojenima. Vernici često donose i sveće, a na groblju ih pale u znak sećanja na svoje najmilije. U pojedinim krajevima običaj je da se hrana ili drugi prilozi podele siromašnima i ljudima kojima je pomoć potrebna. Takvi postupci imaju smisao milosrđa i dobročinstva, a ne predstavljaju obavezni deo obreda. Ako porodica nije u mogućnosti da poseti grobove, pomen za upokojene može se obaviti u hramu."
       }
     ],
     "tags": [
-      "Zadušnice",
-      "Pravoslavni praznici",
-      "Pomen preminulima",
-      "Poseta groblju",
-      "Paljenje sveća",
-      "Pravoslavni običaji",
-      "Praznik mrtvih"
+      "Zadušnice 2027",
+      "kada su Zadušnice",
+      "zimske zadušnice",
+      "letnje zadušnice",
+      "Miholjske zadušnice",
+      "Mitrovske zadušnice",
+      "pomen preminulima",
+      "pravoslavni običaji"
     ],
     "source": "crkveni-kalendar"
   },

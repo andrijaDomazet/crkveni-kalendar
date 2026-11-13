@@ -6,8 +6,8 @@ import Link from "next/link";
 import { useRouteContext } from "../../../shared/RouteProvider.js";
 import { useScriptContext } from "../../../shared/ScriptProvider.js";
 
-export default function Zadusnice({ setYear, boxTitle, data }) {
-    const { cyr } = useScriptContext();
+export default function Zadusnice({ setYear = 2027, boxTitle, data }) {
+  const { cyr } = useScriptContext();
   const { slug, currentDate } = useRouteContext();
   let currentYear =
     setYear || slug || (currentDate?.getFullYear() ?? new Date().getFullYear());
@@ -36,8 +36,14 @@ export default function Zadusnice({ setYear, boxTitle, data }) {
                       prefetch={false}
                       href={`/${currentYear}/${monthSerb[item[0]]}/`}
                     >
-                      {cyr(`${zadusniceDate.zadusnice[index].charAt(0).toUpperCase() +
-                        zadusniceDate.zadusnice[index].slice(1)}`)}
+                      {cyr(
+                        `${
+                          zadusniceDate.zadusnice[index]
+                            .charAt(0)
+                            .toUpperCase() +
+                          zadusniceDate.zadusnice[index].slice(1)
+                        }`,
+                      )}
                     </Link>
                   </h3>
                 </td>
