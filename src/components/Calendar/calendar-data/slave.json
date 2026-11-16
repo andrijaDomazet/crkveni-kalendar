@@ -149,7 +149,7 @@
   {
     "date": [10, 8],
     "title": "Sv. Dimitrije - Mitrovdan",
-     "artLink": "/praznici/mitrovdan/"
+    "artLink": "/praznici/mitrovdan/"
   },
   {
     "date": [10, 11],
@@ -166,11 +166,12 @@
   {
     "date": [10, 21],
     "title": "Sv. Arhanđel Mihajlo - Aranđelovdan",
-         "artLink": "/praznici/arandjelovdan/"
+    "artLink": "/praznici/arandjelovdan/"
   },
   {
     "date": [10, 24],
-    "title": "Sv. Mrata - Mratindan"
+    "title": "Sv. Mrata - Mratindan",
+    "artLink": "/praznici/sveti-mrata-mratindan/"
   },
   {
     "date": [10, 25],
@@ -187,7 +188,7 @@
   {
     "date": [11, 4],
     "title": "Vavedenje Presvete Bogorodice",
-      "artLink": "/praznici/vavedenje-presvete-bogorodice/"
+    "artLink": "/praznici/vavedenje-presvete-bogorodice/"
   },
   {
     "date": [11, 9],
@@ -195,10 +196,12 @@
   },
   {
     "date": [11, 13],
-    "title": "Sv. Andrej"
+    "title": "Sv. Andrej",
+    "artLink": "/praznici/sveti-apostol-andrej-prvozvani/"
   },
   {
     "date": [11, 19],
-    "title": "Sv. Nikola - Nikoljdan"
+    "title": "Sv. Nikola - Nikoljdan",
+    "artLink": "/praznici/sveti-nikola/"
   }
 ]

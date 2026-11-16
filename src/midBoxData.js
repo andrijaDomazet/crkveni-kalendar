@@ -1,6 +1,6 @@
 export const nextHolidays = [
   // ["22. mart", "Svetih 40 mučenika Sevastijskih - Mladenci"],
-  
+
   // ["4. april", "Lazareva subota (Vrbica)"],
   // ["5. april", "Ulazak Gospoda Isusa Hrista u Jerusalim - Cveti"],
   // ["12. april", "Vaskrs - Vaskrsenje Gospoda Isusa Hrista"],
@@ -30,10 +30,24 @@ export const nextHolidays = [
 
   // ["1. novembar", "Sveti Prohor Pčinjski"],
   // ["8. novembar", "Mitrovdan", "/praznici/mitrovdan/"],
-  ["14. novembar", "Vračevi"],
+  // ["14. novembar", "Vračevi"],
   ["16. novembar", "Đurđic"],
   ["21. novembar", "Aranđelovdan", "/praznici/arandjelovdan/"],
-  ["4. decembar", "Vavedenje Presvete Bogorodice", "/praznici/vavedenje-presvete-bogorodice/"],
-  ["9. decembar", "Prepodobni Alimpije Stolpnik", "/praznici/prepodobni-alimpije-stolpnik/"],
+  ["21. novembar", "Sveti Mrata Mratindan", "/praznici/sveti-mrata-mratindan/"],
+  [
+    "4. decembar",
+    "Vavedenje Presvete Bogorodice",
+    "/praznici/vavedenje-presvete-bogorodice/",
+  ],
+  [
+    "9. decembar",
+    "Prepodobni Alimpije Stolpnik",
+    "/praznici/prepodobni-alimpije-stolpnik/",
+  ],
+  [
+    "13. decembar",
+    "Sveti apostol Andrej Prvozvani",
+    "/praznici/sveti-apostol-andrej-prvozvani/",
+  ],
   ["19. decembar", "Sveti Nikola", "/praznici/sveti-nikola/"],
 ];
