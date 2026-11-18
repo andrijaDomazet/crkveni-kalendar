@@ -12,6 +12,7 @@
     align-items: center;
     gap: 0.8rem;
     padding: 0.3rem 0.2rem 0.8rem;
+    flex-shrink: 0;
 
     a {
       font-weight: 600;
@@ -44,6 +45,7 @@
     align-items: center;
     gap: 1rem;
     margin-top: 1.2rem;
+    flex-shrink: 0;
 
     .line,
     .line.right {
@@ -100,54 +102,23 @@
     .widget__container--desktop {
       display: flex;
       flex-direction: column;
-      gap: 1.2rem;
 
       .widget__row--featured {
         display: grid;
-        grid-template-columns: 1.4fr 1fr;
+        grid-template-columns: 1.5fr 1fr;
         gap: 1.2rem;
-        align-items: start;
+        align-items: stretch;
 
         .widget__stack {
           display: flex;
           flex-direction: column;
-          gap: 0.8rem;
-
-          .wBox.small {
-            .box-wrapper img {
-              aspect-ratio: 16 / 7;
-            }
-
-            .box-content {
-              padding: 0.4rem 0.6rem 0.5rem;
-
-              strong {
-                font-size: 0.9rem;
-                line-height: 1.2rem;
-                -webkit-line-clamp: 2;
-                display: -webkit-box;
-                -webkit-box-orient: vertical;
-                overflow: hidden;
-              }
-
-              .box-content-3 {
-                font-size: 0.8rem;
-                margin-top: 0.3rem;
-              }
-            }
-          }
+          gap: 0.9rem;
         }
-      }
-
-      .widget__row--rest {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-        gap: 1rem;
       }
     }
 
     .widget__more {
-      margin-top: 1.6rem;
+      margin-top: 1.4rem;
     }
   }
 }
