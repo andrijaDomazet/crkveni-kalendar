@@ -113,6 +113,11 @@
           display: flex;
           flex-direction: column;
           gap: 0.9rem;
+
+          .wBox.small {
+            flex: 1;
+            display: flex;
+          }
         }
       }
     }
