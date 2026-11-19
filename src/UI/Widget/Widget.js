@@ -21,7 +21,7 @@ export default function Widget() {
         </a>
         <span className="widget__title-line"></span>
       </div>
-      {data && data.length >= 6 && (
+      {data && data.length >= 7 && (
         <>
           <div className="widget__container widget__container--mobile">
             <ArticleWidget data={data[0]} size="large" />
@@ -34,7 +34,12 @@ export default function Widget() {
             <div className="widget__row widget__row--featured">
               <ArticleWidget data={data[0]} size="large" />
               <div className="widget__stack">
-                {data.slice(1, 6).map((item, index) => (
+                {data.slice(1, 4).map((item, index) => (
+                  <ArticleWidget key={index} data={item} size="small" />
+                ))}
+              </div>
+              <div className="widget__stack">
+                {data.slice(4, 7).map((item, index) => (
                   <ArticleWidget key={index} data={item} size="small" />
                 ))}
               </div>
