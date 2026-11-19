@@ -1,124 +1,174 @@
 [
-{
-  "news_id": 13,
-  "type": "praznik",
-  "published": "2026-11-17",
-  "time2": "2026-11-17T10:00:00.000Z",
-  "category": "Praznici",
-  "pics": [
-    "https://media.agroweb.rs/uploads/images/sveti-jovan-zlatousti-1794922578647.jpeg",
-    "spc.rs"
-  ],
+  {
+    "news_id": 14,
+    "type": "praznik",
+    "published": "2026-11-19",
+    "time2": "2026-11-19T10:00:00.000Z",
+    "category": "Praznici",
+    "pics": [
+      "https://media.gardenia.rs/uploads/images/sveti-velikomucenik-mina-1795101956926.jpg",
+      "Pexels"
+    ],
+    "title": "Sveti velikomučenik Mina",
+    "title_2": "Sveti velikomučenik Mina: Život svetitelja, mučeništvo i zašto mu se vernici mole za pomoć",
+    "lead": "Sveti velikomučenik Mina praznuje se 24. novembra po novom kalendaru, odnosno 11. novembra po starom. Bio je egipatski vojnik koji se odrekao vojne službe zbog svoje hrišćanske vere, a potom hrabro podneo mučeništvo. U pravoslavnoj tradiciji poštuje se kao veliki čudotvorac, kome se vernici mole za pomoć u nevolji i pronalaženje izgubljenih stvari.",
+    "body": [
+      {
+        "subtitle": "Kada se praznuje Sveti velikomučenik Mina?",
+        "text": "<p>Srpska pravoslavna crkva obeležava praznik Svetog velikomučenika Mine 24. novembra po gregorijanskom kalendaru, odnosno 11. novembra po julijanskom kalendaru. Ovaj datum svake godine ostaje isti, a u crkvenom kalendaru na isti dan se pominju i Sveti kralj Stefan Dečanski, poznat kao Mratindan, i drugi svetitelji.</p><p>Sveti Mina jedan je od poštovanih ranohrišćanskih mučenika. Njegov praznik podseća na vreme velikih progona hrišćana u Rimskom carstvu, kada su mnogi vernici radije birali stradanje nego odricanje od svoje vere.</p><p>U 2026. godini praznik pada u utorak, 24. novembra.</p>"
+      },
+      {
+        "subtitle": "Ko je bio Sveti Mina?",
+        "text": "<p>Sveti velikomučenik Mina rođen je u Egiptu, a živeo je u vreme rimskih careva Dioklecijana i Maksimijana, poznatih po progonima hrišćana. Po zanimanju je bio vojnik u rimskoj vojsci i, prema žitijskom predanju, isticao se hrabrošću, disciplinom i odanošću.</p><p>Kada su počeli progoni hrišćana i kada se od vojnika zahtevalo da učestvuju u idolopokloničkim obredima, Mina nije želeo da se odrekne svoje vere. Napustio je vojnu službu, odbacio vojnički pojas kao znak svog čina i povukao se u planinu, gde je živeo u molitvi, postu i podvigu.</p><p>Nije želeo da učestvuje u obredima koji su bili suprotni njegovom hrišćanskom uverenju. Umesto položaja i ugleda koje je imao kao vojnik, izabrao je skroman život i vernost Hristu.</p>"
+      },
+      {
+        "subtitle": "Ispovedanje vere i mučenička smrt",
+        "text": "<p>Prema predanju, Sveti Mina je jednog dana sa planine ugledao veliko mnogobožačko slavlje u gradu Kotajeonu, u oblasti Frigije. Sišao je među okupljene i javno ispovedio svoju veru u Hrista, otvoreno se suprotstavivši idolopoklonstvu.</p><p>Zbog svojih reči bio je uhvaćen i izveden pred gradskog upravitelja Pira. Ponuđeno mu je da se vrati u vojsku i ponovo dobije svoj nekadašnji položaj, pod uslovom da prinese žrtvu paganskim božanstvima. Mina je to odbio i ostao čvrst u svojoj veri.</p><p>Bio je izložen teškim mučenjima, ali nije pristao da se odrekne Hrista. Na kraju je osuđen na smrt i pogubljen odsecanjem glave, oko 304. godine. Hrišćani su, prema predanju, sačuvali njegove mošti i kasnije ih preneli u Egipat.</p><p>Njegovo stradanje ostalo je upamćeno kao primer istrajnosti, hrabrosti i odanosti hrišćanskoj veri.</p>"
+      },
+      {
+        "subtitle": "Sveti Mina kao čudotvorac i zaštitnik",
+        "text": "<p>Poštovanje Svetog Mine posebno se proširilo u Egiptu, gde je u njegovu čast nastalo veliko hodočasničko središte Abu Mina, nedaleko od Aleksandrije. Vernici su vekovima dolazili na njegov grob, moleći se za isceljenje, zaštitu i pomoć u različitim životnim nevoljama.</p><p>U pravoslavnom predanju Sveti Mina poznat je kao čudotvorac. Veruje se da pomaže bolesnima, ljudima koji se nalaze u opasnosti i onima koji prolaze kroz teške životne okolnosti. Posebno je rašireno verovanje da mu se treba moliti kada se izgubi neki predmet ili kada čovek ne može da pronađe nešto što mu je važno.</p><p>Na ikonama se Sveti Mina često prikazuje kao vojnik, ponekad na konju, sa vojničkom odećom i oružjem. Takav prikaz podseća na njegov nekadašnji život u rimskoj vojsci, ali i na duhovnu pobedu koju je ostvario ostajući veran svojoj veri.</p>"
+      },
+      {
+        "subtitle": "Kako se obeležava praznik Svetog Mine?",
+        "text": "<p>Sveti velikomučenik Mina poštuje se kao krsna slava u pojedinim pravoslavnim porodicama. Vernici koji ga slave odlaze u crkvu, pale sveće i mole se svetitelju, a u svojim domovima obeležavaju slavu uz slavski kolač, žito i vino.</p><p>Za ovaj praznik ne postoji jedinstven skup narodnih običaja koji bi važio u svim krajevima. Najvažniji deo obeležavanja jeste molitva, odlazak na bogosluženje i sećanje na svetitelja koji nije odustao od svojih uverenja ni pred najvećim iskušenjima.</p><p>Sveti Mina se u crkvenom kalendaru obeležava 24. novembra. Pošto se dan u sedmici menja iz godine u godinu, pravilo posta treba proveriti u kalendaru za konkretnu godinu.</p>"
+      },
+      {
+        "subtitle": "Pouka Svetog velikomučenika Mine",
+        "text": "<p>Život Svetog Mine svedoči o snazi vere i spremnosti čoveka da ostane dosledan svojim uverenjima čak i kada se zbog toga suočava sa velikim pritiscima. Iako je imao položaj i ugled u rimskoj vojsci, nije želeo da ih sačuva po cenu odricanja od Hrista.</p><p>Njegovo stradanje podseća vernike da vera nije samo pitanje reči, već i dela, istrajnosti i odnosa prema drugima. Zbog toga se Sveti velikomučenik Mina i danas poštuje kao primer hrabrosti, postojanosti i duhovne snage.</p><p>Datum ovog praznika i ostale važne dane možete proveriti u <a href=\"/2026/\">crkvenom kalendaru za 2026. godinu</a>.</p>"
+      }
+    ],
+    "tags": [
+      "Sveti Mina",
+      "Sveti velikomučenik Mina",
+      "24. novembar",
+      "pravoslavni praznici",
+      "crkveni kalendar",
+      "krsna slava"
+    ],
+    "source": "crkveni-kalendar",
+    "page_view": 0
+  },
+  {
+    "news_id": 13,
+    "type": "praznik",
+    "published": "2026-11-17",
+    "time2": "2026-11-17T10:00:00.000Z",
+    "category": "Praznici",
+    "pics": [
+      "https://media.agroweb.rs/uploads/images/sveti-jovan-zlatousti-1794922578647.jpeg",
+      "spc.rs"
+    ],
     "title": "Sveti Jovan Zlatousti",
-  "title_2": "Sveti Jovan Zlatousti: Zašto je dobio ime Zlatousti i koji značaj ima njegova Liturgija",
+    "title_2": "Sveti Jovan Zlatousti: Zašto je dobio ime Zlatousti i koji značaj ima njegova Liturgija",
 
-  "lead": "Srpska pravoslavna crkva 26. novembra obeležava praznik Svetog Jovana Zlatoustog, jednog od najvećih crkvenih otaca i najpoznatijih propovednika hrišćanstva. Njegove besede, tumačenja Svetog pisma i bogoslužbeni tekstovi ostavili su dubok trag u pravoslavnoj tradiciji, a Sveta liturgija koja nosi njegovo ime i danas se služi u crkvama širom sveta.",
-  "body": [
-    {
-      "subtitle": "Kada se slavi Sveti Jovan Zlatousti?",
-      "text": "<p>Sveti Jovan Zlatousti praznuje se <strong>26. novembra po gregorijanskom kalendaru, odnosno 13. novembra po julijanskom kalendaru</strong>. Ovaj datum posvećen je sećanju na jednog od najznačajnijih svetitelja i učitelja Crkve, arhiepiskopa carigradskog i velikog tumača hrišćanske vere.</p><p>U 2026. godini praznik pada u četvrtak, 26. novembra. Dan se u crkvenom kalendaru obeležava kao praznik Svetog Jovana Zlatoustog, a ujedno je i krsna slava brojnih pravoslavnih porodica.</p><p>Sveti Jovan Zlatousti jedan je od trojice velikih jerarha, zajedno sa Svetim Vasilijem Velikim i Svetim Grigorijem Bogoslovom. Sva trojica imaju posebno mesto u pravoslavnoj crkvenoj tradiciji zbog svog doprinosa bogoslovlju, propovedanju i životu Crkve.</p>"
-    },
-    {
-      "subtitle": "Ko je bio Sveti Jovan Zlatousti?",
-      "text": "<p>Sveti Jovan Zlatousti rođen je u Antiohiji, oko 347. godine, u hrišćanskoj porodici. Njegov otac Sekund bio je visoki vojni zapovednik, a majka Antusa ostala je upamćena po svojoj pobožnosti i brizi za sina nakon rane smrti supruga.</p><p>Jovan je dobio veoma dobro obrazovanje i izučavao je retoriku i filozofiju. Iako je imao mogućnost da izgradi uspešnu karijeru, odlučio je da svoj život posveti veri i duhovnom usavršavanju. Nakon smrti majke povukao se u monaški život, gde se posvetio molitvi, proučavanju Svetog pisma i podvižništvu.</p><p>Kasnije se vratio u Antiohiju, gde je postao đakon, a zatim sveštenik. Njegove propovedi privlačile su veliki broj ljudi, jer je na razumljiv i neposredan način objašnjavao Sveto pismo i govorio o hrišćanskom životu, pravdi, milosrđu i odgovornosti prema bližnjima.</p>"
-    },
-    {
-      "subtitle": "Zašto je dobio ime Zlatousti?",
-      "text": "<p>Ime <strong>Zlatousti</strong> dobio je zbog izuzetnog dara govorništva i sposobnosti da snažnim, jasnim i upečatljivim rečima prenese hrišćansko učenje. Njegove besede bile su poznate po dubokom poznavanju Svetog pisma, ali i po tome što su se bavile svakodnevnim životom ljudi.</p><p>Jovan nije govorio samo o molitvi i veri, već je često ukazivao na nepravdu, pohlepu, licemerje i ravnodušnost prema siromašnima. Smatrao je da hrišćanska vera mora da se potvrđuje delima i da čovek ne može biti istinski pobožan ako zanemaruje ljude kojima je potrebna pomoć.</p><p>Njegove propovedi i danas se čitaju i proučavaju, a brojna tumačenja biblijskih tekstova predstavljaju dragocen deo pravoslavnog bogoslovskog nasleđa.</p>"
-    },
-    {
-      "subtitle": "Patrijarh carigradski i borac za pravdu",
-      "text": "<p>Godine 398. Jovan je izabran za arhiepiskopa carigradskog. Na toj dužnosti nastavio je da se zalaže za obnovu crkvenog života, moralnu odgovornost i pomoć siromašnima. Posebnu pažnju posvećivao je radu sveštenstva i uređenju crkvenih prilika.</p><p>Njegova otvorena kritika raskoši, zloupotrebe položaja i nepravde izazvala je protivljenje uticajnih ljudi na dvoru. Posebno je došao u sukob sa caricom Evdoksijom, zbog čega je dva puta proterivan iz Carigrada.</p><p>Uprkos pritiscima, nije odustajao od svojih stavova. Prema crkvenom predanju, tokom izgnanstva podnosio je teške uslove, a preminuo je 407. godine u Komani, u Jermeniji. Njegove poslednje reči, prema predanju, bile su: „Slava Bogu za sve.“</p>"
-    },
-    {
-      "subtitle": "Liturgija Svetog Jovana Zlatoustog",
-      "text": "<p>Jedno od najznačajnijih dela koje se vezuje za Svetog Jovana Zlatoustog jeste Sveta liturgija koja nosi njegovo ime. <strong>Liturgija Svetog Jovana Zlatoustog</strong> predstavlja najčešći bogoslužbeni oblik Svete liturgije u Srpskoj pravoslavnoj crkvi i drugim pravoslavnim crkvama.</p><p>Ona je deo bogoslužbenog nasleđa koje je oblikovano i prenošeno kroz vekove, a njeno ime čuva uspomenu na svetitelja čiji je doprinos liturgijskom životu Crkve izuzetno značajan. U toku godine služi se tokom najvećeg dela nedelja i praznika, dok se u pojedinim periodima i posebnim prilikama služe druge liturgije, poput Liturgije Svetog Vasilija Velikog i Liturgije pređeosvećenih darova.</p><p>Za vernike, ova liturgija nije samo sećanje na velikog svetitelja, već i središnji deo pravoslavnog bogosluženja i života Crkve.</p>"
-    },
-    {
-      "subtitle": "Sveti Jovan Zlatousti kao jedan od tri velika jerarha",
-      "text": "<p>Sveti Jovan Zlatousti zajedno sa Svetim Vasilijem Velikim i Svetim Grigorijem Bogoslovom čini grupu poznatu kao Sveta tri jerarha. Njihov zajednički praznik obeležava se 12. februara po novom kalendaru.</p><p>Ova trojica svetitelja posebno su poštovana zbog svog doprinosa razvoju hrišćanskog bogoslovlja, tumačenju Svetog pisma i očuvanju pravoslavnog učenja. Njihova dela i danas predstavljaju važan oslonac u obrazovanju sveštenstva i proučavanju pravoslavne vere.</p><p>Sveti Jovan Zlatousti ostao je naročito poznat po svojim besedama, dok su Sveti Vasilije Veliki i Sveti Grigorije Bogoslov takođe ostavili izuzetno značajno teološko nasleđe.</p>"
-    },
-    {
-      "subtitle": "Običaji i verovanja za Svetog Jovana Zlatoustog",
-      "text": "<p>Sveti Jovan Zlatousti je krsna slava u brojnim pravoslavnim porodicama. Vernici koji ga slave odlaze na bogosluženje, pripremaju slavski kolač, žito i sveću i okupljaju porodicu i prijatelje.</p><p>Za razliku od pojedinih praznika koji su u narodnoj tradiciji povezani sa posebnim običajima i verovanjima, Sveti Jovan Zlatousti pre svega se poštuje zbog svog duhovnog i bogoslovskog značaja. Nema potrebe da se ovom prazniku pripisuju običaji koji nisu pouzdano zabeleženi.</p><p>U 2026. godini praznik pada u četvrtak i nije posni dan. Ipak, u godinama kada 26. novembar pada u sredu ili petak, slavska trpeza treba da bude usklađena sa pravilima crkvenog posta.</p>"
-    },
-    {
-      "subtitle": "Pouke Svetog Jovana Zlatoustog",
-      "text": "<p>Život i delo Svetog Jovana Zlatoustog podsećaju da vera ne treba da ostane samo na rečima, već da se pokazuje kroz odnos prema drugim ljudima. Njegove besede često govore o milosrđu, skromnosti, praštanju i odgovornosti za sopstvene postupke.</p><p>Posebno je isticao značaj pomoći siromašnima i upozoravao da bogatstvo i položaj ne daju čoveku pravo da zanemaruje one kojima je pomoć potrebna. Smatrao je da se istinska vrednost čoveka ogleda u njegovim delima, a ne u spoljašnjem ugledu.</p><p>Njegova poruka ostaje aktuelna i danas: vera treba da bude praćena dobrotom, pravdom i ljubavlju prema bližnjima.</p><p>Datume svih pravoslavnih praznika, slava i dana posta možete pogledati u našem <a href=\"/2026/\">crkvenom kalendaru za 2026. godinu</a>.</p>"
-    }
-  ],
-  "tags": [
-    "Sveti Jovan Zlatousti",
-    "Jovan Zlatousti",
-    "26. novembar",
-    "Liturgija Svetog Jovana Zlatoustog",
-    "Sveta tri jerarha",
-    "pravoslavni praznici",
-    "krsna slava"
-  ],
-  "source": "crkveni-kalendar",
-  "page_view": 0
-},
-{
-  "news_id": 12,
-  "type": "praznik",
-  "published": "2026-11-16",
-  "time2": "2026-11-16T10:00:00.000Z",
-  "category": "Praznici",
-  "pics": [
-    "https://media.agroweb.rs/uploads/images/mratindan-1794823551017.jpg",
-    "spc.rs"
-  ],
+    "lead": "Srpska pravoslavna crkva 26. novembra obeležava praznik Svetog Jovana Zlatoustog, jednog od najvećih crkvenih otaca i najpoznatijih propovednika hrišćanstva. Njegove besede, tumačenja Svetog pisma i bogoslužbeni tekstovi ostavili su dubok trag u pravoslavnoj tradiciji, a Sveta liturgija koja nosi njegovo ime i danas se služi u crkvama širom sveta.",
+    "body": [
+      {
+        "subtitle": "Kada se slavi Sveti Jovan Zlatousti?",
+        "text": "<p>Sveti Jovan Zlatousti praznuje se <strong>26. novembra po gregorijanskom kalendaru, odnosno 13. novembra po julijanskom kalendaru</strong>. Ovaj datum posvećen je sećanju na jednog od najznačajnijih svetitelja i učitelja Crkve, arhiepiskopa carigradskog i velikog tumača hrišćanske vere.</p><p>U 2026. godini praznik pada u četvrtak, 26. novembra. Dan se u crkvenom kalendaru obeležava kao praznik Svetog Jovana Zlatoustog, a ujedno je i krsna slava brojnih pravoslavnih porodica.</p><p>Sveti Jovan Zlatousti jedan je od trojice velikih jerarha, zajedno sa Svetim Vasilijem Velikim i Svetim Grigorijem Bogoslovom. Sva trojica imaju posebno mesto u pravoslavnoj crkvenoj tradiciji zbog svog doprinosa bogoslovlju, propovedanju i životu Crkve.</p>"
+      },
+      {
+        "subtitle": "Ko je bio Sveti Jovan Zlatousti?",
+        "text": "<p>Sveti Jovan Zlatousti rođen je u Antiohiji, oko 347. godine, u hrišćanskoj porodici. Njegov otac Sekund bio je visoki vojni zapovednik, a majka Antusa ostala je upamćena po svojoj pobožnosti i brizi za sina nakon rane smrti supruga.</p><p>Jovan je dobio veoma dobro obrazovanje i izučavao je retoriku i filozofiju. Iako je imao mogućnost da izgradi uspešnu karijeru, odlučio je da svoj život posveti veri i duhovnom usavršavanju. Nakon smrti majke povukao se u monaški život, gde se posvetio molitvi, proučavanju Svetog pisma i podvižništvu.</p><p>Kasnije se vratio u Antiohiju, gde je postao đakon, a zatim sveštenik. Njegove propovedi privlačile su veliki broj ljudi, jer je na razumljiv i neposredan način objašnjavao Sveto pismo i govorio o hrišćanskom životu, pravdi, milosrđu i odgovornosti prema bližnjima.</p>"
+      },
+      {
+        "subtitle": "Zašto je dobio ime Zlatousti?",
+        "text": "<p>Ime <strong>Zlatousti</strong> dobio je zbog izuzetnog dara govorništva i sposobnosti da snažnim, jasnim i upečatljivim rečima prenese hrišćansko učenje. Njegove besede bile su poznate po dubokom poznavanju Svetog pisma, ali i po tome što su se bavile svakodnevnim životom ljudi.</p><p>Jovan nije govorio samo o molitvi i veri, već je često ukazivao na nepravdu, pohlepu, licemerje i ravnodušnost prema siromašnima. Smatrao je da hrišćanska vera mora da se potvrđuje delima i da čovek ne može biti istinski pobožan ako zanemaruje ljude kojima je potrebna pomoć.</p><p>Njegove propovedi i danas se čitaju i proučavaju, a brojna tumačenja biblijskih tekstova predstavljaju dragocen deo pravoslavnog bogoslovskog nasleđa.</p>"
+      },
+      {
+        "subtitle": "Patrijarh carigradski i borac za pravdu",
+        "text": "<p>Godine 398. Jovan je izabran za arhiepiskopa carigradskog. Na toj dužnosti nastavio je da se zalaže za obnovu crkvenog života, moralnu odgovornost i pomoć siromašnima. Posebnu pažnju posvećivao je radu sveštenstva i uređenju crkvenih prilika.</p><p>Njegova otvorena kritika raskoši, zloupotrebe položaja i nepravde izazvala je protivljenje uticajnih ljudi na dvoru. Posebno je došao u sukob sa caricom Evdoksijom, zbog čega je dva puta proterivan iz Carigrada.</p><p>Uprkos pritiscima, nije odustajao od svojih stavova. Prema crkvenom predanju, tokom izgnanstva podnosio je teške uslove, a preminuo je 407. godine u Komani, u Jermeniji. Njegove poslednje reči, prema predanju, bile su: „Slava Bogu za sve.“</p>"
+      },
+      {
+        "subtitle": "Liturgija Svetog Jovana Zlatoustog",
+        "text": "<p>Jedno od najznačajnijih dela koje se vezuje za Svetog Jovana Zlatoustog jeste Sveta liturgija koja nosi njegovo ime. <strong>Liturgija Svetog Jovana Zlatoustog</strong> predstavlja najčešći bogoslužbeni oblik Svete liturgije u Srpskoj pravoslavnoj crkvi i drugim pravoslavnim crkvama.</p><p>Ona je deo bogoslužbenog nasleđa koje je oblikovano i prenošeno kroz vekove, a njeno ime čuva uspomenu na svetitelja čiji je doprinos liturgijskom životu Crkve izuzetno značajan. U toku godine služi se tokom najvećeg dela nedelja i praznika, dok se u pojedinim periodima i posebnim prilikama služe druge liturgije, poput Liturgije Svetog Vasilija Velikog i Liturgije pređeosvećenih darova.</p><p>Za vernike, ova liturgija nije samo sećanje na velikog svetitelja, već i središnji deo pravoslavnog bogosluženja i života Crkve.</p>"
+      },
+      {
+        "subtitle": "Sveti Jovan Zlatousti kao jedan od tri velika jerarha",
+        "text": "<p>Sveti Jovan Zlatousti zajedno sa Svetim Vasilijem Velikim i Svetim Grigorijem Bogoslovom čini grupu poznatu kao Sveta tri jerarha. Njihov zajednički praznik obeležava se 12. februara po novom kalendaru.</p><p>Ova trojica svetitelja posebno su poštovana zbog svog doprinosa razvoju hrišćanskog bogoslovlja, tumačenju Svetog pisma i očuvanju pravoslavnog učenja. Njihova dela i danas predstavljaju važan oslonac u obrazovanju sveštenstva i proučavanju pravoslavne vere.</p><p>Sveti Jovan Zlatousti ostao je naročito poznat po svojim besedama, dok su Sveti Vasilije Veliki i Sveti Grigorije Bogoslov takođe ostavili izuzetno značajno teološko nasleđe.</p>"
+      },
+      {
+        "subtitle": "Običaji i verovanja za Svetog Jovana Zlatoustog",
+        "text": "<p>Sveti Jovan Zlatousti je krsna slava u brojnim pravoslavnim porodicama. Vernici koji ga slave odlaze na bogosluženje, pripremaju slavski kolač, žito i sveću i okupljaju porodicu i prijatelje.</p><p>Za razliku od pojedinih praznika koji su u narodnoj tradiciji povezani sa posebnim običajima i verovanjima, Sveti Jovan Zlatousti pre svega se poštuje zbog svog duhovnog i bogoslovskog značaja. Nema potrebe da se ovom prazniku pripisuju običaji koji nisu pouzdano zabeleženi.</p><p>U 2026. godini praznik pada u četvrtak i nije posni dan. Ipak, u godinama kada 26. novembar pada u sredu ili petak, slavska trpeza treba da bude usklađena sa pravilima crkvenog posta.</p>"
+      },
+      {
+        "subtitle": "Pouke Svetog Jovana Zlatoustog",
+        "text": "<p>Život i delo Svetog Jovana Zlatoustog podsećaju da vera ne treba da ostane samo na rečima, već da se pokazuje kroz odnos prema drugim ljudima. Njegove besede često govore o milosrđu, skromnosti, praštanju i odgovornosti za sopstvene postupke.</p><p>Posebno je isticao značaj pomoći siromašnima i upozoravao da bogatstvo i položaj ne daju čoveku pravo da zanemaruje one kojima je pomoć potrebna. Smatrao je da se istinska vrednost čoveka ogleda u njegovim delima, a ne u spoljašnjem ugledu.</p><p>Njegova poruka ostaje aktuelna i danas: vera treba da bude praćena dobrotom, pravdom i ljubavlju prema bližnjima.</p><p>Datume svih pravoslavnih praznika, slava i dana posta možete pogledati u našem <a href=\"/2026/\">crkvenom kalendaru za 2026. godinu</a>.</p>"
+      }
+    ],
+    "tags": [
+      "Sveti Jovan Zlatousti",
+      "Jovan Zlatousti",
+      "26. novembar",
+      "Liturgija Svetog Jovana Zlatoustog",
+      "Sveta tri jerarha",
+      "pravoslavni praznici",
+      "krsna slava"
+    ],
+    "source": "crkveni-kalendar",
+    "page_view": 0
+  },
+  {
+    "news_id": 12,
+    "type": "praznik",
+    "published": "2026-11-16",
+    "time2": "2026-11-16T10:00:00.000Z",
+    "category": "Praznici",
+    "pics": [
+      "https://media.agroweb.rs/uploads/images/mratindan-1794823551017.jpg",
+      "spc.rs"
+    ],
     "title": "Sveti Mrata Mratindan",
-  "title_2": "Sveti Mrata - Mratindan: Običaji, narodna verovanja i zašto se kaže „Sveti Mrata, sneg na vrata“",
+    "title_2": "Sveti Mrata - Mratindan: Običaji, narodna verovanja i zašto se kaže „Sveti Mrata, sneg na vrata“",
 
-  "lead": "Mratindan se obeležava 24. novembra i u srpskoj tradiciji vezuje se za Svetog kralja Stefana Dečanskog. Ovaj praznik prate brojna narodna verovanja o početku zime, vukovima i zaštiti stoke, a jedna od najpoznatijih izreka glasi: „Sveti Mrata, sneg na vrata“. Saznajte ko je bio Sveti Stefan Dečanski i koji običaji se vezuju za Mratindan.",
-  "body": [
-    {
-      "subtitle": "Kada se slavi Mratindan?",
-      "text": "<p>Mratindan se obeležava <strong>24. novembra po gregorijanskom kalendaru, odnosno 11. novembra po julijanskom kalendaru</strong>. U srpskoj pravoslavnoj tradiciji ovaj dan vezuje se za Svetog kralja Stefana Dečanskog, sina kralja Milutina i oca cara Dušana.</p><p>Mratindan je krsna slava brojnih porodica u Srbiji, a u narodu je poznat i kao dan koji najavljuje dolazak zime. Za njega su vezana različita verovanja o vremenu, vukovima i zaštiti domaćinstva.</p><p>U 2026. godini Mratindan pada u utorak, 24. novembra, i nije posni dan. Ipak, pravila slavske trpeze uvek treba posmatrati prema crkvenom kalendaru za konkretnu godinu.</p>"
-    },
-    {
-      "subtitle": "Ko je bio Sveti kralj Stefan Dečanski?",
-      "text": "<p>Sveti Stefan Dečanski, poznat i kao Stefan Uroš III Nemanjić, bio je srpski kralj iz dinastije Nemanjića. Bio je sin kralja Milutina i otac cara Dušana, a njegovo ime ostalo je posebno značajno u istoriji srpske države i pravoslavne crkve.</p><p>Njegov život obeležili su teški porodični sukobi i stradanja. Po naređenju svog oca bio je oslepljen i poslat u Carigrad, gde je proveo više godina kao zatočenik u manastiru Hrista Svedržitelja, poznatom i kao manastir Pantokrator.</p><p>Prema crkvenom predanju, tokom zatočeništva javio mu se Sveti Nikola i obećao da će mu vratiti vid. Nakon pet godina, svetitelj mu se ponovo javio i Stefan je čudesno progledao. Ovo predanje postalo je jedan od najpoznatijih događaja iz njegovog života.</p><p>Po povratku u Srbiju Stefan je postao kralj i ostavio značajan trag kao vladar i ktitor. Njegova najpoznatija zadužbina je manastir Visoki Dečani na Kosovu i Metohiji, podignut u znak zahvalnosti Bogu i Svetom Nikoli.</p>"
-    },
-    {
-      "subtitle": "Stradanje i svetiteljsko poštovanje",
-      "text": "<p>Vladavina Stefana Dečanskog završena je u vreme novih sukoba unutar dinastije Nemanjića. Njegov sin Dušan preuzeo je vlast, a Stefan je završio život u zatočeništvu, gde je, prema istorijskim izvorima i crkvenom predanju, nasilno izgubio život.</p><p>Crkva ga poštuje kao svetog kralja i mučenika. Njegove mošti počivaju u manastiru Visoki Dečani, koji je postao jedno od najvažnijih duhovnih i kulturnih središta srpskog naroda.</p><p>Sveti Stefan Dečanski posebno se poštuje kao primer trpljenja, vere i praštanja uprkos velikim životnim iskušenjima. Vernici mu se obraćaju u molitvama, između ostalog i za zdravlje očiju, zbog predanja o čudesnom povratku vida.</p>"
-    },
-    {
-      "subtitle": "Zašto se praznik zove Mratindan?",
-      "text": "<p>Naziv Mratindan duboko je ukorenjen u narodnoj tradiciji. Praznik se vezuje za Svetog kralja Stefana Dečanskog, ali se ime Sveti Mrata povezuje i sa starijim običajima i poštovanjem Svetog Martina, čiji se praznik obeležavao istog datuma prema starom kalendaru.</p><p>Vremenom su se crkveno praznovanje Svetog Stefana Dečanskog i narodni običaji vezani za Svetog Mratu prepletali, pa je naziv Mratindan ostao prisutan u svakodnevnom govoru i narodnom kalendaru.</p><p>Zbog toga se u Srbiji i danas često kaže Sveti Mrata ili Mratindan, iako je praznik u crkvenom kalendaru posvećen Svetom kralju Stefanu Dečanskom.</p>"
-    },
-    {
-      "subtitle": "„Sveti Mrata, sneg na vrata“ - šta znači poznata izreka?",
-      "text": "<p>Jedna od najpoznatijih narodnih izreka vezanih za ovaj praznik glasi: <strong>„Sveti Mrata, sneg na vrata“</strong>. Ona se odnosi na period godine u kojem se očekuje zahlađenje i dolazak pravih zimskih dana.</p><p>U tradicionalnom narodnom kalendaru Mratindan je označavao približavanje zime i vreme kada se završavaju poslovi na otvorenom, a domaćinstva se pripremaju za hladnije mesece.</p><p>Izreka nije vremenska prognoza, već deo narodnog iskustva i običaja nastalih u vremenu kada su ljudi pažljivo pratili prirodu i promene vremena kako bi planirali život i rad na selu.</p>"
-    },
-    {
-      "subtitle": "Mratindan i verovanja o vukovima",
-      "text": "<p>U narodnoj tradiciji Mratindan je povezan i sa vukovima. Verovalo se da Sveti Mrata na ovaj dan okuplja vukove i određuje im područja na kojima će tokom zime tražiti hranu. Zbog toga su se u pojedinim krajevima Srbije dani oko Mratindana nazivali i vučjim danima ili Mratincima.</p><p>Ova verovanja bila su naročito važna u seoskim sredinama, gde je stoka predstavljala osnovu porodične egzistencije. Ljudi su nastojali da posebnim običajima zaštite ovce, goveda i ostale domaće životinje od divljih zveri.</p><p>U nekim krajevima se verovalo da stoku na Mratindan ne treba izvoditi iz tora i štale, kako bi tokom zime bila sačuvana od vukova. Ovakvi običaji razlikovali su se od mesta do mesta i predstavljaju deo narodnog predanja, a ne crkvena pravila.</p>"
-    },
-    {
-      "subtitle": "Običaji za Mratindan",
-      "text": "<p>Za Mratindan su se u različitim delovima Srbije sačuvali običaji koji su uglavnom bili povezani sa zaštitom domaćinstva, stoke i porodice tokom zime. Verovanja su se razlikovala od kraja do kraja, ali su neka od njih bila veoma rasprostranjena.</p><ul><li><strong>Ništa se ne iznosi iz kuće:</strong> prema narodnom verovanju, na ovaj dan nije trebalo pozajmljivati niti davati stvari iz domaćinstva.</li><li><strong>Stoka ostaje u štalama:</strong> u pojedinim krajevima životinje se nisu izvodile iz tora, kako bi bile zaštićene od vukova.</li><li><strong>Izbegavali su se pojedini kućni poslovi:</strong> negde se nije prela vuna, prao veš niti obavljali poslovi sa oštrim predmetima.</li><li><strong>Domaćin preuzima kućne poslove:</strong> u nekim sredinama postojao je običaj da muškarac tog dana obavi poslove koje inače rade žene, što se smatralo dobrim znakom za domaćinstvo.</li></ul><p>Ovi običaji potiču iz narodnih verovanja i nisu obavezujući deo pravoslavnog bogosluženja. Vernici praznik pre svega obeležavaju molitvom i sećanjem na Svetog Stefana Dečanskog.</p>"
-    },
-    {
-      "subtitle": "Mratindan kao krsna slava",
-      "text": "<p>Mratindan je krsna slava brojnih pravoslavnih porodica. Kao i za druge slave, pripremaju se slavski kolač, žito i sveća, a porodica se okuplja kako bi obeležila dan svog svetitelja.</p><p>Da li će slavska trpeza biti posna ili mrsna zavisi od dana u nedelji i pravila crkvenog posta. U 2026. godini Mratindan pada u utorak, pre početka Božićnog posta, pa je trpeza mrsna. U godinama kada 24. novembar pada u sredu ili petak, potrebno je poštovati pravila posta.</p><p>Suština krsne slave nije u bogatoj trpezi, već u molitvi, zahvalnosti i očuvanju porodične tradicije. Mratindan je prilika da se vernici podsete života i stradanja Svetog Stefana Dečanskog, kao i vrednosti vere, strpljenja i praštanja.</p><p>Datume svih pravoslavnih praznika, slava i dana posta možete pogledati u našem <a href=\"/2026/\">crkvenom kalendaru za 2026. godinu</a>.</p>"
-    }
-  ],
-  "tags": [
-    "Sveti Mrata",
-    "Mratindan",
-    "Sveti Stefan Dečanski",
-    "24. novembar",
-    "običaji za Mratindan",
-    "pravoslavni praznici",
-    "krsna slava"
-  ],
-  "source": "crkveni-kalendar",
-  "page_view": 0
-},
+    "lead": "Mratindan se obeležava 24. novembra i u srpskoj tradiciji vezuje se za Svetog kralja Stefana Dečanskog. Ovaj praznik prate brojna narodna verovanja o početku zime, vukovima i zaštiti stoke, a jedna od najpoznatijih izreka glasi: „Sveti Mrata, sneg na vrata“. Saznajte ko je bio Sveti Stefan Dečanski i koji običaji se vezuju za Mratindan.",
+    "body": [
+      {
+        "subtitle": "Kada se slavi Mratindan?",
+        "text": "<p>Mratindan se obeležava <strong>24. novembra po gregorijanskom kalendaru, odnosno 11. novembra po julijanskom kalendaru</strong>. U srpskoj pravoslavnoj tradiciji ovaj dan vezuje se za Svetog kralja Stefana Dečanskog, sina kralja Milutina i oca cara Dušana.</p><p>Mratindan je krsna slava brojnih porodica u Srbiji, a u narodu je poznat i kao dan koji najavljuje dolazak zime. Za njega su vezana različita verovanja o vremenu, vukovima i zaštiti domaćinstva.</p><p>U 2026. godini Mratindan pada u utorak, 24. novembra, i nije posni dan. Ipak, pravila slavske trpeze uvek treba posmatrati prema crkvenom kalendaru za konkretnu godinu.</p>"
+      },
+      {
+        "subtitle": "Ko je bio Sveti kralj Stefan Dečanski?",
+        "text": "<p>Sveti Stefan Dečanski, poznat i kao Stefan Uroš III Nemanjić, bio je srpski kralj iz dinastije Nemanjića. Bio je sin kralja Milutina i otac cara Dušana, a njegovo ime ostalo je posebno značajno u istoriji srpske države i pravoslavne crkve.</p><p>Njegov život obeležili su teški porodični sukobi i stradanja. Po naređenju svog oca bio je oslepljen i poslat u Carigrad, gde je proveo više godina kao zatočenik u manastiru Hrista Svedržitelja, poznatom i kao manastir Pantokrator.</p><p>Prema crkvenom predanju, tokom zatočeništva javio mu se Sveti Nikola i obećao da će mu vratiti vid. Nakon pet godina, svetitelj mu se ponovo javio i Stefan je čudesno progledao. Ovo predanje postalo je jedan od najpoznatijih događaja iz njegovog života.</p><p>Po povratku u Srbiju Stefan je postao kralj i ostavio značajan trag kao vladar i ktitor. Njegova najpoznatija zadužbina je manastir Visoki Dečani na Kosovu i Metohiji, podignut u znak zahvalnosti Bogu i Svetom Nikoli.</p>"
+      },
+      {
+        "subtitle": "Stradanje i svetiteljsko poštovanje",
+        "text": "<p>Vladavina Stefana Dečanskog završena je u vreme novih sukoba unutar dinastije Nemanjića. Njegov sin Dušan preuzeo je vlast, a Stefan je završio život u zatočeništvu, gde je, prema istorijskim izvorima i crkvenom predanju, nasilno izgubio život.</p><p>Crkva ga poštuje kao svetog kralja i mučenika. Njegove mošti počivaju u manastiru Visoki Dečani, koji je postao jedno od najvažnijih duhovnih i kulturnih središta srpskog naroda.</p><p>Sveti Stefan Dečanski posebno se poštuje kao primer trpljenja, vere i praštanja uprkos velikim životnim iskušenjima. Vernici mu se obraćaju u molitvama, između ostalog i za zdravlje očiju, zbog predanja o čudesnom povratku vida.</p>"
+      },
+      {
+        "subtitle": "Zašto se praznik zove Mratindan?",
+        "text": "<p>Naziv Mratindan duboko je ukorenjen u narodnoj tradiciji. Praznik se vezuje za Svetog kralja Stefana Dečanskog, ali se ime Sveti Mrata povezuje i sa starijim običajima i poštovanjem Svetog Martina, čiji se praznik obeležavao istog datuma prema starom kalendaru.</p><p>Vremenom su se crkveno praznovanje Svetog Stefana Dečanskog i narodni običaji vezani za Svetog Mratu prepletali, pa je naziv Mratindan ostao prisutan u svakodnevnom govoru i narodnom kalendaru.</p><p>Zbog toga se u Srbiji i danas često kaže Sveti Mrata ili Mratindan, iako je praznik u crkvenom kalendaru posvećen Svetom kralju Stefanu Dečanskom.</p>"
+      },
+      {
+        "subtitle": "„Sveti Mrata, sneg na vrata“ - šta znači poznata izreka?",
+        "text": "<p>Jedna od najpoznatijih narodnih izreka vezanih za ovaj praznik glasi: <strong>„Sveti Mrata, sneg na vrata“</strong>. Ona se odnosi na period godine u kojem se očekuje zahlađenje i dolazak pravih zimskih dana.</p><p>U tradicionalnom narodnom kalendaru Mratindan je označavao približavanje zime i vreme kada se završavaju poslovi na otvorenom, a domaćinstva se pripremaju za hladnije mesece.</p><p>Izreka nije vremenska prognoza, već deo narodnog iskustva i običaja nastalih u vremenu kada su ljudi pažljivo pratili prirodu i promene vremena kako bi planirali život i rad na selu.</p>"
+      },
+      {
+        "subtitle": "Mratindan i verovanja o vukovima",
+        "text": "<p>U narodnoj tradiciji Mratindan je povezan i sa vukovima. Verovalo se da Sveti Mrata na ovaj dan okuplja vukove i određuje im područja na kojima će tokom zime tražiti hranu. Zbog toga su se u pojedinim krajevima Srbije dani oko Mratindana nazivali i vučjim danima ili Mratincima.</p><p>Ova verovanja bila su naročito važna u seoskim sredinama, gde je stoka predstavljala osnovu porodične egzistencije. Ljudi su nastojali da posebnim običajima zaštite ovce, goveda i ostale domaće životinje od divljih zveri.</p><p>U nekim krajevima se verovalo da stoku na Mratindan ne treba izvoditi iz tora i štale, kako bi tokom zime bila sačuvana od vukova. Ovakvi običaji razlikovali su se od mesta do mesta i predstavljaju deo narodnog predanja, a ne crkvena pravila.</p>"
+      },
+      {
+        "subtitle": "Običaji za Mratindan",
+        "text": "<p>Za Mratindan su se u različitim delovima Srbije sačuvali običaji koji su uglavnom bili povezani sa zaštitom domaćinstva, stoke i porodice tokom zime. Verovanja su se razlikovala od kraja do kraja, ali su neka od njih bila veoma rasprostranjena.</p><ul><li><strong>Ništa se ne iznosi iz kuće:</strong> prema narodnom verovanju, na ovaj dan nije trebalo pozajmljivati niti davati stvari iz domaćinstva.</li><li><strong>Stoka ostaje u štalama:</strong> u pojedinim krajevima životinje se nisu izvodile iz tora, kako bi bile zaštićene od vukova.</li><li><strong>Izbegavali su se pojedini kućni poslovi:</strong> negde se nije prela vuna, prao veš niti obavljali poslovi sa oštrim predmetima.</li><li><strong>Domaćin preuzima kućne poslove:</strong> u nekim sredinama postojao je običaj da muškarac tog dana obavi poslove koje inače rade žene, što se smatralo dobrim znakom za domaćinstvo.</li></ul><p>Ovi običaji potiču iz narodnih verovanja i nisu obavezujući deo pravoslavnog bogosluženja. Vernici praznik pre svega obeležavaju molitvom i sećanjem na Svetog Stefana Dečanskog.</p>"
+      },
+      {
+        "subtitle": "Mratindan kao krsna slava",
+        "text": "<p>Mratindan je krsna slava brojnih pravoslavnih porodica. Kao i za druge slave, pripremaju se slavski kolač, žito i sveća, a porodica se okuplja kako bi obeležila dan svog svetitelja.</p><p>Da li će slavska trpeza biti posna ili mrsna zavisi od dana u nedelji i pravila crkvenog posta. U 2026. godini Mratindan pada u utorak, pre početka Božićnog posta, pa je trpeza mrsna. U godinama kada 24. novembar pada u sredu ili petak, potrebno je poštovati pravila posta.</p><p>Suština krsne slave nije u bogatoj trpezi, već u molitvi, zahvalnosti i očuvanju porodične tradicije. Mratindan je prilika da se vernici podsete života i stradanja Svetog Stefana Dečanskog, kao i vrednosti vere, strpljenja i praštanja.</p><p>Datume svih pravoslavnih praznika, slava i dana posta možete pogledati u našem <a href=\"/2026/\">crkvenom kalendaru za 2026. godinu</a>.</p>"
+      }
+    ],
+    "tags": [
+      "Sveti Mrata",
+      "Mratindan",
+      "Sveti Stefan Dečanski",
+      "24. novembar",
+      "običaji za Mratindan",
+      "pravoslavni praznici",
+      "krsna slava"
+    ],
+    "source": "crkveni-kalendar",
+    "page_view": 0
+  },
   {
     "news_id": 11,
     "type": "praznik",
