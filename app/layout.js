@@ -108,7 +108,7 @@ export default function RootLayout({ children }) {
               var mappingSideBar2 = googletag.sizeMapping().addSize([21,21],[[300,250]]).addSize([860,21],[[300,250]]).addSize([1030,21],[[300,250]]).build();
               var mappingInText = googletag.sizeMapping().addSize([21,21],[[300,250]]).addSize([860,21],[[300,250]]).addSize([1030,21],[[300,250]]).build();
               var mappingCalendar = googletag.sizeMapping().addSize([21,21],[320,100]).addSize([1030,21],[]).build();
-              var mappingSticky = googletag.sizeMapping().addSize([21,21],[320,100]).addSize([320,21],[320,100]).addSize([768,21],[728,90]).addSize([1023,21],[728,90]).build();
+              var mappingSticky = googletag.sizeMapping().addSize([21,21],[[1,1],[320,100]]).addSize([320,21],[[1,1],[320,100]]).addSize([768,21],[[1,1],[728,90]]).addSize([1023,21],[[1,1],[728,90]]).build();
 
               googletag.defineSlot('/23098387262/crkveni-kalendar/crkveni-kalendar-afterText-1',[[320,100],[300,250],[728,90]],'div-gpt-ad-1750409157804-0').addService(googletag.pubads()).defineSizeMapping(mappingAfterText);
               googletag.defineSlot('/23098387262/crkveni-kalendar/crkveni-kalendar-afterText-2',[[320,100],[300,250],[728,90]],'div-gpt-ad-1750409277034-0').addService(googletag.pubads()).defineSizeMapping(mappingAfterText);
@@ -117,7 +117,7 @@ export default function RootLayout({ children }) {
               googletag.defineSlot('/23098387262/crkveni-kalendar/crkveni-kalendar-bilbord',[[728,90],[320,100],[970,250]],'div-gpt-ad-1761641124263-0').addService(googletag.pubads()).defineSizeMapping(mappingBillboard);
               googletag.defineSlot('/23098387262/crkveni-kalendar/crkveni-kalendar-sb-2',[[728,90],[320,100],[970,250]],'div-gpt-ad-1763130338013-0').addService(googletag.pubads()).defineSizeMapping(mappingSideBar2);
               googletag.defineSlot('/23098387262/crkveni-kalendar/crkveni-kalendar-infeed',[[728,90],[320,100],[970,250]],'div-gpt-ad-1764593675864-0').addService(googletag.pubads()).defineSizeMapping(mappingBillboard);
-              googletag.defineSlot('/23098387262/crkveni-kalendar/crkveni-kalendar-sticky',[[320,100],[728,90]],'div-gpt-ad-1768472077826-0').addService(googletag.pubads()).defineSizeMapping(mappingSticky);
+              googletag.defineSlot('/23098387262/crkveni-kalendar/crkveni-kalendar-sticky',[[1,1],[320,100],[728,90]],'div-gpt-ad-1768472077826-0').addService(googletag.pubads()).defineSizeMapping(mappingSticky);
 
               googletag.defineSlot('/23098387262/crkveni-kalendar/InCalendar-1',[320,100],'div-gpt-ad-1769765602091-0').addService(googletag.pubads()).defineSizeMapping(mappingCalendar);
               googletag.defineSlot('/23098387262/crkveni-kalendar/InCalendar-2',[320,100],'div-gpt-ad-1769765622164-0').addService(googletag.pubads()).defineSizeMapping(mappingCalendar);
