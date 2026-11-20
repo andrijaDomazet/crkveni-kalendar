@@ -2,7 +2,7 @@
 import { lazy, Suspense, useEffect, useState } from "react";
 import "./SinglePost.scss";
 import BodyText from "../../components/BodyText/BodyText";
-import { urlTitle2 } from "../../shared/utility";
+import { urlTitle2, formatArticleDate } from "../../shared/utility";
 import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
 import ArticleBox from "../../components/Boxes/ArticleBox/ArticleBox";
 import molitve from "../../molitve.json";
@@ -56,6 +56,7 @@ export default function SinglePost() {
   }
 
   const displayTitle = isNews.title_2 || isNews.title;
+  const heroDate = formatArticleDate(isNews.time2);
 
   return (
     <div className="singlePost">
@@ -65,30 +66,36 @@ export default function SinglePost() {
       </div>
       <div className="content">
         <main className="mainContent">
-          <figure
-            className="mainContent-img"
-            itemProp="image"
-            itemScope
-            itemType="https://schema.org/ImageObject"
-          >
-            <div className="mainContent-title">
-              <h1>{cyr(`${isNews.title_2 || isNews.title}`)}</h1>
+          <div className="mainContent-hero">
+            <figure
+              className="mainContent-img"
+              itemProp="image"
+              itemScope
+              itemType="https://schema.org/ImageObject"
+            >
+              <PostImage
+                src={isNews.pics[0]}
+                alt={displayTitle}
+                loading="eager"
+              />
+              <div className="mainContent-img_source">
+                {cyr(`Foto:`)} {cyr(`${isNews.pics && isNews.pics[1]}`)}
+              </div>
+            </figure>
+            <div className="mainContent-hero-body">
+              {heroDate && (
+                <span className="mainContent-hero-date">
+                  <i className="fa-solid fa-calendar-days"></i>
+                  {heroDate}
+                </span>
+              )}
+              <h1 className="mainContent-title">{cyr(`${displayTitle}`)}</h1>
+              <p className="mainContent-hero-lead">{cyr(`${isNews.lead}`)}</p>
             </div>
-            <PostImage
-              src={isNews.pics[0]}
-              alt={displayTitle}
-              loading="eager"
-            />
-            <div className="mainContent-img_source">
-              {cyr(`Foto:`)} {cyr(`${isNews.pics && isNews.pics[1]}`)}
-            </div>
-          </figure>
+          </div>
 
           <div className="mainContent-body">
             <div className="mainContent-text">
-              <strong className="mainContent-lead">
-                {cyr(`${isNews.lead}`)}
-              </strong>
               {pathPart[1] === "meseceve-mene" && (
                 <Suspense fallback={<div></div>}>
                   <div style={{ margin: "1rem 0" }}>

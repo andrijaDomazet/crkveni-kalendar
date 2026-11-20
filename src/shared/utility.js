@@ -1,7 +1,16 @@
 import React from "react";
 import Link from "next/link";
-import { blackDays } from "../components/Calendar/calendar-data/calendar-data";
+import {
+  blackDays,
+  monthSerb,
+} from "../components/Calendar/calendar-data/calendar-data";
 import { useScriptContext } from "./ScriptProvider";
+
+export function formatArticleDate(iso) {
+  const d = new Date(iso);
+  if (!iso || isNaN(d)) return null;
+  return `${d.getDate()}. ${monthSerb[d.getMonth()]}`;
+}
 
 export function urlTitle2(title) {
   const cyrilic = ["č", "ć", "ž", "š", "đ", ",", ":", "-", "?", "!", "."];

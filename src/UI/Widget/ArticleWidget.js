@@ -1,7 +1,7 @@
 import React from "react";
 import "./ArticleWidget.scss";
 import { useScriptContext } from "../../shared/ScriptProvider";
-import { monthSerb } from "../../components/Calendar/calendar-data/calendar-data.js";
+import { formatArticleDate } from "../../shared/utility.js";
 
 const CATEGORY_COLORS = [
   "#4f7942",
@@ -23,12 +23,6 @@ function categoryColor(category) {
   return CATEGORY_COLORS[Math.abs(hash) % CATEGORY_COLORS.length];
 }
 
-function formatDate(iso) {
-  const d = new Date(iso);
-  if (!iso || isNaN(d)) return null;
-  return `${d.getDate()}. ${monthSerb[d.getMonth()]}`;
-}
-
 function LeafIcon() {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -47,7 +41,7 @@ export default function ArticleWidget(props) {
 
   if (size === "large") {
     const lead = cyr(`${data.lead_2 || data.lead || ""}`);
-    const date = formatDate(data.time2);
+    const date = formatArticleDate(data.time2);
     return (
       <div className="articleWidget-wrap">
         <a target="_blank" className="wBox large" href={data.testUrl}>
