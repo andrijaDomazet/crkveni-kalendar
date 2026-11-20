@@ -1,7 +1,8 @@
 [
   {
     "date": [0, 2],
-    "title": "Sv. Ignjatije Bogonosac"
+    "title": "Sv. Ignjatije Bogonosac",
+    "artLink": "/praznici/sveti-ignjatije-bogonosac/"
   },
   {
     "date": [0, 9],
@@ -180,7 +181,7 @@
   {
     "date": [10, 26],
     "title": "Sv. Jovan Zlatousti",
-        "artLink": "/praznici/sveti-jovan-zlatousti/"
+    "artLink": "/praznici/sveti-jovan-zlatousti/"
   },
   {
     "date": [10, 29],

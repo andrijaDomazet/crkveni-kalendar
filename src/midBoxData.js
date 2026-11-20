@@ -1,5 +1,5 @@
 export const nextHolidays = [
-  // ["2. januar", "Sv. Ignjatije Bogonosac"],
+  // ["2. januar", "Sv. Ignjatije Bogonosac", "/praznici/sveti-ignjatije-bogonosac/"],
   // ["6. januar", "Badnjidan"],
   // ["7. januar", "Roždestvo Hristovo - Božić"],
   // ["8. januar", "Sabor Presvete Bogorodice"],
