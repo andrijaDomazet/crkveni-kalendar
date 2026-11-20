@@ -2,7 +2,11 @@
 import { lazy, Suspense, useEffect, useState } from "react";
 import "./SinglePost.scss";
 import BodyText from "../../components/BodyText/BodyText";
-import { urlTitle2, formatArticleDate } from "../../shared/utility";
+import {
+  urlTitle2,
+  formatArticleDate,
+  formatMonthDay,
+} from "../../shared/utility";
 import AdManagerSlot from "../../components/AdvModule/AdManagerSlot";
 import ArticleBox from "../../components/Boxes/ArticleBox/ArticleBox";
 import molitve from "../../molitve.json";
@@ -56,7 +60,9 @@ export default function SinglePost() {
   }
 
   const displayTitle = isNews.title_2 || isNews.title;
-  const heroDate = formatArticleDate(isNews.time2);
+  const heroDate = isNews.holidayDate
+    ? formatMonthDay(isNews.holidayDate[0], isNews.holidayDate[1])
+    : formatArticleDate(isNews.time2);
 
   return (
     <div className="singlePost">

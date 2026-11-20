@@ -12,6 +12,10 @@ export function formatArticleDate(iso) {
   return `${d.getDate()}. ${monthSerb[d.getMonth()]}`;
 }
 
+export function formatMonthDay(monthIndex, day) {
+  return `${day}. ${monthSerb[monthIndex]}`;
+}
+
 export function urlTitle2(title) {
   const cyrilic = ["č", "ć", "ž", "š", "đ", ",", ":", "-", "?", "!", "."];
   const replArray = ["c", "c", "z", "s", "dj", "", "", "", "", "", ""];
