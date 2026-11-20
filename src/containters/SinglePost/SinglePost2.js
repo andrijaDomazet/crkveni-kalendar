@@ -43,7 +43,7 @@ export default function SinglePost2() {
       <div className="content">
         <main className="mainContent">
           <article className="mainContent-wrapper">
-            <h1 className="mainContent-title">{setTitle(newsPost)}</h1>
+            <h1 className="mainContent-title">{cyr(`${setTitle(newsPost)}`)}</h1>
             <div className="mainContent-img">
               <img src={`${newsPost.pics[0]}`} alt="" />
               <div className="mainContent-img_source">
