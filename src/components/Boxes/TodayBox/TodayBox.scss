@@ -87,18 +87,17 @@
         align-items: center;
         width: auto;
         padding: 0 0.8rem;
-        width: 120px;
         .circle {
           width: 10px;
           height: 10px;
           border-radius: 50%;
           background: #617043;
           margin-right: 0.5rem;
+          flex-shrink: 0;
         }
         span {
           padding: 0.5rem 0;
-          // margin: 1.5rem 0;
-
+          white-space: nowrap;
           color: #617043;
         }
       }
