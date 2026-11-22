@@ -46,16 +46,38 @@
         color: rgba(54, 36, 23, 0.7);
         font-size: 1.1rem;
       }
-      // a {
-      //   border-bottom: 3px solid rgba(54, 36, 23, 0.7);
-      // }
+
     }
 
     &:hover {
       background: #e0dad14d;
       cursor: pointer;
     }
+    &.midBox-bodyLine--skeleton:hover {
+      background: transparent;
+      cursor: default;
+    }
   }
+
+  .midBox-skeleton-block {
+    // background: linear-gradient(90deg, #eef2fd 25%, #f7f9ff 37%, #eef2fd 63%);
+    background-size: 400% 100%;
+    animation: midBox-shimmer 1.4s ease infinite;
+    strong,
+    span {
+      visibility: hidden;
+    }
+  }
+
+  .midBox-name.midBox-skeleton-block {
+    flex: 1;
+    height: 44px;
+    border-radius: 0.3rem;
+  }
+}
+@keyframes midBox-shimmer {
+  0% { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
 }
 .midBox-bodyLine .calendar-2026.zadusnice {
   font-style: italic;
