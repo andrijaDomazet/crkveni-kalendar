@@ -37,8 +37,10 @@ const SLOT_MAPPINGS_AND_DEFINITIONS = `
 
 const INTERSTITIAL_DEFINITION = `
               var mappingInterstitial = googletag.sizeMapping().addSize([0,0],[[300,250],[320,480]]).build();
-              interstitialSlot = googletag.defineOutOfPageSlot('/23098387262/crkveni-kalendar/crkveni-kalendar-interstitial', googletag.enums.OutOfPageFormat.INTERSTITIAL).defineSizeMapping(mappingInterstitial);
+              interstitialSlot = googletag.defineOutOfPageSlot('/23098387262/crkveni-kalendar/crkveni-kalendar-interstitial', googletag.enums.OutOfPageFormat.INTERSTITIAL);
+              // null kad format nije podrzan; greska ovde bi prekinula i enableServices (sve GPT reklame).
               if (interstitialSlot) {
+                interstitialSlot.defineSizeMapping(mappingInterstitial);
                 interstitialSlot.addService(googletag.pubads());
                 interstitialSlot.setConfig({ interstitial: { triggers: { navBar: true, unhideWindow: true } } });
               }
