@@ -12,7 +12,8 @@ const DYNAMIC = {
   MoonPhasesList,
 };
 
-export default function ArticleBody({ body = [] }) {
+// afterFirst: opcioni element (npr. reklama) koji se ubacuje posle prvog dela teksta.
+export default function ArticleBody({ body = [], afterFirst = null }) {
   const { cyr, cyrHtml: rawCyrHtml } = useScriptContext();
   const cyrHtml = (html) => cyrHtmlSafe(rawCyrHtml, html);
   const onClick = useInternalLinks();
@@ -45,6 +46,7 @@ export default function ArticleBody({ body = [] }) {
               />
             )}
             {Dynamic && <Dynamic />}
+            {index === 0 && afterFirst}
           </Fragment>
         );
       })}

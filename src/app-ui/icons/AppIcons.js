@@ -69,3 +69,5 @@ export const BowlIcon = make(
 export const ChevronRightIcon = make(<path d="m9 5 7 7-7 7" />);
 
 export const ChevronLeftIcon = make(<path d="m15 5-7 7 7 7" />);
+
+export const CloseIcon = make(<path d="M6 6l12 12M18 6 6 18" />);

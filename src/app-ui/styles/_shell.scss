@@ -53,7 +53,10 @@
 
 .app-main {
   flex: 1;
-  padding-bottom: calc(var(--app-tabs-h) + env(safe-area-inset-bottom, 0px) + 12px);
+  padding-bottom: calc(
+    var(--app-tabs-h) + var(--app-sticky-h, 0px) + env(safe-area-inset-bottom, 0px) +
+      12px
+  );
 }
 
 .app-screen {

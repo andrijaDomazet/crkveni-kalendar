@@ -88,15 +88,20 @@
   }
 }
 
+// Sirinu i visinu postavlja AppAd prema velicini slota; bez okvira da reklama ne bude isecena.
 .app-ad {
   position: relative;
-  min-height: 100px;
+  max-width: 100%;
+  margin-inline: auto;
   border-radius: 10px;
   background: var(--app-ad);
-  border: 1px solid var(--app-line);
   display: grid;
   place-items: center;
   overflow: hidden;
+
+  &[hidden] {
+    display: none;
+  }
 }
 
 .app-ad__label {
@@ -268,16 +273,36 @@
   font-weight: 600;
   line-height: 1.3;
   color: var(--app-strong);
+
+  &.is-red {
+    color: var(--app-red);
+  }
+
+  &.is-black {
+    color: var(--app-fg);
+    font-weight: 700;
+  }
 }
 
+// Praznik zapisan "crvenim slovom": ceo red crven, naziv podebljan (kao na webu).
 .app-week__row.is-red {
-  .app-week__date b {
+  .app-week__date b,
+  .app-week__date span,
+  .app-week__main,
+  .app-week__others {
     color: var(--app-red);
   }
 
   .app-week__main {
-    font-weight: 600;
+    font-weight: 700;
   }
+}
+
+// "Crni" praznici: podebljano tamno slovo.
+.app-week__main.is-black,
+.app-week__others .is-black {
+  font-weight: 700;
+  color: var(--app-fg);
 }
 
 .app-week__others {

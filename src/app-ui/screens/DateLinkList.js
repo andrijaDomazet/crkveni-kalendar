@@ -4,23 +4,42 @@ import { useScriptContext } from "../../shared/ScriptProvider";
 import { ChevronRightIcon } from "../icons/AppIcons";
 import { MONTHS_SHORT } from "../lib/dates";
 
-// Lista u stilu kalendara: datum levo, naslov desno. items: [{ href, day, month, title }]
+// Lista u stilu kalendara: datum levo, naslov desno.
+// items: [{ key, day, title, month?, href? }]. Bez `month` se prikazuje samo dan;
+// bez `href` red nije link.
 export default function DateLinkList({ items }) {
   const { cyr } = useScriptContext();
   return (
     <ul className="app-card app-datelist">
-      {items.map((item) => (
-        <li key={item.href}>
-          <Link href={item.href} className="app-datelist__link">
+      {items.map((item) => {
+        const content = (
+          <>
             <div className="app-week__date">
               <b>{item.day}</b>
-              <span>{cyr(MONTHS_SHORT[item.month])}</span>
+              {item.month !== undefined && (
+                <span>{cyr(MONTHS_SHORT[item.month])}</span>
+              )}
             </div>
             <span className="app-week__main">{cyr(item.title)}</span>
-            <ChevronRightIcon className="app-icon app-icon--sm app-datelist__chevron" />
-          </Link>
-        </li>
-      ))}
+            {item.href ? (
+              <ChevronRightIcon className="app-icon app-icon--sm app-datelist__chevron" />
+            ) : (
+              <span />
+            )}
+          </>
+        );
+        return (
+          <li key={item.key ?? item.href}>
+            {item.href ? (
+              <Link href={item.href} className="app-datelist__link">
+                {content}
+              </Link>
+            ) : (
+              <div className="app-datelist__link is-static">{content}</div>
+            )}
+          </li>
+        );
+      })}
     </ul>
   );
 }

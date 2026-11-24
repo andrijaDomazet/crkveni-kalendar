@@ -8,7 +8,7 @@ export function AdSenseScript() {
   );
 }
 
-const GPT_INIT = `var googletag = googletag || {};googletag.cmd = googletag.cmd || [];var interstitialSlot;`;
+export const GPT_INIT = `var googletag = googletag || {};googletag.cmd = googletag.cmd || [];var interstitialSlot;`;
 
 const SLOT_MAPPINGS_AND_DEFINITIONS = `
               var mappingBillboard = googletag.sizeMapping().addSize([21,21],[[1,1],[320,100]]).addSize([768,21],[[1,1],[728,90]]).addSize([1023,21],[[1,1],[970,250],[728,90]]).build();
@@ -44,7 +44,7 @@ const INTERSTITIAL_DEFINITION = `
               }
 `;
 
-const SERVICES_CONFIG = `
+export const SERVICES_CONFIG = `
               googletag.setConfig({centering: true});
               googletag.setConfig({ collapseDiv: { collapseBeforeAdFetch: true } });
               googletag.pubads().enableAsyncRendering();

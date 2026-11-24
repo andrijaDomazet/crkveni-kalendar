@@ -3,9 +3,6 @@ import { useRouteContext } from "../../shared/RouteProvider";
 import TodayCard from "./TodayCard";
 import FastingCard from "./FastingCard";
 import UpcomingCard from "./UpcomingCard";
-import AppAd from "./AppAd";
-
-const BANNER_SLOT = "div-gpt-ad-1761641124263-0";
 
 export default function TodayScreen() {
   const { currentDate } = useRouteContext();
@@ -24,7 +21,6 @@ export default function TodayScreen() {
   return (
     <div className="app-screen">
       <TodayCard />
-      <AppAd slot={BANNER_SLOT} />
       <FastingCard />
       <UpcomingCard />
     </div>

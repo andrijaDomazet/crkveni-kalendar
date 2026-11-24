@@ -109,7 +109,6 @@
   white-space: nowrap;
 }
 
-.app-slave,
 .app-names,
 .app-moonlist {
   padding: 4px 16px 16px;
@@ -118,10 +117,40 @@
   border-radius: 14px;
 }
 
-.app-slave__title {
-  margin-top: 12px;
+.app-section-title {
+  margin-top: 6px;
+  padding: 0 2px;
   font-family: var(--app-font-display);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+}
+
+.app-month-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+// Naslov meseca u listama (Januar, Februar...): velika slova i istaknuta boja.
+.app-month-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 2px 0;
+  font-family: var(--app-font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--app-strong);
+
+  &::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--app-line);
+  }
+}
+
+.app-datelist__link.is-static {
+  cursor: default;
 }
 
 .app-names {

@@ -1,14 +1,14 @@
 "use client";
 import { useScriptContext } from "../../shared/ScriptProvider";
 import { monthSerb } from "../../components/Calendar/calendar-data/calendar-data";
-import AppAd from "../today/AppAd";
+import AppAd from "../ads/AppAd";
+import { AD_ARTICLE_END, AD_IN_TEXT } from "../ads/slots";
 import ArticleBody from "./ArticleBody";
 import { displayTitle } from "../lib/content";
 
-const ARTICLE_AD_SLOT = "div-gpt-ad-1750409157804-0";
-
 // Prikaz jednog clanka (ili molitve): naslov, uvod, telo, dodatni sadrzaj ispod.
 // Hero slika je samo za praznike; na ostalim stranicama je SEO slika koja app-u ne treba.
+// Prva reklama ide posle prvog pasusa, druga na kraju clanka.
 export default function ArticleScreen({ article, showHero = false, children }) {
   const { cyr } = useScriptContext();
 
@@ -45,10 +45,13 @@ export default function ArticleScreen({ article, showHero = false, children }) {
           <h1>{cyr(displayTitle(article))}</h1>
           {article.lead && <p className="app-article__lead">{cyr(article.lead)}</p>}
         </div>
-        <ArticleBody body={article.body} />
+        <ArticleBody
+          body={article.body}
+          afterFirst={<AppAd slot={AD_IN_TEXT} />}
+        />
       </article>
       {children}
-      <AppAd slot={ARTICLE_AD_SLOT} />
+      <AppAd slot={AD_ARTICLE_END} />
     </div>
   );
 }

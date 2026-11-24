@@ -1,6 +1,5 @@
 "use client";
 import LinkList from "./LinkList";
-import SettingsScreen from "./SettingsScreen";
 
 const CONTENT_ITEMS = [
   { href: "/app/postovi/", title: "Hrišćanski post" },
@@ -14,13 +13,13 @@ const INFO_ITEMS = [
   { href: "/app/info/o-nama/", title: "O nama" },
   { href: "/app/info/pravila-koriscenja/", title: "Pravila korišćenja" },
   { href: "/app/info/politika-privatnosti/", title: "Politika privatnosti" },
+  { href: "/app/podesavanja/", title: "Podešavanja" },
 ];
 
 export default function MoreScreen() {
   return (
     <div className="app-screen">
       <LinkList items={CONTENT_ITEMS} />
-      <SettingsScreen />
       <LinkList items={INFO_ITEMS} />
     </div>
   );

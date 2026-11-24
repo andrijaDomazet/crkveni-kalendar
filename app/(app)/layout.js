@@ -5,7 +5,8 @@ import AppHead from "../../src/app-ui/shell/AppHead";
 import ThemeScript from "../../src/app-ui/theme/ThemeScript";
 import { ConsentDefaults, Preconnects } from "../../src/shared/head/SiteHead";
 import { GoogleAnalytics } from "../../src/shared/head/AnalyticsScripts";
-import { AdSenseScript, GptScripts } from "../../src/shared/head/AdScripts";
+import { AdSenseScript } from "../../src/shared/head/AdScripts";
+import AppGptScripts from "../../src/app-ui/ads/AppGptScripts";
 
 export const metadata = {
   metadataBase: new URL("https://crkveni-kalendar.net"),
@@ -32,7 +33,7 @@ export default function AppLayout({ children }) {
         <ConsentDefaults />
         <GoogleAnalytics />
         <AdSenseScript />
-        <GptScripts interstitial={false} />
+        <AppGptScripts />
         <AppProviders>
           <AppShell>{children}</AppShell>
         </AppProviders>
