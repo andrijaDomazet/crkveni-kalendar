@@ -4,7 +4,8 @@
     "namespace": "android_app",
     "package_name": "net.crkveni_kalendar.app",
     "sha256_cert_fingerprints": [
-      "EE:56:95:1E:20:28:1A:41:0D:5E:8E:61:CB:7F:92:BD:5F:39:C9:11:53:72:D4:2B:B9:DA:35:09:36:6A:73:2E"
+      "EE:56:95:1E:20:28:1A:41:0D:5E:8E:61:CB:7F:92:BD:5F:39:C9:11:53:72:D4:2B:B9:DA:35:09:36:6A:73:2E",
+      "57:0E:8C:33:31:F8:52:C5:BD:4C:E8:DE:AD:67:B6:A6:E6:92:3B:6F:C8:51:5A:74:94:62:47:92:90:5C:D1:76"
     ]
   }
 }]
