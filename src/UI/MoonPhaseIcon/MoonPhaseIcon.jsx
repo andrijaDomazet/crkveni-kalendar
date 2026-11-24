@@ -2,7 +2,7 @@
 
 // Mala SVG ikonica mesečeve mene za red u kalendaru.
 // phase: "mlad" | "prva" | "pun" | "poslednja"
-export default function MoonPhaseIcon({ phase, size = 14 }) {
+export default function MoonPhaseIcon({ phase, size = 14, color = "#b8862f" }) {
   const r = size / 2;
 
   // p vrednost po tipu faze (0 = mlad, 0.25 = prva, 0.5 = pun, 0.75 = poslednja)
@@ -38,10 +38,10 @@ export default function MoonPhaseIcon({ phase, size = 14 }) {
         cy={r}
         r={r - 1}
         fill="none"
-        stroke="#b8862f"
+        stroke={color}
         strokeWidth="1"
       />
-      {p > 0 && p < 1 && <path d={path} fill="#b8862f" />}
+      {p > 0 && p < 1 && <path d={path} fill={color} />}
       {p === 0 && <circle cx={r} cy={r} r={r - 1} fill="none" />}
     </svg>
   );

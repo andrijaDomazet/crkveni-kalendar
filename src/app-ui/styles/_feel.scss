@@ -1,0 +1,82 @@
+// Ponasanje kao prava aplikacija: dodir, oznacavanje teksta, pritisak, prelazi.
+
+body {
+  touch-action: manipulation;
+}
+
+// Kontrole se ne oznacavaju dugim pritiskom; tekst clanaka ostaje selektabilan.
+.app-header,
+.app-tabs,
+.app-month-nav,
+.app-segment,
+.app-week__date,
+.app-linklist__item,
+.app-datelist__link,
+.app-chip,
+button {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.app-prose,
+.app-article__head,
+.app-today__saint,
+.app-today__others,
+.app-week__text {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+// Povratna informacija na pritisak.
+.app-tab,
+.app-linklist__item,
+.app-datelist__link,
+.app-month-nav__btn,
+.app-segment__btn {
+  transition: background-color 0.12s ease;
+
+  &:active {
+    background: var(--app-tint);
+  }
+}
+
+.app-segment__btn.is-on:active {
+  background: var(--app-brand);
+}
+
+.app-header__back:active {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+// Kratak prelaz pri otvaranju ekrana (nema ga za skelet dok se ucitava).
+.app-screen {
+  animation: app-enter 0.2s ease-out both;
+
+  &[aria-busy="true"] {
+    animation: none;
+  }
+}
+
+@keyframes app-enter {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+// Bez vodoravnog skrola cele aplikacije; siroke tabele skroluju u svom okviru.
+.app-root {
+  overflow-x: clip;
+}
+
+// Aplikacija otvorena u obicnom browseru na sirokom ekranu: uokvirena kolona.
+@media (min-width: 600px) {
+  .app-root {
+    box-shadow: 0 0 0 1px var(--app-line);
+  }
+}

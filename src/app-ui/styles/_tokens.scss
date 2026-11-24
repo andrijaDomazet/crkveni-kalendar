@@ -1,0 +1,47 @@
+@mixin dark-tokens {
+  --app-bg: #151012;
+  --app-card: #211a1d;
+  --app-fg: #efe5db;
+  --app-muted: #a8999d;
+  --app-line: #352a2e;
+  --app-brand: #3a1520;
+  --app-on-brand: #f1e6da;
+  --app-ornament: #d8b46b;
+  --app-strong: #e0bd74;
+  --app-active: #e0bd74;
+  --app-tint: #2b2023;
+  --app-ad: #1d1618;
+  --app-red: #ff9a8f;
+  color-scheme: dark;
+}
+
+:root {
+  --app-bg: #f4eee5;
+  --app-card: #fffcf7;
+  --app-fg: #2b1f22;
+  --app-muted: #75666a;
+  --app-line: #e3d8c7;
+  --app-brand: #732639;
+  --app-on-brand: #f6efe6;
+  --app-ornament: #e3bd62;
+  --app-strong: #732639;
+  --app-active: #732639;
+  --app-tint: #f1e6d3;
+  --app-ad: #ece4d6;
+  --app-red: #b3261e;
+  --app-font-display: "Noto Serif", Georgia, "Times New Roman", serif;
+  --app-font-ui: Roboto, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --app-tabs-h: 64px;
+  --app-max-w: 560px;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-app-theme="light"]) {
+    @include dark-tokens;
+  }
+}
+
+:root[data-app-theme="dark"] {
+  @include dark-tokens;
+}

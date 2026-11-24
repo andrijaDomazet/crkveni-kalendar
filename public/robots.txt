@@ -2,5 +2,6 @@
 User-agent: *
 Disallow: /23098387262/
 Disallow: /cdn-cgi/
+Disallow: /app/
 
 Sitemap: https://crkveni-kalendar.net/sitemap.xml

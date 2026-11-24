@@ -4,6 +4,9 @@ const nextConfig = {
   sassOptions: {
     includePaths: ["./src"],
   },
+  experimental: {
+    globalNotFound: true,
+  },
 };
 
 module.exports = nextConfig;

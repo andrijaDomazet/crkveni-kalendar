@@ -31,7 +31,9 @@ export default function SideDrawer(props) {
     <div onClick={props.clicked}>
       <nav className={drawerClasses}>
         <div className="logo">
-          <img src="/img/logo.png" alt="logo" />
+          <NavLink to="/">
+            <img src="/img/logo.png" alt="Crkveni kalendar" />
+          </NavLink>
         </div>
         <ul>
           {options.slice(1).map((option, index) => {
