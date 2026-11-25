@@ -37,7 +37,6 @@ export const CalendarProvider = ({ children }) => {
   const postLookup = useMemo(() => {
     const bozicniPostStartTs = toTs(pageYear, 10, 28);
     const bozicniPostEndTs = toTs(pageYear, 0, 6);
-    const vikendPosleBozicaTs = toTs(pageYear, 0, 17);
     const petrovPostStartTs = toMidnightTs(new Date(petrovPostStartDate));
     const petrovPostEndTs = toTs(pageYear, 6, 11);
     const gospojinskiPostStartTs = toTs(pageYear, 7, 14);
@@ -64,10 +63,22 @@ export const CalendarProvider = ({ children }) => {
     );
     const isPostSet = new Set(daysIsPost.map(([m, d]) => toTs(pageYear, m, d)));
 
+    // Mrsna sedmica posle Božića
+    const bozicTs = toTs(pageYear, 0, 7);
+    const bozicDay = new Date(bozicTs).getDay(); // 0 = ned ... 6 = sub
+    const daysToMonday = (8 - bozicDay) % 7 || 7; // prvi ponedeljak POSLE Božića
+    const mrsnoPosleBozicaEndTs = toTs(pageYear, 0, 7 + daysToMonday + 6); // nedelja te sedmice
+
+    const ey = easterDay.getFullYear();
+    const em = easterDay.getMonth();
+    const ed = easterDay.getDate();
+
+    const bludniSinTs = toTs(ey, em, ed - 63); // Nedelja o bludnom sinu
+    const mrsnaSedmicaStartTs = toTs(ey, em, ed - 69); // ponedeljak pre nje
+
     return {
       bozicniPostStartTs,
       bozicniPostEndTs,
-      vikendPosleBozicaTs,
       petrovPostStartTs,
       petrovPostEndTs,
       gospojinskiPostStartTs,
@@ -77,12 +88,16 @@ export const CalendarProvider = ({ children }) => {
       easterTs,
       notPostSet,
       isPostSet,
+      bozicTs,
+      mrsnoPosleBozicaEndTs,
+      bludniSinTs,
+      mrsnaSedmicaStartTs,
     };
   }, [pageYear, easterDay]);
 
   const getTargetSundayBeforeChristmas = (year) => {
     // broj nedelja (Sunday) u periodu 1–6. januar naredne godine
-    const nextYear = pageYear + 1;
+    const nextYear = Number(pageYear) + 1;
     let sundayCount = 0;
 
     for (let d = 1; d <= 6; d++) {
@@ -159,6 +174,10 @@ export const CalendarProvider = ({ children }) => {
         ? dateInfo
         : new Date(dateInfo).setHours(0, 0, 0, 0);
     const {
+      bludniSinTs,
+      mrsnaSedmicaStartTs,
+      bozicTs,
+      mrsnoPosleBozicaEndTs,
       bozicniPostStartTs,
       bozicniPostEndTs,
       startEasterTs,
@@ -180,15 +199,13 @@ export const CalendarProvider = ({ children }) => {
     const day = new Date(ts).getDay();
 
     // Neposni dani nakon Božića — od Božića do prve nedjelje (uključujući nedjelju)
-    const bozicTs = toTs(pageYear, 0, 7);
-    const dateObj = new Date(ts);
-    if (ts >= bozicTs) {
-      // Nađi prvu nedjelju nakon Božića (ili sam Božić ako je nedjelja)
-      const bozicDate = new Date(bozicTs);
-      const daysUntilSunday =
-        bozicDate.getDay() === 0 ? 0 : 7 - bozicDate.getDay();
-      const firstSundayAfterBozicTs = toTs(pageYear, 0, 7 + daysUntilSunday);
-      if (ts <= firstSundayAfterBozicTs) return "";
+    if (ts >= bozicTs && ts <= mrsnoPosleBozicaEndTs) {
+      return isPostSet.has(ts) ? "post" : "";
+    }
+
+    // Mrsna sedmica: od ponedeljka posle Nedelje o mitaru i fariseju do Nedelje o bludnom sinu
+    if (ts >= mrsnaSedmicaStartTs && ts <= bludniSinTs) {
+      return isPostSet.has(ts) ? "post" : "";
     }
 
     // Petrovske poklade — sreda i petak u sedmici prije početka posta
@@ -219,7 +236,6 @@ export const CalendarProvider = ({ children }) => {
     }
     return filterHolidays();
   }, [pageYear, pageMonth, currentDate]);
-  // console.timeEnd("holidays calc");
 
   function filterHolidays() {
     const secondSundayBeforeChristmas =
