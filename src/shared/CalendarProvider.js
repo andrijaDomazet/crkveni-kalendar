@@ -75,7 +75,7 @@ export const CalendarProvider = ({ children }) => {
 
     const bludniSinTs = toTs(ey, em, ed - 63); // Nedelja o bludnom sinu
     const mrsnaSedmicaStartTs = toTs(ey, em, ed - 69); // ponedeljak pre nje
-
+    const svetlaSedmicaEndTs = toTs(ey, em, ed + 7); // Tomina nedelja
     return {
       bozicniPostStartTs,
       bozicniPostEndTs,
@@ -86,6 +86,7 @@ export const CalendarProvider = ({ children }) => {
       startEasterTs,
       endEasterTs,
       easterTs,
+      svetlaSedmicaEndTs,
       notPostSet,
       isPostSet,
       bozicTs,
@@ -182,6 +183,8 @@ export const CalendarProvider = ({ children }) => {
       bozicniPostEndTs,
       startEasterTs,
       endEasterTs,
+      easterTs,
+      svetlaSedmicaEndTs,
       petrovPostStartTs,
       petrovPostEndTs,
       gospojinskiPostStartTs,
@@ -207,7 +210,10 @@ export const CalendarProvider = ({ children }) => {
     if (ts >= mrsnaSedmicaStartTs && ts <= bludniSinTs) {
       return isPostSet.has(ts) ? "post" : "";
     }
-
+    // Svetla sedmica: od Vaskrsa do Tomine nedelje
+    if (ts >= easterTs && ts <= svetlaSedmicaEndTs) {
+      return isPostSet.has(ts) ? "post" : "";
+    }
     // Petrovske poklade — sreda i petak u sedmici prije početka posta
     const petrovPostaDateObj = new Date(petrovPostStartTs);
     const dayOfWeek = petrovPostaDateObj.getDay();
