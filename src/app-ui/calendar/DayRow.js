@@ -9,6 +9,7 @@ import {
 import { getMoonPhaseForDate } from "../../shared/moonPhaseLookup";
 import MoonPhaseIcon from "../../UI/MoonPhaseIcon/MoonPhaseIcon";
 import { WEEKDAYS_SHORT, splitTitles } from "../lib/dates";
+import SlavaBadge from "./SlavaBadge";
 
 const THURSDAY = 4;
 const SATURDAY = 6;
@@ -56,6 +57,7 @@ export default function DayRow({ date, item, isToday = false }) {
       </div>
       <div className="app-week__text">
         <span className={`app-week__main${isBlackDay(main) ? " is-black" : ""}`}>
+          {item?.slava && <SlavaBadge />}
           {cyr(main)}
         </span>
         {others.length > 0 && (

@@ -3,6 +3,7 @@ import { useRouteContext } from "../../shared/RouteProvider";
 import TodayCard from "./TodayCard";
 import FastingCard from "./FastingCard";
 import UpcomingCard from "./UpcomingCard";
+import ZadusniceCard from "./ZadusniceCard";
 
 export default function TodayScreen() {
   const { currentDate } = useRouteContext();
@@ -23,6 +24,7 @@ export default function TodayScreen() {
       <TodayCard />
       <FastingCard />
       <UpcomingCard />
+      <ZadusniceCard />
     </div>
   );
 }

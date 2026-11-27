@@ -1,0 +1,89 @@
+.app-zad__next {
+  margin: 4px 10px 6px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: var(--app-tint);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.app-zad__info {
+  min-width: 0;
+
+  strong {
+    display: block;
+    font-family: var(--app-font-display);
+    font-size: 1.02rem;
+  }
+
+  small {
+    font-size: 0.82rem;
+    color: var(--app-muted);
+  }
+}
+
+// "za / 99 / dana"
+.app-zad__count {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 1;
+  gap: 3px;
+
+  b {
+    font-family: var(--app-font-display);
+    font-size: 1.5rem;
+    color: var(--app-strong);
+  }
+
+  small {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--app-muted);
+  }
+}
+
+.app-zad__later {
+  padding: 0 16px 8px;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 9px 2px;
+    font-size: 0.9rem;
+  }
+
+  li + li {
+    border-top: 1px solid var(--app-line);
+  }
+
+  span:last-child {
+    color: var(--app-muted);
+    white-space: nowrap;
+  }
+}
+
+// Oznaka krsne slave.
+.app-slava {
+  display: inline-block;
+  margin-right: 6px;
+  padding: 1px 7px 2px;
+  border-radius: 5px;
+  background: var(--app-badge);
+  color: var(--app-on-badge);
+  font-family: var(--app-font-ui);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.35;
+  vertical-align: 2px;
+}
+
+.app-slava--today {
+  margin: 0 0 4px;
+  padding: 3px 12px;
+  font-size: 0.74rem;
+}

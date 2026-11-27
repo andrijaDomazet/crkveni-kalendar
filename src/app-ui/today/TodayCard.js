@@ -6,6 +6,7 @@ import { monthSerb } from "../../components/Calendar/calendar-data/calendar-data
 import { getMoonPhaseForDate } from "../../shared/moonPhaseLookup";
 import MoonPhaseIcon from "../../UI/MoonPhaseIcon/MoonPhaseIcon";
 import { CrossIcon } from "../icons/AppIcons";
+import SlavaBadge from "../calendar/SlavaBadge";
 import { WEEKDAYS, julianOf, splitTitles } from "../lib/dates";
 
 const MOON_LABELS = {
@@ -39,6 +40,7 @@ export default function TodayCard() {
         <CrossIcon />
       </div>
 
+      {todayHoliday?.slava && <SlavaBadge className="app-slava--today" />}
       {main && <h2 className="app-today__saint">{cyr(main)}</h2>}
       {others.length > 0 && (
         <ul className="app-today__others">
