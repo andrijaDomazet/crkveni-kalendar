@@ -32,6 +32,9 @@
       padding: 0 1rem;
       gap: 1.5rem;
       margin-bottom: 1.2rem;
+      .home__velikiPostovi-slot {
+        min-height: 190px;
+      }
     }
     .home__wrapper-center {
       order: 2;
@@ -45,12 +48,23 @@
       .home__calendar-slot {
         min-height: 1150px;
       }
+      // Same reasoning as .home__calendar-slot above, for the other
+      // lazy-loaded (code-split) sections on this page.
+      .home__calendarLinks-slot {
+        min-height: 290px;
+      }
+      .home__commandments-slot {
+        min-height: 390px;
+      }
       .home-afterZone {
         display: flex;
         flex-direction: column;
         border-radius: 0.1rem;
         gap: 1.5rem;
         padding: 0 0.7rem;
+        .home__molitva-slot {
+          min-height: 420px;
+        }
         .home__molitva {
           border-radius: 0.1rem;
           border: 1px solid #85614733;
@@ -104,12 +118,32 @@
       padding: 0 1rem;
       margin: 0 auto;
       gap: 1.5rem;
+      .home__vaskrs-slot {
+        min-height: 145px;
+      }
     }
+  }
+  // Same CLS-prevention reasoning as .home__calendar-slot, for the
+  // lazy-loaded Agroweb cross-promo widget rendered below .home__wrapper.
+  .home__widget-slot {
+    min-height: 1400px;
   }
 }
 @media screen and (min-width: 768px) {
   .home .home__wrapper .home__wrapper-center .home__calendar-slot {
     min-height: 950px;
+  }
+  .home .home__wrapper .home__wrapper-center .home__calendarLinks-slot {
+    min-height: 160px;
+  }
+  .home .home__wrapper .home__wrapper-center .home__commandments-slot {
+    min-height: 300px;
+  }
+  .home .home__wrapper .home__wrapper-center .home__molitva-slot {
+    min-height: 400px;
+  }
+  .home .home__widget-slot {
+    min-height: 620px;
   }
 }
 @media screen and (min-width: $large) {

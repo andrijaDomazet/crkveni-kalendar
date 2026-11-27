@@ -138,6 +138,42 @@
       border-right: 2px solid #dfa62099;
       border-bottom: 2px solid #dfa62099;
     }
+    .today-skeleton-block {
+      display: inline-block;
+      background: linear-gradient(90deg, #ebe3d6 25%, #f5efe6 37%, #ebe3d6 63%);
+      background-size: 400% 100%;
+      animation: today-shimmer 1.4s ease infinite;
+      border-radius: 0.3rem;
+      color: transparent;
+    }
+    .today-skeleton-day {
+      width: 80px;
+      height: 1.2rem;
+      margin-top: 1rem;
+    }
+    .today-skeleton-dayNum {
+      width: 100px;
+      height: 3.7rem;
+      margin: 0.4rem auto 0;
+    }
+    .today-skeleton-month {
+      width: 120px;
+      height: 1.2rem;
+      margin: 0 auto 0.8rem;
+    }
+    .today-skeleton-title {
+      width: 70%;
+      height: 1.6rem;
+      margin: 1.5rem auto;
+    }
+  }
+}
+@keyframes today-shimmer {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
   }
 }
 .today__box.horizontal {

@@ -79,9 +79,11 @@ export default function Home() {
             </p>
           </section>
 
-          <Suspense fallback={<div></div>}>
-            <CalendarMonthsLinksLazy />
-          </Suspense>
+          <div className="home__calendarLinks-slot">
+            <Suspense fallback={<div></div>}>
+              <CalendarMonthsLinksLazy />
+            </Suspense>
+          </div>
           <div className="banner-wrapper">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750409157804-0"} />
           </div>
@@ -90,7 +92,7 @@ export default function Home() {
             <div className="home__molitva">
               <div className="home__links second">
                 <h2>{cyr(`Oče naš - Molitva Gospodnja`)}</h2>
-                <div className="home__molitva-wrapper">
+                <div className="home__molitva-wrapper home__molitva-slot">
                   <Suspense fallback={<div></div>}>
                     <MolitvaLazy molitva={molitve[molitve.length - 1]} />
                   </Suspense>
@@ -126,7 +128,7 @@ export default function Home() {
           <div className="banner-wrapper fix-size-horizontal">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750409277034-0"} />
           </div>
-          <section>
+          <section className="home__commandments-slot">
             <Suspense fallback={<div></div>}>
               <SimpleBoxLazy
                 classes="green"
@@ -164,41 +166,47 @@ export default function Home() {
           <div className="banner-wrapper fix-size-mediumRectangle">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750930023966-0"} />
           </div>
-          <Suspense fallback={<div></div>}>
-            <SimpleBoxLazy
-              classes="green"
-              linkText="/hriscanski-post/"
-              mainTitle="🍞 Veliki postovi 2026."
-              mainBody={[
-                "Vaskršnji post — 23. 2. - 11. 4.",
-                "Petrovski post — 8. 6. - 11. 7.",
-                "Gospojinski post — 14. 8. - 27. 8.",
-                "Božićni post — 28. 11. - 6. 1.",
-              ]}
-              buttonText="Hrišćanski postovi →"
-            />
-          </Suspense>
+          <div className="home__velikiPostovi-slot">
+            <Suspense fallback={<div></div>}>
+              <SimpleBoxLazy
+                classes="green"
+                linkText="/hriscanski-post/"
+                mainTitle="🍞 Veliki postovi 2026."
+                mainBody={[
+                  "Vaskršnji post — 23. 2. - 11. 4.",
+                  "Petrovski post — 8. 6. - 11. 7.",
+                  "Gospojinski post — 14. 8. - 27. 8.",
+                  "Božićni post — 28. 11. - 6. 1.",
+                ]}
+                buttonText="Hrišćanski postovi →"
+              />
+            </Suspense>
+          </div>
         </div>
         <div className="home__wrapper-right">
           <MidBox />
-          <Suspense fallback={<div></div>}>
-            <SimpleBoxLazy
-              classes="green"
-              linkText="/2027/maj/"
-              mainTitle="Vaskrs 2027."
-              mainBody="Vaskrs (Uskrs) u 2027. godini pada na 2. maj po novom kalendaru."
-              buttonText="Kalendar za maj 2027. →"
-            />
-          </Suspense>
+          <div className="home__vaskrs-slot">
+            <Suspense fallback={<div></div>}>
+              <SimpleBoxLazy
+                classes="green"
+                linkText="/2027/maj/"
+                mainTitle="Vaskrs 2027."
+                mainBody="Vaskrs (Uskrs) u 2027. godini pada na 2. maj po novom kalendaru."
+                buttonText="Kalendar za maj 2027. →"
+              />
+            </Suspense>
+          </div>
           <MoonWidgetBox />
           <div className="banner-wrapper xl_sticky">
             <AdManagerSlot slotNumber={"div-gpt-ad-1750411708088-0"} />
           </div>
         </div>
       </section>
-      <Suspense fallback={<div></div>}>
-        <WidgetLazy />
-      </Suspense>
+      <div className="home__widget-slot">
+        <Suspense fallback={<div></div>}>
+          <WidgetLazy />
+        </Suspense>
+      </div>
       {/* <div className="banner-wrapper">
         <AdManagerSlot slotNumber={"div-gpt-ad-1764593675864-0"} />
       </div> */}

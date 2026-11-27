@@ -11,13 +11,49 @@ export default function TodayBox({ classes = "" }) {
   const { dayName, todayHoliday } = useCalendarContext();
   const { cyr } = useScriptContext();
 
-  if (!currentDate || !todayHoliday) return null;
+  const todayDetails = currentDate ? getDayMonth(currentDate) : null;
+  const isReady =
+    currentDate && todayHoliday && todayDetails.year === pageYear;
 
-  //set details from currentDate
-  let todayDetails = getDayMonth(currentDate);
-
-  //check is curentYear some other year then current
-  if (todayDetails.year !== pageYear) return null;
+  if (!isReady) {
+    return (
+      <div className={`today__box ${classes}`}>
+        <div className="today-border"></div>
+        <div className="today__box-wrapper">
+          <div className="corners-leftTop"></div>
+          <div className="corners-leftBotom"></div>
+          <div className="corners-rightTop"></div>
+          <div className="corners-rightBottom"></div>
+          <div className="today-info">
+            <span className="today-day today-skeleton-block today-skeleton-day"></span>
+            <p className="today-dayNum today-skeleton-block today-skeleton-dayNum"></p>
+            <p className="today-month today-skeleton-block today-skeleton-month"></p>
+          </div>
+          <div className="today-content">
+            <div className="today-center">
+              <div className="line"></div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-cross w-6 h-6 text-gold"
+              >
+                <path d="M4 9a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h4a1 1 0 0 1 1 1v4a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-4a1 1 0 0 1 1-1h4a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-4a1 1 0 0 1-1-1V4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4a1 1 0 0 1-1 1z"></path>
+              </svg>
+              <div className="line right"></div>
+            </div>
+            <h2 className="today-title today-skeleton-block today-skeleton-title"></h2>
+          </div>
+        </div>
+      </div>
+    );
+  }
   // console.log("Today holiday", todayHoliday.title);
 
   return (
