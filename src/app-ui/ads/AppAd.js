@@ -1,6 +1,7 @@
 "use client";
 import { useEffect } from "react";
 import { useScriptContext } from "../../shared/ScriptProvider";
+import { ADS_ENABLED } from "./config";
 import { slotSize } from "./slots";
 import useSlotStatus from "./useSlotStatus";
 
@@ -35,8 +36,12 @@ export function refreshSlot(slotId) {
   withSlot(slotId, (gpt, slot) => gpt.pubads().refresh([slot]));
 }
 
-// Pozadina je tacno velicine reklame (npr. 300x250), ne cele sirine, i nestaje kad nema reklame.
 export default function AppAd({ slot }) {
+  return ADS_ENABLED ? <AdBox slot={slot} /> : null;
+}
+
+// Pozadina je tacno velicine reklame (npr. 300x250), ne cele sirine, i nestaje kad nema reklame.
+function AdBox({ slot }) {
   const { cyr } = useScriptContext();
   const status = useSlotStatus(slot);
   const [width, height] = slotSize(slot);

@@ -7,13 +7,22 @@ import {
   useState,
 } from "react";
 import {
+  FONT_ATTR,
+  FONT_SIZES,
+  FONT_STORAGE_KEY,
   THEME_ATTR,
   THEME_COLORS,
   THEME_MODES,
   THEME_STORAGE_KEY,
 } from "./themeConfig";
 
-const ThemeContext = createContext({ mode: "system", setMode: () => {} });
+// Izgled aplikacije: tema i velicina slova.
+const ThemeContext = createContext({
+  mode: "system",
+  setMode: () => {},
+  fontSize: "normal",
+  setFontSize: () => {},
+});
 export const useAppTheme = () => useContext(ThemeContext);
 
 function applyTheme(mode) {
@@ -32,34 +41,62 @@ function applyTheme(mode) {
     ?.setAttribute("content", dark ? THEME_COLORS.dark : THEME_COLORS.light);
 }
 
+function applyFontSize(size) {
+  const root = document.documentElement;
+  if (size === "normal") root.removeAttribute(FONT_ATTR);
+  else root.setAttribute(FONT_ATTR, size);
+}
+
+function readStored(key, allowed, fallback) {
+  try {
+    const stored = localStorage.getItem(key);
+    return allowed.includes(stored) ? stored : fallback;
+  } catch {
+    return fallback;
+  }
+}
+
+function store(key, value) {
+  try {
+    localStorage.setItem(key, value);
+  } catch {}
+}
+
 export default function ThemeProvider({ children }) {
   const [mode, setModeState] = useState("system");
+  const [fontSize, setFontSizeState] = useState("normal");
 
   useEffect(() => {
-    let saved = "system";
-    try {
-      const stored = localStorage.getItem(THEME_STORAGE_KEY);
-      if (THEME_MODES.includes(stored)) saved = stored;
-    } catch {}
-    setModeState(saved);
-    applyTheme(saved);
+    const savedMode = readStored(THEME_STORAGE_KEY, THEME_MODES, "system");
+    const savedSize = readStored(FONT_STORAGE_KEY, FONT_SIZES, "normal");
+    setModeState(savedMode);
+    setFontSizeState(savedSize);
+    applyTheme(savedMode);
+    applyFontSize(savedSize);
+  }, []);
 
+  // Prati promenu sistemske teme dok je izabrano "Sistem".
+  useEffect(() => {
     const media = window.matchMedia("(prefers-color-scheme: dark)");
-    const onChange = () => applyTheme(saved);
+    const onChange = () => applyTheme(mode);
     media.addEventListener("change", onChange);
     return () => media.removeEventListener("change", onChange);
-  }, []);
+  }, [mode]);
 
   const setMode = useCallback((next) => {
     setModeState(next);
-    try {
-      localStorage.setItem(THEME_STORAGE_KEY, next);
-    } catch {}
+    store(THEME_STORAGE_KEY, next);
     applyTheme(next);
   }, []);
 
+  const setFontSize = useCallback((next) => {
+    setFontSizeState(next);
+    store(FONT_STORAGE_KEY, next);
+    applyFontSize(next);
+  }, []);
+
   return (
-    <ThemeContext.Provider value={{ mode, setMode }}>
+    <ThemeContext.Provider value={{ mode, setMode, fontSize, setFontSize }}>
       {children}
     </ThemeContext.Provider>
   );

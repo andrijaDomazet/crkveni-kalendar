@@ -1,0 +1,65 @@
+.app-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 14px;
+  border: 1px solid var(--app-line);
+  border-radius: 14px;
+  background: var(--app-card);
+
+  .app-icon {
+    color: var(--app-muted);
+  }
+
+  input {
+    flex: 1;
+    min-width: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    padding: 12px 0;
+    outline: none;
+  }
+
+  &:focus-within {
+    border-color: var(--app-active);
+  }
+}
+
+.app-search__hint {
+  padding: 0 4px;
+  color: var(--app-muted);
+  font-size: 0.9rem;
+}
+
+.app-search__noday {
+  display: grid;
+  place-items: center;
+  color: var(--app-strong);
+}
+
+// Dan na koji vodi rezultat pretrage.
+.app-week__row.is-focus {
+  outline: 2px solid var(--app-active);
+  outline-offset: -2px;
+  border-radius: 10px;
+}
+
+.app-header__search {
+  margin: -6px -8px -6px auto;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+
+  &:active {
+    background: rgba(255, 255, 255, 0.14);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--app-ornament);
+  }
+}

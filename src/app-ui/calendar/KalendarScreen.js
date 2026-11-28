@@ -12,13 +12,14 @@ import MonthList from "./MonthList";
 const FIRST_YEAR = CALENDAR_YEARS[0];
 const LAST_YEAR = CALENDAR_YEARS[CALENDAR_YEARS.length - 1];
 
-// Pocetni mesec: iz linka (?g=2027&m=maj) ili tekuci.
+// Pocetni mesec: iz linka (?g=2027&m=maj, opciono &d=2 za dan) ili tekuci.
 function initialView(params, today) {
   const year = Number(params.get("g"));
   const month = monthSerb.indexOf(params.get("m"));
   if (CALENDAR_YEARS.includes(year)) {
     const fallback = year === today.getFullYear() ? today.getMonth() : 0;
-    return { year, month: month >= 0 ? month : fallback };
+    const day = Number(params.get("d")) || null;
+    return { year, month: month >= 0 ? month : fallback, day };
   }
   return { year: today.getFullYear(), month: today.getMonth() };
 }
@@ -70,7 +71,9 @@ export default function KalendarScreen() {
             id="app-year-select"
             aria-label={cyr("Godina")}
             value={view.year}
-            onChange={(e) => setView({ ...view, year: Number(e.target.value) })}
+            onChange={(e) =>
+              setView({ month: view.month, year: Number(e.target.value) })
+            }
           >
             {CALENDAR_YEARS.map((year) => (
               <option key={year} value={year}>
@@ -91,7 +94,7 @@ export default function KalendarScreen() {
       </div>
 
       <WithMonthData key={`${view.year}-${view.month}`} year={view.year} month={view.month}>
-        <MonthList />
+        <MonthList focusDay={view.day} />
       </WithMonthData>
     </div>
   );

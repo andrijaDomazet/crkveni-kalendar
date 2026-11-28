@@ -21,6 +21,7 @@ export const APP_TABS = [
 // Pod-ekrani koji nisu svoj tab (postovi, praznici, info...) pripadaju tabu "Više".
 function activeTabHref(pathname) {
   if (pathname === "/app/") return "/app/";
+  if (pathname === "/app/pretraga/") return null; // otvara se iz zaglavlja
   const direct = APP_TABS.find(
     (tab) => !tab.exact && pathname.startsWith(tab.href),
   );

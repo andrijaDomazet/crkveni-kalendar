@@ -5,7 +5,13 @@ import SegmentedControl from "./SegmentedControl";
 
 export default function SettingsScreen() {
   const { script, toggleScript, cyr } = useScriptContext();
-  const { mode, setMode } = useAppTheme();
+  const { mode, setMode, fontSize, setFontSize } = useAppTheme();
+
+  const fontOptions = [
+    { value: "normal", label: cyr("Normalna") },
+    { value: "large", label: cyr("Veća") },
+    { value: "xlarge", label: cyr("Najveća") },
+  ];
 
   const themeOptions = [
     { value: "system", label: cyr("Sistem") },
@@ -28,6 +34,16 @@ export default function SettingsScreen() {
           options={themeOptions}
           value={mode}
           onChange={setMode}
+        />
+      </div>
+
+      <div className="app-settings__row">
+        <span className="app-settings__label">{cyr("Veličina slova")}</span>
+        <SegmentedControl
+          label={cyr("Veličina slova")}
+          options={fontOptions}
+          value={fontSize}
+          onChange={setFontSize}
         />
       </div>
 

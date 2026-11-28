@@ -8,12 +8,21 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+// Velicina slova iz Podesavanja: sve mere u rem rastu srazmerno (ikonice i reklame ne).
+html[data-app-font="large"] {
+  font-size: 112.5%;
+}
+
+html[data-app-font="xlarge"] {
+  font-size: 125%;
+}
+
 body {
   margin: 0;
   background: var(--app-bg);
   color: var(--app-fg);
   font-family: var(--app-font-ui);
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.4;
   -webkit-tap-highlight-color: transparent;
   overscroll-behavior-y: none;

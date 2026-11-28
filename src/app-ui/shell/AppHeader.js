@@ -1,8 +1,11 @@
 "use client";
+import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useScriptContext } from "../../shared/ScriptProvider";
-import { ChevronLeftIcon, CrossIcon } from "../icons/AppIcons";
+import { ChevronLeftIcon, CrossIcon, SearchIcon } from "../icons/AppIcons";
 import { APP_TABS } from "./BottomNav";
+
+const SEARCH_PATH = "/app/pretraga/";
 
 export default function AppHeader() {
   const { cyr } = useScriptContext();
@@ -31,6 +34,15 @@ export default function AppHeader() {
         </button>
       )}
       <h1 className="app-header__title">{cyr("Crkveni kalendar")}</h1>
+      {pathname !== SEARCH_PATH && (
+        <Link
+          href={SEARCH_PATH}
+          className="app-header__search"
+          aria-label={cyr("Pretraga")}
+        >
+          <SearchIcon />
+        </Link>
+      )}
     </header>
   );
 }

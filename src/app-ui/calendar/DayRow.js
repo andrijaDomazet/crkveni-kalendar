@@ -40,7 +40,7 @@ const extraClass = (item) =>
       : "";
 
 // Jedan dan u listi: datum, praznik(i), oznaka posta i faza Meseca.
-export default function DayRow({ date, item, isToday = false }) {
+export default function DayRow({ date, item, isToday = false, isFocus = false }) {
   const { cyr } = useScriptContext();
   const { main, others } = splitTitles(item?.title);
   const moon = getMoonPhaseForDate(date);
@@ -48,8 +48,9 @@ export default function DayRow({ date, item, isToday = false }) {
 
   return (
     <li
-      className={`app-week__row${isToday ? " is-today" : ""}${red ? " is-red" : ""}`}
+      className={`app-week__row${isToday ? " is-today" : ""}${red ? " is-red" : ""}${isFocus ? " is-focus" : ""}`}
       data-today={isToday ? "true" : undefined}
+      data-focus={isFocus ? "true" : undefined}
     >
       <div className="app-week__date">
         <b>{date.getDate()}</b>

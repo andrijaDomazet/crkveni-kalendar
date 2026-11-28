@@ -8,7 +8,12 @@ import { refreshSlot, showSlot } from "./AppAd";
 import useSlotStatus from "./useSlotStatus";
 
 // Ekrani na kojima nema sticky reklame (meni, podesavanja, pravne stranice).
-const NO_STICKY = ["/app/vise/", "/app/podesavanja/", "/app/info/"];
+const NO_STICKY = [
+  "/app/vise/",
+  "/app/podesavanja/",
+  "/app/info/",
+  "/app/pretraga/", // tastatura + sticky ne idu zajedno
+];
 const STICKY_HEIGHT = "145px"; // 100 reklama + 2x8 razmak + 1 linija + 28 jezicak sa X
 const MIN_REFRESH_MS = 30000;
 const DISMISS_KEY = "ck-sticky-dismissed";
